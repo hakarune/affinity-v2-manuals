@@ -102,14 +102,25 @@ for app in "${APPS[@]}"; do
 
   # --- pandoc: epub / pdf / single-file html ------------------------------
   if [ "$PANDOC_OK" = 1 ] && [ "${#ORDER[@]}" -gt 0 ]; then
+    # Stage a copy with every image path made absolute. pandoc --file-scope
+    # resolves resources relative to the run directory, not each source file,
+    # so the tree's relative `../../assets/...` links would otherwise miss.
+    pd="$WORK/pandoc/$app"
+    rm -rf "$pd"; mkdir -p "$pd"
+    cp -r "$man/." "$pd/"
+    rm -f "$pd/SUMMARY.md"
+    pd_abs=$(cd "$pd" && pwd)
+    find "$pd" -name '*.md' -print0 \
+      | xargs -0 sed -i -E "s#\]\((\.\./)+assets/#](${pd_abs}/assets/#g"
+
     inputs=()
     for rel in "${ORDER[@]}"; do
-      [ -f "$man/$rel" ] && inputs+=("$man/$rel")
+      [ -f "$pd/$rel" ] && inputs+=("$pd/$rel")
     done
     common=(
       --file-scope
       --metadata-file="config/pandoc/$app.yaml"
-      --resource-path="$man"
+      --resource-path="$pd_abs"
       --toc --toc-depth=2
     )
 
@@ -123,7 +134,12 @@ for app in "${APPS[@]}"; do
 
     if [ -n "$PDF_ENGINE" ]; then
       echo ">> pdf ($PDF_ENGINE)"
-      pandoc "${common[@]}" --pdf-engine="$PDF_ENGINE" \
+      pdf_opts=()
+      if [ "$PDF_ENGINE" = xelatex ] || [ "$PDF_ENGINE" = lualatex ]; then
+        # DejaVu covers the bullets / Greek / arrows Latin Modern lacks
+        pdf_opts=(-V mainfont="DejaVu Serif" -V monofont="DejaVu Sans Mono")
+      fi
+      pandoc "${common[@]}" --pdf-engine="$PDF_ENGINE" "${pdf_opts[@]}" \
         "${inputs[@]}" -o "$DIST/affinity-$app-2-manual.pdf" \
         || echo "   pdf FAILED (non-fatal) - check the $PDF_ENGINE toolchain"
     else
