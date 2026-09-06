@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="filter" />
+	<meta name="description" content="Apply blur, colour, distortion, edge detection, noise or sharpen filters to your image." />
+	<title>Applying filters</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Applying filters</h1>
+		<p>Filters can be applied to layers within your document for corrective or creative purposes.</p>
+	</header>
+
+	<section class="about">
+		<h2>About filters</h2>
+
+		<p>In Affinity Photo 2, filters are available in both non-destructive and destructive forms. A variety of filters are available as <a href="../Layers/livefilters.html">live filters</a> which are non-destructive.</p>
+		
+		<p>As well as to pixel layers, you can apply destructive filters to mask layers, adjustment layers, live filter layers and masked fill layers; spare channels can also take destructive filters too.</p>
+
+		<p>For destructive filters, it&apos;s a great idea to make a duplicate layer of the layer you planned to work on. By applying a filter to the duplicated layer, you preserve the original layer&apos;s contents, with the option to hide the &apos;filter&apos; layer as needed.</p>
+
+		<aside class="box note">
+			<p>If a selection is in place before the filter is applied, the filter will only affect pixels within the selection.</p>
+		</aside>
+
+		<h2>Available filters</h2>
+		<p>Filters are organized into the following categories.</p>
+		<ul>
+			<li><a href="blurFilters.html">Blur</a></li>
+			<li><a href="sharpenFilters.html">Sharpen</a></li>
+			<li><a href="distortionFilters.html">Distort</a></li>
+			<li><a href="noiseFilters.html">Noise</a></li>
+			<li><a href="edgedetectionFilters.html">Detect</a></li>
+			<li><a href="clrFilters.html">Colors</a></li>
+			<li><a href="astroFilters.html">Astrophotography</a></li>
+			<li><a href="tonalFilters.html">Lighting/Tonal</a></li>
+		</ul>
+	</section>
+
+
+
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following general settings are available from all filter dialogs:</p>
+
+		<ul>
+			<li><span class="ui">Before/After</span>&mdash;when selected, a dividing line is displayed over the document to show a before and after preview. Drag the dividing line to reposition it. Available on destructive filters.</li>
+			<li><span class="ui">Cancel</span>&mdash;exits the dialog without applying the changes to the filter.</li>
+			<li><span class="ui">Apply</span>&mdash;exits the dialog and applies the filter settings to the layer.</li>
+		</ul>
+
+		<p><span class="ui">Live</span> filters have these additional settings:</p>
+
+		<ul>
+			<li><span class="ui">Delete</span>&mdash;closes the dialog and deletes the filter layer, removing the filter from the image.</li>
+			<li><span class="ui">Merge</span>&mdash;merges the current filter layer with the layer immediately below it in the layer order.</li>
+			<li><span class="ui">Add Preset</span>&mdash;adds the current settings as a preset for use with later images and projects.</li>
+			<li><span class="ui">Reset</span>&mdash;reverts all dialog settings to default.</li>
+			<li><span class="ui">Opacity</span>&mdash;how see-through the filter layer is.</li>
+			<li><span class="ui">Blend mode</span>&mdash;changes how the applied pixels interact with existing pixels on the layer below. Choose mode type from a pop-up menu.</li>
+		</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To apply a filter:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select a layer (we recommend that this is a duplicate layer).</li>
+				<li>Select the filter from the <span class="ui">Filters</span> menu.</li>
+				<li>If a dialog appears for the filter, follow the steps below:<ol class="nested">
+						<li>Adjust the settings in the dialog. (The strength of some filters, including most of the Blur category, can be set higher than their dialog allows. To do so, drag right on the canvas.)</li>
+						<li>Click <span class="ui">Apply</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		<aside class="box note">
+			<p>Not all filters have a dedicated dialog or customizable settings.</p>
+		</aside>
+		</details>
+		
+		<details>
+			<summary>To fade a filter&apos;s results:</summary>
+			<p>The <span class="ui">Fade</span> command becomes available when the most recent edit to the selected layer was made using a destructive filter or tool. The command blends the result of that edit with the layer&apos;s previous appearance. The result replaces the layer&apos;s current contents.</p>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select a suitable layer.</li>
+				<li>Select the <span class="ui">Fade</span> command from the <span class="ui">Layer</span> menu.</li>
+				 <li>In the dialog that appears, use the <span class="ui">Fade</span> slider to control the blend between the layer&apos;s current and previous appearances.<ul>
+				 		<li>Set a value closer to 0% to make the layer&apos;s previous contents more visible than its current contents.</li>
+				 		<li>Set a value closer to 100% to make the layer&apos;s current contents more visible than its previous contents.</li>
+				 	</ul>
+				 </li>
+				 <li>(Optional) Select an alternative <span class="ui">Blend Mode</span> to alter how the pixels of the layer&apos;s previous and current contents interact.</li>
+				 <li>Click <span class="ui">Apply</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/LayersTabFilterIcon.png" class="tool smallCheck" alt="Add live filter" /> To apply a live filter from the Layers panel:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select a layer.</li>
+				<li>Click <span class="ui">Live Filters</span> and select a filter from the pop-up menu.</li>
+				<li>If a dialog appears for the filter, follow the steps below:<ol class="nested">
+						<li>Adjust the settings in the dialog. (The strength of some filters, including most of the Blur category, can be set higher than their dialog allows. To do so, drag right on the canvas.)</li>
+						<li>Close the dialog to apply.</li>
+					</ol>
+				</li>
+			</ol>
+			<p>The filter is clipped to the selected layer, restricting its effect to just that layer.</p>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="blurFilters.html">Blur filters</a></li>
+			<li><a href="sharpenFilters.html">Sharpen filters</a></li>
+			<li><a href="distortionFilters.html">Distortion filters</a></li>
+			<li><a href="noiseFilters.html">Noise filters</a></li>
+			<li><a href="edgedetectionFilters.html">Edge detection filters</a></li>
+			<li><a href="clrFilters.html">Color filters</a></li>
+			<li><a href="tonalFilters.html">Lighting/Tonal filters</a></li>
+			<li><a href="../Layers/layerBlendModes.html">Blend modes</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=adjustment">Keyboard shortcuts for adjustments and filters</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

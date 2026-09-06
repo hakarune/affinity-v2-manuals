@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="regex, match" />
+	<meta name="description" content="Use regular expressions to specify patterns you want to find in document text or layer names." />
+	<title>Using regular expressions in Affinity</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Using regular expressions in Affinity</h1>
+	
+		<p>Affinity supports the use of regular expressions to find document content that matches specified patterns.</p>
+		
+	</header>
+	
+	<section class="about">
+		<p>Regular expressions are used in several contexts in Affinity:</p>
+		
+		<ul>
+			<li>On the <span class="ui">States</span> panel to toggle the visibility of layers whose names match a pattern.</li>
+			<li>On the <span class="ui">Find and Replace</span> panel (available only in Affinity Publisher) to find document text that matches a pattern. Regular expressions are widely used across the word-processing and DTP community.</li>
+			<li>To perform calculations in fields. See <a href="../Workspace/fieldInput.html">Field input</a> and <a href="../Workspace/expressions.html">Expressions in field input</a> for more information, including examples.</li>
+		</ul>
+				
+		<p>Writing regular expressions involves special syntax to specify patterns you want to find in text. Example scenarios and expressions provided below demonstrate common syntax you&apos;re likely to need to write your own expressions.</p>
+		
+		<p>A comprehensive guide to the full power of regular expressions is beyond the scope of Affinity Help. You can learn more from online resources such as <a href="http://www.regular-expressions.info/" target="_blank">www.regular-expressions.info</a> and <a href="http://regexone.com/" target="_blank">regexone.com</a>.</p>
+				
+		<h2>Case sensitivity</h2>
+		
+		<p>When an expression matches letters, the States panel is case sensitive unless you explicitly state otherwise in the expression. The Find and Replace panel is case sensitive when the <span class="ui">Find</span> box&apos;s <span class="ui">Match Case</span> formatting option is enabled.</p>
+		
+		<p>On each panel, case sensitivity can be overridden for part or all of an expression:</p>
+		
+		<ul>
+			<li>
+				<p>The case of specific letters in an expression can be ignored by using a character class. For example, to match the letter <i>a</i> in either case, use <i>[aA]</i> in your expression.</p>
+				<p>Character classes can also be used when matching a range of characters. For example, <i>[a-eA-E]</i> matches an individual letter from <i>a</i> to <i>e</i> regardless of its case.</p>
+			</li>
+			<li>The case of all letters in an expression can be ignored by prefixing the expression with <i>(?i)</i>. For example, <i>(?i)internet</i> will match both <i>Internet</i> and <i>internet</i>.</li>
+		</ul>
+
+		<h2>Example regular expressions</h2>
+				
+		<details open="open">
+			<summary>Layer names containing either of two words followed by a specific word</summary>
+			<p>In an Affinity Photo document, we&apos;ve used retouching tools to remove dust and blemishes from a photo by painting on layers above it.</p>
+			
+			<p>Accordingly, each of these layers is named <i>Dust removal</i> or <i>Blemish removal</i>.</p>
+	
+			<p>On the States panel, we can add a query that checks layer names match the regular expression <i>(?i)(Dust|Blemish) removal</i>, meaning either <i>Dust</i> or <i>Blemish</i>, followed by a space and then &apos;removal&apos;. Letter case is ignored for the whole expression.</p>
+			
+			<aside class="box tip">
+				<p>After adding a query to the panel, use its <span class="ui">Hide</span> or <span class="ui">Show</span> button to instantly set the visibility of all layers that match the specified regular expression.</p>
+			</aside><!-- Image request:
+				Filename(s): regex-example-01.png
+				Description:
+					- On the left, the Layers panel of an Affinity Photo document, showing:
+						- the background photo
+						- several layers named 'Dust removal' or 'Blemish removal', ideally with other layers in between or with them nested at different levels.
+					- On the right, the 'Layer name is' part of a query on the States panel, with 'Regular expressions' enabled and the box containing '(Dust|Blemish) removal' without surrounding quotes.
+	
+			<figure>
+				<div class="single">
+					<img src="../../../shared/regex-example-01.png" class="responsive" alt="Using a query to toggle visibility of layers" />
+				</div>
+				<figcaption></figcaption>
+			</figure>
+			--></details>
+				
+		<details>
+			<summary>Layer names containing two words in any position and order</summary>
+			<p>In an Affinity Designer document, we&apos;ve used the layer name <i>offset fill</i> to identify layers that have been manually repositioned to create a handmade misprinted effect.</p>
+			
+			<p>It&apos;s possible that we&apos;ve typed these words in reverse order in some places.</p>
+		
+			<p>On the States panel, we can add a query that checks whether layer names match the regular expression <i>(?i)(?=.*offset)(?=.*fill).*$</i>. This matches layer names that contain both words wherever each occurs in the name. Letter case is ignored for the whole expression.</p>
+		</details>
+		
+		<details>
+			<summary>Layer names that follow a specific naming convention</summary>
+			<p>In an Affinity Designer document for a CAD architectural design, layer names identify building components with a two-letter prefix, followed by one or more groups of an underscore followed by some digits. For example, <i>Ss-35_10_15</i>.</p>
+			
+			<p>On the States panel, we can control the visibility of layers that belong to a particular component category by using an expression like <i>[Ss][Ss](_[0-9]{1,})+</i>. The expression will work even if the prefix&apos;s letter case has been mistyped.</p>
+			
+			<p>Conversely, we can control the visibility of all other component categories&apos; layers with a small change near the start of the expression, so it becomes <i>(^[Ss][Ss])(_[0-9]{1,})+</i>.</p>
+			<p></p>
+		</details>
+		
+		<details>
+			<summary>Instances of a word in document text except where preceded by a specific word.</summary>
+			<p>In an Affinity Publisher document, we want to find instances of a word throughout our text, but omit instances preceded by a specific word.</p>
+			
+			<p>On the Find and Replace panel, with <span class="ui">Regular Expression</span> selected on the <span class="ui">Find</span> box&apos;s <span class="ui">Formatting</span> options, we can use the expression <i>(?&gt;!proin )aliquam</i>. The results will include instances of <i>aliquam</i> except those preceded by <i>proin</i> and a space.<p>It&apos;s possible to exclude instances containing one of several preceding words. For example, to exclude instances where the word <i>error</i> is preceded by the article &apos;the&apos; or &apos;an&apos;, use the expression <i>(?&gt;!(the|an) )error</i>.</p>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../LayerOperations/layerStates.html">Layer states</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

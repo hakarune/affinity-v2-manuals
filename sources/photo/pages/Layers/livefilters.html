@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="live, filter, layer" />
+	<meta name="description" content="Live filters let you apply certain filter effects non-destructively." />
+	<title>Using live filters</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Using live filters</h1>
+
+		<p>Live filters allow you to apply filter effects such as blurring, sharpening, noise and distortion non-destructively, meaning you can modify or remove the effects without having to use the <span class="ui">History</span> panel to undo other operations on your work.</p>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/live_filter_before.png" alt="Before" /><div><img src="../../../shared/live_filter_after.png" alt="After" /></div>
+			</div>
+			<figcaption>Using the Motion Blur live filter to imitate motion in the scene.</figcaption>
+		</figure>
+	
+	</header>
+
+	<section class="about">
+		<h2>About live filters</h2>
+		<p>Live filters provide a way of applying creative effects to your images while retaining the ability to modify the effect settings or remove the effect altogether. The filter is added to the active layer, similar to applying <a href="adjustmentLayers.html">Adjustment Layers</a>.</p>	
+			
+			<p>Once applied, they can be identified as both a filter and a specific live filter type by using unique symbols.</p>
+			
+		<figure>
+			<div class="single"><img src="../../../shared/livefilter_layertype.png" alt="Live filter layer type" /></div>
+			<figcaption>Perspective Live filter layer (named 01) indicating it is a filter (A) and a Perspective filter type (B).</figcaption>
+		</figure>		
+			
+			<details>
+			<summary>Available live filters:</summary>
+			<ul>
+				<li><span class="ui">Blur</span><ul>
+						<li><img src="../../../shared/ui/gaussian_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Gaussian blur live filter type" /> <a href="../Filters/filter_gaussianBlur.html">Gaussian Blur</a></li>
+						<li><img src="../../../shared/ui/box_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Box blur live filter type" /> <a href="../Filters/filter_boxBlur.html">Box Blur</a></li>
+						<li><img src="../../../shared/ui/median_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Median blur live filter type" /> <a href="../Filters/filter_medianBlur.html">Median Blur</a></li>
+						<li><img src="../../../shared/ui/bilateral_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Bilateral blur live filter type" /> <a href="../Filters/filter_bilateralBlur.html">Bilateral Blur</a></li>
+						<li><img src="../../../shared/ui/motion_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Motion blur live filter type" /> <a href="../Filters/filter_motionBlur.html">Motion Blur</a></li>
+						<li><img src="../../../shared/ui/radial_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Radial blur live filter type" /> <a href="../Filters/filter_radialBlur.html">Radial Blur</a></li>
+						<li><img src="../../../shared/ui/lens_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Lens blur live filter type" /> <a href="../Filters/filter_lensBlur.html">Lens Blur</a></li>
+						<li><img src="../../../shared/ui/dof_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Depth of Field blur live filter type" /> <a href="../Filters/filter_DOFBlur.html">Depth Of Field Blur</a></li>
+						<li><img src="../../../shared/ui/field_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Field blur live filter type" /> <a href="../Filters/filter_FieldBlur.html">Field Blur</a></li>
+						<li><img src="../../../shared/ui/diffuse_glow_live_filter.png" class="tool heading" width="21" height="21" alt="Diffuse glow live filter type" /> <a href="../Filters/filter_diffuseGlow.html">Diffuse Glow</a></li>
+						<li><img src="../../../shared/ui/maximum_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Maximum blur live filter type" /> <a href="../Filters/filter_maximumBlur.html">Maximum Blur</a></li>
+						<li><img src="../../../shared/ui/median_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Minimum blur live filter type" /> <a href="../Filters/filter_minimumBlur.html">Minimum Blur</a></li>
+					</ul>
+				</li>
+				<li><span class="ui">Sharpen</span><ul>
+						<li><img src="../../../shared/ui/clarity_live_filter.png" class="tool heading" width="21" height="21" alt="Clarity live filter type" /> <a href="../Filters/filter_clarity.html">Clarity</a></li>
+						<li><img src="../../../shared/ui/Unsharp_mask_live_filter.png" class="tool heading" width="21" height="21" alt="Unsharp mask live filter type" /> <a href="../Filters/filter_unsharpMask.html">Unsharp Mask</a></li>
+						<li><img src="../../../shared/ui/high_pass_live_filter.png" class="tool heading" width="21" height="21" alt="High pass live filter type" /> <a href="../Filters/filter_highPass.html">High Pass</a></li>
+					</ul>
+				</li>
+				<li><span class="ui">Distort</span><ul>
+						<li><img src="../../../shared/ui/ripple_live_filter.png" class="tool heading" width="21" height="21" alt="Ripple live filter type" /> <a href="../Filters/filter_ripple.html">Ripple</a></li>
+						<li><img src="../../../shared/ui/twirl_live_filter.png" class="tool heading" width="21" height="21" alt="Twirl live filter type" /> <a href="../Filters/filter_twirl.html">Twirl</a></li>
+						<li><img src="../../../shared/ui/sphere_live_filter.png" class="tool heading" width="21" height="21" alt="Spherical live filter type" /> <a href="../Filters/filter_spherical.html">Spherical</a></li>
+						<li><img src="../../../shared/ui/displacement_live_filter.png" class="tool heading" width="21" height="21" alt="Displace live filter type" /> <a href="../Filters/filter_displace.html">Displace</a></li>
+						<li><img src="../../../shared/ui/pinch_punch_live_filter.png" class="tool heading" width="21" height="21" alt="Pinch/Punch live filter type" /> <a href="../Filters/filter_pinchPunch.html">Pinch/Punch</a></li>
+						<li><img src="../../../shared/ui/lens_distortion_live_filter.png" class="tool heading" width="21" height="21" alt="Lens distortion live filter type" /> <a href="../Filters/filter_lensDistortion.html">Lens Distortion</a></li>
+						<li><img src="../../../shared/ui/perspective_live_filter.png" class="tool heading" width="21" height="21" alt="Perspective live filter type" /> <a href="../Filters/filter_perspective.html">Perspective</a></li>
+						<li><img src="../../../shared/ui/liquify_live_filter.png" class="tool heading" width="21" height="21" alt="Liquify live filter type" /> <a href="../Filters/filter_liquify.html">Liquify</a></li><!-- Needs icon --><li><img src="../../../shared/ui/mesh_warp_live_filter.png" class="tool heading" width="21" height="21" alt="Mesh Warp live filter type" /> <a href="../Filters/filter_meshWarp.html">Mesh Warp</a></li>
+					</ul>
+				</li>
+				<li><span class="ui">Noise</span><ul>
+						<li><img src="../../../shared/ui/denoise_live_filter.png" class="tool heading" width="21" height="21" alt="Denoise live filter type" /> <a href="../Filters/filter_denoise.html">Denoise</a></li>
+						<li><img src="../../../shared/ui/noise_live_filter.png" class="tool heading" width="21" height="21" alt="Add noise live filter type" /> <a href="../Filters/filter_addNoise.html">Add Noise</a></li>
+						<li><img src="../../../shared/ui/diffuse_live_filter.png" class="tool heading" width="21" height="21" alt="Diffuse live filter type" /> <a href="../Filters/filter_diffuse.html">Diffuse</a></li>
+						<li><img src="../../../shared/ui/dust_and_scratches_live_filter.png" class="tool heading" width="21" height="21" alt="Dust &amp; Scratches live filter type" /> <a href="../Filters/filter_dustscratches.html">Dust &amp; Scratches</a></li>
+					</ul>
+				</li>
+				<li><span class="ui">Colors</span><ul>
+						<li><img src="../../../shared/ui/vignette_live_filter.png" class="tool heading" width="21" height="21" alt="Vignette live filter type" /> <a href="../Filters/filter_vignette.html">Vignette</a></li>
+						<li><img src="../../../shared/ui/defringe_live_filter.png" class="tool heading" width="21" height="21" alt="Defringe live filter type" /> <a href="../Filters/filter_defringe.html">Defringe</a></li>
+						<li><img src="../../../shared/ui/zoom_blur_live_filter.png" class="tool heading" width="21" height="21" alt="Voroni live filter type" /> <a href="../Filters/filter_voronoi.html">Voronoi</a></li>
+						<li><img src="../../../shared/ui/halftone_live_filter.png" class="tool heading" width="21" height="21" alt="Halftone live filter type" /> <a href="../Filters/filter_halftone.html">Halftone</a></li>
+						<li><img src="../../../shared/ui/procedural_texture_live_filter.png" class="tool heading" width="21" height="21" alt="Procedural texture live filter type" /> <a href="../Filters/filter_proceduraltexture.html">Procedural Texture</a></li>
+					</ul>
+				</li>
+				<li><span class="ui">Lighting</span><ul>
+						<li><img src="../../../shared/ui/lighting_live_filter.png" class="tool heading" width="21" height="21" alt="Lighting live filter type" /> <a href="../Filters/lighting_effects.html">Lighting</a></li>
+						<li><img src="../../../shared/ui/shadows_highlight_live_filter.png" class="tool heading" width="21" height="21" alt="Shadows / highlights live filter type" /> <a href="../Filters/filter_shadows_highlights.html">Shadows / Highlights</a></li>
+					</ul>
+				</li>
+			</ul>
+		</details>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/LayersTabFilterIcon.png" class="tool" width="18" height="18" alt="Live filters" /> To create a new live filter:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>From the <span class="ui">Layers</span> panel, click <span class="ui">Live Filters</span> and select a filter from the list.</li>
+				<li>From the <span class="ui">Layer</span> menu, select <span class="ui">New Live Filter Layer</span>.</li>
+			</ul>
+		</details>
+
+		<details>
+			<summary>To modify, merge or delete a live filter:</summary>
+
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, double-click the live filter that you want to modify.</li>
+				<li>Adjust the settings in the dialog; the changes will be applied in real time.</li>
+				<li>Close the dialog to apply the changes, <span class="ui">Merge</span> to apply the changes and merge the adjustment with the layer beneath, or <span class="ui">Delete</span> to remove the filter layer entirely.</li>
+			</ol>
+		</details>
+
+		<details>
+			<summary>To move a live filter:</summary>
+
+			<p>Do one of the following:</p>
+			<ul>
+				<li>Drag the live filter to the top of the <span class="ui">Layers</span> panel so it affects all layers below it.</li>
+				<li>Drag the live filter above or below layers to affect more or fewer layers in the project.</li>
+				<li>Drag the live filter onto a layer or group to apply the filter to that layer or group only.</li>
+			</ul>
+		</details>
+
+		<details>
+			<summary><img src="../../../shared/ui/eraser_tool.png" class="tool" width="18" height="18" alt="Erase Brush Tool" /> <img src="../../../shared/ui/paint_brush_tool.png" class="tool" width="18" height="18" alt="Paint Brush Tool" /> To mask a live filter:</summary>
+
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select the live filter.</li>
+				<li>Do any of the following:<ul>
+						<li>To &apos;erase&apos; from the mask, paint with the <span class="ui">Erase Brush Tool</span>.</li>
+						<li>To &apos;restore&apos; the mask, select the <span class="ui">Paint Brush Tool</span> and paint.</li>
+						<li>To apply a gradient mask, select the <span class="ui">Gradient Tool</span> from the <span class="ui">Tools</span> panel and drag across the layer. Adjust the gradient colors from the settings.</li>
+						</ul>
+				</li>
+			</ol>
+			
+		<aside class="box note">
+			<p>If you have a <a href="../Selections/selections_create.html">pixel selection</a> in place when you add a live filter, the area is automatically masked.</p>
+		</aside>
+		
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Filters/filters_applying.html">Applying filters</a></li>
+			<li><a href="LayerMasks.html">Layer masks</a></li>
+			<li><a href="../Selections/selections_create.html">Creating pixel selections</a></li>
+			<li><a href="../Workspace/preferences.html">Settings (or Preferences)</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

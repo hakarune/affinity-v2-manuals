@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="astro, astrophotography, stacking, calibration frame, celestial, night sky, light frame, bias frame, dark frame, flat frame, dark flat frame" />
+	<meta name="description" content="An introduction to the Astrophotography Stack Persona." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src:"../../../shared/astroLight.jpg", alt: "An example light frame" },
+				tab2: { src:"../../../shared/astroBias.jpg", alt: "An example bias frame" },
+				tab3: { src:"../../../shared/astroDark.jpg", alt: "An example dark frame" },
+				tab4: { src:"../../../shared/astroFlat.jpg", alt: "An example flat frame" },
+				tab5: { src:"../../../shared/astroDarkFlat.jpg", alt: "A example dark flat frame" },
+				tab6: { src:"../../../shared/astroEndResult.jpg", alt: "A example final result" }
+			}
+		}
+	</script>
+	<title>About astrophotography stacking</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+		<h1>About astrophotography stacking</h1>
+		<p>Affinity Photo 2&apos;s <span class="ui">Astrophotography Stack Persona</span> is used to create high-quality celestial images.</p>
+		<p>It requires light frames, which are long exposures of the night sky, and several kinds of calibration frame. Stacking of the light frames increases the SNR (signal-to-noise ratio).</p>
+		<p>The stacking process is performed to 32-bit linear unbounded floating point precision throughout, which maximizes your options for tone-stretching and other post-processing you might perform.</p>
+	</header>
+	
+	<section class="about">
+		<h2>About calibration frames</h2>
+		<p>Calibration frames help to clean up imagery, by identifying and removing noise from the light frames&mdash;the excess of it, at least&mdash;as well as dust spots, vignetting and other artefacts.</p>
+		<p>The use of calibration frames is optional but strongly recommended.</p>
+		<p>Noise is inherent in the shooting environment and is influenced by several factors, including: overall thermal conditions, which can vary over time; background electrical interference in the camera; and hot pixels in the camera sensor. For example, hot pixels could be misidentified as stars, affecting alignment during stacking.</p>
+		
+		<h3>Types of calibration frame</h3>
+		<p>Affinity Photo 2 can process four kinds of calibration frame, each of which identifies different noise.</p>
+		<ul>
+			<li><span class="ui">Dark frames</span>&mdash;identify hot pixels and thermal noise, arising from long exposure times, to be cleaned from the light frames. Taken during the same session and at the same shutter speed as light frames but with the lens cap on.</li>
+			<li><span class="ui">Bias frames</span>&mdash;identify electrical read noise from the camera. Taken at the fastest shutter speed available with the lens cap on.</li>
+			<li><span class="ui">Flat frames</span>&mdash;identify artefacts such as dust specks and lens vignetting, ensuring evenly illuminated images. Captured during the same session as light frames.</li>
+			<li><span class="ui">Dark flat frames</span>&mdash;to pre-process the flat frames by cleaning noise from them, like dark frames do for light frames. Taken at the same shutter speed as the flat frames.</li>
+		</ul>
+				
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Light</p></div>
+				<div class="tab"><p>Bias</p></div>
+				<div class="tab"><p>Dark</p></div>
+				<div class="tab"><p>Flat</p></div>
+				<div class="tab"><p>Dark flat</p></div>
+				<div class="tab selected"><p>End result</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/astroEndResult.jpg" class="responsive" alt="An example end result from the Astrophotography Stack Persona with additional post-processing applied"><p>In practice, multiple frames of each type are used to improve the SNR ratio and improve the end result.</p>
+			</div>
+		</div>
+			
+		<h2>File formats</h2>	
+		<p>Light frames and calibration frames should be RAW or FITS (Flexible Image Transport System) files from a DSLR or astronomy camera, respectively.</p>
+		<p>They must be unprocessed for best results to avoid assumptions being made about white balance and tonality, which are approximated later in the compositing process.</p>
+		
+		<aside class="box note">
+			<p><a href="https://fits.gsfc.nasa.gov" target="_blank">FITS (Flexible Image Transport System)</a> is a file format commonly used in astrophotography that can contain extra metadata not found in RAW files. It is usually captured by CCD and CMOS astronomy cameras used with telescopes. Affinity Photo 2 recognizes FITS files with a .fit or .fts file extension.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p>In the Photo Persona, opening an individual FITS file that contains Bayer pattern metadata displays the <span class="ui">Develop FITS</span> dialog.</p>
+			<p>You might do this with individual FITS files from a photo shoot to inspect their quality, or with master FITS files containing calibrated and stacked data to manually combine, align and process them.</p>
+			<p>The dialog&apos;s <span class="ui">FITS Bayer Pattern</span> setting infers the Bayer pattern of the camera&apos;s color sensors by default, but can be manually set to a specific pattern if the results look incorrect.</p>
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="astro_creating.html">Creating an astrophotography stack</a></li>
+			<li><a href="astro_panelFiles.html">Files panel</a></li>
+			<li><a href="astro_panelStackingOptions.html">Stacking Options panel</a></li>
+			<li><a href="astro_panelRawOptions.html">RAW Options panel</a></li>
+			<li><a href="astro_narrowband.html">Compositing narrowband images</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

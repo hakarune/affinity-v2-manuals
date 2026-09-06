@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="astro, astrophotography, raw, raw options, panel" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>RAW Options panel (Astrophotography Stack Persona only)</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>RAW Options panel (Astrophotography Stack Persona only)</h1>
+		<p>The <span class="ui">RAW Options</span> panel provides control over how image data is interpreted. Use the default settings unless your camera hardware and settings require otherwise.</p>
+		
+		<figure class="nft">
+			<p><img src="../../images/panel_astroRawOptions.jpg" class="responsive panel" alt="RAW Options panel" /></p>
+			<figcaption></figcaption>
+		</figure>
+	</header>
+
+	<section class="about">		
+		<h2>About the RAW Options panel</h2>
+		<p>The panel displays the following:</p>
+		<ul>
+			<li><span class="ui">FITS Bayer pattern</span>&mdash;inferred from image metadata by default, but can be manually set to a specific pattern if the results look incorrect.</li>
+			<li><span class="ui">Demosaic Method</span>&mdash;can be either:<ul>
+					<li><span class="ui">Default</span>&mdash;the same method used by the <span class="ui">Develop Persona</span>.</li>
+					<li><span class="ui">Bilinear</span>&mdash;a general-purpose method that may give softer results but may also be quicker.</li>
+				</ul>
+			</li>
+			<li><span class="ui">White balance</span>&mdash;can be:<ul>
+					<li><span class="ui">Daylight</span>&mdash;the default setting, which is 6500K.</li>
+					<li><span class="ui">Camera</span>&mdash;derived by identifying the camera in an image&apos;s metadata.</li>
+					<li><span class="ui">Master Flat</span>&mdash;inferred from the flat frames.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Subtract black level</span>&mdash;ensures pure black pixels are removed. This is enabled by default.</li>
+		</ul>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="astro_about.html">About astrophotography stacking</a></li>
+			<li><a href="astro_creating.html">Creating an astrophotography stack</a></li>
+			<li><a href="astro_panelFiles.html">Files panel</a></li>
+			<li><a href="astro_panelStackingOptions.html">Stacking Options panel</a></li>
+			<li><a href="astro_narrowband.html">Compositing narrowband images</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

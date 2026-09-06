@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="astro, astrophotography, stacking, calibration frame, celestial, night sky, light frame, bias frame, dark frame, flat frame, dark flat frame" />
+	<meta name="description" content="Learn how to combine multiple exposures into high-quality astro images." />
+	<title>Creating an astrophotography stack</title>
+</head>
+
+<body>
+	<header>
+		<h1>Creating an astrophotography stack</h1>
+		<p>The Astrophotography Stack Persona&apos;s key controls are located in the right studio, where you can specify the files to be stacked and how they are processed.</p>
+		<p>On the Tools panel, the Persona provides the <span class="ui"><a href="../Tools/tools_badPixelMap.html">Bad Pixel Map Tool</a></span>, which helps to identify and correct defective pixels that originate in a camera setup.</p>
+	</header>
+
+	<section class="about">
+		<h2>Studio panels</h2>
+		<ul>
+			<li><span class="ui"><a href="astro_panelFiles.html">Files</a></span>&mdash;specify the light frames and calibration frames to be processed.</li>
+			<li><span class="ui"><a href="astro_panelStackingOptions.html">Stacking Options</a></span>&mdash;choose and control the stacking method used to process the frames.</li>
+			<li><span class="ui"><a href="astro_panelRawOptions.html">RAW Options</a></span>&mdash;choose how the frames are interpreted.</li>
+			<li><span class="ui">Stacked Images</span>&mdash;all images created during a single session in the Persona are added here.</li>
+		</ul>
+		
+
+		<h2>Requirements</h2>
+		<p>At minimum, a set of light frames must be added to the <span class="ui">Files</span> panel. It is recommended that you add <a href="astro_about.html">calibration frames</a> as well.</p>
+		
+		<p>Each set of light frames and calibration frames constitutes a file group. Multiple file groups can be added to the panel for processing into a single end result.</p>
+		
+		<p>Each file group should contain frames taken at different times, i.e. across several nights, during which shooting conditions may have changed.</p>
+				
+		
+		<h2>About the Stacked Images panel</h2>
+		<p>Use the <span class="ui">Stacked Images</span> panel to compare results from using different files and options.</p>
+		
+		<figure class="nft">
+			<p><img src="../../images/panel_astroStackedImages.jpg" class="responsive panel" alt="Stacked Images panel" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p>To rename a stacked image, double-click it on the panel.</p>
+
+		<p>Each stacked image becomes a pixel layer (of the same name) in the resulting Affinity Photo 2 document.</p>
+	</section>
+	
+	<section class="tools">
+		<details open="open">
+			<summary>Astrophotography stack editing tools:</summary>
+			<ul>
+				<li><img src="../../../shared/ui/view_tool.png" class="tool" width="14" height="14" alt="Hand Tool" /> <span class="ui">Hand Tool</span>&mdash; move around the document by dragging on it.</li>
+				<li><img src="../../../shared/ui/zoom_tool.png" class="tool" width="14" height="14" alt="Zoom Tool" /> <span class="ui">Zoom Tool</span>&mdash; zoom in and out of the document.</li>
+				<li><img src="../../../shared/ui/crop_tool.png" class="tool" width="14" height="14" alt="Crop Tool" /> <span class="ui">Crop Tool</span>&mdash;crop the document to remove unwanted areas.</li>
+				<li><img src="../../../shared/ui/astro_bad_pixel_tool.png" class="tool" width="14" height="14" alt="Bad Pixel Map Tool" /> <span class="ui">Bad Pixel Map Tool</span>&mdash;automatically or manually identify defective pixels in specific kinds of calibration frame.</li>
+			</ul>
+		</details>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To open the Astrophotography Stack Persona:</summary>
+			<ul>
+				<li>Select <span class="ui">File&gt;New Astrophotography Stack</span>.</li>
+			</ul>
+		</details>
+	
+		<details open="open">
+			<summary>To add files:</summary>
+			<ol>
+				<li>On the <span class="ui">Files</span> panel, set <span class="ui">Type</span> to Light frames, then select <span class="ui">Add Files</span>.</li>
+				<li>Browse to your light frames, select them, then select <span class="ui">Open</span>.</li>
+				<li>(Optional but recommended) For each set of calibration frames that you have shot:<ol>
+						<li>Set <span class="ui">Type</span> as appropriate.</li>
+						<li>Select <span class="ui">Add Files</span>.</li>
+						<li>Browse to the corresponding frames, select them, then select <span class="ui">Open</span>.</li>
+					</ol>
+				</li>
+				<li>(Optional) For each collection of light and calibration frames taken at a different time, select <span class="ui">Add a file group</span> and repeat steps 1 through to 3 as appropriate.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To start stacking:</summary>
+			<ol>
+				<li>(Optional) Adjust the Persona&apos;s <a href="astro_panelStackingOptions.html">stacking options</a>.</li>
+				<li>(Optional) Adjust the Persona&apos;s <a href="astro_panelRawOptions.html">RAW options</a>.</li>
+				<li>On the context toolbar, select <span class="ui">Stack</span>.</li>
+			</ol>
+			<p>When the stacking process is complete, its end result is added to the <span class="ui">Stacked Images</span> panel.</p>
+			<p>The frames you added remain in the <span class="ui">Files</span> panel, enabling you to add additional frames or file groups and adjust settings to create additional stacked images, i.e. to try for improved results.</p>
+		</details>
+		
+		<details open="open">
+			<summary>To finish stacking and save your document:</summary>
+			<ol>
+				<li>On the context toolbar, select <span class="ui">Apply</span>. The workspace switches to the Photo Persona.</li>
+				<li>Select <span class="ui">File&gt;Save</span>.</li>
+				<li>Browse to where you want to save your document.</li>
+				<li>Name your document and select <span class="ui">Save</span>.</li>
+			</ol>
+			<p>Upon leaving the Astrophotography Stack Persona, each image in the <span class="ui">Stacked Images</span> panel is added as a new pixel layer near the bottom of the document&apos;s layer stack.</p>
+			<p>Curves and Levels adjustments, with settings calculated during the stacking process, are added at the top of the layer stack. Perform any post-processing you wish, including editing these adjustments.</p>
+		</details>			
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="astro_about.html">About astrophotography stacking</a></li>
+			<li><a href="astro_panelFiles.html">Files panel</a></li>
+			<li><a href="astro_panelStackingOptions.html">Stacking Options panel</a></li>
+			<li><a href="astro_panelRawOptions.html">RAW Options panel</a></li>
+			<li><a href="../Tools/tools_badPixelMap.html">Bad Pixel Map Tool</a></li>
+			<li><a href="astro_narrowband.html">Compositing narrowband images</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

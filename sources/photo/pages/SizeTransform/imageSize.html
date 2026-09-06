@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="image, size, resize, resampling, scaling, resample, scale" />
+	<meta name="description" content="Find out about image resampling and scaling." />
+	<title>Changing image size</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Changing image size</h1>
+		<p>In Affinity Photo 2 there are options to change a document&apos;s or image&apos;s pixel dimensions and/or print resolution.</p>
+
+	</header>
+
+	<section class="about">
+
+		<p>You can change the &apos;size&apos; of an image by <span class="term">scaling</span> or <span class="term">resampling</span> it. These can be undertaken independently or simultaneously.</p>
+
+		<h2>Scaling</h2>
+
+		<p>Scaling will embed a specific print resolution into an image&apos;s metadata to force it to print at a specific dpi (e.g. 300 dpi). The image&apos;s pixel dimensions remain unaffected.</p>
+
+		<h2>Resampling</h2>
+
+		<p>Resampling will do one of the following:</p>
+			<ul>
+				<li>Increase the number of pixels in an image (i.e. stretch it) to make its overall pixel dimensions bigger. This is known as upsampling. This will also increase the image&apos;s file size.</li>
+				<li>Decrease the number of pixels in an image (i.e. compress it) to make its overall pixel dimensions smaller. This is known as downsampling. This will also decrease the image&apos;s file size.</li>
+			</ul>
+
+		<p>When you resample an image, you have the option to:</p>
+
+		<ul>
+			<li>Maintain the image&apos;s aspect ratio or resize unconstrained.</li>
+			<li>Select from a variety of interpolation methods (see note below).</li>
+			<li>Simultaneously scale your image.</li>
+		</ul>
+
+
+		<p>Resampling may be carried out to:</p>
+			<ul>
+				<li>Enlarge an image to specific dimensions in preparation for printing.</li>
+				<li>Reduce an image for on-screen display and to optimize file size.</li>
+			</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+		<summary>To scale an image:</summary>
+			<ol>
+				<li>From the <span class="ui">Document</span> menu, select <span class="ui">Resize Document</span>.</li>
+				<li>Ensure the <span class="ui">Resample</span> option is switched off.</li>
+				<li>Change the <span class="ui">DPI</span> to control the number of pixels (dots) which will be printed per inch when your document is printed. Set higher values (e.g., 300dpi) for professional printing.</li>
+				<li>Click <span class="ui">Resize</span>.</li>
+			</ol>
+
+			<p>You will see no change in the image on the page as this procedure only affects the image&apos;s metadata.</p>
+
+		</details>
+
+		<details open="open">
+		<summary>To resample an image:</summary>
+			<ol>
+				<li>From the <span class="ui">Document</span> menu, select <span class="ui">Resize Document</span>.</li>
+				<li>Ensure the <span class="ui">Resample</span> option is switched on.</li>
+				<li>Enter your new document dimensions in the <span class="ui">Size</span> boxes&mdash;left box for width, right box for height.<ul>
+						<li>To resize the width and height independently, click the link icon (to unlink) between the <span class="ui">Size</span> boxes.</li>
+					</ul>
+				</li>
+				<li>(Optional) Select a different measurement unit from the <span class="ui">Units</span> pop-up menu. Rulers will update to the new measurement unit.</li>
+				<li>Change the <span class="ui">DPI</span> to control the number of pixels (dots) which will be printed per inch when your document is printed. Set higher values (e.g., 300dpi) for professional printing.</li>
+				<li>Select a <span class="ui">Resample</span> method from the pop-up menu.</li>
+				<li>Click <span class="ui">Resize</span>.</li>
+			</ol>
+
+		<aside class="box note">
+			<h3>Resampling methods</h3>
+			<p>The following resample settings are available:</p>
+			<ul>
+				<li><span class="ui">Nearest Neighbor</span>&mdash;simple resampling which has the fastest processing time. Use for hard-edge images and pixel work.</li>
+				<li><span class="ui">Bilinear</span>&mdash;algorithmic resampling for use when downsampling images.</li>
+				<li><span class="ui">Bicubic</span>&mdash;algorithmic resampling for use when upsampling images. Resampling is smoother than Bilinear but has a slower processing time.</li>
+				<li><span class="ui">Lanczos 3</span>&mdash;complex algorithmic resampling that offers sharp results but with the longest processing time. Available as &apos;separable&apos; and &apos;non-separable&apos;; the latter gives marginally better results, but is slightly slower than &apos;separable&apos;.</li>
+			</ul>
+		</aside>
+
+		<aside class="box tip">
+			<p>Instead of adding absolute input values you can enter expressions instead. See <a href="../Workspace/expressions.html">Expressions for field input</a> for details.</p>
+		</aside>
+
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="canvasSize.html">Image and canvas size</a></li>
+			<li><a href="../GetStarted/NewDocument.html">Creating new documents</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

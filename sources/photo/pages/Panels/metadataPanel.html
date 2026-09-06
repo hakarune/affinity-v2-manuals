@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layers, panel, exif, iptc" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Metadata panel</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Metadata panel</h1>
+		<p>The <span class="ui">Metadata</span> panel enables you to inspect and enter information describing the content, copyright and usage rights of an image.</p>
+	</header>
+
+	<section class="about">
+		<h2>About the Metadata panel</h2>
+		<p>The <span class="ui">Metadata</span> panel is available in the <span class="ui">Photo</span>, <span class="ui">Develop</span> and <span class="ui">Export</span> Personas. To make it visible, select <span class="ui">Window&gt;Metadata</span>.</p>
+		<p>You can use the panel to add new metadata to an image, edit existing metadata, and import metadata from/export metadata to an external file.</p>
+		<p>The contents of the panel&apos;s fields are saved as part of Affinity Photo 2 documents and optionally included when exporting to other image file formats.</p>
+		<p>Additionally, you can use the panel to inspect EXIF metadata that describes the hardware and shooting settings used to take a photo. Some EXIF metadata is editable in Affinity Photo 2, i.e. Camera, Make, Model, Date shot. All EXIF data can be removed in one operation.</p>
+		
+		<figure>
+			<p><img src="../../images/panel_metadata_file.png" class="responsive" width="264" alt="Metadata panel showing generation image description and author details" /> <img src="../../images/panel_metadata_exif.png" class="responsive" width="360" alt="Metadata panel showing EXIF fields describing camera hardware and settings when an image was shot" /></p>
+			<figcaption>The Metadata panel showing the <span class="ui">File</span> and <span class="ui">EXIF</span> categories, left and right respectively.</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>Items in the <span class="ui">Keywords</span> field can be single or compound terms. Often a comma or a semicolon is used to separate them. For example: <i>United States of America; USA; California; Golden Gate Bridge; architecture</i>. Check whether other tools in your workflow expect a specific character.</p>
+		</aside>
+
+		<h3>Metadata categories</h3>
+		<p>The panel&apos;s fields are organized into several categories. Use the pop-up menu (top left) to switch between them. The following categories are available:</p>
+		<ul>
+			<li><span class="ui">File</span>&mdash;a summary of the image&apos;s contents and creator.</li>
+			<li><span class="ui">EXIF</span>&mdash;a summary of the digital camera hardware and settings used to capture the image, where applicable.</li>
+			<li><span class="ui">IPTC (Image)</span>&mdash;descriptions of the content and the location depicted, the image&apos;s source (owner), the credit line to display wherever the image is used, and a job ID to help track the image through a workflow. Often used by news organizations and photo agencies.</li>
+			<li><span class="ui">IPTC (Contact)</span>&mdash;the image creator&apos;s contact details, including postal and email addresses, telephone number and website. Often used by news organizations and photo agencies.</li>
+			<li><span class="ui">Rights</span>&mdash;image copyright details, any applicable Creative Commons license, and rights-related website addresses.</li>
+		</ul>
+				
+		<aside class="box note">
+			<p>Use the freeform <span class="ui">Instructions</span> field in the <span class="ui">IPTC (Image)</span> category to mention any usage details that do not belong in other fields.</p>
+		</aside>
+
+		<figure>
+			<p><img src="../../images/panel_metadata_iptc_image.png" class="responsive" width="264" alt="Metadata panel showing IPTC fields describing image contents, source and credit" /> <img src="../../images/panel_metadata_rights.png" class="responsive" width="264" alt="Metadata panel showing rights information about an image" /></p>
+			<figcaption>The Metadata panel showing the <span class="ui">IPTC (Image)</span> and <span class="ui">Rights</span> categories, left and right respectively.</figcaption>
+		</figure>
+		
+		<p>For additional guidance about each field&apos;s expected contents, refer to the IPTC Photo Metadata User Guide&apos;s <a href="https://affin.co/iptcfieldref" target="_blank">Field Reference Table</a>. Many fields in the Metadata panel accept freeform text; the guide contains examples of common practice.</p>
+
+		<aside class="box note">
+			<p>Images downloaded from stock photography sources may have had their metadata stripped out prior to delivery. Check the license agreement supplied by the image provider for complete usage terms.</p>
+		</aside>
+
+		<h3>Choosing what metadata to record</h3>
+		<p>Setting metadata is optional. The following properties are recommended as the minimum to be populated:</p>
+		<ul>
+			<li><span class="ui">Description</span> in the <span class="ui">File</span> category.</li>
+			<li><span class="ui">Author</span><sup>1</sup> in the <span class="ui">File</span> category. (The same as the IPTC attribute <i>Creator</i>.)</li>
+			<li><span class="ui">Source</span> in the <span class="ui">IPTC (Image)</span> category. (The same as the IPTC attribute <i>Copyright Owner</i>.)</li>
+			<li><span class="ui">Statement</span><sup>1</sup> in the <span class="ui">Rights</span> category. (The same as the IPTC attribute <i>Copyright Notice</i>.)</li>
+			<li><span class="ui">Credit</span><sup>1</sup> in the <span class="ui">IPTC (Image)</span> category. (The same as the IPTC attribute <i>Credit line</i>.)</li>
+		</ul>
+
+		<p><sup>1</sup> Image-based searches conducted using Google can display this metadata. Further details are available online at <a href="https://affin.co/iptcgoogle" target="_blank">this IPTC article</a>.</p>
+
+		<p>Ask your organization or client whether it has its own guidance on which metadata it requires to be recorded and how the data should be expressed.</p>
+
+		<h3>Metadata in exported images</h3>
+		<p>To include metadata from all the panel&apos;s editable fields in an exported PNG, JPEG, TIFF, PSD or EPS file, click <span class="ui">More</span> in the <span class="ui">Export Settings</span> dialog and tick <span class="ui">Embed metadata</span>.</p>
+		<p>Most EXIF data will also be included; in particular, some lens information may be omitted.</p>
+		<p>Exported PDFs include the contents of the <span class="ui">Title</span>, <span class="ui">Author</span> and <span class="ui">Keywords</span> fields, which you can set in the <span class="ui">Metadata</span> panel&apos;s <span class="ui">File</span> category.</p>
+	</section>
+		
+	<section class="howto">
+		<details open="open">
+			<summary>To remove camera and GPS location metadata from an Affinity Photo 2 document:</summary>
+			<ul>
+				<li>Open the Panel Preferences menu and do one of the following:<ul>
+						<li>Choose <span class="ui">Strip GPS Location</span> to remove precise location data.</li>
+						<li>Choose <span class="ui">Strip All EXIF</span> to remove info about camera hardware and shooting settings used in the image&apos;s creation.</li>
+					</ul>
+				</li>
+			</ul>
+		</details>
+		
+		<aside class="box note">
+			<p>A sidecar XMP file exported after choosing <span class="ui">Strip All EXIF</span> will not include data concerning your camera hardware and shooting settings. However, it will include data describing image dimensions, resolution and color space, values for which are calculated automatically by Affinity Photo 2.</p>
+		</aside>
+		
+		<details open="open">
+			<summary>To export metadata to a sidecar XMP file:</summary>
+			<ol>
+				<li>(Optional) Strip GPS location and/or EXIF metadata from your document.</li>
+				<li>From the Panel Preferences menu, select <span class="ui">Export to XMP</span> and then do one of the following:<ul>
+						<li>Choose <span class="ui">All</span> to include all metadata in the resulting file.</li>
+						<li>Choose <span class="ui">EXIF</span> to include only metadata in the eponymous category in the resulting file.</li>
+						<li>Choose <span class="ui">File, IPTC and Rights</span> to export all metadata shown in those panel categories.</li>
+					</ul>
+				</li>
+				<li>Set the filename and choose where to save the XMP file.</li>
+				<li>Click <span class="ui">Save</span>.</li>
+			</ol>
+		</details>
+		
+		<aside class="box note">
+			<p>When using the <span class="ui">All</span> option, fields which are empty in the <span class="ui">Metadata</span> panel are not mentioned at all in the resulting XMP file.</p>
+		</aside>
+		
+		<details open="open">
+			<summary>To import metadata manually from a sidecar XMP file:</summary>
+			<ol>
+				<li>From the Panel Preferences menu, select <span class="ui">Import from XMP&gt;File, IPTC and Rights</span>.</li>
+				<li>Browse to and select the sidecar XMP file.</li>
+				<li>Click <span class="ui">Open</span>.</li>
+			</ol>
+		</details>
+		
+		<aside class="box note">
+			<p>Affinity Photo 2 can import metadata from an XMP sidecar file automatically when opening the corresponding image, provided they have the same base filename and the sidecar file has the .xmp file extension (in lower case). To enable this behavior, tick <span class="ui">Load metadata from XMP sidecars</span> in the app&apos;s General settings.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>When importing metadata, only fields for which the XMP file contains data are overwritten; others are unchanged. So, you can create an XMP file that contains info that is common to all your photos, such as author name and a copyright statement, to avoid retyping it.</p>
+		</aside>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Raw/raw.html">Developing a raw image</a></li>
+			<li><a href="../Clr/ClrModels.html">Color models</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

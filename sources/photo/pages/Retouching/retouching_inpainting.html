@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="image interpolation, content aware" />
+	<meta name="description" content="A quick look at how to restore images using the Inpainting Brush Tool." />
+	<title>Inpainting</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Inpainting</h1>
+
+		<p>Inpainting (image interpolation) is the process by which lost or deteriorated image data is reconstructed, but within the context of digital photography can also refer to replacing or removing unwanted areas of an image.<p>
+	</header>
+
+	<section class="about">
+	
+		<figure>
+			<div class="comparison"><img src="../../../shared/tool_inpainting02_before.jpg" alt="Before" /><div><img src="../../../shared/tool_inpainting02_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Removing objects from a landscape image.</figcaption>
+		</figure>
+
+		<h2>About inpainting</h2>
+
+		<p>The <a href="../Tools/tools_inpaintingBrush.html">Inpainting Brush Tool</a> is used to paint over (and identify) damaged or unwanted areas. Complex algorithms then take over to harvest information from the surrounding areas of the image in order to reconstruct the missing data.</p>
+
+		<p>For example, you can remove or replace:</p>
+
+		<ul>
+			<li>Power lines and other obstructions</li>
+			<li>People and animals</li>
+			<li>Vignetting</li>
+			<li>Lens flares</li>
+			<li>Background details</li>
+			<li>Dust spots and scratches</li>
+			<li>Stuck or &quot;hot&quot; pixels</li>
+		</ul>
+
+		<aside class="box note">
+			<p>Inpainting is particularly useful for repairing physically damaged printed photos which have been subsequently digitized.</p>
+		</aside>
+		
+		<p>Upon the inpainting process, the selected RAW or image layer is rasterized. This behavior can be modified via the app&apos;s <span class="ui">Settings</span> in the <span class="ui">Assistant</span> options section.</p>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/inpainting_brush_tool.png" class="tool" width="18" height="18" alt="Inpainting Brush Tool" /> To restore image data using the Inpainting Brush Tool:</summary>
+
+			<ol>
+				<li>Use the <span class="ui">Layers</span> panel to select a layer to work on.</li>
+				<li>Click the <span class="ui">Inpainting Brush Tool</span>.</li>
+				<li>The tool uses a soft-round brush by default. To use a different brush style, choose one from the <span class="ui">Brush</span> panel.</li>
+				<li>Adjust the context toolbar settings.</li>
+				<li>Drag across the image to identify the area of lost or damaged data.</li>
+			</ol>
+		</details>
+
+		<h3>Best Practices:</h3>
+
+		<ul>
+			<li>Zoom in close to the area you wish to inpaint.</li>
+			<li>Set a suitable brush size from the context toolbar.</li>
+			<li>If you are painting out people or complex shapes, try painting over gaps (e.g., inbetween legs and arms) as well for better consistency.</li>
+			<li>Remember you can always do multiple passes if the result of the inpainting does not look authentic or seamless enough. Simply paint over the areas again.</li>
+		</ul>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>The following modifier <span class="KEY-TAG"></span>(s) can be used:</p>
+			<ul>
+				<li>To change brush size, use the [ or ] <span class="KEY-TAG"></span>.</li>
+			</ul>
+		</aside>
+
+		<aside class="box note">
+			<p>As a supplementary method to brush-based inpainting, you can inpaint areas selected in advance via <span class="ui">Edit&gt;Inpaint</span>.</p>
+		</aside>
+
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_inpaintingBrush.html">Inpainting Brush Tool</a></li>
+			<li><a href="../Retouching/retouching_cloningHealing.html">Cloning and healing</a></li>
+			<li><a href="../Workspace/preferences.html">Settings</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

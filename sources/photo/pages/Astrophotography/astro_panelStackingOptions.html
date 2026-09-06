@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="astro, astrophotography, stacking options, panel" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Stacking Options panel (Astrophotography Stack Persona only)</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Stacking Options panel (Astrophotography Stack Persona only)</h1>
+		<p>When creating astrophotography, use the <span class="ui">Stacking Options</span> panel to control the stacking method that&apos;s used to process light and calibration frames.</p>
+
+		<figure class="nft">
+			<p><img src="../../images/panel_astroStackingOptions.jpg" class="responsive panel" alt="Stacking Options panel" /></p>
+			<figcaption></figcaption>
+		</figure>		
+	</header>
+
+	<section class="about">
+		<h2>About the Stacking Options panel</h2>	
+		<p>The panel displays the following:</p>
+		<ul>
+			<li><span class="ui">Background calibration</span>&mdash;normalizes the background level of the light frames based on a reference frame. Recommended when using sigma clipping to avoid mistakenly clipping pixels.</li>
+			<li><span class="ui">Stacking method</span>&mdash;the operator used to average the contents of the light frames and, separately, calibration frames, which can be:<ul>
+					<li><span class="ui">Mean</span>&mdash;averages pixel content across the stack of images.</li>
+					<li><span class="ui">Median</span>&mdash;removes pixel content that is not consistent in each image.</li>
+					<li><span class="ui">Sigma clipping</span>&mdash;clips pixels outside of a given range.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Threshold (standard deviations)</span>&mdash;if the result of sigma clipping still contains hot pixels or other erroneous data, try lowering this to about 2. However, a lower value may result in banding/posterization around high-contrast star detail.</li>
+			<li><span class="ui">Clipping iterations</span>&mdash;the number of passes performed during stacking. More passes may result in greater accuracy.</li>
+		</ul>
+		
+		<h3>About sigma clipping</h3>
+		<p>Sigma clipping is the default stacking method and generally a good choice if you have a lot of data. With very limited data&mdash;less than one hour&apos;s worth of exposures&mdash;the mean and median methods are suitable.</p>
+		
+		<p>Sigma clipping is well suited to monochrome imagery from dedicated astronomy cameras with a CCD or CMOS sensor. Although temperature-regulated, these cameras may exhibit hot pixels, sensor defects and other erroneous pixel data that would show up in the end result.</p>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="astro_about.html">About astrophotography stacking</a></li>
+			<li><a href="astro_creating.html">Creating an astrophotography stack</a></li>
+			<li><a href="astro_panelFiles.html">Files panel</a></li>
+			<li><a href="astro_panelRawOptions.html">RAW Options panel</a></li>
+			<li><a href="astro_narrowband.html">Compositing narrowband images</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

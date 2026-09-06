@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="refining edges, selection, refine" />
+	<meta name="description" content="Refine the edges of your pixel selections using various settings." />
+	<title>Refining pixel selection edges</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1>Refining pixel selection edges</h1>
+
+		<p>Once a selection has been created, you can refine its edges to ensure your selection is as accurate as needed.</p>
+		<p>For very fine selection, e.g. of hair against a colored background, use an adjustment brush as part of the refinement to &apos;brush-in&apos; fine detail.</p>
+	</header>
+	
+	<section class="about">
+	
+		<figure>
+			<div class="comparison"><img src="../../../shared/selections_refine_before.jpg" alt="Refine selection before" /><div><img src="../../../shared/selections_refine_after.jpg" alt="Refine selection after" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+	
+	</section>
+
+	<section class="settings">
+		<h3>Settings (or Preferences)</h3>
+
+		<p>The following settings can be adjusted from the dialog:</p>
+		<ul>
+			<li><span class="ui">Preview</span>&mdash;sets the way your selection and page display. Select from the pop-up menu.<ul>
+					<li><span class="ui">Overlay</span>&mdash;presents the selection overlaid against red, translucent area indicating that area as not part of the selection.</li>
+					<li><span class="ui">Black Matte</span>&mdash;presents the selection against non-selected areas being blacked out.</li>
+					<li><span class="ui">White Matte</span>&mdash;presents the selection against non-selected areas in white.</li>
+					<li><span class="ui">Black &amp; White</span>&mdash;presents the selection as white while non-selected areas as black.</li>
+					<li><span class="ui">Transparent</span>&mdash;presents the selection against a checked pattern indicated as non-selected.</li>					
+					</ul>
+			</li>		
+			<li><span class="ui">Matte Edges</span>&mdash;when selected (default), the selection area closely follows image edges. If this option is off, selection doesn&apos;t follow image edges which is useful for more accurately refining straight selection edges.</li>
+			<li><span class="ui">Border width</span>&mdash;expands the selection by adjusting the width of its border. Drag the slider to set the value.</li>
+			<li><span class="ui">Smooth</span>&mdash;determines the curvature of the selection&apos;s edge. Drag the slider to set the value.</li>
+			<li><span class="ui">Feather</span>&mdash;determines the softness (opacity) of the transition at the edge of the selection. Drag the slider to set the value.</li>
+			<li><span class="ui">Ramp</span>&mdash;In areas where there is a gradual&nbsp;transition from&nbsp;opaque to transparent pixels it makes the transition sharper and moves the selection in or out, depending on which direction you drag the slider. Fully opaque and fully transparent pixels are unaffected.</li>
+			<li><span class="ui">Adjustment brush</span>&mdash;determines the adjustment brush&apos;s refinement mode.<ul>
+					<li><span class="ui">Matte</span>&mdash;re-analyses the selection and attempts to separate foreground detail from the background. Perfect for fine detail refinements such as stray hairs or similar thin elements of a subject.</li>
+					<li><span class="ui">Foreground</span>&mdash;adds to the selection (revealing more of the foreground).</li>
+					<li><span class="ui">Background</span>&mdash;deletes from the selection (revealing more of the background).</li>
+					<li><span class="ui">Feather</span>&mdash;softens the alpha edge of the selection.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Width</span>&mdash;sets the width of the brush tip. Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">Output</span>&mdash;determines how the selection is applied upon exiting the dialog. Select from the pop-up menu.<ul>
+					<li><span class="ui">Selection</span>&mdash;applies the refinement directly to the selection.</li>
+					<li><span class="ui">Mask</span>&mdash;applies the refinement to the selection as a mask.</li>
+					<li><span class="ui">New Layer</span>&mdash;applies the refinement to the selection in a new layer.</li>
+					<li><span class="ui">New Layer With Mask</span>&mdash;applies the refinement to the selection as a mask in a new layer.</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<p>The size of a brush (when using the Matte option) determines what is taken into consideration when Affinity Photo evaluates the apointed areas. Use a brush size that allows the app to recognize the differences between pixels and don&apos;t be afraid to paint your strokes to cover both the areas you&apos;d like to select and those you&apos;d like to exclude as this aids calculations.</p>
+		
+		<div class="box note">
+			<p><span class="ui">Selection</span> and <span class="ui">Mask</span> are ideal when applying adjustments and filters after refining the selection area. <span class="ui">New layer</span> and <span class="ui">New layer with mask</span> are suited to cutting out and compositing; color &apos;decontamination&apos; is also used for achieving high-quality cut-out results.</p>
+		</div>
+
+		<figure><img src="../../../shared/selections_refine.jpg" class="responsive screenshot" alt="Refining selection along an edge containing finely detailed fur"><figcaption>Use the <span class="ui">Foreground adjustment brush</span> to select the interior (top left, brush strokes; top right, resulting selection), then the <span class="ui">Matte adjustment brush</span> to paint along the edge and individual hairs (bottom left). Use the Preview options to inspect the refined selection (bottom right).</figcaption>
+		</figure>
+		
+	</section>
+	
+	<section class="about">
+	
+		<h3>About Smooth</h3>
+		
+		<p>In Affinity Photo, smoothing the edges of your selection can be performed via the dedicated in-dialog slider.</p>
+		
+		<figure class="nft">
+			<div class="single"><img src="../../images/smooth_low_high.jpg" class="responsive" alt="Smooth setting in refining selections" /></div>
+			<figcaption>Smooth setting effect with a low (left) and high (right) value.</figcaption>
+		</figure>
+		
+		<p>As you increase the slider value, you&rsquo;ll notice the amount of details included (left) and excluded (right) from the selection. The setting takes effect by evaluating edge pixel data and delivering a softer result as you increase the pixel value, which is great for at least a couple of scenarios: one, where you need the selected object to fade into the underlying image; or two, whereby you&rsquo;d like for it to stand out with solid, more defined edges.</p>
+	
+		<h3>About Feather</h3>
+		
+		<p>Feathering the edges of your selection can be performed by either adjusting the dedicated in-dialog slider, or setting the brush mode to <span class="ui">Smooth</span>.</p>
+		
+		<figure class="nft">
+			<div class="single"><img src="../../images/feather_low_high.jpg" class="responsive" alt="Feather setting in refining selections" /></div>
+			<figcaption>Feather setting effect with a low (left) and high (right) value.</figcaption>
+		</figure>
+		
+		<p>The <span class="ui">Feather</span> brush mode allows for the borders of your selection to be smoother, even more refined with edge pixels progressively blurred as you increase the brush size. In addition, you can modify these edges further by experimenting with the Feather slider in the dialog &ndash; the brush mode works in tandem with the slider to deliver the desired effect.</p>
+	
+		<div class="box tip">
+			<p>Brush size can be adjusted mid-stroke with the <span class="key">[</span> and <span class="key">]</span> keys.</p>
+		</div>
+	
+		<p>To better visualize the effects of feathering refinements, change the Preview mode to <span class="ui">Black and white</span>.</p>
+	
+	</section>
+
+	<section class="howto">
+	
+		<details open="open">
+			<summary>To refine pixel selection edges:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>From any selection tool&apos;s context toolbar, click <span class="ui">Refine</span>.</li>
+						<li>From the <span class="ui">Select</span> menu, select <span class="ui">Refine Edges</span>.</li>
+					</ul>
+				</li>
+				<li>Adjust the settings in the dialog and/or select the brush mode, as required.</li>
+				<li>If you wish to adjust the selection edges by painting, drag on the preview.</li>
+				<li>Click <span class="ui">Apply</span>.</li>
+			</ol>
+		</details>
+			
+		</section>
+		
+	<section class="about">
+	
+		<h3>Returning to refining pixel selections</h3>
+		
+		<p>If you selected <span class="ui">New layer with mask</span> output option the first time you refined the selection, simply right-click on the mask in the layers panel and select <span class="ui">Refine Mask</span>. If however your output was either to Selection or New Layer, and you haven&rsquo;t deselected your object yet, use the same <span class="ui">Refine</span> button on the context toolbar, as before.</p>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>The following modifier <span class="KEY-TAG"></span>(s) can be used:</p>
+			<ul>
+				<li class="osx">Press the <span class="key CTRL-TAG"></span> and <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>s together and drag on the page. Dragging left or right will decrease or increase the brush size, respectively. Alternatively, use the [ or ] <span class="KEY-TAG"></span>s, respectively. Dragging up or down will decrease or increase the brush hardness, respectively.</li>
+				<li class="win32">Press the <span class="key CMD-TAG"></span> and <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>s together and drag on the page. Dragging left or right will decrease or increase the brush size, respectively. Alternatively, use the [ or ] <span class="KEY-TAG"></span>s, respectively. Dragging up or down will decrease or increase the brush hardness, respectively.</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selections_create.html">Creating pixel selections</a></li>
+			<li><a href="selections_modify.html">Modifying pixel selections</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

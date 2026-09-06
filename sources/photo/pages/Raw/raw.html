@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="develop, raw, Develop, Develop, blown, highlight" />
+	<meta name="description" content="Develop Persona allows you to process your raw image files." />
+	<title>Developing a raw image</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Developing a raw image</h1>
+		<p>Develop Persona is a dedicated non-destructive environment used for processing raw images captured using a digital camera.</p>
+
+		<figure>
+			<p><img src="../../images/raw_develop_persona.png" class="responsive" width="1280" alt="Develop Persona" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>Working in Develop Persona</h2>
+
+		<p>If a <a href="../Appendix/fileformat.html">supported raw file format</a> is opened, it will automatically display in Develop Persona. You can then process the image using the dedicated adjustments, panels and tools. You can use non-destructive development which lets you redevelop the original raw image at any time without affecting the original file.</p>
+
+		<aside class="box note">
+			<p class="osx">Only <span class="ui">Serif Labs RAW Engine</span> can be used for non-destructive operation. To swap to it, go to <span class="ui">Affinity Photo 2&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>), then <span class="ui">Assistant&gt;Develop Assistant</span> and select <span class="ui">Serif Labs</span> from the <span class="ui">RAW Engine</span> pop-up menu.</p>
+			<p class="win32">Only <span class="ui">Serif Labs RAW Engine</span> can be used for non-destructive operation. To swap to it, go to <span class="ui">Edit&gt;Settings</span>, then <span class="ui">Assistant&gt;Develop Assistant</span> and select <span class="ui">Serif Labs</span> from the <span class="ui">RAW Engine</span> pop-up menu.</p>
+		</aside>
+		
+		<p>Develop Persona gives you access to the following:</p>
+			<ul>
+				<li><span class="ui">Output</span> options that will retain your original raw image as a non-destructive raw layer, with the raw file either embedded (copied into your document) or linked (left in its original file location).</li>
+				<li><span class="ui">Develop Assistant Settings</span> to control behavior on loading the RAW image:<ul>
+						<li class="osx">choice of RAW engine for RAW processing</li>
+						<li>enable/disable automatic lens correction (SerifLabs RAW engine only)</li>
+						<li>enable/disable automatic noise reduction</li>
+						<li>enable/disable automatic tonal adjustment (curves)</li>
+						<li>enable/disable automatic exposure adjustment</li>
+					</ul>
+				</li>
+				<li>Tonal adjustments using the <a href="raw_panelBasic.html">Basic</a> and <a href="raw_panelTones.html">Tones</a> panels.</li>
+				<li>Sharpening and Noise adjustments using the <a href="raw_panelDetails.html">Details panel</a>.</li>
+				<li>Lens correction adjustments using the <a href="raw_panelLens.html">Lens panel</a>.</li>
+				<li><a href="usingOverlays.html">Overlays</a> for applying adjustments to specific brushed image regions.</li>
+				<li>Crop Tool for <a href="../SizeTransform/cropping.html">cropping</a> your image.</li>
+				<li>Blemish Removal Tool for <a href="../Retouching/retouching_blemishes.html">correcting image imperfections</a>.</li>
+				<li><a href="raw_panelFocus.html">Focus panel</a>.</li>
+				<li><a href="../Panels/scopePanel.html">Scope panel</a>.</li><!-- 
+				<li>Rotate image options for correcting image orientation.</li>
+ --><li><a href="raw_panelSnapshots.html">Snapshots panel</a> for comparing different image processing settings.</li>
+			</ul>
+
+		<p>At any point while working with an image or any selected pixel layer, you can switch to Develop Persona to make use of its unique features.</p>
+
+		<x-osx>
+			<h2>Choosing between RAW engines</h2>
+			<p>The Develop Assistant Settings provides a choice between Apple (Core Image RAW) and Serif Labs engines for processing RAW images.</p>
+			<p>Apple&apos;s engine provides the benefits of predetermined behaviors for demosaicing, lens correction, noise reduction, cropping and more.</p>
+			<p>Serif Labs&apos; engine allows for greater manual configuration. You can specify luma and chroma noise reduction separately or disable noise reduction altogether, override lens correction, and benefit from superior demosaicing.</p>
+			<p>Apple&apos;s engine crops to whatever aspect ratio was selected in camera and so was written into the image&apos;s metadata, even if the camera sensor&apos;s aspect ratio is different. Data outside of the crop area may be removed during RAW processing. The Serif Labs engine doesn&apos;t destructively crop images, so all sensor data remains available.</p>
+		</x-osx>
+		
+		<h2>Split view options</h2>
+
+		<p>There are a variety of split view options available in Develop Persona&apos;s View Tool which give you the opportunity of seeing how your processed image compares to the original raw data.</p>
+
+		<h2>Syncing</h2>
+
+		<p>While applying adjustments, you can update the &apos;Before&apos; and &apos;After&apos; view to give you a more focused representation of the applied changes. Rather than comparing the processed image with the original raw data, you can sync the views so &apos;Before&apos; adopts the current applied adjustments. The &apos;After&apos; view continues to update as more adjustments are made.</p>
+
+		<h2>Show Clipping</h2>
+
+		<p>An incorrect level of exposure within an image can lead to pixels &apos;falling out&apos; of the viewable intensity range. This results in the loss of detail in areas of shadow, highlights, or midtones and is known as clipping.</p>
+		<p>In Develop Persona, you have the ability to display <span class="ui">Clipped Shadows</span>, <span class="ui">Clipped Highlights</span> and/or <span class="ui">Clipped Tones</span> directly on the image. This can help you identify areas which need correcting as well as preventing overenthusiastic modifications which result in clipping. The Develop Persona remembers your choices for these options from the last time you used it, even when editing a different photo.</p>
+
+		<h2>Preset behavior</h2>
+		
+		<p>To develop RAW files faster, you may save previously modified panel settings as a <span class="ui">Preset</span> and then select it from the list in the panel. Each time you open a new RAW file, all panels reset to the <span class="ui">Default</span> state (no presets are applied).</p>
+<p>Presets are available for the <span class="ui">Basic</span>, <span class="ui">Lens</span>, <span class="ui">Details</span> and <span class="ui">Tones</span> panels.</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/develop_persona_on.png" class="tool" width="24" height="24" alt="Develop Persona" /> To develop a raw image:</summary>
+			<ol>
+				<li><a href="../GetStarted/openRaw.html">Open a raw image</a>. Develop Persona will analyze the data and pre-process it, ready for editing.*</li>
+				<li>On the Toolbar, activate your preferred view mode.</li>
+				<li>Adjust the image using the various panel options and <a href="../Tools/tools_raw.html">tools</a>.</li>
+				<li>(Optional) Sync applied settings within the view and repeat the above step.</li>
+				<li>On the context toolbar, select an <span class="ui">Output</span> option. Choose from:<ul>
+						<li><span class="ui">Pixel</span>&mdash;output will be destructive; a pixel layer is created from your developed raw image.</li>
+						<li><span class="ui">RAW layer (Embedded)</span>&mdash;when developed, an editable non-destructive raw layer is created; the raw image is copied into your document.</li>
+						<li><span class="ui">RAW layer (Linked)</span>&mdash;when developed, an editable non-destructive raw layer is created; the raw image is kept in its original file location.</li>
+					</ul>
+				<li>If redeveloping a raw image, if <span class="ui">Show All Layers</span> is checked above your workspace then all layers (e.g., adjustments or filters) applied in Photo Persona will be displayed if the raw image is redeveloped. Uncheck to hide other layers.</li>
+				<li>On the context toolbar, select <span class="ui">Develop</span>.</li>
+			</ol>
+
+			<aside class="box note">
+				<p>You need to decide on the <span class="ui">Output</span> option when you open your RAW file for the first time. Once set, it cannot be modified when you return to the <span class="ui">Develop</span> persona.</p>
+			</aside>
+
+			<aside class="box tip">
+				<p>*To alter the pre-processing for a raw image, change the develop options available in the <span class="ui">Develop Assistant Settings</span> discussed later.</p>
+			</aside>
+
+			<aside class="box tip">
+				<p>When adjusting settings, you can double click each adjustment slider to reset it to its default value.</p>
+			</aside>
+
+			<aside class="box note">
+				<p><img src="../../../shared/ui/develop_persona_on.png" class="tool" width="24" height="24" alt="Develop Persona" /> You can &apos;develop&apos; any existing pixel layer by clicking <span class="ui">Develop Persona</span> on the Toolbar.</p>
+			</aside>
+
+		</details>
+
+		<details open="open">
+			<summary>To redevelop a raw image:</summary>
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, double-click the raw layer&apos;s thumbnail. Develop Persona will be launched for raw redevelopment.</li>
+			</ul>
+
+			<aside class="box note">
+				<p>Redevelopment is only possible if the initial development used an <span class="ui">Output</span> setting of <span class="ui">RAW layer (Embedded)</span> or <span class="ui">RAW layer (Linked)</span>. Upon re-development, an image layer will be rasterized regardless of the color mode selected. The behavior can be changed via the app&apos;s <span class="ui">Settings</span>.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To create settings preset:</summary>
+			<ol>
+				<li>Modify your develop settings, as required (Basic, Lens, Details or Tones panel).</li>
+				<li>At the top of the panel, click <span class="ui">Default</span> and select <span class="ui">Add Preset</span> from the list.</li>
+				<li>On the pop-up window, type a name for the preset and click <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/standard_view.png" class="tool" width="18" height="18" alt="Single View" /> <img src="../../../shared/ui/split_view.png" class="tool" width="18" height="18" alt="Split View" /> <img src="../../../shared/ui/mirror_view.png" class="tool" width="18" height="18" alt="Mirror View" /> To activate split view modes:</summary>
+			<p>On the Toolbar, do one of the following:</p>
+			<ul>
+				<li>Click <span class="ui">Single View</span> to display the processed image in isolation.</li>
+				<li>Click <span class="ui">Split View</span> to display both processed and original raw image on the same page. A sliding divider can be repositioned to view the image &apos;Before&apos; and &apos;After&apos; processing.</li>
+				<li>Click <span class="ui">Mirror View</span> to display processed and original raw image side-by-side on separate pages. Panning and zooming affects both pages simultaneously so the same area is always displayed in both pages.</li>
+			</ul>
+			
+		<aside class="box note">
+			<p>The output will adopt all the settings as displayed in the &apos;None&apos; or &apos;After&apos; view. The &apos;Before&apos; view is for comparison purposes only.</p>
+		</aside>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/syncbefore.png" class="tool" width="18" height="18" alt="Sync Before" /> <img src="../../../shared/ui/syncafter.png" class="tool" width="18" height="18" alt="Sync After" /> <img src="../../../shared/ui/syncswap.png" class="tool" width="18" height="18" alt="Swap" /> To synchronize applied settings in view modes:</summary>
+			<p>On the Toolbar, do one of the following:</p>
+			<ul>
+				<li>Click <span class="ui">Sync Before</span> to update the &apos;Before&apos; view to the most recent applied settings, i.e. those in the &apos;After&apos; view.</li>
+				<li>Click <span class="ui">Sync After</span> to revert the settings applied in the &apos;After&apos; view back to the settings shown in the &apos;Before&apos; view.</li>
+				<li>Click <span class="ui">Swap</span> to switch the applied settings between the views.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/show_clipped_highlights.png" class="tool" width="18" height="18" alt="Show Clipped Highlights" /> <img src="../../../shared/ui/show_clipped_shadows.png" class="tool" width="18" height="18" alt="Show Clipped Shadows" /> <img src="../../../shared/ui/ShowClippedmidtones.png" class="tool" width="18" height="18" alt="Show Clipped Midtones" /> To show clipping:</summary>
+			<p>On the Toolbar, do one of the following:</p>
+			<ul>
+				<li>Click <span class="ui">Show Clipped Highlights</span> to display all &apos;blown&apos; highlights as a high-contrast red color.</li>
+				<li>Click <span class="ui">Show Clipped Shadows</span> to display all clipped shadow areas as a high-contrast blue color.</li>
+				<li>Click <span class="ui">Show Clipped Tones</span> to display all clipped midtone areas as a high-contrast yellow color.</li>
+			</ul>
+
+		</details><!-- 
+		<details open="open">
+			<summary><img src="../../../shared/ui/rotate_anti_clockwise.png" class="tool" width="18" height="18" alt="Rotate Anticlockwise" /> <img src="../../../shared/ui/rotate_clockwise.png" class="tool" width="18" height="18" alt="Rotate Clockwise" /> To rotate your raw image:</summary>
+			<p>On the Toolbar, do one of the following:</p>
+			<ul>
+				<li>Click <span class="ui">Rotate Anticlockwise</span> to rotate the image anti-clockwise by 90°.</li>
+				<li>Click <span class="ui">Rotate Clockwise</span> to rotate the image clockwise by 90°.</li>
+			</ul>
+
+		</details>
+ --><details open="open">
+			<summary><img src="../../../shared/ui/assistant_options.png" class="tool" width="18" height="18" alt="Develop Assistant Settings" /> To change initial develop settings:</summary>
+			<p>On the Toolbar, do the following:</p>
+			<ol>
+				<li>Click the <span class="ui">Develop Assistant Settings</span> to open its settings dialog.</li>
+				<li>Choose from the following settings:<ul>
+						<li class="osx"><span class="ui">RAW Engine</span>: Provides a choice of RAW processing engines for you to use&mdash;Affinity&apos;s own Serif Labs engine (used by default) or Apple&apos;s Core Image RAW engine.</li>
+						<li><span class="ui">Default lens profile</span>: The <span class="ui">Auto-select</span> option enables automatic lens correction for supported camera <a href="https://affin.co/rawlist" target="_blank">Lens profiles</a> if installed with the app. If a camera is not included (perhaps a new model), you can include it by adding its profile&mdash;a downloaded Lensfun XML file or Adobe Lens Correction Profile (LCP)&mdash;to the database by using <span class="ui">Settings (or Preferences)&gt;General</span>. The <span class="ui">Last used</span> option uses the <span class="ui">Lens Profile</span> previously chosen from the Develop Persona&apos;s <span class="ui">Lens Panel</span> (Lens Correction).</li>
+						<li><span class="ui">Noise reduction</span>: Automatically enables either color noise reduction, color and luminance noise reduction, or disables any initial noise reduction. Color noise reduction is recommended for the vast majority of camera raw images.</li>
+						<li><span class="ui">RAW output format</span>: Choose between <span class="ui">RGB (16 bit)</span> or <span class="ui">RGB (32 bit HDR)</span> output when developing a raw image. Choosing <span class="ui">RGB (32 bit HDR)</span> allows you to maintain a full 32-bit float environment from initial raw development to export and take advantage of extra precision.</li>
+						<li><span class="ui">Tone curve</span>: If the default &apos;Apply tone curve&apos; option is active, your raw image is adjusted using a suggested tone curve. The &apos;Take no action&apos; option makes no tonal correction; the image can be altered within the <span class="ui">Basic</span> panel later.</li>
+						<li><span class="ui">Alert when assistant takes an action</span>: When checked, a pop-up message appears on loading the RAW image to indicate that adjustments have been applied automatically.</li>
+						<li><span class="ui">Exposure bias</span>: Choose whether to apply exposure bias value if stored in the raw image&apos;s EXIF data. Like Histogram stretch, both &apos;default&apos; and &apos;initial&apos; give the same results but reports zeroed or actual values, respectively. The &apos;Take no action&apos; option ignores the exposure bias value.</li>
+						<li class="osx"><span class="ui">Map default region</span>: Sets the map that displays in the <span class="ui">Location</span> panel to a chosen region, if the raw image contains no GPS location data in its EXIF data.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>The chosen RAW Engine will be remembered the next time a raw image is loaded.</p>
+			</aside>
+
+		</details>
+	</section>
+
+	<aside class="box note"><p>If you choose not to apply initial develop settings, your images will not undergo any processing. They may look flat, dull in tone and lacking contrast, but you will have absolute control in how the image is processed.</p></aside>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_raw.html">Raw Tools</a></li>
+			<li><a href="../Workspace/preferences.html">Settings (or Preferences)</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

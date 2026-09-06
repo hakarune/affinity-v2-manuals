@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Useful for modifying masks, the Minimum filter shrinks highlight regions in the image, and broadens darker areas." />
+	<title>Minimum Blur</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Minimum Blur</h1>
+
+		<p>The Minimum Blur filter shrinks highlight regions in the image, and broadens darker areas. It works by comparing each pixel to its neighbor and replaces lighter pixels with darker pixels. This is most useful for modifying masks.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_minblur_before.jpg" alt="Before" /><div><img src="../../../shared/filter_minblur_after.jpg" alt="After" /></div>
+			</div>
+		<figcaption></figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Minimum Blur filter</h2>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be found in the <span class="ui">Filters</span> menu, in the <span class="ui">Blur</span> category.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Radius</span>&mdash;controls intensity of the filter. Type directly in the text box or drag the slider to set the value. Dragging to the right on the page allows you to override the maximum value&mdash;values above 100 px may affect performance so use with care.</li>
+			<li><span class="ui">Circular</span>&mdash;if this option is off (default), darker regions expand to form square areas. When selected, expanded darker regions are circular.</li>
+		</ul>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_maximumBlur.html">Maximum Blur</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

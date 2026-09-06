@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Chromatic Aberration filter attempts to fix chromatic aberration in an image." />
+	<title>Chromatic Aberration</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Chromatic Aberration</h1>
+
+		<p>Lateral chromatic aberration is caused when the camera lens focuses different wavelengths of light at slightly different distances. This causes the red, blue and green planes to go out of alignment, causing multiple color fringes and out of focus details. The problem often gets more pronounced with increasing distance from the center of the image.</p>
+		<p>The Chromatic Aberration filter fixes chromatic aberration by warping the blue and red planes so they align with the green plane&mdash;which is usually the most in focus&mdash;and finds the best alignment.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_ca_before.jpg" alt="Before" /><div><img src="../../../shared/filter_ca_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Aligning the chroma planes using the filter.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Chromatic Aberration filter</h2>
+
+		<p>This filter can be found in the <span class="ui">Filters</span> menu, in the <span class="ui">Colors</span> category.</p>
+
+		<p>This filter has no customizable settings.</p>
+
+		<aside class="box tip">
+			<p>If there is any remaining chromatic aberration this can be mitigated by using the <a href="filter_defringe.html">Defringe</a> filter. You should always apply the chromatic aberration filter before the defringe filter, and always apply it to an uncropped image.</p>
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_defringe.html">Defringe</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

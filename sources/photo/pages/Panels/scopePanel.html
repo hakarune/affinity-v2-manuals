@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="Reference Monitor, panels, luminance" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Scope panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Scope panel</h1>
+		<p>The <span class="ui">Scope</span> panel provides a variety of charts which allow you to examine the distribution of luminance and chrominance in an image, allowing you to judge whether tonal or color correction is needed. It can be used as an alternative to, or in combination with, the <a href="../Panels/histogramPanel.html">Histogram panel</a>.</p>
+	</header>
+
+	<section class="about">
+
+		<h2>About the Scope panel</h2>
+
+		<p>The charts available on the <span class="ui">Scope</span> panel allow you to analyze an image in order to identify areas which need correcting. Some of these issues may be subtle to the eye but may dramatically improve a photo once corrected. Example issues which may be identified using the Scope panel include tonal problems or color casts.</p>
+
+		<p>The <span class="ui">Scope</span> panel is available from the Photo and Develop Personas; for the former, it can be switched on via the <span class="ui">Window</span> menu; for the latter, it can be expanded into view by clicking &apos;Scope&apos; at the top right of your workspace.</p>
+
+		<figure>
+			<p><img src="../../images/panel_scope_intensitywaveform.png" class="responsive" width="264" alt="Scope panel Intensity" /></p>
+			<figcaption>The Scope panel displaying the Intensity Waveform.</figcaption>
+		</figure>
+
+		<h3>Available charts</h3>
+
+		<ul>
+			<li><span class="ui">Intensity Waveform</span>&mdash;displays a scatter plot of the luminance values of pixels in an image. The X axis gives the horizontal location of the pixel while the Y axis provides its luminance value.</li>
+			<li><span class="ui">RGB Waveform</span>&mdash;as with Intensity Waveform, but displays RGB rather than luminance values.</li>
+			<li><span class="ui">RGB Parade</span>&mdash;as with Intensity Waveform, but separated into RGB components.</li>
+			<li><span class="ui">Power Spectral Density</span>&mdash;represents the image in the frequency domain. Low frequencies are represented as solid lines. High frequencies can be seen as speckles. The color of the frequency plot indicates the dominant color tone in the image.</li>
+		</ul>
+		<figure>
+			<p><img src="../../images/panel_scope_powerspectral.png" class="responsive" width="551" alt="Scope panel Powerspectral" /></p>
+			<figcaption>Power Spectral Density: the solid orange line represents the blurrier, low frequency&nbsp;tones of the image. The speckled areas represent the high frequencies. The blue and purple color of the high frequencies suggests the presence of chrominance noise.</figcaption>
+		</figure>
+		<ul>
+			<li><span class="ui">Vectorscope</span>&mdash;displays a circular chart which monitors an image&apos;s color information. Saturation is measured from the center outwards from desaturation to full saturation. The direction of the pattern indicates the image&apos;s hue.</li>
+		</ul>
+
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings are available in the panel:</p>
+
+		<ul>
+			<li>Chart&mdash;sets the chart currently displayed in the panel. Select from the pop-up menu.</li>
+			<li><span class="ui">Gain</span>&mdash;sets the brightness of the points on the waveform displayed in the panel. This does not affect pixels in the image.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../DesignAids/usingVectorscope.html">Using a vectorscope chart</a></li>
+			<li><a href="../Raw/raw.html">Developing a raw image</a></li>
+			<li><a href="histogramPanel.html">Histogram panel</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="liquify" />
+	<meta name="description" content="The Liquify filter can be used to produce a non-destructive liquify effect." />
+	<title>Liquify</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Liquify</h1>
+
+		<p>The Liquify filter can be used to apply non-destructive liquify distortions to the entire image or masked regions of it.</p>
+		
+	<figure>
+		<div class="comparison"><img src="../../../shared/filter_liquify_before.jpg" alt="Before" /><div><img src="../../../shared/filter_liquify_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Switching off/on the Liquify live filter layer whose mask was painted to remove unwanted leftover distortion.</figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Liquify filter</h2>
+
+		<p>This filter is applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, by selecting from the <span class="ui">New Live Filter Layer</span> category.</p>
+		<p>When a warp is applied to an image, the overlaid mesh will update to describe the warp on a grid. Furthermore, modifying the grid will update the warped image below.</p>
+		<p>When warping images using this filter, the active Persona will switch to the <a href="../LiquifyPersona/liquify.html">Liquify Persona</a> and this Persona&apos;s <a href="../Tools/tools_liquify.html">Liquify tools</a> will become available. These tools can be divided into three types:</p>
+		<ul>
+			<li>Direct&mdash;these affect the image by painting over image pixels. These include the <span class="ui">Liquify Push Forward</span>, <span class="ui">Liquify Push Left</span>, <span class="ui">Liquify Twirl</span>, <span class="ui">Liquify Pinch</span>, <span class="ui">Liquify Punch</span>, <span class="ui">Liquify Turbulence</span> and <span class="ui">Liquify Reconstruct</span> tools.</li>
+			<li>Indirect&mdash;these affect the mesh. These include the <span class="ui">Mesh Clone</span> Liquify tool.</li>
+			<li><a href="../LiquifyPersona/liquify_masking.html">Masking</a>&mdash;these apply or remove masked areas. These include the <span class="ui">Freeze</span> and <span class="ui">Thaw</span> Liquify tools.</li>
+		</ul>
+		<p>These Liquify tools are supported by a dedicated <a href="../LiquifyPersona/liquify_panelBrush.html">Brushes panel</a>.</p>
+		<p>Warping can be further modified and controlled using the <a href="../LiquifyPersona/liquify_panelMesh.html">Mesh</a> and <a href="../LiquifyPersona/liquify_panelMask.html">Mask</a> panels.</p>
+		<p>You can reset the warp you have applied at any time by selecting <span class="ui">Reset Mesh</span>.<p>
+		<p>Clicking <span class="ui">Done</span> will commit your warping and create a filter layer; to undo your changes before committing, scroll back the history steps in the Persona&apos;s <span class="ui">History</span> panel.</p>
+		<p>This filter layer behaves like any other live filter layer in that it is has inherent masking properties, is non-destructive, and can be temporarily hidden or deleted from the <span class="ui">Layers</span> panel, and even moved up or down the layer stack for different results.</p>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="../LiquifyPersona/liquify.html">Warping using Liquify Persona</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

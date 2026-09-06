@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="raw, panel" />
+	<meta name="description" content="The Lens panel provides adjustments which can be used to correct lens distortions which appear in images." />
+	<title>Lens panel (Develop Persona only)</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Lens panel (Develop Persona only)</h1>
+		<p>The <span class="ui">Lens</span> panel provides adjustments which can be used to correct lens distortions which can appear in images.</p>
+	
+		<figure>
+			<p><img src="../../images/panel_lens_develop_persona.png" class="responsive" width="264" alt="Lens panel" /></p>
+			<figcaption>The Lens panel in Develop Persona.</figcaption>
+		</figure>
+	
+	</header>
+
+	<section class="about">
+		<h3>Available Adjustments:</h3>
+		<ul>
+			<li><a href="../Adjustments/adjustment_lensCorrection.html">Lens Correction</a>&mdash;fixes various types of lens distortion by straightening and aligning lines in an image.</li>
+			<li><a href="../Adjustments/adjustment_chromaticAberrationReduction.html">Chromatic Aberration Reduction</a>&mdash;fixes chromatic aberration by realigning blue, green, and red planes.</li>
+			<li><a href="../Adjustments/adjustment_defringe.html">Defringe</a>&mdash;corrects purple fringing (bichrominance) at the edges of high contrast areas.</li>
+			<li><a href="../Adjustments/adjustment_lensVignette.html">Remove Lens Vignette</a>&mdash;corrects unwanted vignetting by adjusting the brightness at the edges of an image.</li>
+			<li><a href="../Adjustments/adjustment_lensVignette.html">Post Crop Vignette</a>&mdash;As with Lens Vignette but adjusted after a crop has been applied to an image.</li>
+		</ul>
+
+		<h2>Check adjustment status</h2>
+		<p>One or more status icons may be displayed to the right of an adjustment&apos;s heading. Hover over each for more information.</p>
+		<ul>
+			<li>A blue information icon indicates success in auto-selecting a lens profile, or that the <span class="ui">Develop Assistant Settings</span> is not set to auto-select a profile.</li>
+			<li>A yellow warning icon indicates something could not be done. The Develop Assistant Settings may not have been able to auto-select a lens profile for some reason; the image contains insufficient metadata to perform the adjustment; or corrections have already been applied to the image.</li>
+		</ul>
+		<p>Any status indicator related to the Develop Assistant Settings is cleared if you select a profile manually.</p>
+	
+		<h2>Manual application</h2>
+		<p>Though Affinity Photo 2 may determine a suitable lens profile for your image, in the following circumstances one or more adjustments may be turned off. They can be turned on manually, if you want.</p>
+		<ul>
+			<li>The image is not a linear RAW format&mdash;its light values are logarithmic. This is rare.</li>
+			<li>The image is not a RAW format. For example, you opened a JPEG file and then selected Develop Persona.</li>
+			<li class="osx">In the Develop Assistant Settings, <span class="ui">RAW Engine</span> is set to <span class="ui">Apple (Core Image RAW)</span>.</li>
+			<li>The image contains insufficient metadata, such as focal length and aperture, to perform some aspects of correction.</li>
+			<li>Other software has already corrected the image.</li>
+		</ul>
+	</section>
+
+	<section class="settings">
+		<h3>Settings (or Preferences)</h3>
+		<ul>
+			<li><span class="ui">Preset</span>&mdash;manages adjustment presets via a pop-up menu.<ul>
+					<li><span class="ui">Add Preset</span>&mdash;saves the current adjustment settings as a named preset for later use. The pop-up menu populates with the preset name on saving.</li>
+					<li><span class="ui">Delete Preset</span>&mdash;deletes the preset currently checked in the Preset pop-up menu.</li>
+					<li><span class="ui">Default</span>&mdash;reverts the current adjustment settings back to default settings.</li>
+				</ul>
+			</li>
+			<li><img src="../../../shared/ui/CheckboxTick.png" class="tool heading" width="11" height="11" alt="Active" /> Active/Inactive&mdash;when checked, the adjustment is applied to the image.</li>
+			<li><img src="../../../shared/ui/reset.tiff" class="tool" width="16" height="16" alt="Reset" /> Reset&mdash;sets adjustment slider(s) back to default.</li>
+		</ul>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="raw.html">Developing a raw image</a></li>
+			<li><a href="../Workspace/preferences.html">Settings (or Preferences) (Assistant)</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+	
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<link href="../../../resources/css/keyFeatures.css" rel="stylesheet" media="all">
+	<script src="../../../resources/js/keyFeatures.js"></script>
+	<meta name="keywords" content="features, new" />
+	<meta name="description" content="An overview of Affinity Photo 2's key features." />
+	<title>Features of Affinity Photo 2</title>
+</head>
+
+<body onload="showRequestedList()"><!-- Function defaults to ?list=allFeatures if no query string is provided --><header>
+
+		<h1>Features of Affinity Photo 2</h1>
+		<p>Here&apos;s an overview of the features of Affinity Photo 2. Choose a category from the menu below, which includes options to view all features, or only those that are new in this version&mdash;marked with a red bullet (<span style="color: red; font-weight: bold; width: 1em;">▪</span>).</p>
+	</header>
+
+	<select name="categories" id="catSelector" onChange="updatePage(this.value)" >
+		<option value="allFeatures">All features</option>
+		<option value="newFeatures">New in V2.6</option>
+		<option value="catPower">Power, performance and compatibility</option>
+		<option value="catRaw">Raw development</option>
+		<option value="catColour">Professional color support</option>
+		<option value="catTool">Solid photo-editing tools</option>
+		<option value="catLayers">Powerful layer management</option>
+		<option value="catResources">External resource management</option>
+		<option value="catBrush">Brushes</option>
+		<option value="catMacro">Macros and batch processing</option>
+		<option value="catVector">Supporting Vector design tools and concepts</option>
+		<option value="catInterface">User interface</option>
+		<option value="catDesign">Design aids</option>
+		<option value="catInteroperability">Interoperability</option>
+		<option value="catImport">Document control, Import, Export and Printing</option>
+	</select>
+
+	<section class="about">
+
+		<h2 id="newFeatures">New in V2.6</h2>
+
+		<ul>
+			<li class="new"><a href="../Extras/machineLearning.html">Machine Learning (ML)</a> selections:<ul>
+					<li class="new"><a href="../Tools/tools_objectSelection.html">Object Selection Tool</a><ul>
+							<li class="new">Intelligent object selections</li>
+							<li class="new">Select multi-part components</li>
+							<li class="new">Optional control over soft edges and matting</li>
+							<li class="new">Works on image and RAW layers</li>
+						</ul>
+					</li>
+					<li class="new"><a href="../Selections/selections_selectSubject.html">Select Subject</a><ul>
+							<li class="new">Automatic selection of the main subject on raster or image layers</li>
+							<li class="new">Record as a macro for faster workflows</li>
+							<li class="new">Works on image and Raw layers</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="new">Search within current <a href="../Panels/brushesPanel.html">Brushes Panel</a> category</li>
+			<li class="new">Load image layer in Develop, Liquify and Tone Mapping Personas as raster layer<sup>*</sup></li>
+			<li class="new">Image/Raw layer improvements:<ul>
+					<li class="new">Merge Down/Selected will rasterize and merge</li>	
+					<li class="new">Inpainting will rasterize and apply<sup>*</sup></li>	
+					<li class="new">Paint Brush and Erase tools, on painting, will nest the new layer or mask, respectively</li>
+					<li class="new">Deleting pixel selections will rasterize or mask content<sup>*</sup></li>
+					<li class="new">Duplicating pixel selections will create masked or rasterized pixel content from just that copied area<sup>*</sup></li>
+					<li class="new">Moving marquee pixel selections with <span class="key CMD-TAG"></span>-drag will rasterize the layer and move just that content</li>
+				</ul>
+			</li>
+			<li class="new">Live Perspective filter shortcut of <span class="key CMD-TAG"></span>+T</li>
+			<li class="new">Flood Select, Marquee and Freehand selection tool improvements:<ul>	
+					<li class="new">Tools now use <span class="key SHIFT-TAG"></span> to add; <span class="key ALT-TAG"></span> to subtract</li>
+					<li class="new">Antialiasing enabled by default</li>
+				</ul>
+			</li>
+			<li class="new"><a href="../Tools/tools_marquee.html">Rectangular Marquee Tool</a> can be drawn from center</li>
+			<li class="new">Marquee tools use the <span class="key CMD-TAG"></span> modifier to constrain<sup>*</sup></li>	
+			<li class="new"><a href="../Panels/clrPanel.html">Color panel</a>&rsquo;s Color Picker automatically colors selected object(s)</li>
+			<li class="new"><a href="../ObjectControl/select.html">Toggle marquee select intersection</a> behavior with <span class="key CMD-TAG"></span> key</li>
+			<li class="new">Right-click <a href="../Panels/layersPanel.html">Layers Panel</a> options for Clear Mask and Fill Mask</li>
+			<li class="new"><a href="../Retouching/retouching_inpainting.html">Inpainting</a> and <a href="../Retouching/retouching_patching.html">Patch</a> tools remember previously chosen target layer</li>
+			<li class="new">Updated <a href="https://affin.co/rawlist" target="_blank">SerifLabs RAW engine</a>, including support for:<ul>
+					<li class="new">Canon EOS R5 Mark II</li>
+					<li class="new">Fujifilm GFX 100S II</li>
+					<li class="new">Google Pixel 9 Pro/Pro XL/Pro Fold</li>
+					<li class="new">Leica D-LUX8</li>
+					<li class="new">Leica Q3 43</li>
+					<li class="new">Nikon Z 6 III</li>
+					<li class="new">Panasonic DC-GH7</li>
+					<li class="new">Sony ZV-E10 II</li>
+				</ul>
+			</li>
+		</ul>
+
+<p><sup>*</sup>Optional behaviors via Assistant/Settings</p>
+
+		<h2 id="catPower">Power, performance and compatibility</h2>
+		<ul>
+			<li>Optimized for:<ul>
+					<li class="osx">Grand Central Dispatch (GCD)</li>
+					<li class="osx">OpenGL</li>
+					<li class="osx">Core Graphics</li>
+					<li class="win32">Direct3D</li>
+					<li>64-bit engine</li>
+					<li class="osx">GPU hardware acceleration (Metal) for integrated, discrete and external GPUs</li>
+					<li class="win32">Hardware GPU acceleration (OpenCL) for integrated, discrete and external GPUs</li>
+				</ul>
+			</li>
+			<li>Display support<ul>
+					<li class="osx">Regular, Retina and expanded gamut DCI-P3</li>
+					<li class="win32">Wide color gamut (Display P3)</li>
+					<li>HiDPI</li>
+					<li class="osx">EDR</li>
+					<li class="win32">HDR (Windows; &gt;400 nits recommended)</li>
+				</ul>
+			</li>
+			<li>Create massive gigapixel-sized documents</li>
+			<li>16-bits per channel editing</li>
+			<li>Sub-pixel accuracy</li>
+			<li class="osx">Mac with Apple M1/M2/M3 chip or Intel processor</li>
+			<li class="osx">macOS Catalina 10.15 or later</li>
+			<li>64-bit plug-in support</li>
+			<li>Photoshop plugin support</li>
+			<li>DxO Nik Collection plugin support (all versions)</li> 
+			<li>Embedded Photoshop PSD Smart Objects retain editability</li>
+			<li>Up-to-date Tablet support</li>
+			<li>Multi-touch support</li>
+			<li class="win32">Surface Studio with Surface Pen and Surface Dial support</li>
+			<li class="osx">Force Touch support (Magic Trackpad 2/MacBook/MacBook Pro)</li>
+			<li class="osx">Touch Bar support (MacBook Pro)</li>
+			<li>End-to-end EXIF preservation</li>
+			<li>Benchmark testing</li>
+			<li class="win32">Windows® 11, Windows® 10 May 2020 Update (2004, 20H1, build 19041) or later</li>
+
+		</ul>
+
+		<h2 id="catRaw">Raw development</h2>
+		<ul>
+			<li>Choice of SerifLabs or Apple Core Image RAW engines (SerifLabs for Windows only)</li>
+			<li>GPU-accelerated Raw development</li>
+			<li>Remove automatic tone curve and apply your own</li>
+			<li>Automatic (and manual) lens correction and noise reduction</li>
+			<li>Develop Assistant settings for setting default tone, lens correction, noise reduction, and exposure control behavior</li>
+			<li>Adobe Lens Correction Profile (LCP) support</li>
+			<li>ACM lens profile support</li>
+			<li>Dedicated tones, lens, noise reduction and sharpening panels</li>
+			<li>Support for the latest cameras</li>
+			<li>Split view with syncing</li>
+			<li>Solid and gradient overlays for restricting adjustments</li>
+			<li>Show clipped highlights, shadows, and tones (in output color space)</li>
+			<li>Hot pixel removal (SerifLabs RAW Engine only)</li>
+		</ul>
+
+		<h2 id="catColour">Professional color support</h2>
+		<ul>
+			<li>CMYK, Lab, Grayscale and RGB color modes</li>
+			<li>Color panel (RGB, HSL, LAB, CMYK, Grayscale)</li>
+			<li>Swatches panel for pre-supplied and custom color palettes</li>
+			<li>Generate palette from image</li>
+			<li>Global colors</li>
+			<li>Color tints</li>
+			<li>Color Picker Tool (color mode aware, pick from anywhere on screen, color averaging, layer selection)</li>
+			<li>Color Replacement Brush</li>
+			<li>Paint Mixer Brush</li>
+			<li>Gradient Tool (Linear, Elliptical, Radial, Conical, Bitmap)</li>
+			<li>Professional color support</li>
+			<li>Spot colors and overprint</li>
+			<li>PANTONE® color support</li>
+			<li>ICC color profiling</li>
+			<li>Import Adobe Swatch Exchange (ASE) color palettes (including spot colors)</li>
+			<li>Drag-and-drop colors from Chroma app (SoftPress)</li>
+		</ul>
+
+		<h2 id="catTool">Solid photo-editing power</h2>
+		<ul>
+			<li>Sizing and transforming:<ul>
+					<li>Resize images and canvas</li>
+					<li>Crop to original/custom ratios, absolute dimensions or print sizes</li>
+					<li>Straighten photos</li>
+					<li>Mesh Warp Tool</li>
+					<li>Non-destructive perspective filter</li>
+					<li>Liquify tools in dedicated Persona workspace</li>
+					<li>Pixel art resizing</li>
+				</ul>
+			</li>
+			<li>Channels:<ul>
+					<li>View and isolate color channels</li>
+					<li>Work on channels for document, layer, adjustment, filter, selection or mask</li>
+					<li>Save pixel selections as spare channels</li>
+					<li>Isolate and edit spare channels as layers</li>
+					<li>Duplicate spare channel for backup</li>			
+				</ul>
+			</li>
+			<li>HDR/32-bit<ul>
+					<li>Merge bracketed exposures together to create 32-bit images</li>
+					<li>Unique Persona for Advanced Tone Mapping</li>
+					<li>Edit effortlessly in 32-bit unbounded color format</li>
+					<li>Maintain a true 32-bit lossless workflow and preview full tonal range</li>
+					<li>Multichannel OpenEXR and Radiance import and export</li>
+					<li>Full OpenColorIO Integration</li>
+					<li>Color managed workflow: choose between display transform, linear light and OpenColorIO transforms</li>
+					<li>HDR and EDR display support (for 32-bit unbounded HDR documents)</li>
+				</ul>
+			</li>
+			<li>Powerful auto-stitched panoramas</li>
+			<li>Live projections (equirectangular and perspective)</li>
+			<li>Stacking<ul>
+					<li>For noise reduction</li>
+					<li>For exposure merging</li>
+					<li>For moving object removal</li>
+					<li>Auto-alignment</li>
+					<li>Non-destructive behavior</li>
+				</ul>
+			</li>
+			<li>Focus merging with source cloning</li>
+			<li>Astrophotography<ul>
+					<li>Dedicated Persona for stacking</li>
+					<li>Raw and FITS image support</li>
+					<li>Stack light and calibration frames (dark/dark flat/flat/bias)</li>
+					<li>Stack, tone stretch and retouch entirely in 32-bit</li>
+					<li>Create full color, composite (HaRGB, SHO), grayscale or false color images</li>
+					<li>Stack images for different filters simultaneously using file groups (auto-alignment avoids resampling)</li>
+					<li>Support for FUJIFILM X-Trans sensor images</li>
+				</ul>
+			</li>
+			<li>Selection tools<ul>
+					<li>Shaped selections</li>
+					<li>Intelligent Selection Brush Tool</li>
+					<li>Freehand Selection Tool with Polygonal and Magnetic modes</li>
+					<li>Refine selections to capture fine detail</li>
+					<li>Flood selection</li>
+					<li>Store and save selections</li>
+					<li>Quick masks</li>
+				</ul>
+			</li>
+			<li>Comprehensive metadata editing</li>
+			<li>Assets for storing layer content</li>
+		</ul>
+			
+		<h2 id="catLayers">Powerful layer management:</h2>
+		<ul>
+			<li>Drag-and-drop layers</li>
+			<li>Non-destructive adjustment layers with clipping previews</li>
+			<li>Shareable LUTs</li>			
+			<li>Non-destructive live filter layers with &apos;live&apos; before/after split views</li>
+			<li>Non-destructive Live Liquify filter layers</li>			
+			<li>Apply adjustments, filters and blend modes at the stack, layer, group, selection or object level</li>			
+			<li>Fill layers</li>
+			<li>Linking layers</li>
+			<li>Pattern layers</li>
+			<li>High-quality layer effects</li>
+			<li>Clipping within layers</li>
+			<li>Blend modes</li>
+			<li>Blend ranges (linear and non-linear) and blend gamma control</li>
+			<li>Per-object hierarchical antialiasing</li>
+			<li>Lock child layer positions</li>
+			<li>Layer masks (brush-based and gradient)</li>
+			<li>Colored layer entry tagging for easy identification</li>
+			<li>Image control:<ul>
+					<li>Place images on dedicated layers</li>
+					<li>Resampling: Nearest Neighbor, Bilinear, Bicubic and Lanczos 3 pixel scaling</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<h2 id="catResources">External resource management</h2>
+		<ul>
+			<li>Linked resources</li>
+			<li>Embedded/linked resource policy on new document creation</li>
+			<li>Resource Manager</li>
+			<li>Collect linked resources</li>
+		</ul>
+		
+		<h2 id="catBrush">Brushes</h2>
+		<ul>
+			<li>Painting:<ul>
+					<li>High-quality brush galleries</li>
+					<li>Change brush size, hardness, and opacity on the fly</li>
+					<li>Undo Brush with &apos;paintback&apos; to saved snapshot</li>
+					<li>Import/export brushes, including ABR file import</li>
+					<li>Custom brushes (including image-based brushes)</li>
+					<li>Create brushes from any pixel selection on pixel or mask layer</li>
+					<li>Assign tools to brushes selectively</li>
+					<li>Optimized for graphics tablets</li>
+					<li>Multi-controller support including pressure and velocity</li>
+					<li>Controller-specific brush dynamics</li>
+					<li>Customizable controller ramps</li>
+					<li>Wet Edges support with customizable ramps</li>
+					<li>Sub-brushes (combined brushes)</li>
+					<li>Brush symmetry and mirroring</li>
+					<li>Choice of brush and nozzle controllers/ramps</li>
+					<li>Stroke stabilization for smooth strokes</li>
+					<li>Nozzle rotation using left and right arrow keys</li>
+				</ul>
+			</li>
+			<li>Retouching<ul>
+					<li>Retouching tools<ul>
+							<li>Red-eye removal</li>
+							<li>Inpainting for object removal</li>
+							<li>Clone Brush/Healing Brush</li>
+							<li>Blemish Removal/Patching</li>
+						</ul>
+					</li>
+				</ul>
+				<ul>
+					<li>Retouching brushes:<ul>
+							<li>Dodge, Burn and Sponge brushes</li>
+							<li>Blur, Sharpen, Median and Smudge brushes</li>
+						</ul>
+					</li>
+					<li>Frequency separation</li>		
+				</ul>
+			</li>
+		</ul>
+				
+		<h2 id="catMacro">Macros and batch processing</h2>
+		<ul>
+			<li>Record and save actions as macros</li>
+			<li>Edit individual recorded steps and their parameters</li>
+			<li>Customize  macro settings post recording</li>
+			<li>Import, export, and maintain a macro library</li>
+			<li>Run batch jobs for bulk processing and conversion of images</li>
+			<li>Apply macros in batch jobs for a seamless custom workflow</li>
+		</ul>
+
+
+		<h2 id="catVector">Supporting vector design tools and concepts</h2>
+		<ul>
+			<li>Precise Pen Tool</li>			
+			<li>Intuitive Move Tool (moves, scales and transforms)</li>
+			<li>Rotate from movable origin</li>
+			<li>Customizable nudge distances</li>
+			<li>Node Tool for fine tuning vectors</li>
+			<li>Customizable geometric shapes</li>
+			<li>Full range of non-destructive Boolean geometry operations</li>
+			<li>Duplicate and transform objects with precision</li>
+			<li>Add noise to fills and strokes as a solid or graduated attribute</li>
+			<li>Customizable stroke styles</li>
+			<li>Styles presets with import/export</li>
+			<li>Artistic and frame text</li>
+			<li>Text on a path</li>
+			<li>Character and Paragraph panels</li>
+			<li>Advanced typography including ligatures<ul>
+					<li>Flowing text</li>
+					<li>Spellchecking</li>
+					<li>OpenType font features</li>
+				</ul>
+			</li>
+			<li>Convert shapes and text to fully editable curves</li>
+			<li>Save and synchronize defaults</li>
+			<li>Expressions</li>
+		</ul>
+
+		<h2 id="catInterface">User interface</h2>
+		<ul>
+			<li>Persona task-orientated workspaces</li>
+			<li>Customizable tabbed workspace</li>
+			<li>High DPI (retina) support</li>
+			<li>Multiple document views</li>
+			<li>Windowed and Full Screen modes</li>
+			<li>Docked or floating panels</li>
+			<li>Comprehensive keyboard shortcuts and modifiers</li>
+			<li>Customizable keyboard shortcuts</li>
+			<li>Customizable toolbars</li>
+			<li>Saveable Studio panel presets</li>
+		</ul>
+
+		<h2 id="catDesign">Design Aids</h2>
+		<ul>
+			<li>Rotate document view</li>
+			<li>Incredible zoom range</li>
+			<li>Intuitive panning</li>
+			<li>Saveable zoom viewpoints</li>
+			<li>Powerful snapping control</li>
+			<li>Dynamic snapping guides</li>
+			<li>Pixel-accurate alignment for web graphics and website mockups</li>
+			<li>Managers for Brushes, Grids, Snapping and other operations</li>
+			<li>Automatic, fixed and projection grids</li>
+			<li>Context toolbar and hintline</li>
+			<li>Fluid document History &lt;8192 steps with branching control</li>
+			<li>Save history with document (multi-session)</li>
+			<li>Snapshots</li>
+			<li>Keyboard modifiers for on-the-fly tool changes</li>
+			<li>Mixed-mode assistant for layer creation behavior according to the user&rsquo;s preferences</li>
+		</ul>
+
+		<h2 id="catInteroperability">Interoperability</h2>
+		<ul>
+			<li>Affinity Photo 2 files can be opened in other Affinity products and vice versa</li>
+			<li>In-app license activation</li>
+			<li>Content sync of Affinity Store purchases</li>
+		</ul>
+
+		<h2 id="catImport">Document control, Import, Export and Printing</h2>
+		<ul>
+			<li>Easy Document Setup with preset thumbnails and template support</li>
+			<li>Affinity Designer 1/2, Affinity Photo 1/2, Affinity Publisher 1/2 file placement</li>
+			<li>High-quality Adobe® Photoshop® PSD import, place and export</li>
+			<li>Adobe Illustrator (.ai) import and place</li>
+			<li>PDF import</li>
+			<li>PDF passthrough for absolute display/output fidelity</li>
+			<li>Place images (PNG, JPEG, GIF, TIFF, SVG, EPS, EXR, HDR)</li>
+			<li>SVG import and export, including Inkscape extended SVG support</li>
+			<li>Stock panel for free and royalty-free image resources</li>
+			<li>Export layers, groups and pages to PNG, JPEG, TIFF, GIF, EPS, SVG and PDF</li>
+			<li>Preserve layers in exported TIFF images</li>
+			<li>Draw custom-sized slices at export time</li>
+			<li>Use slice presets for popular image formats</li>
+			<li>Multiple export setups, formats and resolutions per slice</li>
+			<li>Output all slices at once, just one slice, or selected slices</li>
+			<li>Export automatically to retina (@2x, @3x)/high DPI</li>
+			<li>Set export areas and file formats during or after photo editing</li>
+			<li>Export document or current selection(s) to many raster image formats, PSD, PDF, EPS and more</li>
+			<li>Export Preview</li>
+			<li>Export as template</li>
+			<li>Desktop printing with Layout, Paper Handling, Feed, and Duplexing control</li>
+			<li>Web-ready PDFs (Acrobat) with presets</li>
+			<li>Professional hi-res PDF/X printing (CMYK) with presets</li>
+			<li>Spot colors and overprint control</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="about_photo.html">Affinity Photo 2</a></li>
+			<li><a href="about_Personas.html">Personas</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

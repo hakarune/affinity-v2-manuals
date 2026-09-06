@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layer comp, layer comps, layer state, layer states, states, query, queries, States panel, visibility, effects, layer effects, criteria, criterion" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>States panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>States panel</h1>
+	
+		<p>The <span class="ui">States</span> panel allows you to capture the current configuration of layer visibilities and effects as <span class="term">layer states</span> (or simply <span class="term">states</span>) and create queries that affect layers&apos; visibility based on their tag color, type, name and lock status.</p>
+		
+		<p>Any state or query can be instantly applied to all or some of your document&apos;s layers, allowing you to easily compare different directions for your work. To learn more about the application of states and queries, view the <a href="../LayerOperations/layerStates.html">Layer states</a> topic.</p>
+
+		<figure>
+			<p><img src="../../images/photo-panel-states.png" class="responsive" width="321" alt="States panel" /></p>
+			<figcaption>Affinity Photo 2 States panel.</figcaption>
+		</figure>
+		
+		<aside class="box note">
+			<p>The <span class="ui">States</span> panel is hidden by default. It can be switched on via the <span class="ui">Window</span> menu when working in Photo Persona.</p>
+		</aside>
+
+		<aside class="box tip"> 
+			<p>It is helpful to add a state that represents the starting configuration of your document&apos;s layers before adding or applying other states, so you can easily return to it.</p>
+		</aside>
+		
+		<aside class="box warning">
+			<p>Updating or deleting a state is not recorded in your document&apos;s History, i.e. you cannot simply undo or redo these actions.</p>
+		</aside>
+		
+	</header>
+
+	<section class="settings">
+		<h3>Options</h3>
+		
+		<p>The following options are available on the panel:</p>		
+		<ul>
+			<li><span class="ui">Scope</span>&mdash;Determines whether adding, updating or applying a state captures/affects the visibility of layers throughout the whole <span class="ui">Document</span>, only the current <span class="ui">Selection</span> on the <span class="ui">Layers</span> panel, or (for specific document types such as .afpub) only layers on the current <span class="ui">Spread</span>.</li>
+			<li><img src="../../../shared/ui/query.png" class="tool" width="24" height="24" alt="Add new query icon" /> <span class="ui">Add new query</span>&mdash;Creates a new query, with your choice of name, that can be configured to affect layers&apos; visibility according to their tag color, type, name and lock status.</li>
+			<li><img src="../../../shared/ui/standard_layer_state.png" class="tool" width="24" height="24" alt="Add new captured state icon" /> <span class="ui">Add new captured state</span>&mdash;Creates a new state, with your choice of name, that captures the current visibilities of and effects applied to layers in the selected <span class="ui">Scope</span>.</li>
+			<li><img src="../../../shared/ui/trash_can.png" class="tool" width="24" height="24" alt="Delete State" /> <span class="ui">Delete state</span>&mdash;Deletes the selected state.</li>
+		</ul><br /><p>The following options are available on a state&apos;s entry on the panel:</p>
+		<ul>
+			<li><img src="../../../shared/ui/update-layer-state.png" class="tool" width="24" height="24" alt="Update" /> <span class="ui">Update</span>&mdash;Updates the state with current information about layers that were in scope when it was originally added and which are currently in scope. (Other layers that are currently in scope are ignored.)</li>
+			<li><img class="tool" src="../../../shared/ui/apply-layer-state.png" width="24" height="24" alt="Apply" /> <span class="ui">Apply</span>&mdash;The visibilities of layers are set to the values captured in the state. Affects only layers and layer effects captured in the state and which are in the selected <span class="ui">Scope</span>, and depending on your choices on the state&apos;s options menu.</li>
+		</ul>
+		
+		<p><img src="../../../shared/ui/cogicon.png" class="tool" width="24" height="24" alt="States Options" /> The following options are available from the <span class="ui">State Options</span> menu:</p>
+		<ul>
+			<li><span class="ui">Visibility changes</span>&mdash;When selected, the state is allowed to affect layer visibilities when it is applied. When unselected, the state will not affect layer visibilities when it is applied.</li>
+			<li><span class="ui">Effects changes</span>&mdash;When selected, the state is allowed to affect layer effect visibilities when it is applied. When unselected, the state will not affect layer effect visibilities when it is applied.</li>
+		</ul><br /><p>The following options are available from a query&apos;s entry on the panel:</p>
+		<ul>
+			<li><img src="../../../shared/ui/select-state.png" class="tool" width="24" height="24" alt="Select" /> <span class="ui">Select</span>&mdash;When clicked, relevant layers are selected according to the visible query.</li>
+			<li><img src="../../../shared/ui/query-visible-off.png" class="tool" width="24" height="24" alt="Hide state" /> <span class="ui">Hide</span>&mdash;When clicked, layers within the selected <span class="ui">Scope</span> that meet the query&apos;s criteria are hidden.</li>
+			<li><img src="../../../shared/ui/query-visible-on.png" class="tool" width="24" height="24" alt="Show state" /> <span class="ui">Show</span>&mdash;When clicked, layers within the selected <span class="ui">Scope</span> that meet the query&apos;s criteria are shown.</li>
+			<li>Criteria&mdash;Describes attributes that layers must match for their visibility to be affected when Hide or Show is clicked. Unselected attributes are ignored. All selected attributes must be matched.<ul>			
+					<li><span class="ui">Layer tag</span>&mdash;Select one or more tag colors (including no color). For example, layers with a red tag color, or layers with either a red tag color <i>or</i> an orange tag color. Turn on the switch to match layers whose tag color <span class="ui">is</span> one of your selection, or turn it off to match layers whose tag color <span class="ui">is not</span> one of your selection.</li>
+					<li><span class="ui">Layer type</span>&mdash;Select one or more layer types. For example, only adjustment layers, or adjustment layers <i>and</i> live filter layers. Turn on the switch to match layers whose type <span class="ui">is</span> one of your selection, or turn it off to match layers whose type <span class="ui">is not</span> one of your selection.</li>
+					<li><span class="ui">Layer name</span>&mdash;Enter a layer name that layers must match exactly, or, with <span class="ui">Regular expressions</span> selected, a pattern for matching layer names, then press the <span class="RETURN-TAG"></span> <span class="KEY-TAG"></span>. Turn on the switch to match layers whose name <span class="ui">is</span> as specified, or turn it off to match layers whose tag color <span class="ui">is not</span> as specified.</li>
+					<li><span class="ui">Lock status</span>&mdash;Turn on the switch to match only locked layers. Turn it off to match only unlocked layers.</li>
+				</ul>
+			</li>
+			<li><span class="ui">And show / hide others</span>&mdash;When selected, layers in the selected <span class="ui">Scope</span> and which do not meet the criteria are set to the opposite visibility when you click Hide or Show.</li>
+		</ul>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../LayerOperations/layerStates.html">Layer states</a><li><a href="../Layers/aboutLayers.html">About layers</a></li>
+			<li><a href="../LayerOperations/view.html">Viewing</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

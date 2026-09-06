@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="adjustment, lut, look-up table, .cube, .csp, .3dl, .look, import, export" />
+	<meta name="description" content="The LUT adjustment emulates image colours used in a variety of media platforms." />
+	<title>LUT adjustment</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1>LUT adjustment</h1>
+
+		<p>The LUT adjustment emulates image colors used in a variety of media platforms.</p>
+
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/adjustment_3dlut_before.jpg" alt="Before" /><div><img src="../../../shared/adjustment_3dlut_after.jpg" alt="After" /></div>
+			</div>
+		</figure>
+
+
+	</header>
+
+	<section class="about">
+
+		<p>A LUT (look-up table) remaps pixel color values based on a defined XYZ matrix. This allows you to quickly replicate the appearance of various types of media, such as reproducing the cold, blue tone attributed to science fiction and horror movies.</p>
+
+		<p>The look up table is stored within a file previously exported from Affinity Photo 2 or other apps (e.g., video packages). Alternatively, it can be inferred by comparing images.</p>
+				
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>After selecting an individual LUT from the LUT adjustment, the following settings can be adjusted:</p>
+		<ul>
+			<li><span class="ui">Load LUT</span>&mdash;sets the LUT used in the adjustment. In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+			<li><span class="ui">Infer LUT</span>&mdash;applies a LUT adjustment without the need of a separate LUT file by comparing a &apos;source&apos; image and its adjusted exported image. With a new &apos;target&apos; image loaded, click <span class="ui">Infer LUT</span>, then in the pop-up dialog, navigate to and select both source and adjusted files in turn, and click <span class="ui">Open</span>.</li>
+		</ul>
+
+		<aside class="box note">
+			<p>The following types of LUT files can be loaded: <span class="ui">*.3dl</span>, <span class="ui">*.csp</span>, <span class="ui">*.cube</span>, and <span class="ui">*.look</span>.</p>
+		</aside>
+		
+		<p>The following options are available from the adjustment:</p>
+			
+		<ul>
+			<li>Category&mdash;displays the currently active category. Select from the pop-up menu.</li>
+		</ul><br /><p><img src="../../../shared/ui/cogicon.png" class="tool" width="15" height="15" alt="Panel Preferences" /> The following options are available from the adjustment&apos;s <span class="ui">Options</span> menu:</p>
+		<ul>
+			<li><span class="ui">Create New Category</span>&mdash;adds a new, custom LUT category to the panel.</li>
+			<li><span class="ui">Rename Category</span>&mdash;allows you to rename the currently selected category.</li>
+			<li><span class="ui">Delete Category</span>&mdash;removes the currently selected category (and all its LUTs) from the panel.</li>
+			<li><span class="ui">Duplicate Category</span>&mdash;adds a second copy of the currently selected category to the panel. The new copy is not automatically linked to your other Affinity apps.</li>
+			<li><span class="ui">Link Category</span>&mdash;makes the currently selected category available in all your Affinity 2 apps.</li>
+			<li><span class="ui">Sort Categories By</span>&mdash;allows you to sort the contents of the Category pop-up menu by <span class="ui">Name</span> or <span class="ui">Date Added</span>.</li>
+			<li><span class="ui"><a href="../Addons/importingAddons.html">Import LUT Category</a></span>&mdash;adds multiple LUTs from an .afluts file to the panel as a new category.</li>
+			<li><span class="ui">Export LUT Category</span>&mdash;creates an .afluts file containing the currently selected category and all its LUTs, as a backup or to share.</li>
+			<li><span class="ui"><a href="../Addons/importingAddons.html">Import LUTs</a></span>&mdash;adds one or more individual LUTs from external files to the currently selected category.</li>
+			<li><span class="ui">Sort LUTs By Name</span>&mdash;arranges the currently selected category&apos;s contents in alphabetical order.</li>
+		</ul>
+		
+		<aside class="box note">
+			<p>LUTs within a category can be dragged up or down to set the order in which they are listed. Whether you sort a category&apos;s LUTs manually or automatically, their order is remembered for future editing sessions.</p>
+		</aside>
+		
+		<p class="osx">The following options are available by <span class="key CLICK-TAG"></span>-clicking an individual LUT:</p>
+		<p class="win32">The following options are available by right-clicking an individual LUT:</p>
+		<ul>
+			<li><span class="ui">Rename</span>&mdash;allows you to rename the LUT.</li>
+			<li><span class="ui">Delete</span>&mdash;removes the LUT from the panel.</li>
+			<li><span class="ui">Move To Category</span>&mdash;select a different category in which the LUT should be stored.</li>
+			<li><span class="ui">Export LUT</span>&mdash;creates a file containing the individual LUT, as a backup or to share.</li>
+		</ul>
+
+	</section>
+	
+	<section class="howto">
+		
+		<details open="open">
+			<summary>To export LUTs:</summary>
+			<ol>
+				<li>On the <span class="ui">Adjustment</span> panel, <span class="key CLICK-TAG"></span>-click the LUT you want to export, then select <span class="ui">Export</span> from the pop-up menu.</li>
+				<li>Adjust settings in the dialog.</li>
+				<li>Click <span class="ui">Export</span>.</li>
+			</ol>
+		</details>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="adjustment_applying.html">Applying adjustments</a></li>
+			<li><a href="export_3dLut.html">Exporting custom adjustments as LUTs</a></li>
+			<li><a href="../Addons/importingAddons.html">Importing add-ons</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

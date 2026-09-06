@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="transforming, flipping, rotating, rotate, sizing, resizing, nudge, nudging, move, data, entry, duplicate, entry" />
+	<meta name="description" content="Layer content can be flipped, rotated, positioned and sized accurately." />
+	<title>Transforming</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Transforming</h1>
+		<p>Layer content can be positioned, sized, rotated or sheared on the page either &apos;by eye&apos; or with absolute precision. Flipping operations are also possible.</p>
+
+	</header>
+
+	<section class="about">
+	
+	<p>Transforming is a general term to describe the repositioning, sizing (scaling), rotation, shearing or flipping of objects. Several choices are available:</p>
+	
+		<ul>
+			<li>&quot;by eye&quot;: Using the <span class="ui">Move Tool</span> or by dragging control/rotation handles.</li>
+			<li>Move data entry: For accurate repositioning, rotating, scaling and duplicating of layer content by dialog.</li>		
+			<li><span class="ui">Transform</span> panel: For accurate repositioning, resizing, rotating and shearing objects via panel.</li>
+		</ul>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/transform_scale_before.jpg" alt="Before" /><div><img src="../../../shared/transform_scale_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Sizing an image proportionally around its center</figcaption>
+		</figure>
+		
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To position layer contents accurately:</summary>
+			<ol>
+				<li>Select one or more layers.</li>
+				<li>On the <span class="ui">Transform</span> panel, change <span class="ui">X</span> and/or <span class="ui">Y</span> values.</li>
+			</ol>
+
+		</details>
+
+		<details open="open">
+			<summary>To nudge layer content:</summary>
+			<ol>
+				<li>Select layer content.</li>
+				<li>Do one of the following:<ul>
+						<li>For nudging by a single unit of measurement: Press an arrow key.</li>
+						<li>For 10x the single unit of measurement: Press an arrow key with the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> pressed.</li>
+					</ul>
+				</li>
+			</ol>
+
+		<x-osx><aside class="box note">
+			<p>You can change nudge distances via <span class="ui">Affinity Photo 2&gt;Settings</span> (or <span class="ui">Preferences</span>) in the <span class="ui">Tools</span> category.</p>
+		</aside></x-osx>
+
+		<x-win32><aside class="box note">
+			<p>You can change nudge distances via <span class="ui">Edit&gt;Settings</span> (or <span class="ui">Preferences</span>) in the <span class="ui">Tools</span> category.</p>
+		</aside></x-win32>
+
+		</details>
+
+		<details open="open">
+			<summary>To move, rotate or scale layer content accurately (by Move data entry):</summary>
+			<ol>
+				<li>Select one or more layers.</li>
+				<li>Press the <span class="key RETURN-TAG"></span> <span class="KEY-TAG"></span> to display a <span class="ui">Move / Duplicate</span> dialog.<br /><figure class="nft">
+								<div class="single"><img src="../../images/move_data_entry.png" width="274" class="screenshot responsive" alt="Move data entry" /></div>
+								<figcaption></figcaption>
+							</figure>Enter new settings that will offset the object from its original position, with optional <span class="ui">Angle</span>, <span class="ui">Rotation</span> and <span class="ui">Scale</span> settings. <span class="ui">Distance</span> is the measurement between the original and moved object&apos;s centers.</li>
+			</ol>
+			<p>The dialog also lets you <a href="../LayerOperations/duplicate.html">duplicate</a> the original layer content by a set number of copies.</p>
+			<p>Check <span class="ui">Previous Settings</span> if you want to retain and use the last used transformation values entered into the dialog; uncheck to transform with new values.</p>
+		<aside class="box tip">
+			<p>The <span class="ui">Rotation</span> field will accept equations, so it&apos;s easy to set the correct rotation amount&mdash;simply enter the equation as, e.g. <i>360/6</i> if you were setting up six positions, then set the <span class="ui">Number of copies</span> to be <i>≥5</i> (as you already have one object).</p>
+		</aside>
+		</details>
+
+		<details open="open">
+			<summary>To size layer content with mathematical precision:</summary>
+			<ol>
+				<li>Select one or more layers.</li>
+				<li>On the <span class="ui">Transform</span> panel, change <span class="ui">W</span> and/or <span class="ui">H</span> values.</li>
+			</ol>
+
+			<aside class="box note">
+				<p>You can scale layer content from a custom transform origin (rather than an anchor point) that has been placed prior to transforming.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary>To size layers to same:</summary>
+			<ol>
+				<li>Select multiple layers, ensuring the layer to be sized to is selected <em>first</em>. To do this, use <span class="key SHIFT-TAG"></span>-click to target it first or a marquee selection that encompasses it first.</li>
+				<li><img src="../../../shared/ui/match-width.png" class="tool" width="18" height="18" alt="Match Width" /> <img src="../../../shared/ui/match-height.png" class="tool" width="18" height="18" alt="Match Height" /> On the Toolbar, click <span class="ui">Alignment</span>, then set the <span class="ui">Make Same</span> option, choosing to size to <span class="ui">Width</span> or <span class="ui">Height</span>.</li>
+				<li>(Optional) Check <span class="ui">Maintain Aspect Ratio</span> to ensure the layers will resize using their original proportions.</li>
+				<li>Click <span class="ui">Apply</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+		<summary>To size layers to a targeted key object:</summary>
+			<ol>
+				<li>Select multiple layers.</li>		
+				<li>With the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> pressed, click the target key object (i.e., a layer). The selected key object will possess a strong outline.</li>
+				<li><img src="../../../shared/ui/match-width.png" class="tool" width="18" height="18" alt="Match Width" /> <img src="../../../shared/ui/match-height.png" class="tool" width="18" height="18" alt="Match Height" /> On the Toolbar, click <span class="ui">Alignment</span>, then set the <span class="ui">Make Same</span> option, choosing to size to <span class="ui">Width</span> or <span class="ui">Height</span>.</li>				
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To size layer content interactively on the canvas:</summary>
+			<ol>
+				<li>Select one or more layers.</li>
+				<li>Drag a corner or edge control handle on the selection&apos;s bounding box. The opposite handle is used as the anchor point.</li>
+			</ol>
+
+				<p>The following effects can be applied individually or in combination when sizing content:</p>
+
+				<table class="shortcut">
+					<tr>
+						<th>Action</th>
+						<th>Key</th>
+					</tr>
+					<tr>
+						<td>Resize proportionally</td>
+						<td><span class="key SHIFT-TAG"></span></td>				
+					</tr>
+					<tr>
+						<td>Anchor operation to center</td>
+						<td><span class="key CMD-TAG"></span></td>				
+					</tr>
+				</table>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/multiple_transform.png" class="tool" width="16" height="16" alt="Transform Objects Separately" /> To transform selected objects separately:</summary>
+			<ol>
+				<li>Select multiple objects.</li>
+				<li>With the <span class="ui">Move Tool</span> selected, select <span class="ui">Transform Objects Separately</span> from the context toolbar.</li>
+				<li>Apply a sizing, <a href="../LayerOperations/rotateShear.html">rotation or shearing</a> transformation. Each selected object is transformed relative to its individual attributes, not those of the selection as a whole.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To size selected objects separately to absolute sizes</summary>
+				<ol>
+					<li>Select multiple objects.</li>
+					<li>Ensure <span class="ui">Transform Objects Separately</span> is selected from the context toolbar.<li>On the <span class="ui">Transform</span> panel, resize by entering an absolute value into the <span class="ui">W</span> or <span class="ui">H</span> input boxes. For example enter <i>=100px</i> into the <span class="ui">W</span> box to make all objects 100px wide.</li>
+				</ol>
+				
+			<p>This absolute sizing is in contrast to scaling other objects in your selection proportionately to a targeted key object resized to, e.g. 100px. Note the importance of the &quot;=&quot; symbol to signify an expression being used.</p>
+		</details>
+
+	</section>
+
+	<section class="about">
+	
+		<h2>Scale override</h2>
+
+		<p>When an object is resized, the stroke width, layer effect radii, corner radii and text frame contents can be forced to scale by using the <span class="ui">Transform</span> panel. If <span class="ui">Scale with object</span> settings are unchecked on the object itself (stroke, layer effect, etc.) then they will be ignored.</p>
+		
+		<aside class="box tip">
+			<p>For best results, use Scale override when resizing and maintaining the object&apos;s aspect ratio.</p>
+		</aside>
+		
+	</section>		
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/scale_properties.png" class="tool heading" width="16" height="16" alt="Scale Override" /> To override scaling on objects:</summary>
+				<ol>
+					<li>Select an object.</li>
+					<li>On the <span class="ui">Transform</span> panel, enable <span class="ui">Scale Override</span>.<li>Resize via the object&apos;s handles with the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> pressed.</li>
+				</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/scale_properties.png" class="tool heading" width="16" height="16" alt="Scale Override" /> To override scaling on objects selectively:</summary>
+				<ol>
+					<li>Select an object.</li>
+					<li>On the <span class="ui">Transform</span> panel, click the <span class="ui">Scale Override</span> down arrow to check/uncheck the following settings:<ul>
+							<li><span class="ui">Line weights</span>&mdash;useful when working on vector objects with a stroke. For example, you can either force or prevent scaling while resizing with the setting set to <span class="ui">Scale with object</span> or <span class="ui">Locked</span>, respectively.</li>
+							<li><span class="ui">Shape corners</span>&mdash;to control the scaling of a shape&apos;s corners while resizing, you can either force (<span class="ui">Scale with object</span>) or prevent (<span class="ui">Locked</span> setting).</li>
+							<li><span class="ui">Layer effect radii</span>&mdash;to control the scaling of the radius of a layer effect added to an object.</li>
+							<li><span class="ui">Text frame contents</span>&mdash;to control the scaling of frame text while resizing; when set to <span class="ui">Locked</span> the container will scale while keeping text the same size. When set to <span class="ui">Scale with object</span> however, text will enlarge when resizing the container by its corner handles.</li>
+						</ul>
+					<li>Ensure the <span class="ui">Scale Override</span> button is enabled.</li>
+					<li>Resize via the object&apos;s handles with the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> pressed.</li>
+				</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../LayerOperations/rotateShear.html">Rotating and shearing</a></li>
+			<li><a href="../LayerOperations/flipping.html">Flipping</a></li>
+			<li><a href="../LayerOperations/duplicate.html">Duplicating</a></li>
+			<li><a href="../Panels/transformPanel.html">Transform panel</a></li>
+			<li><a href="../Workspace/expressions.html">Expressions for field input</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

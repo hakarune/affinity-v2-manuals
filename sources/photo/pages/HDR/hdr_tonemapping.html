@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="hdr, exposure, bracket, tone, map, mapping, 32bit, float, unbounded" />
+	<meta name="description" content="Tone map 32-bit images to make them viewable on most displays." />
+	<title>Tone mapping HDR images</title>
+</head>
+
+<body>
+
+	<header>
+		<h1><img src="../../../shared/ui/tonemap_persona_on.png" class="tool heading" width="18" height="18" alt="Tone Mapping Persona" /> Tone Mapping HDR images</h1>
+
+		<p>Tone Mapping is the process of taking a range of tones and remapping them to a smaller range that most displays and other devices can accurately reproduce.</p>
+
+	</header>
+	
+	<section class="about">
+	
+		<figure>
+			<div class="single"><img src="../../../shared/feature_hdr_tonemapped.jpg" alt="Tone Mapped 32-bit" /></div>
+			<figcaption>A tone mapped 32-bit image.</figcaption>
+		</figure>
+		
+		<h2>About HDR</h2>
+		<p>Affinity&apos;s <span class="ui">Tone Mapping Persona</span> can be used to produce high quality images of extended dynamic range, even from seemingly flat captures. Upon entering the persona, the RAW or image layer is rasterized, however this behavior can be changed in the app&apos;s Settings.</p>
+		
+		<aside class="box note">
+			<p>Prior to entering the Tone Mapping Persona, ensure you have selected the correct image or RAW layer in the panel.</p>
+		</aside>
+	
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To tone map an HDR image:</summary>
+			<ol>
+				<li>With a 32-bit document open, select a pixel layer and then click <span class="ui">Tone Mapping Persona</span>.</li>
+				<li>Once in the Tone Mapping Persona, your image will have a default tone map applied to it.</li>
+				<li>Experiment with the adjustments in the <span class="ui">Tone Map</span> panel. See below for a list of options.</li>
+				<li>On the context toolbar, click <span class="ui">Apply</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/feature_hdr_tonemap_before.jpg" alt="Before" /><div><img src="../../../shared/feature_hdr_tonemap_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Before/after of a tone mapped image.</figcaption>
+	</figure>
+
+	<aside class="box note">
+		<h3>Presets</h3>
+		<p>The Tone Mapping Persona contains a number of presets that appear on the left hand side within the <span class="ui">Presets</span> panel. Simply click one to apply it. You can also create your own presets, or import new ones.</p>
+	</aside>
+
+	<section class="settings">
+		<h3>Settings (or Preferences)</h3>
+
+		<p>The following settings are available in the <span class="ui">Tone Map</span> panel:</p>
+
+		<ul>
+			<li><span class="ui">Clamp to SDR</span>&mdash;clamps values greater than 1, ensuring the tone mapped result does not have any remaining out-of-bound values.</li>
+			<li><span class="ui">Tone Compression</span>&mdash;controls how much of the unbounded tonal range to map. Increasing the slider results in more tone compression.</li>
+			<li><span class="ui">Local Contrast</span>&mdash;adds or removes local contrast. Increasing local contrast helps to boost clarity in the image.</li>
+			<li><span class="ui">Exposure</span>&mdash;raises or lowers the overall exposure.</li>
+			<li><span class="ui">Black Point</span>&mdash;sets the black clipping level. Increase to further clip black tones.</li>
+			<li><span class="ui">Brightness</span>&mdash;controls mid tone levels. Increase to raise mid tones.</li>
+			<li><span class="ui">Contrast</span>&mdash;controls global contrast. Use in conjunction with Clarity to significantly change the tone mapped look.</li>
+			<li><span class="ui">Saturation</span>&mdash;adds or decreases overall color intensity.</li>
+			<li><span class="ui">Vibrance</span>&mdash;adds or decreases color intensity without clipping color tones.</li>
+			<li><span class="ui">White Balance</span>&mdash;changes the balance of color tones. Tones can be made cooler or warmer by dragging the <span class="ui">Temperature</span> slider, and color casts can be corrected using the <span class="ui">Tint</span> slider.</li>
+			<li><span class="ui">Shadows &amp; Highlights</span>&mdash;controls compression of shadow and highlight tones. Useful for fine tuning tones.</li>
+			<li><span class="ui">Detail Refinement</span>&mdash;controls additional sharpening to the image. Its effects are more subtle compared to the <span class="ui">Detail Refinement</span> found in the Develop Persona. For a &quot;gritty&quot;, over sharpened effect, try a large <span class="ui">Radius</span> value and small <span class="ui">Amount</span> value.</li>
+			<li><span class="ui">Curves</span>&mdash;allows adjustment of tonal range using a curves graph.</li>
+		</ul>
+		
+		<aside class="box tip">
+			<p>To reset slider values back to default, double-click on the slider button.</p>
+		</aside>
+
+	</section>
+
+	<aside class="box tip">
+		<h3>Tone Mapping non-HDR images</h3>
+		<p>The Tone Mapping Persona can also be entered from non 32-bit documents, which means you can achieve a tone mapped look from any 8 or 16-bit imagery.</p>
+	</aside>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="hdr_merging.html">Merging to 32-bit HDR</a></li>
+			<li><a href="hdr_editing.html">32-bit HDR editing</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

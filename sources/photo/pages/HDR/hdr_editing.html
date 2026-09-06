@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="hdr, openexr, float, unbounded, 32bit" />
+	<meta name="description" content="Tone map 32-bit images to make them viewable on most displays." />
+	<title>32-bit HDR editing</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>32-bit HDR editing</h1>
+
+		<p>Affinity Photo 2 has full support for 32-bit float editing, including import/export for <a href="openexr.html">OpenEXR</a> and Radiance formats. Compared to 8-bit or 16-bit, 32-bit presents an unbounded color space that can contain a vast amount of tonal information. This means the information can be modified to extremes without losing fidelity or accuracy. For example, highlight detail blown out by an adjustment or filter can be recovered even after successive operations.</p>
+		<p>Support is included for HDR (High Dynamic Range) or EDR (Extended Dynamic Range) compliant displays, enabling a much higher peak brightness to be displayed on-screen. See the <a href="../Panels/32bitPanel.html">32-bit Preview panel</a> topic for more information.</p>
+	</header>
+
+	<section class="about">
+		<h2>Uses for 32-bit HDR</h2>
+		<p>Popular uses for 32-bit editing include:</p>
+		<ul>
+			<li>HDR merging from several exposures to produce an image with greatly increased dynamic range. The result typically has to be tone mapped in order to be viewed properly on most displays.</li>
+			<li>3D render editing. Full renders and buffer passes from 3D software and 3D engines can be professionally color managed and edited losslessly.</li>
+			<li>General image editing and design work with increased precision. Useful for fine gradient work, heavy tonal manipulations and composite work.</li>
+			<li>Viewing and editing high dynamic range imagery in conjunction with an HDR or EDR compliant display.</li>
+		</ul>
+
+		<aside class="box tip">
+			<p>If you are using 32-bit editing for lossless workflows (e.g., 3D compositing/rendering) where you are not compressing or modifying the tonal range, you can use the <a href="../Panels/32bitPanel.html">32-bit Preview panel</a> to preview different areas of the large 32-bit tonal range. The added functionality of <a href="ocio.html">OpenColorIO</a> can be accessed through this panel.</p>
+		</aside>
+
+		<aside class="box tip">
+			<p>For 32-bit HDR documents and EDR/HDR displays, the <span class="ui">Color</span> panel offers an <span class="ui">Intensity</span> slider to create unbounded color values. You can preview it with an SDR display by using the <span class="ui">Preview Exposure</span> slider on the <span class="ui">32-bit preview</span> panel.</p>
+		</aside>
+
+		<aside class="box note">
+			<p>Photo supports multi-layered (multichannel) OpenEXR documents. For more information, see <a href="openexr.html">32-bit OpenEXR support</a>.</p>
+		</aside>
+
+		<aside class="box prefs">
+			<h3>Settings (or Preferences)</h3>
+			<p>Related behaviors can be adjusted from <a href="../Workspace/preferences.html">the app&apos;s settings</a>:</p>
+			<ul>
+				<li class="osx"><span class="ui">Color&gt;Enable EDR by default in 32-bit RGB Views</span></li>
+				<li class="win32"><span class="ui">Color&gt;Enable HDR by default in 32-bit RGB Views</span></li>
+			</ul>			
+		</aside>
+	</section>
+
+	<section class="examples">
+		<h2>Examples</h2>
+
+		<h3>3D render passes</h3>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/feature_32bit_scene_before.jpg" alt="Before" /><div><img src="../../../shared/feature_32bit_scene_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption><b>Before</b>: Base HDR color render pass of a 3D scene. <b>After</b>: Base HDR color tone mapped and blended with scene color pass.</figcaption>
+		</figure>
+
+		<h3>Exposure merging for greater dynamic range</h3>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/feature_32bit_range_before.jpg" alt="Before" /><div><img src="../../../shared/feature_32bit_range_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption><b>Before</b>: Single exposure from camera. <b>After</b>: 7 bracketed exposures merged and lightly tone mapped.</figcaption>
+		</figure>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="hdr_merging.html">Merging to 32-bit HDR</a></li>
+			<li><a href="hdr_tonemapping.html">Tone Mapping HDR images</a></li>
+			<li><a href="../Panels/32bitPanel.html">32-bit Preview panel</a></li>
+			<li><a href="../Panels/clrPanel.html">Color panel</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

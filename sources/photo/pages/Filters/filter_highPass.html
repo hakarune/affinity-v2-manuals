@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The High Pass filter sharpens image edges." />
+	<title>High Pass</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>High Pass</h1>
+
+		<p>The High Pass filter retains details where sharp color transitions occur, generally at the edges, and suppresses the rest of the image.</p>
+
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_highpass_before.jpg" alt="Before" /><div><img src="../../../shared/filter_highpass_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>High Pass filter applied with an Overlay blend mode for sharpening.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the High Pass filter</h2>
+
+		<p>When a High Pass filter is applied at a high radius value to a duplicate layer and combined with a contrast blend mode (such as overlay, soft light or hard light), it can be used as a useful sharpening technique.</p>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Radius</span>&mdash;controls how many pixels are kept and how many are suppressed. (At higher radius values, only edge pixels are kept.)</li>
+			<li><span class="ui">Monochrome</span>&mdash;when selected, the final effect only contains grayscale values.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_unsharpMask.html">Unsharp Mask</a></li>
+			<li><a href="filter_clarity.html">Clarity</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

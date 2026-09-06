@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="import, adobe, pdf, portable" />
+	<meta name="description" content="Importing PDF documents." />
+	<title>Importing PDF documents</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Importing PDF documents</h1>
+
+		<p>PDF documents can be imported and edited depending on how the PDF was originally exported.</p>
+
+	</header>
+
+	<section class="about">
+
+		<p>The importing of PDF documents is a one-way process. You cannot overwrite the original file once it has been imported, instead saving it as an Affinity document. However, you can edit the PDF content if page objects remain editable from the original export; you can then export the file as another PDF.</p>
+		
+	</section>
+
+	<section class="howto">
+		<details>
+			<summary>To import Adobe PDF documents:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>From the <span class="ui">File</span> menu, click <span class="ui">Open</span>.</li>
+						<li>Double-click anywhere in the empty view. (Only available when no other documents are open.)</li>
+					</ul>
+				</li>
+				<li>Select the file you want and click <span class="ui">Open</span>.</li>
+				<li>From the PDF Options dialog, you can choose:<ul>
+						<li><span class="ui">Load all pages/Load pages</span>&mdash;All pages or specific pages (by page number) can be imported.</li>
+						<li><span class="ui">DPI</span>&mdash;sets the resolution for the document. The Estimate option reads and uses the resolution of the PDF file.</li>
+						<li><span class="ui">Color space</span>&mdash;sets the document color space (e.g., RGB or CMYK) that PDF contents will use. The Estimate option senses the PDF file&apos;s color space and uses that.</li>
+						<li><span class="ui">Favor editable text over fidelity</span>&mdash;if text is to remain more editable at the expense of accurate design reproduction.</li>
+						<li><span class="ui">Group lines of text into text frames</span>&mdash;If separate text lines can be treated as a single text frame to aid text flow.</li>
+						<li><span class="ui">Replace missing fonts</span>&mdash;when checked, missing fonts are substituted with the suggested replacement font family/style or a font family/style of your choosing.</li>
+					</ul>
+				</li>
+			</ol>
+
+		<aside class="box note">
+			<p>For multi-page PDF files, each page is placed on its own artboard.</p>
+		</aside>
+
+		<aside class="box note">
+			<p>On importing a PDF that has fonts that are unavailable on your computer, if you choose to check <span class="ui">Replace missing fonts</span> at this stage, you won&apos;t be able to swap the fonts at a later date via <span class="ui">Font Manager</span>. To replace missing fonts later, ensure you uncheck the option.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>Adobe PDF files can be easily placed into an existing document using <span class="ui">File&gt;Place</span>. When placing multi-page PDFs, you can choose which page you wish to display using the context toolbar.</p>
+		</aside>
+		
+		</details>
+
+		<x-osx>
+			<details>
+				<summary>To import Adobe PDF documents (via Finder):</summary>
+				<ul>
+					<li>Open Finder and drag the PDF file to an off page area of your workspace.</li>
+				</ul>
+			</details>
+		</x-osx>
+		
+		<x-win32>
+			<details>
+				<summary>To import Adobe PDF documents (via Explorer):</summary>
+				<ul>
+					<li>Open Explorer and drag the PDF file to an off page area of your workspace.</li>
+				</ul>
+			</details>
+		</x-win32>	
+
+		<aside class="box note">
+			<x-osx><p>On opening, a file&apos;s color space is preserved by default, but you can convert it to the default working color space via <span class="ui">Affinity Photo 2&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>) (Color option) using <span class="ui">Convert opened files...</span>. The document&apos;s current color profile is displayed at the top left of your workspace.</p></x-osx>
+			<x-win32><p>On opening, a file&apos;s color space is preserved by default, but you can convert it to the default working color space via <span class="ui">Edit&gt;Settings</span> (Color option) using <span class="ui">Convert opened files...</span>. The document&apos;s current color profile is displayed at the top left of your workspace.</p></x-win32>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="openDocument.html">Open documents and images</a></li>
+			<li><a href="importAdobe.html">Importing Adobe documents</a></li>
+			<li><a href="../Clr/ClrProfiles.html">Color management</a></li>
+			<li><a href="../Appendix/fileformat.html">Supported file formats</a></li>
+		</ul>
+	</section>
+
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

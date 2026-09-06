@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="lens correction, distortion, lens profile, camera, model, make, manual lens" />
+	<meta name="description" content="The Lens Correction filter applies a lens profile to correct distortion caused by the curvature of a camera lens." />
+	<title>Lens Correction</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Lens Correction</h1>
+		<p>The Lens Correction filter fixes various types of lens distortion by straightening and aligning lines in an image, based on a lens profile</p>
+		<p>It is an simplified alternative to the <a href="../Adjustments/adjustment_lensCorrection.html">Lens Correction features available in the Develop Persona</a> and most commonly used to quickly apply corrections to JPEG images.</p>
+	
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_lenscorrection_before.jpg" alt="Before" /><div><img src="../../../shared/filter_lenscorrection_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+		
+		<aside class="tip">
+			<p>Whether editing a JPEG or RAW image, Develop Persona&apos;s equivalent and additional lens correction settings are available at any time. You might choose the Lens Correction filter when only a lens profile needs to be applied.</p>
+		</aside>
+	</header>
+	
+	<section class="about">
+		<h2>Automatic and manual lens identification</h2>
+		<p>When an image contains EXIF data that identifies a camera and lens for which Affinity Photo 2 has a matching lens profile, that profile is automatically selected in the filter&apos;s window.</p>
+		<p>A camera and lens profile may need to be selected manually when using:</p>
+		<ul>
+			<li>A manual lens, the identity of which a camera cannot write to images&apos; EXIF data.</li>
+			<li>A lens adaptor, which may amend the lens description that&apos;s written to images&apos; EXIF data.</li>
+		</ul>
+
+		<h2>About the Lens Correction filter</h2>
+		<p>This filter can be accessed via the <span class="ui">Filter</span> menu, from the <span class="ui">Distort</span> category.</p>
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+		<p>The following settings can be adjusted in the filter dialog. Settings will be automatically selected if the current image contains the EXIF data necessary to identify the camera hardware and its settings.</p>
+
+		<ul>
+			<li><span class="ui">Camera</span>&mdash;select the camera you want to correct for.</li>
+			<li><span class="ui">Lens</span>&mdash;choose a lens profile to manually apply the lens correction. The list will change depending on the lenses supported by the selected camera.</li>
+			<li><span class="ui">Focal length</span>&mdash;specify the focal length for the correction, e.g. 50 mm.</li>
+		</ul>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_lensDistortion.html">Lens Distortion</a></li>
+			<li><a href="../Adjustments/adjustment_lensCorrection.html">Lens Correction (Develop Persona)</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

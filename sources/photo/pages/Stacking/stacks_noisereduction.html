@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="noise reduction, average, bracketing" />
+	<meta name="description" content="Composite images of multiple exposures using stacks." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src:"../../../shared/stacking/nr_01.jpg", alt: "Noise Frame 01" },
+				tab2: { src:"../../../shared/stacking/nr_02.jpg", alt: "Noise Frame 02" },
+				tab3: { src:"../../../shared/stacking/nr_03.jpg", alt: "Noise Frame 03" },
+				tab4: { src:"../../../shared/stacking/nr_final.jpg", alt: "Stacked Frame" }
+			}
+		}
+	</script>
+	<title>Noise reduction using stacks</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+
+		<h1>Noise reduction using stacks</h1>
+
+		<p>Noise Reduction with stacking allows you to improve the SNR (Signal to Noise ratio) of your imagery by stacking together multiple shots of the same subject and &quot;averaging&quot; out the noise. Since the subject remains consistent from shot to shot but noise is random, it can be removed efficiently without compromising the clarity of the subject.</p>
+
+		<p>This technique is beneficial for static scenes, especially in low light photography where noise is often unavoidable, either due to high ISO values or long exposures.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Noise Frame 01</p></div>
+				<div class="tab"><p>Noise Frame 02</p></div>
+				<div class="tab"><p>Noise Frame 03</p></div>
+				<div class="tab selected"><p>Stacked Frame</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/stacking/nr_final.jpg" class="responsive" alt=""></div>
+		</div>
+
+		<h2>Shooting tips</h2>
+		<p>Here are a few things to consider when shooting.</p>
+			<ul>
+				<li>To help image alignment, use a tripod or ensure your camera is in a fixed position.</li>
+				<li>The higher the ISO value you shoot at, the greater the number of shots you will need to effectively reduce the noise.</li>
+				<li>If shooting handheld, use a high speed burst mode if available for the best framing consistency between shots.</li>
+				<li>Try and use a fixed white balance to avoid large differences in tone between the shots.</li>
+			</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/median.png" class="tool heading" width="18" height="18" alt="Stack mode" /> To create a noise reduction stack:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">New Stack</span>.</li>
+				<li>From the dialog, click <span class="ui">Add</span> to locate and select your images. Click <span class="ui">Open</span> to add the images to the stack list.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+				<li>On the <span class="ui">Layers</span> panel, select either the <span class="ui">Median</span> or <span class="ui">Mean</span> stack mode from the Stack Mode pop-up menu on the Live Stack Group layer. Results between each mode may vary: try both and see which you prefer.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="stacks.html">Image stacks</a></li>
+			<li><a href="stacks_objectremoval.html">Object removal using stacks</a></li>
+			<li><a href="stacks_exposuremerge.html">Exposure merging using stacks</a></li>
+			<li><a href="stacks_creative.html">Creative effects using stacks</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="3D, bump maps" />
+	<meta name="description" content="Simulate lighting from one or more light sources." />
+	<title>Lighting effects</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Lighting effects</h1>
+		<p>The Lighting feature simulates lighting from one or more light sources.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_lighting_before.jpg" alt="Before" /><div><img src="../../../shared/filter_lighting_after.jpg" alt="After" /></div>
+			</div>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About lighting</h2>
+
+		<p>Lighting effects simulate ambient, point, directional, and spot lighting in your design. You can supplement the single light source with additional light sources for more advanced lighting control; different light source types can be used in combination, each being independently configured and positioned using on-screen handles.</p>
+		<p>Affinity Photo 2 also lets you create lighting effects from 3D bump maps made from texture inherent in any image.</p>
+
+		<h3>Source types</h3>
+		<p>Different source types give dramatically different results. The types are best imagined with a few examples.</p>
+
+			<ul>
+				<li><span class="term">Spot</span>: Casts an elliptical beam of light focusing on a specific subject of interest, like a torch.</li>
+				<li><span class="term">Point</span>: Casts omnidirectional light, like a light bulb.</li>
+				<li><span class="term">Directional</span>. Casts light directionally from infinity, e.g. from the sun.</li>
+			</ul>
+
+		<p>Lighting effects can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>, which can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the dialog:</p>
+
+		<ul>
+			<li><span class="ui">Diffuse</span>&mdash;sets the level of diffused &apos;scattered&apos; light reflected from the surface. Higher values reflect more light.</li>
+			<li><span class="ui">Specular</span>&mdash;sets the level of light reflected from the surface that reflects in a single outgoing direction (rather than being diffused), to form a highlight (hotspot).</li>
+			<li><span class="ui">Shininess</span>&mdash;controls the spread of the specular reflection above. Set the value lower for larger and more widespread highlights; higher for smaller, sharper highlights.</li>
+			<li><span class="ui">Specular color</span>&mdash;sets the color for specular reflection.</li>
+			<li><span class="ui">Ambient</span>&mdash;Sets the level of uniform &apos;background&apos; lighting.</li>
+			<li><span class="ui">Ambient light color</span>&mdash;Sets a color for ambient light.</li>
+			<li><span class="ui">Light</span>&mdash;Click to select a point light source. You can <span class="ui">Add</span>, <span class="ui">Copy</span> or <span class="ui">Remove</span> additional light sources.</li>
+			<li><span class="ui">Type</span>&mdash;selects the light source type (see above).</li>
+			<li><span class="ui">Color</span>&mdash;selects the light source color.</li>
+			<li><span class="ui">Distance</span>&mdash;selects the light source distance from the page.</li>
+			<li><span class="ui">Texture</span>&mdash;Creates texture from the image itself.</li>
+		</ul>
+		<p>For 3D Bump Maps:</p>
+		<ul>
+
+			<li><span class="ui">Load bump map</span>&mdash;click to load an image that you want to convert to a 3D bump map. Use <span class="ui">Clear bump map</span> to remove any applied map.</li>
+			<li>Uncheck <span class="ui">Scale Horizontally To Fit</span> to retain the imported image&apos;s native width. When checked, the image is stretched/shrunk to the main image.</li>
+			<li>Uncheck <span class="ui">Scale Vertically To Fit</span> to retain native height.</li>
+			<li><span class="ui">Opacity</span>&mdash;alters the transparency of the texture. Type directly in the text box or drag the slider to set the value.</li>
+
+		</ul>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+		<summary>To apply a spot light:</summary>
+			<ol>
+				<li>From the <span class="ui">Filters</span> menu, select <span class="ui">Lighting</span>.</li>
+				<li>From the <span class="ui">Type</span> pop-up menu, select &apos;Spot&apos;.</li>
+				<li>Drag the on-screen handle at the apex of the &apos;fan&apos; shape to adjust the distance and direction of the light.</li>
+				<li>(Optional) Drag the Elevation handle situated along the center line to set the height of the spot light above the page.</li>
+				<li>(Optional) Drag the outer and inner handles at the end of the fan to set the outer and inner cone, respectively.</li>
+			</ol>
+
+		</details>
+
+		<details open="open">
+		<summary>To apply a point light:</summary>
+			<ol>
+				<li>From the <span class="ui">Filters</span> menu, select <span class="ui">Lighting</span>.</li>
+				<li>From the <span class="ui">Type</span> pop-up menu, select &apos;Point&apos;.</li>
+				<li>Reposition the default point light by dragging the center handle over a subject of interest.</li>
+				<li>Drag the circle&apos;s edge inwards or outwards to set the light&apos;s distance from the page.</li>
+			</ol>
+
+		</details>
+
+		<details open="open">
+		<summary>To apply a directional light:</summary>
+			<ol>
+				<li>From the <span class="ui">Filters</span> menu, select <span class="ui">Lighting</span>.</li>
+				<li>From the <span class="ui">Type</span> pop-up menu, select &apos;Directional&apos;.</li>
+				<li class="osx">Drag the crosshair within the <span class="ui">Direction</span> dial.</li>
+				<li class="win32">Drag the white spot within the <span class="ui">Direction</span> dial.</li>
+			</ol>
+
+		</details>
+
+		<details open="open">
+		<summary>To load a 3D bump map:</summary>
+			<ol>
+				<li>On the Lighting panel, click <span class="ui">Load bump map</span>, navigate to, then select your image.</li>
+				<li>Click <span class="ui">Open</span>.</li>
+				<li>Adjust <span class="ui">Texture</span> to set the amount of texture displayed.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

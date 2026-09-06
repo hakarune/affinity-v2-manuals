@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="batch, automate, process, macro" />
+	<meta name="description" content="Batch process files." />
+	<title>Batch jobs</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Batch jobs</h1>
+
+		<p>Batch jobs allow a number of image files to be processed: specific processing instructions can be automated, boosting workflow efficiency.</p>
+
+		<figure class="nft">
+			<p><img src="../../images/panel_batch.png" class="responsive" width="500" alt="Batch panel" /></p>
+			<figcaption>The Batch Job dialog with files added to the <span class="ui">Sources</span> list.</figcaption>
+		</figure>
+	</header>
+
+	<section id="about">
+		<h2>About batch jobs</h2>
+
+		<p>The <span class="ui">Batch Job</span> feature allows you to specify an unrestricted number of source files to process and export. Raw files will be automatically developed, and both the exported file format and image dimensions are configurable.</p>
+
+		<p>Batch jobs can work in conjunction with <a href="macros.html">Macros</a>. Any number of pre-recorded macros can be applied to the source files, meaning you can very quickly apply certain operations to several files.</p>
+	</section>
+
+	<section id="howto">
+		<details open="open">
+			<summary>To start a batch job:</summary>
+			<ol>
+				<li>On the <span class="ui">File</span> menu, choose <span class="ui">New Batch Job</span>.</li>
+				<li>Below the <span class="ui">Sources</span> list, choose <span class="ui">Add</span> to bring up a file import dialog.</li>
+				<li>Select your desired image files (including raw files) to add to the <span class="ui">Sources</span> list and click <span class="ui">Add</span>.</li>
+				<li>Set your Output options (see below for more information), then click <span class="ui">OK</span> to begin batch processing.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section class="settings">
+		<h3>Settings (or Preferences)</h3>
+
+		<p>The following settings are available in the <span class="ui">Batch Job</span> panel:</p>
+
+		<ul>
+			<li><span class="ui">Parallel processing</span>&mdash;when checked, allows images to be processed asynchronously&mdash;one for each processor core or thread. For most modern machines with dual/quad-core processors, leaving this on is recommended for more efficient processing.</li>
+			<li><span class="ui">Output</span>:<ul>
+					<li class="osx"><span class="ui">Save into original location</span>&mdash;writes the new image files into the same directory as the originals. To use, you need to click <span class="ui">Authorize</span>, then navigate to your root Macintosh HD folder, then click <span class="ui">Authorize</span>. Once done, the <span class="ui">OK</span> button will be available to click. There&apos;s no need to navigate to the folder containing your images for batching.</li>
+					<li class="win32"><span class="ui">Save into original location</span>&mdash;writes the new image files into the same directory as the originals.</li>
+					<li><span class="ui">Save into:</span>&mdash;allows you to specify a different directory to write the new image files into.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Save as AFPhoto</span>&mdash;writes an <span class="ui">.afphoto</span> version of each source image.</li>
+			<li><span class="ui">Save as JPEG</span>&mdash;writes a <span class="ui">JPEG</span> version of each source image.</li>
+			<li><span class="ui">Save as PNG</span>&mdash;writes a <span class="ui">PNG</span> version of each source image.</li>
+			<li><span class="ui">Save as TIFF</span>&mdash;writes a <span class="ui">TIFF</span> version of each source image.</li>
+			<li class="osx"><span class="ui">Save as OpenEXR</span>&mdash;writes a <span class="ui">32-bit OpenEXR</span> version of each source image.</li>
+			<li class="win32"><span class="ui">Save as EXR</span>&mdash;writes a <span class="ui">32-bit EXR</span> version of each source image.</li>
+			<li><span class="ui">Save as WEBP</span>&mdash;writes a <span class="ui">WebP</span> version of each source image.</li>
+			<li class="osx"><span class="ui">Save as JPEG-XL</span>&mdash;writes a <span class="ui">JPEG-XL</span> version of each source image.</li>
+			<li class="win32"><span class="ui">Save as JPEGXL</span>&mdash;writes a <span class="ui">JPEGXL</span> version of each source image.</li>
+			<li><span class="ui">Width</span>/<span class="ui">Height</span>&mdash;manually enter size dimensions for the source image.</li>
+			<li><span class="ui">Aspect</span>&mdash;when checked, maintains the aspect ratio of the source image.</li>
+			<li><span class="ui">Available Macros</span>&mdash;lists all macros in their respective categories for adding to the batch job. Click <span class="ui">Apply</span> to add the currently selected macro to the <span class="ui">Applied Macros</span> list.</li>
+			<li><span class="ui">Applied Macros</span>&mdash;lists macros that will be applied to each source image in the batch job.</li>
+		</ul>
+		
+		<p>Additional settings for individual file formats listed above are available. See <a href="../ExportPersona/exportSettings.html">Export Settings</a> for more information.</p>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="macros.html">Macros</a></li>
+			<li><a href="../ExportPersona/exportSettings.html">Export Settings</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

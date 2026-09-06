@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panels, sampling, sampler" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Info panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Info panel</h1>
+
+		<p>The <span class="ui">Info</span> panel provides continuous data readings using samplers. These can sample from the current position of the cursor or from a placed target position.</p>
+
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via the <span class="ui">Window</span> menu.</p>
+		</aside>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Info panel</h2>
+		
+		<p>The type of data tracked includes:</p>
+			<ul>
+				<li>color values (based on a chosen model)</li>
+				<li>total ink level</li>
+				<li>horizontal and vertical position</li>
+				<li>relative height, width, distance and angle</li>
+				<li>document color format and ICC profile</li>
+				<li>memory information</li>
+			</ul>
+		
+		<p>The panel allows you to sample from under the cursor or by dragging one or more targets to the page which lets you measure color at chosen positions. The latter is useful when comparing colors before and after applying image adjustments or filters.</p>
+		
+		<figure>
+			<p><img src="../../images/panel_info.png" class="responsive" width="264" alt="Info panel" /></p>
+			<figcaption>The Info panel.</figcaption>
+		</figure>
+
+
+		<h2>About memory usage</h2>
+		<p><span class="ui">Memory efficiency</span> indicates how well Affinity Photo 2 is dealing with redundancy in its internal representation of open documents. A higher value is better, but methods for improving it are generally undesirable, such as sacrificing editability by merging layers.</p>
+		<p><span class="ui">Memory pressure</span> indicates how open documents are consuming the memory (RAM) that is available to Affinity Photo 2. When it reaches 100%, not everything that is open can be held in memory and the app begins to use long-term storage &ndash; your hard disk or solid-state disk &ndash; to hold some data.</p>
+		<p>Storage is typically much slower than memory and so you may notice decreased performance in this situation. If encountered often, check the RAM Usage Limit option in Affinity Photo 2&apos;s Performance settings is set appropriately for your system and needs.</p>
+		<p>You can use Activity Monitor (Mac) or Resource Monitor (Windows) to check whether memory available to Affinity Photo 2 is constrained by other tasks running on your computer.</p>
+		
+
+		<aside class="box note">
+			<p>The Info panel is available from the Photo Persona and can be switched on via the <span class="ui">Window</span> menu.</p>
+		</aside>
+
+		<p>The following panel options are available for each sampler:</p>
+
+		<ul>
+			<li>Color Model&mdash;Sets the color model, or total ink level, to be tracked. Select from the pop-up menu.</li>
+			<li>Cursor&mdash;Samples data under the current cursor position.</li>
+			<li>Target&mdash;Samples data under a placed target on the image.</li>
+		</ul>
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/info_location.png" class="tool" width="18" height="18" alt="Target" /> To set a target position:</summary>
+
+			<ul>
+				<li>On the <span class="ui">Info</span> panel, select, hold and drag the target icon onto the page to your desired location.</li>
+			</ul>
+		
+		<p>To reset the target position, drag a new target from the panel to replace the existing target.</p>	
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> To add a new sampler:</summary>
+
+			<ul>
+				<li>Click the Panel Preferences menu, and select <span class="ui">Add New Sampler</span> from the menu.</li>
+			</ul>
+			
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> To remove a sampler:</summary>
+
+			<ol>
+				<li>Click to select the sampler entry in the <span class="ui">Info</span> panel. The sampler will be highlighted in blue.</li>
+				<li>Click the Panel Preferences menu, and select <span class="ui">Remove Selected Sampler</span> from the menu.</li>
+			</ol>
+			
+		</details>
+		
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Clr/ClrModels.html">Color models</a></li>
+			<li><a href="../Workspace/preferences.html">Settings (or Preferences)</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+	
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

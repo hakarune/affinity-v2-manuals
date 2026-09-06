@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Perspective filter can be used to either correct perspective caused by lens distortion, or to apply perspective for a creative effect." />
+	<title>Perspective filter</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Perspective</h1>
+
+		<p>The Perspective filter can be used to either correct converging perspective lines caused by lens distortion, or to apply perspective for a creative effect.</p>
+
+		<p>Lens distortion can often cause the perspective of a photo to be out, creating the appearance that lines are not vertical or horizontal when they should be.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/tool_perspective_before.jpg" alt="Before" /><div><img src="../../../shared/tool_perspective_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Using the Perspective Tool to alter the appearance of a building/structure.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Perspective filter</h2>
+
+		<p>The Perspective filter can be adjusted in single or dual plane mode, if applied via the <span class="ui">Filters</span> menu (<span class="ui">Distort</span> category). If using the <a href="../Layers/livefilters.html">non-destructive, live filter</a>, only single plane mode is available.</p>
+
+		<p>The live filter can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+		<ul>
+			<li><span class="ui">Planes</span>&mdash;the initial grid layout options. Select from the pop-up menu.</li>
+			<li><span class="ui">Mode</span>&mdash;the preview options. Select from the pop-up menu.<ul>
+					<li><span class="ui">Source</span>&mdash;the image remains static as the perspective box is positioned. When the perspective filter is applied, the image is stretched and cropped to the original canvas size.</li>
+
+					<li><span class="ui">Destination</span>&mdash;the image is directly linked to the perspective box and transforms with the box as the anchor points are dragged.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Show grid</span>&mdash;when selected, a grid is displayed between anchor points and lines. If this option is off, only anchor points and lines display.</li>
+			<li><span class="ui">Autoclip</span>&mdash;(Available in Dual Plane mode) Specifies whether or not to alter the image beyond the boundaries of the perspective grid points. If disabled, the image will look continuous; if enabled, the image will have visible seams where the perspective tool has been applied that can then be retouched.</li>
+			<li><img src="../../../shared/ui/rotate_anti_clockwise.png" class="tool" width="18" height="18" alt="Rotate anti-clockwise" /> <img src="../../../shared/ui/rotate_clockwise.png" class="tool" width="18" height="18" alt="Rotate clockwise" /> <span class="ui">Rotate clockwise</span> / <span class="ui">Rotate anti-clockwise</span>&mdash;rotates the image right or left in 90° increments.</li>
+			<li><span class="ui">Select Destination</span>&mdash;alters pixel selection to the whole document if no pixel selection has been performed. If however an area of an image has been targeted using any of the pixel selection tools, choosing this option will restrict the effect of the filter (e.g. rotation) to the specified region. This option is only available when applying Perspective as a destructive filter.</li>
+			<li><img src="../../../shared/ui/standard_view.png" class="tool" width="18" height="18" alt="No split view" /> <img src="../../../shared/ui/split_view.png" class="tool" width="18" height="18" alt="Split view" /> <img src="../../../shared/ui/mirror_view.png" class="tool" width="18" height="18" alt="Mirror view" /> <span class="ui">No split view</span> / <span class="ui">Split view</span> / <span class="ui">Mirror view</span>&mdash;by default, your image shows the current perspective applied. &apos;Split view&apos; offers the adjusted and original images simultaneously with a sliding divider which can be repositioned and shows &apos;Before&apos; and &apos;After&apos;; &apos;Mirror view&apos; is as for Split view but the &apos;Before&apos; and &apos;After&apos; panes show the entire images side by side, without the ability to slide the divider.</li>
+		</ul>
+		
+		<aside class="box note">
+			<p><span class="ui">Select Destination</span> and <span class="ui">Autoclip</span> options aren&apos;t available when Perspective is applied via the <span class="ui">New Live Filter Layer</span> since the document can be changed at any point in time.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p class="osx">To access the filter quickly, use the <span class="key CMD-TAG"></span><span class="key">T</span> keyboard shortcuts combination.</p>
+			<p class="win32">To access the filter quickly, use the <span class="key CMD-TAG"></span>+<span class="key">T</span> keyboard shortcuts combination.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="../SizeTransform/perspective.html">Perspective Tool</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

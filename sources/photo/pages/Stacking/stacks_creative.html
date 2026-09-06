@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="creative, maximum, range" />
+	<meta name="description" content="Composite images of multiple exposures using stacks." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src: "../../../shared/stacking/creative_01.jpg", alt: "Creative Frame 01" },
+				tab2: { src: "../../../shared/stacking/creative_02.jpg", alt: "Creative Frame 02" },
+				tab3: { src: "../../../shared/stacking/creative_03.jpg", alt: "Creative Frame 03"},
+				tab4: { src: "../../../shared/stacking/creative_final.jpg", alt: "Maximum Stacking Frame"}
+			}
+		}
+	</script>
+	<title>Creative effects using stacks</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+		<h1>Creative effects using stacks</h1>
+
+		<p>Stacking can be used for more individual, creative effects that require specific image content to achieve.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Creative Frame 01</p></div>
+				<div class="tab"><p>Creative Frame 02</p></div>
+				<div class="tab"><p>Creative Frame 03</p></div>
+				<div class="tab selected"><p>Maximum Stack Mode</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/stacking/creative_final.jpg" class="responsive" alt=""></div>
+		</div>
+
+		<h2>Shooting tips</h2>
+		<p>Here are a few things to consider when shooting.</p>
+			<ul>
+				<li>To help image alignment (if you are using it), use a tripod or ensure your camera is in a fixed position.</li>
+				<li>Try and use a fixed white balance to avoid large differences in tone between the shots.</li>
+			</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/median.png" class="tool heading" width="18" height="18" alt="Stack mode" /> To create a stack:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">New Stack</span>.</li>
+				<li>From the dialog, click <span class="ui">Add</span> to locate and select your images. Click <span class="ui">Open</span> to add the images to the stack list.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+				<li>On the <span class="ui">Layers</span> panel, experiment with the <span class="ui">Stack Mode</span>. <span class="ui">Median</span> is selected by default, but try <span class="ui">Maximum</span> and <span class="ui">Range</span> in particular for more creative effects.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="stacks.html">Image stacks</a></li>
+			<li><a href="stacks_objectremoval.html">Object removal using stacks</a></li>
+			<li><a href="stacks_exposuremerge.html">Exposure merging using stacks</a></li>
+			<li><a href="stacks_noisereduction.html">Noise Reduction using stacks</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

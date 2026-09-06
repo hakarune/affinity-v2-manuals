@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="bézier, curve, control handles, line, node, path, shape, sharp, smart" />
+	<meta name="description" content="Use lines and shapes to contribute to your vector design." />
+	<title>About lines and shapes</title>
+</head>
+
+<body>
+	<header>
+
+
+		<h1>About lines and shapes</h1>
+
+		<p>When you want to draw vector lines and shapes you&apos;ll need to use the <a href="../Tools/tools_pen.html">Pen</a> and <a href="draw_geometricShapes.html">shape</a> tools. Editing lines and shapes is done with the <a href="../Tools/tools_node.html">Node</a> Tool or the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> as you draw.</p>
+		<figure>
+			<p><img src="../../../shared/line_example.png" class="responsive" alt="Line example" /></p>
+			<figcaption>An example of combined vector lines and shapes.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>Lines</h2>
+
+		<p>A line has distinct start and end stops, called <span class="term">nodes</span>, with one or more nodes placed along the line&apos;s length which delimit each line <span class="term">segment</span> and the segment&apos;s shape.</p>
+
+		<figure>
+			<p><img src="../../../shared/path_straightOrCurved.png" class="responsive" alt="Segment types" /></p>
+			<figcaption>Segments between nodes can be straight (A) or curved (B). Multiple segments make up more complex curves (C).</figcaption>
+		</figure>
+
+		<p>The type of node controls how the curve is shaped between segments. There are three basic types of node:</p>
+
+		<ul>
+			<li>Sharp (A)&mdash;curve abruptly changes direction at the node creating a sharp non-symmetrical corner.</li>
+			<li>B&eacute;zier (B)&mdash;curve is smooth at the node (controllable by <span class="term">control handles</span>; not shown).</li>
+			<li>Smart (C)&mdash;curve is symmetrical using a line of best fit at the node.</li>
+		</ul>
+
+		<p><img src="../../../shared/path_nodeTypes.png" class="responsive" alt="Node types" /></p>
+
+		<p>When drawing curves, any combination of nodes can be used to create the desired curve.</p>
+		<p>For Smart and B&eacute;zier curves, each node has one or two control handles when drawn. For B&eacute;zier curves, the length and slope of the control handles determine the shape of the line segment; Smart curves automatically set the control handle position to form a best fitting curve through the node.</p>
+
+		<p><img src="../../../shared/path_directionHandles.png" class="responsive" alt="control handles" /></p>
+
+		<aside class="box prefs">
+			<h3>Settings (or Preferences)</h3>
+			<p>Related behaviors can be adjusted from <a href="../Workspace/preferences.html">the app&apos;s settings</a>:</p>
+			<ul>
+				<li><span class="ui">User Interface&gt;Show Lines in points</span></li>
+			</ul>			
+		</aside>
+
+		<h2>Shapes</h2>
+
+		<p>A shape is a <span class="term">closed</span> curve&mdash;it has no discernible start or end&mdash;made up of multiple curves.</p>
+
+		<p><img src="../../../shared/path_closing.png" class="responsive" alt="Close curve" /></p>
+
+		<p>You can also easily create geometric type shapes using the <a href="draw_geometricShapes.html">shape</a> tools. These have special properties that enable you to quickly create otherwise difficult to draw shapes, such as circles, rectangles and polygons.</p>
+
+		<aside class="box note">
+			<p>Curves and closed shapes can be given stroke and fill properties.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="edit_linesAndShapes.html">Edit vector lines and shapes</a></li>
+			<li><a href="draw_geometricShapes.html">Draw and edit shapes</a></li>
+		</ul>
+	</section>
+
+
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

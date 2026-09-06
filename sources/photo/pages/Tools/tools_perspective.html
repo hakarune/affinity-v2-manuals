@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Tool overview and settings." />
+	
+	<title>Perspective Tool</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/perspectiveeffect.png" class="tool heading" width="18" height="18" alt="Perspective Tool" /> Perspective Tool</h1>
+
+		<p>The <span class="ui">Perspective Tool</span> allows you to modify the perspective of your image. It has full History support, meaning each modification (such as handle dragging and option toggling) can be undone.</p>
+	</header>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/tool_perspective_before.jpg" alt="Before" /><div><img src="../../../shared/tool_perspective_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Using the Perspective Tool to alter the appearance of a building/structure.</figcaption>
+	</figure>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The settings can be adjusted from the pop-up dialog after selecting the tool:</p>
+		<ul>
+			<li><span class="ui">Planes</span>&mdash;set the number of planes on which perspective can be applied. Select from the pop-up menu.</li>
+			<li><span class="ui">Mode</span>&mdash;set the mode in which the grid will operate. &apos;Destination&apos; automatically applies perspective to the whole image as you adjust the grid. &apos;Source&apos; lets you size, position and shape the grid without affecting the image; you can then apply perspective to the image by jumping back to the &apos;Destination&apos; option and dragging handles.</li>
+			<li><span class="ui">Show Grid</span>&mdash;when selected, a grid displays over your image to allow you to adjust the perspective with precision. If this option is off, only the boundaries of the perspective area is displayed.</li>
+			<li><span class="ui">Autoclip</span>&mdash;(Available in Dual Plane mode) Specifies whether or not to alter the image beyond the boundaries of the perspective grid points. If disabled, the image will look continuous; if enabled, the image will have visible seams where the perspective tool has been applied that can then be retouched.</li>
+			<li><img src="../../../shared/ui/rotate_anti_clockwise.png" class="tool" width="18" height="18" alt="Rotate anti-clockwise" /> <img src="../../../shared/ui/rotate_clockwise.png" class="tool" width="18" height="18" alt="Rotate clockwise" /> <span class="ui">Rotate clockwise</span> / <span class="ui">Rotate anti-clockwise</span>&mdash;rotates the image right or left in 90° increments.</li>
+			<li><img src="../../../shared/ui/flip_horizontal.png" class="tool" width="18" height="18" alt="Flip horizontal" /> <img src="../../../shared/ui/flip_vertical.png" class="tool" width="18" height="18" alt="Flip vertical" /> <span class="ui">Flip horizontal</span> / <span class="ui">Flip vertical</span>&mdash;Mirrors the image across either the horizontal or vertical axis.</li>
+			<li><span class="ui">Select Destination</span>&mdash;alters pixel selection to the whole document if no pixel selection has been performed. If however an area of an image has been targeted using any of the pixel selection tools, choosing this option will restrict the effect of the tool (e.g. rotation) to the specified region.</li>
+			<li><img src="../../../shared/ui/standard_view.png" class="tool" width="18" height="18" alt="No split view" /> <img src="../../../shared/ui/split_view.png" class="tool" width="18" height="18" alt="Split view" /> <img src="../../../shared/ui/mirror_view.png" class="tool" width="18" height="18" alt="Mirror view" /> <span class="ui">No split view</span> / <span class="ui">Split view</span> / <span class="ui">Mirror view</span>&mdash;by default, your image shows the current perspective applied. &apos;Split view&apos; offers the adjusted and original images simultaneously with a sliding divider which can be repositioned and shows &apos;Before&apos; and &apos;After&apos;; &apos;Mirror view&apos; is as for Split view but the &apos;Before&apos; and &apos;After&apos; panes show the entire images side by side, without the ability to slide the divider.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../SizeTransform/perspective.html">Perspective</a></li>
+			<li><a href="../Filters/filter_perspective.html">Perspective Filter</a></li>
+			<li><a href="tools_meshWarp.html">Mesh Warp Tool</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

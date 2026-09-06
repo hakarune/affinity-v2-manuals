@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="quick grid, repeat, grid, object, shape, text frame, pattern, series, cell" />
+	<meta name="description" content="Quickly construct a grid that repeats a shape or text frame in its columns and rows." />
+	<title>Quick Grids</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Quick Grids</h1>
+	
+		<p>While drawing a shape or text frame, you can tell Affinity to repeat the object in a grid and control the spacing between the grid&apos;s columns and rows.</p>
+
+	</header>
+	
+	<section class="about">
+		<p>For example, you might want to draw:</p>		
+		<ul>
+			<li>a repeating geometric pattern.</li>
+			<li>several star shapes in a row.</li>
+		</ul>
+
+		<figure>
+			<div class="single"><img src="../../../shared/gridDiamonds.png" class="responsive" width="411" height="411" alt="An example geometric pattern." /></div>
+			<figcaption>A repeating geometric pattern drawn using the Diamond Tool.</figcaption>
+		</figure>
+				
+		<p>Each object is created on a separate layer. Their order from top to bottom on the layer stack corresponds to columns from left to right and rows from top to bottom.</p>
+		
+		<p>Each object can be transformed and styled independently or together in a multiple selection.</p>
+
+		<aside class="box tip">
+			<p>After drawing a grid, you can use <a href="../LayerOperations/duplicate.html">power duplicate</a> to add more columns and rows at a later time.</p>
+		</aside>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To draw a grid of repeated objects:</summary>
+			<ol>
+				<li>Using a shape tool, picture frame tool, or the Frame Text Tool, begin drawing an object on a page.</li>
+				<li>Press the right/left arrow key to add/remove columns of the object, respectively.</li>
+				<li>Press the down/up arrow key to add/remove rows of the object to the grid, respectively.</li>
+				<li>(Optional) Hold the right or down arrow key to increase the spacing between columns or rows, respectively. (Conversely, use the left and up arrow keys to decrease spacing.)</li>
+				<li>(Optional) Hold the <span class="SHIFT-TAG"></span> <span class="KEY-TAG"></span> and press the right and down arrow keys to adjust the spacing between columns or rows, respectively, by 10x the usual increment. (Conversely, press the left and up arrow keys to decrease spacing by the same amount.)</li>
+				<li>Release to finish drawing the object and the grid.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>The change in spacing when performing steps 4 and 5 is determined by the values of <span class="ui">Nudge Distance</span> and <span class="ui">Modifier Nudge Distance</span>, respectively, in <span class="ui">Tools</span> settings.</p>
+			</aside>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../SizeTransform/transform.html">Transforming objects</a></li>
+			<li><a href="../LayerOperations/duplicate.html">Duplicating objects</a></li>
+			<li><a href="../LayerOperations/align.html">Aligning objects</a></li>
+			<li><a href="../LayerOperations/group.html">Grouping objects</a></li>
+			<li><a href="../CurvesShapes/styles.html">Styles</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

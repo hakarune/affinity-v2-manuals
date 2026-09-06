@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="channel, channels, colour mode, image channel, layer channel, spare channel" />
+	<meta name="description" content="Use channels to selectively edit colour information in your image." />
+	<title>Using channels</title>
+</head>
+
+<body> 
+
+	<header>
+		
+		<h1>Using channels</h1>
+		<p>The image or document&apos;s color mode determines the number and type of color channels available to you. Each channel stores color information specific to it, which, when combined with other channels, brings about the full color image. For example, a red channel would store only red color information in RGB color mode.</p>
+		<p>Channel information is displayed in the <span class="ui">Channels</span> panel.</p>
+		
+		<figure>
+			<p><img src="../../../shared/channels_cmyk.jpg" class="responsive ui" alt="Separated out color channels of a CMYK image." /></p>
+			<figcaption>The color channels of a CMYK image separated out.</figcaption>
+		</figure>
+		
+		<figure>
+			<p><img src="../../../shared/channels_composite.jpg" class="responsive ui" alt="Composited color channels of a CMYK image." /></p>
+			<figcaption>The composite of the above image&apos;s color channels.</figcaption>
+		</figure>
+	</header>
+
+	<section class="about">
+		<h2>Co lour modes and channels</h2>
+		<p>For each color mode, the following channels are available.</p>
+		<ul>
+			<li><span class="ui">RGB</span>: Red, Green, Blue channels</li>
+			<li><span class="ui">CMYK</span>: Cyan, Magenta, Yellow, Black channels</li>
+			<li><span class="ui">Grayscale</span>: Intensity channel</li>
+			<li><span class="ui">Lab</span>: Lightness, AOpponent, BOpponent channels</li>
+		</ul>
+		
+		<aside class="box note">
+			<p>On new documents, the <span class="ui">Color Format</span> option presents Color mode and bit depth options in combination.</p>
+		</aside>
+		
+		<h2>Image and layer channels</h2>
+		<p>The Channels panel always displays an image&apos;s channels when loaded. From an image channel you can:</p>
+			<ul>
+				<li>Protect the channel from editing.</li>
+				<li>Hide the channel.</li>
+				<li>Create a spare channel (i.e., a saved selection) from any channel&apos;s information.</li>
+				<li>Store a new selection based on the channel information.</li>
+				<li>Add, subtract, or intersect a channel&apos;s selection to/from/with a previously made selection, respectively.</li>
+			</ul>
+		
+		<p>For any currently selected layer (pixel, mask, adjustment or live filter), the layer&apos;s channel(s) are displayed in the bottom part of the panel. From each layer&apos;s channel you can:</p>
+			<ul>
+				<li>Invert, clear, and fill the channel information.</li>
+				<li>Create a new grayscale layer.</li>
+				<li>Create a new mask layer.</li>
+				<li>Create a spare channel (i.e., a saved selection) from the channel information.</li>
+			</ul>
+		
+		<h2>Alpha channels</h2>
+		<p>The <span class="ui">Channels</span> panel also displays the alpha channel for the whole image or currently selected pixel, mask, adjustment, or live filter layer. These channels store transparency information, so it&apos;s a great place for more advanced masking control. For more information, see <a href="../Panels/channelsPanel.html">Channels panel</a>.</p>
+		
+		<h2>Pixel selections</h2>
+		<p>Another great use of alpha channels is the ability to store more complex selections that would otherwise be difficult or time consuming to recreate again. The <span class="ui">Channels</span> panel reports your current pixel selection as a channel entry, so by creating a &apos;new&apos; Spare Channel from that pixel selection you&apos;ve stored the selection for future use. For more information, see <a href="../Channels/spareChannels.html">Spare channels</a>.</p>
+		
+		<h2>Pixel selections and masks</h2>
+		<p>Because alpha channels store both selection and masks, the <span class="ui">Channels</span> panel acts as a great central point for working between masks and selections. For more information, see <a href="../Channels/maskingChannels.html">Masking from channels</a>.</p>
+
+		<h2>Blend ranges</h2>
+		<p>You can control how specific color channels of the current layer blend with the underlying layer(s). For more information, see <a href="../Layers/layerBlendRanges.html">Layer blend ranges</a>.</p>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/channelsPanel.html">Channels panel</a></li>
+			<li><a href="../Channels/spareChannels.html">Spare channels</a></li>
+			<li><a href="../Clr/ClrModels.html">Color models</a></li>
+			<li><a href="../Selections/saveLoadSelections.html">Saving and loading selections</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+			<li><a href="../Selections/editSelectionAsLayer.html">Edit selection as layer using Quick Mask</a></li>
+			<li><a href="../Selections/selections_fromchannels.html">Pixel selections from channels</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

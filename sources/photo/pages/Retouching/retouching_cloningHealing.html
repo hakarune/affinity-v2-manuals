@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="replicate, clone, cloning, healing" />
+	<meta name="description" content="An in-depth look at how to duplicate samples from one part of an image to another." />
+	<title>Cloning and healing</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Cloning and healing</h1>
+
+		<p>Cloning is the process of duplicating samples from one part of an image to introduce replicated content for creative effect or to repair the original.</p>
+
+	</header>
+
+	<section class="about">
+		<h2>About cloning</h2>
+
+		<h3>The clone source</h3>
+
+		<p>The <a href="../Tools/tools_cloneBrush.html">Clone Brush Tool</a> copies pixels from one part of an image (or layer) to another. The tool uses a source (shown as a &apos;+&apos; cursor) to clone from; this moves in relation to the tool&apos;s cursor (shown as an &apos;o&apos; cursor) with its position being able to be redefined as you clone from different areas.</p>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/clonebrush_before.jpg" alt="Before" /><div><img src="../../../shared/clonebrush_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Before and after cloning. Introducing a cloned object to your image.</figcaption>
+	</figure>
+
+		<p>The clone source can be one of the following context toolbar options:</p>
+
+		<ul>
+			<li><span class="ui">Current Layer</span>&mdash;pixels on the selected layer only.</li>
+			<li><span class="ui">Current Layer &amp; Below</span>&mdash;pixels on the currently selected layer and any visible layers beneath (including vector objects and the effects produced by adjustment layers).</li>
+			<li><span class="ui">Layers Beneath</span>&mdash;pixels on any visible layer beneath the currently selected layer (including those from any vector objects and the effects produced by any visible adjustment layers).</li>
+			<li><span class="ui">Global</span>&mdash;pixels previously sampled by cloning in from one or more other documents (pixel layer only).</li>
+		</ul>
+
+		<h3>Global source</h3>
+
+		<p>You can define a global <em>source</em> in a secondary open document and paint the sampled pixels into your working document by selecting the clone source option &apos;Global&apos;. The <span class="ui">Sources</span> panel stores all your global sources; you can then select any stored global source and clone from it. Any new documents can make use of the panel&apos;s global sources.</p>
+		
+		<aside class="box note">
+			<p>The Global source can only be defined from a single, pixel layer. To use a document containing multiple layers and/or vector objects, you must flatten the document first.</p>
+		</aside>
+
+		</section>
+
+		<section class="about">
+		<h2 id="healing">About healing</h2>
+
+		<p>The Healing Brush Tool paints samples from one part of an image onto another. It&apos;s useful for removing defects and for general photo retouching. In many respects it works like the cloning, however, it blends the target pixels with the sample pixels by matching the texture, tone, and transparency of the sample pixels with the target pixels.</p>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/healingbrush_before.jpg" alt="Before" /><div><img src="../../../shared/healingbrush_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Before and after healing of an unwanted line crossing an image.</figcaption>
+	</figure>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/clone_brush_tool.png" class="tool" width="18" height="18" alt="Clone Brush Tool" /> <img src="../../../shared/ui/healing_brush_tool.png" class="tool" width="18" height="18" alt="Healing Brush Tool" /> To clone/heal a sample from the current image:</summary>
+
+			<ol>
+				<li>Use the <span class="ui">Layers</span> panel to either select an existing pixel layer to copy to, or to create a new pixel layer.</li>
+				<li>Select the <span class="ui">Clone Brush Tool</span> or <span class="ui">Healing Brush Tool</span> from the <span class="ui">Tools</span> panel.</li>
+				<li>The tool uses a soft-round brush by default. To use a different brush style, choose one from the <span class="ui">Brushes</span> panel.</li>
+				<li>Adjust the context toolbar settings.</li>
+				<li>To define (or re-define) the cloning source, hold the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and click on the area you wish to begin sampling from.</li>
+				<li>(Optional) Rotate the sample by either using the left and right arrow keys or the <span class="ui">Rotation</span> control on the context toolbar.</li>
+				<li>(Optional) Set the scale of the sample by either using the up and down arrow keys or the <span class="ui">Scale</span> control on the context toolbar.</li>
+				<li>(Optional) Transform the sample by using the <span class="ui">Flip</span> pop-up menu on the context toolbar.</li>
+				<li>Drag on the image to paint the sample.</li>
+			</ol>
+		</details>
+
+		<aside class="box tip">
+			<p>It is best practice to temporarily hide adjustment layers during the above procedure. This allows you to copy the original image. If the adjustment layers are visible, the <em>adjusted</em> pixels will be permanently applied.</p>
+		</aside>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>The following modifier <span class="KEY-TAG"></span>(s) can be used:</p>
+			<ul>
+				<li>To change brush size, use the [ or ] <span class="KEY-TAG"></span>.</li>
+			</ul>
+		</aside>
+
+		<details>
+			<summary><img src="../../../shared/ui/clone_brush_tool.png" class="tool" width="18" height="18" alt="Clone Brush Tool" /> <img src="../../../shared/ui/healing_brush_tool.png" class="tool" width="18" height="18" alt="Healing Brush Tool" /> To clone/heal a sample from one image to another:</summary>
+
+			<ol>
+				<li>Open the image that you want to copy pixels from and use the <span class="ui">Layers</span> panel to select the pixel layer that you wish to copy from. Use your keyboard&apos;s left or right arrow keys to manually rotate your brush nozzle(s) before and during stroke application.</li>
+				<li>Click the <span class="ui">Clone Brush Tool</span> or <span class="ui">Healing Brush Tool</span>.</li>
+				<li>To define (or re-define) the cloning source, hold the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and click on the area you wish to begin sampling from.</li>
+				<li>On the context toolbar, click <span class="ui">Add Global Source</span>.</li>
+			</ol>
+			<p>The source is stored, along with other global sources, in the <span class="ui">Sources</span> panel. The panel can be switched on via the <span class="ui">Window</span> menu.</p>
+			<ol start="5">
+				<li>Open the image that you want to paint the sample into.</li>
+				<li>Use the <span class="ui">Layers</span> panel to either select an existing pixel layer to copy to, or to create a new pixel layer.</li>
+				<li>Click the <span class="ui">Clone Brush Tool</span> or <span class="ui">Healing Brush Tool</span>.</li>
+				<li>The tool uses a soft-round brush by default. To use a different brush style, choose one from the <span class="ui">Brushes</span> panel.</li>
+				<li>Adjust the context toolbar settings.</li>
+				<li>Select a stored global source from the <span class="ui">Sources</span> panel. If you only have one global source you can simply select the <span class="ui">Global</span> source from the pop-up menu on the context toolbar instead of using the panel.</li>
+				<li>(Optional) Select rotate, scale or flip options as described above.</li>
+				<li>Drag on the image to paint the sample.</li>
+			</ol>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_cloneBrush.html">Clone Brush Tool</a></li>
+			<li><a href="../Tools/tools_healingBrush.html">Healing Brush Tool</a></li>
+			<li><a href="retouching_blemishes.html">Removing Blemishes</a></li>
+			<li><a href="retouching_patching.html">Patching</a></li>
+			<li><a href="../Panels/sourcesPanel.html">Sources panel</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

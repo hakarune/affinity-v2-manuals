@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Liquify tools can be used in isolation or combination to allow you to warp an image as appropriate." />
+	<title>Liquify Tools</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/liquifypersonaonly.png" class="heading" height="28" alt="Liquify Persona only" /> Liquify Tools</h1>
+		<p>The Liquify tools can be used in isolation or combination to allow you to warp an image as appropriate.</p>
+	</header>
+
+	<section class="about">
+		
+		<details open="open">
+			<summary>The Liquify tools available include:</summary>
+			
+			<h4><img src="../../../shared/ui/liquify_push_forward_tool.png" class="tool" width="18" height="18" alt="Liquify Push Forward Tool" /> Push Forward Tool</h4>
+			<p>Shifts pixels in the direction of the stroke.</p>
+			
+			<h4><img src="../../../shared/ui/liquify_push_left_tool.png" class="tool" width="18" height="18" alt="Liquify Push Left Tool" /> Push Left Tool*</h4>
+			<p>Shifts pixels 90° to the left of the stroke direction. This spreads and compresses edges along the stroke.</p>
+			
+			<h4><img src="../../../shared/ui/liquify_twirl_tool.png" class="tool" width="18" height="18" alt="Liquify Twirl Tool" /> Twirl Tool*</h4>
+			<p>Applies a clockwise rotational distortion under the stroke (centered around the middle of the tool cursor). If the tool is used in one area multiple times, the strength of the distortion increases.</p>
+			
+			<h4><img src="../../../shared/ui/liquify_pinch_tool.png" class="tool" width="18" height="18" alt="Liquify Pinch Tool" /> Pinch Tool*</h4>
+			<p>Applies a concave spherical distortion under the stroke. If the tool is used in one area multiple times, the strength of the distortion increases.</p>
+			
+			<h4><img src="../../../shared/ui/liquify_punch_tool.png" class="tool" width="18" height="18" alt="Liquify Punch Tool" /> Punch Tool*</h4>
+			<p>Applies a convex spherical distortion under the stroke. If the tool is used in one area multiple times, the strength of the distortion increases.</p>
+			
+			<h4><img src="../../../shared/ui/liquify_turbulence_tool.png" class="tool" width="18" height="18" alt="Liquify Turbulence Tool" /> Turbulence Tool</h4> 
+			<p>Applies a crumbling distortion under the stroke which compacts some mesh lines together while expanding others. If the tool is used in one area multiple times, the strength of the distortion increases.</p>
+			
+			<h4><img src="../../../shared/ui/liquify_clone_mesh_tool.png" class="tool" width="18" height="18" alt="Liquify Mesh Clone Tool" /> Mesh Clone Tool</h4>
+			<p>Paints samples from one part of the mesh onto another. Ideal for applying previously set mesh adjustments to another area of the image. (<span class="key ALT-TAG"></span>-click sets the sample area.)</p>
+			
+			<h4><img src="../../../shared/ui/liquify_reconstruct_mesh_tool.png" class="tool" width="18" height="18" alt="Liquify Reconstruct Tool" /> Reconstruct Tool</h4>
+			<p>Reduces the warp effect applied to an image using the above tools. If the tool is used in one area multiple times, the strength of the underlying effect decreases. With the appropriate number of applications, the area will return to its original, unwarped state.</p>
+
+			<h4><img src="../../../shared/ui/liquify_freeze_tool.png" class="tool" width="18" height="18" alt="Liquify Freeze Tool" /> Freeze Tool</h4>
+			<p>Protects areas of the image from any warp effects by applying a mask.</p>
+
+			<h4><img src="../../../shared/ui/liquify_thaw_tool.png" class="tool" width="18" height="18" alt="Liquify Thaw Tool" /> Thaw Tool</h4>
+			<p>Allows areas of the image to be warped by removing the current mask.</p>
+
+		</details>
+		
+		<aside class="box note">
+			<h3>Modifier <span class="KEY-TAG"></span>s</h3>
+			<p>When using the above tools the following modifier <span class="KEY-TAG"></span>s can be used:</p>
+			<ul>
+				<li>You can quickly decrease or increase the brush width using the [ or ] <span class="KEY-TAG"></span>s, respectively.</li>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> reduces the rate at which the warp effect is applied.</li>
+				<li>For tools marked with an asterisk (*), the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> switches modes to achieve the opposite warp effect.</li>
+			</ul>
+		</aside>
+		
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>Tool settings can be adjusted using the <a href="../LiquifyPersona/liquify_panelBrush.html">Brushes panel</a>.</p>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../LiquifyPersona/liquify.html">Warping using Liquify Persona</a></li>
+			<li><a href="../LiquifyPersona/liquify_masking.html">Masking in Liquify Persona</a></li>
+			<li><a href="tools_meshWarp.html">Mesh Warp Tool</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+	
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

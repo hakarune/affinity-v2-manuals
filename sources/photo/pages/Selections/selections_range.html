@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="selection, pixel, raster, colour range, tonal range, alpha range" />
+	<meta name="description" content="Create a pixel selection using colour or tonal ranges from your image." />
+	<title>Range pixel selections</title>
+</head>
+
+<body>
+
+	<header>
+		
+	<h1>Range pixel selections</h1>
+
+		<p>You can create a pixel selection using color, tonal or transparency (alpha/opacity) ranges from your image.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/range_pixel_selections.jpg" alt="Range-based pixel selection" /></div>
+			<figcaption>Pixel selection of red color range.</figcaption>
+		</figure>
+
+	</header>
+	
+	<section class="about">
+		<p>If you decide to create a selection based on any range, your image is analyzed and all pixels which fall into the chosen range are included in the selection. Pixels which are not in the chosen range are excluded.</p>
+		<p>Color, tonal and transparency range selections are available from the <span class="ui">Select</span> menu. These include:</p>
+			<ul>
+				<li>From the <span class="ui">Color Range</span> submenu:<ul>
+						<li><span class="ui">Select Reds</span></li>
+						<li><span class="ui">Select Blues</span></li>
+						<li><span class="ui">Select Greens</span></li>
+					</ul>
+				</li>
+				<li>From the <span class="ui">Tonal Range</span> submenu:<ul>
+						<li><span class="ui">Select Midtones</span></li>
+						<li><span class="ui">Select Shadows</span></li>
+						<li><span class="ui">Select Highlights</span></li>
+					</ul>
+				</li>
+				<li>From the <span class="ui">Alpha Range</span> submenu:<ul>
+						<li><span class="ui">Select Fully Transparent</span>&mdash;only pixels which have an opacity of 0% are selected.</li>
+						<li><span class="ui">Select Partially Transparent</span>&mdash;all pixels with a transparency higher than 0% are selected.</li>
+						<li><span class="ui">Select Opaque</span>&mdash;only pixels that are 0% transparent are selected.</li>
+					</ul>
+				</li>
+			</ul>
+
+		<aside class="box tip">
+			<p>Try creating range pixel selections before <a href="../Adjustments/adjustment_applying.html">applying an adjustment layer</a>. This allows you to target the adjustment directly to any one of the Color or Tonal ranges.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selections_create.html">Creating pixel selections</a></li>
+			<li><a href="selections_sampled.html">Sampled color pixel selections</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

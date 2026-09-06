@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panel, text styles" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Text Styles panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Text Styles panel</h1>
+
+		<p>The <span class="ui">Text Styles</span> panel gives you access to all the text styles in your document, allowing you to apply them, modify them, delete them or create new ones.</p>
+
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via <span class="ui">Window&gt;Text</span>.</p>
+		</aside>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Text Styles panel</h2>
+
+		<p>The <span class="ui">Text Styles</span> panel shows you which styles are applied to the current selection and gives you the option to apply paragraph and character styles at the caret position or to selected text.</p>
+
+		<p>The panel also gives you options for creating new paragraph and character styles, redefining existing styles, or deleting them.</p>
+
+		<p>Furthermore, there are options for setting specific text styles as defaults and for importing text styles from other projects.</p>
+
+		<p>For more information on using text styles, see <a href="../Text/textStyles.html">Using text styles</a>.</p>
+
+		<figure>
+			<p><img src="../../images/panel_textstyles.png" class="responsive" width="987" alt="Text Styles panel" /></p>
+			<figcaption>The Text Styles panel displaying styles (left) and creating a new Style options (right).</figcaption>
+		</figure>
+
+
+		<h3>Display preferences</h3>
+		
+		<figure class="nft overrideDE overrideFR">
+			<p><img src="../../images/panel_textstylesoptions.png" class="responsive" width="533" alt="Text Styles panel" /></p>
+			<figcaption>The Text Styles panel showing Display preferences.</figcaption>
+		</figure>
+		
+		<p>There are several options, available from panel preferences, which allow you to change how styles are displayed in the panel:</p>
+
+		<ul>
+			<li><span class="ui">Show Hierarchical</span>&mdash;styles appear nested below styles which they are <span class="ui">Based on</span>.</li>
+			<li><span class="ui">Show Samples</span>&mdash;when selected (default), a style&apos;s appearance mirrors what will be seen on the page. If this option is off, styles will all show as plain text.</li>
+			<li><span class="ui">Sort By Type</span>&mdash;when selected (default), paragraph styles are listed first, followed by character styles. If this option is off, styles are listed purely in alphabetical order.</li>
+		</ul>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Options</h3>
+
+		<p>The following options are available in the panel:</p>
+
+		<ul>
+			<li><span class="ui">Current Formatting</span>&mdash;displays the formatting applied to the selected text or at the current caret&apos;s position. Click the arrow to the left to display overflowing information, if necessary.</li>
+			<li><img src="../../../shared/ui/ReapplyTextStyles.png" class="tool" width="16" height="16" alt="Reapply text styles" /> <span class="ui">Reapply Text Styles</span>&mdash;removes local formatting from the selected text, ensuring it honors the Current Formatting perfectly.</li>
+			<li><img src="../../../shared/ui/ParagraphStyle.png" class="tool" width="16" height="16" alt="Paragraph text style" /> <img src="../../../shared/ui/CharacterStyle.png" class="tool" width="16" height="16" alt="Character text style" /> Type&mdash;specifies whether the text style is a <a href="../Text/textStyles_types.html">paragraph, character or group type</a>.</li>
+			<li>Text style&mdash;displays the name of text styles currently available in the document.</li>
+			<li>Keyboard shortcut&mdash;displays the key combination necessary to apply the text style. A shortcut must first be applied to a text style.</li>
+			<li><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> Options menu&mdash;provides access to a pop-up menu with creation and editing options.</li>
+			<li><img src="../../../shared/ui/CreateParagraphStyle.png" class="tool" width="16" height="16" alt="Create Paragraph Style" /> <span class="ui">Create Paragraph Style</span>&mdash;launches the <span class="ui">Edit Text Style</span> dialog ready for <a href="../Text/textStyles_create.html">creating a new paragraph style</a>.</li>
+			<li><img src="../../../shared/ui/CreateCharacterStyle.png" class="tool" width="16" height="16" alt="Create Character Style" /> <span class="ui">Create Character Style</span>&mdash;launches the <span class="ui">Edit Text Style</span> dialog ready for <a href="../Text/textStyles_create.html">creating a new character style</a>.</li>
+			<li><img src="../../../shared/ui/CreateGroupStyle.png" class="tool" width="16" height="16" alt="Create Style" /> <span class="ui">Create Group Style</span>&mdash;launches the <span class="ui">Edit Text Style</span> dialog ready for <a href="../Text/textStyles_create.html">creating a new group style</a>.</li>
+			<li><img src="../../../shared/ui/UpdateParagraphStyle.png" class="tool" width="16" height="16" alt="Update Paragraph Style" /> <span class="ui">Update Paragraph Style</span>&mdash;redefines the current paragraph style to conform with the local formatting of the selected text.</li>
+			<li><img src="../../../shared/ui/UpdateCharacterStyle.png" class="tool" width="16" height="16" alt="Update Character Style" /> <span class="ui">Update Character Style</span>&mdash;redefines the current character style to conform with the local formatting of the selected text.</li>
+			<li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete Style" /> <span class="ui">Delete Style</span>&mdash;removes the selected paragraph or character style from the document and any instances of their application.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Text/textStyles.html">Using text styles</a></li>
+			<li><a href="paragraphPanel.html">Paragraph panel</a></li>
+			<li><a href="characterPanel.html">Character panel</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

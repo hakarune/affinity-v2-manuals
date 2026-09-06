@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="live, projection, 360, pano, panorama, equirectangular" />
+	<meta name="description" content="Preview equirectangular projections and edit them in real time." />
+	<title>Equirectangular projection</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Equirectangular projection</h1>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/feature_360_unmapped01.jpg" alt="Before" /><div><img src="../../../shared/feature_360_mapped01.jpg" alt="After" /></div>
+			</div>
+			<figcaption><b>Before</b>: Unmapped equirectangular image (360x180). <b>After</b>: Projected image.</figcaption>
+		</figure>
+		<p>Equirectangular images, typically 360x180 panoramas, can be mapped to a live projection in Affinity Photo 2 and edited while they are being projected. This allows for instant feedback of detailed retouching, brush work and masking&mdash;all operations that would be difficult on an unmapped equirectangular image.</p>
+
+		<aside class="box note">
+			<p>360x180 imagery is often obtained either from dedicated 360 cameras, or by stitching a series of shots together using dedicated 360 stitching software.</p>
+		</aside>
+	</header>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To edit an equirectangular image in live projection:</summary>
+			<ol>
+				<li>With an equirectangular image layer selected, from the <span class="ui">Layer</span> menu, choose <span class="ui">Live Projection&gt;Equirectangular Projection</span>.</li>
+				<li>The image layer will then enter live projection and the <span class="ui">Edit Live Projection Tool</span> will be automatically selected.</li>
+				<li>Use the <span class="ui">Edit Live Projection Tool</span> to navigate around the image until you settle on an area you wish to edit.</li>
+				<li>Using the appropriate tools, make your edits.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To pan around an image in live projection:</summary>
+			<ol>
+				<li>If you choose another tool when panning in live projection, you will temporarily leave the <span class="ui">Edit Live Projection Tool</span>.</li>
+				<li>To pan around the image again, either:<ul>
+						<li>Choose the <span class="ui">Move Tool</span>, then from the context toolbar, select the <span class="ui">Edit Live Projection Tool</span>.</li>
+						<li>From the <span class="ui">Layer</span> menu, choose <span class="ui">Live Projection&gt;Edit Live Projection</span> (you can also use the keyboard shortcut listed for this option).</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To add additional layers in live projection view:</summary>
+			<ol>
+				<li>While in live projection view, you can add content to the projected image such as text, images and brush work on new layers.</li>
+				<li>Add your new layer content. For example, you could add some Text at the Nadir (bottom pole) with a copyright notice.</li>
+				<li>Position and rotate the layer as you wish using the <span class="ui">Move Tool</span>. You can also match perspective by using the <span class="ui">Perspective Tool</span>.</li>
+				<li>With the new layer selected, from the <span class="ui">Layer</span> menu, choose <span class="ui">Merge Down</span>. This will merge and rasterize the layer into the main equirectangular image layer.</li>
+				<li>Once the content is merged, you can pan around the live projection by choosing the <span class="ui">Move Tool</span>, then selecting the <span class="ui">Edit Live Projection Tool</span> from the context toolbar.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To straighten an image:</summary>
+			<ol>
+				<li>While in live projection view, you will see <span class="ui">Straighten</span> on the context toolbar.</li>
+				<li>To straighten the horizon of the equirectangular image, either click-drag the <span class="ui">Straighten</span> value box or click once and enter a new value in degrees.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To change an unmapped image&apos;s center point:</summary>
+			<ol>
+				<li>While in live projection view, you will see <span class="ui">Center Coordinate System</span> on the context toolbar.</li>
+				<li>To change the middle origin point of the unmapped image, pan the view around and choose a new view point. Click <span class="ui">Center Coordinate System</span>, then from the <span class="ui">Layer</span> menu, choose <span class="ui">Live Projection&gt;Remove Projection</span>. The unmapped image&apos;s center point will now have changed.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To exit live projection and convert the image back to equirectangular mapping:</summary>
+			<ol>
+				<li>Converting your image layer back to its original equirectangular mapping will allow you to export and share it&mdash;some image hosts support 360 image projection, or alternatively you can implement a Javascript/WebGL-based viewer on your own web pages if you wish.</li>
+				<li>To clear the live projection, select your image layer, then from the <span class="ui">Layer</span> menu, choose <span class="ui">Live Projection&gt;Remove Projection</span>.</li>
+			</ol>
+		</details>
+
+	</section>
+
+	<section class="examples">
+		<h2>Examples</h2>
+
+		<figure>
+			<div class="single"><img src="../../../shared/feature_360_editing.jpg" alt="Editing in live projection view" /></div>
+			<figcaption>Removing the tripod at the Nadir (bottom pole) using the Inpainting Brush.</figcaption>
+		</figure>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/feature_360_petwood_unmapped.jpg" alt="Before" /><div><img src="../../../shared/feature_360_petwood_mapped.jpg" alt="After" /></div>
+			</div>
+			<figcaption><b>Before</b>: The original equirectangular image. <b>After</b>: Using live projection to compose a scene from a certain area of the 360 image.</figcaption>
+		</figure>
+
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="raw, overlays, adjustments, gradients" />
+	<meta name="description" content="Apply standard adjustments to isolated areas of an image using overlays." />
+	<title>Using overlays</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Using overlays</h1>
+		
+		<p>The Overlay tools can be used in combination with the <span class="ui">Overlays</span> panel to allow you to apply standard adjustments to isolated areas of an image.</p>
+	
+		<figure>
+			<p><img src="../../images/using_overlays_develop_persona.png" class="responsive" width="1214" alt="Overlays" /></p>
+			<figcaption>Gradient Overlay applied in the Develop Persona.</figcaption>
+		</figure>
+	
+	</header>
+
+	<section class="about">
+		
+		<h2>About overlays</h2>
+		
+		<p>Overlays are elements within Develop Persona which are placed on top of an image. Any adjustment applied to an overlay affects the image below.</p>
+		
+		<p>However, overlays can have a varying level of visibility, which varies the impact its adjustments have on the underlying image. In this respect, Overlays in Develop Persona act in a similar way to <a href="../Layers/LayerMasks.html">masks in Photo Persona</a>.</p>
+		
+		<p>Areas of an overlay which are transparent ignore the overlay&apos;s adjustments, while opaque areas display the applied adjustments. Areas of semi-transparency (such as those created with the Overlay Gradient Tool) will display the adjustments by a varying degree.</p>
+		
+		<p>The adjustments applied to an overlay are determined using the <a href="raw_panelOverlays.html">Overlays panel</a>.</p>
+		
+		<h3>Types of overlay</h3>
+		
+		<p>There are two types of overlay: Brush and Gradient.</p>
+		
+		<p>Brush overlays can only be edited using the <span class="ui">Overlay Paint</span> and <span class="ui">Overlay Erase</span> Tools. Areas are added to an overlay using the Overlay Paint Tool. Areas are removed using the Overlay Erase Tool.</p>
+		
+		<p>The <span class="ui">Overlay Gradient Tool</span> applies a gradient from transparent to opaque across Gradient overlays only.</p>
+	
+	</section>
+	
+	<section class="settings">
+	
+		<h3>Settings (<img src="../../../shared/ui/overlay_brush_tool.png" class="tool heading" width="18" height="18" alt="Overlay Paint Tool" /> Overlay Paint and <img src="../../../shared/ui/overlay_eraser_tool.png" class="tool heading" width="18" height="18" alt="Overlay Erase Tool" /> Erase Tools only)</h3>
+		
+			<ul>
+				<li><span class="ui">Size</span>&mdash;controls the size of the overlay brush in pixels.</li>
+				<li><span class="ui">Hardness</span>&mdash;how hard the edges of the brush are. The painted overlay appears softer and more feathered as the percentage decreases.</li>
+				<li><span class="ui">Edge Aware</span>&mdash;when checked, enables edge detection, which allows for easier overlay painting around edges without having to zoom in and reduce the brush size.</li>
+				<li><span class="ui">Show Overlay</span>&mdash;keep checked to display a strong pink overlay to identify an area for targeted editing; uncheck to hide the overlay and make your edits directly without this aid.</li>
+			</ul>
+	
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/dev_overlay_brush_tool.png" class="tool heading" width="18" height="18" alt="Add Brush Overlay" /> <img src="../../../shared/ui/dev_gradient_tool.png" class="tool heading" width="18" height="18" alt="Add Gradient Overlay" /> <img src="../../../shared/ui/overlay_brush_tool.png" class="tool heading" width="18" height="18" alt="Overlay Paint Tool" /> <img src="../../../shared/ui/gradient_overlay_tool.png" class="tool heading" width="18" height="18" alt="Gradient Tool" /> To create an overlay:</summary>
+			<p>Do any of the following:</p>
+				<ul>
+					<li>On the <span class="ui">Overlays</span> panel, select <span class="ui">Add Brush Overlay</span> to create a transparent, pixel overlay.</li>
+					<li>On the <span class="ui">Overlays</span> panel, select <span class="ui">Add Gradient Overlay</span> to create an opaque Gradient overlay.</li>
+					<li>With no overlay selected, drag on the image with the <span class="ui">Overlay Paint Tool</span>. A Brush overlay is added automatically.</li>
+					<li>With no overlay selected, drag on the image with the <span class="ui">Overlay Gradient Tool</span>. A Gradient overlay is added automatically.</li>
+				</ul>
+		</details>
+
+		<details open="open">
+			<summary>To apply adjustments to an overlay:</summary>
+				
+				<ol>
+					<li>On the <span class="ui">Overlays</span> panel, select an <span class="ui">overlay</span>.</li>
+					<li>From the <span class="ui">Basic</span> panel, click an adjustment&apos;s checkbox to activate it.</li>
+					<li>Drag the adjustment slider to set the value.</li>
+				</ol>
+		</details>
+
+		<details>
+			<summary><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete Overlay" /> To remove an overlay:</summary>
+			
+				<p>On the <span class="ui">Overlays</span> panel:</p>
+				
+				<ol>
+					<li>Select an <span class="ui">overlay</span>.</li>
+					<li>Click <span class="ui">Delete Overlay</span>.</li>
+				</ol>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="raw_panelOverlays.html">Overlays panel (Development Persona only)</a></li>
+			<li><a href="../Tools/tools_raw.html">Raw Tools</a></li>
+			<li><a href="raw.html">Developing a raw image</a></li>
+		</ul>
+	</section>
+	
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

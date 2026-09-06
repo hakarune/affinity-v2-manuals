@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="distort, compositing" />
+	<meta name="description" content="Applies distortion to an image using a displacement map." />
+	<title>Displace</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Displace</h1>
+
+		<p>The Displace filter applies distortion according to a pattern defined by a displacement map.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_displace_before.jpg" alt="Before" /><div><img src="../../../shared/filter_displace_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Using a texture as a displacement map to blend objects together.</figcaption>
+		</figure>
+	</header>
+
+	<section class="about">
+		<h2>About the Displace filter</h2>
+
+		<p>The displacement map used to create the distortion can be either from an external file or from layers directly beneath the layer to be edited. For the former, the Internet offers many displacement maps to download and try out. For the latter, the displacement effect works with your existing layer content, typically blending sympathetically with the underlying background texture.</p>
+		
+	
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer&gt;Distort</span> category.</p>
+		
+		<p>For professional results, apply blend ranges to the live filter layer, then finely adjust the filter&apos;s Strength setting.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Preserve Alpha</span>&mdash;when enabled, it prevents empty pixels from rendering as alpha.</li>
+			<li><span class="ui">Merge</span>&mdash;combines the effect applied with the layers below.</li>
+			<li><span class="ui">Delete</span>&mdash;removes the displacement filter effect layer.</li>
+			<li><span class="ui">Reset</span>&mdash;returns the effect adjustments to their default values.</li>
+			<li><span class="ui">Strength</span>&mdash;sets the intensity of pixel displacement. Negative values shift pixels upwards, positive values shift pixels downwards. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Scale To Fit</span>&mdash;when selected (default), the displacement map stretches or shrinks to fit the document size. If this option is off, the displacement map retains its native dimensions.</li>
+			<li><span class="ui">Load Method</span>&mdash;offers two methods for pixel displacement:<ul>
+					<li>Sobel 3x3 intensity offset&mdash;the lightness values of pixels within the displacement map determine the degree to which the distortion occurs. This method is preferable if you would like to maintain the effect&apos;s position. Apply this method before loading the displacement map image.</li>
+					 <li>Red/Green offset&mdash;as per Adobe Photoshop. The method uses the red and green channel of the displacement map image for distortion.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Load Map From File</span>&mdash;sets the displacement map used in the filter. In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+			<li><span class="ui">Load Map From Layers Beneath</span>&mdash;determines the displacement map using layers beneath the selected layer (rather that from a displacement map image described above).</li>
+			<li><span class="ui">Opacity</span>&mdash;controls how much of the effects is visible.</li>
+			<li><span class="ui">Blend Mode</span>&mdash;regulates how the pixels of the applied effect interact with the layers below.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="../Layers/layerBlendRanges.html">Layer blend ranges</a></li>
+			<li><a href="filter_shear.html">Shear</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

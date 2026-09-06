@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="brushes, brushes, painting, brush" />
+	<meta name="description" content="The Paint Brush Tool lets you apply brush strokes to your image." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src: "../../../shared/tab1-sprays_splatters_brush.png", alt: "Sprays and Splatters Brush" },
+				tab2: { src: "../../../shared/tab2-oil_brush.png", alt: "Oil Brush" },
+				tab3: { src: "../../../shared/tab3-pencil_brush.png", alt: "Pencil Brush" },
+				tab4: { src: "../../../shared/tab4-masking_brush.png", alt: "Masking Brush" },
+				tab5: { src: "../../../shared/tab5-dry_media_brush.png", alt: "Dry Media Brush" },
+				tab6: { src: "../../../shared/tab6-watercolour_brush.png", alt: "Watercolour Brush" },
+				tab7: { src: "../../../shared/tab7-marker_brush.png", alt: "Marker Brush" },
+			}
+		}
+	</script>
+		<title>Painting brush strokes</title>
+</head>
+
+<body onload="loadTabbedImages()">
+	<header>
+
+		<h1>Painting brush strokes</h1>
+
+		<p>Use the Paint Brush Tool to apply brush strokes to your design.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Sprays and Splatters</p></div>
+				<div class="tab"><p>Oils</p></div>
+				<div class="tab"><p>Pencils</p></div>
+				<div class="tab"><p>Masking</p></div>
+				<div class="tab"><p>Dry Media</p></div>
+				<div class="tab"><p>Watercolor</p></div>
+				<div class="tab"><p>Markers</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/tab1-sprays_splatters_brush.png" class="responsive" alt="Sprays and Splatters"></div>
+		</div>
+	
+		<h2>Painting</h2>
+		<p>Whether you want to add lens flare, clouds or smoke to create a fantasy-like composition, simulate splatter or spray strokes to add drama to a scene, or perhaps to turn your photo into an oil or watercolor painting to achieve that classic and timeless look, Affinity Photo 2 comes packed with a plethora of brush choices for numerous creative applications. Additionally, new brushes can be created from scratch or imported (.abr and .afbrushes formats) from a number of sources.</p>
+		<p>The Paint Brush Tool and other brush-based tools can be used to add brush strokes to your image for creative or corrective reasons. Each category in the <span class="ui">Brushes</span> panel contains brushes of varying properties and characteristics and they can be edited to suit individual creative needs.</p>
+		<p>The appearance of brush strokes are determined by a combination of the chosen brush tool, the Brushes panel and the tool&apos;s context toolbar.</p>
+
+		<aside class="box note">
+			<p>The <a href="../Tools/tools_undoBrush.html">Undo Brush Tool</a> can be used to undo modifications made to an image layer by other painting tools.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details>
+			<summary><img src="../../../shared/ui/paint_brush_tool.png" class="tool heading" width="18" height="18" alt="Paint Brush Tool" /> To paint brush strokes:</summary>
+
+			<ol>
+				<li>Use the <span class="ui">Layers</span> panel to select the layer that you want to work on, or create a new layer.</li>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Paint Brush Tool</span> or other brush-based tool. (See tip below.)</li>
+				<li>Do one of the following:<ul>
+						<li>On the <span class="ui">Brushes</span> panel, select a brush thumbnail of your choice. The tool uses a soft-round brush by default.</li>
+						<li><img src="../../../shared/ui/brush_on_layer.png" class="tool" width="18" height="18" alt="Recent brushes" /> To continue with a previously used brush (current session only): On the <span class="ui">Layers</span> panel, select <span class="ui">Recent brushes</span> on the layer entry and select a brush thumbnail from the pop-up menu.</li>
+					</ul>
+				</li>
+				<li>Adjust the context toolbar settings.</li>
+				<li>Select a stroke color from the <span class="ui">Color</span> panel.</li>
+				<li>Drag on the page in the direction that you want the brush stroke to follow.</li>
+			</ol>
+		</details>
+	</section>
+
+		<p>By default, if you switch away from a brush tool, when you return to it the last used brush will be remembered (even any modified settings), with the Brushes panel automatically scrolling to the brush; switching across brush categories is automatic. You can switch off auto-scrolling/auto-switching in the Brushes panel&apos;s preferences if needed.</p>
+		
+		<aside class="box tip">
+			<p>If the selected brush tool does not paint anything, check for a <span class="ui">Protect alpha</span> option on the context toolbar. When that is enabled, the brush will not paint on the current layer&rsquo;s transparent regions, only those that are opaque.</p>
+		</aside>
+
+		<aside class="box tip">
+			<p>If you wish to switch brush tools, while maintaining the selected brush type, you can set this preference using the <a href="../Workspace/preferences.html">Assistant</a>. Alternatively, you can set Affinity Photo 2 to automatically select a particular brush tool when a brush is selected. See the <a href="pixel_modify.html">Modifying brushes</a> topic for more information.</p>
+		</aside>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>The following modifier <span class="KEY-TAG"></span>(s) can be used:</p>
+			<ul>
+				<li>To draw a straight brush stroke, lay down your initial stroke, then <span class="key SHIFT-TAG"></span>-click at the position where your stroke is to end; keep the key pressed to continue the straight line stroke.</li>
+				<li>To constrain a stroke to the X-axis or Y-axis, press the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> immediately after your initial stroke is laid down, then drag along the X or Y axis to the position where your stroke is to end; keep the key pressed to continue the stroke.</li>
+				<li>Press the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and holding down the left mouse button picks up a new color under the brush to paint with.</li>
+				<li>Pressing <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while selecting a new raster brush from the Brushes panel ignores size and the associated tool (if set).</li>
+				<li>To ignore only the associated tool while selecting a brush from the panel, press <span class="key SHIFT-TAG"></span> and <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>s together.</li>
+				<li class="osx">Press the <span class="key CTRL-TAG"></span> and <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>s together and:<ul>
+						<li>Click to cycle between width and hardness, shape and spacing, and rotation attributes.</li>
+						<li>Drag left/right or up/down to adjust the corresponding attribute. For example, with width and hardness attributes selected, drag left/right to adjust the first attribute and up/down to adjust the second attribute.</li>
+					</ul>
+				</li>
+				<li class="win32">Press the <span class="key CMD-TAG"></span> and <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>s together and:<ul>
+						<li>Click to cycle between width and hardness, shape and spacing, and rotation attributes.</li>
+						<li>Drag left/right or up/down to adjust the corresponding attribute. For example, with width and hardness attributes selected, drag left/right to adjust the first attribute and up/down to adjust the second attribute.</li>
+					</ul>
+				</li>
+				<li class="osx">To change flow instead, hold the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> and press a number key.</li>
+				<li class="win32">To change flow instead, hold the right mouse button and press a number key.</li>
+			</ul>
+		</aside>
+
+		<details>
+			<summary>To use opacity quick keys:</summary>
+			<ol>
+				<li>Select a brush tool.</li>
+				<li>Press a numerical key, or two numerical keys in quick succession, to set the opacity. For example:<ul>
+						<li>Press <span class="ui">4</span> for 40% opacity.</li>
+						<li>Press <span class="ui">0</span> for 100% opacity.</li>
+						<li>Press <span class="ui">4</span> and <span class="ui">5</span> for 45% opacity.</li>
+						<li>Press <span class="ui">0</span> and <span class="ui">7</span> for 7% opacity.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>	
+		 
+ 		<details>
+			<summary>To smooth brush strokes as you paint:</summary>
+			<ul>
+				<li>On the context toolbar, enable the <span class="ui">Stabilizer</span> option and choose one of the following:<ul>
+						<li><span class="ui">Rope mode</span>&mdash;drag the stroke end by a &apos;rope&apos; that smooths the stroke but lets you introduce sharp corners at increasing <span class="ui">Length</span> (radius) values by redirecting the slackened rope.</li>
+						<li><span class="ui">Window mode</span>&mdash;smooths the stroke by averaging the stroke&apos;s position over a <span class="ui">Window</span> whose size is configurable.</li>
+					</ul>
+				</li>
+			</ul>
+ 
+		</details>
+
+	<section class="howto">
+		<details>
+			<summary><img src="../../../shared/ui/undo_brush_tool.png" class="tool heading" width="18" height="18" alt="Undo Brush Tool" /> To undo painted modifications:</summary>
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Undo Brush Tool</span>.</li>
+				<li>Paint over pixels which you want to return to their original value.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section class="howto">
+		<details>
+			<summary><img src="../../../shared/ui/eraser_tool.png" class="tool heading" width="18" height="18" alt="Erase Brush Tool" /> To erase brush strokes after you paint:</summary>
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Erase Brush Tool</span>.</li>
+				<li>Paint over areas of your brush stroke.</li>
+			</ol>
+		</details>
+
+		<details>
+			<summary>To rotate the brush nozzle as you paint using a keyboard:</summary>
+				<ul>
+					<li>Tap the left or right arrow keys to adjust the rotation of the nozzle.</li>
+				</ul>
+		</details>
+
+		<aside class="box prefs">
+			<h3>Settings (or Preferences)</h3>
+			<p>Related behaviors can be adjusted from <a href="../Workspace/preferences.html">the app&apos;s settings</a>:</p>
+			<ul>
+				<li><span class="ui">Miscellaneous&gt;Reset Fills</span></li>
+				<li><span class="ui">Miscellaneous&gt;Reset Brushes</span></li>
+				<li><span class="ui">User Interface&gt;Show brush previews</span></li>
+				<li><span class="ui">User Interface&gt;Always show brush crosshair</span></li>
+			</ul>			
+		</aside>
+
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_paintBrush.html">Paint Brush Tool</a></li>
+			<li><a href="../Panels/brushesPanel.html">Brushes panel</a></li>
+			<li><a href="pixel_modify.html">Modifying brush strokes</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=painting">Keyboard shortcuts for painting operations</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

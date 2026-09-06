@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="history brush" />
+	<meta name="description" content="The Undo Brush Tool can be used to selectively undo modifications to individual pixels, restoring them to their original values." />
+	<title>Undo Brush Tool</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/undo_brush_tool.png" class="tool heading" width="18" height="18" alt="Undo Brush Tool" /> Undo Brush Tool</h1>
+	</header>
+
+		<p>The <span class="ui">Undo Brush Tool</span> can be used to selectively undo modifications to individual pixels, restoring them to a previous history state or a saved snapshot.</p>
+		<p>After setting a brush source, you can blend the image&apos;s current state back to a previous state, like painting backwards in time.</p>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Width</span>&mdash;the brush (stroke) size in pixels. Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">Opacity</span>&mdash;how see-through the brush is. Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">Flow</span>&mdash;how fast the brush effect is applied (1% is very slow, 100% is immediate). Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">Hardness</span>&mdash;how hard the edges of the brush are. The brush appears softer as the percentage decreases. Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">More</span>&mdash;click to display the Brushes dialog to access advanced brush settings.</li>
+			<li><span class="ui">Force pressure to control size</span>&mdash;Click to control brush size with pressure if using a pressure-sensitive device. This overrides brush defaults.</li>
+			<li><span class="ui">Stabilizer</span>&mdash;enables stroke stabilization using either a <span class="ui">Rope stabilizer</span> or <span class="ui">Window stabilizer</span> mode; the former drags the stroke end by a &apos;rope&apos; to smooth the stroke but lets you introduce sharp corners at increasing rope <span class="ui">Length</span> (radius) values by redirecting the slackened rope; the latter will smooth the stroke by averaging sampled input positions within a <span class="ui">Window</span> whose size is configurable.</li>
+			<li><span class="ui">Symmetry</span>&mdash;when set to greater than 0, repeats the brush stroke around a number of axes (defined by the symmetry value). The center axis point can be repositioned by click-dragging it.</li>
+			<li><span class="ui">Mirror</span>&mdash;with symmetry enabled, causes brush strokes to be mirrored along the X and Y axis.</li>
+			<li><span class="ui">Lock</span>&mdash;when checked, prevents the symmetry line from being moved.</li>			
+			<li><span class="ui">Blend Mode</span>&mdash;changes how the applied pixels interact with existing pixels on a layer. Select from the pop-up menu.</li>
+			<li><span class="ui">Blend</span>&mdash;when selected (default), pixels which do not overlap those in the selected history or snapshot state are unaffected, allowing the blending of the current document state with the selected, previous state. If this option is off, all pixels are returned to the previous state when painted.</li>
+			<li><span class="ui">Protect Alpha</span>&mdash;when checked, you are not able to paint on the current layer&apos;s transparent regions.</li>
+		</ul>
+
+		<aside class="box note">
+			<p>This Brush Tool can be associated with a particular brush on the <span class="ui">Brushes</span> panel. For more information, see the <a href="../Painting/pixel_modify.html">Modifying brushes</a> topic.</p>
+		</aside>
+
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+				<summary><img src="../../../shared/ui/undo_brush_tool_on.png" class="tool heading" width="16" height="16" alt="Set Undo Brush Source" /> To paint from history or a saved snapshot:</summary>
+
+				<ol>
+					<li>Display the History or Snapshot panel.</li>
+					<li>Click the <span class="ui">Set Undo Brush Source</span> icon on the history state or snapshot you want to paint back to.</li>
+					<li>Begin painting with the Undo Brush Tool.</li>
+				</ol>
+		
+			</details>
+			
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/historyPanel.html">History panel</a></li>
+			<li><a href="../DesignAids/snapshot.html">Using snapshots</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

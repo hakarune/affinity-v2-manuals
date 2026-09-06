@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="live, mask, luminosity, non-destructive" />
+	<meta name="description" content="Use non-destructive luminosity masks to mask an image's tonal range based on luminosity values." />
+	<title>Live Luminosity Range Mask</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Live Luminosity Range Mask</h1>
+
+		<p>Use non-destructive Luminosity Range Masks to mask an image&apos;s tonal range based on its luminosity values. You can isolate specific ranges of shadows or highlights in order to target them with adjustments.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/mask_luminosityrange_before.jpg" alt="Before" /><div><img src="../../../shared/mask_luminosityrange_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Curves adjustment without (Before) and with (After) a live luminosity range mask.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="settings">
+
+		<h3>Settings (or Preferences)</h3>
+
+		<p>The following settings can be adjusted:</p>
+		<ul>
+			<li><span class="ui">Preset list</span>&mdash;Select a live mask preset if previously saved. Click the adjacent button to create, rename or delete a preset.</li>
+			<li><span class="ui">Merge</span>&mdash;merges the live mask with the layer immediately below it in the layer order.</li>
+			<li><span class="ui">Delete</span>&mdash;closes the dialog and deletes the live mask.</li>
+			<li><span class="ui">Reset</span>&mdash;returns the graph to the default position (a straight line between two nodes positioned at the top of the grid).</li>
+			<li><span class="ui">Luminosity Map graph</span>&mdash;the graph can be manipulated to mask out the shadows, midtones and highlights affected by the luminosity mask. The left of graph represents shadows, middle is midtones and right is highlights; the lower the curve the greater the amount of masking.</li>
+			<li><span class="ui">Invert output</span>&mdash;reverses the values of the mask.</li>
+			<li><span class="ui">Linear</span>&mdash;when checked, the graduation between nodes is linear (i.e., nodes on the graph are connected using straight lines). If this option is off, nodes are connected using smooth curves.</li>
+			<li><span class="ui">Blur Radius</span>&mdash;controls the level of blurring at the edges of masked areas.</li>
+			<li><span class="ui">Opacity</span>&mdash;alters the opacity of the mask.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="liveLayerMasks.html">Live layer masks</a></li>
+			<li><a href="mask_liveHueRange.html">Live hue range mask</a></li>
+			<li><a href="mask_liveBandPass.html">Live band-pass mask</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Unsharp Mask filter increases apparent sharpness in an image." />
+	<title>Unsharp Mask</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Unsharp Mask</h1>
+
+		<p>In spite of its misleading name, the Unsharp Mask filter is a flexible and powerful way to increase apparent sharpness in an image.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_unsharpmask_before.jpg" alt="Before" /><div><img src="../../../shared/filter_unsharpmask_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Unsharp Mask can be used to add punch to an image, or to help sharpen soft images.</figcaption>
+		</figure>
+
+		</header>
+
+	<section class="about">
+		<h2>About the Unsharp Mask filter</h2>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Radius</span>&mdash;controls the number of pixels affected around the existing light pixels. A smaller radius enhances smaller scale detail. Type directly in the text box or drag the slider to set the value. Dragging to the right on the page allows you to override the maximum value&mdash;values above 100 px may affect performance so use with care.</li>
+			<li><span class="ui">Factor</span>&mdash;controls how much contrast is added. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Threshold</span>&mdash;controls how much contrast there needs to be between colors before the sharpening effect &apos;kicks in&apos;. Use higher values for grainy images or skin tones.</li>
+		</ul>
+
+		<aside class="box tip">
+			<p>The Unsharp Mask filter affects the whole image (or selection). For fine control, it can be useful to apply it to a separate duplicate layer(s), and then either use a mask to allow sharpening of only specific areas, or use blends modes set to lighten/darken and change the opacity of these layers to get the effect that you want.</p>
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_clarity.html">Clarity</a></li>
+			<li><a href="filter_highPass.html">High Pass</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

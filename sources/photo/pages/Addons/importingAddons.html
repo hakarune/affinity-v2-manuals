@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="custom content, add-ons, addons, export, import, share, sharing, across, between, apps" />
+	<meta name="description" content="Import custom content from add-on files you have created or received from a third party." />
+	<title>Importing add-ons</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Importing add-ons</h1>
+	
+		<p>Add-ons stored as files must be manually imported into Affinity. There are two ways to import them:<ul>
+			<li>Using the panel or part of the app&apos;s interface that corresponds to the add-on&apos;s type.</li>
+			<li>For files whose extension begins with <i>.af</i>, by selecting <span class="ui">Import Content</span> on the <span class="ui">File</span> menu.</li>
+		</ul>
+				
+		<aside class="box tip">
+			<p>As well as Affinity&apos;s own file formats, various industry standard file formats can be imported.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p class="osx">Some content may be provided as one of several add-on types. For example, overlays may be provided as assets that can be dragged from the Assets panel as needed, or as image files that can be dragged and dropped from Finder into your documents.</p>
+			
+			<p class="win32">Some content may be provided as one of several add-on types. For example, overlays may be provided as assets that can be dragged from the Assets panel as needed, or as image files that can be dragged and dropped from Explorer into your documents.</p>
+		</aside>
+		
+	</header>
+
+	<section class="howto">
+		<h2>Add-ons supplied in an archive</h2>
+		<p>Add-ons may be supplied in the ZIP file format or similar and must be extracted before they can be imported.</p>
+		
+		<p class="osx">In Finder, double-click the archive to extract its contents to the same folder as it.</p>
+		
+		<p class="win32">In File Explorer, right-click the archive and select <span class="ui">Extract All</span>, then follow the on-screen instructions to extract the archive&apos;s contents to your required location.</p>
+		
+		<h2>To import add-ons</h2>
+		<p>For any type of add-on listed in the table below, follow the corresponding steps, then (except for fonts) browse to and select the add-on file to be imported and click <span class="ui">Open</span>.</p>
+		
+		<table class="addons import">
+			<tr>
+				<td>Add-on type</td>
+				<td>Importable file extensions</td>
+				<td>Multiple at&nbsp;once?</td>
+				<td>To import&hellip;</td>
+			</tr>
+			<tr>
+				<td>Assets</td>
+				<td>.afassets</td>
+				<td></td>
+				<td>On the <span class="ui">Assets</span> panel, select <span class="ui">Import Assets</span> from the Panel Preferences menu.</td>
+			</tr>
+			<tr>
+				<td>Brushes</td>
+				<td>.afbrushes, .abr</td>
+				<td><img src="../../../shared/check.png" class="smallCheck" alt="check" title="Yes" /></td>
+				<td>On the <span class="ui">Brushes</span> panel, select <span class="ui">Import Brushes</span> from the Panel Preferences menu.</td>
+			</tr>
+			<tr>
+				<td>Document templates</td>
+				<td>.aftemplate</td>
+				<td><img src="../../../shared/check.png" class="smallCheck" alt="check" title="Yes" /></td>
+				<td>Use your operating system to move the document template files to a folder for long-term storage, then add the folder to the <span class="ui">Templates</span> section of the <span class="ui">New Document</span> dialog.</td>
+			</tr>
+			<tr>
+				<td>Fonts</td>
+				<td>.affont</td>
+				<td><img src="../../../shared/check.png" class="smallCheck" alt="check" title="Yes" /></td>
+				<td>Drag one or more files from your file manager and drop them onto an Affinity 2 app&apos;s window.</td>
+			</tr>
+			<tr>
+				<td>Fonts</td>
+				<td>As supported by your operating system, e.g. .otf, .ttf</td>
+				<td><img src="../../../shared/check.png" class="smallCheck" alt="check" title="Yes" /></td>
+				<td>Install using your operating system or third-party font manager. If fonts are unavailable in Affinity, confirm in your font manager that they are enabled, then quit and reopen Affinity.</td>
+			</tr>
+			<tr>
+				<td>LUTs (Look-up tables)</td>
+				<td>
+					<p>.cube, .csp, .3dl, .look (one LUT per file)</p>
+					<p>.afluts (one LUT category per file)</p>
+				</td>
+				<td><img src="../../../shared/check.png" class="smallCheck" alt="check" title="Yes" /> <sup>1</sup></td>
+				<td>On the <span class="ui">Adjustment</span> panel, click the <span class="ui">LUT</span> adjustment, click <span class="ui">Options</span>, then do one of the following:<ul>
+						<li>For a file that contains one LUT, select <span class="ui">Import LUTs</span>.</li>
+						<li>For a file that contains a LUT category, select <span class="ui">Import LUT Category</span>.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Macros</td>
+				<td>
+					<p>.afmacro (one macro per file)</p>
+					<p>.afmacros (one category per file)</p>
+				</td>
+				<td></td>
+				<td>Do one of the following:<ul>
+						<li>For a file that contains one macro, click <span class="ui">Import</span> on the <span class="ui">Macro</span> panel.</li>
+						<li>For a file that contains a macro category, select <span class="ui">Import Macros</span> from the <span class="ui">Library</span> panel&apos;s Panel Preferences menu.</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>Styles</td>
+				<td>.afstyles</td>
+				<td></td>
+				<td>On the <span class="ui">Styles</span> panel, select <span class="ui">Import Styles</span> from the Panel Preferences menu.</td>
+			</tr>
+			<tr>
+				<td>Swatches palettes</td>
+				<td class="osx">.afpalette, .ase (Adobe Swatch Exchange), .clr</td>
+				<td class="win32">.afpalette, .ase (Adobe Swatch Exchange)</td>
+				<td></td>
+				<td>On the <span class="ui">Swatches</span> panel, open the Panel Preferences menu, then select the palette type you want to create from the <span class="ui">Import Palette</span> submenu.</td>
+			</tr>
+		</table>
+		
+		<p><sup>1</sup> Either multiple LUT files or multiple LUT category files can be imported simultaneously.</p>
+		
+		<h2>After importing</h2>
+		<p>When most types of add-on are imported, one or more new categories are created. One of these categories is automatically displayed on the corresponding panel, with the following exceptions:</p>
+		
+		<ul>
+			<li>An individual LUT file&mdash;the LUT is added to the currently selected category on the LUT adjustment.</li>
+			<li>An individual macro file&mdash;the macro&apos;s operations are presented on the Macro panel, from which you can play them or add the macro to the Library panel for later playback.</li>
+			<li>A macro category&mdash;the category is added to the Library panel and you may need to scroll to see it.</li>
+		</ul>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO</h4>
+		<ul class="plain">		
+			<li><a href="aboutAddons.html">About Affinity add-ons</a></li>
+			<li><a href="linkingContent.html">Linking custom content across apps</a></li>
+			<li><a href="exportingAddons.html">Exporting add-ons</a></li>
+			<li><a href="../GetStarted/NewDocument.html">Creating new documents</a></li>
+		</ul>
+	</section>
+	
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

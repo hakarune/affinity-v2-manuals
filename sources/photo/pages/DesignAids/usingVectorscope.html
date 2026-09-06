@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="colour, correcting, skin tones, retouching, colour space" />
+	<meta name="description" content="Use Vectorscope to colour-correct tones." />
+	<title>Using Vectorscope</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Using Vectorscope</h1>
+	
+		<p>Available as a chart in the <a href="../Panels/scopePanel.html">Scope panel</a>, <span class="ui">Vectorscope</span> presents color and saturation data measured via the image signal. Its representation allows for accurate evaluation of color and thus aids workflows where it is challenging to judge the output by eye.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/usingVectorscope_before.jpg" alt="Before" /><div><img src="../../../shared/usingVectorscope_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Before and after skin color correction using Vectorscope as an aid.</figcaption>
+		</figure>
+
+	</header>
+	
+	<section class="about">
+	
+		<h2>About Vectorscope</h2>
+	
+		<p>The Vectorscope pie chart is divided into six parts representing the main colors of the RGB color space (red, green, blue) as well as their inverse equivalents (cyan, magenta, yellow). The chart places signal information from the image according to where its value sits in relation to the color space. For example, if there is a significant amount of blue color in the image, its representation will appear in the region of the blue line.</p>
+		<p>Additionally, the chart includes the <i>I</i> line, which may be used as an aid during correcting skin tones; the idea here is to adjust skin colors in such a way that their representation sits along this line.</p>
+		
+		<aside class="box tip">
+			<p>To better understand the Vectorscope chart readout, on a new pixel layer, brush in strokes of the main RGB color space colors and observe how they are represented.</p>
+		</aside>
+	
+	</section>
+	
+	<section class="howto">
+		<details>
+			<summary>To open the Vectorscope chart:</summary>
+			<ol>
+				<li>From the top menu, choose <span class="ui">Window&gt;Scope </span>.</li>
+				<li>In the panel, change the scope type to <span class="ui">Vectorscope</span>.</li>
+			</ol>
+		</details>
+	</section>
+	
+	<section class="howto">
+		<details>
+			<summary>To use Vectorscope as an aid in skin tone correction:</summary>
+			<ol>
+				<li>Using the Crop Tool, crop into an area that is visibly inaccurate in the image, e.g. too saturated. Observe the representation of color on the Vectorscope chart.</li>
+				<li>Undo the cropping action.</li>
+				<li>Open the HSL adjustment and, from the dialog, use the Picker to sample color from the skin area that needs correcting.</li>
+				<li>Modify the Hue Shift slider to add a positive value (i.e. push it right slightly) while balancing the Saturation Shift with a negative value.</li>
+				<li>Observe the Vectorscope chart&apos;s <i>I</i> line and ensure that the color representation of the adjustment aligns with it.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>The most effective outputs are achieved by small increments of adjustments. White Balance and Vibrance can also be used in addition to HSL to further tweak the correction.</p>
+			</aside>
+		
+			<aside class="box tip">
+				<p>To limit your edits to just the skin area of the subject, and to take things further, use Affinity Photo 2&apos;s non-destructive <a href="../Layers/LayerMasks.html">masking</a> and <a href="../Selections/selections_create.html">selecting</a> techniques.</p>
+			</aside>
+		</details>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/scopePanel.html">Scope panel</a></li>
+			<li><a href="../Panels/histogramPanel.html">Histogram panel</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+			<li><a href="../Selections/selections_create.html">Create pixel selections</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>
+

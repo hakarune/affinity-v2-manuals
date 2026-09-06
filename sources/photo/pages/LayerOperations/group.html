@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="groups" />
+	<meta name="description" content="Group layers together for easier management." />
+	<title>Grouping</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Grouping</h1>
+		
+		<p>Layers can be grouped together for easier management and for restricting adjustments or masks to particular layers within your project. Layer groups can be nested together within a &apos;parent&apos; layer group.</p>
+		
+	</header>
+
+	<section class="about">
+		<p>Grouped layers remain together so they can be easily selected, moved and copied. Furthermore, once a layer group is established, adjustments and masks can be applied to the group and will affect all the layers within the group but not those outside the group.</p>
+		<p>Groups, and nested groups, can be broken apart at any time into their separate layers.</p>
+
+		<aside class="box note">
+			<p>Layer groups display as a nested Group layer on the <span class="ui">Layers</span> panel.</p>
+		</aside>
+		
+		<x-osx>
+			<aside class="box tip">
+				<p>To select nested content directly from the document view, select the <span class="ui">Move Tool</span>, then hold the <span class="CTRL-TAG"></span> and <span class="CMD-TAG"></span> <span class="KEY-TAG"></span>s and click an object in the view. From the contextual menu that appears, select any content contained in the same group as (or deeper than) the object you clicked.</p>
+			</aside>
+		</x-osx>
+
+		<x-win32>
+			<aside class="box tip">
+				<p>To select nested content directly from the document view, select the <span class="ui">Move Tool</span>, then hold the <span class="CMD-TAG"></span> <span class="KEY-TAG"></span> and right-click an object in the view. From the contextual menu that appears, select any content contained in the same group as (or deeper than) the object you clicked.</p>
+			</aside>
+		</x-win32>
+		
+		<aside class="box note">
+			<p>For a layer group, the default blend mode is &apos;Passthrough&apos; (i.e. the group itself has no special blend properties of its own). Please see the <a href="../Layers/layerBlendModes.html">Layer blending</a> topic for more information on how this blend mode affects layer groups.</p>
+		</aside>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_group_layer.png" class="tool" width="16" height="16" alt="Group Layers" /> To create a group:</summary>
+			<ol>
+				<li>Select two or more layers. (On the <span class="ui">Layers</span> panel, <span class="key CMD-TAG"></span>-click each layer.)</li>
+				<li>Do one of the following:<ul>
+						<li>On the <span class="ui">Layers</span> panel, click <span class="ui">Group Layers</span>.</li>
+						<li>From the <span class="ui">Arrange</span> menu, select <span class="ui">Group</span>.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_group_layer.png" class="tool" width="16" height="16" alt="Group Layers" /> To create an empty group:</summary>
+			<ol>
+				<li>With no content selected<sup>1</sup>, do one of the following:<ul>
+						<li>From the <span class="ui">Layer</span> menu, select <span class="ui">New Group</span>.</li>
+						<li>On the <span class="ui">Layers</span> panel, click <span class="ui">Group Layers</span>.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<p>Dragging layers onto the newly created group adds them to it.</p>
+			<p><sup>1</sup> When a single existing object, layer or layer group is selected, it is not added to the new group.</p>
+			
+			<aside class="box tip">
+				<p>The empty group&apos;s initial position in the layer stack is determined by the Insertion options on the Toolbar and whether nothing or a single object/layer or layer group is selected.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To name a group:</summary>
+			<ol>
+			<li>Do one of the following:<ul>
+					<li>On the <span class="ui">Layers</span> panel, double-click the existing group.</li>
+					<li>With the group selected, from the <span class="ui">Layer</span> menu, select <span class="ui">Rename Layer</span>.</li>
+				</ul>
+			</li>
+			<li>Type a new name.</li>
+			<li>Press <span class="key RETURN-TAG"></span>.</li>
+			</ol>
+			
+			<p>You can enable <span class="ui">Ask for name when creating Layers and Groups</span> setting to be prompted to name them upon creation. This is found in the <span class="ui">Settings (or Preferences)&gt;User Interface</span> section.</p>
+			
+		</details>
+		
+		<details open="open">
+			<summary>To ungroup layer content:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select the layer group.</li>
+				<li>From the <span class="ui">Arrange</span> menu, select <span class="ui">Ungroup</span>.</li>
+			</ol>
+			
+			<aside class="box tip">
+				<p class="osx">You can expand or collapse all nested layers in a group by pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and clicking the group layer&apos;s arrow.</p>
+ 				<p class="win32">You can expand or collapse all nested layers in a group by pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and clicking the group layer&apos;s arrow.</p>
+			</aside>
+		</details>
+
+		<details>
+			<summary>To release a layer from a layer group:</summary>
+			<p>Do one of the following:</p>
+				<ul>
+					<li>Drag the layer out of the group to another layer position.</li>
+					<li><span class="key CLICK-TAG"></span>-click the layer, and from the menu, choose <span class="ui">Release</span>.</li>
+				</ul>
+		</details>
+
+		<details>
+			<summary><img src="../../../shared/ui/ExpandCollapsebtn.png" class="tool" width="16" height="21" alt="Expand/Collapse" /> To select a specific layer within a layer group:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, expand the layer group to show its contents by clicking the layer&apos;s arrow.</li>
+				<li>Click to select a layer within the group.</li>
+			</ol>
+		</details>
+		
+		<aside class="box prefs">	
+		<h3>Settings (or Preferences)</h3> 		
+			<p>Related behaviors can be adjusted from <a href="../Workspace/preferences.html">the app&apos;s settings</a>:</p>
+			<ul>
+				<li><span class="ui">Miscellaneous&gt;Reset Object Styles</span></li>
+			</ul>			 	
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="select.html">Selecting</a></li>
+			<li><a href="isolating.html">Isolating</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../LayerOperations/target.html">Targeting</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=layerOperations">Keyboard shortcuts for layer operations</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

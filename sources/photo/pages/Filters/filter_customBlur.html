@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Custom Blur filter let you take full control of blurring using a customisable matrix." />
+	<title>Custom Blur</title>
+</head>
+<body>
+
+	<header>
+
+		<h1>Custom Blur</h1>
+
+		<p>The Custom Blur filter allows you to construct your own filter to apply a customized blur.</p>
+
+	<figure>
+		<p><img src="../../../shared/filter_customblur_window.png" alt="Window" /></p>
+		<figcaption>Custom Blur matrix window.</figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Custom Blur filter</h2>
+
+		<p>When this blur filter is applied to an image, each pixel&apos;s brightness value is recalculated according to the customized formula.</p>
+
+		<p>The cells in the matrix represent a target pixel (at the center) and its surrounding pixels. Numbers in these cells are multipliers (&quot;coefficients&quot;) by which each pixel&apos;s brightness will be multiplied. The filter examines each pixel, takes the sum of all these multiplications, and comes up with a new value for each target pixel. If a cell&apos;s value is 0, the corresponding pixel makes no contribution to the recalculated value of the target pixel.</p>
+		<p>This filter can be found in the <span class="ui">Filter</span> menu, in the <span class="ui">Blur</span> category.</p>
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li>Matrix cell&mdash;sets the multiplier used to determine pixel brightness. Type directly in the text box or use the arrow <span class="KEY-TAG"></span>s to set the value.</li>
+			<li><span class="ui">Divisor</span>&mdash;sets the value by which the overall multiplied brightness is divided. Type directly in the text box to set the value.</li>
+			<li><span class="ui">Offset</span>&mdash;adjusts the overall brightness. Positive values increase the overall brightness, negative values decrease the overall brightness. Type directly in the text box to set the value.</li>
+			<li><span class="ui">Normalize</span>&mdash; when selected (default), the Divisor is automatically set to the sum of all the values set in the matrix cells to maintain the overall lightness of the original image. If this option is off, the Divisor can be adjusted manually.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_bilateralBlur.html">Bilateral Blur</a></li>
+			<li><a href="filter_medianBlur.html">Median Blur</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

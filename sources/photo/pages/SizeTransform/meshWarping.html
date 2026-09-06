@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="mesh, warp" />
+	<meta name="description" content="Mesh warping distorts areas of your image under a highly customisable mesh grid. " />
+	<title>Mesh warping</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Mesh warping</h1>
+		<p>Mesh warping lets you distort specific areas of your image without affecting other areas. It can be used for dramatic warping effects or for more subtle focused retouching of facial features.</p>
+
+		<figure>
+			<div class="comparison large"><img src="../../../shared/warp_before.jpg" alt="Before" /><div><img src="../../../shared/warp_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Warping an image</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About mesh warping</h2>
+
+		<p>The <span class="ui">Mesh Warp Tool</span> and <span class="ui">Mesh Warp</span> live filter each provide a flexible mesh grid which can warp your image by repositioning the grid&apos;s lines, nodes, and patches; underlying pixels are transformed under the line, node or patch. The extent of warping you want to carry out is governed by the complexity of the grid.</p>
+		<p>You&apos;ll initially start with a mesh grid without lines, but adding your own lines and nodes lets you warp with ease. Position lines adjacent to areas in your image that you want to apply warping to.</p>
+		
+		<aside class="box note">
+			<p>The Mesh Warp Tool and Mesh Warp live filter provide the same settings on their context toolbars.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+		<summary><img src="../../../shared/ui/mesh_warp_tool.png" class="tool heading" width="18" height="18" alt="Mesh Warp Tool" /> To create a mesh:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>To apply a destructive mesh warp, from the <span class="ui">Tools</span> panel on the left, click the <span class="ui">Mesh Warp Tool</span>.</li>
+						<li>To apply a non-destructive mesh warp, select <span class="ui">Layer&gt;New Live Filter Layer&gt;Distort&gt;Mesh Warp</span>.</li>
+					</ul>
+				</li>
+				<li>Double-click on the edge of the mesh grid&mdash;the top edge gives a vertical line; a side edge gives a horizontal line.</li>
+				<li>Repeat for as many lines as you need.</li>
+			</ol>
+		<aside class="box note">
+			<p>If you want to start again, click <span class="ui">Reset</span> on the context toolbar.</p>
+		</aside>
+
+		</details>
+
+		<details open="open">
+		<summary>To add nodes to the grid:</summary>
+			<ul>
+				<li>Double-click anywhere within the grid.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+		<summary>To select multiple nodes in the grid:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>Press the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> and click each node in turn.</li>
+				<li>Drag across multiple nodes to create a marquee selection.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+		<summary>To apply warping:</summary>
+			<ol>
+				<li>(Optional) On the context toolbar, use the <span class="ui">Mode</span> option to manipulate just the grid (&apos;Source&apos;) or both grid and image simultaneously (&apos;Destination&apos;).</li>
+				<li>Drag a node, a node&apos;s corner handle, line or patch. Patch warping is achieved by clicking in an area contained by mesh lines and dragging the circle&mdash;this warps the entire area.</li>
+				<li>Select <span class="ui">Apply</span> or press <span class="key RETURN-TAG"></span>.</li>
+			</ol>
+		<aside class="box note">
+			<p>The mesh is really just an assembly of bendable curves. When you alter these curves, distorting the grid, the underlying image deforms accordingly.</p>
+		</aside>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_meshWarp.html">Mesh Warp Tool</a></li>
+			<li><a href="../LiquifyPersona/liquify.html">Warping using Liquify Persona</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

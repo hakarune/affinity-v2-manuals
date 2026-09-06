@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="curve, line, path, pen, shape, shapes, control handles, force horizontal handle, force vertical handle, cusp, stabiliser, straight line, Bézier" />
+	<meta name="description" content="You can use the Pen Tool to create curves and shapes." />
+	<title>Draw curves and shapes</title>
+</head>
+
+<body>
+	<header>
+		
+		<h1>Draw curves and shapes</h1>
+
+		<p>Curves and shapes are easily created using the Pen Tool. The Pen Tool has several modes that change the way the path is drawn.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/drawline_example.png" alt="Example of curve drawing" /></div>
+			<figcaption></figcaption>
+		</figure>
+	</header>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/pen_tool.png" class="tool" width="18" height="18" alt="Pen Tool" /> To draw precise curves with the Pen Tool:</summary>
+
+			<ol>
+				<li>Select the <span class="ui">Pen Tool</span>.</li>
+				<li>On the context toolbar, select a <span class="ui"><a href="../Tools/tools_pen.html">Mode</a></span>:<br /><ul>
+						<li><img src="../../../shared/ui/pen_mode.png" class="tool" width="16" height="16" alt="Pen Mode" /> <span class="ui">Pen Mode</span>&mdash;click-drag on the page to create repeated nodes; repositioning the displayed off-curve control handles at each node defines the shape of the next segment as you lay down nodes.</li>
+						<li><img src="../../../shared/ui/smart_mode.png" class="tool" width="16" height="16" alt="Smart Mode" /> <span class="ui">Smart Mode</span>&mdash;click repeatedly on the page to lay down each node; a best fitting curve is created without need for control handle adjustment.</li>
+						<li><img src="../../../shared/ui/polygon_mode.svg" class="tool" width="16" height="16" alt="Polygon Mode" /> <span class="ui">Polygon Mode</span>&mdash;click repeatedly on the page to lay down each node; a line is created with sharp nodes made up of straight segments.</li>
+						<li><img src="../../../shared/ui/line_mode.png" class="tool" width="16" height="16" alt="Line Mode" /> <span class="ui">Line Mode</span>&mdash;click and drag on the page to create a simple single-segment straight line that self-terminates.</li>
+					</ul>
+				</li>
+				<li>Enable <span class="ui">Use line style</span> to edit the outer line of the shape drawn via the <span class="ui">Stroke</span> panel, or <span class="ui">Use fill</span> to automatically fill the concave area created by the curve with the current fill color.</li>
+				<li>To complete the curve without closing it, press the <span class="key ESC-TAG"></span> <span class="KEY-TAG"></span>. To close the curve, click on the starting node.</li>
+			</ol>
+
+		<aside class="box note">
+			<p>To draw a straight line of a specific rotation and/or length, with a single uncurved line selected using the <span class="ui">Move Tool</span>, on the <span class="ui">Transform</span> panel, adjust the <span class="ui">Rotation</span> and/or <span class="ui">Length</span> values.</p>
+		</aside>
+			
+		<aside class="box note">
+			<p>Other context toolbar options can be used <em>in conjunction</em> with any one of the four modes above:</p>
+				<ul>
+					<li><img src="../../../shared/ui/preserve_selection_mode.png" class="tool" width="16" height="16" alt="Preserve selection" /> <span class="ui">Preserve Selection When Creating New Curves</span>&mdash;when enabled, it keeps the previously drawn curve(s) selected so that their nodes and geometry can be more easily snapped to as you draw.</li>
+					<li><img src="../../../shared/ui/add_to_curves_mode.png" class="tool" width="16" height="16" alt="Add To Curves Mode" /> <span class="ui">Add New Curve to Selected curves object</span>&mdash;when enabled, the mode creates additional curves on the same layer as the initial curve&mdash;this gives better management of a multitude of curve layers. For example, the character &apos;a&apos; is made up of two curves that can be a single &apos;curve object&apos;. From <span class="ui">Layer&gt;Geometry</span>, choose <span class="ui">Separate Curves</span> to separate each curve into separate layers or <span class="ui">Merge Curves</span> to consolidate selected curves into one layer.</li>
+					<li class="osx"><img src="../../../shared/ui/rubber_band_mode.png" class="tool" width="16" height="16" alt="Rubber Band Mode" /> <span class="ui">Rubber Band Mode</span>&mdash;when enabled, it previews the next segment to be drawn before placement of the new leading node. Use with <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> pressed for straight-line segment previews.</li>
+					<li class="win32"><img src="../../../shared/ui/rubber_band_mode.png" class="tool" width="16" height="16" alt="Rubber Band Mode" /> <span class="ui">Rubber Band Mode</span>&mdash;when enabled, it previews the next segment to be drawn before placement of the new leading node.</li>
+				</ul>
+			</aside>
+		</details>
+		
+		<p>A number of cursor types may appear when using this tool, indicating the outcome of the next click.</p>
+		
+		<table class="thirtythree">
+			<tr>
+				<th>Cursor type</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td style="width: 10%; text-align: center; vertical-align: top; "><img src="../../../shared/ui/pen_new_cursor.png" width="32" alt="Asterisk" /></td><td>Asterisk&mdash;creates a new curve</td>
+			</tr>
+			<tr>
+				<td style="width: 10%; text-align: center; vertical-align: top;"><img src="../../../shared/ui/pen_add_cursor.png" width="32" alt="Plus" /></td><td>Plus&mdash;creates a new node and curve segment</td>
+			</tr>
+			<tr>
+				<td style="width: 10%; text-align: center; vertical-align: top;"><img src="../../../shared/ui/pen_redrag_cursor.png" width="32" alt="Slope" /></td><td>Slope&mdash;converts to sharp corner or drag to recreate node</td>
+			</tr>
+			<tr>
+				<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="../../../shared/ui/pen_close_cursor.png" width="32" alt="Circle" /></td><td>Circle&mdash;creates a closed shape</td>
+			</tr>
+			<tr>
+				<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="../../../shared/ui/pen_newco_cursor.png" width="32" alt="Circled asterisk" /></td><td>Circled asterisk&mdash;creates a new curve from an existing curve&rsquo;s node.</td>
+			</tr>
+			<tr>
+				<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="../../../shared/ui/pen_addco_cursor.png" width="32" alt="Circled plus" /></td><td>Circled plus&mdash;creates a new node overlapping an existing curve&rsquo;s node.</td>
+			</tr>
+		</table>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/node_tool.png" class="tool" width="18" height="18" alt="Node Tool" /> To continue an existing curve:</summary>
+			<ol>
+				<li>Press the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> to edit curve or select the curve with the <span class="ui">Node Tool</span>.</li>
+				<li>Place the cursor over the final node on the path that you want to continue.</li>
+				<li>Click once to select the node.</li>
+				<li>Release the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> (or select <span class="ui">Pen Tool</span>) and click/drag to place new nodes as needed. This can be placed over an existing node on the same curve, creating coincidental overlapping nodes.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To change a curve or shape&apos;s stroke width:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>On the Pen Tool context toolbar&apos;s <span class="ui">Stroke properties</span>, adjust the <span class="ui">Width</span> via slider or input absolute values, expressions and formulas (percentages).</li>
+				<li>Use the [ or ] <span class="KEY-TAG"></span>s (decrease or increase width, respectively) as you draw or edit a curve.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/action_close_curve.png" class="tool" width="16" height="16" alt="Close Curve" /> To close curves to create a custom shape:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>With the curve selected with the <span class="ui">Pen</span> or <span class="ui">Node Tool</span>, click <span class="ui">Close Curve</span> on the context toolbar.</li>
+				<li>When creating the curve with the Pen Tool, click on the starting node to join it to the final node and create the shape.</li>
+			</ul>
+		</details>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the Pen Tool, the following modifier <span class="KEY-TAG"></span>s can be used to speed up the workflow as you draw:</p>
+			<ul>
+				<li>The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> temporarily activates the Node Tool.</li>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> constrains control handles to 45° intervals in Pen Mode. In Smart Mode, node positioning is constrained instead.</li>
+				<li>The <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> forces the node into cusp mode.</li>
+				<li>Pressing the <span class="key SPACEBAR-TAG"></span> while clicking and dragging lets you reposition the last drawn node without affecting control handle position which maintains curvature in and out of the node.</li>
+			</ul>
+			<p>For Pen Tool, Node and shape tools, the following modifier <span class="KEY-TAG"></span>s can be used as you draw or when editing the object:</p>
+			<ul>
+				<li>To decrease or increase stroke width by percentage, use the [ or ] <span class="KEY-TAG"></span>s, respectively. For smaller absolute increments instead, use an additional <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> modifier.</li>
+			</ul>
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="draw_geometricShapes.html">Draw and edit shapes</a></li>
+			<li><a href="edit_linesAndShapes.html">Edit vector line and shapes</a></li>
+			<li><a href="arrowheads.html">Arrowheads</a></li>
+			<li><a href="dot_dash_lines.html">Dot/dash line styles</a></li>
+			<li><a href="../Tools/tools_pen.html">Pen Tool</a></li>
+			<li><a href="../Tools/tools_node.html">Node Tool</a></li>
+			<li><a href="pressure.html">Pressure sensitivity</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=vector">Keyboard shortcuts for vectors</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

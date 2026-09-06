@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Perlin noise generates pixels with values that vary between the foreground and background colours, resulting in a cloud pattern." />
+	<title>Perlin Noise</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Perlin Noise</h1>
+
+		<p>Perlin noise generates pixels with values that vary between the foreground and background colors, resulting in a cloud pattern. Sometimes known as Clouds or Difference Clouds. It can be used to create realistic looking scalable textures, including cloud, smoke, and rock or earth-like effects, and is a great way of adding realism to textured areas.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_perlinnoise_before.jpg" alt="Before" /><div><img src="../../../shared/filter_perlinnoise_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Perlin Noise used to add texture to a photograph using blend modes.</figcaption>
+		</figure>
+	</header>
+
+	<section class="about">
+		<h2>About the Perlin Noise filter</h2>
+
+		<p>This filter can be found in the <span class="ui">Filters</span> menu, in the <span class="ui">Noise</span> category.</p>
+
+		<p>When the filter is applied, the clouds are generated using the currently selected foreground and background colors. The image data on the active layer is replaced.</p>
+
+		<aside class="box note">
+			<p>If the layer is fully transparent, the filter will not be applied. The layer must have some pixel data.</p>
+		</aside>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Octaves</span>&mdash;controls the cloud complexity. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Zoom</span>&mdash;controls the zoom level of the clouds and the complexity of the noise. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Persistence</span>&mdash;controls how blurred or grainy the effect is. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Blend mode</span>&mdash;changes how the applied pixels (noise) interact with existing pixels on a layer. Select from the pop-up menu.</li>
+		</ul>
+
+		<aside class="box tip">
+			<p>You can create marble textures and other interesting patterns by applying the filter several times using a Difference blend mode.</p>
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_denoise.html">Denoise</a></li>
+			<li><a href="filter_addNoise.html">Add Noise</a></li>
+			<li><a href="filter_diffuse.html">Diffuse</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

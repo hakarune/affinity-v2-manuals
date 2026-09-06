@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Equations filter allows you to apply transform filters through mathematical equations." />
+	<title>Equations</title>
+</head>
+<body>
+
+	<header>
+
+		<h1>Equations</h1>
+
+		<p>The Equations filter allows you to apply transform filters through mathematical expressions.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_equations_before.jpg" alt="Before" /><div><img src="../../../shared/filter_equations_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Before and after a transform equation.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Equations filter</h2>
+
+		<p>This filter allows you to apply a transform to a pixel layer using mathematical expression. You can achieve a number of distortion-type effects through the use of predetermined variables, trigonometry, exponentiation, etc. Additionally, you can use custom variables <span class="ui">a</span>, <span class="ui">b</span> and <span class="ui">c</span> in the equations and control their values through sliders on the filter dialog.</p>
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Coordinate System</span>&mdash;choose from Cartesian or Polar coordinates.</li>
+			<li><span class="ui">Cartesian</span><ul>
+					<li><span class="ui">x = </span>&mdash;enter expressions for the X-axis.</li>
+					<li><span class="ui">y = </span>&mdash;enter expressions for the Y-axis.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Polar</span><ul>
+					<li><span class="ui">r = </span>&mdash;enter expressions for the radius.</li>
+					<li><span class="ui">t = </span>&mdash;enter expressions for the polar angle (theta).</li>
+				</ul>
+			</li>
+			<li><span class="ui">Parameter A (a)</span>&mdash;controls the value of custom variable <span class="ui">a</span>.</li>
+			<li><span class="ui">Parameter B (b)</span>&mdash;controls the value of custom variable <span class="ui">b</span>.</li>
+			<li><span class="ui">Parameter C (c)</span>&mdash;controls the value of custom variable <span class="ui">c</span>.</li>
+			<li><span class="ui">Extend Mode</span>&mdash;chooses how to treat pixels outside of the image bounds:<ul>
+					<li><span class="ui">Zero</span>&mdash;fills pixels outside the image bounds with zeros (alpha values).</li>
+					<li><span class="ui">Full</span>&mdash;fills pixels outside the image bounds with constant values (pure white).</li>
+					<li><span class="ui">Repeat</span>&mdash;fills pixels outside the image bounds with repetitions of the image&apos;s edge pixels.</li>
+					<li><span class="ui">Wrap</span>&mdash;fills pixels outside the image bounds with copies of the image; useful for positional offset filters and seamless texture authoring.</li>
+					<li><span class="ui">Mirror</span>&mdash;fills pixels outside the image bounds with mirrored (reflected) copies of the image.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<figure class="nft">
+			<div class="single"><img src="../../images/panel_equations.png" class="responsive ui" alt="Equations panel example" /></div>
+			<figcaption>An example equation being entered into the filter dialog.</figcaption>
+		</figure>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_proceduraltexture.html">Procedural Texture</a></li>
+			<li><a href="filter_customBlur.html">Custom Blur</a></li>
+			<li><a href="../Workspace/expressions.html">Expressions for field input</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

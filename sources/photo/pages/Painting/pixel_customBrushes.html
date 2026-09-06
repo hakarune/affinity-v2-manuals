@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="edit brush, custom brushes, presets, raster brushes, pixel brushes, image brush, intensity brush" />
+	<meta name="description" content="Create your own brushes from scratch." />
+	<title>Creating custom brushes</title>
+</head>
+
+<body>
+
+	<header>
+		
+	<h1>Creating custom brushes</h1>
+
+		<p>You can create a custom brush from scratch using a raster image, from a copied preset or from a pixel selection. You can also edit existing brushes and either override them or duplicate to save your altered versions.</p>
+
+
+	</header>
+	
+	<section class="about">
+		<h2>About custom brushes</h2>
+		<p>By default, unmodified brushes in the panel are presented with a blue outline around their entry. When modifying brush settings, the customized brush will be presented with a red outline and a red dot in its top-left entry.</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/manager.png" alt="Edit Brush" /> To edit an existing brush do one of the following:</summary>
+			<ul>
+				<li>With the Paint Brush Tool selected, on the context toolbar, click <span class="ui">More</span>.</li>
+				<li>On the <span class="ui">Brushes</span> panel, <span class="CLICK-TAG"></span>-click the brush you would like to modify and select <span class="ui">Edit Brush</span>.</li>
+				<li>On the <span class="ui">Brushes</span> panel, double-click the brush you would like to alter.</li>
+				<li>On the <span class="ui">Brushes panel</span>, click <span class="ui">Edit Brush</span>.</li>
+			</ul>
+		</details>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To update or reset brush settings:</summary>
+			<ol>
+				<li><span class="CLICK-TAG"></span>-click the brush you would like to modify and select the option.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> To create a custom preset brush stroke from scratch:</summary>
+
+			<p>On the <span class="ui">Brushes</span> panel, click Panel Preferences and then select:</p>
+				<ul>
+					<li><span class="ui">New Intensity Brush</span>&mdash;creates a brush stroke using a raster image, with darker pixels from the image rendered more opaque and lighter pixels more transparent. In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+					<li><span class="ui">New Round Brush</span>&mdash;creates a brush stroke based on a circular shape.</li>
+					<li><span class="ui">New Square Brush</span>&mdash;creates a brush stroke based on a rectangular shape.</li>
+					<li><span class="ui">New Image Brush</span>&mdash;creates a brush stroke based on the color values of a raster image. In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+				</ul>
+			<p>The new brush is added to the selected category using default settings. To edit the default settings, follow the procedure below from step 3 immediately below.</p>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/manager.png" alt="Edit Brush" /> To create a custom preset brush stroke from a preset:</summary>
+
+			<ol>
+				<li>On the <span class="ui">Brushes</span> panel, select a brush.</li>
+				<li><span class="key CTRL-TAG"></span>-click the brush entry and select <span class="ui">Duplicate Brush</span>.</li>
+				<li>Select the duplicated brush (below the original), <span class="key CTRL-TAG"></span> click it and choose <span class="ui">Edit Brush</span>.</li>
+				<li>Adjust the settings in the dialog. See <a href="pixel_modify.html">Modifying brushes</a> for more information.</li>
+				<li>Click <span class="ui">Close</span>.</li>
+				<li>(Optional) Move your brush to a category via <span class="key CTRL-TAG"></span>-clicking the newly created brush and selecting the option.</li>
+			</ol>
+			
+			<aside class="box tip">
+				<p class="osx">Alternatively, to duplicate a brush, on the <span class="ui">Brushes</span> panel press the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and drag the selected brush in place.</p>
+				<p class="win32">Alternatively, to duplicate a brush, on the <span class="ui">Brushes</span> panel press the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and drag the selected brush in place.</p>
+			</aside>
+				
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> To create a custom image brush from a pixel selection:</summary>
+
+			<ol>
+				<li>Make a selection using a pixel selection tool.</li>
+				<li>On the <span class="ui">Brushes</span> panel, choose a category to save your brush to.</li>
+				<li>Click Panel Preferences and then select <span class="ui">New Brush From Selection</span>.</li>
+			</ol>
+		<p>The image brush is added to the end of the current brush category. Custom intensity brushes can also be created from a mask layer that has a pixel selection in place by using the same process.</p>
+			
+		<aside class="box note">
+			<p>If you are creating a brush from a selection on a placed image, its image layer needs to be rasterized first.</p>
+		</aside>
+		</details>
+		
+		<section class="howto">
+			<details open="open">
+				<summary>To update or reset a modified brush:</summary>
+				<ol>
+					<li><span class="CLICK-TAG"></span>-click the brush and choose an option.</li>
+				</ol>
+			</details>
+		</section>
+		
+		<aside class="box tip">
+			<p>Additional options from <img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> Panel Preferences allow you to create, rename, delete, move or copy brushes, as well as import and export brush categories.</p>
+			<p>For organization purposes, it is suggested to move or copy custom brushes to any created category by <span class="key CLICK-TAG"></span>-clicking and selecting a category name from the <span class="ui">Move Brush to Category</span> or <span class="ui">Copy Brush to Category</span> menu option. Custom categories adopt the naming convention &apos;Brushes&apos;, &apos;Brushes 2&apos;, &apos;Brushes 3&apos;, etc.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/brushesPanel.html">Brushes panel</a></li>
+			<li><a href="pixel_modify.html">Modifying brushes</a></li>
+			<li><a href="pixel_multiBrushes.html">Creating multi-brushes</a></li>
+			<li><a href="../LayerOperations/rasterizing.html">Rasterizing</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

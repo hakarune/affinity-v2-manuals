@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="spacing" />
+	<meta name="description" content="Layer content can be spaced evenly on the page using the Alignment commands." />
+	<title>Spacing</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Spacing</h1>
+		<p>Layer content across multiple layers can be spaced evenly between layer selection bounds using Alignment commands. The spacing of objects ensures there is an equal distance between object <em>edges</em>.</p>
+
+	</header>
+
+	<section class="about">
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/distribute_before.jpg" alt="Before" /><div><img src="../../../shared/distribute_spacing.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Before and after spacing.</figcaption>
+		</figure>
+
+		<h3>Spacing using key objects</h3>
+	
+		<x-osx>
+		<p>Instead of spacing being calculated between selection bounds, you can control spacing in relation to any targeted key object in the current selection. This targeting is done using an <span class="key ALT-TAG"></span>-click on the target item. By keeping this modifier active after targeting, you can set the overall spacing based on the spacing between the key object and the <em>rightmost</em> item in the selection. Without the modifier applied, the spacing is based on the spacing used between the key object and the <em>leftmost</em> item.</p>
+		</x-osx>
+
+		<x-win32>
+		<p>Instead of spacing being calculated between selection bounds, you can control spacing in relation to any targeted key object in the current selection. This targeting is done using an <span class="key ALT-TAG"></span>-click on the target item. By then holding the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> after targeting, you can set the overall spacing based on the spacing between the key object and the <em>rightmost</em> item in the selection. Without holding this key, the spacing is based on the spacing used between the key object and the <em>leftmost</em> item.</p>
+		</x-win32>
+
+		<figure>
+			<div class="single"><img src="../../../shared/keyobject_spacing.png" class="responsive" alt="Spacing objects using key objects" /></div>
+			<figcaption>A targeted key object (A) used to set spacing horizontally from the rightmost item (B) or the leftmost item (C).</figcaption>
+		</figure>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+		<summary><img src="../../../shared/ui/arrange.png" class="tool" width="18" height="18" alt="Alignment" /> <img src="../../../shared/ui/space_horizontally.png" class="tool" width="18" height="18" alt="Space Horizontally" /> <img src="../../../shared/ui/space_vertically.png" class="tool" width="18" height="18" alt="Space Vertically" /> To space layer contents:</summary>
+			<ol>
+				<li>Select multiple layers.</li>
+				<li>On the Toolbar, click <span class="ui">Alignment</span>, click <span class="ui">Space Horizontally</span> or <span class="ui">Space Vertically</span> from the pop-up panel, and then click <span class="ui">Apply</span>.</li>
+			</ol>
+			
+		<aside class="box note">
+			<p>With <span class="ui">Auto Distribute</span> selected (default), the layers are spaced evenly within the selection bounds. If this option is off, a specified distance between contents can be set in an input box adjacent to the option.</p>
+			</aside>
+			
+		<aside class="box note">
+			<p>Make use of advanced distribute options in-panel by customizing the Toolbar (<span class="ui">View&gt;Customize Toolbar</span>).</p>
+		</aside>
+
+		</details>
+
+		<details open="open">
+		<summary>To target a key object to space in relation to:</summary>
+			<ol>
+				<li>Select multiple items.</li>		
+				<li>With the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> pressed, click the target item. A selected key object possesses a strong outline.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+		<summary>To space items using a key object:</summary>
+			<ol>
+				<li>Ensure a key object is targeted as above.</li> 
+				<li>To space in relation to the leftmost object: select <span class="ui">Space Horizontally</span> or <span class="ui">Space Vertically</span> from the Toolbar&apos;s <span class="ui">Alignment</span> menu.</li>
+				<li class="osx">To space in relation to the rightmost item: with the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> pressed, select <span class="ui">Space Horizontally</span> or <span class="ui">Space Vertically</span> from the Toolbar&apos;s <span class="ui">Alignment</span> menu.</li>
+				<li class="win32">To space in relation to the rightmost item: with the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> pressed, select <span class="ui">Space Horizontally</span> or <span class="ui">Space Vertically</span> from the Toolbar&apos;s <span class="ui">Alignment</span> menu.</li>
+			</ol>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="align.html">Aligning</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

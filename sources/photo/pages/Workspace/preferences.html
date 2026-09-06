@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" >
+	<meta name="keywords" content="settings, preferences, options, global, updates, upgrade, software" >
+	<meta name="description" content="Document-wide settings to control the way you work." >
+	<title>Settings</title>
+</head>
+
+<body>
+	<header>
+
+		<h1>Settings</h1>
+
+		<p>Settings comprise a series of miscellaneous options that are applied across your app. They can be used to set up your own way of working.</p>
+
+	</header>
+	
+	<section class="about">
+		<p>Show settings for:<select id="category">
+				<option value="default">All categories</option>
+				<option value="general">General</option>
+				<option value="Machine Learning (ML)">Machine Learning (ML)</option>
+				<option value="clr">Color</option>
+				<option value="performance">Performance</option>
+				<option value="user-interface">User interface</option>
+				<option value="tools">Tools</option>
+				<option value="shortcuts">Shortcuts</option>
+				<option value="assistant">Assistant</option>
+				<option value="photoshop-plugins">Photoshop Plugins</option>
+				<option value="linked-services">Linked Services</option>
+				<option value="software-updates">Software Updates</option>
+				<option value="miscellaneous">Miscellaneous</option>
+			</select>
+		</p>
+	
+		<div class="category" data-category="general">
+			<h4>General options</h4>
+	
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Reopen document on startup</span></td>
+						<td>Choose whether to restore the last session when launching app.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Limit initial zoom to a maximum of 100%</span></td>
+						<td>Choose whether to limit initial zoom to a maximum of 100% when loading files.</td>
+					</tr>
+					<tr class="win32" >
+						<td><span class="ui">Documents open in a new floating window</span></td>
+						<td>Choose whether documents open in a floating window separate from the app&apos;s main window.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Documents open in the current active group</span></td>
+						<td>Choose whether documents open in the current active group, meaning the most recent floating window, or in the app&apos;s main window.</td>
+					</tr>
+					<tr>
+						<td class="osx"><span class="ui">Hide file extension</span></td>
+						<td>Select whether to show or hide file extensions.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Automatically update linked resources when modified externally</span></td>
+						<td>Choose whether to automatically link newly created or imported content categories to all Affinity 2 apps on your device.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Save thumbnails with documents</span></td>
+						<td>You can exclude your thumbnail from being stored with your document.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Enable &quot;Save&quot; over imported PSD files</span></td>
+						<td>Choose whether to overwrite imported PSD files when using the <span class="ui">Save</span> command, rather than creating an *.afdesign file. We recommend reading the warning provided in the dialog before selecting this option.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Normalize breaks on copy plain text</span></td>
+						<td>Choose whether your pasted plain text retains breaks&apos; consistency prior to further formatting.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Insert filler text as text</span></td>
+						<td>Choose whether to insert filler text as editable text.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Import PSD text as text rather than bitmap</span></td>
+						<td>Choose to open PSDs with editable text objects.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Copy items as SVG</span></td>
+						<td>Choose whether to create SVGs on the clipboard when copying objects for better cross-platform interaction.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Prefer metafile to raster when pasting from external application</span></td>
+						<td>Choose whether to prefer metafile to raster when pasting from external app.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Load metadata from XMP sidecars</span></td>
+						<td>Choose whether to import metadata from an XMP sidecar file automatically when opening the corresponding image, provided they have the same base filename and the sidecar file has the .xmp file extension (in lower case).</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Refine HEIC depth maps</span></td>
+						<td>Choose whether to automatically refine HEIC depth maps.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Import PSD smart objects where possible</span></td>
+						<td>Choose whether to allow Affinity to import smart objects; by default, Affinity Photo converts Smart Objects in Photoshop documents to pixel layers. Note that smart objects that are linked, meaning their content comes from an external file, are not converted to embedded documents.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Only return safe results for stock image searches</span></td>
+						<td>Choose whether to apply a safe-search filter while searching for stock images.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Link new content categories</span></td>
+						<td>Choose whether newly created content categories are linked, and thus recognized by Affinity apps, on the same device.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Enable file sharing on the local area network</span></td>
+						<td>Choose whether file sharing is available on LAN. Additionally, opt for sharing via the Same Affinity account only, if preferred.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Send anonymous usage information</span></td>
+						<td>Send anonymous usage information collects Analytics data related to your computer OS, hardware and app usage for continual product improvement. This data is used for statistical analysis. Absolutely no personal information, as covered by data protection rules, is contained in the data collected.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Open Lens Profiles Folder in Finder/Explorer</span></td>
+						<td>You can open your app&apos;s lens profiles folder, where you can view, add and/or remove the currently pre-installed lens profiles.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Open Affinity Fonts Folder in Finder/Explorer</span></td>
+						<td>You can open your app&apos;s fonts folder, from which Affinity Font (.affont) files (previously installed by dragging onto the app) can be removed to uninstall them. (Affinity Fonts installed via the Account feature can be uninstalled using that feature.)</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Language</span></td>
+						<td>Sets the UI language independently of the operating system. Select from the pop-up menu.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+			<div class="category" data-category="Machine Learning (ML)">
+				<h4>Machine Learning</h4>
+
+				<table class="cols-50-50">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="ui">Machine Learning Models</span></td>
+							<td>These optional features use Machine Learning (ML) models for automatic object and subject selection. This is in line with Affinity&rsquo;s ambition to use ML for the benefit of faster workflow. Models are installed as pre-trained and because these operations all work &apos;on device&apos; none of your data leaves your device at any time. These models and linked functionality are only available on Apple Silicon macOS devices running macOS Ventura 13.0 and newer as well as on Windows x64 and Arm64 hardware running Windows 10 or 11.</td>
+						</tr>
+						<tr>
+							<td><span class="ui">Inference</span></td>
+							<td>Choose whether you want to allow both CPU and GPU to perform machine learning operations in tandem, or allow for CPU processing only.</td>
+						</tr>
+						<tr>
+							<td><span class="ui">Segmentation</span></td>
+							<td>This model allows Affinity to create precise, detailed pixel selections from pixel layers or placed images. Use the <Span class="ui">Object Selection Tool</span> to make your selections.</td>
+						</tr>
+						<tr>
+							<td><span class="ui">Saliency</span></td>
+							<td>This model allows Affinity to recognize the most prominent subject on a pixel layer or placed image. Install it alongside the Segmentation model to enable the single-click <span class="ui">Select Subject</span> item.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+				
+		<div class="category" data-category="clr">
+			<h4>Color options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Color Profile</span></td>
+						<td>You can set up your default RGB, 32bit RGB, CMYK, Grayscale and LAB color profiles for use in future documents. Select from the pop-up menus.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Rendering Intent</span></td>
+						<td><span class="ui">Rendering Intent</span>&mdash;choose the rendering intent for your images. Select from the pop-up menu.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Black point compensation</span></td>
+						<td>Choose whether to apply black point compensation when opening an image.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Convert opened files to working space (and warn)</span></td>
+						<td>Choose whether to convert an opened file&apos;s color space to the working space and also choose whether to warn that this has occurred.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Warn when assigning working profile to unprofiled files</span></td>
+						<td>Choose whether to receive a warning when a working profile is assigned to an unprofiled image.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Enable EDR by default in 32bit RGB views</span></td>
+						<td>Choose whether to allow for the extended dynamic range images to be displayed in 32bit RGB mode.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">OpenColorIO Configuration File: Select</span></td>
+						<td>Select a OpenColorIO Configuration File.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">OpenColorIO Search Folder: Select</span></td>
+						<td>Select a OpenColorIO Search Folder.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Perform OCIO conversions based on filename (and warn when converting on load)</span></td>
+						<td>Choose whether OCIO conversions are based on file name and also choose whether to warn that this has occurred.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Associate OpenEXR alpha channels</span></td>
+						<td>Choose whether to merge EXR alpha channel information to its associated RGB pixel layer&apos;s alpha channel.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Post divide EXR colors by alpha</span></td>
+						<td>Choose whether to divide EXR color channels by the alpha channel.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Perturb zero EXR alpha</span></td>
+						<td>Choose whether to leave zero alpha information untouched, or, with <span class="ui">Post divide EXR colors by alpha</span> enabled as well, for zero alpha information to be altered so post-division with color channel information can be achieved.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<div class="category" data-category="performance">
+			<h4>Performance options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">RAM Usage Limit</span></td>
+						<td><span class="ui">RAM Usage Limit</span>&mdash;allows you to set your preference for optimizing app performance for your projects.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Disk Usage Warning At</span></td>
+						<td><span class="ui">Disk Usage Warning At</span>&mdash;choose the limit at which you are warned about disk usage.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Undo Limit</span></td>
+						<td><span class="ui">Undo Limit</span>&mdash;choose the history length you are able to access.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">View Quality</span></td>
+						<td><span class="ui">View Quality</span>&mdash;choose the way in which the image displays during modifications. Select from the pop-up menu.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Dither gradients</span></td>
+						<td>Choose whether to dither gradients, when working on projects, to speed up performance.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Use precise clipping</span></td>
+						<td>Choose a clipping option for optimizing performance.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">File Recovery Interval</span></td>
+						<td><span class="ui">File Recovery Interval</span>&mdash;sets the interval for saving temporary data for currently open documents, allowing a document restore to be offered at startup if the app develops a fault.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">Display</span></td>
+						<td><span class="ui">Display</span>&mdash;choose whether to use hardware acceleration such as <span class="ui">Metal</span>, <span class="ui">OpenGL</span> or <span class="ui">OpenGL (Basic)</span>, or use <span class="ui">Software</span> acceleration. If your computer experiences performance problems, use the above option order until performance is acceptable. If your Mac has an additional discrete graphics card, checking the <span class="ui">Use only integrated GPU</span> will not allow access to it, therefore reducing power consumption and conserving battery life (useful for unplugged MacBook Pros).</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Renderer</span></td>
+						<td class="win32"><span class="ui">Renderer</span>&mdash;choose your rendering experience. Select from the pop-up menu. <span class="ui">Default</span>&mdash;renders using the default method - typically the installed graphics card. <span class="ui"><i>Graphics display adapter</i></span>&mdash;the name here varies depending on your graphics card and its driver. If you have multiple graphics cards installed you may see more than one option here. <span class="ui">WARP</span>&mdash;use Windows Advanced Rasterization Platform just for presenting the document. Try this if you are experiencing performance issues with the default option.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Retina Rendering</span></td>
+						<td>Choose your rendering experience. Select from the pop-up menu. <span class="ui">Automatic (Best)</span>&mdash;renders as non-retina followed by retina for balanced performance and quality. <span class="ui">Low quality (Fastest)</span>&mdash;renders as non-retina only for highest performance level but compromises on quality. <span class="ui">High quality (Slowest)</span>&mdash;renders as retina only for high quality but may compromise performance.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">Hardware Acceleration</span></td>
+						<td><!-- <span class="ui">Hardware Acceleration</span>&#8212;--> Checking <span class="ui">Enable Metal compute acceleration</span> boosts some tasks&apos; performance if a compatible GPU is available. See the <a href="../Extras/hardwareAcceleration.html">Hardware acceleration</a> topic.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Hardware Acceleration</span></td>
+						<td><!-- <span class="ui">Hardware Acceleration</span>&#8212;--> Checking <span class="ui">Enable OpenCL compute acceleration</span> boosts some tasks&apos; performance if a compatible GPU is available. See the <a href="../Extras/hardwareAcceleration.html">Hardware acceleration</a> topic.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<div class="category" data-category="user-interface">
+			<h4>User interface options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Background Grey Level</span></td>
+						<td>Controls the grayscale level of the pasteboard surrounding the document.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Artboard Background Grey Level</span></td>
+						<td>Controls the grayscale level of the pasteboard surrounding artboard(s).</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Text Contrast</span></td>
+						<td>Adjusts the luminance of text in the user interface.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">UI Brightness</span></td>
+						<td>Adjusts the luminance of window backgrounds in the user interface.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">UI Contrast</span></td>
+						<td>Instantly sets Text Contrast and UI Brightness for high contrast between text and window backgrounds, or to their default values.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">UI Font Size</span></td>
+						<td>Optionally increase the font size of UI text.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">UI Style</span></td>
+						<td>Displays the user interface in a dark or light style or a default style which sets the UI depending on your operating system version&apos;s setting.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">UI Style</span></td>
+						<td>Displays the user interface in a dark or light style.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Icon Style: Color/Mono</span></td>
+						<td>Makes icons display in color/grayscale (monochromatic iconography), respectively.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Tooltip Delay</span></td>
+						<td>Set the length of time before a tooltip appears when hovering over a UI element.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Decimal Places for Unit Types</span></td>
+						<td>Controls the number of decimal places allowable for each document measurement unit and degree readouts.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Automatically lock background layer on import</span></td>
+						<td>Locks (or keeps unlocked) an imported image as a background layer.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Show Lines in points</span></td>
+						<td>Choose whether line width (thickness) displays in points or in the document&apos;s measurement units.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Show Text in points</span></td>
+						<td>Choose whether text is expressed in points or in the document&apos;s measurement units.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Show brush previews</span></td>
+						<td>Choose whether the brush cursor display a preview of pixels to be placed. When enabled, a circular preview of the current brush&apos;s nozzle is displayed; disable the option to hide the nozzle preview if the preview obscures existing page content. When <span class="ui">Force pressure</span> on the brush tool&apos;s context toolbar is enabled, previews are automatically disabled.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Always show brush crosshair</span></td>
+						<td>Overlays a cross-hair over the brush cursor for better targeting.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Auto commit filters</span></td>
+						<td>Choose whether to commit filters if subsequently carrying out a new operation while the Apply dialog is still open or whether to receive a prompt to Apply or Discard the filter instead. Clicking Apply will always commit the filter, irrespective of the this setting.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Always use white background for font dropdown</span></td>
+						<td>Choose whether to preview fonts on a white (default) or black background in the font selection dropdown list.</td>
+					</tr><!-- setting not located.			<tr>
+						<td><span class="ui"><# name #></span></td>
+						<td>Expands layer to reveal selected object entry when object is selected.</td>
+					</tr>
+--><tr class="osx">
+						<td><span class="ui">Enable touch bar support</span></td>
+						<td>Choose whether to activate Touch Bar support. Enabling this option requires app restart.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Enable Pointer Support</span></td>
+						<td>Choose whether to enable pointer support. Enabling this option requires app restart.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Ask for name when creating Layers and Groups</span></td>
+						<td>Choose whether you would like to be prompted to name a new layer, group or warp group upon creation.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<div class="category" data-category="tools">
+			<h4>Tools options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Tool Handle Size</span></td>
+						<td>Makes selected layer content&apos;s bounding box handles and curve nodes (and handles) smaller or larger.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui"><span class="key CTRL-TAG"></span>-click show context menu</span></td>
+						<td>Choose whether <span class="key CLICK-TAG"></span>-click displays context menus (alternative to right-click with a multi-button mouse).</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">Force Touch context menu</span></td>
+						<td>Enable or disable the Force Touch context menu; when enabled, the menu is accessed by a strong-press on a Force Touch-compatible trackpad.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Select object when intersects with selection marquee</span></td>
+						<td>Choose whether an object is added to a selection when partially covered by the selection marquee or whether it has to be encompassed by the marquee.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">Use <span class="key SHIFT-TAG"></span> modifier to cycle tools</span></td>
+						<td>When enabled, cycling between tools is only possible with the <span class="SHIFT-TAG"></span> modifier pressed. Affects text and shape tools, and Pixel Persona&apos;s Paint Brush/Pixel, Selection and Dodge/Burn tool cycles.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Use <span class="key SHIFT-TAG"></span> key to cycle tool groups</span></td>
+						<td>When enabled, cycling between tool groups is only possible with <span class="SHIFT-TAG">modifier pressed.</span></td>
+					</tr>
+					<tr>
+						<td><span class="ui">Use mouse wheel to zoom</span></td>
+						<td>Choose whether the middle mouse button will allow scrolling or zooming.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Use &apos;scrubby&apos; zoom</span></td>
+						<td>Choose whether dragging with the Zoom Tool zooms around the cursor (scrubby zoom) or creates a &apos;zoom to&apos; marquee.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Enable Dial support</span></td>
+						<td>Check the option to use Surface Studio&apos;s Surface Dial (or equivalent radial device).</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">Enable canvas rotation with trackpad</span></td>
+						<td>Choose if the canvas can be rotated using a trackpad or not.</td>
+					</tr>
+					<tr class="osx">
+						<td><span class="ui">Enable canvas rotation with <span class="key CMD-TAG"></span> +scroll wheel</span></td>
+						<td>Choose if the canvas can be rotated using a scroll wheel or not.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Enable canvas rotation with <span class="key ALT-TAG"></span> +scroll wheel</span></td>
+						<td>Choose if the canvas can be rotated using a scroll wheel or not.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Touch for gestures only</span></td>
+						<td>When enabled, only your connected tablet pen can use tools on the canvas but you can still use gestures. Useful for preventing accidental tool use when interacting with the canvas. When disabled, you have full touch control plus gestures, with or without a tablet pen.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Move Tool Aspect Constrain</span></td>
+						<td>Controls the default constraining behavior when resizing objects using the Move Tool. Select from the pop-up menu.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Tablet input method</span></td>
+						<td>Choose whether your tablet pen should use the best quality high resolution input data (if supported), low resolution input data (the system cursor position&mdash;this setting is switched on by default), or enable Windows Ink in your drivers.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Create Text with Blend Gamma</span></td>
+						<td>Controls the default blend gamma applied to text on creation.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Nudge Distance</span></td>
+						<td>Sets the nudge amount by which an object is moved when using the arrow keys. Select measurement units from the pop-up menu.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Modifier Nudge Distance</span></td>
+						<td>Sets the amount by which an object is moved when using the arrow keys along with the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span>.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Synchronize tools between documents</span></td>
+						<td>Makes tool settings persistent between different documents.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Additional dictionary folder</span></td>
+						<td>Add an additional folder that you can copy dictionary files into. The directory is scanned during start-up and found dictionaries will be added.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+			
+		<div class="category" data-category="shortcuts">
+			<h4>Shortcuts options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Shortcuts</span></td>
+						<td>Use these options to define your own keyboard shortcuts. See the <a href="customizingShortcuts.html">Customizing keyboard shortcuts</a> topic.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="category" data-category="assistant">
+			<h4>Assistant options</h4>
+
+			<p>When you perform certain operations&mdash;for example, pixel painting (or erasing) on vector layers, or applying adjustments to selections&mdash;the Assistant will take action according to your preferences and display an alert message to make you aware.</p>
+	
+			<p>Use these options to control overall Assistant behavior:</p>
+				
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Enable assistant</span></td>
+						<td>When checked, the Assistant will perform your chosen action for any operation it can help with. When unchecked, the Assistant does not perform any actions.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Automatically undo and redo assistant actions</span></td>
+						<td>When checked, any action that has been recorded as multiple consecutive history states is treated like one state by the Undo and Redo commands. When unchecked, the commands need to be selected multiple times to undo/redo multi-state Assistant actions.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Alert when assistant takes an action</span></td>
+						<td>When checked, the Assistant will display an alert message whenever it takes action. When unchecked, alert messages are not displayed.</td>
+					</tr>
+				</tbody>
+			</table><br /><p>Use these options to specify the required action for various operations and tool behaviors:</p>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Painting with no layer selected</span></td>
+						<td>In Pixel Persona, you can choose to create a new pixel layer for your brush strokes using &apos;Add new pixel layer and paint&apos;; &apos;Take no action&apos; means that no pixel painting is allowed. If a vector layer is selected, a new pixel layer is created above the vector layer. If a pixel layer is selected, your brush stroke is added to the pixel layer.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Erasing from vector layers</span></td>
+						<td>In Pixel Persona, this option lets you choose to erase on a created pixel mask over your vector object, immediately rasterize the vector layer and erase directly on it, or take no action.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Other brushes on vector layers</span></td>
+						<td>For retouching pixel brushes (e.g., Burn Brush Tool, Smudge Brush Tool, etc.), any applied brush stroke rasterizes the vector layer by default. You can change this behavior by selecting &apos;Take no action&apos;, which doesn&apos;t convert the layer or apply the stroke.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Brush tool sharing</span></td>
+						<td>Choose whether a selected brush and context toolbar settings are shared between tools of a similar nature (e.g. Dodge, Burn and Sponge Brush Tools), shared across all tools, or each tool&apos;s brush is set independently.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Applying filters to vector layers</span></td>
+						<td>When a filter is added to a vector layer, the Assistant can either rasterize the vector layer and apply the filter to it, or take no action.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Adding adjustment layer to selection</span></td>
+						<td>In Pixel Persona, if you&apos;ve created a selection, any adjustment applied to the selection can be added as a new adjustment layer or made a child adjustment layer in the current layer.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Adding mask layer to selection</span></td>
+						<td>Analogous to &apos;Adding adjustment layer to selection&apos; above, but for mask layers.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Adding filter layer to selection</span></td>
+						<td>Analogous to &apos;Adding adjustment layer to selection&apos; above, but for filter layers.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<div class="category" data-category="linked-services">
+			<h4>Linked Services options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Linked Services</span></td>
+						<td>Use these options if you use multiple personal devices to edit documents that contain linked resources from cloud storage. See the <a href="../Media/linkedServices.html">Linked Services</a> topic.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<div class="category" data-category="photoshop-plugins" data-apps="afp">
+			<h4>Photoshop Plugins options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="osx">
+						<td><span class="ui">Open Default Folder in Finder</span></td>
+						<td>Gain direct access to the default folder which is searched for plugins. Plugins can be added to this folder for easy access from the <span class="ui">Filters</span> menu.</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Open Default Folder in Explorer</span></td>
+						<td>Gain direct access to the default folder which is searched for plugins. Plugins can be added to this folder for easy access from the <span class="ui">Filters</span> menu.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Add/Remove Plugin Search Folder</span></td>
+						<td>Adds or removes a folder in which to search or access support files to make plugins accessible from the <span class="ui">Filters</span> menu.</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Add/Remove Plugin Support Folder</span></td>
+						<td>Adds or removes folders that contain supporting files for plugins (for example directories containing executables or presets).</td>
+					</tr>
+					<tr>
+						<td><span class="ui">Authorize Global</span></td>
+						<td>Authorizes access to supporting plugin files across multiple users and further resolves compatibility issues.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<div class="category" data-category="software-updates">
+			<h4 class="osx">Software Updates</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="ui">Check for updates</span></td>
+						<td>Sets the frequency to which the app will check for any software updates. You can switch off update checking by selecting &apos;Never&apos;.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<div class="category" data-category="miscellaneous">				
+			<h4>Miscellaneous options</h4>
+
+			<table class="cols-50-50">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="osx">
+						<td><span class="ui">Reset</span></td>
+						<td>Your current Fills, Brushes, Object Styles, Text Styles, User Defaults and Fonts can be reset to factory defaults. Reset fonts updates the font cache to the current state of the system (from memory).</td>
+					</tr>
+					<tr class="win32">
+						<td><span class="ui">Reset</span></td>
+						<td>Your current Fills, Brushes, Object Styles, Text Styles and User Defaults can be reset to factory defaults.</td>
+					</tr>
+				</tbody>
+			</table><!-- No entry for the option					<tr>
+						<td><span class="ui"><# name #></span></td>
+						<td>Choose whether crash reports are sent to Serif automatically and whether they include your registered name to help technical support identify your feedback. Reports are anonymous by default.</td>
+					</tr>
+--></div>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To configure settings:</summary>
+			<ul>
+				<li>From the Affinity app menu, select <span class="ui">Settings</span>.</li>
+			</ul>
+
+			<aside class="box note">
+				<p>To navigate to particular preference options, use the arrow keys, pop-up menu or search facility at the top of the dialog.</p>
+			</aside>
+
+			<aside class="box note">
+				<p class="osx">Apple System Settings allow you to control elements of the Affinity user interface such as scrollbar behavior.</p>
+			</aside>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../ObjectControl/objectDefaults.html">Object defaults</a></li>
+			<li><a href="../Clr/ClrProfiles.html">Color management</a></li>
+			<li><a href="customizingShortcuts.html">Customizing keyboard shortcuts</a></li>
+			<li><a href="../Extras/penTablet.html">Using pen tablets</a></li>
+		</ul>
+	</section>
+	
+<script src="../../../resources/js/breakout.js"></script>
+<script src="../../../resources/js/shortcuts.js"></script>
+</body>
+
+</html>

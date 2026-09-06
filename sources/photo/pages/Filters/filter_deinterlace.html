@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Converts field based video images to progressive images." />
+	<title>Deinterlace</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Deinterlace</h1>
+
+		<p>The Deinterlace filter removes the line &quot;combing&quot; effect found in images taken from interlaced video streams. It takes either the even (top) or odd (bottom) set of fields and interpolates the other set to produce a whole, progressive image.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_deinterlace_before.jpg" alt="Before" /><div><img src="../../../shared/filter_deinterlace_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Before and after deinterlacing of an interlaced video frame.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Deinterlace filter</h2>
+
+		<p>This filter can be found in the <span class="ui">Filter</span> menu, in the <span class="ui">Noise</span> category. There are two further options, <span class="ui">Even Rows</span> and <span class="ui">Odd Rows</span>.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Even/Odd Row selection</h3>
+
+		<ul>
+			<li><span class="ui">Even Rows</span>: The odd (bottom) row fields will be discarded and the image will be interpolated from the even (top) row fields. Use typically if your source is in the NTSC format or in 1080i50/1080i60 (HD).</li>
+			<li><span class="ui">Odd Rows</span>: The even (top) row fields will be discarded and the image will be interpolated from the odd (bottom) row fields. Use typically if your source is in PAL DV (tape-based camcorders).</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

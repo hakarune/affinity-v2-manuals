@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="raster, marquee, deselect, invert, pixel, path to selection, cutouts, cutting out, polygon selection" />
+	<meta name="description" content="Create pixel selections for focused editing of specific regions." />
+	<title>Creating pixel selections</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Creating pixel selections</h1>
+
+		<p>Pixel selections can be created for focused editing of specific pixel regions. Selection boundaries are defined depending on whether individual pixels are included or excluded.</p>
+		
+	</header>
+
+	<section class="about">
+	
+		<figure>
+			<p><img src="../../../shared/selections.jpg" class="responsive" alt="Pixel selection types" /></p>
+			<figcaption></figcaption>
+		</figure>
+		
+		<h2>About pixel selections</h2>
+	
+		<p>A pixel selection is simply a drawn area on your image (bounded by a flashing dashed line, often called &apos;marching ants&apos;). A selection is created for various reasons:</p>
+		<ul>
+			<li>To limit editing (e.g., painting, applying fills, etc.) to within that selection area only.</li>
+			<li>To selectively copy pixels.</li>
+			<li>As a precursor to creating a mask layer.</li>
+			<li>To draw areas for removal (cutout).</li>
+		</ul>
+
+	<p>Selection boundaries are defined depending on whether individual pixels are included or excluded.</p>
+	<p>Once your selection has been created, you can invert it so all included pixels are excluded and vice versa.</p>
+	
+	<h2>Pixel selections and RAW layers</h2>
+	
+	<p>In Affinity, you can perform pixel selection on RAW layers, which opens up a number of options for various flexible workflows.</p>
+	<p>Note the following behaviors when working with RAW layers, with a pixel selection active and an image layer selected in the panel:</p>
+		<ul>
+			<li>Deleting the selection will mask the layer rather than delete it entirely from the layer stack. This aids local editing workflows, especially when targeting inverted selection areas.</li>
+			<li>Duplicating action will create a new pixel layer with just the selected pixel data.</li>
+		</ul>
+		
+		<aside class="box note">
+			<p>You can use the <span class="ui">Assistant</span> options (found in the app&apos;s <span class="ui">Settings</span>) to change the above default behaviors.</p>
+		</aside>
+	
+		<p class="osx">Additionally, the following two options are available via a <span class="key CTRL-TAG"></span>-click a layer in the panel:</p>
+		<p class="win32">Additionally, the following two options are available via a <span class="CLICK-TAG lower"></span>-click a layer in the panel:</p>
+		<ul>
+			<li><span class="ui">Merge Down</span>&mdash;merges a layer with a pixel layer below.</li>
+			<li><span class="ui">Merge Visible</span>&mdash;merges all visible layers in the panel into a new pixel layer.</li>
+		</ul>
+
+	<h2>Selection tools</h2>
+	<p>You can create a pixel selection using the <a href="../Tools/tools_objectSelection.html">Object Selection Tool</a>, <a href="../Tools/tools_selectionBrush.html">Selection Brush Tool</a> or <a href="../Tools/tools_marquee.html">Marquee Selection Tools</a> or base it on a layer. Using the <a href="../Tools/tools_floodSelect.html">Flood Select Tool</a>, you can also define a selection of similar color value pixels with a single click. Selections created using the Marquee tools align to individual pixels.</p>
+	<p>Once your selection has been created, you can invert it so all included pixels are excluded and vice versa.</p>
+	<p>There are several tools you can use to create pixel selections:</p>
+		<ul>
+			<li><img src="../../../shared/ui/object_selection_tool.svg" class="tool" width="18" height="18" alt="Object Selection Tool" /> <span class="ui">Object Selection Tool</span> (see <a href="../Tools/tools_objectSelection.html">Object Selection Tool</a>)</li>
+			<li><img src="../../../shared/ui/selection_brush_tool.png" class="tool" width="18" height="18" alt="Selection Brush Tool" /> <span class="ui">Selection Brush Tool</span> (see <a href="selections_brush.html">Painting pixel selections</a>)</li>
+			<li><img src="../../../shared/ui/magic_wand_tool.png" class="tool" width="18" height="18" alt="Flood Select Tool" /> <span class="ui">Flood Select Tool</span> (see <a href="selections_flood.html">Flooding pixel selections</a>)</li>
+			<li><img src="../../../shared/ui/rectangular_marquee_tool.png" class="tool" width="18" height="18" alt="Rectangular Marquee Tool" /> <span class="ui">Rectangular Marquee Tool</span> (see <a href="selections_marquee.html">Marquee pixel selections</a>)</li>
+			<li><img src="../../../shared/ui/elliptical_marquee_tool.png" class="tool" width="18" height="18" alt="Elliptical Marquee Tool" /> <span class="ui">Elliptical Marquee Tool</span></li>
+			<li><img src="../../../shared/ui/column_marquee_tool.png" class="tool" width="18" height="18" alt="Column Marquee Tool" /> <span class="ui">Column Marquee Tool</span></li>
+			<li><img src="../../../shared/ui/row_marquee_tool.png" class="tool" width="18" height="18" alt="Row Marquee Tool" /> <span class="ui">Row Marquee Tool</span></li>
+			<li><img src="../../../shared/ui/free_hand_selection_tool.png" class="tool" width="18" height="18" alt="Freehand Selection" /> <span class="ui">Freehand Selection</span> (see <a href="selections_freehand.html">Drawing pixel selections</a>)</li>
+		</ul>
+
+	<h2>Selection procedures</h2>
+
+	<p>Alongside the many selection tools available, there are also a variety of procedures you can follow to create a pixel selection from:</p>
+		<ul>
+			<li>The most prominent subject of a layer (see <a href="selections_selectSubject.html">Select Subject</a>)</li>
+			<li>The contents of a layer (see <a href="selections_fromlayers.html">Pixel selections from layers</a>)</li>
+			<li>The luminosity of a layer (see <a href="selections_fromlayers.html">Pixel selections from layers</a>)</li>
+			<li>Layer and composite channels (see <a href="selections_fromchannels.html">Pixel selections from channels</a>)</li>
+			<li>Curves and shapes (see <a href="selections_fromshapes.html">Pixel selections from shapes</a>)</li>
+			<li>Tonal or color ranges (see <a href="selections_range.html">Range pixel selections</a>)</li>
+			<li>Sampled colors (see <a href="selections_sampled.html">Sampled color pixel selections</a>)</li>
+			<li>Quick Masks (see <a href="editSelectionAsLayer.html">Edit selection as layer using Quick Mask</a>)</li>
+			<li>Previously created selections (see <a href="selections_outline.html">Creating outline selections</a>)</li>
+		</ul>
+
+	<h2>Selection modes</h2>
+
+	<p>When working with, and creating, selections, you may have access to the following <span class="ui">Modes</span> which affect how your selection develops:</p>
+		<ul>
+			<li><img src="../../../shared/ui/selection_new.png" class="tool" width="18" height="18" alt="New Selection" /> <span class="ui">New</span>&mdash;cancels all current selections and creates a new selection.</li>
+			<li><img src="../../../shared/ui/selection_add.png" class="tool" width="18" height="18" alt="Add to Selection" /> <span class="ui">Add</span>&mdash;adds areas to the current selection. If there is no selection in place, a new selection will be created.</li>
+			<li><img src="../../../shared/ui/selection_subtract.png" class="tool" width="18" height="18" alt="Subtract from Selection" /> <span class="ui">Subtract</span>&mdash;removes areas from the current selection.</li>
+			<li><img src="../../../shared/ui/selection_intersect.png" class="tool" width="18" height="18" alt="Intersect Selection" /> <span class="ui">Intersect</span>&mdash;a new selection area is created from the overlap between the newly added selection area and the current selection.</li>
+		</ul>
+		
+		<section class="howto">
+		<details open="open">
+				<summary><img src="../../../shared/ui/object_selection_tool.png" class="tool" width="18" height="18" alt="Object Selection Tool" /> To select an object:</summary>
+				<ol>
+					<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Object Selection Tool</span> <img is="af-icon" data-id="t-object-selection-tool" src="./" alt="" >.</li>
+					<li>Adjust the settings on the context toolbar.</li>
+					<li>Hover over the object you wish to select.</li>
+				</ol>
+
+				<aside class="box note">
+					<h3>Modifier keys</h3>
+					<p>When using the tool, the following modifiers can be used:</p>
+					<ul>
+						<li class="osx">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while clicking to confirm selections separates them into object components, which inevitably may consist of varied textures. For example, it is possible to separate a model&apos;s face from the eyes.</li>
+						<li class="win32">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while clicking to confirm selections separates them into object components, which inevitably may consist of varied textures. For example, it is possible to separate a model&apos;s face from the eyes.</li>
+						<li class="osx">Pressing the <span class="key ALT-TAG"></span><span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span>s, further separates object components. For example, it is possible to separate parts of an outfit consisting of varied colors or textures.</li>
+						<li class="win32">Pressing the <span class="key ALT-TAG"></span>+<span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span>s, further separates object components. For example, it is possible to separate parts of an outfit consisting of varied colors or textures.</li>
+						<li>Dragging on an object enables you to establish smaller selection areas, as indicated by the hatched pattern during the operation.</li>
+					</ul>
+				</aside>
+				
+				<aside class="box tip">
+					<p>Use the <span class="ui">Object Selection Tool</span> for making selections of either the main subject of the composition or its individual parts while employing the above modifiers.</p>
+				</aside>
+				
+				<aside class="box tip">
+					<p>On the tool&apos;s context toolbar, toggle the <span class="ui">Multi-part Objects</span> option on to enable selections of similar textures, particularly when separated by other objects.</p>
+				</aside>				
+			</details>
+			
+		<details open="open">
+				<summary>To select the most prominent subject:</summary>
+				<ol>
+					<li>From the top menu, choose <span class="ui">Select</span>&gt;<span class="ui">Select Subject</span>.</li>
+				</ol>				
+			</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/selection_brush_tool.png" class="tool" width="18" height="18" alt="Selection Brush" /> To paint a pixel selection:</summary>
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Selection Brush Tool</span>.</li>
+				<li>Adjust the settings on the context toolbar.</li>
+				<li>Drag on your page.</li>
+			</ol>
+		</details>
+		</section>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>The following Mode modifier keys may be available for some selection tools and can aid in the creation of selections:</p>
+			<ul>
+				<li>The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> temporarily toggles <span class="ui">Snap to edges</span> setting.</li>
+				<li class="osx">The <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> automatically adds areas to the current selection.</li>
+				<li>The <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> automatically removes areas from the current selection.</li>
+			</ul>
+		</aside>
+
+	</section>
+	
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/rectangular_marquee_tool.png" class="tool" width="18" height="18" alt="Rectangular Marquee Tool" /> <img src="../../../shared/ui/elliptical_marquee_tool.png" class="tool" width="18" height="18" alt="Elliptical Marquee Tool" /> <img src="../../../shared/ui/row_marquee_tool.png" class="tool" width="18" height="18" alt="Row Marquee Tool" /> <img src="../../../shared/ui/column_marquee_tool.png" class="tool" width="18" height="18" alt="Column Marquee Tool" /> To create a pixel selection using a Marquee Selection tool:</summary>
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Rectangular</span>, <span class="ui">Elliptical</span>, <span class="ui">Row</span> or <span class="ui">Column Marquee Tool</span>.</li>
+				<li>Adjust the settings on the context toolbar.</li>
+				<li>Drag on your page.</li>
+			</ol>
+
+
+			<aside class="box note">
+				<h3>Modifier keys</h3>
+				<p>When using the Marquee Selection tools, the following modifier keys can be used to aid in the creation of selections:</p>
+				<ul>
+					<li class="osx">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging constrains the marquee&apos;s proportions.</li>
+					<li class="win32">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging constrains the marquee&apos;s proportions.</li>
+					<li>Pressing the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> while dragging adds to the current selection.</li>
+					<li class="osx">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while dragging removes areas from the current selection.</li>
+					<li class="win32">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while dragging removes areas from the current selection.</li>
+					<li class="osx">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging inside the current marquee selection repositions it.</li>
+					<li class="win32">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging inside the current marquee selection repositions it.</li>
+				</ul>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/free_hand_selection_tool.png" class="tool" width="18" height="18" alt="Freehand Selection" /> To draw a pixel selection:</summary>
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Freehand Selection Tool</span>.</li>
+				<li>On the context toolbar, choose a selection <span class="ui">Type</span>.</li>
+				<li>Do one of the following:<ul>
+						<li>With <span class="ui">Freehand</span> selected, drag on the page to draw the edge of the selection and release to close the selection.</li>
+						<li>With <span class="ui">Polygon</span> selected, click to define the beginning of the selection and then click for every change in direction.</li>
+						<li>With <span class="ui">Magnetic</span> selected, click to define the beginning of the selection and then click to place a custom node position. Automatic nodes will be placed along distinct image edges as the cursor moves.</li>
+					</ul>
+				</li>
+				<li>Double-click to close the selection (<span class="ui">Polygon</span> and <span class="ui">Magnetic</span> only).</li>
+			</ol>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the Freehand Selection Tool, the following modifier keys can be used to aid in the creation of selections:</p>
+			<ul>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> temporarily switches to <span class="ui">Polygonal</span> if using <span class="ui">Freehand</span>.</li>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> temporarily switches between <span class="ui">Polygonal</span> and <span class="ui">Magnetic</span>.</li>
+				<li>If using <span class="ui">Polygonal</span> and <span class="ui">Magnetic</span>, dragging will temporarily invoke <span class="ui">Freehand</span>.</li>
+				<li class="osx">Holding the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> temporarily switches the mode to Add.</li><!-- Not working on Win 2.3 2100 build.		<li class="win32">Holding the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> temporarily switches the mode to Add.</li> --><li>Holding the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> temporarily switches the mode to Subtract.</li>
+			</ul>
+		</aside>
+		</details>
+
+	<section class="howto">
+	
+		<details>
+			<summary>To create a pixel selection from a layer:</summary>
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, click the chosen layer&apos;s thumbnail while pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>.</li>
+			</ul>
+			
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/select_all.png" class="tool" width="18" height="18" alt="Select All Pixels" /> To select every pixel in the image:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>On the Toolbar, select <span class="ui">Select All</span>.</li>
+				<li>From the <span class="ui">Select</span> menu, select <span class="ui">Select All</span>.</li>
+
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/invert_selection.png" class="tool" width="18" height="18" alt="Invert Selection" /> To invert a pixel selection:</summary>
+			<p>With a selection in place, do one of the following:</p>
+				<ul>
+					<li>On the Toolbar, select <span class="ui">Invert Selection</span>.</li>
+					<li>From the <span class="ui">Select</span> menu, select <span class="ui">Invert Pixel Selection</span>.</li>
+				</ul>
+
+		</details>
+
+		<details open="open">
+			<summary>To hide/show a pixel selection temporarily:</summary>
+			<ul>
+				<li>From the <span class="ui">View</span> menu, select <span class="ui">Show Pixel Selection</span>.</li>
+
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/deselect.png" class="tool" width="18" height="18" alt="Deselect Pixels" /> To remove a pixel selection:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>On the Toolbar, select <span class="ui">Deselect</span>.</li>
+				<li>From the <span class="ui">Select</span> menu, select <span class="ui">Deselect</span>.</li>
+
+			</ul>
+		</details>
+
+
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selections_modify.html">Modifying pixel selections</a></li>
+			<li><a href="../Tools/tools_objectSelection.html">Object Selection Tool (ML)</a></li>
+			<li><a href="../Selections/selections_selectSubject.html">Select Subject (ML)</a></li>
+			<li><a href="../Extras/machineLearning.html">Affinity and Machine Learning (ML)</a></li>
+			<li><a href="selections_refine.html">Refining pixel selection edges</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=selection">Keyboard shortcuts for pixel selection and masking</a></li>
+			<li><a href="../Workspace/preferences.html">Settings</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="exposure, tonal range, shadows, midtones, highlights, crushing, clipping" />
+	<meta name="description" content="Use the histogram as a guide to achieve the correct exposure." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src: "../../../shared/histogram_darkMoody.jpg", alt: "Dark and moody" },
+				tab2: { src: "../../../shared/histogram_lightAiry.jpg", alt: "Light and airy" },
+			}
+		}
+		
+	</script>
+	
+	<title>Using a histogram</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+		<h1>Using a histogram</h1>
+	
+		<p>A histogram provides a graphical representation of the tonal range in an image. Understanding how to read and interpret a histogram ensures photographers get to the starting point of their edits faster and with fewer errors to fix later in post-production.</p>
+		<p>A histogram is available as an option to display on most modern digital cameras. In Affinity, it is available as a panel both in the Develop and Photo Persona.</p>
+	</header>
+	
+	<section class="about">
+	
+		<figure>
+			<p><img src="../../../shared/histogram.jpg" class="responsive" alt="Histogram tonal areas" /></p>
+			<figcaption>Histogram panel indicating tonal areas: (A) Shadows, (B) Midtones, (C) Highlights.</figcaption>
+		</figure>
+		
+	<h2>About a histogram</h2>
+	
+	<p>A histogram is divided into three areas representing the tonal values of an image: the dark tones readout appears on the left, the midtones in the center, and highlights on the right, as pictured above.</p>
+
+		<aside class="box note">
+			<p>The far-left and far-right edges represent pure black and pure white, respectively. You should avoid readouts of the graph peaking at those edges to preserve details in the shadows and highlights.</p>
+		</aside>
+
+
+	<p>You may have come across the term &quot;shoot to the right&quot;, meaning the correct exposure presented by the graph to take the form of evenly growing values from the shadow areas (left) towards the highlights (right).</p>
+	<p>Although that may be a great starting point, it isn&apos;t always possible. Additionally, the photographer&apos;s creative vision might vary from what technically is regarded as correct exposure. Don&apos;t be afraid to experiment to arrive at your intended output. For example, try changing your camera&apos;s shutter speed, aperture, and ISO settings to achieve the following effects:</p>
+	<ul>
+		<li>The histogram with the graph pushed to the left for dark and moody photos.</li>
+		<li>The histogram with the graph pushed to the right for light and airy photos.</li>
+	</ul><!-- tabbed images for the above two examples --><div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Dark and Moody</p></div>
+				<div class="tab"><p>Light and airy</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/histogram_darkMoody.jpg" class="responsive" alt="Dark and moody"></div>
+		</div>
+		
+		
+	<h2>Why use a histogram?</h2>
+		
+		<p>Relying on the histogram readout aids in capturing images in challenging lighting conditions: in bright sunlight or at night, for example, where the camera&apos;s built-in LCD screen is likely to give a false representation of a scene&apos;s exposure.</p>
+		
+		<aside class="box tip">
+			<p>Avoid setting a vivid or other contrasty image profile in-camera when taking your photos, as this may mean a harsh histogram readout.</p>
+		</aside>
+		
+		<p>Preparing your images for printing is another area where you should observe the histogram. Paying attention to the left and right edges of the graph, note the exclamation mark to indicate lost details in either the dark or light tones. When printed, those areas would be pure black or white, respectively, which isn&apos;t desirable.</p>
+		<p>To ensure details are preserved, and the appropriate tonal range is present in your photos, experiment with the <a href="../Adjustments/adjustment_levels.html">Levels</a> and <a href="../Adjustments/adjustment_curves.html">Curves</a> adjustments.</p>
+
+	</section>
+ 
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/scopePanel.html">Scope panel</a></li>
+			<li><a href="../Panels/histogramPanel.html">Histogram panel</a></li>
+			<li><a href="../Adjustments/adjustment_levels.html">Levels adjustment</a></li>
+			<li><a href="../Adjustments/adjustment_curves.html">Curves adjustment</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>
+

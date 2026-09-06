@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="offset" />
+	<meta name="description" content="The Affine filter allows you to move, scale and rotate either a selection or the entire document by percentage amounts." />
+	<title>Affine</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Affine</h1>
+
+		<p>The Affine filter allows you to move, scale and rotate either a selection or the entire document by percentage amounts.</p>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/filter_affine_before.jpg" alt="Before" /><div><img src="../../../shared/filter_affine_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Using the Affine filter to flip the direction of a subject within an image (additional cloning and inpainting work required).</figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Affine filter</h2>
+
+		<p>This filter can be found in the <span class="ui">Filters</span> menu, in the <span class="ui">Distort</span> category.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Rotation</span>&mdash;controls the rotation of the document or selection.</li>
+			<li><span class="ui">Scale X</span>/<span class="ui">Y</span>&mdash;independent controls for horizontal and vertical scaling.</li>
+			<li><span class="ui">Offset X</span>/<span class="ui">Y</span>&mdash;controls the horizontal and vertical offset of the document or selection.</li>
+			<li><span class="ui">Extend Mode</span>&mdash;specifies how to handle the blank area created by the filter:<ul>
+					<li><span class="ui">Zero</span>: Does not fill the blank space.</li>
+					<li><span class="ui">Full</span>: Fills the blank space with pure white.</li>
+					<li><span class="ui">Repeat</span>: Repeats the last edge of pixels continuously to fill the blank space.</li>
+					<li><span class="ui">Wrap</span>: Wraps the selection back around; useful for seamless texture work.</li>
+					<li><span class="ui">Mirror</span>: Produces a mirror image of the selection.</li>
+				</ul>
+			</li>
+		</ul>
+
+	</section>
+
+	<section>
+		<figure>
+		<div class="comparison"><img src="../../../shared/filter_affine_seamless_before.jpg" alt="Before" /><div><img src="../../../shared/filter_affine_seamless_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Using Affine with 50% X and Y offset to expose the image edges: cloning these out will create a seamless texture.</figcaption>
+	</figure>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_shear.html">Shear</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

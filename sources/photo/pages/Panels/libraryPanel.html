@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="Reference Monitor, panels" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Library panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Library panel</h1>
+		<p>The <span class="ui">Library</span> panel stores macros and allows them to be applied to the current document via a single click. Both stock macros and custom saved or imported macros appear in this panel.</p>
+	</header>
+
+	<section class="about">
+
+		<h2>About the Library panel</h2>
+
+		<p>The <span class="ui">Library</span> panel is available from the Photo Persona; it can be switched on via the <span class="ui">Window</span> menu. It is also shown automatically when a macro is saved from the <span class="ui">Macro</span> panel.</p>
+
+		<figure>
+			<p><img src="../../images/panel_library.png" class="responsive" width="264" alt="Library panel" /></p>
+			<figcaption>The Library panel.</figcaption>
+		</figure>
+
+		<p>For more information on how to record, edit and use macros, see <a href="../Macros_Batch/macros.html">Macros</a>.</p>
+
+	</section>
+
+	<section class="settings">
+		<h3>Options</h3>
+
+		<p>The following options are available in the panel:</p>
+
+		<ul>
+			<li>Search&mdash;allows you to narrow down the macros in the panel to those with names which conform to the search criteria. Type directly in the text box.</li>
+			<li>Scaling&mdash;choose from <span class="ui">Stretch</span>, <span class="ui">Max fit</span>, <span class="ui">Min fit</span> or <span class="ui">No scale</span> (default). This controls how layer content (especially brush strokes) will be scaled when applying the macro to a document that has a different aspect ratio or page orientation. <span class="ui">Stretch</span> will contort the layer content, whereas <span class="ui">Max fit</span> or <span class="ui">Min fit</span> will scale content gracefully and maintain the aspect ratio.</li>
+			<li>Alignment&mdash;change how the macro elements are aligned relative to the document&apos;s bounds. For example, if the macro places a watermark image, you could choose <span class="ui">Bottom right</span> to place it at the bottom right of the current document.</li>			
+			<li>Category&mdash;displays all macros in that category. Click a category&apos;s title to collapse or expand the category.</li>
+		</ul>
+
+		<p><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> The following options are available from panel preferences:</p>
+		<ul>
+			<li><span class="ui">Create New Category</span>&mdash;adds a new, custom macros category to the panel.</li>
+			<li><span class="ui"><a href="../Addons/importingAddons.html">Import Macros</a></span>&mdash;adds a new category to the panel pre-populated macros.</li>
+		</ul>
+
+		<p><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> The following options are available from the category option menus:</p>
+		<ul>
+			<li><span class="ui">Rename</span>&mdash;allows you to rename the category.</li>
+			<li><span class="ui">Delete</span>&mdash;removes the category (and all its macros) from the panel.</li>
+			<li><span class="ui">Duplicate</span>&mdash;adds a second copy of the currently selected category to the panel.</li>
+			<li><span class="ui">Move Up</span>&mdash;repositions the category above the previous category so it is listed higher in the panel. If this option is grayed out, the category is at the top of the panel.</li>
+			<li><span class="ui">Move Down</span>&mdash;repositions the category below the next category so it is listed lower in the panel. If this option is grayed out, the category is at the bottom of the panel.</li>
+			<li><span class="ui">Export Macros</span>&mdash;exports all the macros stored in the current category as a single .afmacros file. On import, the macro category and individual macros are installed.</li>
+		</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To export a macro category:</summary>
+			<ol>
+				<li>Click the options menu to the right of the category&apos;s name.</li>
+				<li>Select <span class="ui">Export Macros</span>.</li>
+				<li>Browse to the location where you want to save the .afmacros file.</li>
+				<li>Click <span class="ui">Save</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Macros_Batch/macros.html">Macros</a></li>
+			<li><a href="../Panels/macroPanel.html">Macro panel</a></li>
+			<li><a href="../Addons/importingAddons.html">Importing add-ons</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

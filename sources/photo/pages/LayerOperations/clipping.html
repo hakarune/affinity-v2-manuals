@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="clipped, nested, nesting, child, parent, masking, paths, clipping paths" />
+	<meta name="description" content="Clipping involves masking part of a layer by placing it inside another layer." />
+	<title>Layer clipping</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Layer clipping</h1>
+
+		<p>Clipping involves positioning one layer or object inside another, creating a parent - child layer relationship. The path of the parent becomes the new boundaries for the child. Any areas of the child layer (object) which lie outside its parent&apos;s path are masked (hidden).</p>
+
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/clipping_before.jpg" alt="Before" /><div><img src="../../../shared/clipping_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Pixel brush strokes clipped within the fish&apos;s vector outline.</figcaption>
+		</figure>
+
+		<figure class="nft"><img src="../../images/layers_parentchild.png" class="responsive" alt="Clipping in Layers panel" /><figcaption>Layers panel showing white brush stroke layer being dragged onto the fish&apos;s outline layer (above).</figcaption>
+		</figure>
+
+		<p>Clipping can also be used to confine an adjustment, filter or mask to a single layer or layer group.</p>
+
+	</header>
+
+	<section class="about">
+		<h2>About clipping</h2>
+		<p>Any layer can act as a parent or child in clipping relationships. Therefore both pixel and vector layer content can be either clipped or clipping.</p>
+		<p>When scaling a parent layer, child (clipped) layers scale to maintain the correct aspect ratio. Scaling a clipped layer has no effect on the parent layer. A clipped layer can be edited independently from its parent, e.g. adjusting opacity, and/or blend mode.</p>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To clip layers:</summary>
+			<ol>
+				<li>On the page, position the layer to be clipped so it overlaps the layer (or object) which will perform the clipping.</li>
+				<li>Do one of the following, with the layer to be clipped being selected:<ul>
+						<li>On the <span class="ui">Layers</span> panel, drag it on top of the layer which is to perform the clipping. A blue highlight appears to target the layer.</li>
+						<li>On the <span class="ui">Arrange</span> menu, select <span class="ui">Move Inside</span>. This moves the object inside the object above it on the <span class="ui">Layers</span> panel.</li> 
+					</ul>
+				</li> 
+			</ol>
+			<p>The clipped layer is nested within the clipping layer in the Layers panel. The clipped layer has become a child of the clipping layer.</p>
+		</details>
+
+		<details open="open">
+			<summary>To remove clipping (unclip):</summary>
+			<p>Do one of the following:</p> 
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, drag the clipped layer outside the parent layer.</li>
+				<li>Select the clipped layer, then select <span class="ui">Arrange&gt;Move Outside</span>.</li>
+				<li><span class="CLICK-TAG"></span>-click the clipped layer, then select <span class="ui">Release</span>.</li>
+
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary>To resize a layer without scaling its child layer content:</summary>
+			<ul>
+				<li>Select the parent layer with the <span class="ui">Move Tool</span>, and then check <span class="ui">Lock Children</span> on the context toolbar. Resize the parent layer to your chosen size.</li>
+			</ul>
+
+		<aside class="box tip">
+			<p>As you resize the parent, you can press the <span class="key SPACEBAR-TAG"></span> <span class="KEY-TAG"></span> to temporarily override the current Lock Children state while the key remains pressed.</p>
+		</aside>
+		</details>		
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../LayerOperations/target.html">Targeting</a></li>
+			<li><a href="../LayerOperations/copyPasteOptions.html">Copy and paste options</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../Layers/layerBlendModes.html">Layer blending</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

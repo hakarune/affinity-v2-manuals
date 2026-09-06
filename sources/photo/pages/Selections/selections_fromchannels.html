@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="channels, selections" />
+	<meta name="description" content="Create create pixel selections based on a single channel or combination of channels." />
+	<title>Pixel selections from channels</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Pixel selections from channels</h1>
+
+		<p>You can create pixel selections based on a single channel or combination of channels. This feature is available from the <a href="../Panels/channelsPanel.html">Channels panel</a>.</p>
+	</header>
+	
+	<section class="about">
+		<figure> 
+			<p><img src="../../../shared/selection_from_channel.jpg" class="responsive" alt="Selection from channel" /></p>
+			<figcaption>Selection created from the image&apos;s red channel.</figcaption>
+		</figure>
+
+		<p>Pixels are selected based on the contribution that the chosen channel makes to its color value. If a channel only contributes partially to a pixel, that partial amount is selected (i.e. where a channel contributes 20% of the color to that pixel, that 20% is selected).</p>
+
+		<aside class="box note">
+			<p>A selection marquee only appears around areas which are selected by more than 50%. Areas selected by 50% or less will not display a marquee at their edges.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To create a pixel selection from a channel:</summary>
+			<ul>
+				<li>In the <span class="ui">Channels</span> panel, <span class="key CLICK-TAG"></span>-click any channel and select <span class="ui">Load to Pixel Selection</span>.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary>To combine channels in a single pixel selection:</summary>
+			<p>In the <span class="ui">Channels</span> panel:</p>
+			<ol>
+				<li><span class="key CLICK-TAG"></span>-click any channel and select <span class="ui">Load to Pixel Selection</span>.</li>
+				<li><span class="key CLICK-TAG"></span>-click any other channel and select <span class="ui">Add to Pixel Selection</span>.</li>
+				<li>Repeat step 2 as needed.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>Alternatively, you can subtract or intersect a channel from a selection using the other options on the context (<span class="key CLICK-TAG"></span>-click) menu. For more information on the available selection modes, see <a href="selections_create.html">Creating pixel selections</a>.</p>
+			</aside>
+
+		</details>
+
+		<details open="open">
+			<summary>To create a pixel selection from a selected layer&apos;s channel:</summary>
+			<ol>
+				<li>In the <span class="ui">Layers</span> panel, select a layer.</li>
+				<li>In the <span class="ui">Channels</span> panel:<ul>
+						<li><span class="key CLICK-TAG"></span>-click a channel named after the selected layer (e.g. Background Red) and select <span class="ui">Create Spare Channel</span></li>
+						<li><span class="key CLICK-TAG"></span>-click the newly created spare channel and select <span class="ui">Load to Pixel Selection</span>.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To save a selection as an alpha channel:</summary>
+			<ul>
+				<li>With a pixel selection in place, <span class="key CLICK-TAG"></span>-click the &apos;Pixel Selection&apos; entry and select <span class="ui">Create Spare Channel</span>.</li>
+			</ul>
+			<p>The selection is stored at the bottom of the Channels panel as a new &apos;Spare Channel&apos; entry.</p>
+	</details>
+	
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/channel_invert.png" class="tool" width="16" height="16" alt="Invert" /> To invert the layer&apos;s Pixel Selection channel:</summary>
+			<ul>
+				<li><span class="key CLICK-TAG"></span>-click the Pixel Selection layer&apos;s channel, then click an option from the pop-up menu.</li>	
+			</ul>
+		</details>
+
+	</section>
+	
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Channels/usingChannels.html">Using channels</a></li>
+			<li><a href="../Channels/spareChannels.html">Spare channels</a></li>
+			<li><a href="../Panels/channelsPanel.html">Channels panel</a></li>
+			<li><a href="selections_create.html">Creating pixel selections</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="compound, layer, mask, compositing, join, combine, union, xor, intersect, add, subtract, divide, difference, operations, boolean, operators" />
+	<meta name="description" content="Combine multiple mask layers together using Boolean operations to make non-destructive compounds." />
+	<title>Compound layer masks</title>
+</head>
+
+<body>
+
+	<header>
+		
+	<h1>Compound layer masks</h1>
+		
+		<p>Instead of working on a single mask layer, <span class="term">compound masks</span> let you combine multiple mask layers non-destructively using Boolean operations (add, subtract, etc.), and then edit each &apos;component&apos; mask layer independently of each other.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/compound_mask.jpg" class="screenshot" alt="Compound mask" /></div>
+			<figcaption>Compound mask (C-M1) made up of three separate mask layers (m1, m2 and m3); Add Boolean operations were used in the compound.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About compound masks</h2>
+		
+		<p>While Affinity Photo 2 offers vector-based joins and non-destructive compounds, it also supports <span class="term">compound masks</span>&mdash;a powerful masking system that uses the same Boolean operations (i.e., add, subtract, intersect or xor) but are instead applied to multiple mask layers non-destructively, i.e. without altering the individual mask layers.</p>
+		
+		<p>Use compound masks for compositing and editing of complex textures, where you can combine more complex and diverse multiple masks. This gives a lot of flexibility as you can introduce different masking approaches and bring them together, e.g. a gradient mask layer combined with a painted mask layer.</p>
+		
+		<p>Like other layers, any mask layer in the compound can be switched on/off, moved to another position on the layer stack or have its layer properties (e.g., opacity) altered.</p>
+
+		<aside class="box tip">
+			<p>Compound masks only work with more than one mask layer present.</p>
+		</aside>
+		
+	</section>
+	
+	<section class="howto">
+
+		<details open="open">
+		<summary>To create an empty compound mask:</summary>
+			<p>Do one of the following:</p>
+				<ul>
+					<li>On the <span class="ui">Layer</span> menu, select <span class="ui">New Compound Mask Layer</span>.</li>
+					<li class="osx"><img src="../../../shared/ui/add_mask_layer.png" class="tool" width="16" height="16" alt="Mask Layer" /> On the <span class="ui">Layers</span> panel, <span class="key ALT-TAG"></span>-click <span class="ui">Mask Layer</span>, then select <span class="ui">Compound Mask</span>.</li>
+					<li class="win32"><img src="../../../shared/ui/add_mask_layer.png" class="tool" width="16" height="16" alt="Mask Layer" /> On the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click <span class="ui">Mask Layer</span>, then select <span class="ui">Compound Mask</span>.</li>
+				</ul>
+		
+		<p>If there is a pixel layer previously selected, the compound mask will be clipped to that layer. When no layer is selected, it will be added to the top of your layer stack. You can drag the compound mask layer to a new position if needed.</p> 
+		</details>
+		
+
+		<details open="open">
+		<summary>Adding existing mask layers to the compound mask:</summary>
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, drag the mask layer(s) over the Compound Mask layer entry and release.</li>
+			</ul>
+
+		<aside class="box tip">
+			<p>The addition of multiple mask layers will create the compound, using an Add operation by default.</p>
+		</aside>
+		
+		</details>
+
+		<details open="open">
+		<summary>Adding pixel selection as masks to the compound mask:</summary>
+			<ul>
+				<li>Create an empty compound mask as before.</li>
+				<li>Select a layer which you want make a pixel selection on, then create a pixel selection.</li>
+				<li>Select the compound mask layer, then on the top menu select <span class="ui">Layer</span>&gt; <span class="ui">New Mask Layer</span>.</li>
+				<li>Repeat to build up multiple masks in the same compound masks.</li> 
+			</ul>
+
+		<aside class="box tip">
+			<p>You can create masks from pixel selections made from channel information (e.g. targeting the Red channel) and add them to your compound mask as above. Similarly, you could target luminosity in your image for compound masking.</p>
+		</aside>
+		
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/add.png" class="tool heading" width="18" height="18" alt="Add" /> <img src="../../../shared/ui/subtract.png" class="tool heading" width="18" height="18" alt="Subtract" /> <img src="../../../shared/ui/intersect.png" class="tool heading" width="18" height="18" alt="Intersect" /> <img src="../../../shared/ui/combine.png" class="tool heading" width="18" height="18" alt="Xor" /> To change the Compound Mask mode:</summary>
+			<ol>
+				<li>On the topmost layer mask within the Compound Mask, click the mode icon.</li>
+				<li>Select a different compound mode from the pop-up menu&mdash;choose from <span class="ui">Add</span>, <span class="ui">Subtract</span>, <span class="ui">Intersect</span> or <span class="ui">Xor</span>.</li>
+			</ol>
+		</details>
+
+		<details>
+			<summary>To release a mask layer from the compound mask:</summary>
+			<p>Do one of the following:</p>
+				<ul>
+					<li>Drag the mask layer out of the Compound Mask layer to another layer position.</li>
+					<li><span class="key CLICK-TAG"></span>-click the mask layer, and from the menu, choose <span class="ui">Release Mask</span>.</li>
+				</ul>
+		</details>
+
+ 		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>The following modifier keys can be used on mask layers in the Compound mask:</p>
+			<ul>
+				<li>To view in isolation, hold down the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and click on the mask thumbnail of the layer in the <span class="ui">Layers</span> panel.</ul>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+			<li><a href="../CurvesShapes/compound.html">Creating compounds</a></li>
+			<li><a href="../Channels/usingChannels.html">Using channels</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

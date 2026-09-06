@@ -1,0 +1,49 @@
+# Glossary
+
+On this page you can find an alphabetical list of terms that you may come across when using this software.
+
+- **[Adjustment](../10-adjustments/01-applying-adjustments.md)**—an effect which can be applied to your design as a new layer for creative or corrective purposes.
+- **[Alignment](../07-layer-operations/06-aligning.md)**—positioning layer content to the left, right, center, top or bottom.
+- **[Asset](../03-get-started/14-using-assets.md)**—a stored design element which can be accessed from any document you have open.
+- **[Batch job](../21-macros-and-batch-jobs/02-batch-jobs.md)**—a feature that allows automatic processing of a number of image files.
+- **Bleed**—the area of the page that goes beyond the page edge to be trimmed off in the event of paper movement or design inconsistencies.
+- **[Blend mode](../06-layers/05-layer-blending.md)**—a mode applied to your layer which changes how the applied pixels interact with existing pixels on the layer below.
+- **[Blend range](../06-layers/06-layer-blend-ranges.md)**—let you blend layers in a project by controlling opacity across the tonal range of the currently selected layer or the underlying layer(s).
+- **Clipboard**—a system used for short-term storage and transfer of content during cut, copy and paste operations.
+- **[Clipping](../07-layer-operations/07-layer-clipping.md)**—the act of positioning one object inside another.
+- **[CMYK](../12-color/03-color-spaces.md)**—a color model that is often used for printing.
+- **[Color picker](../12-color/05-sampling-or-picking-colors.md)**—a tool used to select and sample colors.
+- **[Color space](../12-color/03-color-spaces.md)**—the range of colors used to display and print colors in your file.
+- **[Document preset](../03-get-started/03-create-new-documents.md)**—a blank file containing a group of recommended document setup options according to how you plan to work.
+- **[Document template](../03-get-started/09-document-templates.md)**—a file containing reusable pre-formatted text styles, graphics, and layouts which you can use to form the basis of another document.
+- **Embedded file**—a placed copy of an original file that is embedded into a document. If the original file is moved or updated, the embedded copy will remain unchanged.
+- **[Filter](../11-filters-and-effects/01-applying-filters.md)**—an effect which can be applied to layers within your document for corrective or creative purposes.
+- **[Global color](../12-color/10-vector-specific/01-global-colors.md)**—a color that can be created, applied, and updated for different objects across your design from a single place.
+- **Gradient**—a gradual blend from one color to another.
+- **[Grid](../30-design-aids/15-grids.md)**—a pattern of horizontal and vertical lines which is overlaid over your page to help you align objects.
+- **[Guide](../30-design-aids/05-ruler-and-column-guides.md)**—non-printing, non-exporting lines that float over page objects and assist with their positioning.
+- **HSL**—an alternative representation of the RGB model that more closely aligns with the way human vision perceives colors mixing together.
+- **HSV**—an alternative representation of the RGB model that more closely aligns with the way human vision perceives colors appearing under light.
+- **LAB**—a color model that is designed to approximate human vision.
+- **[Layer effect](../24-layer-effects/01-using-layer-effects.md)**—an effect that can be applied to either selected objects or the entire layer, changing its appearance.
+- **[Layer mask](../06-layers/12-layer-masks.md)**—used to reveal a portion of a layer while the rest of the layer remains hidden.
+- **Linked file**—a placed file containing a link between the document and the file on disk to allow it to update if it is changed on disk.
+- **Linking layers**—a way of linking layer attributes (such as blend mode and opacity) between layers.
+- **[Liquify](../22-liquify-persona/01-warping-using-liquify-persona.md)**—the process of accurately warping an image.
+- **[Live filter](../11-filters-and-effects/01-applying-filters.md)**—a filter that can be applied non-destructively.
+- **[Macro](../21-macros-and-batch-jobs/01-macros.md)**—a recorded operation that can be applied with a single click.
+- **[Margin](../30-design-aids/06-margins.md)**—the area between the main content of the page and the page edges.
+- **Marquee**—a shape drawn around an object in order to make a selection.
+- **Palette**—a selection of stored colors.
+- **Pasteboard**—the area around the document.
+- **Raster**—a type of graphic made up of a grid of pixels.
+- **[Raw image](../04-develop-persona-raw/01-developing-raw-images.md)**—an image format produced by a digital camera that contains minimal processed data.
+- **[RGB](../12-color/03-color-spaces.md)**—a color model that is often used for digital work.
+- **[Snapping](../30-design-aids/11-snapping.md)**—aligning images, brush strokes, lines, shapes, and selection areas to nearby grid lines, guides or margins, or any combination of these.
+- **[Spot color](../12-color/10-vector-specific/02-spot-colors.md)**—a color that can be used when your artwork contains a very limited color set, reducing print costs significantly and allowing you to accurately reproduce colors otherwise impossible with process colors.
+- **[Stack](../17-stacking/01-image-stacks.md)**—a blended series of images based on the same scene or almost identical subject matter.
+- **[Text frame](../26-text/04-frame-text.md)**—a frame containing paragraph text which uses a formalized structure and layout.
+- **[Text style](../26-text/13-text-styles/01-using-text-styles.md)**—a set of text attributes and properties which can be applied to text.
+- **[Transform](../05-sizing-cropping-and-warping/05-transforming.md)**—a general term for resizing, moving, rotating or shearing objects.
+- **Vector**—a type of graphic made up of mathematical paths.
+- **White space**—areas of the design that contain no images or text.

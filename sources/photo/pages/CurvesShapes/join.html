@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="join, combine, union, xor, intersect, add, subtract, divide, difference, operations, geometry, boolean, operators" />
+	<meta name="description" content="Vector shapes can be joined using the Join commands." />
+	<title>Joining</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Joining vector shapes</h1>
+		<p>Vector shapes can be joined together to create composite shape variations which can be fully edited as curves.</p>
+	</header>
+
+	<section class="about">
+
+		<h2>Joining operations</h2>
+
+		<p>There are various operations available (illustrated as before and after):</p>
+
+		<p><span class="ui">Add</span>&mdash;creates a new curve layer from the sum of the selected shape layers; the color of the lowest object is used.</p>
+		<figure>
+			<p><img src="../../../shared/add_illus.png" class="responsive" alt="Add" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>The <span class="ui">Add</span> operation can be applied to a single shape, in which case interior overlaps are removed and the resulting shape is the outline of the original shape.</p>
+		</aside>
+
+		<p><span class="ui">Subtract</span>&mdash;removes overlapped areas of the lowest object. All other selected objects are discarded.</p>
+
+		<figure>
+			<p><img src="../../../shared/subtract_illus.png" class="responsive" alt="Subtract" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<aside class="box tip">
+			<p>Alternatively, with objects selected, press the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and click a &apos;key&apos; object to subtract from, instead of the lowest object. The key object shows with a strong outline colored blue by default or with the containing layer&apos;s layer color.</p>
+
+		<figure>
+			<p><img src="../../../shared/subtract_illus_keyobject.png" class="responsive" alt="Subtract" /></p>
+			<figcaption></figcaption>
+		</figure>
+		</aside>
+
+		<p><span class="ui">Intersect</span>&mdash;creates a new curve layer from the overlapping areas common to all selected shape layers.</p>
+		<figure>
+			<p><img src="../../../shared/intersect_illus.png" class="responsive" alt="Intersect" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>For more than two objects, all objects must intersect each other.</p>
+		</aside>
+
+		<p><span class="ui">Xor</span>&mdash;merges selected shape layers into a curve layer with transparent area where filled regions overlap.</p>
+		<figure>
+			<p><img src="../../../shared/combine_illus.png" class="responsive" alt="Xor" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p><span class="ui">Divide</span>&mdash;splits shape layer areas into separate curve layers; the curve layer from the intersecting area retains the color of the upper shape layer.</p>
+			
+		<figure>
+			<p><img src="../../../shared/divide_illus.png" class="responsive" alt="Divide" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<figure>
+			<p><img src="../../../shared/divide_illus_knockout.png" class="responsive" alt="Divide" /></p>
+			<figcaption>Cut away of a fully overlapping object from the object below (the residual object can be deleted).</figcaption>
+		</figure>
+
+		<figure>
+			<p><img src="../../../shared/divide_illus_bylines.png" class="responsive" alt="Divide" /></p>
+			<figcaption>Object being be split by one or more straight lines or curves.</figcaption>
+		</figure>
+		
+		<aside class="box note">
+			<p>By default, the <span class="ui">Divide</span> operation will trim off any residual straight lines or curves extending beyond the shape&rsquo;s outline, plus any lines/curves left over between object fragments.<br /><p>With the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> pressed during the operation, you can still retain the original curve(s) or line(s) instead (without trimming) but it will be split at every intersecting point.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To implement join operations:</summary>
+			<ol>
+				<li>Select multiple shape layers.</li>
+				<li class="osx">Press the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> and click, then from the <span class="ui">Geometry</span> submenu, select an operations command.</li>
+				<li class="win32">Press the right mouse button, then from the <span class="ui">Geometry</span> submenu, select an operations command.</li>
+			</ol>
+
+			<aside class="box tip">
+				<p>Holding down the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> when selecting <span class="ui">Add</span>, <span class="ui">Subtract</span>, <span class="ui">Intersect</span> or <span class="ui">Xor</span> will <a href="compound.html">create a non-destructive compound</a>.</p>
+			</aside>
+
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../CurvesShapes/draw_geometricShapes.html">Draw and edit shapes</a></li>
+			<li><a href="compound.html">Creating compounds</a></li>	
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

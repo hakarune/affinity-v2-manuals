@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="link, linkage, editor" />
+	<meta name="description" content="Use linked layers to synchronise changes across layers." />
+	<title>Linking</title>
+</head>
+
+<body>
+
+	<header>
+		
+	<h1>Linking</h1>
+
+		<p>Linking layers means you can share layer attributes between layers and have them all update simultaneously if any one of the linked layers&apos; attributes is altered.</p>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/layers_linked_before.jpg" alt="Linking layers before" /><div><img src="../../../shared/layers_linked_after.jpg" alt="Linking layers after" /></div>
+		</div>
+		<figcaption>Linked HSL adjustment layers applied to all balloons allow them to be recolored simultaneously by changing a single setting.</figcaption>
+	</figure>
+			
+	</header>
+	
+
+	<section class="about">
+	<h2>About linking</h2>
+
+	<p>By default, layer attributes are shared when linking. Some layers have common attributes such as blend mode and opacity while other layers have attributes unique to the layer type, e.g. an adjustment layer or filter layer. For example, an HSL adjustment layer can be synchronized with another HSL adjustment layer but not with a White Balance adjustment layer; their common blend mode and opacity can be shared however.</p>
+	
+	<h3>About unlinking</h3>
+	<p>There may be an occasion where you might want to selectively unlink an attribute from a specific linked layer, giving it its own independent setting. For example, if you wanted a linked Gaussian Blur live filter layer to share the same attributes as other linked Gaussian Blur live filter layer, but not its Blend mode settings, you can unlink this attribute.</p>
+
+	<p>Relinking simply adopts the same attribute as all other linked layers&mdash;the reverse of unlinking.</p>
+			
+	<h3>About linked layer attributes</h3>
+	
+	<p>The layer attributes are different depending on the type of layer. For a full list of linkable attributes, see <a href="../Panels/linksPanel.html">Links panel</a>.</p><!-- Needs to include transform	 --><figure>
+			<p><img src="../../images/panel_links.png" class="responsive panel" alt="Links panel" /></p>
+			<figcaption>The Links panel showing the link attributes for a selected Gaussian Blur linked layer (the Blending mode &amp; ranges are unlinked for the layer).</figcaption>
+		</figure>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To create linked layers:</summary>
+			<ol>
+				<li>Select the layer(s) to be linked.</li>
+				<li>On the <span class="ui">Layer</span> menu, select <span class="ui">Duplicate Linked</span>.</li>
+			</ol>
+			
+		<p><img src="../../../shared/ui/LayersTabLinkedIcon.png" class="tool heading" width="18" height="18" alt="Linking" /> To indicate linkage, linked layers on the <span class="ui">Layers</span> panel will show a clickable <span class="ui">Is Linked</span> icon on both the original and duplicated layer.</p>
+
+		</details>
+
+		<details open="open">
+			<summary>To view linked layer attributes:</summary>
+			<ol>
+				<li>Click the <span class="ui">Is Linked</span> icon on any linked layer.</li>
+				<li>On the now displayed <span class="ui">Links</span> panel, review which attributes associated with the layer.</li>
+			</ol>
+
+			<aside class="box tip">
+				<p><img src="../../../shared/ui/LayersTabLinkedIcon.png" class="tool heading" width="18" height="18" alt="Linking" /> Hover over the <span class="ui">Is Linked</span> icon to see that layer&apos;s unlinked attributes.</p>
+			</aside>
+
+			<aside class="box tip">
+				<p><img src="../../../shared/ui/previousSpread.png" class="tool heading" width="18" height="18" alt="Select previous" /> <img src="../../../shared/ui/nextSpread.png" class="tool heading" width="18" height="18" alt="Select next" /> Use <span class="ui">Select previous</span> and <span class="ui">Select next</span> to navigate between linked layers. This is useful to review the unlink status of each linked layer&apos;s attributes in turn.</p>
+			</aside>
+			
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/unlinkGutters.png" class="tool heading" width="18" height="18" alt="Unlink linked layer attributes" /> To unlink one or all linked layer attributes:</summary>
+			<ul>
+				<li>On the <span class="ui">Links</span> panel, click <span class="ui">Unlink</span> on a layer attribute. To unlink all attributes at the same time, click <span class="ui">Unlink</span> in the layer type header, e.g. Gaussian Blur.</li>
+			</ul>
+
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/LayersTabLinkedIcon.png" class="tool heading" width="18" height="18" alt="Linking" /> <img src="../../../shared/ui/linkdrop.png" class="tool heading" width="18" height="18" alt="Link Drop" /> To relink linked layer attributes:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, click the <span class="ui">Is Linked</span> icon on the &apos;source&apos; linked layer to reveal the <span class="ui">Links</span> panel.</li>
+				<li>Drag the layer whose attribute you want to relink from the <span class="ui">Layers</span> panel to the Link Drop icon in the Links panel. The cursor changes to a curved arrow when over the icon.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/linksPanel.html">Links panel</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

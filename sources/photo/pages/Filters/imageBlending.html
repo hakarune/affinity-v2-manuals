@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	
+	<meta name="keywords" content="compositing, composite" />
+	<meta name="description" content="Blend one image into another." />
+	<title>Apply Image</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Apply Image</h1>
+		<p>Apply Image lets you composite images together on the same layer and use a number of expressions for advanced channel blending.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/blendImage_before.png" alt="Before" /><div><img src="../../../shared/blendImage_after.png" alt="After" /></div>
+			</div>
+			<figcaption>Blending a fashion model&apos;s photo with a transparent overlay.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About Apply Image</h2>
+
+		<p>Apply Image lets you blend a layer from a source image into a target image&apos;s layer. The images are composited into a single layer. Channel expressions and blend modes are available to composite the layers.</p>
+		<p>The source image can be scaled automatically to the target image horizontally, vertically or both, avoiding having to size the images equally first.</p>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+		<summary>To blend two images:</summary>
+			<ol>
+				<li>Open your target image.</li>
+				<li>From the <span class="ui">Layers</span> panel, select the layer that you want to blend the source image with.</li>
+				<li>From the <span class="ui">Filters</span> menu, select <span class="ui">Apply Image</span>.</li>
+				<li>Click <span class="ui">Load Image</span> and navigate to, then select the source image to import. If the image is another layer within your document, you can also click-drag it onto the dialog box to use it.</li>
+				<li>(Optional) Check the <span class="ui">Equations</span> option in order to enable channel blending.</li>
+				<li>(Optional) Set the <span class="ui">Opacity</span> level to control how transparent the imported image appears.</li>
+				<li>(Optional) Select a <span class="ui">Blend Mode</span> to alter how the source image&apos;s colors blends with the target image. Select from the pop-up menu.</li>
+				<li>(Optional) Uncheck <span class="ui">Scale Horizontal To Fit</span> to retain the imported images native width. When checked, the image is stretched/shrunk to the main image. Uncheck <span class="ui">Scale Vertical To Fit</span> to retain native height.</li>
+				<li>Click <span class="ui">Apply</span>.</li>
+			</ol>
+
+		</details>
+
+
+		<details open="open">
+		<summary>To use channel expressions:</summary>
+			<ol>
+				<li>With the <span class="ui">Apply Image</span> dialog open, either load an image or choose <span class="ui">Use Current Layer As Source</span> to blend the image with itself.</li>
+				<li>Check the <span class="ui">Equations</span> option in order to enable channel blending.</li>
+				<li>Choose a color space to blend in with the <span class="ui">Equation Color Space</span> pop-up menu.</li>
+				<li>Now use the available expressions to blend channel information. Some expressions include:<ul>
+						<li>Use <span class="ui">D</span>+<span class="ui">Channel</span> to specify a destination image channel (the original layer). E.g., <span class="ui">DB</span> for <span class="ui">Destination Blue</span> channel.</li>
+						<li>Use <span class="ui">S</span>+<span class="ui">Channel</span> to specify a source image channel (the image you have loaded in). E.g., <span class="ui">SR</span> for <span class="ui">Source Red</span> channel.</li>
+						<li>Use +, -, *, / to add, subtract, multiply or divide respectively. E.g., <span class="ui">SR/SG*SB</span> to divide <span class="ui">Source Red</span> by <span class="ui">Source Green</span> and then multiply by <span class="ui">Source Blue</span>.</li>
+					</ul>
+				</li>
+			</ol>
+
+		</details>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_applyimage_channel_before.jpg" alt="Before" /><div><img src="../../../shared/filter_applyimage_channel_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Removing a yellow color cast using channel expressions.</figcaption>
+		</figure>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/layerBlendModes.html">Layer blending</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

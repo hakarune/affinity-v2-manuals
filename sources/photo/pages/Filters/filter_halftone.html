@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Halftone simulates continuous tone reproduction through the use of various techniques." />
+	<title>Halftone</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Halftone</h1>
+
+		<p>The Halftone filter simulates the look of continuous tone through a choice of screen types.</p>
+
+		<figure>
+			<div class="comparison vertical"><img src="../../../shared/filter_halftone_before.jpg" alt="Before" /><div><img src="../../../shared/filter_halftone_after.jpg" alt="After" /></div>
+			</div>
+		</figure>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+
+	</header>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Screen</span>&mdash;provides a choice of how the continuous tone is generated from <span class="ui">Monochrome</span>, <span class="ui">Color</span>, <span class="ui">Line</span> or <span class="ui">Circular</span>.</li>
+			<li><span class="ui">Dot</span>&mdash;determines the operator used to generate the dot tone. Choose from <span class="ui">Cosine</span> (smooth) or <span class="ui">Round</span> (sharp). Only applicable when <span class="ui">Screen</span> is set to <span class="ui">Monochrome</span> or <span class="ui">Color</span>.</li>
+			<li><span class="ui">Cell Size</span>&mdash;dictates the size of each individual dot, line or circle that makes up the continuous tone.</li>
+			<li><span class="ui">Contrast</span>&mdash;increases or decreases the tonal contrast between each cell.</li>
+			<li><span class="ui">Grey Component Replacement</span>&mdash;(Color screen type only) controls the contrast of areas between color cells.</li>
+			<li><span class="ui">Under Color Removal</span>&mdash;(Color screen type only) controls the influence of the color cells. Increase to lessen their influence and desaturate the image.</li>
+			<li><span class="ui">Screen Angle</span>&mdash;changes the direction of the tone reproduction.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filter_voronoi.html">Voronoi Filter</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

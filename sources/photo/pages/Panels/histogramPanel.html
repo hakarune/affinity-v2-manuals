@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panels" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Histogram panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Histogram panel</h1>
+
+		<p>The <span class="ui">Histogram</span> panel shows the distribution of Red, Green and Blue values for the image, layer, or current selection.</p>
+
+	</header>
+
+	<section class="about">
+		<h2>About histograms</h2>
+
+		<p>The panel gives a valuable &apos;heads up&apos; of the colors present in your image, which is useful for deciding if color or tonal correction is needed.</p>
+
+		<figure>
+			<p><img src="../../images/panel_histogram.png" class="responsive" width="375" alt="Histogram panel" /></p>
+			<figcaption>The Histogram panel showing pixel distribution in an RGB image (showing advanced details).</figcaption>
+		</figure>
+
+		<p>The light blue values indicate the overlap of the RGB channels (not the luminosity). Purple represents where the red and blue channel representations overlap.</p>
+		
+		<p>In LAB or CMYK color modes, channels for that mode are displayed instead of Red, Green and Blue (RGB).</p>
+		
+		<p>Color distribution statistics can optionally be presented at the bottom of the panel to provide further color information. Your cursor can be moved around the histogram, displaying the pixel count at the color level (0-255) your cursor is currently placed at.</p>
+
+		<p><span class="ui">Min/Max</span> inputs can also be presented at the bottom of the panel to constrain or expand the tonal range the histogram represents. This is especially useful for unbounded 32-bit documents where you may want to either represent more out of range information or clip it further.</p>
+
+		<aside class="box note">
+			<p>The yellow triangle on the histogram can be clicked to display color distribution levels in finer detail.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>Luminosity is represented on the <span class="ui">Scope</span> panel (Intensity Waveform display)&mdash;an IRE readout and an abstract representation of your image is provided.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To display specific channels:</summary>
+
+			<ul>
+				<li>Select the <span class="ui">All Channels</span> pop-up menu, and select a specific channel.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary>To show the histogram for a selected layer or selection:</summary>
+
+			<ol>
+				<li>Select a layer or make a selection.</li>
+				<li>Check <span class="ui">Layer</span> or <span class="ui">Marquee</span>, respectively.</li>
+			</ol>
+
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> To display histogram statistics and min/max inputs:</summary>
+
+			<ul>
+				<li>(Optional) Click Panel Preferences and choose the <span class="ui">Advanced</span> option.</li>
+			</ul>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Clr/ClrModels.html">Color models</a></li>
+			<li><a href="../Panels/scopePanel.html">Scope panel</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

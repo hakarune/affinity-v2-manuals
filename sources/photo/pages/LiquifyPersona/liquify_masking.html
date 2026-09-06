@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="liquify, masking" />
+	<meta name="description" content="Protect parts of an image from warp effects applied in Liquify Persona by applying a mask." />
+	<title>Masking in Liquify Persona</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/liquify_persona_on.png" class="tool heading" width="18" height="18" alt="Liquify Persona" /> Masking in Liquify Persona</h1>
+
+		<p>Protect parts of an image from warp effects applied in Liquify Persona by applying a mask.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/liquify_mask_before.png" alt="Before" /><div><img src="../../../shared/liquify_mask_after.png" alt="After" /></div>
+			</div>
+			<figcaption>Before and after liquify effect applied, with mask in place (shown in red).</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>Freezing areas to make a mask</h2>
+
+		<p>There may be areas of your image which you want to protect from being warped by the Liquify tools. You can do this by &apos;freezing&apos; those areas using the Liquify Freeze Tool. Frozen areas can be thawed using the Liquify Thaw Tool, if you wish them to be subject to warps once more.</p>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/liquify_freeze_tool.png" class="tool" width="18" height="18" alt="Liquify Freeze Tool" /> <img src="../../../shared/ui/mask_all.png" class="tool" width="18" height="18" alt="Mask All" /> To apply a mask:</summary>
+
+			<p>Do one of the following:</p>
+			<ul>
+				<li>With the <span class="ui">Liquify Freeze Tool</span> selected, drag on the page to select areas to be masked.</li>
+				<li>On the Toolbar, select <span class="ui">Mask All</span> to apply a mask to the entire image.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/liquify_thaw_tool.png" class="tool" width="18" height="18" alt="Liquify Thaw Tool" /> <img src="../../../shared/ui/clear_mask.png" class="tool" width="18" height="18" alt="Clear Mask" /> To remove areas of a mask:</summary>
+
+			<p>Do one of the following:</p>
+			<ul>
+				<li>With the <span class="ui">Liquify Thaw Tool</span> selected, drag on the page to remove areas from a mask.</li>
+				<li>On the Toolbar, select <span class="ui">Clear Mask</span> to remove a mask entirely from the image.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/invert_mask.png" class="tool" width="18" height="18" alt="Invert Mask" /> To invert masked areas:</summary>
+
+			<ul>
+				<li>On the Toolbar, select <span class="ui">Invert Mask</span>.</li>
+			</ul>
+		</details>
+
+		<aside class="box tip">
+			<p>To mask (or freeze) large areas of your image, do one of the following:</p>
+			<ul>
+				<li>On the Toolbar, select <span class="ui">Mask All</span> and then use the <span class="ui">Liquify Thaw Tool</span> to remove parts of the mask.</li>
+				<li>Use the <span class="ui">Liquify Freeze Tool</span> to select areas <em>to be warped</em> and then on the Toolbar, select <span class="ui">Invert Mask</span>.</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="liquify_panelMask.html">Mask panel</a></li>
+			<li><a href="liquify.html">Warping using Liquify Persona</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

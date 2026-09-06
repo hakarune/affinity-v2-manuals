@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="slices, 2x, 3x, export, png, jpg, gif, tiff, raster, Persona" />
+	<meta name="description" content="Create export areas of all sizes from any part of your composition." />
+	<title>Working with slices</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Working with slices</h1>
+	
+		<p>Create export areas of all sizes from any part of your composition.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/slices_export.jpg" alt="Slices in Export Persona" /></div>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/exported.png" class="tool" width="16" height="16" alt="Export" /> To export objects as slices:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select a layer, group or object and click <span class="ui">Create Slice</span>.</li>
+				<li>Do one of the following:<ul>
+						<li>On the <a href="exportOptionsPanel.html">Export Options panel</a>, adjust export settings as appropriate.</li>
+						<li>Jump to the <a href="slicesPanel.html">Slices panel</a>, expand the slice entry and alter the export format or choose an <span class="ui">Export preset</span> from the pop-up menu (PNG, JPEG, and Apple icon design presets only).</li>
+					</ul>
+				</li>
+				<li>(Optional) On the <a href="slicesPanel.html">Slices panel</a>, click the + icon under the export format entry to add an additional graphic export format.</li>
+				<li>(Optional) On the <a href="slicesPanel.html">Slices panel</a>, click the indented + icon under the export size entries to add increasing levels of resolution (2x, 3x, etc.) to the export format.</li>
+				<li>Do one of the following, to control what gets exported:<ul>
+						<li>Select <span class="ui">Click to export all formats for this item</span>.</li>
+						<li>Select <span class="ui">Click to export this format</span>. This exports all sizes specified for the selected slice.</li>
+						<li>Select <span class="ui">Click to export this size</span>. This exports a specific export format for a slice at a specific size.</li>
+						<li>Click <span class="ui">Export Slices (<i>n</i>)</span> to export all formats and sizes for all checked slices in the Slices panel.</li>
+					</ul>
+				</li>
+				<li>Navigate to and select the storage folder for the exported image(s) and then click <span class="ui">Export</span>.</li>
+				<li>(Optional) On the <span class="ui">Slices</span> panel, select <span class="ui">Continuous</span> if you want to automatically re-export export areas if the document is subsequently changed. This option is only available if <span class="ui">Export Slices (<i>n</i>)</span> was selected above.</li>
+			</ol>
+		</details>
+	</section>
+		
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/slice_tool.png" class="tool" width="16" height="16" alt="Slice Tool" /> To export drawn slices:</summary>
+			<ol>
+				<li>Select the <span class="ui">Slice Tool</span>.</li>
+				<li>Drag on the page to select areas.</li>
+				<li>Repeat step two onward from the procedure above, as required.</li>
+			</ol>
+		</details>
+	</section>
+		
+	<section class="howto">
+		<details open="open">
+			<summary>To set default export options:</summary>
+			<ol>
+				<li>On the <span class="ui">Export Options</span> panel, select the <span class="ui">Defaults</span> tab.</li>
+				<li>Adjust settings as appropriate.</li>
+				<li>Jump back to the <span class="ui">Selection</span> tab when finished.</li>
+			</ol>
+			<p>The settings will be used when your next slice is created.</p>
+		</details>
+	</section>
+
+	<section class="howto">
+		<details>
+			<summary><img src="../../../shared/ui/slice_tool.png" class="tool" width="18" height="18" alt="Slice Tool" /> To reset the dimensions of a manually resized export area created from a layer:</summary>
+			<ol>
+				<li>With the <span class="ui">Slice Tool</span>, select a resized export area.</li>
+				<li>On the context toolbar, select <span class="ui">Revert to auto sized</span>.</li>
+			</ol>
+		</details>
+	
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the Slice Tool, the following modifier keys can be used:</p>
+			<ul>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> constrains the area&apos;s proportions to a square.</li>
+				<li>The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> if pressed as you drag out a slice area, draws from the center of the original drag position (can be combined with the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span>).</li>
+			</ul>
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="slicesPanel.html">Slices panel</a></li>
+			<li><a href="../Sharing/export.html">Export</a></li>
+			<li><a href="exportPersona_layersPanel.html">Layers panel (Export Persona)</a></li>
+			<li><a href="exportOptionsPanel.html">Export Options panel</a></li>
+			<li><a href="exportPersona.html">Export Persona</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

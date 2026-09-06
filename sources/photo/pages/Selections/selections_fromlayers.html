@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="raster, marquee, deselect, invert, pixel, path to selection, cutouts, cutting out, polygon selection, luminance, luminosity" />
+	<meta name="description" content="Create pixel selections for focused editing of specific regions." />
+	<title>Pixel selections from layers/luminosity</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Pixel selections from layers</h1>
+
+		<p>You can create pixel selections based on layers (or layer groups) or layer luminosity.</p>
+	</header>
+	
+	<section class="about">
+	
+		<figure>
+			<div class="single"><img src="../../../shared/selection_from_layers.jpg" class="responsive" alt="Selection from layer" /></div>
+			<figcaption>Example of a pixel selection from layer intensity (luminosity).</figcaption>
+		</figure>
+		
+		<p>If the layer or layer group contains areas which have an opacity lower than 100%, these are partially selected. This partial selection is based on the percentage of their opacity (i.e. areas of 20% opacity will be selected by 20%). Transparent areas will not be included in the selection.</p>
+		
+		<aside class="box note">
+			<p>A selection marquee only appears around areas which are selected by more than 50%. Areas selected by 50% or less will not display a marquee at their edges.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To create a pixel selection from layer contents:</summary>
+			<p>Do one of the following:</p>
+				<ul>
+					<li>On the <span class="ui">Layers</span> panel, select a layer. From the <span class="ui">Select</span> menu, select <span class="ui">Selection from Layer</span>.</li>
+					<li>On the <span class="ui">Layers</span> panel, click the chosen layer&apos;s thumbnail while pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To create a pixel selection from layer intensity (luminosity):</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>On the <span class="ui">Select</span> menu, choose <span class="ui">Selection from Layer Intensity</span>.</li>
+				<li>On the <span class="ui">Layers</span> panel, click the chosen layer&apos;s thumbnail while pressing the <span class="key ALT-TAG"></span> and <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>s.</li>
+			</ul>
+			
+		</details>
+
+		<details open="open">
+			<summary>To add a layer&apos;s contents to an existing selection:</summary>
+				<ul>
+					<li>On the <span class="ui">Layers</span> panel, click the chosen layer&apos;s thumbnail while pressing the <span class="key SHIFT-TAG"></span> and <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>s.</li>
+				</ul>
+		</details>
+
+		<details open="open">
+			<summary>To add a layer&apos;s luminosity information to an existing selection:</summary>
+				<ul>
+					<li>On the <span class="ui">Layers</span> panel, click the chosen layer&apos;s thumbnail while pressing the <span class="key SHIFT-TAG"></span>, <span class="key ALT-TAG"></span> and <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>s.</li>
+				</ul>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selections_modify.html">Modifying pixel selections</a></li>
+			<li><a href="selections_refine.html">Refining pixel selection edges</a></li>
+			<li><a href="selections_range.html">Range pixel selections</a></li>
+			<li><a href="selections_sampled.html">Sampled color pixel selections</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

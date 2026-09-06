@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="channels, editing, selecting" />
+	<meta name="description" content="Edit channels to rework your compositions." />
+	<title>Editing channels</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Editing channels</h1>
+	
+		<p>You can select one or more channels for further editing. The selected channel ready for editing is indicated on the panel by both the <span class="ui">Visible</span> as well as the <span class="ui">Editable</span> icons.</p>
+		
+		<figure>
+			<p><img src="../../images/spare-channels-desktop.png" class="responsive ui" alt="Separated out color channels of a RGB image." /></p>
+			<figcaption>(A) Composite Green channel selected and editable. (B) Spare Channel created and renamed.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About editing channels</h2>
+		<p>The Channels panel displays a list of channels based on current document information and available for editing. Pixel Selection will always appear at the bottom of the panel even when no selection is active.</p>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/channel_visible.png" class="tool" width="16" height="16" alt="Visible Channel" /> To hide/show channels:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>From the <span class="ui">Channels</span> panel, click <span class="ui">Visible</span> on the channel entry.</li>
+				<li>From the <span class="ui">Channels</span> panel, <span class="CLICK-TAG"></span>-click the channel you wish to target and select <span class="ui">Toggle Visible</span> from the pop-out menu.</li>
+			</ul>
+			
+		</details>
+		
+		<details open="open">
+		<summary><img src="../../../shared/ui/channel_editable.png" class="tool" width="16" height="16" alt="Editable Channel" /> To protect channels from editing:</summary>
+		<p>Do one of the following:</p>
+		<ul>
+			<li>From the <span class="ui">Channels</span> panel, click <span class="ui">Editable</span> on the channel entry. A grayed out icon means the channel is no longer editable.</li>
+			<li>From the <span class="ui">Channels</span> panel, <span class="CLICK-TAG"></span>-click the channel you wish to target and select <span class="ui">Toggle Editable</span> from the pop-out menu.</li>
+		</ul>
+
+		</details>
+	</section>
+
+	<section class="about">
+		<h2>Editing spare channels</h2>
+		<p>The spare channel that stores your mask can be isolated for editing. This lets you paint and erase directly on the spare channel, as well as apply filters such as Gaussian Blur for softer mask edges.</p>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary> To edit individual channels:</summary>
+			<ol>
+				<li>From the <span class="ui">Channels</span> panel, <span class="key CLICK-TAG"></span>-click each of the <span class="ui">Background</span> channels in turn and select <span class="ui">Create Spare Channel</span>.</li>
+				<li>(Optional) Rename the newly created spare channels.</li>
+				<li> <span class="key CLICK-TAG"></span>-click the spare channel entry to isolate it and select <span class="ui">Load to Pixel Selection</span>.</li>
+				<li>(Optional) Select another spare channel and <span class="key CLICK-TAG"></span>-click and select <span class="ui">Subtract From Pixel Selection</span>. This helps if there is an undesired overspill of color onto areas.</li>
+				<li>Add an Adjustment of choice.</li>
+				<li>From the top menu, choose <span class="ui">Select</span>&gt;<span class="ui">Deselect</span>.</li>
+				<li>Return to the Adjustment and modify it further.</li>
+			</ol>
+		
+		<aside class="box tip">
+			<p> Before editing a spare channel, you have the option of duplicating the initial spare channel. This procedure is often used to preserve an unedited backup copy of a spare channel before editing the original.</p>
+		</aside>
+		
+		</details>
+
+		<details>
+			<summary>To rename or duplicate a spare channel:</summary>
+			<ul>
+				<li><span class="key CLICK-TAG"></span>-click the spare channel entry and select the option.</li>
+			</ul>
+			<p>The duplicate is stored below the original as a new spare channel entry.</p>
+		</details>
+
+		<details>
+			<summary>To apply a Quick Mask to a spare channel&apos;s pixel selection:</summary>
+			<ol>
+				<li><span class="key CLICK-TAG"></span>-click the spare channel entry and select <span class="ui">Load To Pixel Selection</span>.</li>
+				<li>Click the Pixel Selection&apos;s thumbnail.</li>
+			</ol>
+
+		<aside class="box tip">
+			<p>The <span class="ui">Quick Mask</span> option on the Toolbar will be enabled.</p>
+		</aside>
+
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Channels/usingChannels.html">Using channels</a></li>
+			<li><a href="../Channels/spareChannels.html">Spare channels</a></li>
+			<li><a href="../Panels/channelsPanel.html">Channels panel</a></li>
+			<li><a href="../Selections/selections_create.html">Creating pixel selections</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="brushes, painting, raster, sub-brush, multi-brush" />
+	<meta name="description" content="Use multi-brushes to combine several brushes into a single brush." />
+	<title>Multi-brushes</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Multi-brushes</h1>
+	
+		<p>This feature allows any brush to have one or more additional <em>sub-brushes</em> attached to it. The sub-brushes will draw over the top of the base brush as the stroke is applied.</p>
+ 
+		<figure>
+			<p><img src="../../../shared/sub_brushes.png" width=411 class="responsive" alt="Sub-brush examples" /></p>
+			<figcaption>Single brush strokes (left) and multi-brush stroke equivalent (right).</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+	
+		<h2>About multi-brushes</h2>
+		
+		<p>This feature is intended to introduce more nib variety, randomness and character to your brush stroke appearance (avoiding repetitive texture tiling) so the results are more varied and natural. Each sub-brush can have a fully separate and customizable set of dynamics. You can control where the sub-brushes are drawn on the stroke and how they blend with the main brush.</p>
+
+		<p>Sub-brushes can be created from an existing brush or as a new brush by accessing the <span class="ui">Sub Brushes</span> tab in the Brush - Editing dialog (double-click a pixel brush in the panel to view). You can drag and drop existing brushes from the same <span class="ui">Brushes</span> panel category directly into the tab&apos;s <span class="ui">Sub Brushes</span> list. Change the order in which they are added to the main brush by dragging them up or down in the list.</p>
+
+		<x-osx>
+			<aside class="box note">
+				<p>For best performance, use Metal acceleration (if available).</p>
+			</aside>
+		</x-osx>
+		
+		<x-win32>
+			<aside class="box note">
+				<p>For best performance, use a computer with high-end QuadCore CPUs (or better).</p>
+			</aside>
+		</x-win32>
+		
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/manager.png" alt="Edit Brush" /> To create a multi-brush:</summary>
+
+			<ol>
+				<li>On the <span class="ui">Brushes</span> panel, create a main brush or duplicate a selected brush.</li>
+				<li>Select the new brush and click <span class="ui">Edit Brush</span>.</li>
+				<li>Click the <span class="ui">Sub Brushes</span> tab.</li>
+				<li>Click <span class="ui">Add Bitmap</span>, select a nib file for your sub brush and click <span class="ui">Open</span>.</li>
+				<li>Double-click the brush entry appearing in the window to launch the Sub-Brush Editor.</li>
+				<li>Edit the sub-brush settings as you would for your base brush, then click <span class="ui">Close</span>.</li>
+				<li>In the Brush Editing dialog, change sub-brush settings to control:<ul>
+						<li><span class="ui">Drawing</span>&mdash;controls where the sub-brush is drawn in relation to the main brush.</li>
+						<li><span class="ui">Blending</span>&mdash;controls how the sub-brush blends with the main brush.</li>
+						<li><span class="ui">Sync size</span>&mdash;when checked, sets the default width of the stroke to match that of the main brush.</li>
+						<li><span class="ui">Sync spacing</span>&mdash;when checked, sets the distance between each nozzle point to match that of the main brush.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<details open="open">
+				<summary>To create a sub-brush from an existing brush do the following:</summary>
+				<ol>
+					<li>On the <span class="ui">Brushes</span> panel, double-click the brush you&apos;d like to modify.</li>
+					<li>On the pop-up dialogue, switch to the <span class="ui">Sub Brushes</span> tab.</li>
+					<li>(Optional) Select <span class="ui">Add Bitmap</span> if you would like to create a sub-brush based on an image texture or <span class="ui">Add Round</span> should you wish to add a rounded nozzle brush, respectively.</li>
+					<li>(Optional) From the <span class="ui">Brushes</span> panel, drag another brush you would like to base your sub-brush on.</li>
+				</ol>
+			</details>
+
+			<aside class="box note">
+				<p>You can add additional sub-brushes with the topmost sub-brush affecting the lower sub-brush, and the resulting stroke affecting the main brush. Sub-brushes can be reordered by dragging within the Sub Brushes window.</p>
+			</aside>
+	
+		</details>
+
+	</section>
+ 
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_paintBrush.html">Paint Brush Tool</a></li>
+			<li><a href="../Panels/brushesPanel.html">Brushes panel</a></li>
+			<li><a href="pixel_modify.html">Modifying pixel brushes</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=operations">Keyboard shortcuts for painting operations</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>
+

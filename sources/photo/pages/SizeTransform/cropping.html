@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="cropping, crop" />
+	<meta name="description" content="Use cropping to remove unwanted areas of your image." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src: "../../../shared/crop_portrait_unconstrained.jpg", alt: "Unconstrained Portrait Crop" },
+				tab2: { src: "../../../shared/crop_landscape_unconstrained.jpg", alt: "Unconstrained Landscape Crop" },
+				tab3: { src: "../../../shared/crop_original.jpg", alt: "Original Crop" },
+				tab4: { src: "../../../shared/crop_16x9.jpg", alt: "Custom Ratio 16x9 Crop" },
+				tab5: { src: "../../../shared/crop_resample_6x4.jpg", alt: "Resample (6inx4in; 300dpi)" },
+			},
+			img2: {
+				tab1: { src: "../../../shared/crop_thirds.png", alt: "Thirds Crop" },
+				tab2: { src: "../../../shared/crop_goldenSpiral.png", alt: "Golden Spiral" },
+				tab3: { src: "../../../shared/crop_diagonals.png", alt: "Diagonals" },
+				tab4: { src: "../../../shared/crop_phiGrid.png", alt: "Phi Grid" },
+			}
+		}
+		
+	</script>
+	<title>Cropping and straightening</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+		<h1>Cropping and straightening</h1>
+		<p>Cropping removes unwanted areas of your image for either practical reasons or better composition. Straightening simply means correcting a crooked image.</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About cropping</h2>
+
+		<p>Use cropping for practical reasons or aesthetic reasons equally. For instance, an unwanted object or person can be excluded which might otherwise detract from your desired image. Aesthetically, you can balance image content in your composition so that it is more appealing to the eye.</p>
+		<p>Affinity Photo 2 lets you crop unconstrained or to original or custom aspect ratios. For print or web delivery, you can specify common print sizes (e.g., 6&quot; x 4&quot;) or create pixel-accurate custom crop regions, respectively.</p>
+		<p>If <a href="../DesignAids/snapping.html">snapping</a> is active, the crop area can snap to page edges and <a href="../DesignAids/guides.html">guides</a> when being resized or moved.</p>
+
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Unconstrained (Portrait)</p></div>
+				<div class="tab"><p>Unconstrained (Landscape)</p></div>
+				<div class="tab"><p>Original Ratio</p></div>
+				<div class="tab"><p>Custom Ratio (16x9)</p></div>
+				<div class="tab"><p>Resample (6inx4in; 300 dpi)</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/crop_portrait_unconstrained.jpg" class="responsive" alt="Unconstrained Portrait Crop"></div>
+		</div>
+		
+		<aside class="box note">
+			<p>The Crop Tool affects the entire canvas, which is typically the native dimensions of an opened image. When a crop is applied, the regions outside the drawn crop area will be hidden. However, cropping is non-destructive, which means you can uncrop your image at a later date.</p>
+		</aside>
+
+		<h3>Crop modes</h3>
+		<p>When cropping, you may wish to work unconstrained or to specific ratios or absolute dimensions. These are some of the options available:</p>
+			<ul>
+				<li><span class="ui">Unconstrained</span>&mdash;The crop area can be sized freely.</li>
+				<li><span class="ui">Original Ratio</span>&mdash;Retains your image&apos;s original aspect ratio.</li>
+				<li><span class="ui">Custom Ratio</span>&mdash;Uses the adjacent input boxes to set the ratio&mdash;width in the left box, height in the right box. Can be saved as a preset.</li>
+				<li><span class="ui">Resample</span>&mdash;Use the adjacent <span class="ui">Width</span> and <span class="ui">Height</span> settings to set dimensions for the crop area at your chosen measurement <span class="ui">Units</span> and <span class="ui">DPI</span>. This is a great way to crop to a chosen print size (e.g., 10in x 8in) with print-ready resolution, e.g. a DPI of 300.</li>
+			</ul>
+		<p>You can crop to absolute pixel dimensions by entering pixel width and height values adjacent to the <span class="ui">Mode</span> setting.</p>
+
+		<h3>Straighten images</h3>
+		<p>When activated, dragging on the page will orient the photo to align it with the drawn line. We recommend using a reference within your photo such as the horizon or the edge of a building. When straightening or rotating an image, the crop box automatically adjusts to fit the new composition excluding any transparent areas.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/straighten_before.jpg" alt="Straightening before" /><div><img src="../../../shared/straighten_after.jpg" alt="Straightening after" /></div>
+			</div>
+			<figcaption>Before and after straightening an image.</figcaption>
+		</figure>
+
+		<h3>Compositional overlays</h3>
+		<p>If you&apos;re cropping to remove unwanted subject matter in your image, compositional overlays can be ignored. However, if you&apos;re looking for better composition, one of several overlays can be used. The examples below show a post-crop overlay applied to aid composition.</p>
+			
+		<div class="tabbedImage" id="img2">
+			<div class="tabStrip">
+				<div class="tab"><p>Thirds Grid</p></div>
+				<div class="tab"><p>Golden Spiral</p></div>
+				<div class="tab"><p>Diagonals</p></div>
+				<div class="tab"><p>Phi Grid</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/crop_thirds.png" class="responsive" alt="Thirds Crop"></div>
+		</div>
+		
+			<ul>
+				<li><span class="ui">Thirds Grid</span>&mdash;Shown by default, the Rule of Thirds grid&apos;s intersection lines can be positioned over an object of interest in your image.</li>
+				<li><span class="ui">Golden Spiral</span>&mdash;Size and position the grid so the inner origin of the spiral is centered over the subject of interest; this balances the composition naturally. Also known as Fibonacci Spiral or divine proportions.</li>
+				<li><span class="ui">Diagonals</span>&mdash;Position two objects of interest under the diagonal line intersections to balance the objects against each other.</li>
+				<li><span class="ui">Phi Grid</span>&mdash;Unlike the Rule of Thirds, this grid doesn&apos;t divide the frame into nine equal frames; instead, only the top and bottom segments are the same. Position the subject of interest within the center of the frame.</li>
+			</ul>
+
+	</section>
+
+	<section class="howto">
+		<details>
+		<summary><img src="../../../shared/ui/crop_tool.png" class="tool" width="18" height="18" alt="Crop Tool" /> To crop an image:</summary>
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel on the left, select the <span class="ui">Crop Tool</span>.</li>
+				<li>From the context toolbar, select a crop mode from the <span class="ui">Mode</span> pop-up menu.</li>
+				<li>Adjust the context toolbar settings.</li>
+				<li>Drag a corner, edge handle or anywhere on the edge to resize the grid to suit, then reposition the grid by dragging within it.</li>
+				<li>From the context toolbar, click <span class="ui">Apply</span> or press the <span class="key RETURN-TAG"></span> <span class="KEY-TAG"></span> to commit the crop.</li>
+			</ol>
+
+		</details>
+		
+		<details>
+			<summary>To reset your crop:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>Press the <span class="key ESC-TAG"></span> key.</li>
+				<li>On the context toolbar panel, click <span class="ui">Reset</span>.</li>
+			</ul>
+			
+		</details>
+
+		<details>
+				<summary><img src="../../../shared/ui/selection_brush_tool.png" class="tool heading" width="18" height="18" alt="Selection Brush Tool" /> <img src="../../../shared/ui/magic_wand_tool.png" class="tool heading" width="18" height="18" alt="Flood Select Tool" /> <img src="../../../shared/ui/rectangular_marquee_tool.png" class="tool heading" width="18" height="18" alt="Rectangular Marquee Tool" /> <img src="../../../shared/ui/elliptical_marquee_tool.png" class="tool heading" width="18" height="18" alt="Elliptical Marquee Tool" /> <img src="../../../shared/ui/column_marquee_tool.png" class="tool heading" width="18" height="18" alt="Column Marquee Tool" /> <img src="../../../shared/ui/row_marquee_tool.png" class="tool heading" width="18" height="18" alt="Row Marquee Tool" /> <img src="../../../shared/ui/free_hand_selection_tool.png" class="tool heading" width="18" height="18" alt="Freehand Selection Tool" /> To crop an image to selection:</summary>
+					<ol>
+						<li>From the <span class="ui">Tools</span> panel on the left, select any <span class="ui">Selection Tool</span>.</li>
+						<li>Draw out the selection to set the prospective crop area.</li>
+						<li>Select the <span class="ui">Crop Tool</span>.</li>
+						<li>(Optional) Adjust the context toolbar settings.</li>
+						<li>(Optional) Drag a corner or edge handle on the grid to resize the grid to suit, then reposition the grid by dragging within it.</li>
+						<li>From the context toolbar, click <span class="ui">Apply</span> or press the <span class="ui">Return</span> key to commit the crop.</li>
+					</ol>
+					
+			<aside class="box note">
+				<p>Conveniently, your selection is remembered even if you switch between tools during cropping.</p>
+			</aside>
+
+		</details>
+
+		<details>
+		<summary>To uncrop the cropped image:</summary>
+			<ul>
+				<li>From the <span class="ui">Document</span> menu, click <span class="ui">Unclip Canvas</span>.</li>
+			</ul>
+
+		</details>
+
+		<details>
+		<summary><img src="../../../shared/ui/crop_tool.png" class="tool" width="18" height="18" alt="Crop Tool" /> <img src="../../../shared/ui/straighten_cursor.png" width="30" height="30" alt="Straighten Tool" /> To straighten an image:</summary>
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel on the left, select the <span class="ui">Crop Tool</span>.</li>
+				<li>From the context toolbar, select <span class="ui">Straighten</span>.</li>
+				<li>Drag on the image to define the new alignment.</li>
+				<li>From the context toolbar, click <span class="ui">Apply</span>.</li>
+			</ol>
+
+		</details>
+
+		<details>
+		<summary><img src="../../../shared/ui/cogicon.png" class="tool heading" width="18" height="18" alt="Preset Manager" /> To save crop settings as a preset:</summary>
+			<ol>
+				<li>Adjust the context toolbar settings.</li>
+				<li>From the context toolbar, choose <img src="../../../shared/ui/cogicon.png" class="tool" width="12" height="12" alt="Preset Manager" /> <span class="ui">Presets</span>, click the <img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="More" /> menu and select <span class="ui">Create Preset</span>.</li>
+				<li>Type a name for the crop preset and (optional) choose a category to put it in, then click <span class="ui">Create</span>.</li>
+			</ol>
+
+		</details>
+
+		<details>
+		<summary><img src="../../../shared/ui/cogicon.png" class="tool heading" width="18" height="18" alt="Preset Manager" /> To delete a crop preset:</summary>
+			<ol>
+				<li>From the context toolbar, choose <img src="../../../shared/ui/cogicon.png" class="tool" width="12" height="12" alt="Preset Manager" /> <span class="ui">Presets</span>.</li>
+				<li>Right click a preset and choose <span class="ui">Delete Preset</span>.</li>
+			</ol>
+
+		</details>
+
+		<details>
+		<summary><img src="../../../shared/ui/cogicon.png" class="tool heading" width="18" height="18" alt="Preset Manager" /> To manage, import and export presets:</summary>
+			<ul>
+				<li>From the context toolbar, click <img src="../../../shared/ui/cogicon.png" class="tool" width="12" height="12" alt="Preset Manager" /> <span class="ui">Presets</span>. Click the <img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="More" /> menu, then select <span class="ui">Manage Presets</span>.<ul>
+						<li>To create a new preset category for custom presets, click <span class="ui">Create Category</span>. Type a category name then click <span class="ui">Create</span>.</li>
+						<li>To delete a preset, right click it and choose <span class="ui">Delete Preset</span>.</li>
+						<li>To restore the original presets if they have been altered or deleted, click <span class="ui">Restore Master Presets</span>.</li>
+						<li>To restore a single original preset to its default settings, right click the preset and choose <span class="ui">Revert user changes</span>.</li>
+						<li>To export a single preset, right click the preset and choose <span class="ui">Export preset</span>.</li>
+						<li>To export your custom presets to back them up, click <span class="ui">Export User Presets</span> and choose an export location and file name.</li>
+						<li>To import custom presets, click <span class="ui">Import Presets</span> and choose a valid <span class="ui">.aftoolpresets</span> file.</li>
+						<li>To filter presets based on type, click the <span class="ui">Filter</span> combo box and choose from the crop types available.</li>
+					</ul>
+				</li>
+			</ul>
+
+		</details>
+		
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>The following modifier keys can be used:</p>
+			<ul>
+				<li>Holding down <span class="key SHIFT-TAG"></span> while cropping in the <span class="ui">Unconstrained</span> mode constrains the current aspect ratio.</li>
+				<li>The left and right arrow <span class="KEY-TAG"></span>s can be used to nudge the area in single-pixel increments. Holding down <span class="key SHIFT-TAG"></span> while pressing the left and right arrow <span class="KEY-TAG"></span>s nudges the crop area in 10-pixel increments.</li>
+				<li class="osx">Holding down the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> and dragging on the page (not using handles) toggles the crop area overlay and enters the <span class="ui">Straighten</span> mode. When pressed while cropping using one of the handles, the tool&apos;s bounding box allows to recompose the image around its center.</li>
+				<li class="win32">Holding down the <span class="key CTRL-TAG"></span> and dragging on the page (not one of the handles) toggles the crop area overlay and enters the <span class="ui">Straighten</span> mode. When pressed while cropping using one of the handles, the tool&apos;s bounding box allows to recompose the image around its center.</li>
+				<li>You can quickly toggle between overlay modes by pressing <span class="ui">O</span>.</li>
+			</ul>
+			<p>These modifiers can be used in combination.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_crop.html">Crop Tool</a></li>
+			<li><a href="canvasSize.html">Changing canvas size</a></li>
+			<li><a href="../DesignAids/snapping.html">Snapping</a></li>
+			<li><a href="../DesignAids/guides.html">Guides</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

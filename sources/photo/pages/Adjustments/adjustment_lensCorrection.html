@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="raw, lens correction" />
+	<meta name="description" content="Fixes various types of lens distortion by straightening lines in an image." />
+	<title>Lens Correction</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Lens Correction</h1>
+		<p>Fixes various types of lens distortion by straightening and aligning lines in an image.</p>
+		<p>This adjustment is available on the <span class="ui">Lens</span> panel in <a href="../Raw/raw.html">Develop Persona</a>, where the appropriate lens profile is applied automatically if possible, or can be chosen manually.</p>
+		<p>In <span class="ui">Photo Persona</span>, you have the option to apply a Lens Correction filter that lets you manually select your camera and a lens profile.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_lensdistortion_before.jpg" alt="Before" /><div><img src="../../../shared/filter_lensdistortion_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+	</header>
+
+	<section class="about">
+		<p>Types of problems which can be fixed include:</p>
+		<ul>
+			<li>Barrel or pincushion distortion</li>
+			<li>Incorrect horizontal and/or vertical perspective</li>
+			<li>Angled horizons</li>
+		</ul>
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from Develop Persona:</p>
+		<ul>
+			<li><span class="ui">Lens Profile</span>&mdash;if the lens is supported in Affinity Photo 2&apos;s <a href="https://affin.co/rawlist" target="_blank">lens correction database</a>, distortion correction will automatically be applied<sup>1</sup>. You can manually choose a profile. If you wish not to apply the correction, however, you can uncheck this option.</li>
+			<li><span class="ui">Distortion</span>&mdash;controls the strength (and type) of distortion. Drag the slider to the left to remove barrel distortion (where straight edges are bowed outwards). Drag to the right to remove pincushion distortion (where straight edges a bowed inwards).</li>
+			<li><span class="ui">Horizontal</span>&mdash;controls an image&apos;s horizontal perspective. Drag the slider until horizontal lines become parallel.</li>
+			<li><span class="ui">Vertical</span>&mdash;controls an image&apos;s vertical perspective. Drag the slider until vertical lines become parallel.</li>
+			<li><span class="ui">Rotation</span>&mdash;sets the angle of the image. Drag the slider to the left to rotate counter-clockwise. Drag to the right to rotate clockwise.</li>
+			<li><span class="ui">Scale</span>&mdash;sets the size of the image from the center. This is useful for removing unwanted transparent areas which appear after applying the settings above.</li>
+		</ul>
+		
+		<p><sup>1</sup> This depends on your chosen settings in <span class="ui">Develop Assistant Settings</span>.</p>
+
+		<figure class="nft overrideDE">
+			<div class="single"><img src="../../images/panel_lens.jpg" class="panel" width="300" alt="The Lens panel" /></div>
+			<figcaption></figcaption>
+		</figure>
+
+		<p>The following lens correction settings can be adjusted from <span class="ui">Filters&gt;Distort&gt;Lens Correction</span>:</p>
+		<ul>
+			<li><span class="ui">Camera</span>&mdash;select the camera you want to correct for.</li>
+			<li><span class="ui">Lens</span>&mdash;choose a lens profile to manually apply the lens correction. The list will change depending on the lenses supported for each camera.</li>
+			<li><span class="ui">Focal Length</span>&mdash;sets the focal length for the correction, e.g. 50mm.</li>
+		</ul>
+		
+		<figure class="nft overrideDE">
+			<div class="single"><img src="../../images/filter_lenscorrection_dialog.jpg" class="panel" width="330" alt="The Lens panel" /></div>
+			<figcaption></figcaption>
+		</figure>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To locate a lens profile manually:</summary>
+			<ul>
+				<li>On the Lens Profile pop-up menu, do one of the following:<ul>
+						<li>Select <span class="ui">All</span> and scroll through the lens profile database.</li>
+						<li class="osx">Filter the list by typing the lens brand or another detail, e.g. 35mm, in the search bar.</li>
+						<li class="win32">Filter the list by clicking the text, which reads &lsquo;(none)&rsquo; or the currently selected profile name, and typing the lens brand or another detail, e.g. 35mm.</li>
+						<li>Select <span class="ui">Recent</span> if you have used the profile to develop another photo recently.</li>
+						<li>Select <span class="ui">Favorites</span> if you have marked the lens as a favorite previously.</li>
+						<li>If Develop Assistant Settings is not set to <span class="ui">Auto-select</span> a profile, select <span class="ui">Detected</span> to see which lens profile, if any, has been identified from the image file.</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<figure class="nft overrideDE">
+				<div class="single"><img src="../../images/panel_lens_profile_manual.jpg" class="panel" width="440" alt="The Lens profile pop-up menu" /></div>
+				<figcaption></figcaption>
+			</figure>
+		</details>
+		
+		<details open="open">
+			<summary>To manually apply a lens profile:</summary>
+			<ul>
+				<li>Locate the relevant profile.</li>
+				<li>Select the profile&apos;s row to see how it will affect your image.</li>
+				<li>Either double-click the profile&apos;s row or click outside of the pop-up menu.</li>
+			</ul>		
+		</details>
+		
+		<details open="open">
+			<summary>To mark a lens profile as a favorite:</summary>
+			<ul>
+				<li>Locate the relevant profile.</li>
+				<li>Click the heart icon to the right of the profile&apos;s name so it has a filled-in appearance.</li>
+			</ul>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Raw/raw.html">Developing a raw image</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="channels, panels" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Channels panel (Photo Persona only)</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Channels panel (Photo Persona only)</h1>
+
+		<p>The <span class="ui">Channels</span> panel displays the color channels and alpha channel for the whole image or selected layer.</p>
+		<p>The panel also lets you create and manipulate selections from channels and store selections as channels.</p>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Channels panel</h2>
+		
+		<p>As well as the channel information for the image and current layer, you may also see the:</p>
+			
+			<ul>
+				<li>current pixel selection</li>
+				<li>Mask alpha*</li>
+				<li>Adjustment layer alpha*</li>
+				<li>Live filter layer alpha*</li>
+				<li>Any stored selections (as spare channels) for future use.</li>
+				<li>Spare channel alpha</li>
+				<li>Selection raster alpha</li>
+			</ul>
+			
+			<p>* When selected in the <span class="ui">Layers</span> panel.</p>	
+			
+		<p>By default, all color channels are visible and editable.</p><!-- Toggle Quik Mask has gone --><figure>
+			<p><img src="../../images/panel_channels.png" class="responsive" width="826" alt="Channels panel" /></p>
+			<figcaption>Channels panels showing channel for the image and selected layer (top), plus selected mask and stored selections for future use (bottom).</figcaption>
+		</figure>
+		
+	</section>
+	
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following options are displayed on the Channels panel:</p>
+
+		<ul>
+			<li>Reset&mdash;reverts the channel settings back to default.</li>
+			<li>Channel thumbnail&mdash;displays the color channel as a thumbnail.</li>
+			<li><img src="../../../shared/ui/channel_visible.png" class="tool" width="16" height="16" alt="Visible Channel" /> <span class="ui">Visible</span>&mdash;hides/shows the channel.</li>
+			<li><img src="../../../shared/ui/channel_editable.png" class="tool" width="16" height="16" alt="Editable Channel" /> <span class="ui">Editable</span>&mdash;protects/makes editable the channel.</li><!-- 
+			<li><span class="ui">Toggle Quick Mask</span>&#8212;toggles between selection and Quick Mask.</li>
+ --><li><img src="../../../shared/ui/channel_invert.png" class="tool" width="16" height="16" alt="Invert" /> <span class="ui">Invert</span>&mdash;inverts the pixel selection.</li><!-- <li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete" /> <span class="ui">Delete</span>&#8212;removes the saved spare channel from the document.</li> --></ul>
+		
+		<p>More options are available via the context menu (<span class="key CLICK-TAG"></span>-click) to allow you to:</p>
+		
+		<ul>
+			<li>Create selections from channels.</li>
+			<li>Add to, subtract from, and intersect channel with current selection.</li>
+			<li>Retrieve stored selections.</li>
+			<li>Load selections to current layer channel, mask, adjustment layer, or filter layer.</li>
+			<li>Create grayscale layers.</li>
+			<li>Create mask layers.</li>
+			<li>Invert selections, layer channels and masks.</li>
+			<li>Create, duplicate and rename spare channels from channels, layer channels, masks and pixel selections.</li>
+			<li>Mask channels using Quick Mask.</li>
+		</ul>
+
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Channels/spareChannels.html">Spare channels</a></li>
+			<li><a href="../Selections/selections_fromchannels.html">Pixel selections from channels</a></li>
+			<li><a href="../Selections/saveLoadSelections.html">Saving and loading selections</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Bad Pixel Map Tool identifies and corrects hot and cold pixels in dark and flat frames, respectively." />
+	<title>Bad Pixel Map Tool</title>
+</head>
+
+<body>
+	<header>
+		<h1><img src="../../../shared/ui/astro_bad_pixel_tool.png" class="tool heading" width="18" height="18" alt="Bad Pixel Map" /> Bad Pixel Map Tool</h1>
+		<p>The Astrophotography Stack Persona&apos;s <span class="ui">Bad Pixel Map Tool</span> provides automatic and manual methods of identifying defective pixels in specific kinds of calibration frame.</p>
+	</header>
+
+	<section class="settings">
+		<h3>Settings</h3>
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		
+		<ul>
+			<li><img src="../../../shared/ui/cogicon.png" class="tool" width="12" height="12" alt="Presets manager" /> <span class="ui">Presets</span>&mdash;opens a list of presets and also allows access to the <span class="ui">Preset manager</span>.</li>
+			<li><span class="ui">Detect bad pixels</span>&mdash;if you have supplied any dark or flat frames, checking this option attempts to automatically identify hot and cold pixels in them, respectively.</li>
+			<li><span class="ui">Hot pixel threshold</span>&mdash;a numeric value that controls how readily pixels in a dark frame are identified as defective.</li>
+			<li><span class="ui">Cold pixel threshold</span>&mdash;a numeric value that controls how readily pixels in a flat frame are identified as defective.</li>
+			<li><span class="ui">Mode</span>&mdash;when <span class="ui">Pixel</span> is selected, you can zoom in and click on a specific pixel to identify it as defective, so it will be remapped. When <span class="ui">Column</span> is selected, you can highlight any column defects, which causes the entire column of pixels to be remapped.</li>
+			<li><span class="ui">Reset</span>&mdash;resets all pixel mapping.</li>
+			<li><span class="ui">Show bad pixels</span>&mdash;when checked, hot and cold pixels are indicated in the document view.</li>
+			<li><span class="ui">Show Bayer</span>&mdash;only applies to image formats that require debayering, e.g. full color. When checked, the tool switches to the Bayer pixel format so you can easily identify singular bad pixels.</li>
+		</ul>
+
+		<aside class="box tip">
+			<p>Saving a bad-pixel map as a preset avoids the need to manually recreate it each time images from the same camera setup are processed.</p>
+		</aside>
+	
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Retouching/retouching_cloningHealing.html">Cloning and healing</a></li>
+			<li><a href="tools_healingBrush.html">Healing Brush Tool</a></li>
+			<li><a href="../Panels/sourcesPanel.html">Sources panel</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

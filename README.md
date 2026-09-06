@@ -11,7 +11,7 @@ build all **generated** from it and attached to each [Release](../../releases).
 | Manual | Status |
 | --- | --- |
 | Affinity Designer 2 | imported — 316 pages, 737 images (2 screenshots missing, see `KNOWN_ISSUES.md`) |
-| Affinity Photo 2 | not yet imported |
+| Affinity Photo 2 | imported — 474 pages (368 from the sidebar + 106 sub-pages), 1055 images (3 screenshots missing, see `KNOWN_ISSUES.md`) |
 | Affinity Publisher 2 | not yet imported |
 
 ## Downloads
@@ -41,6 +41,8 @@ config/
   mdbook/book.toml.tmpl
   obsidian/.obsidian/  vault config copied into the Obsidian build
 scripts/
+  mirror_manual.py     affinity.help/<app>2  ->  .work/mirror/<app>/ (raw HTML)
+  import_manual.py     .work/mirror/<app>/   ->  manuals/<app>/ + sources/<app>/
   gen_summary.py       manuals/<app>/index.md  ->  SUMMARY.md + build order
   make_obsidian.py     Markdown tree  ->  Obsidian vault (wikilinks + config)
   gen_landing.py       GitHub Pages landing page
@@ -72,10 +74,16 @@ git push --tags        # release.yml builds everything and creates the Release
 
 Pushes to `main` that touch `manuals/**` rebuild the GitHub Pages sites automatically.
 
-## Adding Photo / Publisher
+## Adding Publisher
 
-See [`docs/ADDING-A-MANUAL.md`](docs/ADDING-A-MANUAL.md). Any `manuals/<app>/`
-with an `index.md` is picked up automatically.
+```sh
+python  scripts/mirror_manual.py  publisher
+python  scripts/import_manual.py  publisher   # needs: pip install beautifulsoup4 lxml
+python3 scripts/gen_summary.py    publisher
+```
+
+See [`docs/ADDING-A-MANUAL.md`](docs/ADDING-A-MANUAL.md) for what the scripts do.
+Any `manuals/<app>/` with an `index.md` is picked up by the build automatically.
 
 ## Copyright
 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Retouch texture and tone/colour independently for powerful portrait retouching" />
+	<title>Frequency separation</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Frequency separation</h1>
+		<p>Frequency separation allows you to retouch texture and tone/color independently for powerful portrait retouching.</p>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/frequency_separation_before.jpg" alt="Before" /><div><img src="../../../shared/frequency_separation_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Before and after retouch on high and low frequency layers.</figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>Frequency separation</h2>
+
+		<p>Although the term frequency separation is initially intimidating, the concept is straightforward. By automatically separating your image color/tone and texture into separate low and high frequency layers, respectively, you&apos;ll be able to retouch color/tone and texture independently.</p>
+
+		<ul>
+			<li><em>Skin tone and color</em> (shadows, blotches, etc.) are made smoother by blurring with the Dodge or Blur Brush Tool. The Healing Brush Tool also works well here.</li>
+			<li><em>Unwanted textures</em> (spots, stray hair, blemishes, dimples, and wrinkles) can be removed with the Clone Brush Tool or Blemish Removal Tool.</li>
+		</ul>
+		<aside class="box note">
+			<p>In frequency separation, a blur filter and High Pass filter (Linear Light blend mode) are applied to created low and high frequency layers, respectively.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+		<summary>To apply frequency separation:</summary>
+			<ol>
+				<li>From the <span class="ui">Filters</span> menu, select <span class="ui">Frequency Separation</span>.</li>
+				<li>Drag on either high or low pass preview panes, to set the <span class="ui">Radius</span> (or use the slider in the dialog); this sets the balance between texture and tone. Set the value so the image&apos;s Low Frequency preview blends image color and tone but without losing major features within it.</li>
+				<li>(Optional) From the dialog, choose a <span class="ui">Method</span> to blur the low frequency layer:<ul>
+						<li>Gaussian (Default): this offers a smooth blur using a weighted average.</li>
+						<li>Median: this blurs by broadening color regions; it retains edges better than Gaussian blur.</li>
+						<li>Bilateral: this blurs while retaining areas of high contrast at image edges. Use the <span class="ui">Tolerance</span> slider with this blur to control how much major features are preserved when applying subsequent brush strokes.</li>
+					</ul>
+				</li>
+			</ol>
+
+			<aside class="box tip">
+				<p>Use selection tools and masking on both frequency layers just as with other layers.</p>
+			</aside>
+
+			<aside class="box tip">
+				<p>Press the <span class="ui">F</span> key to switch from the High frequency layer to the Low frequency layer (and vice versa).</p>
+			</aside>
+
+		</details>
+
+		<details open="open">
+		<summary>To retouch color or tone:</summary>
+			<ol>
+				<li>From the <span class="ui">Layers</span> panel, select the Low Frequency layer.</li>
+				<li>Apply retouch tools to the layer as appropriate.</li>
+			</ol>
+
+		</details>
+
+		<details open="open">
+		<summary>To retouch textures:</summary>
+			<ol>
+				<li>From the <span class="ui">Layers</span> panel, select the High Frequency layer.</li>
+				<li>Apply retouch tools to the layer as appropriate.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="retouch.html">Retouching</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

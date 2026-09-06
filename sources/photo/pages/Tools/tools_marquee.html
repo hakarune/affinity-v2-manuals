@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="anti-alias" />
+	<meta name="description" content="The Marquee Selection Tools provide various ways of applying selections to your image." />
+	<title>Marquee Selection Tools</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1><img src="../../../shared/ui/rectangular_marquee_tool.png" class="tool heading" width="18" height="18" alt="Rectangular Marquee Tool" /> <img src="../../../shared/ui/elliptical_marquee_tool.png" class="tool heading" width="18" height="18" alt="Elliptical Marquee Tool" /> <img src="../../../shared/ui/column_marquee_tool.png" class="tool heading" width="18" height="18" alt="Column Marquee Tool" /> <img src="../../../shared/ui/row_marquee_tool.png" class="tool heading" width="18" height="18" alt="Row Marquee Tool" /> <img src="../../../shared/ui/free_hand_selection_tool.png" class="tool heading" width="18" height="18" alt="Freehand Selection Tool" /> Marquee Selection Tools</h1>
+		<p>The Marquee Selection Tools provide various ways of applying selections to your image.</p>
+	</header>
+
+	<section class="about">
+
+		<p>The Marquee Selection Tools are available in various shapes including <span class="ui">Rectangular</span>, <span class="ui">Elliptical</span>, <span class="ui">Column</span>, and <span class="ui">Row</span>. All marquees are applied by simply selecting the desired shape and then dragging on your image.</p>
+		<p>A <span class="ui">Freehand Selection Tool</span> is also available for defining the selection area as a drawn pencil line, polygonal straight line edges, or snapped magnetic nodes.</p>
+
+	</section>
+
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The settings for each tool vary but may include some or all of the following settings, which can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Mode</span>&mdash;select from <span class="ui">New</span>, <span class="ui">Add</span>, <span class="ui">Subtract</span>, and <span class="ui">Intersect</span>.</li>
+			<li><span class="ui">Refine</span>&mdash;click to display the <a href="../Selections/selections_refine.html">Refine Selection</a> dialog to access advanced selection settings.</li>
+			<li><span class="ui">Feather</span>&mdash;reduces the sharpness of selection edges by partially selecting edge pixels.</li>
+			<li><span class="ui">From Center</span>&mdash;when enabled, the selection will be drawn from its center. This is exclusive to the Rectangular Marquee Tool and Elliptical Marquee Tool.</li>
+			<li><span class="ui">Antialiased</span>&mdash;if this option is off, pixels at the edge of the selection are opaque. When selected (default), selection edges are smoothed by applying transparency to edge pixels.</li>
+			<li><span class="ui">Width</span>&mdash;sets the width of the <span class="ui">Column</span> selection tool.</li>
+			<li><span class="ui">Height</span>&mdash;sets the height of the <span class="ui">Row</span> selection tool.</li>
+		</ul>
+
+		<h3>About selection modes</h3>
+
+		<p>The four modes available from the context toolbar affect how your selection develops.</p>
+
+		<ul>
+			<li><span class="ui">New</span>&mdash;cancels all current selections and creates a new selection.</li>
+			<li><span class="ui">Add</span>&mdash;adds areas to the current selection. If there is no selection in place, a new selection will be created.</li>
+			<li><span class="ui">Subtract</span>&mdash;removes areas from the current selection.</li>
+			<li><span class="ui">Intersect</span>&mdash;a new selection area is created from the overlap between the newly added selection area and the current selection.</li>
+		</ul>
+
+		<h3>Freehand selection types</h3>
+
+		<p>The <span class="ui">Freehand Selection Tool</span> offers three distinct selection types:</p>
+
+		<ul>
+			<li><span class="ui">Freehand</span>&mdash;creates a selection which follows the cursor&apos;s exact movements.</li>
+			<li><span class="ui">Polygonal</span>&mdash;creates a selection based on connected straight lines with a single click defining each change in direction.</li>
+			<li><span class="ui">Magnetic</span>&mdash;creates a selection by creating automatic nodes that snap to distinct&nbsp;edges while following the cursor&apos;s movement. Click to define custom node positions.</li>
+		</ul>
+		
+		<p>When drawing a Freehand selection, you can manually pan the document view by holding <span class="key SPACEBAR-TAG"></span> and dragging, then release the <span class="key SPACEBAR-TAG"></span> to continue drawing your selection. This also applies when Polygonal is selected and you drag to momentarily make a Freehand selection.</p>
+
+		<p>When drawing a Polygonal or Magnetic selection, the document view will automatically pan when the cursor approaches one of its edges. For Magnetic selections, if auto-panning causes unwanted nodes to be created, use the Undo command to remove them.</p>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the Freehand Selection tool, the following modifier keys can be used to aid in the creation of selections:</p>
+			<ul>
+				<li>Holding the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> temporarily switches to <span class="ui">Polygonal</span> if using <span class="ui">Freehand</span>.</li>
+				<li>Holding the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> temporarily switches between <span class="ui">Polygonal</span> and <span class="ui">Magnetic</span>.</li>
+				<li>If using <span class="ui">Polygonal</span> and <span class="ui">Magnetic</span>, dragging will temporarily invoke <span class="ui">Freehand</span>.</li>
+				<li class="osx">Holding the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> temporarily switches the mode to Add if using <span class="ui">Freehand</span>.</li><!-- Not working on Win 2.3 2100 build.		<li class="win32">Holding the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> temporarily switches the mode to Add if using <span class="ui">Freehand</span>.</li> --><li>Holding the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> temporarily switches the mode to Subtract if using <span class="ui">Freehand</span>.</li>
+			</ul>
+		</aside>
+		
+		<h3>Marquee Selection Tools</h3>
+		
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>With the <span class="ui">Rectangular Marquee Tool</span> and <span class="ui">Elliptical Marquee Tool</span> active, the following modifier keys can be used to aid in the creation of selections:</p>
+			<ul>
+				<li class="osx">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging constrains the marquee&apos;s proportions.</li>
+				<li class="win32">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging constrains the marquee&apos;s proportions.</li>
+				<li>Pressing the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> while dragging adds to the current selection.</li>
+				<li class="osx">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while dragging removes areas from the current selection.</li>
+				<li class="win32">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while dragging removes areas from the current selection.</li>
+				<li class="osx">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging inside the current marquee selection repositions it.</li>
+				<li class="win32">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging inside the current marquee selection repositions it.</li>
+			</ul>
+			<p>When using the <span class="ui">Column Marquee Tool</span> and <span class="ui">Row Marquee Tool</span>, the above modifier keys&apos; operations also apply, with the following difference:</p>
+			<ul>
+				<li class="osx">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging creates a range.</li>
+				<li class="win32">Pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> while dragging creates a range.</li>
+			</ul>
+		
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Selections/selections_create.html">Creating pixel selections</a></li>
+			<li><a href="../Selections/selections_refine.html">Refining pixel selection edges</a></li>
+			<li><a href="tools_selectionBrush.html">Selection Brush Tool</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="astro, astrophotography, files, panel" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Files panel (Astrophotography Stack Persona only)</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Files panel (Astrophotography Stack Persona only)</h1>
+		<p>When creating astrophotography, use the <span class="ui">Files</span> panel to provide light frames and calibration frames.</p>
+
+		<figure class="nft">
+			<p><img src="../../images/panel_astroFiles.jpg" class="responsive panel" alt="Files panel" /></p>
+			<figcaption></figcaption>
+		</figure>
+	</header>
+
+	<section class="about">
+		<h2>About the Files panel</h2>	
+		<p>The panel displays the following:</p>
+		<ul>
+			<li><span class="ui">File group</span>&mdash;select an existing file group to manage its contents.</li>
+			<li>Add a file group&mdash;click to add a file group for frames taken at a different time.</li>
+			<li>Delete a file group&mdash;click to instantly delete the selected file group. This cannot be undone.</li>
+			<li>Filter&mdash;use in conjunction with file groups to specify the filter used to shoot a group&apos;s files. Select from H-alpha (Hydrogen-alpha), OIII (Oxygen-III), SII (Sulfur-II), Luminance, Red, Green, and Blue filters. By default, no filter is applied.</li>
+			<li><span class="ui">Type</span>&mdash;specifies the type of frames shown in and added to the list.</li>
+			<li><span class="ui">Add Files</span>&mdash;click to add files of the currently selected type.</li>
+			<li>Remove selected files from the list&mdash;simultaneously remove one or more files.</li>
+			<li><span class="ui">Select best light frames</span>&mdash;enter a percentage of light frames to retain. Quality is determined by the presence of artefacts such as star trails and periodic errors. Analysis takes place when you press the <span class="RETURN-TAG"></span> <span class="KEY-TAG"></span>.</li>
+		</ul>
+		
+		<h3>Specifying a filter</h3>
+		<p>The Filter setting is important when creating narrowband astrophotographs. When used in conjunction with file groups, it allows for simultaneous stacking of images captured using different filters.</p>
+		<p>The stacking process aligns the final stacked images during registration, using the first file group&apos;s data as a base, for the highest quality results.</p>
+		<p>With a filter selected, its name is appended to any stacked image that is created, e.g. <i>Stacked Image 1 (H-alpha)</i>.</p>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="astro_about.html">About astrophotography stacking</a></li>
+			<li><a href="astro_creating.html">Creating an astrophotography stack</a></li>
+			<li><a href="astro_panelStackingOptions.html">Stacking Options panel</a></li>
+			<li><a href="astro_panelRawOptions.html">RAW Options panel</a></li>
+			<li><a href="astro_narrowband.html">Compositing narrowband images</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Blend images for removing moving objects using stacks." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src:"../../../shared/stacking/object_01.jpg", alt: "Exposure 01" },
+				tab2: { src:"../../../shared/stacking/object_02.jpg", alt: "Exposure 02" },
+				tab3: { src:"../../../shared/stacking/object_03.jpg", alt: "Exposure 03" },
+				tab4: { src:"../../../shared/stacking/object_04.jpg", alt: "Exposure 04" },
+				tab5: { src:"../../../shared/stacking/object_final.jpg", alt: "Final Exposure" },
+			}
+		}
+	</script>
+	<title>Object removal using stacks</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+
+		<h1>Object removal using stacks</h1>
+
+		<p>Object removal solves the problem of moving subject matter being included in your images&mdash;think of passing crowds, vehicles, birds flying, or other annoying distractions. Obviously, a single shot taken at a specific time may be the perfect solution but it may not be practical or possible to wait for this.</p>
+
+	</header>
+
+	<section class="about">
+
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Exposure 01</p></div>
+				<div class="tab"><p>Exposure 02</p></div>
+				<div class="tab"><p>Exposure 03</p></div>
+				<div class="tab"><p>Exposure 04</p></div>
+				<div class="tab selected"><p>Final Exposure</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/stacking/object_final.jpg" class="responsive" alt=""></div>
+		</div>
+
+		<h2>Shooting tips</h2>
+			<ul>
+				<li>To allow for perfect image alignment, use a tripod or ensure your camera is in a fixed position.</li>
+				<li>Take a pragmatic approach and be realistic. Scenes full of moving objects cannot be completely emptied, nor will stationary objects magically disappear (but can be made to using the Inpainting Brush Tool later!).</li>
+			</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/median.png" class="tool heading" width="18" height="18" alt="Stack mode" /> To create an object removal stack:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">New Stack</span>.</li>
+				<li>From the dialog, click <span class="ui">Add</span> to locate and select your images. Click <span class="ui">Open</span> to add the images to the stack list.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+				<li>On the <span class="ui">Layers</span> panel, select the <span class="ui">Median</span> stack mode from the Stack mode pop-up menu on the Live Stack Group layer.</li>
+			</ol>
+		<aside class="box note">
+			<p>Be prepared to selectively retouch images in your stack if ghosting occurs. This may be due to the same or different objects overlapping in more than one image. To resolve, add a mask to your problem image in the stack (hide/show each image layer to locate the ghosting effect).</p>
+		</aside>
+
+		</details>
+
+	</section>
+
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="stacks.html">Image stacks</a></li>
+			<li><a href="stacks_exposuremerge.html">Exposure merging using stacks</a></li>
+			<li><a href="stacks_noisereduction.html">Noise reduction using stacks</a></li>
+			<li><a href="stacks_creative.html">Creative effects using stacks</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

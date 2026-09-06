@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Tool overview and settings." />
+	<title>Crop Tool</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1><img src="../../../shared/ui/crop_tool.png" class="tool heading" width="18" height="18" alt="Crop Tool" /> Crop Tool</h1>
+
+		<p>The <span class="ui">Crop Tool</span> allows you to remove portions of your photo or image. Crops can be non-destructive or can resample, and can use specific aspect ratios as required.</p>
+	</header>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Apply</span>&mdash;applies the crop to your image once you&apos;ve defined the crop area (based on the positioned overlay).</li>
+			<li><span class="ui">Cancel</span>&mdash;exits the dialog without applying the crop to your image.</li>
+			<li><img src="../../../shared/ui/cogicon.png" class="tool" width="12" height="12" alt="Preset Manager" /> <span class="ui">Presets</span>&mdash;opens a list of presets and also allows access to the <span class="ui">Preset manager</span>.</li>
+			<li><span class="ui">Mode</span>&mdash;sets the aspect ratio of the crop area. Select one of the following from the pop-up menu:<ul>
+					<li><span class="ui">Unconstrained</span>&mdash;Allows you to size the crop area freely.</li>
+					<li><span class="ui">Original Ratio</span>&mdash;Retains your image&apos;s original aspect ratio.</li>
+					<li><span class="ui">Custom Ratio</span>&mdash;Uses the adjacent input boxes to set the ratio&mdash;width in the left box, height in the right box. Can be saved as a preset.</li>
+					<li><span class="ui">Resample</span>&mdash;Use the adjacent <span class="ui">Width</span> and <span class="ui">Height</span> settings to set dimensions for the crop area at your chosen <span class="ui">DPI</span> and you measurement <span class="ui">Units</span>.</li>
+				</ul>
+			</li>
+			<li>Crop dimension boxes&mdash;for <span class="ui">Custom Ratio</span> and <span class="ui">Resample</span> modes, sets the width and height, respectively.</li>
+			<li><span class="ui">Units</span>&mdash;sets the units used by the crop area.</li>
+			<li><span class="ui">DPI</span>&mdash;choose the DPI for resampling to unit measurements.</li>
+			<li><span class="ui">Crop</span>&mdash;lists the current pixel resolution based off the unit measurements and DPI value.</li>
+			<li><span class="ui">Rotate</span>&mdash;rotates the crop area by 180°.</li>
+			<li><span class="ui">Straighten</span>&mdash;switches to Straighten mode to align crooked photos horizontally or vertically.</li>
+			<li><span class="ui">Overlay</span>&mdash;offers various overlays for better photo composition.</li>
+			<li><span class="ui">Reset</span>&mdash;resets all settings to their defaults.</li>
+			<li><span class="ui">Darken</span>&mdash;renders areas outside of the crop boundary darker for easier previewing.</li>
+			<li><span class="ui">Reveal</span>&mdash;when checked, displays areas of the document outside of the current crop. Useful if you have already cropped the canvas and need to expand it again.</li>
+		</ul>
+		
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the Vector Crop Tool, the following modifier keys can be used while applying a crop:</p>
+			<ul>
+				<li>Holding down <span class="key SHIFT-TAG"></span> while cropping in the <span class="ui">Unconstrained</span> mode constrains the current aspect ratio.</li>
+				<li>The left and right arrow <span class="KEY-TAG"></span>s can be used to nudge the area in single-pixel increments. Holding down <span class="key SHIFT-TAG"></span> while pressing the left and right arrow <span class="KEY-TAG"></span>s nudges the crop area in 10-pixel increments.</li>
+				<li>The <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> temporarily disables global snapping.</li>
+				<li class="osx">Holding down the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> and dragging on the page (not using handles) toggles the crop area overlay and enters the <span class="ui">Straighten</span> mode. When pressed while cropping using one of the handles, the tool&apos;s bounding box allows to recompose the image around its center.</li>
+				<li class="win32">Holding down the <span class="key CTRL-TAG"></span> and dragging on the page (not one of the handles) toggles the crop area overlay and enters the <span class="ui">Straighten</span> mode. When pressed while cropping using one of the handles, the tool&apos;s bounding box allows to recompose the image around its center.</li>
+				<li class="osx">The <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> allows the crop area to be rotated about its opposite handle.</li>
+				<li class="win32">Upon starting the rotation process, pressing the right mouse button lets you rotate the crop area around its opposite handle.</li>
+				<li>You can quickly toggle between overlay modes by pressing <span class="ui">O</span>.</li>
+			</ul>
+			<p>These modifiers can be used in combination.</p>
+		</aside>
+
+	</section>
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../SizeTransform/cropping.html">Cropping</a></li>
+			<li><a href="../DesignAids/snapping.html">Snapping</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

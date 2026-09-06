@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pattern layer, pattern, tile, tiled" />
+	<meta name="description" content="Add pattern layers to your document." />
+	<title>Pattern layers</title>
+</head>
+
+<body>
+
+	<header>
+		
+	<h1>Pattern layers</h1>
+
+		<p>Pattern layers contain a fixed-size bitmap image which repeats across the entire document. You can paint designs on blank pattern layers or convert images, any raster layer content and pixel selections into pattern layers.</p>
+		
+		<figure>
+			<p><img src="../../../shared/layers_pattern.jpg" class="responsive" alt="Pattern layer" /></p>
+			<figcaption>Repeating patterns: (A) pattern from layer content - rounded rectangle, (B) from a painted raster stroke, (C) from a pixel selection and (D) from the same pixel selection but after resizing and rotating.</figcaption>
+		</figure>
+		
+	</header>
+
+	<section class="about">
+	
+		<p>Patterns can be mirrored, and pattern layers can be opened as a new document to be edited separately. Filters can also be used to manipulate pattern layers.</p>
+
+		<p>After a pattern is added or made from a pixel selection, a bounding box indicates&nbsp;the &quot;real&quot; area of the pattern which can be transformed or edited at any time.</p>
+		
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To create a blank pattern layer:</summary>
+			<ul>
+				<li>
+					<p>From the <span class="ui">Layer</span> menu, select <span class="ui">New Pattern Layer</span>.</p>
+					<p>Specify the dimensions of the pattern area that will repeat across the pattern layer&mdash;this sets the scaling of the pattern.</p>
+				</li>
+			</ul>
+
+		</details>
+		
+		<details open="open">
+			<summary>To create a pattern layer from a selection:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>For any raster layer content: Select a layer from the <span class="ui">Layers</span> panel with the <span class="ui">Move Tool</span>.</li>
+						<li>For a pixel selection: Select pixels using a <a href="../Selections/selections_create.html">pixel selection tool</a>, e.g. the <span class="ui">Selection Brush Tool</span>.</li>
+					</ul>
+				</li>
+				<li>From the <span class="ui">Layer</span> menu, select <span class="ui">New Pattern Layer from Selection</span>.</li>
+			</ol>
+
+		</details>
+		
+		<details open="open">
+			<summary>To paint a pattern:</summary>
+			<ul>
+				<li>Use the <span class="ui">Layers</span> panel to select the pattern layer that you want to work on, or create a new pattern layer.</li>
+				<li>Select the <span class="ui">Paint Brush Tool</span> or another brush-based tool and adjust it to your preferences.</li>
+				<li>Paint on the page to paint a pattern. The stroke will be repeated across the entire document.</li>
+			</ul>
+
+		</details>
+		
+		<details open="open">
+			<summary>To create a mirrored pattern:</summary>
+			<ul>
+				<li>With a pattern layer created, select the <span class="ui">Move Tool</span>.</li>
+				<li>From the context toolbar, enable the <span class="ui">Mirror</span> option.</li>
+				<li>The pattern will be mirrored across the entire document.</li>
+			</ul>
+
+		</details>
+		
+		<details open="open">
+				<summary><img src="../../../shared/ui/move_tool.png" class="tool" width="18" height="18" alt="Move Tool" /> To resize a pattern:</summary>
+
+				<ol>
+					<li>With the <span class="ui">Move Tool</span>, select the pattern layer.</li>
+					<li>Drag a corner or edge control handle on the pattern area&apos;s bounding box. The opposite handle is used as the anchor point.</li>
+				</ol>
+				
+			<aside class="box note">
+				<p>Hold down the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> to maintain the aspect ratio of the pattern or stretch it.</p>
+			</aside>
+		
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/move_tool.png" class="tool" width="18" height="18" alt="Move Tool" /> To rotate a pattern:</summary>
+			<ol>
+				<li>With the <span class="ui">Move Tool</span>, select the pattern layer.</li>
+				<li>Do one of the following:<ul>
+						<li>Drag the pattern area&apos;s rotation handle.</li>
+						<li>Position the cursor close to a corner handle and drag on the page.</li>
+						<li>From the <span class="ui">Arrange</span> menu, select a rotate option.</li>
+					</ul>
+				</li>
+			</ol>
+
+			<aside class="box note">
+				<p>You can rotate layer content with more precision using the <span class="ui">Transform</span> panel.</p>
+			</aside>
+			
+		</details>
+		
+		<details>
+			<summary><img src="../../../shared/ui/move_tool.png" class="tool" width="18" height="18" alt="Move Tool" /> To shear a pattern:</summary>
+			<ol>
+				<li>With the <span class="ui">Move Tool</span>, select the pattern layer.</li>
+				<li>Position the cursor close to the pattern area&apos;s side handle and drag on the page.</li>
+			</ol>
+
+		</details>
+		
+		<details>
+			<summary>To open your pattern as a new document:</summary>
+			<ul>
+				<li>With a pattern layer created, select the <span class="ui">Move Tool</span>.</li>
+				<li>From the context toolbar, select <span class="ui">Open as New Document</span>.</li>
+			</ul>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Painting/painting.html">Painting brush strokes</a></li>
+			<li><a href="../Filters/filters_applying.html">Applying filters</a></li>
+			<li><a href="../SizeTransform/transform.html">Transforming</a></li>
+			<li><a href="../LayerOperations/rotateShear.html">Rotating and shearing</a></li>
+			<li><a href="../Selections/selections_create.html">Creating pixel selections</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

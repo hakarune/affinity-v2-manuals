@@ -1,79 +1,95 @@
 # Adding a manual (Photo / Publisher)
 
 The build treats any `manuals/<app>/` that contains an `index.md` as a manual and
-generates every format for it. To add Photo or Publisher, reproduce the shape of
-`manuals/designer/`.
-
-## 1. Mirror the source
-
-The official help lives at `https://affinity.help/<app>2/en-US.lproj/` with a
-shared image pool at `https://affinity.help/<app>2/shared/`. If the live site is
-gone, use the Internet Archive (`https://web.archive.org/web/2id_/<url>`).
+generates every format for it. Designer and Photo were imported with the two
+scripts below; Publisher is the same three commands.
 
 ```sh
-app=photo   # or publisher
-wget --mirror --page-requisites --convert-links --adjust-extension \
-     --no-parent --directory-prefix="sources/$app" \
-     "https://affinity.help/${app}2/en-US.lproj/index.html"
-wget --mirror --no-parent --directory-prefix="sources/$app-shared" \
-     "https://affinity.help/${app}2/shared/"
+python  scripts/mirror_manual.py  publisher   # 1. mirror affinity.help -> .work/mirror/publisher/
+python  scripts/import_manual.py  publisher   # 2. convert -> manuals/publisher/ + sources/publisher/
+python3 scripts/gen_summary.py    publisher   # 3. index.md -> SUMMARY.md (checks every link)
 ```
 
-Keep the raw mirror under `sources/<app>/` — it is shipped as
-`affinity-<app>-2-source-html.zip` and lets the conversion be redone later.
-Put any bulk image-download scratch in `sources/<app>/Missing images/`
-(git-ignored).
+`mirror_manual.py` and `import_manual.py` need **beautifulsoup4** and, strongly
+recommended, **lxml** (`pip install beautifulsoup4 lxml`). Without lxml the
+converter falls back to the stdlib parser, which mangles the help site's
+slightly-malformed tables. `gen_summary.py` is standard-library only.
 
-## 2. Convert pages to Markdown
+Then review the diff, commit `manuals/<app>/` + `sources/<app>/`, push to `main`
+(the Pages site rebuilds), and tag a release (`git tag vX.Y.Z && git push
+--tags`) to publish the EPUB/PDF/zips.
 
-One Markdown file per help page, mirroring the original chapter structure:
+---
+
+## What the scripts do
+
+### 1. `mirror_manual.py <app>`
+
+Fetches `https://affinity.help/<app>2/en-US.lproj/index.html`, parses the sidebar
+**table of contents** for the authoritative page list, downloads every page, then
+follows in-body links a few hops out to catch pages the sidebar omits (Photo, for
+instance, hides ~100 per-filter / per-adjustment pages behind overview pages).
+Images and CSS referenced by the pages are pulled too.
+
+It is TOC-driven rather than `wget -r` because the origin answers **403 for any
+URL that does not exist**, so blind recursion chases dead links forever.
+
+Output goes to the git-ignored `.work/mirror/<app>/` (full raw mirror, ~70 MB for
+Photo) plus a `_mirror_report.txt` listing any pages/images the origin refused
+(a handful of genuinely-dead links and, historically, 2-3 screenshots the CDN
+blocks — the same ones missing from Designer).
+
+If `affinity.help` is unreachable, the Internet Archive form is
+`https://web.archive.org/web/2id_/<url>`.
+
+### 2. `import_manual.py <app>`
+
+Converts the mirror to the canonical Markdown tree:
 
 ```
 manuals/<app>/
-├── index.md                       curated TOC (see below)
-├── content/NN-chapter/NN-page.md  pandoc -f html -t gfm, one per page
-└── assets/
-    ├── images/    per-page screenshots from the export
-    └── shared/    the shared/ image pool
+├── index.md                       curated TOC (chapters **bold**, pages linked,
+│                                   non-sidebar pages nested under their referrer)
+├── content/NN-chapter/NN-page.md   one Markdown file per help page
+├── assets/shared/                  shared image pool (only images actually used)
+├── assets/images/                  page-specific screenshots (only those used)
+├── README.md   MISSING_IMAGES.md
+sources/<app>/                      lean raw mirror committed for preservation:
+                                    index.html + pages/ + images/ (no shared/ pool,
+                                    no resources/ — same shape as sources/designer/)
 ```
 
-Rules that keep every downstream format working:
+Conversion rules (matching the hand-checked Designer import):
 
-- **Links between pages:** relative Markdown, e.g. `[Personas](03-personas.md)`
-  or `../04-artboards/01-about-artboards.md`.
-- **Images:** relative Markdown, e.g. `![](../../assets/shared/foo.png)`.
-- **First line of every page:** a single `# Page Title` H1.
-- Filenames: `NN-kebab-case.md`; chapter dirs: `NN-kebab-case/`. The `NN-`
-  prefixes set the reading order.
+- `<h1>` → `# Title` (heading icons dropped).
+- `<section>` wrappers unwrapped, their `<h2>`/`<h3>` kept as `##`/`###`.
+- `<aside class="box note|tip|warning|prefs">` → `> **Note:**` / `> **Tip:**` /
+  `> **Warning:**` / `> **Preferences:**` block-quotes (an inner heading becomes
+  the bold lead, not a `###` buried in the quote).
+- `<figure>` → `![alt](rel)` images followed by `*figcaption*`.
+- `<details><summary>X</summary>…` → **X** then the contents.
+- `<section id="also">` → a `#### SEE ALSO:` list.
+- `<span class="ui">` → `**bold**`; `<span class="key">` → `` `Key` `` (adjacent
+  keys joined as `` `A` + `B` ``); `<x-osx>` / `<x-win32>` / `class="osx"` /
+  `class="win32"` → **macOS:** / **Windows:** labels.
+- HTML comments (Serif leaves legacy blocks and editorial notes commented out)
+  are dropped.
+- Links between pages become relative Markdown; a link to a page that does not
+  exist keeps its text but loses the hyperlink.
+- Image `src` rewritten to `../…/assets/shared/…` or `…/assets/images/…`.
 
-## 3. Write `index.md`
+Pages reachable only through in-body links are nested under whichever sidebar
+page links them, in that page's chapter (`…/03-color-filters/07-filter-halftone.md`).
 
-A nested bullet list, chapters in `**bold**`, pages as links — same as
-`manuals/designer/index.md`:
+### 3. `gen_summary.py <app>`
 
-```markdown
-- **Introduction**
-  - [Affinity Photo](content/01-introduction/01-affinity-photo.md)
-  - [Personas](content/01-introduction/02-personas.md)
-- **Get started**
-  - [Create new documents](content/02-get-started/01-create-new-documents.md)
-```
+Turns `index.md` into mdBook's `SUMMARY.md` and prints a warning for any TOC
+entry whose target file is missing. Zero warnings = every link resolves.
 
-`scripts/gen_summary.py <app>` converts this to `SUMMARY.md` for mdBook and
-provides the page order for the EPUB/PDF.
-
-## 4. Check and build
+## 4. Ship it
 
 ```sh
-python3 scripts/gen_summary.py <app>
 scripts/build.sh <app>          # needs mdbook, pandoc, xelatex or weasyprint, zip
 ```
 
-Fix any `warning: ... points at missing file` from `gen_summary.py`, and confirm
-images resolve (a quick link-checker like the one used for Designer helps).
-
-## 5. Ship it
-
-Commit `manuals/<app>/` and `sources/<app>/`, push to `main` (the Pages site
-rebuilds), then tag a release (`git tag vX.Y.Z && git push --tags`) to publish
-the new EPUB/PDF/zips.
+Fix anything `build.sh` reports, then commit and tag as above.

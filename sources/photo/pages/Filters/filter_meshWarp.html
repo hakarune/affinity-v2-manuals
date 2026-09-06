@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="filter, warp, mesh warp, mesh grid, distort, distortion, distorting, retouch, retouching" />
+	<meta name="description" content="The Mesh Warp filter allows you to manipulate a flexible mesh grid to warp an image." />
+	<title>Mesh Warp</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Mesh Warp</h1>
+
+		<p>The Mesh Warp filter can be used to distort specific areas of an image without affecting other areas.</p>
+		
+		<p>For example, it can be used for dramatic warping effects on a landscape image or for more subtly focused retouching of facial features.</p>
+		
+		<figure>
+			<div class="comparison large"><img src="../../../shared/warp_before.jpg" alt="Before" /><div><img src="../../../shared/warp_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Warping an image</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Mesh Warp filter</h2>
+		<p>This filter is applied on its own layer as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, by selecting from the <span class="ui">New Live Filter Layer</span>&gt;<span class="ui">Distort</span>&gt;<span class="ui">Mesh Warp</span>.</p>
+		
+		<h3>Settings:</h3>
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li>Choose between <span class="ui">Destination</span> and <span class="ui">Source</span> mode from the pop-up menu. <span class="ui">Source</span> mode allows you to set default mesh points that can then be restored with <span class="ui">Synchronize</span>.</li>
+			<li><span class="ui">Reset</span>&mdash;restores the grid to a uniform rectangular shape. Nodes which have been added are distributed evenly across the grid.</li>
+			<li><span class="ui">Hide/Show Mesh</span>&mdash;hides/shows the grid. The warp mesh can still be adjusted when hidden (indicated by the cursor change).</li><!-- Resampling missing from tool and live filter in builds 1300 and 1302.--> <!-- <li><span class="ui">Resampling</span>&#8212;select which resampling method (see note below) to use for the warped image.</li> --><li><span class="ui">Convert</span>&mdash;switches the selected node to <span class="ui">Sharp</span> or <span class="ui">Smooth</span>.</li>
+			<li><span class="ui">Done</span>&mdash;accepts the current warp applied to the image and exits the warp operation.</li>
+		</ul><!-- 
+		<aside class="box note">
+			<h3>Resampling methods</h3>
+			<p>The following resample settings are available:</p>
+			<ul>
+				<li><span class="ui">Bilinear</span>&#8212;algorithmic resampling for use when compressing images.</li>
+				<li><span class="ui">Nearest Neighbour</span>&#8212;simple resampling which has the fastest processing time. Use for hard-edge images.</li>
+				<li><span class="ui">Bicubic</span>&#8212;algorithmic resampling for use when enlarging images. Bicubic resampling is sharper than Bilinear resampling but has a slower processing time.</li>
+			</ul>
+		</aside>
+		--><aside class="box note">
+			<p>The Mesh Warp Tool and Mesh Warp live filter provide the same settings on their context toolbars.</p>
+		</aside>
+		
+		
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="../SizeTransform/meshWarping.html">Mesh warping</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

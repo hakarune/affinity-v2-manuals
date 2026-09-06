@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Defringe filter selectively adjusts areas to remove coloured fringing (bichrominance)." />
+	<title>Defringe</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Defringe</h1>
+
+		<p>Purple fringing, or bichrominance as it&apos;s more correctly termed, is a form of chromatic aberration caused by the over-excitation of the pixels on the sensor in the camera. The effect can occur anywhere within an image but it&apos;s most common at the edges of high contrast areas, especially when a dark element is strongly backlit, such as branches silhouetted against a blue sky. The Defringe filter selectively adjusts these areas to remove the color fringing.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_defringe_before.jpg" alt="Before" /><div><img src="../../../shared/filter_defringe_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Using the Defringe filter to remove purple fringing from the window edges.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Defringe filter</h2>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+
+		<p>On selecting the Defringe filter, it will default to settings which remove the purple fringing, as this is the most common type. This can be manually adjusted as necessary in the dialog, or by sampling the fringe color on the page to remove it.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Fringe Color</span>&mdash;defines the color of the fringe to be desaturated. Drag the slider or click on the image to define the hue.</li>
+			<li><span class="ui">Also Remove Complementary Hue</span>&mdash;also removes fringing matching the chosen hue&apos;s complementary color (e.g., choosing purple would also remove yellow fringing).</li>
+			<li><span class="ui">Tolerance</span>&mdash;defines how close the fringe color must be to the defined color before it is affected. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Radius</span>&mdash;defines the radius of the pixels affected around the fringed areas. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Edge Brightness Threshold</span>&mdash;defines the amount of contrast needed between the fringed areas before affecting the pixels. Type directly in the text box or drag the slider to set the value.</li>
+		</ul>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_chromaticAberration.html">Chromatic Aberration</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

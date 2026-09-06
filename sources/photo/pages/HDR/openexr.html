@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="openexr, 32bit, hdr, multilayer, multichannel, multi, float, unbounded" />
+	<meta name="description" content="Read how Photo implements OpenEXR support, including multichannel import/export." />
+	<title>32-bit OpenEXR support</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>32-bit OpenEXR support</h1>
+
+		<p>Affinity Photo 2 has full OpenEXR 32-bit document support, including multichannel (or &quot;multilayer&quot;) import and export.</p>
+	</header>
+
+	<section class="about">
+		<h2>OpenColorIO Integration</h2>
+		<p>With an OpenColorIO configuration (see <a href="ocio.html">OpenColorIO</a> for more information), OpenEXR documents with a valid color space affix (eg <span class="ui">filename_acescg.exr</span>) will be converted from that color space to <span class="ui">scene_linear</span> upon import.</p>
+
+		<h2>Additional configuration</h2>
+		<p>Additional OpenEXR options are available from the <span class="ui">Color</span> options on the <a href="../Workspace/preferences.html">Settings (or Preferences)</a> menu:</p>
+
+		<ul>
+			<li><span class="ui">Associate OpenEXR alpha channels</span>&mdash;when enabled, alpha channel information is merged to its associated RGB pixel layer&apos;s alpha channel. By default (disabled), imported alpha channels are imported as separate layers with an <span class="ui">.A</span> affix.</li>
+			<li><span class="ui">Post divide EXR colors by alpha</span>&mdash;when enabled, divides color channels by the alpha channel.</li>
+			<li><span class="ui">Perturb zero EXR alpha</span>&mdash;when enabled, alters zero alpha information so post-division with color channel information can be achieved if <span class="ui">Post divide EXR colors by alpha</span> is enabled. By default (disabled), zero alpha information is left untouched.</li>
+		</ul>
+
+		<h2>Multichannel import/export</h2>
+		
+		<p>Photo supports multichannel OpenEXR documents for both import and export.</p>
+		
+		<h3>Multichannel import:</h3>
+		
+			<ul>
+				<li>Each channel is imported to a discrete layer in the Layers panel.</li>
+				<li>Each layer retains its affix (e.g., <span class="ui">.RGBA</span>, <span class="ui">.XYZ</span>).</li>
+				<li>Layers can be hidden or shown and edited individually.</li>
+			</ul>
+			
+		<h3>Multichannel export:</h3>
+		
+		<ul>
+			<li>Each discrete layer with its channel affix (e.g., <span class="ui">.RGBA</span>) is exported to its own channel.</li>
+			<li>All layers are exported to channels regardless of whether they are hidden or shown at the time of export.</li>
+			<li>In order to export as multichannel OpenEXR, either the correct preset must be chosen, or the multichannel setting must be enabled on the OpenEXR export dialog. See below for more information.</li>
+		</ul>
+		
+	<figure class="nft">
+			<div class="single"><img src="../../images/panel_openexr_multichannel.png" class="responsive ui" alt="Multichannel OpenEXR example" /></div>
+			<figcaption>An example of how a multichannel OpenEXR document looks once imported.</figcaption>
+		</figure>
+
+		<details open="open">
+			<summary>To export a multichannel OpenEXR document:</summary>
+			
+				<ol>
+					<li>From the <span class="ui">File</span> menu, choose <span class="ui">Export</span>.</li>
+					<li>Select the <span class="ui">EXR</span> export format.</li>
+					<li>From the <span class="ui">Preset</span> pop-up menu, select <span class="ui">OpenEXR 32-bit linear (layered)</span>.</li>
+					<li>(Optional) Access the <span class="ui">More</span> dialog to configure the multilayer settings:<ul>
+							<li><span class="ui">Include unknown channels</span>&mdash;channels whose type cannot be determined will still be exported as a single luminance-based channel.</li>
+							<li><span class="ui">Compression</span>&mdash;determine a compression format to use for a reduced file size. Compression may also be disabled entirely.</li>
+							<li><span class="ui">Image pixels</span>&mdash;choose whether to encode Image channels (<span class="ui">RGBA</span> etc) as 16-bit (half float) or 32-bit (full float).</li>
+							<li><span class="ui">Spatial pixels</span>&mdash;choose whether to encode Spatial channels (<span class="ui">XYZ</span> etc) as 16-bit (half float) or 32-bit (full float).</li>
+							<li><span class="ui">Other pixels</span>&mdash;choose whether to encode other/undetermined channels as 16-bit (half float) or 32-bit (full float).</li>
+						</ul>
+					</li>
+				<li>Choose <span class="ui">Export</span> to export the document to a chosen filename and directory.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="hdr_editing.html">32-bit HDR editing</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

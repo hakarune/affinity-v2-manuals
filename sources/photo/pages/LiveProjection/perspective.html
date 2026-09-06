@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="live, projection, perspective" />
+	<meta name="description" content="Preview perspective projections and edit them in real time." />
+	<title>Perspective projection</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Perspective projection</h1>
+
+		<p>Perspective projection allows you to project (or map) perspective planes to flat 2D representations and edit them.</p> 
+		
+
+		<figure>
+			<div class="single"><img src="../../../shared/feature_liveperspective_planes.jpg" alt="Editing multiple planes" /></div>
+			<figcaption>Editing multiple planes in Perspective projection.</figcaption>
+		</figure>
+	</header>
+	
+		<section class="about">
+
+		<p>After adding a perspective plane, you can temporarily remove perspective. This lets you apply texture, text, and brush strokes in 2D without having to manually transform the content to maintain perspective. Once edited, and the projection is removed, the added edits are transformed automatically ensuring that perspective is kept realistic.</p>
+		<p>Multiple planes can be defined&mdash;each one can be edited individually.</p>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To use Perspective projection:</summary>
+			<ol>
+				<li>With an image open, from the <span class="ui">Layer</span> menu, choose <span class="ui">Live Projection&gt;Perspective Projection</span>.</li>
+				<li>An initial perspective plane will be added covering the image. Drag the four corner nodes to align the plane to a particular area within the image (e.g., vanishing point).</li>
+				<li>Select any tool, adjustment or filter to automatically project the plane to a flat 2D canvas.</li>
+				<li>Using the appropriate tools, make your edits.</li>
+				<li>Once finished with the chosen perspective plane, select the <span class="ui">Move Tool</span>, then from the context toolbar, choose <span class="ui">Edit Live Projection</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To add additional perspective planes:</summary>
+			<ol>
+				<li>While in the <span class="ui">Edit Live Projection</span> mode, from the context toolbar, choose <span class="ui">Add Plane</span>.</li>
+				<li>Transform the second plane using its corner nodes.</li>
+				<li>Select between multiple planes by clicking anywhere on them.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To remove perspective planes:</summary>
+			<ol>
+				<li>While in the <span class="ui">Edit Live Projection</span> mode, click on a plane to select it.</li>
+				<li>From the context toolbar, choose <span class="ui">Remove Plane</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To exit Live Perspective projection:</summary>
+			<ul>
+				<li>At any time during Perspective projection editing, from the <span class="ui">Layer</span> menu, choose <span class="ui">Live Projection&gt;Remove Projection</span>.</li>
+			</ul>
+		</details>
+
+	</section>
+
+	<section class="examples">
+
+		<h2>Examples</h2>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/feature_liveperspective_before.jpg" alt="Before" /><div><img src="../../../shared/feature_liveperspective_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption><b>Before</b>: Original image. <b>After</b>: Image with an area edited using Perspective projection.</figcaption>
+		</figure>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

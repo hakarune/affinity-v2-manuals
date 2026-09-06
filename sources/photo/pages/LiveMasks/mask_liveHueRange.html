@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="live, mask, hue, hsl, non-destructive" />
+	<meta name="description" content="Use non-destructive hue range masks to mask based on a chosen hue." />
+	<title>Live Hue Range Mask</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Live Hue Range Mask</h1>
+
+		<p>Use non-destructive Hue Range Masks to automatically mask based on a chosen hue. You can apply adjustments, effects or paint on the mask.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/mask_huerange_before.jpg" alt="Before" /><div><img src="../../../shared/mask_huerange_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>HSL adjustment (increased saturation) without (Before) and with (After) a live hue range mask targeting a pink hue range.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="settings">
+
+		<h3>Settings (or Preferences)</h3>
+
+		<p>The following settings can be adjusted:</p>
+		<ul>
+			<li><span class="ui">Preset list</span>&mdash;Select a live mask preset if previously saved. Click the adjacent button to create, rename or delete a preset.</li>
+			<li><span class="ui">Merge</span>&mdash;merges the live mask with the layer immediately below it in the layer order.</li>
+			<li><span class="ui">Delete</span>&mdash;closes the dialog and deletes the live mask.</li>
+			<li><span class="ui">Reset</span>&mdash;returns the graph to the default position (a straight line between two nodes positioned at the top of the grid).</li>
+			<li><span class="ui">Hue Picker</span>&mdash;allows you to sample a specific hue from your image on which to base your mask.</li>
+			<li><span class="ui">Preview</span>&mdash;allows you to display the selected hue on black and white values (where white is the selected range).</li>
+			<li><span class="ui">Hue Wheel</span>&mdash;presents a spectrum of hues presented on a wheel. A series of four hue wheel nodes determines the range of colors included in your mask. (See Using the hue wheel nodes below.)</li>	
+			<li><img src="../../../shared/ui/hue_ramps.png" class="tool" width="22" height="10" alt="Hue ramps" /> In/out ramps&mdash;use the In or Out charts to subtly affect how much the hue range contributes to the mask; use a preset chart or customize the graph by dragging nodes, clicking on the curve to add new ones or deleting existing nodes.</li>		
+			<li><span class="ui">Invert output</span>&mdash;reverses the values of the mask.</li>
+			<li><span class="ui">Opacity</span>&mdash;controls how much of the selected hue is visible.</li>
+			<li><span class="ui">Blur Radius</span>&mdash;controls the level of blurring at the edges of masked areas.</li>
+		</ul>
+
+		<aside class="box note">
+			<h3>Using the hue wheel nodes</h3>
+			<p>You can choose the hue that will make up your mask in different ways:</p>
+			<ul>
+				<li>Drag on an individual node to reposition it around the color circle.</li>
+				<li>Drag the black line that connects the colored nodes. The central line between inside nodes moves all four nodes simultaneously and in relation to each other. The black line between either outer node and its adjacent node moves just that pair of nodes independent of the other node pairing.</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="liveLayerMasks.html">Live layer masks</a></li>
+			<li><a href="mask_liveLuminosityRange.html">Live luminosity range mask</a></li>
+			<li><a href="mask_liveBandPass.html">Live band-pass mask</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

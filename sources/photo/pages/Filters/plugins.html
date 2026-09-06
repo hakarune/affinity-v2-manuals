@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="Make use of third-party plugins to expand the choice of effects available to you." />
+	<title>Using Plugins</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Using plugins</h1>
+		<p>Installed Photoshop-compatible 64-bit plugins can be made available to Affinity Photo 2 to extend the range of effects available to you.</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About plugins</h2>
+
+		<p>Configuring plugins in Affinity Photo 2 can be automatic or be configured manually on a per plugin basis.</p>
+
+		<aside class="box note"><p>With an active internet connection, detected or added plugins are evaluated and their support status is reported next to the plugin name under the &quot;Detected Plugins&quot; list.</p></aside>
+
+		<ul>
+			<li><em>Automatic</em>: Some third-party plugins can install automatically to Affinity Photo 2&apos;s default plugin folder. No further configuration is needed.</li>
+			<li class="osx"><em>Manual</em>: Installed plugins are located manually and then linked to from within Affinity Photo 2 as described below. You&apos;ll need to target the parent plugin folder itself, then allow supporting files, necessary for the plugin to operate, to be accessed.</li>
+			<li class="win32"><em>Manual</em>: Installed plugins are located manually and then linked to from within Affinity Photo 2 as described below. You just need to target the parent plugin folder itself.</li>
+		</ul>
+
+		<aside class="box note">
+			<p>Due to the varying standard of third-party plugins, you may experience problems when using this feature. This is beyond Serif&apos;s control, so we recommend that you save your work before using plugins, then test your plugins before commencing.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+		<summary>To view auto-configured installed plugins:</summary>
+			<ol>
+
+				<li class="osx">From the <span class="ui">Affinity Photo 2</span> menu, select <span class="ui">Settings</span> (or <span class="ui">Preferences</span>).</li>
+				<li class="win32">From the <span class="ui">Edit</span> menu, select <span class="ui">Settings</span>.</li>
+				<li>Select the <span class="ui">Photoshop Plugins</span> tab.</li>
+				<li class="osx">Click <span class="ui">Open Default Folder in Finder</span>.</li>
+				<li class="win32">Click <span class="ui">Open Default Folder in Explorer</span>.</li>
+			</ol>
+
+			<aside class="box note">
+				<p>This default location is not configurable.</p>
+			</aside>
+
+		</details>
+
+		<details open="open">
+			<summary>To enable untested or potentially unsupported plugins:</summary>
+				<ul>
+					<li>Check &quot;Allow Unknown Plugins to be used&quot; beneath the Detected Plugins list.</li>
+				</ul>
+		</details>
+
+		<details open="open">
+		<summary>To link to your plugin file manually:</summary>
+			<ol>
+				<li class="osx">From the <span class="ui">Affinity Photo 2</span> menu, select <span class="ui">Settings</span> (or <span class="ui">Preferences</span>).</li>
+				<li class="win32">From the <span class="ui">Edit</span> menu, select <span class="ui">Settings</span>.</li>
+				<li>Select the <span class="ui">Photoshop Plugins</span> tab.</li>
+				<li class="osx">Under the <span class="ui">Plugin Search Folders</span> box, click <span class="ui">Add</span>, then navigate to the parent folder that contains the .plugin file. For example, this could be in a Photoshop folder such as /Applications/Adobe Photoshop CS6/Plug-ins.</li>
+				<li class="win32">Under the <span class="ui">Plugin Search Folders</span> box, click <span class="ui">Add</span>, then navigate to the parent folder that contains the .plugin file. For example, this could be C:\plugins\nik.</li>
+			</ol>
+			<aside class="box note">
+				<p>You can add as many plugins as you like by repeating the above process.</p>
+			</aside>
+
+		</details>
+
+		<x-osx>
+			<details open="open">
+			<summary>To allow access to supporting plugin files:</summary>
+				<ol>
+					<li>From the <span class="ui">Photoshop Plugins</span> tab, under the <span class="ui">Plugin support folders</span> box, click <span class="ui">Authorize Global</span>.</li>
+					<li class="osx">The folder dialog will default to root (&quot;Macintosh HD&quot;). You can click <span class="ui">Authorize</span> here and access to support files will be applied recursively, or you can specify a particular directory that contains the support files.</li>
+					<li class="win32">The folder dialog will default to root. You can click <span class="ui">Authorize</span> here and access to support files will be applied recursively, or you can specify a particular directory that contains the support files.</li>
+					<li>Press <span class="ui">Close</span>.</li>
+				</ol>
+
+			</details>
+		</x-osx>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+		<summary>To apply an installed plugin:</summary>
+			<ul>
+				<li>From the <span class="ui">Filters</span> menu, select the plugin from the <span class="ui">Plugins</span> pop-up menu.</li>
+			</ul>
+		<aside class="box note">
+			<p>You&apos;ll be prompted to restart Affinity Photo 2 for the plugins to take effect.</p>
+		</aside>
+
+		<aside class="box tip">
+			<p>If your plug-in entries are displayed but are grayed out, ensure that you have a pixel layer selected rather than a mask, adjustment, live filter, shape, curve, or text layer.</p>
+		</aside>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Filters/filters_applying.html">Applying filters</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

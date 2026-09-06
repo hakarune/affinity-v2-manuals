@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="2x, 3x, export, export, png, jpg, gif, tiff, raster, Persona" />
+	<meta name="description" content="Export your document to a universally recognized raster image format." />
+	<title>Exporting using Export Persona</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/export_persona_on.png" class="tool heading" width="18" height="18" alt="Export Persona" /> Exporting using Export Persona</h1>
+		
+		<p>The Export Persona is a dedicated workspace for exporting layers, groups, and objects as export slices to different file formats and image sizes simultaneously. You&apos;ll also be able to export custom drawn slices.</p>
+	
+		<figure>
+			<div class="single"><img src="../../../shared/slices_export_persona.png" alt="Slices in Export Persona" /></div>
+			<figcaption>Export Persona with Export Options and Slices panels.</figcaption>
+		</figure>
+		
+	</header>
+
+	<section class="about">
+
+		<h2>How it works</h2>
+
+		<p>The Export Persona uses a combination of panels and tools to create slices. Slices are export areas which you choose to output from your document.</p>
+
+		<p>The Layers panel, Export Options panel and Slices panel are used in combination in Export Persona. The Slice Tool is unique to Export Persona and is used to create custom slices.</p>
+
+		<h2>Using the Layers panel</h2>
+
+		<p>The <span class="ui">Layers</span> panel in Export Persona is different from the Layers panel in Photo Persona. It is used exclusively as a precursor for selecting layers, groups, or objects from which slices can be created, and added to the <span class="ui">Slices</span> panel.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/layers_panel_export_persona.png" class="responsive" width="264" alt="Layers panel in Export Persona" /></div>
+			<figcaption>Layers panel in Export Persona.</figcaption>
+		</figure>
+
+		<p>When you export a Layers panel item as a slice, the slice will automatically size to what is considered to be the extent of the selected item. At the top of every slice drawn, you will see the exported resolution, name, format and bit depth.</p>
+		
+		<p>When a slice created via the Layers panel is exported, only content on the layer from which it was created is included in the output.</p>
+		
+		<h2>Using the Slice Tool</h2>
+
+		<p>The Slice Tool gives you full freedom to create export areas of all sizes, over any part of your document.</p>
+		
+		<p>When a slice created with the Slice Tool is exported, content from all visible layers within its area is included in the output.</p>
+
+		<p>For more information see <a href="exportSlices.html">working with slices</a>.</p>
+		
+		<h2>Using the Export Options panel</h2>
+
+		<p>The <span class="ui">Export Options</span> panel lets you set up your default export settings, or settings for the currently selected item prior to slice creation.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/export_options_panel.png" class="responsive" width="342" alt="Export Options panel in Export Persona" /></div>
+			<figcaption>Export Options panel in Export Persona.</figcaption>
+		</figure>
+
+		<h2>Using the Slices panel</h2>
+
+		<p>The <span class="ui">Slices</span> panel stores all your slices (from the Layers panel or Slice Tool) ready for export directly from the panel. Each created slice has an initial export format (e.g., PNG, JPEG, or SVG) associated with it on creation, with additional export formats being added per slice if needed; each export format lets you export at different size scaling or absolute sizes.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/slices_panel_export_persona.png" class="responsive" width="264" alt="Slices panel in Export Persona" /></div>
+			<figcaption>Slices panel in Export Persona.</figcaption>
+		</figure>
+
+		<p>You can use the filenames in the <span class="ui">Slices</span> panel to specify (or create) a folder hierarchy in which to place your exported files. This is achieved through the use of the forward slash, or oblique, character.</p>
+		<p>For example, a PNG hero image could be placed within an <span class="ui">img</span> folder within an <span class="ui">assets</span> folder using the following syntax: <span class="ui">assets/img/hero</span></p>
+		<p>If any part of the folder structure does not exist, the folder hierarchy will be created when the appropriate slices are exported using <span class="ui">Export Slices (<i>n</i>)</span>.</p>
+
+		<aside class="box tip">
+			<p>You can export the entire document&apos;s page using <span class="ui">File&gt;Export</span> or by selecting the predefined spread area on the <span class="ui">Slices</span> panel.</p>
+		</aside>
+		
+		<h2>Exported slice dimensions and DPI</h2>
+		
+		<p>When exporting slices via the Export Persona, the slice export size (1x, 2x, 3x, etc.) is linked with your document&apos;s DPI. The table below shows how DPI and export size affect export dimensions, using a 64x64 px document as an example.</p>
+
+		<table class="thirtythree">
+			<tr>
+				<th>DPI setting for a 64x64 document</th>
+				<th colspan="3">Export dimensions (in pixels); Exported DPI</th>
+			</tr>
+	
+			<tr>
+				<td></td><td>1x</td><td>2x</td><td>3x</td>
+			</tr>
+			<tr>
+				<td>72</td><td>64x64; 72</td><td>128x128; 144</td><td>192x192; 216</td>
+			</tr>
+			<tr>
+				<td>96</td><td>64x64; 96</td><td>128x128; 192</td><td>192x192; 288</td>
+			</tr>
+			<tr>
+				<td>144</td><td>32x32; 72</td><td>64x64; 144</td><td>96x96; 216</td>
+			</tr>
+			<tr>
+				<td>192</td><td>32x32; 96</td><td>64x64; 192</td><td>96x96; 288</td>
+			</tr>
+			<tr>
+				<td>216</td><td>21x21; 72</td><td>42x42; 144</td><td>64x64; 216</td>
+			</tr>
+			<tr>
+				<td>288</td><td>21x21; 96</td><td>42x42; 192</td><td>64x64; 288</td>
+			</tr>
+		</table>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="exportPersona_layersPanel.html">Layers panel (Export Persona)</a></li>
+			<li><a href="exportOptionsPanel.html">Export Options panel</a></li>
+			<li><a href="slicesPanel.html">Slices panel</a></li>
+			<li><a href="exportSlices.html">Working with slices</a></li>
+			<li><a href="../Sharing/export.html">Export</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

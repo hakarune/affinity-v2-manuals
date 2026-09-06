@@ -1,17 +1,12 @@
-# Affinity Photo 2 — Manual (not yet imported)
+# Affinity Photo 2 — Manual (Markdown source)
 
-Placeholder. Once the pages are converted, this folder should look like
-`manuals/designer/`:
+Converted from the official Affinity Photo 2 HTML help pages by `scripts/import_manual.py`. This folder is the **canonical source**; the EPUB, PDF, Obsidian vault, and HTML site in each release are all generated from it.
 
-```
-manuals/photo/
-├── index.md          curated table of contents (drives SUMMARY.md + build order)
-├── content/**/*.md    one file per help page, in chapter folders
-└── assets/            images referenced with relative links
-```
+- `index.md` — full table of contents, in the same order as the original manual's sidebar. `scripts/gen_summary.py` turns this into `SUMMARY.md`.
+- `content/` — one Markdown file per help page, in chapter folders.
+- `assets/images/` — 92 screenshots bundled in the page export.
+- `assets/shared/` — 966 shared UI/diagram images from the site's `shared/` folder.
 
-Source: <https://affinity.help/photo2/en-US.lproj/index.html>
-(and the site's `photo2/shared/` image folder).
+Links between pages and images are relative Markdown (work on GitHub, in mdBook, and in Obsidian).
 
-See `docs/ADDING-A-MANUAL.md` for the conversion steps. When `index.md` exists
-here, the Pages and release workflows pick this manual up automatically.
+**Known gaps:** 3 referenced screenshots could not be downloaded — see `MISSING_IMAGES.md`.

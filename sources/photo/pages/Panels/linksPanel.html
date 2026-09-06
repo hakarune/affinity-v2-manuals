@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panels" />
+	<meta name="description" content="Panel overview and settings." />
+	<title>Links panel</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1>Links panel</h1>
+
+		<p>The <span class="ui">Links</span> panel shows the link attributes for a selected linked layer.</p>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Links panel</h2>
+
+		<p>The panel displays linked layer attributes that differ according on the type of linked layer selected. Any layer type can be a linked layer.</p><!-- Needs to include transform	 --><figure>
+			<p><img src="../../images/panel_links.png" class="responsive" width="264" alt="Links panel" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p><img src="../../../shared/ui/LayersTabLinkedIcon.png" class="tool heading" width="12" height="12" alt="Linking" /> The <span class="ui">Links</span> panel is displayed by clicking the <span class="ui">Is Linked</span> icon on any linked layer in the <span class="ui">Layers</span> panel.</p>
+
+	</section>
+	
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The <span class="ui">Links</span> panel displays the following:</p>
+		
+		<ul>
+			<li><img src="../../../shared/ui/linkdrop.png" class="tool heading" width="18" height="18" alt="Link Drop" /> Link Drop&mdash;relinks the currently selected linked layer&apos;s attribute to another layer that is dragged over this target.</li>
+			<li>Link attributes depending on layer type (see below).</li>
+			<li><img src="../../../shared/ui/previousSpread.png" class="tool heading" width="18" height="18" alt="Select previous" /> <img src="../../../shared/ui/nextSpread.png" class="tool heading" width="18" height="18" alt="Select next" /> <span class="ui">Select previous</span>/<span class="ui">Select next</span>&mdash;click to navigate between linked layers.</li>
+			<li><img src="../../../shared/ui/unlinkGutters.png" class="tool heading" width="18" height="18" alt="Unlink linked layer attributes" /> <span class="ui">Unlink</span>&mdash;click to remove the linked layer&apos;s attribute from layer linkage; edits to that attribute can then be made independently of other linked layers.</li>
+		</ul>			
+
+		<p>The attributes list is as follows:</p>		
+		
+		<table class="thirtythree">
+			<tr>
+				<th>Attribute</th>
+				<th>For sharing</th>
+				<th>Example</th>
+			</tr>
+			<tr>
+				<td>Transform<sup>*</sup></td><td>The same moving, resizing, rotating and shearing operation between layer content simultaneously</td><td>Resizing linked shapes in proportion</td>
+			</tr>
+			<tr>
+				<td>Pixel content</td><td>The same pixels between layers that update simultaneously on editing</td><td>Making a mask share the same pixel content as another mask</td>
+			</tr>
+			<tr>
+				<td>Blending mode &amp; ranges</td><td>The same blend mode and tonal blending</td><td>Swapping out a multiply blend mode for a soft light blend mode en masse amongst composite images</td>
+			</tr>
+			<tr>
+				<td>Opacity &amp; visibility</td><td>The same opacity level and Show/Hide settings between layers</td><td>Making multiple semi-transparent text frames that update with opacity changes</td>
+			</tr>
+			<tr>
+				<td>Layer effect parameters</td><td>The same layer effect settings (shadow, bevel, color overlays)</td><td>Multiple text captions can use a common drop shadow appearance that update if the effect is modified.</td>
+			</tr>
+			<tr>
+				<td>Adjustment parameters</td><td>The same adjustment layer settings</td><td>Using the same white balance settings to uniformly &apos;warm&apos; composited images</td>
+			</tr>
+			<tr>
+				<td>Live filter parameters</td><td>The same live filter layer settings</td><td>Sharing uniform blurs on multiple background composited images</td>
+			</tr>
+			<tr>
+				<td>Vector shape parameters</td><td>The shapes&apos; appearances can be morphed</td><td>Rounded rectangles could update simultaneously if the corner roundness is to change</td>
+			</tr>
+			<tr>
+				<td>Vector fill</td><td>A solid or gradient fill</td><td>Consistent color-to-transparency &apos;tail-off&apos; radial and linear gradients applied to composited images.</td>
+			</tr>
+			<tr>
+				<td>Vector line style</td><td>The stroke width, color and style</td><td>Dotted lines on a travel map could change their dot pattern simultaneously.</td>
+			</tr>
+		</table>
+		
+		<aside class="box tip">
+			<p><sup>*</sup>Use Link Drop to assign the Transform attribute from already existing linked layer content to unlinked layer content.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../LayerOperations/linking.html">Linking</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

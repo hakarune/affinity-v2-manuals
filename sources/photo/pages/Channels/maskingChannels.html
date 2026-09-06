@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="channels, masking, channels masks, selections" />
+	<meta name="description" content="Mask adjustments and filters based on colour channels." />
+	<title>Masking from channels</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Masking from channels</h1>
+	
+		<p>Create masks based on channel information to selectively apply and mask adjustments and filters to your compositions.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/channels_masking_before.png" alt="Before" /><div><img src="../../../shared/channels_masking_after.png" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+		
+	</header>
+
+	<section class="about">
+	<h2>Masking and channels</h2>
+	
+	<p>Masking using channel information is a great alternative to working with selections, where parts of compositions can be fine-tuned with more precision. Extracting pixel information from only certain areas, while excluding others from adjustments, is naturally where masking from channels can help. This is particularly true if the areas to extract pixel information from are complex and so other methods of working (such as using Flood Select or Selection Brush tools) take too long or aren&apos;t accurate enough.</p>
+	
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To apply a masked adjustment based on channel information:</summary>
+			<ol>
+				<li>On the <span class="ui">Channels</span> panel, select the channel that upon preview (when clicked) provides the most contrasting image.</li>
+				<li><span class="CLICK-TAG"></span>-click the selected channel, then choose <span class="ui">Load to Pixel Selection</span>.</li>
+				<li>On the top menu, select <span class="ui">Layer</span>&gt;<span class="ui">New Mask Layer</span>.</li>
+				<li>On the <span class="ui">Channels</span> panel, toggle visibility of Red, Green and Blue Channels back on.</li>
+				<li>On the <span class="ui">Layers</span> panel, select the image mask layer and apply an adjustment or filter, as required.</li>
+				<li>Drag the adjustment or filter layer and offer it to the thumbnail of the image layer.</li>
+			</ol>
+			
+			<p>Adding an Adjustment or Filter (as required) will limit its effect to the area selected based on channel information. Alternatively, your workflow may include an inverted mask to target specific and complex areas.</p>
+			
+		</details>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To invert a mask:</summary>
+			<ol>
+				<li>Select the mask layer.</li>
+				<li>On the top menu, select <span class="ui">Layer</span>&gt;<span class="ui">Invert</span>.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>If the Channels panel isn&apos;t appearing by default, then on the top menu navigate to <span class="ui">Window</span>&gt;<span class="ui">Channels</span>.</p>
+			</aside>
+			
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/channelsPanel.html">Channels panel</a></li>
+			<li><a href="../Channels/spareChannels.html">Spare channels</a></li>
+			<li><a href="../Selections/saveLoadSelections.html">Saving and loading selections</a></li>
+			<li><a href="../Selections/selections_fromchannels.html">Pixel selections from channels</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

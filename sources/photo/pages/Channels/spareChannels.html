@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="channel, channels, colour mode, image channel, layer channel, spare channel" />
+	<meta name="description" content="Use spare channels to effectively isolate and edit complex areas of your compositions." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src: "../../../shared/spare_channels_all.png", alt: "All channels" },
+				tab2: { src: "../../../shared/spare_channels_green.png", alt: "Spare channel Green" },
+				tab3: { src: "../../../shared/spare-channel-green-edit.png", alt: "Green areas adjusted" },
+			}
+		}
+	</script>
+	
+	<title>Spare channels</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+		<h1>Spare channels</h1>
+		<p>Use spare channels to effectively isolate and edit complex areas of your compositions and achieve a more precise tonal separation.</p>
+
+	</header>
+
+		<section class="about">
+		
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>All channels</p></div>
+				<div class="tab"><p>Spare channel Green</p></div>
+				<div class="tab"><p>Green areas adjusted</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/spare_channels_all.png" class="responsive" alt=""></div>
+		</div>
+		
+			<h2>About spare channels</h2>
+			<p>Creating a spare channel from pixel selection or channel information is performed via the <span class="ui">Channels</span> panel. Spare channels can be useful for making non-permanent adjustments and maintaining a non-destructive workflow. Spare channels target areas accurately as they are based on color and tonal pixel information.</p>
+			<p>Spare channels reside at the bottom of the Channels panel and can be renamed for better organization within more complex workflows.</p>
+		
+		</section>
+	
+		<section class="howto">
+			<details open="open">
+				<summary>To create a spare channel:</summary>
+				<ol>
+					<li>Open the <span class="ui">Channels</span> panel.</li>
+					<li><img src="../../../shared/ui/channel_visible.png" class="tool" width="16" height="16" alt="Visible Channel" /> Choose the channel for the desired color information to target.</li>
+					<li><span class="CLICK-TAG"></span>-click the channel and select <span class="ui">Create Spare Channel</span>.</li>
+					<li>(Optional) Rename the newly created spare channel.</li>
+				</ol>
+	
+				<aside class="box tip">
+					<p>For the most precise separation and targeting of areas based on channel color information, select a channel that provides the highest contrast.</p>
+				</aside>
+				
+				<p>For example, a Spare Channel Green created can be targeted and treated with a filter or an adjustment. In the image above, the green channel information was addressed to increase vibrance and saturation in the leaves.</p> 
+
+			</details>
+		</section>
+	
+		<section class="about">
+			<h2>Storing selections</h2>
+			<p>Selections can be saved as spare channels, which allows for selected information to be re-loaded as either a pixel selection or a mask layer. This can help speed up workflows as you can store multiple selections, removing the need to start repeat selections from scratch.</p>
+		
+		</section>
+	
+		<section class="howto">
+			<details open="open">
+				<summary>To target selections based on channels:</summary>
+				<ol>
+					<li>On the <span class="ui">Channels</span> panel, select a channel or create a spare channel from one.</li>
+					<li><span class="CLICK-TAG"></span>-click the channel (or spare channel) entry and select <span class="ui">Load to Pixel Selection</span>.</li>
+					<li>Add the desired adjustment.</li>
+					<li>When done, on the top menu click <span class="ui">Select</span>&gt;<span class="ui">Deselect</span>.</li>
+				</ol>
+			
+				<p>Any adjustment or filter (including Live Filters) will be applied to the area specified by channel information.</p>
+			
+			</details>
+		</section>
+ 
+<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/channelsPanel.html">Channels panel</a></li>
+			<li><a href="../Selections/selections_fromchannels.html">Selections from channels</a></li>
+			<li><a href="../Channels/usingChannels.html">Using channels</a></li>
+			<li><a href="../Channels/maskingChannels.html">Masking channels</a></li>
+			<li><a href="../Adjustments/adjustment_applying.html">Applying adjustments</a></li>
+			<li><a href="../Layers/livefilters.html">Live filters</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

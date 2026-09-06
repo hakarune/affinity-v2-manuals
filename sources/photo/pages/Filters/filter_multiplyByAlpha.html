@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="alpha channel, premultiplied, compositing, straight, unassociated, associated" />
+	<meta name="description" content="The Multiply by Alpha filter ensures the transparency in an image is stored using a premultiplied alpha representation." />
+	<title>Multiply by Alpha</title>
+</head>
+<body>
+
+	<header>
+
+		<h1>Multiply by Alpha</h1>
+
+		<p>The Multiply by Alpha filter ensures the transparency in an image is stored using a premultiplied alpha representation.</p>
+		
+		<p>Some apps, such as compositing software and game engines, expect premultiplied alpha even though an image file format may store a non-premultiplied alpha representation by default.</p>
+		
+		<p>When an image containing non-premultiplied alpha data is composited using a system that expects premultiplied alpha data, a halo effect may be noticeable along semi-transparent edges, for example.</p>
+		
+		<p>The filter addresses this by converting to premultiplied alpha, enabling improved antialiasing along the edges.</p>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_multiplybyalpha_before.jpg" alt="Before" /><div><img src="../../../shared/filter_multiplybyalpha_after.jpg" alt="After" /></div>
+			</div>
+		<figcaption></figcaption>
+		</figure>
+		
+		<aside class="note">
+			<p>Non-premultiplied alpha is sometimes called straight alpha or unassociated alpha. Conversely, premultiplied alpha is sometimes referred to as associated alpha.</p>
+		</aside>
+	</header>
+
+	<section class="about">
+		<h2>About the Multiply by Alpha filter</h2>
+		<p>This filter can be found in the <span class="ui">Filter</span> menu, in the <span class="ui">Colors</span> category.</p>
+		<p>This filter has no customizable settings.</p>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_divideByAlpha.html">Divide by Alpha</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

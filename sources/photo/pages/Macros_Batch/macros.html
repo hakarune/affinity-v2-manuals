@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="macro, automate, batch, workflow" />
+	<meta name="description" content="Record and play back operations from saved macros." />
+	<title>Macros</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Macros</h1>
+
+		<p>Affinity Photo 2 supports a powerful and intuitive macro recording and playback feature, presented as the <span class="ui">Macro</span> panel. It allows you to record multiple operations and then play them back sequentially as one action.</p><!-- needs to show scaling options --><figure class="nft">
+			<p><img src="../../images/panel_macro.png" class="responsive" width="352" alt="Macro panel" /></p>
+			<figcaption>The Macro panel showing a series of recorded actions.</figcaption>
+		</figure>
+	</header>
+
+	<section id="about">
+		<h2>About macros</h2>
+
+		<p>Through the <span class="ui">Macro</span> panel, you can record any operation in Photo; from applying a Gaussian Blur to adding a gradient fill. It is hugely useful for workflow purposes as you can record common workflow steps and apply them to your documents in a single click. Additionally, you can exclude operations from the recording if they were performed accidentally or are no longer needed, and expose certain parameters to the user for configurable playback.</p>
+
+		<p>Macros can be saved locally (they appear in the <span class="ui">Library</span> panel) and exported to an <span class="ui">.afmacro</span> file format for sharing and re-importing.</p>
+	</section>
+
+	<section id="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/RecordMacro.png" class="tool" width="13" height="13" alt="Record Macro" /> <img src="../../../shared/ui/StopRecordingMacro.png" class="tool" width="13" height="13" alt="Stop Macro" /> <img src="../../../shared/ui/PlaybackMacro.png" class="tool" width="13" height="13" alt="Play Macro" /> To record a macro:</summary>
+			<ol>
+				<li>On the <span class="ui">Macro</span> panel, click the <span class="ui">Start recording</span> icon.</li>
+				<li>Perform the operations you wish to record. They will appear one by one in the macro operation list.</li>
+				<li>(Optional) Uncheck any operations you do not wish to include (e.g., if they are no longer required).</li>
+				<li>When you are finished recording, click the <span class="ui">Stop recording</span> icon.</li>
+				<li>(Optional) To continue recording the macro, click the <span class="ui">Start recording</span> icon again.</li>
+				<li>(Optional) To play back and preview your macro, click the <span class="ui">Play</span> icon.</li>
+				<li>(Optional) To retrospectively change parameters on a particular operation, click the <span class="ui">Settings</span> icon next to the operation. This is useful for fine tuning your macros, or quickly creating variations (e.g., Moderate, Standard, Extreme, etc).</li>
+				<li>(Optional) Within the <span class="ui">Settings</span> dialog for a recorded action, enable the <span class="ui">Eye</span> icon to expose the parameter to the user (making it interactive) when the macro is run.</li>
+			</ol>
+
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/ResetMacro.png" class="tool" width="13" height="13" alt="Reset Macro" /> To reset (clear) the macro operation list:</summary>
+			<ul>
+				<li>With one or more operations listed, click the <span class="ui">Reset</span> icon.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/AddMacroToLibrary.png" class="tool" width="13" height="13" alt="Add Macro to Library" /> To save a macro:</summary>
+			<ol>
+				<li>Once you have recorded your macro, click the <span class="ui">Add to Library</span> option.</li>
+				<li>You will be prompted to choose a category and enter a name for your recorded macro. Enter a name and click <span class="ui">OK</span>.</li>
+				<li>The <span class="ui">Library</span> panel will become visible with the saved macro appearing in its library category.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To scale/align a macro to the current document:</summary>
+			<ol>
+				<li>(Optional) At the bottom of the <span class="ui">Library</span> panel, choose a scaling option from the left-hand menu to apply to the macro&apos;s drawing actions.</li>
+				<li>(Optional) From the right-hand menu, choose whether the macro&apos;s drawing actions are aligned to one of the corners or the center of the current document.</li>
+				<li>Click the macro you want to run.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/ExportMacro.png" class="tool" width="13" height="13" alt="Export Macro" /> To export a macro:</summary>
+			<ol>
+				<li>Once you have recorded your macro, click the <span class="ui">Export</span> option.</li>
+				<li>A file export dialog will then appear. Choose where to export your macro and name it accordingly, then click <span class="ui">Save</span>.</li>
+				<li>The macro will then be saved as an .afmacro file.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="batchjobs.html">Batch jobs</a></li>
+			<li><a href="../Panels/macroPanel.html">Macro panel</a></li>
+			<li><a href="../Panels/libraryPanel.html">Library panel</a></li>
+			<li><a href="../Addons/importingAddons.html">Importing add-ons</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

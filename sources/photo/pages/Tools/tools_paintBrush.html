@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="anti-aliased" />
+	<meta name="description" content="Tool overview and settings." />
+	<title>Paint Brush Tool</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1><img src="../../../shared/ui/paint_brush_tool.png" class="tool heading" width="18" height="18" alt="Paint Brush Tool" /> Paint Brush Tool</h1>
+
+		<p>The Paint Brush Tool lays down pixels on the page, creating strokes with antialiased edges. This creates a natural transition between the stroke and the surrounding pixels.</p>
+
+		<p>Its variable width lines can be controlled either by velocity&mdash;most useful when drawing with a mouse&mdash;or by pressure&mdash;for use when drawing with a pressure-sensitive device.</p>
+
+	</header>
+
+	<section class="about">
+		
+		<h2>About the Paint Brush Tool</h2>
+		<p>Other brush-based tools use similar settings to control the appearance of the applied pixels, although there may be slight variations.</p>
+
+		<p>Most brushes use a soft, round brush as their default. Alternative styles can be selected from the <span class="ui">Brushes</span> panel.</p>
+
+		<aside class="box tip">
+			<p>With any brush tool selected in Photo Persona, you can quickly change the opacity of your brush using numerical keys. For more information, see the <a href="../Painting/painting.html">Painting brush strokes</a> topic.</p>
+		</aside>
+		
+		<p>When using the <span class="ui">Paint Brush Tool</span> on a RAW or image layer, a new nested pixel layer is created with the strokes applied onto it. This aids non-destructive, layer-based workflows whereby the newly created layer can be switched off from view to investigate the effects of painting quickly. This also aids layer data management as the original image or RAW layer is not rasterized.</p>
+
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+			<ul>
+				<li><span class="ui">Width</span>&mdash;the brush (stroke) size in pixels. Type directly in the text box or drag the pop-up slider to set the value.</li>
+				<li><span class="ui">Opacity</span>&mdash;how see-through the brush is. Type directly in the text box or drag the pop-up slider to set the value.</li>
+				<li><span class="ui">Flow</span>&mdash;how fast the pixel brush effect is applied (1% is very slow, 100% is immediate). Type directly in the text box or drag the pop-up slider to set the value.</li>
+				<li><span class="ui">Hardness</span>&mdash;how hard the edges of the pixel brush are. The brush appears softer as the percentage decreases. Type directly in the text box or drag the pop-up slider to set the value.</li>
+				<li><span class="ui">More</span>&mdash;click to display the Brushes dialog to access advanced brush settings.</li>
+				<li><span class="ui">Force pressure</span>&mdash;Click to control brush size with pressure if using a pressure-sensitive device. This overrides brush defaults.</li>
+				<li><span class="ui">Stabilizer</span>&mdash;enables stroke stabilization using one of two modes:<ul>
+						<li><img src="../../../shared/ui/stabiliser_rope.png" class="tool" width="16" height="16" alt="Rope stabilization mode" /> <span class="ui">Rope mode</span>&mdash;drags the stroke end by a &apos;rope&apos; to smooth the stroke but lets you introduce sharp corners at increasing rope <i>Length</i> (radius) values by redirecting the slackened rope.</li>
+						<li><img src="../../../shared/ui/stabiliser_window.png" class="tool" width="16" height="16" alt="Window stabilization mode" /> <span class="ui">Window mode</span>&mdash;smoothes the stroke by averaging sampled input positions within a <i>Window</i> whose size is configurable.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Symmetry</span>&mdash;when set to greater than 0, repeats the brush stroke around a number of axes (defined by the symmetry value). The center axis point can be repositioned by click-dragging it.</li>
+				<li><span class="ui">Mirror</span>&mdash;with symmetry enabled, causes brush strokes to be mirrored along the X and Y axis.</li>
+				<li><span class="ui">Lock</span>&mdash;when checked, prevents the symmetry line from being moved.</li>
+				<li><span class="ui">Blend Mode</span>&mdash;changes how the applied pixels interact with existing pixels on a layer. Select from the pop-up menu.</li>
+				<li><span class="ui">Wet Edges</span>&mdash;builds paint up along the edges of your pixel brush stroke, producing a watercolor effect. Check <span class="ui">Custom</span> and either apply a preset <span class="ui">Standard profile</span> or draw a custom profile using the chart; both subtly changes how watery the stroke appears.</li>
+				<li><span class="ui">Protect Alpha</span>&mdash;when checked, you are not able to paint on the current layer&apos;s transparent regions.</li>
+			</ul>
+
+		<aside class="box note">
+			<p>The tool can be associated with a particular brush when editing it in the <span class="ui">Brushes</span> panel. For more information, see the <a href="../Painting/pixel_modify.html">Modifying brushes</a> topic.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Painting/painting.html">Painting brush strokes</a></li>
+			<li><a href="tools_pen.html">Pen Tool</a></li>
+			<li><a href="tools_node.html">Node Tool</a></li>
+			<li><a href="../Panels/brushesPanel.html">Brushes panel</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

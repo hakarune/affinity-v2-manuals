@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="FFT denoise removes periodic noise from scanned images using a Fourier spectrum." />
+	<title>FFT Denoise</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>FFT Denoise</h1>
+
+		<p>The FFT denoise filter (Fast Fourier Transform) removes periodic noise from scanned images.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_fftdenoise_before.jpg" alt="Before" /><div><img src="../../../shared/filter_fftdenoise_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the FFT Denoise filter</h2>
+
+		<p>Periodic noise is encountered on scanned images when the scanner has been subject to electrical or electromagnetic interference. By using a grayscale Fourier spectrum generated from the image, periodic noise peaks can be edited out of the spectrum by using a brush.</p>
+
+	<figure>
+		<p><img src="../../../shared/filter_fftdenoise_spectrum.png" alt="Fourier spectrum for FFT Denoise" /></p>
+		<figcaption>Paired noise peaks on Fourier spectrum mirrored across both horizontal and vertical lines.</figcaption>
+	</figure>
+
+		<p>This filter can be found in the <span class="ui">Filters</span> menu, in the <span class="ui">Noise</span> category.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the Fourier spectrum:</p>
+
+		<ul>
+			<li><span class="ui">Width</span>&mdash;the brush (stroke) size in pixels. Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">Opacity</span>&mdash;how see-through the brush is. 100% opacity erases pixels completely on the first pass. A lower opacity only partially erases the peaks.</li>
+			<li><span class="ui">Flow</span>&mdash;how fast the brush effect is applied (1% is very slow, 100% is immediate). Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">Hardness</span>&mdash;how hard the edges of the brush are. The brush appears softer as the percentage decreases. Type directly in the text box or drag the pop-up slider to set the value.</li>
+			<li><span class="ui">More</span>&mdash;click to display the <a href="../Painting/pixel_modify.html">Brushes</a> dialog to access advanced brush settings.</li>
+		</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To remove periodic noise:</summary>
+			<ul>
+				<li>From the grayscale Fourier spectrum, select brush properties from the top toolbar. Take care to set a brush width that encompasses the noise peaks entirely.</li>
+				<li>Paint out the frequency noise pairings on both horizontal and vertical lines.</li>
+			</ul>
+			<aside class="box note">
+				<x-osx><p>Use your <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> to zoom in/out of areas of the spectrum.</p></x-osx>
+				<x-win32><p>Use your <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> to zoom in/out of areas of the spectrum.</p></x-win32>
+			</aside>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_denoise.html">Denoise</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="node, tool, vector" />
+	<meta name="description" content="The Node Tool is used to edit existing curves and shapes." />
+	<title>Node Tool</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/node_tool.png" class="tool heading" width="18" height="18" alt="Node Tool" /> Node Tool</h1>
+
+		<p>The <span class="ui">Node Tool</span> is used to edit existing lines and shapes.</p>
+	</header>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Fill</span>&mdash;click the color swatch to display a pop-up panel to update fill color.</li>
+			<li><span class="ui">Stroke</span>&mdash;click the color swatch to display a pop-up panel to update stroke color.</li>
+			<li><span class="ui">Stroke properties</span>&mdash;click to access stroke properties such as stroke style, width, cap, join and align, as well as arrowhead styles and manual pressure profiles.</li>
+			<li><img src="../../../shared/ui/convert_sharp.png" class="tool" width="16" height="16" alt="Sharp Corner" /> <img src="../../../shared/ui/convert_smooth.png" class="tool" width="16" height="16" alt="Smooth Corner" /> <img src="../../../shared/ui/convert_smart.png" class="tool" width="16" height="16" alt="Smart Corner" /> <span class="ui">Convert</span>&mdash;converts the selected node into a <span class="ui">Sharp</span>, <span class="ui">Smooth</span>, or <span class="ui">Smart node</span>.</li>
+			<li><span class="ui">Action</span>&mdash;Manipulates the curve(s):<ul>
+					<li><img src="../../../shared/ui/split_curve_at_selected_node.png" class="tool" width="16" height="16" alt="Split Curve" /> <span class="ui">Split Curve After Node</span> adds a new node at the midpoint of one of the curve segments of the currently selected node, depending on the current curve orientation (indicated by a red-line indicator). Use <span class="ui">Reverse Curve</span> to change this curve orientation.</li>
+					<li><img src="../../../shared/ui/action_break_curve.png" class="tool" width="16" height="16" alt="Break Curve" /> <span class="ui">Break Curve</span> opens the shape at the selected node.</li>
+					<li><img src="../../../shared/ui/action_close_curve.png" class="tool" width="16" height="16" alt="Close Curve" /> <span class="ui">Close Curve</span> joins the start and end nodes to create an enclosed shape.</li>
+					<li><img src="../../../shared/ui/action_smooth_curve.png" class="tool" width="16" height="16" alt="Smooth Curve" /> <span class="ui">Smooth Curve</span> modifies a line or shape, by adding and removing nodes, to create a rounder and softer curve effect.</li>
+					<li><img src="../../../shared/ui/action_join_curves.png" class="tool" width="16" height="16" alt="Join Curves" /> <span class="ui">Join Curves</span> connects two separate curves together to make one curve. Curves need to be both selected with the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> using either the Node Tool or <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> as you draw.</li>
+					<li><img src="../../../shared/ui/action_reverse_curves.png" class="tool" width="16" height="16" alt="Reverse Curve" /> <span class="ui">Reverse Curve</span> reverses the direction the curve was drawn in.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Transform</span>&mdash;Transforms the selected node(s):<ul>
+					<li><img src="../../../shared/ui/transform_mode.png" class="tool" width="16" height="16" alt="Transform Mode" /> <span class="ui">Transform Mode</span>&mdash;when selected, creates a bounding box around the selected nodes, allowing them to be transformed as a group.</li>
+					<li><img src="../../../shared/ui/rotationcntr.png" class="tool" width="16" height="16" alt="Enable Transform Origin" /> <span class="ui">Enable Transform Origin</span>&mdash;displays a movable transform origin about which the selection box can be rotated.</li>
+					<li><img src="../../../shared/ui/hide_selection_while_dragging.png" class="tool" width="16" height="16" alt="Hide Selection" /> <span class="ui">Hide Selection while Dragging</span>&mdash;when selected, the selection box is temporarily hidden when transforming. If this option is off, the selection box remains visible during transformation. The selected behavior persists across all objects unless it is manually switched.</li>
+					<li><img src="../../../shared/ui/alignment_mode.png" class="tool" width="16" height="16" alt="Show Alignment Handles" /> <span class="ui">Show Alignment Handles</span>&mdash;when selected, displays alignment handles at the center and edges of the selected object. Hovering over these handles displays a floating guideline across the page. You can drag the handles to position the center or edges of the selected object in line with this guide.</li>
+					<li><img src="../../../shared/ui/multiple_transform.png" class="tool" width="16" height="16" alt="Transform Objects Separately" /> <span class="ui">Transform Objects Separately</span>&mdash;when selected, where multiple objects are selected, they can be be resized, rotated and sheared independently of each other instead of transforming the bounding box.</li>
+					<li><img src="../../../shared/ui/curves_box_mode.png" class="tool" width="16" height="16" alt="Selection Box From Curves" /> <span class="ui">Selection Box From Curves</span>&mdash;when selected, the selection box encompasses and includes all curves that extend outside the array of currently selected nodes.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Snap</span>&mdash;Controls node snapping:<ul>
+					<li><img src="../../../shared/ui/snap_align_selected.png" class="tool" width="16" height="16" alt="Align to nodes of selected curves" /> <span class="ui">Align to nodes of selected curves</span>&mdash;aligns any moving node you drag to any other node on the same or a different curve.</li>
+					<li><img src="../../../shared/ui/snap_geometry_selected.png" class="tool" width="16" height="16" alt="Snap to geometry of selected curves" /> <span class="ui">Snap to geometry of selected curves</span>&mdash;will snap moving node to the same or different curve&apos;s path or node.</li>
+					<li><img src="../../../shared/ui/snap_selected_dragging.png" class="tool" width="16" height="16" alt="Snap all selected nodes when dragging" /> <span class="ui">Snap all selected nodes when dragging</span>&mdash;will snap multiple selected nodes, when dragging, to a &quot;target&quot; node on any selected curves.</li>
+					<li><img src="../../../shared/ui/snap_curve_handle_position.png" class="tool" width="16" height="16" alt="Align handle positions using snapping options" /> <span class="ui">Align handle positions using snapping options</span>&mdash;will snap a control handle using any of the snapping criteria currently set in Global snapping, e.g. to grid, guide, object geometry, key points, spread, margin, etc.</li>
+					<li><img src="../../../shared/ui/snap_perform_construction_snapping.png" class="tool" width="16" height="16" alt="Perform construction snapping" /> <span class="ui">Perform construction snapping</span>&mdash;allows control handle snapping:<ul>
+							<li>inline with adjacent node.</li>
+							<li>to 90° from inline.</li>
+							<li>to reflected angle with adjacent control handle.</li>
+							<li>parallel to adjacent control handle.</li>
+							<li>90° to parallel control handle.</li>
+							<li>to logical triangle.</li>
+						</ul>
+					</li>
+				</ul>
+				<p>These options are independent of the global <a href="../DesignAids/snapping.html">snapping</a> options.</p>
+			</li>
+			<li><span class="ui">View</span>:<ul>
+					<li><img src="../../../shared/ui/show_orientation.png" class="tool" width="16" height="16" alt="Show Orientation" /> <span class="ui">Show Orientation</span>&mdash;displays the segment leading up to the end node in red to help visualize the direction of the closed shape&apos;s outline (used for winding fill mode); the drawing direction is away from the red-line indicator.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<aside class="box note">
+			<p>If a geometric shape is selected rather than a curve, the Node Tool&apos;s context toolbar will show options applicable to a selected geometric shape rather than the options listed above.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../CurvesShapes/edit_linesAndShapes.html">Edit vector lines and shapes</a></li>
+			<li><a href="../CurvesShapes/draw_geometricShapes.html">Draw and edit shapes</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Procedural Texture filter allows you to create your own filter effects through functions, expressions and variables." />
+	<title>Procedural Texture</title>
+</head>
+<body>
+
+	<header>
+
+		<h1>Procedural Texture</h1>
+
+		<p>The Procedural Texture filter allows you to perform a number of pixel manipulations using predetermined functions and user defined variables. It&apos;s possible to essentially write your own filters with configurable parameters.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/filter_proceduraltexture_before.jpg" alt="Before" /><div><img src="../../../shared/filter_proceduraltexture_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Before and after. A bump map is created from a normal map using <span class="ui">dot</span> and <span class="ui">debump</span> functions, then a <span class="ui">Soft Light</span> blend mode is used to &quot;relight&quot; a 3D render.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Procedural Texture filter</h2>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Equations</span>&mdash;you can define multiple equation lines. This is where you write the functions to manipulate the pixel content. You can also target specific channels by clicking the channel buttons to the right of the equation entry.</li>
+			<li><span class="ui">Custom Inputs</span>&mdash;add custom input variables here. You can use the following variable types:<ul>
+				<li><span class="ui">0-1 Range Input</span>&mdash;a standard input range. Configurable via a slider.</li>
+				<li><span class="ui">-1-1 Range Input</span>&mdash;a harmonic input range (useful for harmonic functions). Configurable via a slider.</li>
+				<li><span class="ui">Real Number Input</span>&mdash;actual number value with no limit.</li>
+				<li><span class="ui">Integer Number Input</span>&mdash;numerical input limited to integer values.</li>
+				<li><span class="ui">Angle Input</span>&mdash;angle input, used with vector expressions. Configurable by click-dragging.</li>
+				<li><span class="ui">Elevation-Rotation Input</span>&mdash;direction-based vector input. Configurable by click-dragging.</li>
+			</ul>
+		</ul>
+
+	</section>
+
+	<hr>
+
+	<section class="howto">
+
+		<h2>Using the filter</h2>
+
+		<p>The filter has several key components that must be understood in order to use it effectively:</p>
+
+		<ul>
+			<li><b>Equation lines</b><ul>
+				<li>The equation line entries are where you type the expressions and functions to achieve the desired result. Multiple line entries are typically used to target separate channels&mdash;if you are targeting all channels simultaneously then you would only need one entry.</li>
+			</ul>
+			</li>
+			<li><b>Channel targets</b><ul>
+				<li>When you create a new expression line, just the channel red (<b>R</b>) is targeted by default, meaning only the red channel data is affected by the outcome of the expression. You can click on the <b>R</b>, <b>G</b>, <b>B</b> and <b>A</b> channel labels to add or remove them from the expression. Channel targeting is an important part of achieving the desired result from the expression.</li>
+				<li>To target all color data cumulatively, enable <b>R</b>, <b>G</b> and <b>B</b> but not <b>A</b>.</li>
+				<li>To target just the alpha channel data, disable <b>R</b>, <b>G</b> and <b>B</b> and enable <b>A</b>.</li>
+			</ul>
+			</li>
+			<li><b>Variables</b><ul>
+				<li>Function results can be assigned to variables in order to streamline the overall expression and aid readability. The syntax follows the convention of <b>var varname=function();</b></li>
+				<li>You can define as many variables as required&mdash;simply separate them with a semicolon (<b>;</b>).</li>
+				<li>e.g. <code>var v=vec2(rx, ry); var clr=vec3(R,G,B);</code></li>
+				<li>The above creates two variables: one a vector from relative X and Y canvas positions (<b>v</b>), and the other a vector from the RGB color data (<b>clr</b>). The variables <b>v</b> and <b>clr</b> can then be used in a following function or set of functions.</li>
+			</ul>
+			</li>
+			<li><b>Functions</b><ul>
+				<li>Functions bring everything together and are used to achieve the final result.</li>
+				<li>See the extensive table below for a full list of available functions: they range from mathematical calculations to vector creation, interpolators, oscillators and noise generators.</li>
+				<li>The syntax follows the typical convention of <b>function(input, parameter)</b> (multiple inputs and parameters where applicable).</li>
+				<li>e.g. <b>scurveinterp(T a, T b, T t)</b> could be used as <code>scurveinterp(R, B, 0.5)</code>. This would interpolate between red and blue channel data with a balance/mix of 50% (since the balance can be a value between <b>0</b> and <b>1</b>).</li>
+			</ul>
+			</li>
+			<li><b>Parentheses</b><ul>
+				<li>Parentheses are used for groupings exactly as they would be in traditional mathematics.</li>
+				<li>For example, take this equation line: <code>R/(a*2)</code></li>
+				<li>By putting <b>a*2</b> in parentheses, it will be evaluated first before being divided into <b>R</b>.</li>
+				<li>Here is a more complex example: <code>var v2=vec2(rx/w/2, ry/h/<b>(b*2)</b>); dir(v2*(a*2))*(c*2)</code> (the parentheses are highlighted in bold)</li>
+				<li>In this example, the variable <b>b</b> is multiplied by <b>2</b>, but this is evaluated first before becoming part of the final <code>ry/h/(b*2)</code> calculation. If this expression was not in parentheses, the outcome would be different.</li>
+			</ul>
+			</li>
+			<li><b>Custom Inputs</b><ul>
+				<li>Custom inputs can improve the accessibility of the expressions and allow parameters to be altered quickly.</li>
+				<li>There are several input buttons depending on the type of custom input required (see the <span class="ui">Custom Inputs</span> list above).</li>
+				<li>Custom inputs are assigned to variables for use in the expressions. Simplified variable names are provided by default when you add a new custom input, e.g. <b>a</b>, <b>b</b>, <b>c</b>.</li>
+				<li>You can name these input variables whatever you wish so long as <em>they do not clash with established function names and persistent variables</em> (e.g. <b>w</b> for width, <b>R</b> for red channel, <b>vec2</b> for a vector creation function). If you have clashing variables, they will simply be unable to be referenced.</li>
+				<li>To use them, reference them in a function, e.g. <code>perlin(rx, ry, <b>a</b>, <b>b</b>)</code>&mdash;where <b>a</b> controls <i>octaves</i> and <b>b</b> controls <i>persistence</i>.</li>
+			</ul>
+			</li>
+		</ul>
+
+	</section>
+
+	<hr>
+
+	<section class="examples">
+
+		<h2>Examples</h2>
+
+		<p>Here are some practical examples of how the procedural texture filter can be used. Custom input variables are highlighted in <b>bold</b>. To follow along with them, copy &amp; paste the code line into a new equation line, set channel targets if necessary, then create custom inputs following the table entries.</p>
+
+		<h3>Round Vignette</h3>
+
+		<figure>
+			<div class="single"><img src="../../../shared/filter_proceduraltexture_vignette.jpg" alt="Vignette" /></div>
+		</figure><code class="contained">var vignettew=vec2(rx, ry)/w; var vignetteh=vec2(rx, ry)/h; var productw=oscsc(vignettew); var producth=oscsc(vignetteh); scurveinterp(productw, producth, <b>roundness</b>)*(<b>intensity</b>*<b>imultiplier</b>)</code><p>Target all three channels (<b>R</b>, <b>G</b> and <b>B</b>). Use a blend mode such as <span class="ui">Screen</span>.</p>
+		<table class="thirtythree">
+			<tr>
+				<th>Custom Input Type</th>
+				<th>Variable Name</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td>[0,1] range input</td>
+				<td>roundness</td>
+				<td>Used as a variable in <span class="ui">scurveinterp</span> to control the vignette roundness.</td>
+			</tr>
+			<tr>
+				<td>[0,1] range input</td>
+				<td>intensity</td>
+				<td>This value is multiplied by the <span class="ui">scurveinterp</span> result to modify the intensity (brightness) of the vignette.</td>
+			</tr>
+			<tr>
+				<td>Real number input</td>
+				<td>imultiplier</td>
+				<td>This real number is multiplied by the <b>intensity</b> value in order to scale it, resulting in a greater range of achievable brightness.</td>
+			</tr>
+		</table>
+		<p>In this expression, we have four variable declarations. <b>rx</b> and <b>ry</b> are used to create two vector results: <b>vignettew</b> and <b>vignetteh</b>. The vector results are divided by the width and height respectively. From these, we then calculate <b>productw</b> and <b>producth</b> by using S-curve oscillators (<b>oscsc</b>). Finally, we interpolate between these two product results using an S-curve interpolant (<b>scurveinterp</b>). The mix between the two results is controlled by the <b>roundness</b> custom input and the brightness is scaled by the <b>intensity</b> and <b>imultiplier</b> custom inputs.</p>
+
+		<p>Because <b>rx</b> and <b>ry</b> (relative X and Y positions) are used for the vector creation, the user can click-drag on the canvas to determine the center (origin) point of the vignette.</p>
+		<p>When the filter is used with an appropriate blend mode (using the <a href="../Layers/livefilters.html">live filter</a> version is recommended), a suitable vignette effect can be achieved.</p>
+
+		<h3>Diamond Alpha Mask</h3>
+
+		<figure>
+			<div class="single"><img src="../../../shared/filter_proceduraltexture_diamondmask.jpg" alt="Vignette" /></div>
+		</figure><code class="contained">var v=vec2(rx,ry)/w; smoothoschlin(oschcr(v/(<b>dsize</b>*<b>dmult</b>)), <b>dsmooth</b>)</code><p>Target <b>only the alpha channel (A)</b>.</p>
+
+		<table class="thirtythree">
+			<tr>
+				<th>Custom Input Type</th>
+				<th>Variable Name</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td>[0,1] range input</td>
+				<td>dsmooth</td>
+				<td>Controls the smoothing of the mask edges.</td>
+			</tr>
+			<tr>
+				<td>[0,1] range input</td>
+				<td>dsize</td>
+				<td>Determines the size of the mask.</td>
+			</tr>
+			<tr>
+				<td>Real number input</td>
+				<td>dmult</td>
+				<td>Scales <b>dsize</b> by a multiplier to allow for bigger/smaller mask sizes.</td>
+			</tr>
+		</table>
+		<p>Here, we assign the results of vector creation using <b>rx</b> and <b>ry</b> to the variable <b>v</b> (dividing the result by the document width, <b>w</b>). The <b>v</b> result is then put through a harmonic oscillator with a Catmull-Rom spline (<b>oschcr</b>), which itself is then put through a smooth harmonic linear oscillator (<b>smoothoschlin</b>). Within the <b>oschcr</b> function, <b>v</b> is divided by <b>dsize*dmult</b>, which controls the overall size. <b>dsmooth</b> is used within the <b>smoothoschlin</b> function to influence the smoothness and blurring of the edges. When the channel target is set to just alpha (<b>A</b>), this expression creates a diamond alpha mask effect.</p>
+		<p>Because <b>rx</b> and <b>ry</b> (relative X and Y positions) are used for the vector creation, the user can click-drag on the canvas to alter the position of the mask effect.</p>
+
+	</section>
+
+	<hr>
+
+	<section class="functions">
+
+		<h2>Functions</h2>
+
+		<p>Below is a table of functions that can be used in the Equations section, where:</p>
+		
+		<ul>
+			<li>T means Type, which can be either a scalar or vector (but not an integer).</li>
+			<li>V = vector (non-scalar, 2 to 6 components).</li>
+			<li>S = scalar (non-vector).</li>
+			<li>I = single integer (neither scalar nor fractional)&mdash;internally, the input could be fractional, but the value will be rounded/truncated to an integer.</li>
+		</ul>
+		
+		<p>Where a function takes T or V arguments, the vector size must be the same for all arguments. They are not interchangeable.</p>
+
+		<table class="thirtythree">
+			<tr>
+				<th>Function</th>
+				<th>Usage</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<th>Common mathematics</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>abs</td>
+				<td>abs(T)</td>
+				<td>Round value to absolute integer</td>
+			</tr>
+			<tr>
+				<td>acos</td>
+				<td>acos(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>asin</td>
+				<td>asin(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>atan</td>
+				<td>atan(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>atan2</td>
+				<td>atan2(T, T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>average</td>
+				<td>average(T, T, ...) (variable arguments)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>ceil</td>
+				<td>ceil(T)</td>
+				<td>Round up value</td>
+			</tr>
+			<tr>
+				<td>copysign</td>
+				<td>copysign(T, T sign)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>cos</td>
+				<td>cos(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dim</td>
+				<td>dim(T x, T y)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>floor</td>
+				<td>floor(T)</td>
+				<td>Round down value</td>
+			</tr>
+			<tr>
+				<td>fma</td>
+				<td>fma(T a, T b, T c)</td>
+				<td>Computes (a*b) + c</td>
+			</tr>
+			<tr>
+				<td>fmod</td>
+				<td>fmod(T, T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>fraction</td>
+				<td>fraction(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>idiv</td>
+				<td>idiv(T, T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>irem</td>
+				<td>irem(T, T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>lerp</td>
+				<td>lerp(T a, T b, T t)</td>
+				<td>Linear interpolate between two values, balanced determined by <span class="ui">t</span> between 0-1</td>
+			</tr>
+			<tr>
+				<td>max</td>
+				<td>max(T, T, ...) (variable arguments)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>mid</td>
+				<td>mid(T, T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>min</td>
+				<td>min(T, T, ...) (variable arguments)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>mix</td>
+				<td>mix(T a, T b, T t)</td>
+				<td>Same as <span class="ui">lerp</span></td>
+			</tr>
+			<tr>
+				<td>pow</td>
+				<td>pow(T x, T y)</td>
+				<td><span class="ui">x</span> to the power of <span class="ui">y</span></td>
+			</tr>
+			<tr>
+				<td>powr</td>
+				<td>powr(T x, T y)</td>
+				<td><span class="ui">x</span> to the power of <span class="ui">y</span> where <span class="ui">x</span>&gt;0</td>
+			</tr>
+			<tr>
+				<td>round</td>
+				<td>round(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>roundup</td>
+				<td>roundup(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rounddown</td>
+				<td>rounddown(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sign</td>
+				<td>sign(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sin</td>
+				<td>sin(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sq</td>
+				<td>sq(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sqrt</td>
+				<td>sqrt(T)</td>
+				<td>Square root</td>
+			</tr>
+			<tr>
+				<td>tan</td>
+				<td>tan(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>trunc</td>
+				<td>trunc(T)</td>
+				<td>Shorthand for <span class="ui">truncate</span></td>
+			</tr>
+			<tr>
+				<td>truncate</td>
+				<td>truncate(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rgbtoi</td>
+				<td>rgbtoi(S r, S g, Sb) or rgbtoi(V rgb)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>whole</td>
+				<td>whole(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Numeric range conversion</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>tocui</td>
+				<td>tocui(T)</td>
+				<td>To closed unit interval between 0-1</td>
+			</tr>
+			<tr>
+				<td>tohcui</td>
+				<td>tohcui(T)</td>
+				<td>To closed unit interval between -1-1 (harmonic)</td>
+			</tr>
+			<tr>
+				<th>Clamping</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>saturate</td>
+				<td>saturate(T)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>clamp</td>
+				<td>clamp(T) or clamp(T, T min, T max)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>clampmin</td>
+				<td>clampmin(T, T min)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>clampmax</td>
+				<td>clampmax(T, T max)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Geometric functions</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>cross</td>
+				<td>cross(V3, V3)</td>
+				<td>Calculate cross product of two Vector3 (XYZ) components</td>
+			</tr>
+			<tr>
+				<td>dist</td>
+				<td>dist(V a, V b)</td>
+				<td>Shorthand for <span class="ui">distance</span></td>
+			</tr>
+			<tr>
+				<td>dist_sq</td>
+				<td>dist_sq(V a, V b)</td>
+				<td>Shorthand for <span class="ui">distance_squared</span></td>
+			</tr>
+			<tr>
+				<td>distance</td>
+				<td>distance(V a, V b)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>distance_squared</td>
+				<td>distance_squared(V a, V b)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dot</td>
+				<td>dot(V, V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>length</td>
+				<td>length(V) or length(S, S, ...)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>length_squared</td>
+				<td>length_squared(V) or length_squared(S, S, ...)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>norm</td>
+				<td>norm(V)</td>
+				<td>Shorthand for <span class="ui">normalise</span> or <span class="ui">normalize</span></td>
+			</tr>
+			<tr>
+				<td>normalise</td>
+				<td>normalise(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>normalize</td>
+				<td>normalize(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Vector creation</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>vec2</td>
+				<td>vec2(S) or vec2(S, S)</td>
+				<td>Good for creating vectors from XY positioning, e.g. <code>vec2(rx, ry)</code></td>
+			</tr>
+			<tr>
+				<td>vec3</td>
+				<td>vec3(S) or vec3(S, S, S)</td>
+				<td>Can be used to create vectors from color data, e.g. <code>vec3(R, G, B)</code></td>
+			</tr>
+			<tr>
+				<td>vec4</td>
+				<td>vec4(S) or vec4(S, S, S, S)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>vec5</td>
+				<td>vec5(S) or vec5(S, S, S, S, S)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>vec6</td>
+				<td>vec6(S) or vec6(S, S, S, S, S, S)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>tovec3</td>
+				<td>tovec3(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>tovec4</td>
+				<td>tovec4(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>tovec5</td>
+				<td>tovec5(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>tovec6</td>
+				<td>tovec6(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Vector manipulation</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>rev</td>
+				<td>rev(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>rotl</td>
+				<td>rotl(V)</td>
+				<td>Rotate vector left</td>
+			</tr>
+			<tr>
+				<td>rotr</td>
+				<td>rotr(V)</td>
+				<td>Rotate vector right</td>
+			</tr>
+			<tr>
+				<td>swap12</td>
+				<td>swap12(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swap13</td>
+				<td>swap13(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swap23</td>
+				<td>swap23(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swapxy</td>
+				<td>swapxy(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swapxz</td>
+				<td>swapxz(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swapyz</td>
+				<td>swapyz(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swaprg</td>
+				<td>swaprg(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swaprb</td>
+				<td>swaprb(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>swapgb</td>
+				<td>swapgb(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>neg1</td>
+				<td>neg1(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>neg2</td>
+				<td>neg2(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>neg3</td>
+				<td>neg3(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>neg12</td>
+				<td>neg12(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negx</td>
+				<td>negx(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negy</td>
+				<td>negy(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negz</td>
+				<td>negz(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negxy</td>
+				<td>negxy(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negr</td>
+				<td>negr(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negg</td>
+				<td>negg(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negb</td>
+				<td>negb(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>negrg</td>
+				<td>negrg(V)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Vector utilities</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>debump</td>
+				<td>debump(S r, S g, S b)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Interpolation</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>scurveinterp</td>
+				<td>scurveinterp(T a, T b, T t)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sininterp</td>
+				<td>sininterp(T a, T b, T t)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>cubicinterp</td>
+				<td>cubicinterp(T a, T b, T c, T d, T t)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>scurveinterpolant</td>
+				<td>scurveinterpolant(T cui)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>sininterpolant</td>
+				<td>sininterpolant(T cui)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>scerp</td>
+				<td>scerp(T a, T b, T t)</td>
+				<td>Shorthand for <span class="ui">scurveinterp</span></td>
+			</tr>
+			<tr>
+				<td>serp</td>
+				<td>serp(T a, T b, T t)</td>
+				<td>Shorthand for <span class="ui">sininterp</span></td>
+			</tr>
+			<tr>
+				<td>cerp</td>
+				<td>cerp(T a, T b, T c, T d, T t)</td>
+				<td>Shorthand for <span class="ui">cubicinterp</span></td>
+			</tr>
+			<tr>
+				<td>cubic</td>
+				<td>scerp(T a, T b, T c, T d, T t)</td>
+				<td>Shorthand for <span class="ui">cubicinterp</span></td>
+			</tr>
+			<tr>
+				<td>scint</td>
+				<td>scint(T cui)</td>
+				<td>Shorthand for <span class="ui">scurverinterpolant</span></td>
+			</tr>
+			<tr>
+				<td>sint</td>
+				<td>sint(T cui)</td>
+				<td>Shorthand for <span class="ui">sininterpolant</span></td>
+			</tr>
+			<tr>
+				<th>Stepping</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>mapcui</td>
+				<td>mapcui(T v, T edge0, T edge1)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>step</td>
+				<td>step(T edge, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>stepn</td>
+				<td>stepn(T edge, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothsteplin</td>
+				<td>smoothsteplin(T edge0, T edge1, T v) or smoothsteplin(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstep</td>
+				<td>smoothstep(T edge0, T edge1, T v) or smoothstep(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepsc</td>
+				<td>smoothstepsc(T edge0, T edge1, T v) or smoothstepsc(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepsin</td>
+				<td>smoothstepsin(T edge0, T edge1, T v) or smoothstepsin(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepcs</td>
+				<td>smoothstepcs(T edge0, T edge1, T v) or smoothstepcs(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepsq</td>
+				<td>smoothstepsq(T edge0, T edge1, T v) or smoothstepsq(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepsqi</td>
+				<td>smoothstepsqi(T edge0, T edge1, T v) or smoothstepsqi(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepcb</td>
+				<td>smoothstepcb(T edge0, T edge1, T v) or smoothstepcb(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepcbi</td>
+				<td>smoothstepcbi(T edge0, T edge1, T v) or smoothstepcbi(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			 <tr>
+				<td>smoothstepsin</td>
+				<td>smoothstepsin(T edge0, T edge1, T v) or smoothstepsin(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepsini</td>
+				<td>smoothstepsini(T edge0, T edge1, T v) or smoothstepsini(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepcr</td>
+				<td>smoothstepcr(T edge0, T edge1, T v) or smoothstepcr(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepcri</td>
+				<td>smoothstepcri(T edge0, T edge1, T v) or smoothstepcri(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothsteprt</td>
+				<td>smoothsteprt(T edge0, T edge1, T v) or smoothsteprt(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothsteprti</td>
+				<td>smoothsteprti(T edge0, T edge1, T v) or smoothsteprti(T in0, T in1, T out1, T out0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnlin</td>
+				<td>smoothstepnlin(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepn</td>
+				<td>smoothstepn(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnsc</td>
+				<td>smoothstepnsc(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnsin</td>
+				<td>smoothstepnsin(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepncs</td>
+				<td>smoothstepncs(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnsq</td>
+				<td>smoothstepnsq(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnsqi</td>
+				<td>smoothstepnsqi(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepncb</td>
+				<td>smoothstepncb(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepncbi</td>
+				<td>smoothstepncbi(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnpsini</td>
+				<td>smoothstepnpsini(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepncr</td>
+				<td>smoothstepncr(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepncri</td>
+				<td>smoothstepncri(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnrt</td>
+				<td>smoothstepnrt(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothstepnrti</td>
+				<td>smoothstepnrti(T edge1, T edge0, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Quantisation</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>quantize</td>
+				<td>quantize(T band, T v) or quantize(T band, T smooth, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>quantizelin</td>
+				<td>quantizelin(T band, T smooth, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>quantizesc</td>
+				<td>quantizesc(T band, T smooth, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>quantizesin</td>
+				<td>quantizesin(T band, T smooth, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>quantizecs</td>
+				<td>quantizecs(T band, T smooth, T v)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Oscillators</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>osci</td>
+				<td>osci(S)<br />osci(S, S)<br />osci(V2)</td>
+				<td>Standard oscillation, accepts scalar or vector inputs</td>
+			</tr>
+			<tr>
+				<td>oscsc</td>
+				<td>oscsc(S)<br />oscsc(S, S)<br />oscsc(V2)</td>
+				<td>Oscillator with S-Curve</td>
+			</tr>
+			<tr>
+				<td>oscsin</td>
+				<td>oscsin(S)<br />oscsin(S, S)<br />oscsin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>osccs</td>
+				<td>osccs(S)<br />osccs(S, S)<br />osccs(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>osccubic</td>
+				<td>osccubic(S)<br />osccubic(S, S)<br />osccubic(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oscsq</td>
+				<td>oscsq(S)<br />oscsq(S, S)<br />oscsq(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oscsqi</td>
+				<td>oscsqi(S)<br />oscsqi(S, S)<br />oscsqi(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>osccb</td>
+				<td>osccb(S)<br />osccb(S, S)<br />osccb(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>osccbi</td>
+				<td>osccbi(S)<br />osccbi(S, S)<br />osccbi(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oscpsin</td>
+				<td>oscpsin(S)<br />oscpsin(S, S)<br />oscpsin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oscpsini</td>
+				<td>oscpsini(S)<br />oscpsini(S, S)<br />oscpsini(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>osccr</td>
+				<td>osccr(S)<br />osccr(S, S)<br />osccr(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>osccri</td>
+				<td>osccri(S)<br />osccri(S, S)<br />osccri(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oscrt</td>
+				<td>oscrt(S)<br />oscrt(S, S)<br />oscrt(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oscrti</td>
+				<td>oscrti(S)<br />oscrti(S, S)<br />oscrti(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothosclin</td>
+				<td>smoothosclin(S, S smoothingwidth)<br />smoothosclin(S, S, S smoothingwidth)<br />smoothosclin(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothosc</td>
+				<td>smoothosc(S, S smoothingwidth)<br />smoothosc(S, S, S smoothingwidth)<br />smoothosc(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothoscsc</td>
+				<td>smoothoscsc(S, S smoothingwidth)<br />smoothoscsc(S, S, S smoothingwidth)<br />smoothoscsc(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothoscsin</td>
+				<td>smoothoscsin(S, S smoothingwidth)<br />smoothoscsin(S, S, S smoothingwidth)<br />smoothoscsin(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothosccs</td>
+				<td>smoothosccs(S, S smoothingwidth)<br />smoothosccs(S, S, S smoothingwidth)<br />smoothosccs(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Harmonic Oscillators</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>oschi</td>
+				<td>oschi(S)<br />oschi(S, S)<br />oschi(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>osch</td>
+				<td>osch(S)<br />osch(S, S)<br />osch(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschsc</td>
+				<td>oschsc(S)<br />oschsc(S, S)<br />oschsc(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschsin</td>
+				<td>oschsin(S)<br />oschsin(S, S)<br />oschsin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschcs</td>
+				<td>oschcs(S)<br />oschcs(S, S)<br />oschcs(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschcubic</td>
+				<td>oschcubic(S)<br />oschcubic(S, S)<br />oschcubic(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschsq</td>
+				<td>oschsq(S)<br />oschsq(S, S)<br />oschsq(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschsqi</td>
+				<td>oschsqi(S)<br />oschsqi(S, S)<br />oschsqi(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschcb</td>
+				<td>oschcb(S)<br />oschcb(S, S)<br />oschcb(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschcbi</td>
+				<td>oschcbi(S)<br />oschcbi(S, S)<br />oschcbi(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschhsin</td>
+				<td>oschhsin(S)<br />oschhsin(S, S)<br />oschhsin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschhsini</td>
+				<td>oschhsini(S)<br />oschhsini(S, S)<br />oschhsini(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschcr</td>
+				<td>oschcr(S)<br />oschcr(S, S)<br />oschcr(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschcri</td>
+				<td>oschcri(S)<br />oschcri(S, S)<br />oschcri(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschrt</td>
+				<td>oschrt(S)<br />oschrt(S, S)<br />oschrt(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>oschrti</td>
+				<td>oschrti(S)<br />oschrti(S, S)<br />oschrti(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothoschlin</td>
+				<td>smoothoschlin(S, S smoothingwidth)<br />smoothoschlin(S, S, S smoothingwidth)<br />smoothoschlin(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothosch</td>
+				<td>smoothosch(S, S smoothingwidth)<br />smoothosch(S, S, S smoothingwidth)<br />smoothosch(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothoschsc</td>
+				<td>smoothoschsc(S, S smoothingwidth)<br />smoothoschsc(S, S, S smoothingwidth)<br />smoothoschsc(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothoschsin</td>
+				<td>smoothoschsin(S, S smoothingwidth)<br />smoothoschsin(S, S, S smoothingwidth)<br />smoothoschsin(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>smoothoschcs</td>
+				<td>smoothoschcs(S, S smoothingwidth)<br />smoothoschcs(S, S, S smoothingwidth)<br />smoothoschcs(V2, S smoothingwidth)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Simple noise</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>noisei</td>
+				<td>noisei(S)<br />noisei(S, S)<br />noisei(S, S, S)<br />noisei(V2)<br />noisei(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noise</td>
+				<td>noise(S)<br />noise(S, S)<br />noise(S, S, S)<br />noise(V2)<br />noise(V3)</td>
+				<td>Linear noise</td>
+			</tr>
+			<tr>
+				<td>noisesc</td>
+				<td>noisesc(S)<br />noisesc(S, S)<br />noisesc(S, S, S)<br />noisesc(V2)<br />noisesc(V3)</td>
+				<td>S-Curve noise</td>
+			</tr>
+			<tr>
+				<td>noisesin</td>
+				<td>noisesin(S)<br />noisesin(S, S)<br />noisesin(S, S, S)<br />noisesin(V2)<br />noisesin(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisecs</td>
+				<td>noisecs(S)<br />noisecs(S, S)<br />noisecs(S, S, S)<br />noisecs(V2)<br />noisecs(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisecubic</td>
+				<td>noisecubic(S)<br />noisecubic(S, S)<br />noisecubic(S, S, S)<br />noisecubic(V2)<br />noisecubic(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisesq</td>
+				<td>noisesq(S)<br />noisesq(S, S)<br />noisesq(S, S, S)<br />noisesq(V2)<br />noisesq(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisesqi</td>
+				<td>noisesqi(S)<br />noisesqi(S, S)<br />noisesqi(S, S, S)<br />noisesqi(V2)<br />noisesqi(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisecb</td>
+				<td>noisecb(S)<br />noisecb(S, S)<br />noisecb(S, S, S)<br />noisecb(V2)<br />noisecb(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisecbi</td>
+				<td>noisecbi(S)<br />noisecbi(S, S)<br />noisecbi(S, S, S)<br />noisecbi(V2)<br />noisecbi(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisepsin</td>
+				<td>noisepsin(S)<br />noisepsin(S, S)<br />noisepsin(S, S, S)<br />noisepsin(V2)<br />noisepsin(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisepsini</td>
+				<td>noisepsini(S)<br />noisepsini(S, S)<br />noisepsini(S, S, S)<br />noisepsini(V2)<br />noisepsini(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisecr</td>
+				<td>noisecr(S)<br />noisecr(S, S)<br />noisecr(S, S, S)<br />noisecr(V2)<br />noisecr(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisecri</td>
+				<td>noisecri(S)<br />noisecri(S, S)<br />noisecri(S, S, S)<br />noisecri(V2)<br />noisecri(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisert</td>
+				<td>noisert(S)<br />noisert(S, S)<br />noisert(S, S, S)<br />noisert(V2)<br />noisert(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noiserti</td>
+				<td>noiserti(S)<br />noiserti(S, S)<br />noiserti(S, S, S)<br />noiserti(V2)<br />noiserti(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Harmonic Simple noise</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>noisehi</td>
+				<td>noisehi(S)<br />noisehi(S, S)<br />noisehi(S, S, S)<br />noisehi(V2)<br />noisehi(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noiseh</td>
+				<td>noiseh(S)<br />noiseh(S, S)<br />noiseh(S, S, S)<br />noiseh(V2)<br />noiseh(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehsc</td>
+				<td>noisehsc(S)<br />noisehsc(S, S)<br />noisehsc(S, S, S)<br />noisehsc(V2)<br />noisehsc(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehsin</td>
+				<td>noisehsin(S)<br />noisehsin(S, S)<br />noisehsin(S, S, S)<br />noisehsin(V2)<br />noisehsin(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehcs</td>
+				<td>noisehcs(S)<br />noisehcs(S, S)<br />noisehcs(S, S, S)<br />noisehcs(V2)<br />noisehcs(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehcubic</td>
+				<td>noisehcubic(S)<br />noisehcubic(S, S)<br />noisehcubic(S, S, S)<br />noisehcubic(V2)<br />noisehcubic(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehsq</td>
+				<td>noisehsq(S)<br />noisehsq(S, S)<br />noisehsq(S, S, S)<br />noisehsq(V2)<br />noisehsq(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehsqi</td>
+				<td>noisehsqi(S)<br />noisehsqi(S, S)<br />noisehsqi(S, S, S)<br />noisehsqi(V2)<br />noisehsqi(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehcb</td>
+				<td>noisehcb(S)<br />noisehcb(S, S)<br />noisehcb(S, S, S)<br />noisehcb(V2)<br />noisehcb(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehcbi</td>
+				<td>noisehcbi(S)<br />noisehcbi(S, S)<br />noisehcbi(S, S, S)<br />noisehcbi(V2)<br />noisehcbi(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehpsin</td>
+				<td>noisehpsin(S)<br />noisehpsin(S, S)<br />noisehpsin(S, S, S)<br />noisehpsin(V2)<br />noisehpsin(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehpsini</td>
+				<td>noisehpsini(S)<br />noisehpsini(S, S)<br />noisehpsini(S, S, S)<br />noisehpsini(V2)<br />noisehpsini(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehcr</td>
+				<td>noisehcr(S)<br />noisehcr(S, S)<br />noisehcr(S, S, S)<br />noisehcr(V2)<br />noisehcr(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehcri</td>
+				<td>noisehcri(S)<br />noisehcri(S, S)<br />noisehcri(S, S, S)<br />noisehcri(V2)<br />noisehcri(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehrt</td>
+				<td>noisehrt(S)<br />noisehrt(S, S)<br />noisehrt(S, S, S)<br />noisehrt(V2)<br />noisehrt(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>noisehrti</td>
+				<td>noisehrti(S)<br />noisehrti(S, S)<br />noisehrti(S, S, S)<br />noisehrti(V2)<br />noisehrti(V3)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Perlin Noise</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>perlin</td>
+				<td>perlin(S x, I octaves, S persistence)<br />perlin(S x, S y, I octaves, S persistence)<br />perlin(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlinsc</td>
+				<td>perlinsc(S x, I octaves, S persistence)<br />perlinsc(S x, S y, I octaves, S persistence)<br />perlinsc(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlinsin</td>
+				<td>perlinsin(S x, I octaves, S persistence)<br />perlinsin(S x, S y, I octaves, S persistence)<br />perlinsin(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlincubic</td>
+				<td>perlincubic(S x, I octaves, S persistence)<br />perlincubic(S x, S y, I octaves, S persistence)<br />perlincubic(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlincs</td>
+				<td>perlincs(S x, I octaves, S persistence)<br />perlincs(S x, S y, I octaves, S persistence)<br />perlincs(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Harmonic Perlin Noise</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>perlinh</td>
+				<td>perlinh(S x, I octaves, S persistence)<br />perlinh(S x, S y, I octaves, S persistence)<br />perlinh(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlinhsc</td>
+				<td>perlinhsc(S x, I octaves, S persistence)<br />perlinhsc(S x, S y, I octaves, S persistence)<br />perlinhsc(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlinhsin</td>
+				<td>perlinhsin(S x, I octaves, S persistence)<br />perlinhsin(S x, S y, I octaves, S persistence)<br />perlinhsin(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlinhcubic</td>
+				<td>perlinhcubic(S x, I octaves, S persistence)<br />perlinhcubic(S x, S y, I octaves, S persistence)<br />perlinhcubic(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>perlinhcs</td>
+				<td>perlinhcs(S x, I octaves, S persistence)<br />perlinhcs(S x, S y, I octaves, S persistence)<br />perlinhcs(V2 pt, I octaves, S persistence)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Voronoi Noise</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>cellnoise</td>
+				<td>cellnoise(S x, S y)<br />cellnoise(S x, S y, S spread)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>cellnoise2</td>
+				<td>cellnoise2(S x, S y, I degree)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>cellnoisedist</td>
+				<td>cellnoisedist(S x, S y)<br />cellnoisedist(S x, S y, S spread)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>cellnoiseedge</td>
+				<td>cellnoiseedge(S x, S y, S sz, S softness)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th>Directional Noise</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>diri</td>
+				<td>diri(S)<br />diri(S, S)<br />diri(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dir</td>
+				<td>dir(S)<br />dir(S, S)<br />dir(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dirsc</td>
+				<td>dirsc(S)<br />dirsc(S, S)<br />dirsc(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dirsin</td>
+				<td>dirsin(S)<br />dirsin(S, S)<br />dirsin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dircs</td>
+				<td>dircs(S)<br />dircs(S, S)<br />dircs(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udiri</td>
+				<td>udiri(S)<br />udiri(S, S)<br />udiri(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udir</td>
+				<td>udir(S)<br />udir(S, S)<br />udir(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udirsc</td>
+				<td>udirsc(S)<br />udirsc(S, S)<br />udirsc(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udirsin</td>
+				<td>udirsin(S)<br />udirsin(S, S)<br />udirsin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udircs</td>
+				<td>udircs(S)<br />udircs(S, S)<br />udircs(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dir3i</td>
+				<td>dir3i(S)<br />dir3i(S, S)<br />dir3i(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dir3</td>
+				<td>dir3(S)<br />dir3(S, S)<br />dir3(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dir3sc</td>
+				<td>dir3sc(S)<br />dir3sc(S, S)<br />dir3sc(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dir3sin</td>
+				<td>dir3sin(S)<br />dir3sin(S, S)<br />dir3sin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dir3cs</td>
+				<td>dir3cs(S)<br />dir3cs(S, S)<br />dir3cs(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udir3i</td>
+				<td>udir3i(S)<br />udir3i(S, S)<br />udir3i(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udir3</td>
+				<td>udir3(S)<br />udir3(S, S)<br />udir3(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udir3sc</td>
+				<td>udir3sc(S)<br />udir3sc(S, S)<br />udir3sc(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udir3sin</td>
+				<td>udir3sin(S)<br />udir3sin(S, S)<br />udir3sin(V2)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>udir3cs</td>
+				<td>udir3cs(S)<br />udir3cs(S, S)<br />udir3cs(V2)</td>
+				<td></td>
+			</tr>
+		</table>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_equations.html">Equations filter</a></li>
+			<li><a href="filter_customBlur.html">Custom Blur</a></li>
+			<li><a href="../Workspace/expressions.html">Expressions for field input</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

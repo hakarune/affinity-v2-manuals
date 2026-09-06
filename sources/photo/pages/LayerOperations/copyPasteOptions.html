@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="copy, paste, objects, inkscape, svg, unicode" />
+	<meta name="description" content="The Edit menu provides multiple ways to copy and paste content or specific copied content properties." />
+	<title>Copying and pasting content</title>
+</head>
+
+<body>
+	<header>
+
+		<h1>Copying and pasting content</h1>
+		
+		<p>The <span class="ui">Edit</span> menu provides multiple ways to copy and paste content. Pasted content can include/exclude specific copied content properties.</p>
+		
+		<figure>
+			<p><img src="../../../shared/pasteOptions.png" class="screenshot responsive" alt="Paste options" /></p>
+			<figcaption>(A) Paste, (B) Paste Inside, (C) Paste Style (Stroke, Fill and Outer Shadow), (D) Paste FX (Outer Shadow layer effect only), (E) Paste without Format (retains target formatting), (F) Paste Special (Windows only); pastes as a choice of clipboard formats such as SVG, Device Independent Bitmap, etc.</figcaption>
+		</figure>
+		
+	</header>
+
+	<section class="about">
+	
+		<h2>About copying</h2>
+	
+		<p>You can copy content throughout the app or externally to third-party apps. Both need a reciprocal pasting operation to add the content to the target page.</p>
+	
+		<p>The <span class="ui">Copy items as SVG</span> preference [accessed via <span class="ui">Settings</span> or (<span class="ui">Preferences</span> (<span class="ui">General</span>)] copies content in SVG format in readiness for pasting to external apps.</p>
+
+	
+		<h2>About pasting</h2>
+	
+		<p>As well as the commonly used Paste command, other paste commands can be used to selectively control which properties are included/excluded in the paste operation.</p>
+
+		<table class="thirtythree">
+			<tr>
+				<th>Paste option</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td>Paste</td>
+				<td>Pastes content, preserving the copied content&apos;s look and formatting.</td>
+			</tr>
+			<tr>
+				<td>Paste Inside</td>
+				<td>Pastes one or more layers inside another layer.</td>
+			</tr>
+			<tr>
+				<td>Paste Style<sup>1</sup></td>
+				<td>Pastes copied stroke, fill, layer effects and text formatting/styles<sup>2, 3</sup> to another object/text.</td>
+			</tr>
+			<tr>
+				<td>Paste FX</td>
+				<td>Pastes only layer effect(s) to another layer.</td>
+			</tr>
+			<tr>
+				<td>Paste without Format</td>
+				<td>Pastes unformatted text by stripping the formatting from the copied text. When pasted, the target text will retain its text formatting.</td>
+			</tr>
+			<tr class="win32">
+				<td>Paste Special</td>
+				<td>Pastes copied content into and out of your Affinity app using a choice of clipboard formats that show dynamically by the type of content copied externally or within Affinity.</td>
+			</tr>
+		</table>
+		
+		<p><sup>1</sup> Use the <span class="ui">Style Picker Tool</span> instead if you want to paste only some of the copied style attributes, e.g. paragraph settings but not character settings and other object styles.</p>
+
+		<p><sup>2</sup> If the copied text contains text ranges with different formatting, the formatting of its first character will be pasted.</p>
+	
+		<p><sup>3</sup> If copied text&apos;s formatting includes settings that are incompatible with the target text, the incompatible settings will not be pasted. For example, horizontal centering is ignored when pasting onto a range <i>within</i> a left-aligned paragraph.</p>
+
+	<x-win32>
+		<h2>About Paste Special</h2>
+	
+		<p>When using <span class="ui">Paste Special</span> you will be offered a choice of clipboard formats to use for pasting. These options are dependent on the type of content copied and will dynamically change accordingly.</p>
+		
+		<p>For example, for copied curves and shapes your formats are:</p>
+		<ul>
+			<li>image/x-inkscape-svg <sup>1</sup></li>
+			<li>SVG <sup>1</sup></li>
+			<li>Portable Document Format</li>
+			<li>PNG</li>
+			<li>Device Independent Bitmap</li>
+			<li>Serif Persona Nodes <sup>2</sup></li>
+		</ul>
+			
+		<p>For text, the available choices will be different, and may include:</p>
+		<ul>
+			<li>Unicode text</li>
+			<li>Rich Text Format</li>
+			<li>Serif Persona Story <sup>2</sup></li>
+		</ul>
+		
+		<p><sup>1</sup> These clipboard formats are available when <span class="ui">Copy items as SVG</span> is enabled via <span class="ui">Settings</span> (or <span class="ui">Preferences</span>) (<span class="ui">General</span> option).</p>
+		<p><sup>2</sup> These are proprietary Affinity formats that retain the highest level of fidelity to the original copied object. This format is used by default when copying and pasting between Affinity apps.</p>
+	</x-win32>
+	
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To copy content:</summary>
+
+			<ol>
+				<li>Make a selection.</li>
+				<li>From the <span class="ui">Edit</span> menu, select <span class="ui">Copy</span>.</li>
+			</ol>
+		</details>	
+	
+		<details open="open">
+			<summary>To paste content:</summary>
+
+			<ol>
+				<li>Make a selection.</li>
+				<li>From the <span class="ui">Edit</span> menu, select one of the paste options.</li>
+			</ol>
+		</details>
+
+		<aside class="box note">
+			<p>*Alternatively, you can cut (rather than copy) the content. From the <span class="ui">Edit</span> menu, select <span class="ui">Cut</span>.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="target.html">Targeting</a></li>
+			<li><a href="clipping.html">Layer clipping</a></li>
+			<li><a href="../Tools/tools_stylePicker.html">Style Picker Tool</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

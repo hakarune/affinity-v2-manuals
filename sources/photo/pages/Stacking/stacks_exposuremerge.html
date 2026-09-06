@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="exposure fusion, bracketing" />
+	<meta name="description" content="Composite images of multiple exposures using stacks." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src: "../../../shared/stacking/exposure_01.jpg", alt: "Exposure 01" },
+				tab2: { src: "../../../shared/stacking/exposure_02.jpg", alt: "Exposure 02" },
+				tab3: { src: "../../../shared/stacking/exposure_final.jpg", alt: "Final Exposure" }
+			}
+		}
+	</script>
+	<title>Exposure merging using stacks</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+
+		<h1>Exposure merging using stacks</h1>
+
+		<p>Exposure merging brings together images deliberately shot at different exposure levels to produce an image of a higher dynamic range. Such an approach is likely when areas in your shot are in high contrast and you&apos;d like to bring together differently exposed areas as a solution.</p>
+		<p>Not to be confused with HDR merge, exposure merging composites images without creating an HDR image or applying HDR tone mapping, producing quicker and often more natural results.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Exposure 01</p></div>
+				<div class="tab"><p>Exposure 02</p></div>
+				<div class="tab selected"><p>Final Exposure</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/stacking/exposure_final.jpg" class="responsive" alt=""></div>
+		</div>
+
+		<h2>Shooting tips</h2>
+		<p>Here are a few things to consider when shooting.</p>
+			<ul>
+				<li>To allow for perfect image alignment, use a tripod or ensure your camera is in a fixed position.</li>
+				<li>Ensure enough photos have been taken to cover the full dynamic range required from the scene.</li>
+				<li>If available, you can take advantage of your camera&apos;s auto bracketing feature to obtain photos at multiple exposure levels.</li>
+				<li>Take advantage of continuous shooting modes to automatically capture your images.</li>
+				<li>Avoid flash photography.</li>
+			</ul>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/median.png" class="tool heading" width="18" height="18" alt="Stack Mode" /> To create an exposure merging stack:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">New Stack</span>.</li>
+				<li>From the dialog, click <span class="ui">Add</span> to locate and select your images. Click <span class="ui">Open</span> to add the images to the stack list.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+				<li>On the <span class="ui">Layers</span> panel, select the <span class="ui">Mean</span> or <span class="ui">Mid-Range</span> stack mode from the Stack Mode pop-up menu on the Live Stack Group layer.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="stacks.html">Image stacks</a></li>
+			<li><a href="stacks_objectremoval.html">Object removal using stacks</a></li>
+			<li><a href="stacks_noisereduction.html">Noise reduction using stacks</a></li>
+			<li><a href="stacks_creative.html">Creative effects using stacks</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

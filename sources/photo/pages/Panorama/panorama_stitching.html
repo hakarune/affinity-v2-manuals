@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panorama, stitching, landscape, horizontal, vertical, pan" />
+	<meta name="description" content="Stitch together multiple images to create a panorama." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src:"../../../shared/panorama_before.jpg", alt: "Individual Images" },
+				tab2: { src:"../../../shared/panorama_after.jpg", alt: "Final Panorama" }
+			}
+		}
+	</script>
+	<title>Stitching panoramas</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+	<h1>Stitching panoramas</h1>
+
+	<aside class="box note">
+		<p>Panoramas are created by stitching together multiple images in a dedicated workspace for panorama editing.</p>
+	</aside>
+
+	<p>Multiple images can be stitched together to create a wider and taller scene, referred to as a panorama. The benefits of creating a panorama are:</p>
+	<ul>
+		<li>Capturing a much wider view of a scene.</li>
+		<li>Producing higher resolution images than can be achieved with just one exposure; useful for printing large images and other large size applications.</li>
+	</ul>
+
+	<p>You can create multiple panoramas simultaneously from your image collection. Each detected panorama is stitched and previewed, before you create your panorama(s) by preview selection. A new document is created per panorama.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Individual Images</p></div>
+				<div class="tab selected"><p>Final Panorama</p></div>
+			</div>
+			<div class="view"><img src="../../../shared/panorama_after.jpg" class="responsive" alt=""></div>
+		</div>
+
+		<h2>Shooting tips</h2>
+		<ul>
+			<li>Where possible, use either a tripod or fast shutter speeds to avoid motion blur; blurry subjects will produce poor results when stitching.</li>
+			<li>Keep your exposure settings (shutter speed, aperture, ISO, white balance) identical between shots to produce a consistent result.</li>
+			<li>Try to avoid shooting at extreme wide angles as this will introduce lens distortion. If you are using a typical zoom kit lens (e.g., 18-55mm), try zooming in to its maximum focal length.</li>
+			<li>Always shoot from the same vantage point for best results.</li>
+		</ul>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To stitch one or more panoramas:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">New Panorama</span>.</li>
+				<li>From the dialog, click <span class="ui">Add</span> to locate and select your images.</li>
+				<li>(Optional) If you have images you do not wish to include, you can uncheck them from the image list.</li>
+				<li>Click <span class="ui">Stitch Panorama</span> to stitch images together. One or more previews are generated in the adjacent <span class="ui">Panoramas</span> window.</li>
+				<li>(Optional) For multiple panoramas, deselect a preview thumbnail if you don&apos;t want to make that panorama.</li>
+				<li>Click <span class="ui">OK</span> (this may take time depending on number of images and their complexity).</li>
+			</ol>
+
+		<p>You may need to fine-tune your panorama using masking and transforming techniques (see <a href="panorama_editing.html">Editing panoramas</a>) before removing unwanted transparent regions using cropping or inpainting.</p>
+
+		</details>
+
+				<details open="open">
+			<summary>To finish your panorama:</summary>
+			<p>In the Panorama dialog, do one of the following:</p>
+			<ul>
+				<li><img src="../../../shared/ui/crop_tool.png" class="tool heading" width="18" height="18" alt="Crop Tool" /> Select the <span class="ui">Crop Tool</span>, and from its context toolbar, select <span class="ui">Crop to Opaque</span>.</li>
+				<li><img src="../../../shared/ui/inpainting_brush_tool.png" class="tool heading" width="18" height="18" alt="Inpainting Brush Tool" /> Select <span class="ui">Inpaint Missing Areas</span> from above your panorama. The inpainting process takes place on exit and intelligently replaces transparent regions at the edge of your image with alternative image content.</li>
+			</ul>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="panorama_editing.html">Editing panoramas</a></li>
+			<li><a href="../Stacking/stacks.html">Image stacks</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

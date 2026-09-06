@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Depth Of Field Blur uses a gradient to simulate extreme depth of field and miniaturization effects, such as tilt-shift." />
+	<title>Depth Of Field Blur</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Depth Of Field Blur filter</h1>
+
+		<p>The Depth Of Field Blur filter applies a blur gradient that can be used to simulate extreme depth of field and miniaturization effects, such as tilt shift.</p>
+	</header>
+
+	<section class="about">
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/filter_dofblur_before.jpg" alt="Before" /><div><img src="../../../shared/filter_dofblur_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Using the Tilt-Shift mode to produce a miniature model effect.</figcaption>
+	</figure>
+		<h2>About the Depth of Field Blur filter</h2>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+
+		<h3>Modes</h3>
+
+		<ul>
+			<li><span class="ui">Elliptical</span>&mdash;useful for photos with a single subject, as it creates an graduated elliptical blur vignette.</li>
+			<li><span class="ui">Tilt Shift</span>&mdash;often used to simulate a scene created by models.</li>
+		</ul>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Mode</span>&mdash;choose from the pop-up menu to define the type of blur generated.</li>
+			<li><span class="ui">Radius</span>&mdash;controls intensity of the blur. Type directly in the text box or drag the slider to set the value.</li>
+			<li><span class="ui">Vibrance</span>&mdash;controls the color intensity of less saturated colors (a high value increases the &apos;model-like&apos; effect).</li>
+			<li><span class="ui">Clarity</span>&mdash;increases the local contrast and gives the appearance of increasing the sharpness of the image.</li>
+		</ul>
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>Modifying the applied blur gradient</summary>
+
+			<p>The gradient stops determine the position and extent of the transition between the areas in sharp focus and those that are blurred.</p>
+
+ 		<figure>
+			<p><img src="../../../shared/filter_dofblur_annotated.jpg" width="400" height="267" alt="DOF blur" /></p>
+			<figcaption>(A) Focus origin, (B) Inner lines, (C) Outer lines, (D) Transition areas.</figcaption>
+		</figure>
+
+			<p>The focus origin (A) defines the central point at which the image is kept completely in focus. Reposition the focus origin by dragging on the stop.</p>
+
+			<p>The inner lines (B) define the width of the area in focus. For the Tilt Shift mode these can be set independently by dragging each of the stops in turn, or, symmetrically by dragging one of the stops while holding the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>. The Elliptical mode always matches the shape of the inner lines to the outer lines so that only the width can be specified.</p>
+
+			<p>The outer lines (C) define the end of the blur transition. For the Tilt Shift mode, these can be set independently by dragging each of the stops in turn, or, symmetrically by dragging one of the stops while holding the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>. The Elliptical mode always sets the stops in pairs.</p>
+
+			<p>The transition areas (D) between the inner and outer lines are where the blurring gradually increases. The wider the lines, the more gradual the transition. The area on the outside of the lines has the filter applied at the full amount set by the <span class="ui">Radius</span> slider.</p>
+
+			<p>The angle of the filter can be changed by dragging the stops at an angle. Once the desired angle is achieved, holding the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> will temporarily lock the angle to allow for further adjustment of the width of the adjustment.</p>
+
+			<aside class="box tip">
+				<p>When using the tilt shift effect to &quot;miniaturize&quot; a scene, you will get the best effect if you choose your images carefully. Models are generally viewed from above, so the tilt shift effect will work best on images taken with an elevated viewpoint and a wide angle of view. Buildings, roads, traffic and railways make excellent subjects.</p>
+			</aside>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filter</a></li>
+			<li><a href="filter_diffuseGlow.html">Diffuse Glow</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

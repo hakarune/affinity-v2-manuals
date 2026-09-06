@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="hdr, exposure, bracket, tone, map, mapping, 32bit, float, unbounded" />
+	<meta name="description" content="Merge multiple exposures of the same scene to create a 32-bit precision document with a huge tonal range." />
+	<title>Merging to 32-bit HDR</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Merging to 32-bit HDR</h1>
+
+		<p>Multiple exposures of the same subject can be merged to produce an unbounded 32-bit document, which contains a significant amount of tonal range&mdash;more, in fact, than most displays outside of specialized equipment can reproduce. The resulting 32-bit image can then be edited with Photo&apos;s extensive set of tools, adjustments and filters, or it can be tone mapped in order to map the extensive 32-bit tonal range to a result that looks suitable for most displays.</p>
+	</header>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To HDR merge several images:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">New HDR Merge</span>.</li>
+				<li>From the dialog, click <span class="ui">Add</span> to locate and select your images.</li>
+				<li>(Optional) Choose a Perspective or Scaling operation from the menu to allow for successful auto-alignment. The former applies a perspective adjustment to each image; the latter repositions and/or sizes the image layer.</li>
+				<li>(Optional) If your image set contains moving subjects between each exposure, check <span class="ui">Automatically Remove Ghosts</span>.</li>
+				<li>(Optional) Keep <span class="ui">Noise reduction</span> checked to enable color and luminance noise reduction; Uncheck to disable noise reduction (you can address this post HDR merge using the Denoise filter).</li>
+				<li>Click <span class="ui">OK</span> to begin merging the images.</li>
+			</ol>
+		<p>The HDR merging is previewed in stages: first, the image alignment, then the HDR merge itself. By default, the merged result will then be taken into the <span class="ui">Tone Mapping Persona</span> for tone mapping. See <a href="hdr_tonemapping.html">Tone Mapping HDR images</a> for more information.</p>
+		</details>
+
+		<aside class="box tip">
+			<p>You can stop Photo from automatically entering the Tone Mapping Persona and tone mapping your 32-bit image. On the <span class="ui">New HDR Merge</span> dialog, uncheck <span class="ui">Tone map HDR image</span>. Once the HDR merge is complete, you will then remain in the Photo Persona to make further edits.</p>
+		</aside>
+
+		<aside class="box tip">
+			<p>If you choose not to automatically tone map your image, the <span class="ui">Sources</span> panel will be displayed, allowing you to manually retouch the merged result. If <span class="ui">Automatically Remove Ghosts</span> was checked, the <span class="ui">Sources</span> panel will contain a de-ghosted source as well as the original merged source. For more information, see <a href="../Panels/sourcesPanel.html">Sources panel</a>.</p>
+		</aside>
+	</section>
+
+	<p>Below you will see a 32-bit image being displayed as 8-bit with no tone mapping or further tonal adjustments applied. 32-bit simply contains too much tonal range to display, so we typically apply a procedure called <i>Tone Mapping</i> to map that tonal information to a range that can be displayed accurately. See the topic <a href="hdr_tonemapping.html">Tone Mapping HDR images</a> for more information.</p>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/feature_hdr_fullrange.jpg" alt="Full 32-bit range" /><div><img src="../../../shared/feature_hdr_tonemappedrange.jpg" alt="Tone Mapped 32-bit" /></div>
+		</div>
+		<figcaption><b>Before</b>: A 32-bit image with <b>no</b> tone mapping&mdash;the range of 32-bit is too great to display. Instead we see an image with extreme contrast.<br /> <b>After</b>: A 32-bit image after being tone mapped. The vast range of tonal information has been &quot;mapped&quot; to a range that can be reproduced by most displays.</figcaption>
+	</figure>
+
+	<p>Once work on a 32-bit image is completed, you may need to convert its color format and, crucially, its color profile if you intend to distribute or share it. For example, you might want to export as an 8-bit JPEG with an sRGB color profile. Alternatively, if you are maintaining a lossless workflow, you can stay in 32-bit and export to a linear unbounded format.</p>
+
+	<details open="open">
+		<summary>To convert the color format and profile before export:</summary>
+		<ol>
+			<li>From the <span class="ui">Document</span> menu, select <span class="ui">Color Format</span> and choose your desired format; for example, RGB 8-bit.</li>
+			<li>A color profile will be automatically assigned: for RGB 8-bit/16-bit documents, this will be <span class="ui">sRGB IEC61966-2.1</span>.</li>
+		</ol>
+	</details>
+
+	<details open="open">
+		<summary>To maintain a 32-bit workflow for importing into other software:</summary>
+		<ol>
+			<li>From the <span class="ui">File</span> menu, select <span class="ui">Export</span>.</li>
+			<li>Choose the <span class="ui">OpenEXR</span> format and click <span class="ui">Export</span>, then specify where to save your document.</li>
+		</ol>
+	</details>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="hdr_tonemapping.html">Tone Mapping HDR images</a></li>
+			<li><a href="hdr_editing.html">32-bit HDR editing</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

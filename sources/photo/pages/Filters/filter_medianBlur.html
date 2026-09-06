@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="The Median Blur filter broadens colour regions in the image." />
+	<title>Median Blur</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Median Blur</h1>
+
+		<p>The Median Blur filter broadens color regions in the image. At low settings it&rsquo;s useful for removing noise, especially as it retains edges better than <a href="filter_gaussianBlur.html">Gaussian Blur</a>. At much higher intensities it introduces flat areas of color.</p>
+
+	<figure>
+		<div class="comparison"><img src="../../../shared/filter_medianblur_before.jpg" alt="Before" /><div><img src="../../../shared/filter_medianblur_after.jpg" alt="After" /></div>
+		</div>
+		<figcaption>Median Blur on a photograph.</figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Median Blur filter</h2>
+
+		<p>This filter can be applied as a <a href="../Layers/livefilters.html">non-destructive, live filter</a>. It can be accessed via the <span class="ui">Layer</span> menu, from the <span class="ui">New Live Filter Layer</span> category.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the filter dialog:</p>
+
+		<ul>
+			<li><span class="ui">Radius</span>&mdash;controls intensity of the filter. At high levels it creates large, flat areas of color. Type directly in the text box or drag the slider to set the value. Dragging to the right on the page allows you to override the maximum value&mdash;values above 100 px may affect performance so use with care.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/livefilters.html">Using live filters</a></li>
+			<li><a href="filters_applying.html">Applying filters</a></li>
+			<li><a href="filter_gaussianBlur.html">Gaussian Blur</a></li>
+			<li><a href="filter_bilateralBlur.html">Bilateral Blur</a></li>
+		</ul>
+	</section>
+
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

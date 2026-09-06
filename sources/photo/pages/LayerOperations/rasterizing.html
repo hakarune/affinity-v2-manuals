@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="rasterize, rasterise, raster, flatten" />
+	<meta name="description" content="Use rasterisation to convert vector shapes, lines and text into pixels." />
+	<title>Rasterizing</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Rasterizing</h1>
+
+		<p>Shape, Line, Text and Image layers can be rasterized to create pixel layers. This &quot;flattening&quot; operation can be performed manually or automatically (when applying filters or retouch brushes).</p>
+		<p>Rasterization has various uses:</p>
+
+		<ul>
+			<li>For when the appearance of complex vector gradients or effects needs to be honored, particularly for print artwork.</li>
+			<li>To convert a placed image layer to a pixel layer (for pixel manipulation). By default, many brush tools rasterize image layers before painting.</li>
+			<li>Inpainting: after cropping, inpainting may be used to tidy up an image&apos;s corners, but the inpainting may be using information outside of the crop area. Rasterizing will discard this information and force the inpainting to use only what is visible.</li>
+		</ul>
+		
+	</header>
+	
+	<section class="howto">
+		<details open="open">
+		<summary>To rasterize a shape, line or text layer:</summary>
+			<p>Do one of the following:</p>
+				<ul>
+					<li>From <span class="ui">Layer</span> menu, select <span class="ui">Rasterize</span>.</li>
+					<li>On the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click a layer and select <span class="ui">Rasterize</span>.</li>
+				</ul>
+			
+			<aside class="box note">
+				<p>Off-canvas layer content will not be trimmed with this operation.</p>
+			</aside>
+			
+			<aside class="box warning">
+				<p>When applying filters or retouch brushes to the above layers, automatic rasterization occurs. This means the layers can&apos;t be edited as vectors afterwards. Ensure shapes, lines and text are completely edited to your satisfaction beforehand.</p>
+			</aside>
+			
+			<aside class="box note">
+				<p>Multiple adjacent or non-adjacent layers can be rasterized simultaneously. Each selected layer is converted to a discrete pixel layer, i.e. the layers are not flattened.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+		<summary>To rasterize a shape, line or text layer and trim off-canvas content:</summary>
+			<p>Do one of the following:</p>
+				<ul>
+					<li>From <span class="ui">Layer</span> menu, select <span class="ui">Rasterize &amp; Trim</span>.</li>
+					<li>On the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click a layer and select <span class="ui">Rasterize &amp; Trim</span>.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+		<summary>To rasterize a shape, line or text layer to a mask:</summary>
+				<ul>
+					<li>From <span class="ui">Layer</span> menu, select <span class="ui">Rasterize to Mask</span>.</li>
+				</ul>
+		</details>
+		
+		<aside class="box warning">
+			<p>When rasterizing a layer that has layer effects applied to it, a dialog offers an option to <span class="ui">Preserve layer FX</span>. Clear the checkbox to include the effects in the rasterization process along with the layer&apos;s shape, line, curve or text content. Leave it ticked to rasterize only the layer&apos;s content and still be able to edit the effects afterwards.</p>
+		</aside>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../CurvesShapes/draw_linesAndShapes.html">Draw lines and shapes</a></li>
+			<li><a href="../CurvesShapes/draw_geometricShapes.html">Draw and edit geometric shapes</a></li>			
+			<li><a href="../Text/text_general.html">Working with text</a></li>
+			<li><a href="../LayerOperations/select.html">Selecting</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

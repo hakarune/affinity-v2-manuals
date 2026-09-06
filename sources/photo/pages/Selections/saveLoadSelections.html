@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="reuse" />
+	<meta name="description" content="You can save pixel selections for later use in the current project or future projects." />
+	<title>Saving and loading selections</title>
+</head>
+
+<body>
+
+	<header>	
+
+		<h1>Saving and loading selections</h1>
+
+		<p>You can save pixel selections for later use in the current project or future projects. It&apos;s useful to be able to reinstate more complex selections at any time and stage of your project.</p>
+	</header>
+
+	<section class="about">
+	
+		<figure>
+			<div class="single"><img src="../../../shared/save_load_selection.jpg" class="responsive" alt="Pixel selection" /></div>
+			<figcaption>Subject pixel selection.</figcaption>
+		</figure>
+	
+		<h2>Saving selections as alpha channels</h2>
+		
+		<p>Any number of selections can be stored as spare alpha channels in the <span class="ui">Channels</span> panel for future use. From there you can reinstate any selection on demand. To learn more visit <a href="selections_fromchannels.html">Pixel selections from channels</a>.</p>
+		
+		<figure class="nft"> 
+			<p><img src="../../images/panel_channels2.png" class="responsive" width="370" height="338" alt="Channels panel" /></p>
+			<figcaption>Channels panel showing stored selections (each named as Spare Channel) for future use.</figcaption>
+		</figure>
+		
+		<h2>Saving selections to file</h2>
+		<p>Instead of using the Channels panel, selections can be saved to a standalone file. Saved selections can then be loaded from the file into the same or another project.</p>
+
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To save a selection as an alpha channel:</summary>
+			<ul>
+				<li>With a pixel selection in place, <span class="key CLICK-TAG"></span>-click the &apos;Pixel Selection&apos; entry and select <span class="ui">Create Spare Channel</span>.</li>
+			</ul>
+			<p>The selection is stored at the bottom of the Channels panel as a new &apos;Spare Channel&apos; entry.</p>
+		</details>
+		
+		<details open="open">
+			<summary>To reinstate a saved selection:</summary>
+			<p>On the <span class="ui">Channels</span> panel, <span class="key CLICK-TAG"></span>-click the &apos;Spare Channel&apos; entry, which lets you:</p>
+				<ul>
+					<li>Load to Pixel Selection&mdash;the saved selection is added as a new selection on the page.</li>
+					<li>Add/Subtract/Intersect to Pixel Selection&mdash;the saved selection is added to, subtracted from, or intersected with an existing selection on the page.</li>
+					<li>Load to &quot;Layer name&quot;&mdash;the saved selection is added to the mask, adjustment, or live filter layer if previously selected in the Layers panel.</li>
+					<li>Load to &quot;Layer name&quot; channel&mdash;loads the selection to a channel (e.g., Red) if the channel&apos;s layer was previously selected in the <span class="ui">Layers</span> panel.</li>
+				</ul>
+			<p>The selection is stored at the bottom of the Channels panel as a new &apos;Spare Channel&apos; entry.</p>
+		</details>
+		
+		<details open="open">
+			<summary>To save a selection to a file:</summary>
+			<ol>
+				<li>With a pixel selection in place, from the <span class="ui">Select</span> menu, select <span class="ui">Save Selection</span>.</li>
+				<li>Adjust the dialog settings as required.</li>
+				<li>Click <span class="ui">Save</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To load a selection from a file:</summary>
+			<ol>
+				<li>From the <span class="ui">Select</span> menu, select <span class="ui">Load Selection from File</span>.</li>
+				<li>Select the <span class="ui">.afselection</span> file you want and click <span class="ui">Open</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selections_create.html">Creating pixel selections</a></li>
+			<li><a href="selections_fromchannels.html">Pixel selections from channels</a></li>
+			<li><a href="../Channels/usingChannels.html">Using channels</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

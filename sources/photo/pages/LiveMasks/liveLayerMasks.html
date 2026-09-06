@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="live, non-destructive, hsl, luminosity, mask, band-pass" />
+	<meta name="description" content="Live layer masks let you create masks based on hue, luminosity and frequency that change with image content." />
+	<title>Live layer masks</title>
+</head>
+
+<body>
+
+	<header>
+		
+	<h1>Live layer masks</h1>
+		
+		<p>Live layer mask are non-destructive masks, based on hue, luminosity and frequency, that update automatically based on the properties of the underlying image.</p>
+			
+		<figure>
+			<div class="comparison"><img src="../../../shared/live_hue_range_mask_before.jpg" alt="Before" /><div><img src="../../../shared/live_hue_range_mask_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Vibrance Adjustment added onto a live Hue Range Mask targeting warm tones.</figcaption>
+		</figure>
+			
+	</header>
+
+	<section class="about">
+		<h2>About Live layer masks</h2>
+
+		<p>Live masks are generated automatically from your image, i.e. they can detect and mask image information that is common to all images, e.g. color (hue), luminosity or frequencies. Compare this to traditional masks which are manually created from drawn pixel selections or Paint Brush tools, and are inherently tied to an image&apos;s subject matter.</p>
+		
+		<p>Live layer masks, like Live filters, are non-destructive so can be edited at any later date, either for fine-tuning or complete reconfiguration. They possess configurable settings for initial set up or subsequent fine-tuning.</p>
+		
+		<p>All live masks can be inverted, have mask blurring applied and operate independently of the pixel layer.</p>
+
+		<p>The following live masks are supported:</p>		
+		<ul>
+			<li><span class="ui">Live Hue Range mask</span>&mdash;targets a specific hue range in your image to be used as the mask.</li>
+			<li><span class="ui">Live Luminosity Range mask</span>&mdash;uses a graph to specify a luminosity mask that can be used to isolate shadows, midtones or highlights in tonal adjustments. It can also be used to blend bracketed images together, offering greater control than performing an automatic HDR merge.</li>
+			<li><span class="ui">Live Band-pass mask</span>&mdash;creates a mask based on a configurable frequency band range that focuses on the edges in your image. This mask type is useful for retouchers when applied to sharpening filters (effectively offering a live frequency separation layer), but also for artistic effects when applied to, e.g. blur filters.</li>
+		</ul>
+		<p>As live masks are not tied to specific imagery, they are completely transferable to other image or adjustment layers.</p>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To create a live mask:</summary>
+				<ol>
+					<li>On the <span class="ui">Layers</span> panel, select the layer to target.</li>
+					<li>Do one of the following:<ul>
+							<li>On the <span class="ui">Layer</span> top menu, select an option from the <span class="ui">New Live Mask Layer</span> submenu.</li>
+							<li class="osx"><img src="../../../shared/ui/add_mask_layer.png" class="tool" width="16" height="16" alt="Mask Layer" /> On the <span class="ui">Layers</span> panel, <span class="key ALT-TAG"></span>-click <span class="ui">Mask Layer</span> to reveal the options, then select the required mask.</li>
+							<li class="win32"><img src="../../../shared/ui/add_mask_layer.png" class="tool" width="16" height="16" alt="Mask Layer" /> On the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click <span class="ui">Mask Layer</span> to reveal the options, then select the required mask.</li>
+						</ul>
+					</li>
+					<li>On the Settings pane, configure the mask.</li>
+				</ol>
+		<p>Once created, the mask can be moved to anywhere within a layer stack and can have adjustment or filter layers applied to it (or the mask can be applied to an adjustment or filter); you can also just paint on the automatically generated mask.</p>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/hue_range_mask.png" class="tool heading" width="21" height="21" alt="Hue Range Mask"> <img src="../../../shared/ui/intesity_range_mask.png" class="tool heading" width="21" height="21" alt="Luminosity Range Mask"> <img src="../../../shared/ui/band_pass_mask.png" class="tool heading" width="21" height="21" alt="Band Pass Mask">To edit a live mask:</summary>
+				<ul>
+					<li>On the <span class="ui">Layers</span> panel, click the live mask&apos;s thumbnail, then edit the mask&apos;s settings via the dialog.</li>
+				</ul>
+		</details>	
+	
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../LiveMasks/mask_liveHueRange.html">Live Hue Range Mask</a></li>
+			<li><a href="../LiveMasks/mask_liveLuminosityRange.html">Live Luminosity Range Mask</a></li>
+			<li><a href="../LiveMasks/mask_liveBandPass.html">Live Band-pass Mask</a></li>		
+			<li><a href="../Layers/adjustmentLayers.html">Using adjustment layers</a></li>
+			<li><a href="../Filters/filters_applying.html">Applying filters</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

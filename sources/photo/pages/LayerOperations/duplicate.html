@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="clone, duplicate, copy, step, repeat, step and repeat, move, data, entry" />
+	<meta name="description" content="Create exact replicas of layer content or groups." />
+	<title>Duplicating</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Duplicating</h1>
+		<p>Affinity Photo 2 lets you make duplicate layers to increase workflow or to temporarily create a &apos;backup&apos; layer. Move data entry and power duplicate features also allows you to duplicate and repeatedly transform layer contents.</p>
+	</header>
+
+	<section class="about">
+
+		<p>Affinity lets you make copies of your original layer content using several methods.</p>
+		
+		<ul>
+			<li>Creating a single duplicate using a command.</li>
+			<li>Creating many offset duplicates by using Move data entry.</li>
+			<li>Creating many offset duplicates by using power duplicate.</li>
+		</ul>
+
+		<figure class="nft overrideDE overrideFR">
+			<div class="comparison"><img src="../../images/panel_layers_duplicate_before.png" class="responsive" width="264" alt="Before" /><div><img src="../../images/panel_layers_duplicate_after.png" class="responsive" width="264" alt="After" /></div>
+			</div>
+			<figcaption>Layers panel before and after layer duplication.</figcaption>
+		</figure>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To duplicate:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>On the page, drag a selected layer with the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> pressed. While dragging, release the key to move the layer instead, or press the key while moving to duplicate rather than move.</li>
+				<li>On the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click a layer, group or object and select <span class="ui">Duplicate</span>.</li>
+				<li>On the <span class="ui">Layers</span> panel, press the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> down and drag the layer you would like to duplicate into its position.</li>
+				<li>With an object selected, select <span class="ui">Layer&gt;Duplicate</span>.</li>
+			</ul>
+
+		<aside class="box note">
+			<p>A duplicated layer is placed immediately above the original layer.</p>
+		</aside>
+		</details>
+
+	</section>
+
+	<section class="about">
+
+		<h2>Duplicate using Move data entry</h2>
+		
+		<p>As well as moving, rotating and sizing an individual object precisely, Move data entry lets you create any number of copies of an object in one operation which, when combined with move, rotate and scale operations, leads to some striking object transformations.</p>
+		
+		<p>Move data entry has the following characteristics:<ul>
+			<li>You can duplicate curves and text as well as shapes</li>
+			<li>It is controlled via a dialog</li>
+			<li>Your chosen transformation is previewed on the page</li>
+			<li>You can edit the properties of the object being transformed (affecting its its previewed duplicates) as well as its transform origin while the dialog remains open</li>
+			<li>The duplicate(s) can be placed in front of or behind the original object</li>
+			<li>The previous settings can optionally be used</li>
+			<li>Scaling is cumulative, e.g. 80% scaling is applied to each duplicate in turn</li>
+		</ul>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/movedataentry_examples.png" class="responsive" alt="Examples of Move data entry" /></div>
+			<figcaption>(A) Linear offset (Horizontal: 6mm; Number of copies: 6),<br /> (B) Rotating (Rotation: 30°; Number of copies: 12),<br />(C) Scaling (Scale: 80% and 110%; Number of copies: 6),<br />(D) Rotating and Scaling (Rotation: -4°; Scale: 93% and 101%, Number of copies: 50)</figcaption>
+		</figure>
+
+	<p>You can achieve very different duplication results if you experiment with the <span class="ui">Insertion mode</span> option on the dialog.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/movedataentry_insertionmode.png" class="responsive" alt="Insertion mode in front of or behind items" /></div>
+			<figcaption>Effects of Insertion mode when set to add duplicates in front of (A) or behind (B) the original item</figcaption>
+		</figure>
+
+		<aside class="box tip">
+			<p>Try repositioning the object&apos;s transform origin on the page before using Move data entry&mdash;this lets you rotate duplicated objects around the origin to create ringed designs.</p>
+				<figure class="nft">
+					<div class="single"><img src="../../images/move_data_entry_duplicate2.png" class="screenshot responsive" alt="Move data entry to Duplicate about Transform Origin" /></div>
+					<figcaption></figcaption>
+				</figure>
+		</aside>
+		
+	</section>
+
+	<section class="howto">
+		
+		<details open="open">
+			<summary>To duplicate (by Move data entry):</summary>
+				<ol>
+					<li>With the <span class="ui">Move Tool</span> active, select one or more layers or groups.</li>
+					<li>Press the <span class="key RETURN-TAG"></span> <span class="KEY-TAG"></span> to display a <span class="ui">Move / Duplicate</span> dialog.<br /><figure class="nft">
+								<div class="single"><img src="../../images/move_data_entry_duplicate.png" width="274" class="screenshot responsive" alt="Move data entry to Duplicate" /></div>
+								<figcaption></figcaption>
+							</figure>Enter new settings that will offset the duplicate(s) from its original position, with optional <span class="ui">Angle</span>, <span class="ui">Rotation</span> and <span class="ui">Scale</span> settings. The <span class="ui">Distance</span> setting is the measurement between duplicate layer midpoints.</li>
+					<li>Check <span class="ui">Duplicate</span> and set the <span class="ui">Number of copies</span> you want.</li>
+					<li>(Optional) Choose an <span class="ui">Insertion mode</span> to add duplicate objects either in front of (<img src="../../../shared/ui/insert_top_of_layer.png" class="tool" width="18" height="18" alt="Insert new items in front" /> <span class="ui">Insert new items in front</span>) or behind (<img src="../../../shared/ui/insert_behind_selection.png" class="tool" width="18" height="18" alt="Insert new items behind" /> <span class="ui">Insert new items behind</span>) the original object.</li>
+					<li>Click <span class="ui">OK</span>.</li>
+				</ol>
+		</details>
+		
+		<p>Click <span class="ui">Reset</span> to clear previously applied settings and remove the duplicates.</p>
+		<p>Pressing the <span class="key ESC-TAG"></span> <span class="KEY-TAG"></span> will cancel the operation; the entered settings will still be remembered.</p>
+
+		<aside class="box note">
+			<p>If you swap to another tool while the dialog is open, the dialog and any object previews will disappear.</p>
+		</aside>
+	</section>
+
+	<section class="about">
+
+		<h2>Power duplicate</h2>
+
+		<p>If you duplicate a layer(s) and then transform the duplicated contents, you can immediately duplicate the layer containing the transformed content. The transform is applied accumulatively to subsequent duplicates.</p>
+
+		<figure>
+			<p><img src="../../../shared/power_duplicate.jpg" class="responsive" alt="Power duplicate" /></p>
+			<figcaption>(A) original content, (B) original content duplicated and rotated, (C) transformed duplicate duplicated numerous times.</figcaption>
+		</figure>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To power duplicate:</summary>
+			<ol>
+				<li>Select the layer(s).</li>
+				<li>From the <span class="ui">Layer</span> menu, select <span class="ui">Duplicate</span>.</li>
+				<li>Transform the duplicated layer content.</li>
+				<li>From the <span class="ui">Layer</span> menu, select <span class="ui">Duplicate</span>. A duplicate is created and the transform is automatically applied to the duplicate.</li>
+				<li>Repeat step 4 to create more duplicates with the transform accumulatively applied.</li>
+			</ol>
+
+		</details>
+
+	</section>
+	
+		<section class="about">
+
+		<h2>Duplicating selections</h2>
+
+		<p>If you have made a selection, you can immediately duplicate the selected content into a new layer (or layers).</p>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To duplicate selected content:</summary>
+			<ol>
+				<li>Select content within the layer(s).</li>
+				<li>From the <span class="ui">Layer</span> menu, select <span class="ui">Duplicate Selection</span>.</li>
+				<li>The selected content will be duplicated into a new layer. If content has been selected across multiple layers, the content will be duplicated into multiple separate new layers.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="select.html">Selecting</a></li>
+			<li><a href="../SizeTransform/transform.html">Transforming</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=layerOperations">Keyboard shortcuts for layer operations</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>
