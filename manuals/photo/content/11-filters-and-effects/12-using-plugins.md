@@ -34,7 +34,7 @@ Configuring plugins in Affinity Photo 2 can be automatic or be configured manual
 2. **Windows:** From the **Edit** menu, select **Settings**.
 3. Select the **Photoshop Plugins** tab.
 4. **macOS:** Under the **Plugin Search Folders** box, click **Add**, then navigate to the parent folder that contains the .plugin file. For example, this could be in a Photoshop folder such as /Applications/Adobe Photoshop CS6/Plug-ins.
-5. **Windows:** Under the **Plugin Search Folders** box, click **Add**, then navigate to the parent folder that contains the .plugin file. For example, this could be C:\plugins\nik.
+5. **Windows:** Under the **Plugin Search Folders** box, click **Add**, then navigate to the parent folder that contains the .plugin file. For example, this could be `C:\plugins\nik`.
 
 > **Note:** You can add as many plugins as you like by repeating the above process.
 

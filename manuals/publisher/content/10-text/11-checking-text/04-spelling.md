@@ -45,7 +45,7 @@ You'll also be able to **Ignore Spelling**, **Learn Spelling** (Add to dictionar
 Spelling dictionaries are installed for the languages supported by Affinity apps, except for Chinese and Japanese. To install for these languages do the following:
 
 1. Visit the OpenOffice™ [website](https://www.openoffice.org/lingucomponent/download_dictionary.html) and download the appropriate language dictionary or try an internet search for "spelling dictionaries".
-2. Create a language code folder (e.g., ja_JA) in C:\ProgramData\Affinity\Common\2.0\Dictionaries and copy the downloaded dictionary files into this folder.
+2. Create a language code folder (e.g., ja_JA) in `C:\ProgramData\Affinity\Common\2.0\Dictionaries` and copy the downloaded dictionary files into this folder.
 3. Restart app.
 
 > **Preferences — Settings (or Preferences):** Related behaviors can be adjusted from [the app's settings](../../25-settings-preferences/01-settings-preferences.md):

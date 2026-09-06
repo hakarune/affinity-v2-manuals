@@ -294,7 +294,22 @@ def render_page(html: bytes, ctx: Ctx, used_assets: set[tuple[str, str]]) -> str
 
     text = "\n\n".join(p for p in parts if p is not None)
     text = re.sub(r"\n{3,}", "\n\n", text).strip() + "\n"
-    return text
+    return _code_wrap_paths(text)
+
+
+# Bare Windows/UNC paths in prose (e.g. C:\plugins\nik) otherwise reach the
+# LaTeX PDF build as undefined control sequences (\plugins). Wrap them in a
+# code span, which every output format escapes correctly. Skips text that is
+# already inside backticks.
+_PATH_RE = re.compile(
+    r"(?<![`\w])((?:[A-Za-z]:\\|\\\\)[^\s`\]]*[A-Za-z0-9_\\/-])")
+
+
+def _code_wrap_paths(text: str) -> str:
+    out = []
+    for i, seg in enumerate(text.split("`")):
+        out.append(seg if i % 2 else _PATH_RE.sub(r"`\1`", seg))
+    return "`".join(out)
 
 
 def _text_only(el: Tag) -> str:

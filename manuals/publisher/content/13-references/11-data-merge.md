@@ -40,7 +40,7 @@ You can add (or alter) data records to the external data source at any time (eve
 - For JSON files, obtained from web/mobile services or database export, only a single top-level array of objects (and values in those objects) are supported; lower level arrays and objects are not supported.
 - For image links, the resource path names can be absolute (like below), or relative to the data source's or saved document's file location.
   - MacOS: /Users/*username*/Desktop/ProfilePics/magazine_staff_pics_andy.jpg
-  - Windows: C:\Users\*username*\Desktop\ProfilePics\magazine_staff_pics_andy.jpg
+  - Windows: `C:\Users\*username*\Desktop\ProfilePics\magazine_staff_pics_andy.jpg`
 
 ### Design to a single spread or grid layout
 
