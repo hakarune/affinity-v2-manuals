@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pages, master, applying" />
+	<meta name="description" content="A master page can be a single page or a spread with two or more pages, and can be applied to all or some of another spread's pages." />
+	<title>Applying master pages</title>
+</head>
+
+<body>
+	<header>
+		<h1>Applying master pages</h1>
+
+		<p>Just like publication pages, a master page can be a single page or a spread with two or more pages. A master can be applied to all or some of another spread&apos;s pages.</p>
+	</header>
+
+	<section class="about">
+		<h2>Initial master page</h2>
+		<p>When creating a new document, a default master can be created and applied to all publication pages created at this time. After this, you can apply any new master at any time using the <span class="ui">Pages</span> panel.</p>
+
+		<h2>Using multiple hierarchical masters</h2>
+
+		<p>Masters can be applied to other masters in more complex documents.</p>
+
+		<p>For example, a &apos;parent&apos; master containing just page numbering could be applied to multiple &apos;child&apos; masters colored separately for each of your publication&apos;s sections. This means that to change your page numbering style, you only need to do so on the parent master.</p>
+
+		<p>Also, as you create new publication pages, applying a child master to them adds the section coloring and automatically inherits page numbering from its parent.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/masterpages_multiple.jpg" class="screenshot responsive" alt="Multiple masters" /></div>
+			<figcaption>Parent Masters (top) with footer information and child masters (middle) with multi-color headers and their combined effect on publication pages (bottom).</figcaption>
+		</figure>
+
+		<h2>Applying masters using drag and drop</h2>
+
+		<p>Masters can be dragged and dropped at the following positions to apply the master to existing publication pages, or to create new pages with the master automatically applied to them.</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Positions and cursors</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<figure>
+							<div class="single"><img src="../../../shared/apply_master_left_page.png" class="responsive" width="199" alt="Master being applied to a left page, replacing existing masters" /> <img src="../../../shared/apply_master_whole_spread.png" class="responsive" width="199" alt="Master being applied to a whole spread, replacing existing masters" /> <img src="../../../shared/apply_master_right_page.png" class="responsive" width="199" alt="Master being applied to a right page, replacing existing masters" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</td>
+					<td>Applies the master to the targeted pages, replacing any masters already applied to them.</td>
+				</tr>
+				<tr>
+					<td>
+						<figure>
+							<div class="single"><img src="../../../shared/add_master_left_page.png" class="responsive" width="199" alt="Master being added to a left page without replacing existing masters" /> <img src="../../../shared/add_master_whole_spread.png" class="responsive" width="199" alt="Master being added to a whole spread without replacing existing masters" /> <img src="../../../shared/add_master_right_page.png" class="responsive" width="199" alt="Master being added to a right page without replacing existing masters" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</td>
+					<td>
+						<p class="osx">With the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> held, applies the master to the targeted pages in addition to any masters already applied to them.</p>
+						<p class="win32">With the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> held, applies the master to the targeted pages in addition to any masters already applied to them.<p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<figure>
+							<div class="single"><img src="../../../shared/create_spread_from_master_before.png" class="responsive" width="195" alt="Using a master to create a new spread before an existing one" /> <img src="../../../shared/create_spread_from_master_after.png" class="responsive" width="219" alt="Using a master to create a new spread after an existing one" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</td>
+					<td>Creates a new spread at the targeted position with the same page count as the master, and applies the master to the spread&apos;s pages.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Identifying applied masters</h2>
+		<p>You can identify the masters applied to a page by hovering over the page&apos;s thumbnail on the <span class="ui">Pages</span> panel.</p>
+
+		<p>In documents with facing pages, the tooltip indicates which master pages are each page.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/tooltip_one_applied_master.png" class="responsive" width="150" alt="Thumbnail of a color-tagged master" /></div>
+			<figcaption>A two-page spread with the same master applied to both pages.</figcaption>
+		</figure>
+
+		<figure>
+			<div class="single"><img src="../../../shared/tooltip_two_applied_masters.png" class="responsive" width="150" alt="Thumbnail of a color-tagged master" /></div>
+			<figcaption>A two-page spread with different masters applied to each page.</figcaption>
+		</figure>
+
+		<p>Optionally, any master can be tagged with a color, which is indicated at the corner of the master&apos;s thumbnail.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/tagged_master.png" class="responsive" width="147" alt="Thumbnail of a color-tagged master" /></div>
+			<figcaption>A two-page master that has been tagged red.</figcaption>
+		</figure>
+
+		<h3>Tag color</h3>
+
+		<p>A master&apos;s tag color can be set when the master is created, or later via the master&apos;s thumbnail.</p>
+
+		<p>The tag color is shown above the thumbnails of pages to which the master is applied.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/applied_tagged_master.png" class="responsive" width="147" alt="Thumbnail of a two-page spread with a color-tagged master applied" /></div>
+			<figcaption>A spread with different numbers of tagged masters applied to its pages.</figcaption>
+		</figure>
+
+		<h3>Masters as layers</h3>
+
+		<p>An applied master is actually a layer, which shows on the <span class="ui">Layers</span> panel as a vertical solid turquoise marker prefixing the thumbnail on the layer entry.</p>
+
+		<p>The layer can be expanded to expose the elements inherited from the master, which display vertical solid turquoise markers on their entries.</p>
+
+		<figure class="nft">
+			<div class="single"><img src="../../../shared/masterpages_layers.png" class="responsive" width="264" alt="Master page layers" /></div>
+			<figcaption>Expanded master page entry on the Layers panel, showing unedited and edited master content (indicated with solid and dotted vertical turquoise markers, respectively).</figcaption>
+		</figure>
+
+		<p>When an element of a master page is edited on a page where it&apos;s applied, that page&apos;s layer entries for the element and its master page display <em>dotted</em> turquoise markers.</p>
+
+		<p>By dragging a master&apos;s layer to the top of the layer stack, you can present the master&apos;s items in front of all other items on the page.</p>
+
+		<p>By selecting the master page&apos;s layer entry, the inherited content can be collectively transformed. Individual objects can only be transformed by detaching the master page. The content of text objects and picture frames can be edited, though.</p>
+						
+		<p>To prevent inadvertent transformation or editing of inherited content (other than text/picture frame content), select and then lock the master layer on the Layers panel.</p>
+
+		<h3>Master placement</h3>
+
+		<p>You can manage how a master is applied using the <span class="ui">Master Properties</span> dialog, where you can specify:</p>
+
+		<ul>
+			<li>which pages of the master are applied (<span class="ui">Master Start Page</span> and <span class="ui">Page Count</span>).</li>
+			<li>from which of the spread&apos;s publication pages to apply the master&apos;s pages (<span class="ui">First Applied Page</span>).</li>
+			<li>the scaling behavior that is applied to the master&apos;s content, where page dimensions are different, whether line styles scale accordingly, and the position at which the master is anchored to destination page.</li>
+		</ul>
+
+		<p>The following scaling behaviors are available:</p>
+
+		<ul>
+			<li><span class="ui">None</span>&mdash;places the master at its original size.</li>
+			<li><span class="ui">Stretch</span>&mdash;stretches the master to fill the destination exactly. It may be noticeably distorted, depending on its relative proportions and those of the destination.</li>
+			<li><span class="ui">Uniform to Fit</span>&mdash;scales the master uniformly to be completely visible within the page. There may be empty areas down the left and right or across the top and bottom of the page.</li>
+			<li><span class="ui">Uniform to Fill</span>&mdash;scales the master uniformly to fill the entire page without distorting it. Some of its contents may be cropped.</li>
+		</ul>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To apply a master:</summary>
+			<p>On the <span class="ui">Pages</span> panel, do one of the following:</p>
+			<ul>
+				<li>To a <em>single</em> page: Drag a master thumbnail from the Master Pages window on top of a chosen publication page thumbnail in the lower Pages window and release. This replaces any existing master on that page.</li>
+				<li>To a <em>whole</em> spread: Drag and release the master onto a spread in the main document view or the <span class="ui">Pages</span> panel.</li>
+				<li>To <em>multiple</em> pages: <span class="key CLICK-TAG"></span>-click each required page to select it, then drag and release the master onto any selected page&apos;s thumbnail.</li>
+				<li>To a <em>choice</em> of pages: <span class="key CLICK-TAG"></span>-click a chosen page&apos;s thumbnail and select <span class="ui">Apply Master</span>. You can apply to the current spread, all, odd, even or specified pages (by page number).</li>
+				<li>To a <em>master</em> page: Drag a master&apos;s thumbnail from the Master Pages window on top of a destination master&apos;s thumbnail and release to link the two masters. Alternatively, <span class="key CLICK-TAG"></span>-click a chosen page&apos;s thumbnail and select <span class="ui">Apply Master</span>, then select the master you would like to apply.</li>
+			</ul>
+
+			<p>The newly applied master replaces any existing master that&apos;s applied to the target.</p>
+		</details>
+
+		<details open="open">
+			<summary>To apply an additional master:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li class="osx">With the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> pressed, drag a master&apos;s thumbnail from the Master Pages window on top of a chosen publication page&apos;s thumbnail (that has a master attached) in the lower Pages window and release.</li>
+				<li class="win32">With the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> pressed, drag a master&apos;s thumbnail from the Master Pages window on top of a chosen publication page thumbnail (to which a master is applied) in the lower Pages window and release.</li>
+				<li><span class="key CLICK-TAG"></span>-click the destination page&apos;s thumbnail and select <span class="ui">Apply Master</span>, then select the master you would like to apply. Ensure <span class="ui">Replace Existing</span> is unchecked on the dialog, and then select <span class="ui">OK</span>.</li> 
+			</ul>
+
+			<aside class="box note">
+				<p><img src="../../../shared/ui/lock_layer.png" class="tool" width="16" height="16" alt="Lock/Unlock" /> Objects from masters can&apos;t be transformed or formatted&mdash;except for the <em>contents</em> of picture frames and text objects&mdash;unless you select the master&apos;s entry on the <span class="ui">Layers</span> panel and then, on the <span class="ui">Move Tool</span>&apos;s context toolbar, set <span class="ui">Edit</span> setting to <span class="ui">Detached</span>. To protect objects again, select the <span class="ui">Lock</span> option.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary>To edit an applied master&apos;s properties:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click the master&apos;s layer entry and select <span class="ui">Properties</span>.</li>
+				<li>On the <span class="ui">Master Properties</span> dialog that appears:<ol class="nested">
+						<li>Edit the properties as required.</li>
+						<li>Select <span class="ui">Close</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Remove" /> To remove a master from a page:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>To remove all masters from an entire spread: On the Pages panel, click the spread&apos;s page numbers, then <span class="CLICK-TAG"></span>-click its thumbnail and select Clear Masters.</li>
+				<li>To remove all masters from specific pages: On the Pages panel, select the relevant pages, then <span class="CLICK-TAG"></span>-click a thumbnail of one of those pages and select Clear Masters.<li>To remove a specific master from an entire spread: On the Layers panel, select the unwanted master&apos;s entry, then select <span class="ui">Remove</span>.</li>
+				<li>To remove a specific master from specific pages: Remove it from the entire spread, then reapply it to specific pages of the spread.</li>
+			</ul>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="masterPages.html">About master pages</a></li>
+			<li><a href="editMasterPageContent.html">Editing master page content</a></li>
+			<li><a href="detachLinkMasterPages.html">Detaching and linking master pages</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../Panels/pagesPanel.html">Pages panel</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

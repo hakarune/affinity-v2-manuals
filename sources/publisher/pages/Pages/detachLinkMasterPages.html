@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pages, master, detach, link" />
+	<meta name="description" content="Use these techniques when you need full editing capability for an object inherited from a master page." />
+	<title>Detaching and linking master pages</title>
+</head>
+
+<body>
+	<header>
+		<h1>Detaching and linking master pages</h1>
+
+		<p>Where a master page is applied, normally only the contents of its picture frames and text objects on the target page can be edited. Other operations, such as transforming inherited objects, are restricted unless you choose to detach or link the master page.</p>
+	</header>
+
+	<section class="about">
+		<p><span class="term">Detaching</span> breaks the connection between the master page and its elements, so you can transform frames and other objects, and alter frame properties (change the number of columns, add a frame stroke, etc).</p>
+
+		<p><span class="term">Linking</span> lets you edit the master page directly from a page to which it is applied. This updates the master page and other pages to which it is applied.</p>
+
+		<p>Alternatively, an applied master page can be <span class="ui">locked</span> to prevent its objects on the target page from being edited at all.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/masterpages_detachmaster.jpg" class="screenshot responsive" alt="Detach master page" ></div>
+			<figcaption>Master page (top) with placeholder frames (brown). Publication page (bottom) shows frames detached (green) to allow resizing and frame property adjustment and text frame (blue) with edited content.</figcaption>
+		</figure>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/move_tool.png" class="tool" width="16" height="16" alt="Move Tool" /> To detach or link a master page:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select the master page&apos;s entry (e.g. &apos;Master A - 2 Pages&apos;).</li>
+				<li>With the <span class="ui">Move Tool</span> selected, choose an <span class="ui">Edit</span> option on the context toolbar:<ul>
+						<li><span class="ui">Detached</span>&mdash;changes to inherited content will affect only the current page/spread. The master page and other pages to which it&apos;s applied are unaffected.</li>
+						<li><span class="ui">Linked</span>&mdash;changes to inherited content will also affect the master page and other pages to which it is applied.</li>
+					</ul>
+				</li>
+				<li>Select <span class="ui">Finish</span> on the bar across the top of the document view to commit your edit. The applied master page returns to the default &apos;Edit Frame Content&apos; behavior.</li>
+			</ol>
+
+			<aside class="box tip">
+				<p class="osx">The Edit options are also available by <span class="key CTRL-TAG"></span>-clicking the master page&apos;s layer entry, and via <span class="ui">Layer&gt;Master Page</span>.</p>
+				<p class="win32">The Edit options are also available by <span class="key CLICK-TAG"></span>-clicking the master page&apos;s layer entry, and via <span class="ui">Layer&gt;Master Page</span>.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/lock_layer.png" class="tool" width="16" height="16" alt="Lock/Unlock" /> To lock an applied master page:</summary>
+			<p>On the <span class="ui">Layers</span> panel, do one of the following:</p>
+			<ul>
+				<li>Select the master page&apos;s entry and then select <span class="ui">Lock/Unlock</span>.</li>
+				<li>
+					<p class="osx"><span class="key CTRL-TAG"></span>-click the master page&apos;s entry and select <span class="ui">Lock</span>.</p>
+					<p class="win32"><span class="key CMD-TAG"></span>-click the master page&apos;s entry and select <span class="ui">Lock</span>.</p>
+				</li>
+			</ul>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="masterPages.html">About master pages</a></li>
+			<li><a href="applyMasterPages.html">Applying master pages</a></li>
+			<li><a href="editMasterPageContent.html">Editing master page content</a></li>
+			<li><a href="migrateMasterPages.html">Migrating edited master page content</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../Panels/pagesPanel.html">Pages panel</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

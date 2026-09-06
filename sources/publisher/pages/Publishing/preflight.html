@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="preflight, PDF, error, check, export, print, passthrough" />
+	<meta name="description" content="Preflight ensures that your document exports or prints as intended." />
+	<title>Preflight</title>
+</head>
+<body>
+
+	<header>
+		
+		<h1>Preflight</h1>
+		
+		<p>Affinity Publisher&apos;s preflight check feature can be used to ensure that your document exports or prints as intended. The preflight check can be run on demand&mdash;e.g. prior to output&mdash;or &apos;live&apos; on a continual basis.</p>
+
+		<aside class="box note">
+			<p>When an .afpub file is opened or created, preflight checking will be set to <span class="ui">Live</span> by default. When a PDF, .afdesign or .afphoto file is opened, preflight checking will be set to <span class="ui">Never</span> by default but you can adjust this manually via the <span class="ui">Preflight</span> panel.</p>
+		</aside>
+		
+		<figure class="nft">
+			<p><img src="../../images/panel_preflight.png" class="responsive panel" alt="Preflight" /></p>
+			<figcaption>The Preflight panel.</figcaption>
+		</figure>
+	
+	</header>
+	
+	<section class="about">
+	
+		<p>Preflight checks the contents of your file for errors, ensuring the file is ready for print or export.</p>
+		
+		<h2>Preflight notifications</h2>
+		
+		<p>With preflight enabled, the bell-shaped preflight indicator in the status bar will change color to indicate whether warnings or errors have been detected in the document.</p>
+		<ul>
+			<li><img src="../../../shared/ui/preflightIndicatorDisabled.png" class="tool" width="16" height="16" alt="Preflight indicator disabled" /> Grey indicates that preflight is not enabled, i.e. live checks are not being performed.</li>
+			<li><img src="../../../shared/ui/preflightIndicatorOk.png" class="tool" width="16" height="16" alt="Preflight indicator OK" /> Green indicates that preflight is active and no errors or warnings have been found.</li>
+			<li><img src="../../../shared/ui/preflightIndicatorErrors.png" class="tool" width="16" height="16" alt="Preflight indicator Error" /> Red indicates that preflight is active and errors that will interrupt export have been found.</li>
+			<li><img src="../../../shared/ui/preflightIndicatorWarning.png" class="tool" width="16" height="16" alt="Preflight indicator Warning" /> Yellow indicates that preflight is active and issues that will not affect export have been found.</li>
+		</ul>
+		
+		<p>Hovering over the preflight indicator when it is red will reveal the number of errors preflight has found. Clicking on the indicator takes you directly to the <span class="ui">Preflight</span> panel.</p>
+		
+		<h2>Editing the Preflight profile</h2>
+		
+		<p>The <span class="ui">Preflight</span> panel uses a default set of checks, but these can be customized. The <span class="ui">Preflight</span> panel&apos;s <img src="../../../shared/ui/moremenuicon.png" class="tool" width="24" height="24" alt="Options menu" /> <span class="ui">Edit profile</span> function allows you to tailor preflight checking to your needs. You can control the severity level for preflight issues, set values and thresholds that trigger preflight warnings and errors, and control how placed documents work with preflight.</p>
+		
+		<h2>Errors and warnings</h2>
+
+		<p>The <span class="ui">Preflight</span> panel displays a full list of warnings and errors it has found, allowing you to pinpoint and correct certain errors where they appear in your document.</p>
+		
+		<p>The types of items that are listed are determined by the active preflight profile&apos;s settings. Two different icons may be shown to indicate severity:</p>
+		<ul>
+			<li><img src="../../../shared/ui/preflightWarning.png" width="16" height="16" alt="Preflight warning" /> A yellow icon to the left of an entry is a <span class="term">warning</span> of an issue that will not affect export.</li>
+			<li><img src="../../../shared/ui/preflightError.png" width="16" height="16" alt="Preflight error" /> A red icon to the left of an entry indicates an <span class="term">error</span> in the file that will interrupt export.</li>
+		</ul>
+			
+		<p>The full list of preflight warnings and errors is as follows:</p>
+		
+			<ul>
+				<li><span class="ui">Bleed Hazard</span>&mdash;appears when an object is positioned outside of the bleed zone. You can adjust the safe zone edge via the panel, which will change what preflight checking will identify as a bleed hazard.</li>
+				<li><span class="ui">Check copy</span>&mdash;appears if a preflight user comment has been attached to an object. Can be used as a reminder to, for example, check final text copy or to check image copyright.</li>
+				<li><span class="ui">Cross-reference out of date</span>&mdash;appears after making certain changes to your document that require a cross-reference&apos;s value to be manually updated. Click <span class="ui">Fix</span> to update the cross-reference.</li>
+				<li><span class="ui">Cross-reference target is missing</span>&mdash;appears if the target of a cross-reference has been deleted from the document, e.g. an anchor has been removed.</li>
+				<li><span class="ui">Cross-reference book target is missing</span>&mdash;appears if the target is in a book chapter that is not open for editing, and so nothing more about the target is known.</li>
+				<li><span class="ui">Cross-reference target is not a list</span>&mdash;a cross-reference contains a <span class="ui">List Number</span> subfield but its target is not an item in a numbered or bulleted list.</li>
+				<li><span class="ui">Cross-reference target is not a note</span>&mdash;a cross-reference contains a <span class="ui">Note Number</span> subfield but its target is not a footnote, sidenote or endnote.</li>
+				<li><span class="ui">Cross-reference target is not in a book</span>&mdash;a cross-reference contains a <span class="ui">Chapter Name</span> subfield but its target is not a book chapter.</li>
+				<li><span class="ui">Cross-reference expansion includes itself</span>&mdash;a cross-reference contains a <span class="ui">Paragraph Body</span> or <span class="ui">Numbered Paragraph</span> subfield whose value includes the cross-reference&apos;s text.</li>
+				<li><span class="ui">Cross-reference target is not in text</span>&mdash;a cross-reference contains a text-based subfield, such as <span class="ui">Paragraph Body</span>, but its target is not text. For example, the cross-reference is linked to an anchor on a shape or image.</li>
+				<li><span class="ui">Cross-reference has no string for language</span>&mdash;a cross-reference contains an <span class="ui">Above/Below</span> subfield but translations have not been set for the text&apos;s language. Translations can be set via <span class="ui">Edit Strings</span> on the <span class="ui">Cross-References</span> panel&apos;s Preferences menu.</li>
+				<li><span class="ui">Cross-reference value is empty</span>&mdash;a cross-reference contains a subfield for which its target provides no value, e.g. a <span class="ui">Paragraph Body</span> subfield when the cross-reference&apos;s target is an empty paragraph. This check is optional and can be disabled by editing the preflight profile, selecting <span class="ui">Cross-References</span>, and then unchecking <span class="ui">Check for empty values</span>.</li>
+				<li><span class="ui">Data merge sources need updating</span>&mdash;appears when a data record(s) in the external data source has been edited. Click <span class="ui">Fix</span> to update to the latest records.</li>
+				<li><span class="ui">The document index needs updating</span>&mdash;can be resolved by using the <span class="ui">Index</span> panel to update the index.</li>
+				<li><span class="ui">Field (field name) not found in source (data source file name)</span>&mdash;appears when a row or column in the external data source has either been renamed or deleted.</li>
+				<li><span class="ui">Fill ink density too high (Percentage)</span> / <span class="ui">Stroke ink density too high (Percentage)</span> / <span class="ui">Text ink density too high (Percentage)</span>&mdash;appears when an object uses a color with an ink density over a specified threshold.</li>
+				<li><span class="ui">Fill uses too rich black (Percentage)</span> / <span class="ui">Stroke uses too rich black (Percentage)</span> / <span class="ui">Text uses too rich black (Percentage)</span>&mdash;appears when an object uses a rich black ink density over a specified threshold.</li>
+				<li><span class="ui">Fill uses CMY</span> / <span class="ui">Stroke uses CMY</span> / <span class="ui">Text uses CMY</span>&mdash;appears when an object&apos;s Cyan, Magenta or Yellow levels do not conform to the document&apos;s expectation of only gray and spot colors.</li>
+				<li><span class="ui">Frames in flow have mismatched scales</span>&mdash;appears when one or more of a story&apos;s text frames has been scaled. Double-click the warning to go to the first frame in the linked sequence, then follow the text flow to locate any frames on which the lower-right handle is solid. Double-click the handle to reset the frame&apos;s scale.</li>
+				<li><span class="ui">Hidden Object</span></li>
+				<li><span class="ui">Hyperlink to Invalid Anchor (anchor name)</span>&mdash;appears where a hyperlink&apos;s anchor is missing or has been deleted.</li>
+				<li><span class="ui">Hyperlink to Invalid Page</span>&mdash;appears where a hyperlink&apos;s target page is missing or has been deleted.</li>
+				<li><span class="ui">Linked resource is missing/Linked resource is out of date</span></li>
+				<li><span class="ui">Mismatched color space (RGB)</span></li>
+				<li><span class="ui">Missing characters (character)</span>&mdash;appears when text uses a glyph that is not present in the currently applied font.</li>
+				<li><span class="ui">Missing Font</span>&mdash;appears if the document is opened on a device that does not have the used fonts available.</li>
+				<li><span class="ui">Non-Proportional Scaling</span>&mdash;appears when an object is not proportionally scaled, e.g. when an image has been accidentally squashed.</li>
+				<li><span class="ui">Object missing Alt Text</span>&mdash;appears when alt text has not been specified for an object and the object has not been marked as decoration. The issue can be resolved using the <span class="ui">Tags</span> panel.</li>
+				<li><span class="ui">One or more table of contents entries need updating</span>&mdash;appears when the TOC is out of date because referenced text in the document has been added to, modified or deleted. Click <span class="ui">Fix</span> to update the TOC and resolve.</li>
+				<li><span class="ui">Overflowing path text</span>&mdash;appears where there is overset text on a path.</li>
+				<li><span class="ui">Overflowing text frame</span>&mdash;appears where there is overset text within a text frame.</li>
+				<li><span class="ui">PDF passthrough</span>&mdash;a series of different preflight checks for PDF passthrough. These will report as:<ul>
+						<li><span class="ui">Placed PDF has image adjustments applied. The PDF will be rasterized on export.</span></li>
+						<li><span class="ui">Placed PDF has effects applied. The PDF will be rasterized on export.</span></li>
+						<li><span class="ui">Placed PDF has transparency applied. The PDF will be rasterized on export.</span></li>
+						<li><span class="ui">Placed PDF Version (version) is not compatible with the PDF export version. The PDF will be rasterized on export.</span></li>
+						<li><span class="ui">Placed PDF has objects of a color not compatible with the PDF export version. The PDF will be rasterized on export.</span></li>
+						<li><span class="ui">Placed PDF is missing or broken.</span></li>
+						<li><span class="ui">Placed PDF has unsupported page box. The PDF will be rasterized on export.</span></li>
+						<li><span class="ui">Placed PDF has objects of a color different to the document color space. The PDF will still pass through.</span></li>
+					</ul>
+				</li>
+				<li><span class="ui">Placed image DPI too low</span>&mdash;appears when an image&apos;s DPI is too low for the file, with the image&apos;s DPI listed in brackets beside the error.</li>
+				<li><span class="ui">Spelling Mistake</span></li>
+				<li><span class="ui">Stroke too narrow (Stroke width)</span>&mdash;appears when the stroke width is too narrow.</li>
+				<li>Text patterns&mdash;a series of different preflight checks for text patterns that are commonly found in edited or imported copy which may cause inconsistency. These will report as:<ul>
+						<li><span class="ui">Multiple spaces</span>.</li>
+						<li><span class="ui">Space after Tab</span>.</li>
+						<li><span class="ui">Space after break</span>.</li>
+						<li><span class="ui">Consecutive breaks</span>.</li>
+						<li><span class="ui">Straight quotes</span>.</li>
+						<li><span class="ui">Ellipsis with full stops</span>.</li>
+						<li><span class="ui">Double hyphen for dash</span>.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Unnamed Anchor</span>&mdash;An unnamed anchor has been generated, e.g. as a consequence of document content with a text style applied that is used to generate a table of contents.</li>
+			</ul>
+			
+		<p>Double-clicking on an issue in the panel will take you to its location in the file. A <span class="ui">Fix</span> button beside certain issue types allows you to fix them immediately.</p>
+		
+		<aside class="box note">
+			<p>Some preflight checks provide a <span class="ui">Look inside placed documents</span> option. Some warnings/errors about placed documents, such as PDF version compatibility, can be fixed from the parent document but others, such as missing fonts in a placed PDF, require you to have access to the placed document&apos;s source file.</p>
+		</aside>
+		
+		<p>If enabled, preflight will be re-run on print and export. If there are errors (not warnings) in the file, a dialog offers the chance to abort the export and go to the <span class="ui">Preflight</span> panel to review the errors.</p>
+		
+		<h2>Preflight user comments</h2>
+		
+		<p>Preflight user comments can be added to objects in your publication, creating a custom check to be made prior to print or export. This has many uses, including the ability to:</p>
+			<ul>
+				<li>Check specific layers are hidden or visible at export.</li>
+				<li>Check text and picture frames are populated.</li>
+				<li>Check text frames with placeholder text that may need replacing.</li>
+				<li>Check images that need copyright checking or creative approval.</li>
+				<li>Check images using temporary colors.</li>
+				<li>Check copy.</li>
+				<li>Ensure copy is approved.</li>
+			</ul>
+		<p>When a user comment is added, it will be listed in the <span class="ui">Preflight</span> panel to be checked later.</p>
+		
+	</section>
+		
+	<section class="howto">
+	
+		<details open="open">
+			<summary>To access the Preflight panel:</summary>
+				<p>Do one of the following:</p>
+				<ul>
+					<li>Click on the Preflight indicator in the status bar.</li>
+					<li>On the <span class="ui">Window</span> menu, select <span class="ui">Preflight</span>.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="24" height="24" alt="Panel Preferences" /> To configure preflight settings:</summary>
+				<ul>
+					<li>From the <span class="ui">Preflight</span> panel, click on the <span class="ui">Profile</span> options menu and select <span class="ui">Edit profile</span>.</li>
+					<li>The <span class="ui">Preflight Profile</span> dialog will appear. From here, you can establish which issues you wish to check for in your file and how extensive you would like your checks to be.</li>
+					<li>After you have finished editing your profile, close the dialog. The <span class="ui">Profile</span> setting will now display <span class="ui">Custom</span>.</li>
+				</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="24" height="24" alt="Panel Preferences" /> To save a preflight preset:</summary>
+				<ul>
+					<li>From the <span class="ui">Preflight</span> panel, click on the <span class="ui">Profile</span> options menu and select <span class="ui">Create preset</span>.</li>
+					<li>Type in a name for your preset and click <span class="ui">OK</span>.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To change the bleed hazard safe zone edge:</summary>
+			<ul>
+				<li>From the <span class="ui">Preflight</span> panel, click on the <span class="ui">Profile</span> options menu and select <span class="ui">Edit profile</span>.</li>
+				<li>The <span class="ui">Preflight Profile</span> dialog will appear. From here, select the <span class="ui">Bleed Hazard</span> tab.</li>
+				<li>Select one of the <span class="ui">Safe Zone Edge</span> options.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To enable preflight to check for issues:</summary>
+			<ul>
+				<li>From the <span class="ui">Preflight</span> panel, select one of the <span class="ui">Check</span> options:<ul>
+						<li><span class="ui">Export</span> will check the file for issues just prior to export.</li>
+						<li><span class="ui">Live</span> will actively check the file for issues as you update it.</li>
+					</ul>
+				</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To disable error checking:</summary>
+			<ul>
+				<li>From the <span class="ui">Preflight</span> panel, go to the <span class="ui">Check</span> options and select <span class="ui">Never</span>.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To check for issues immediately:</summary>
+			<ul>
+				<li>From the <span class="ui">Preflight</span> panel, select <span class="ui">Check Now</span>.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To view further information on an issue:</summary>
+				<ul>
+					<li>Hover over the issue in the <span class="ui">Preflight</span> panel.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To view an object marked with an issue in the file:</summary>
+				<ul>
+					<li>Double click on the issue in the <span class="ui">Preflight</span> panel.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To automatically fix an issue in the file:</summary>
+				<ul>
+					<li>Where applicable, click the <span class="ui">Fix</span> button in the <span class="ui">Preflight</span> panel.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To set preflight user comments:</summary>
+				<ol>
+					<li>In the document view or on the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click on an object or a layer group and select <span class="ui">Preflight Comment&gt;Set</span>.</li>
+					<li>Enter a comment into the <span class="ui">Comment</span> text box, then select <span class="ui">OK</span>.</li>
+				</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To clear preflight user comments:</summary>
+				<ol>
+					<li>In the document view or on the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click on an object or a layer group and select <span class="ui">Preflight Comment&gt;Clear</span>.</li>
+				</ol>
+		</details>
+		
+	</section>		
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../GetStarted/newDocument.html">Create new documents</a></li>
+			<li><a href="publishPDFFiles.html">Publishing PDF files</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

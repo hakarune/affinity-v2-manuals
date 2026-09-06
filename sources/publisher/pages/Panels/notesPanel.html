@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="footnotes, sidenotes, endnotes, panels" />
+	<meta name="description" content="The Notes panel allows you to create and style footnotes and endnotes within your document." />
+	<title>Notes panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Notes panel</h1>
+	
+		<p>The <span class="ui">Notes</span> panel allows you to insert footnotes, sidenotes and endnotes into your documents.</p>
+		
+		<p>Each note consists of a reference at the position of insertion, and a note body, which is normally labeled with the same reference and whose position depends on the note type and your chosen settings.</p>
+		
+	</header>
+
+	<section class="about">		
+		<h2>About the Notes panel</h2>
+		<p>The Notes panel also allows you to customize visual attributes of references and note bodies, including the character and paragraph styles applied to them.</p>
+		
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via <span class="ui">Window&gt;References</span>.</p>
+		</aside>
+		
+		<figure>
+			<p><img src="../../images/panel_notes.png" class="responsive" width="842" alt="Notes panel" /></p>
+			<figcaption>The Notes panel.</figcaption>
+		</figure>
+	</section>
+		
+	<section class="settings">
+		<h3>Settings</h3>
+		<p>The following settings are available from the panel:</p>
+		<ul>
+			<li><img src="../../../shared/ui/note_insert.png" width="16" height="16" alt="Insert Note" /> <span class="ui">Insert Note</span>&mdash;creates a new note of the selected type at the insertion point/end of the text selection.</li>
+			<li><img src="../../../shared/ui/note_go_body.png" class="tool" width="16" height="16" alt="Go to Body" /> <span class="ui">Go to Body</span>&mdash;refocuses the document view on the note body for the reference at the insertion point/within the selected text.</li>
+			<li><img src="../../../shared/ui/note_go_ref.png" class="tool" width="16" height="16" alt="Go to Reference" /> <span class="ui">Go to Reference</span>&mdash;refocuses the document view on the reference for the note body at the insertion point/in which text is selected.</li>
+			<li>Note type&mdash;select the type of notes to be inserted or styled: <span class="ui">Footnotes</span>, <span class="ui">Sidenotes</span> or <span class="ui">Endnotes</span></li>
+			<li>Scope&mdash;controls the extent to which settings are applied:<ul>
+					<li><span class="ui">Document-wide</span>&mdash;all notes of the selected type in the current document are affected.</li>
+					<li><span class="ui">Custom</span>&mdash;only the note at the insertion point/notes within the text selection or selected text frame(s) are affected.</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<aside class="box note">
+			<p>If a text selection encompasses multiple note references or several endnote bodies, <span class="ui">Go to Body</span> or <span class="ui">Go to Reference</span>, respectively, uses the first one.</p>
+		</aside>
+
+		<details open="open">
+			<summary>Numbering</summary>
+			<ul>
+				<li><span class="ui">Number format</span>&mdash;choose the letters, numbers, or symbols used for note serialization.</li>
+				<li><span class="ui">Start numbering at</span>&mdash;sets the starting index for note serialization. For example, for the number format <i>*, &dagger;, &Dagger;, &hellip;</i>, setting this to 1 means begin with *, 2 means begin with &dagger;, and so on.</li>
+				<li><span class="ui">Restart every</span>&mdash;sets whether note serialization resets to the first index after each <span class="ui">Frame</span>, <span class="ui">Page</span>, <span class="ui">Story</span>, <span class="ui">Section</span>, <span class="ui">Document</span> or <span class="ui">Book</span>.</li>
+				<li><span class="ui">Restart numbering now</span>&mdash;beginning with the note at the insertion point/the first note in the selection, restarts note serialization from the index specified by <span class="ui">Start numbering at</span>. (Available when <span class="ui">Scope</span> is set to <i>Custom</i>.)</li>
+			</ul>
+			
+			<aside class="box note">
+				<p>Notes for which <span class="ui">Restart every</span> is set to <span class="ui">Book</span> are numbered as a continuous series across all of a book&apos;s chapters. For example, if such notes in the first chapter are numbered 1 to 4, then numbering of the second chapter&apos;s notes would start from 5.</p>
+			</aside>
+		</details>
+		
+		<details open="open">			
+			<summary>Format</summary>
+			<ul>
+				<li><span class="ui">In main text</span>&mdash;the following settings control the appearance of references in story text:<ul>
+						<li><span class="ui">Number text</span>&mdash;sets the sequence of characters used to present note references in main (story) text.</li>
+						<li><span class="ui">Number style</span>&mdash;sets the character style applied to note references in main (story) text. From this option, you can also create a new character style or edit the currently selected one.</li>
+						<li><span class="ui">Superscript</span>&mdash;sets whether note references are set above the text baseline and at a reduced size.</li>
+					</ul>
+				</li>
+				<li><span class="ui">In note body</span>&mdash;the following settings control the appearance of note bodies and their prefixed references:<ul>
+						<li><span class="ui">Number text</span>&mdash;sets the sequence of characters used to present note references as a prefix to note bodies.</li>
+						<li><span class="ui">Number style</span>&mdash;sets the character style applied to note references where they prefix note bodies. From this option, you can also create a new character style or edit the currently selected one.</li>
+						<li><span class="ui">Superscript</span>&mdash;sets whether note references are set above the text baseline and at a reduced size.</li>
+						<li><span class="ui">Note body style</span>&mdash;sets the paragraph style applied to note bodies.</li>
+					</ul>
+				</li>				
+				<li><span class="ui">Generate hyperlinks</span>&mdash;when checked, the selected note type&apos;s references in story text and note bodies are hyperlinked to each other for easier cross-referencing in PDF publications.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>Positioning</summary>
+			<ul>
+				<li><span class="ui">Note position</span>&mdash;sets where and how note bodies are presented. Available options depend on the selected note type:<ul>
+						<li>For footnotes:<ul>
+								<li><span class="ui">Below Text</span>&mdash;anchored to the bottom of the referencing story text and spans the frame/column width.</li>
+								<li><span class="ui">Bottom of Column</span>&mdash;anchored to the text frame&apos;s bottom edge, spans only the referencing column&apos;s width, and positioned inside the frame.</li>
+								<li><span class="ui">Bottom of Frame</span>&mdash;anchored to the text frame&apos;s bottom edge, spans the text frame&apos;s width, and positioned inside the frame.</li>
+								<li><span class="ui">Below Frame</span>&mdash;anchored to the text frame&apos;s bottom edge, spans the text frame&apos;s width, and positioned outside the frame.</li>
+							</ul>
+						</li>
+						<li>For sidenotes:<ul>
+								<li><span class="ui">Left of Frame</span>&mdash;always to the left of the story text frame, regardless of being on a left or right page.</li>
+								<li><span class="ui">Right of Frame</span>&mdash;always to the right of the story text frame, regardless of being on a left or a right page.</li>
+								<li><span class="ui">Away From Spine</span>&mdash;in a facing-pages document, on the side of the story text frame that is furthest from the adjoining edge of the spread&apos;s pages. Otherwise, to the left of the frame.</li>
+								<li><span class="ui">Towards Spine</span>&mdash;in a facing-pages document, on the side of the story text frame nearest the adjoining edge of the spread&apos;s pages. Otherwise, to the right of the frame.</li>
+								<li><span class="ui">Alternate Sides</span>&mdash;on the opposite side of the story text frame from the previous sidenote in the same frame. The first sidenote body in each linked text frame is positioned:<ul>
+										<li>away from the spine, if the document has facing pages.</li>
+										<li>to the story text frame&apos;s left side, if the document does not have facing pages.</li>
+									</ul>
+								</li>
+								<li><span class="ui">Closest Side</span>&mdash;to the side of the story text frame that is closest to the corresponding reference.</li>
+							</ul>
+						</li>
+						<li>For endnotes:<ul>
+								<li><span class="ui">End of Story</span>&mdash;after the story text in the last linked text frame.</li>
+								<li><span class="ui">Separate Frame</span>&mdash;in an unlinked text frame on the page after the story&apos;s last linked text frame.</li>
+								<li><span class="ui">Shared Section Frame</span>&mdash;in an unlinked text frame on the section&apos;s last page.</li>
+								<li><span class="ui">Shared Document Frame</span>&mdash;in an unlinked text frame on the document&apos;s last page.</li>
+								<li><span class="ui">End of Book</span>&mdash;bodies are displayed and edited in an unlinked text frame in a non-printing <i>#Booknotes</i> section at the end of the document. All of a book&apos;s endnote bodies with this setting can be consolidated in a printing text frame of your choice by selecting <span class="ui">Endnotes&gt;Insert Endnotes</span> from the <span class="ui">Books</span> panel&apos;s preferences menu.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>			
+				<li><span class="ui">Width</span>&mdash;the width of the area in which sidenote bodies are presented.</li>	
+				<li><span class="ui">Distance from frame</span>&mdash;the distance between the nearest edges of story text&apos;s containing object and the area in which sidenote bodies are presented.</li>
+				<li><span class="ui">Min gap before</span>&mdash;the minimum distance in points between story text and the start of footnote/endnote bodies.</li>
+				<li><span class="ui">Gap between</span>&mdash;the distance between each note body.</li>
+				<li><span class="ui">Min gap between</span>&mdash;the minimum distance in points between sidenote bodies.</li>
+				<li><span class="ui">Initial advance</span>&mdash;sets the vertical spacing between the top of the note bodies and the first note body baseline. The distance can be the current <span class="ui">Leading</span>, a <span class="ui">Fixed</span> value, the font&apos;s <span class="ui">Point size</span> or other typographic values.</li>
+				<li><span class="ui">Min advance</span>&mdash;sets a minimum threshold value for initial advance. The value is global, i.e. not tied to the selected Initial Advance option.</li>
+				<li><span class="ui">Allow split notes</span>&mdash;when selected, footnote/sidenote bodies can begin in one text frame and continue in another. When unselected, Affinity attempts to keep each body&apos;s lines together on the same page; story text may reflow, but unwanted whitespace may occur in some text frames.</li>
+				<li><span class="ui">Pack short notes</span>&mdash;when unselected, each footnote body starts on a new line. When selected, consecutive footnote bodies that fit together on a single line are presented as such.</li>
+				<li><span class="ui">Short note gap</span>&mdash;sets the horizontal distance between packed short notes.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>Rules</summary>
+			<ul>
+				<li><span class="ui">Rule before</span>&mdash;controls the type of rule affected by the section&apos;s other settings: a page&apos;s footnotes that start with a new note (<span class="ui">First Note</span>) or a split note (<span class="ui">Continued Note</span>), which begins in an earlier linked text frame.</li>
+				<li><span class="ui">Draw rule</span>&mdash;controls whether a rule visually separates story text and a block of footnotes of the selected rule type.</li>
+				<li><span class="ui">Stroke style</span><ul>
+						<li><span class="ui">Stroke Color</span>&mdash;sets the rule&apos;s color.</li>
+						<li><span class="ui">Stroke Style</span>&mdash;sets the rule&apos;s width and style.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Left indent</span>&mdash;sets the distance at which the rule starts relative to the text frame&apos;s left edge.</li>
+				<li><span class="ui">Length</span>&mdash;sets the rule&apos;s length.</li>
+				<li><span class="ui">Vertical offset</span>&mdash;sets the rule&apos;s relative vertical position.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>Title</summary>
+			<ul>
+				<li><span class="ui">Title text</span>&mdash;when endnotes are displayed in a different frame than the story text that references them, this setting&apos;s value is displayed in the first line of their text frame.</li>
+				<li><span class="ui">Title style</span>&mdash;applies a paragraph style to the endnotes&apos; title text.</li>
+			</ul>
+		</details>
+	</section>
+
+	<section class="about">
+		<h2>Default document settings for notes</h2>
+		<p>Documents include default note settings at their time of creation. For example, endnotes automatically use the <i>1, 2, 3, &hellip;</i> number style, include hyperlinked references, and are preceded with the &apos;Endnotes&apos; heading.</p>
+		
+		<p>The Notes panel allows you to save your preferred settings for each type of note as defaults for your document, so that notes inserted in future automatically use them.</p>
+		
+		<p>The panel also allows you to revert notes with undesirable settings to the document&apos;s defaults. This can be done for notes in a selection or throughout your whole document.</p>
+	</section>
+	
+	<section class="howto">
+		<details>
+			<summary>To make the selected note&apos;s settings the default for your document:</summary>
+			<ol>
+				<li>Select the note&apos;s reference in story text or a portion of its body text.</li>
+				<li>On the <span class="ui">Notes</span> panel, select the note&apos;s type.</li>
+				<li>From the Panel Preferences menu, select <span class="ui">Update Document Settings from Selected Footnotes</span>, <span class="ui">Update Document Settings from Selected Sidenotes</span> or <span class="ui">Update Document Settings from Selected Endnotes</span>.</li>
+			</ol>
+		</details>
+		
+		<details>
+			<summary>To revert one or more notes to your document&apos;s default note settings:</summary>
+			<ol>
+				<li>On the <span class="ui">Notes</span> panel, select the note type and scope to affect.</li>
+				<li>Do one of the following:<ul>
+						<li>Select a range of text that encompasses the references of only the notes you wish to revert. From the Panel Preferences menu, select <span class="ui">Revert Selected Footnotes to Document Settings</span>, <span class="ui">Revert Selected Sidenotes to Document Settings</span> or <span class="ui">Revert Selected Endnotes to Document Settings</span>.</li>
+						<li>From the Panel Preferences menu, select <span class="ui">Revert All Footnotes to Document Settings</span>, <span class="ui">Revert All Sidenotes to Document Settings</span> or <span class="ui">Revert All Endnotes to Document Settings</span>.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+		<details>
+			<summary>To save a document&apos;s default note settings as app defaults:</summary>
+			<ul>
+				<li>From the Panel Preferences menu, select <span class="ui">Save Document Settings as New Defaults</span>.</li>
+			</ul>
+		</details>
+			
+		<details>
+			<summary>To reset the current document&apos;s note settings to factory defaults:</summary>
+			<ul>
+				<li>From the Panel Preferences menu, select <span class="ui">Reset Document Settings to Factory Defaults</span>.</li>
+			</ul>
+		</details>
+	</section>
+		
+	<section class="about">
+		<h2>Converting notes to another note type</h2>
+		<p>Existing notes of one type can be converted to another type.</p>
+		
+		<p>The conversion process changes the styling of the note to match other notes of the target type and moves note bodies to the correct position.</p>
+	</section>
+	
+	<section class="howto">
+		<details>
+			<summary>To convert all notes of one type in your document:</summary>
+			<ol>
+				<li>From the <span class="ui">Panel Preferences</span> menu, select <span class="ui">Convert Notes</span>.</li>
+				<li>On the dialog, set the types of note you want to convert from and to.</li>
+				<li>Set <span class="ui">Scope</span> to <span class="ui">Entire Document</span>.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+				
+		<details>
+			<summary>To convert all notes of one type within a selection:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>To convert multiple notes, select one or more text frames, or all or part of a story&apos;s text.</li>
+						<li>To convert an individual note, select its reference in story text, or position the insertion point within its note body.</li>
+					</ul>
+				</li>
+				<li>From the <span class="ui">Panel Preferences</span> menu, select <span class="ui">Convert Selection to Footnotes</span>, <span class="ui">Convert Selection to Sidenotes</span> or <span class="ui">Convert Selection to Endnotes</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Advanced/aboutNotes.html">About notes</a></li>
+			<li><a href="../Advanced/insertingNotes.html">Inserting notes</a></li>
+			<li><a href="../Advanced/stylingNotes.html">Styling notes</a></li>
+			<li><a href="../Advanced/hyperlinkingNotes.html">Hyperlinking notes</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

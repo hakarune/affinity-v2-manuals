@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="adjustment, blender, 3D, substance, surface, painter, models, motion, map, textures, game, art, artists, design, normals" />
+	<meta name="description" content="Edit lighting layers (normal maps) from 3D game art apps" />
+	<title>Normals adjustment</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Normals adjustment</h1>
+
+		<p>Using Normals adjustments lets you correct and enhance lighting layers (i.e. normal map texture files) independently of your 3D app. In particular, you can rotate, scale and flip the Y (or X) axis of the normals in the file. In some instances you can experiment with scaling to control how dramatic the texture appears, rather than just correcting the file (e.g., when flipping axes).</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/adjustment_normals_before.jpg" alt="Before" /><div><img src="../../../shared/adjustment_normals_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Before and after adjustment applied (flipped Y-axis for DirectX to OpenGL format conversion).</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted:</p>
+		<ul>
+			<li><span class="ui">Rotation</span>&mdash;drag the slider to rotate the normals on all faces away from their current direction by a configurable amount of degrees.</li>	
+			<li><span class="ui">Scale</span>&mdash;drag the slider to control the scaling of normals on all faces.</li>
+			<li><span class="ui">Flip X</span>&mdash;reverses the orientation of the normals on the X-axis.</li>
+			<li><span class="ui">Flip Y</span>&mdash;reverses the orientation of the normals on the Y-axis. Check for OpenGL format; leave unchecked for DirectX format.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="adjustment_applying.html">Applying adjustments</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="table of contents" />
+	<meta name="description" content="Affinity Publisher provides the ability to easily insert and manage a table of contents (TOC) for your document." />
+	<title>Table of contents</title>
+</head>
+
+
+<body>
+
+	<header>
+
+		<h1>Table of contents</h1>
+	
+		<p>Affinity Publisher provides the ability to easily insert and manage a table of contents (TOC) for your document.</p>
+
+	</header>
+
+	<section class="about">
+
+	<p>A table of contents searches the document for text in specified text styles (typically headings) and reproduces that text in a list, normally annotated with page numbers. The document can have as many TOCs as required, but typically a single TOC at the start of your publication is used.</p>
+	
+	</section>
+	
+	<section class="about">
+	
+		<h2>Planning your TOC position</h2>
+		
+		<p>If you create a document with sufficient pages containing TOC-qualifying headings, you will need to plan out the number of TOC pages to accommodate the automatically generated TOC:</p>
+		
+			<ul>
+				<li>If the number of headings necessitates a two-page spread, you will need to make room for this at the start of the publication.</li>
+				<li>If the number of TOC entries may overflow the frame, link the text frames between page 1 and 2 of your TOC, otherwise manually flow the overflowing text to the second page&apos;s frame.</li>
+			</ul>	
+
+	</section>
+	
+	<section class="about">
+	
+		<h2>Using multiple TOCs</h2>
+		
+		<p>When a TOC has been inserted for the document, secondary, section-specific TOCs can be created (for example, TOCs for each chapter of a book). You can generate and present a secondary TOC within a selected section, including all subsequent qualifying headings, or just those within the section.</p>
+
+	</section>	
+
+	<section class="about">
+	
+		<h2>Text styles</h2>
+	
+		<p>TOC text styles only show in the <span class="ui">Text Styles</span> panel when a text frame containing a generated TOC is selected. By default, new TOCs should have their own styles.</p>
+		
+		<p>Leader tabs can be added as tab stops as part of the style used by the table of contents. The default TOC style can be found in the <span class="ui">Text Styles</span> panel. Clicking on the style and selecting <span class="ui">Edit</span> will display the <span class="ui">Edit Text Style</span> dialog, from which you can adjust the tab stops in the <span class="ui">Tab Stops</span> section. By default, there will be a single tab stop at position 0 (measured from the right edge). The third menu along sets the leader, and by default there is none. Click on the menu and select <span class="ui">Tab stop leader character</span> or click the &quot;...&quot; at the end of the row to display a pop-up panel that allows you to pick which character is used for the leader.</p>﻿﻿</section>
+	
+	<section class="howto">	
+		<details open="open">
+		<summary><img src="../../../shared/ui/insertToc.png" class="tool" width="16" height="16" alt="Insert TOC" /> To generate a table of contents</summary>
+			<ol>
+				<li>From the <span class="ui">Text</span> menu, select <span class="ui">Table of Contents</span> and then <span class="ui">Insert Table of Contents</span> to insert a table of contents at the caret.</li>
+				<li>The <span class="ui">Table of Contents</span> panel (usually accessed via <span class="ui">Window&gt;References&gt;Table of Contents</span>) will open automatically, allowing you to adjust the format of your TOC.</li>
+				<li>Alternatively, a table of contents can be inserted directly from the <span class="ui">Table of Contents</span> panel. To do this, open the <span class="ui">Table of Contents</span> panel, select a table of contents from the <span class="ui">TOC:</span> pop-up menu and adjust additional panel settings accordingly, then click <span class="ui">Insert</span> from the top of the panel.</li>
+			</ol>
+			
+		<aside class="box note">
+			<p>Your TOC is populated with text that has the <span class="ui">Style Name</span> assigned to it in your document; you can check or uncheck these Style Name entries at the bottom of the panel to include or exclude that style&apos;s text, respectively. Don&apos;t confuse this with the <span class="ui">TOC Style</span> setting above these entries which simply creates an identifying prefix for your TOC text styles which format the TOC; these styles are controlled via the <span class="ui">Text Styles</span> panel. For example, text from the Style Name of &apos;Heading 1&apos; would be styled with a text style of &apos;TOC: Heading 1&apos; by default.</p>
+		</aside>
+		
+		</details>
+	</section>
+		
+	<section class="howto">	
+		<details open="open">
+		<summary><img src="../../../shared/ui/updateTocs.png" class="tool" width="16" height="16" alt="Update TOC" /> To update your table of contents manually</summary>
+			<ol>
+				<li>With a table of contents selected, from the <span class="ui">Table of Contents</span> panel, click <span class="ui">Update</span>. Click <span class="ui">Update All Tables of Contents</span> to update every table of contents in your document.</li>
+			</ol>
+		
+		<aside class="box note">
+			<p>You will be prompted to update your table of contents on export even if all TOCs are up to date.</p>
+		</aside>
+		
+		</details>
+		
+		<details>
+			<summary>To add leader lines between items and page numbers:</summary>
+			<ol>
+				<li>Select a text frame that contains a table of contents.</li>
+				<li>On the <span class="ui">Table of Contents</span> panel (<span class="ui">Window&gt;References&gt;Table of Contents</span>), verify the name of the selected <span class="ui">TOC</span>.</li>
+				<li>On the <span class="ui">Text Styles</span> panel, double-click the Entry style that matches the TOC&apos;s name. For example, TOC 1: Entry.</li>
+				<li>Select <span class="ui">Tab Stops</span> on the left of the <span class="ui">Edit Text Style</span> dialog.</li>
+				<li>To the right, click the predefined tab stop&apos;s &lsquo;<span class="ui">…</span>&rsquo; button.</li>
+				<li>Next to <span class="ui">Leader</span>, select the <span class="ui">Tab stop leader character</span>, <span class="ui">Tab stop leader underline</span>, or <span class="ui">Tab stop leader strikeout</span> setting.</li>
+				<li>(Optional) If you chose the leader character setting, type the glyph to repeat along the leader line in the <span class="ui">Character</span> field.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/tocPanel.html">Table of Contents panel</a></li>
+			<li><a href="../Panels/textStylesPanel.html">Text Styles panel</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

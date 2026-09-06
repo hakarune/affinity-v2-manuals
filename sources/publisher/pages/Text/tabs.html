@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="tab stops" />
+	<meta name="description" content="Tabs position text at specific horizontal locations in a text frame." />
+	<title>Tabs</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Tabs</h1>
+		
+		<p>Tabs position text at specific horizontal locations, known as tab stops, in a text frame.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/tabs_before.jpg" class="screenshot responsive" alt="Before" /><div><img src="../../../shared/tabs_after.jpg" class="screenshot responsive" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		
+		<p>Several tab stop types are available:</p>
+		
+		<ul>
+			<li><img src="../../../shared/ui/tabstop_left.png" class="tool" width="24" height="24" alt="Left Tab" /> Left</li>
+			<li><img src="../../../shared/ui/tabstop_centre.png" class="tool" width="24" height="24" alt="Center Tab" /> Center</li>
+			<li><img src="../../../shared/ui/tabstop_right.png" class="tool" width="24" height="24" alt="Right Tab" /> Right</li>
+			<li><img src="../../../shared/ui/tabstop_decimal.png" class="tool" width="24" height="24" alt="Decimal Tab" /> Decimal</li>
+		</ul>
+		
+		<p>The positions of tab stops are displayed on the text ruler and on the <span class="ui">Paragraph</span> panel&apos;s <span class="ui">Tab Stops</span> section.</p>
+		
+		<p>The text ruler can be shown or hidden via the <span class="ui">View</span> menu.</p>
+		
+		<figure>
+			<div><img src="../../../shared/tabstops.jpg" class="screenshot responsive" alt="tab stop types" /></div>
+			<figcaption>Tab stops for: left alignment (A), center alignment (B), right alignment (C) and decimal alignment (D).</figcaption>
+		</figure>
+		
+		<p>The insertion point or selection in a text frame determines which tab stops are shown on the text ruler and Text panel. If a selection encompasses multiple paragraphs, the first paragraph&apos;s tab stops are shown and, if modified, are applied to all paragraphs in the selection.</p>
+		
+	</section>
+	
+	<section class="about">
+		<h2>Paragraph indentation level and tab stops</h2>
+		<p>When the insertion point is at the start of a paragraph, the <span class="key TAB-TAG"></span> <span class="KEY-TAG"></span> increases the paragraph&apos;s indentation level rather than typing a tab character. This is indicated by the first-line indent marker (aligned to the top of the text ruler), which can be dragged to fine-tune indentation.</p>
+		<p>If you would rather the <span class="key TAB-TAG"></span> <span class="KEY-TAG"></span> always typed a tab character at the start of a paragraph, disable <span class="ui">Use tab to alter paragraph level instead of inserting a tab character</span> in Affinity Publisher&apos;s <span class="ui">Auto-Correct</span> settings. You can still drag the first-line indent marker to set paragraph indentation precisely.</p>
+	</section>
+	
+	<section class="howto">
+	
+		<details open="open">
+			<summary>To show/hide the text ruler:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li><img src="../../../shared/ui/ruler.png" class="tool" width="18" height="18" alt="Frame Text Ruler" /> On the <span class="ui">Frame Text Tool</span>&apos;s context toolbar, select <span class="ui">Frame Text Ruler</span>.</li>
+				<li>On the <span class="ui">View</span> menu, select <span class="ui">Show Text Ruler</span>.</li>
+			</ul>
+			
+			<p>When Show Text Ruler is turned on, the text ruler will appear above a text frame when an insertion point is made in the frame. Tab stops won&apos;t appear on the ruler until you add them.</p>
+		</details>
+
+		<details open="open">
+			<summary>To set a tab stop using the text ruler:</summary>
+			<ol>
+				<li>Put the insertion point in the paragraph in which you want to set tab stops, or make a selection that includes multiple paragraphs.</li>
+				<li>Click on the text ruler where you want to create a tab stop.</li>
+				<li>To edit the tab stop:<ul>
+						<li>To amend the tab stop alignment type, double-click the tab stop until it changes to the type you want: Left, Center, Right, or Decimal.</li>
+						<li>To edit a tab stop&apos;s settings, <span class="key CLICK-TAG"></span>-click on the tab stop.</li>
+						<li>To move a tab stop, drag it to a new ruler position.</li>
+						<li>To delete a tab stop, drag it off the ruler.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<aside>			
+				<p>To create a tab stop whose position is measured relative to its text frame&apos;s right edge instead of the left, click at the top of the text ruler. This is useful when you need to resize text boxes from their left edges.</p>
+			</aside>
+			
+			<aside>
+				<p>To change an existing stop so that it&apos;s positioned from the left or right of the ruler, either drag it to the ruler&apos;s bottom or top edge, respectively, or set <span class="ui">From Right</span> on the tab options as needed.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To set a tab stop via the <span class="ui">Paragraph</span> panel:</summary>
+			<ol>
+				<li>Select the paragraph(s) in which you want to set tab stops.</li>
+				<li>From the <span class="ui">Paragraph</span> panel, adjust the settings in the <span class="ui">Tab Stops</span> section, specifying the tab <span class="ui">Position</span>, <span class="ui">Alignment</span> and <span class="ui">Leader</span> where necessary.</li>
+			</ol>
+		</details>
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/paragraphPanel.html">Paragraph panel</a></li>
+			<li><a href="../Text/paragraphs.html">Paragraph formatting</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pages, master, spread, facing, section, section manager" />
+	<meta name="description" content="The Pages panel creates and manages single pages, page spreads, master pages and sections." />
+	<title>Pages panel</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Pages panel</h1>
+
+		<p>The <span class="ui">Pages</span> panel allows you to easily view, add and edit master pages, publication pages, sections and spreads within your document.</p>
+	</header>
+
+	<section class="about">
+		<h2>About the Pages panel</h2>
+
+		<p>From the <span class="ui">Pages</span> panel, you can view, add, and edit pages and spreads.</p>
+
+		<p>Selecting one of the thumbnails from the panel allows you to view or edit that page, spread or master page.</p>
+
+		<p>Clicking twice on a page or spread displays the page in the window. Clicking twice on a master page name allows you to rename it.</p>
+
+		<p>If you double-click either the page number text below the page thumbnails or the center portion of the spread thumbnail, a zoom to fit will automatically be performed, centering the spread in the window.</p>
+				
+		<figure>
+			<p><img src="../../images/panel_pages.png" class="responsive" width="200" alt="Pages panel" /></p>
+			<figcaption>The Pages panel.</figcaption>
+		</figure>
+		
+		<p>The following panel options are available:</p>
+
+		<ul>
+			<li><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> <span class="ui">Panel Preferences</span> menu containing the following options:<ul>
+					<li><span class="ui">Small</span>/<span class="ui">Medium</span>/<span class="ui">Large</span>/<span class="ui">Extra Large Thumbnails</span>&mdash;determines the size of the page thumbnails displayed in the panel. (Extra large scales thumbnails to almost fill the panel&apos;s width.)</li>
+					<li><span class="ui">Scroll With View</span>&mdash;when selected, the <span class="ui">Pages</span> panel will scroll automatically to match the currently active viewed page in your document.</li>
+					<li><span class="ui">Show Master Page Tags</span>&mdash;when selected, any color tags you&apos;ve assigned to master pages are displayed as matching colored lines above the thumbnails of any pages to which the master is applied.</li>
+					<li><span class="ui">Page Move Options</span>&mdash;contains options for how moving a page affects its applied master and objects:<ul>
+							<li><span class="ui">Reflow Pages</span>&mdash;when selected, Affinity will attempt to maintain the correct number of pages in spreads.</li>
+							<li><span class="ui">Split Masters</span>&mdash;any publication page that is moved retains the page of its master for its previous position. For example, a left page that becomes a right page retains its master&apos;s left page, and vice versa.</li>
+							<li><span class="ui">Move Master Content</span>&mdash;any publication page that is moved has the page of its master for its new position applied to it. Modified inherited objects and local content are moved with the page. Unmodified inherited objects are replaced with the &apos;correct&apos; master page content for the destination spread.</li>
+							<li><span class="ui">Reapply Masters</span>&mdash;any publication page that is moved has the page of its master for its new position applied to it. Local edits to frame content are always retained, but edited object attributes may be lost.</li>
+							<li><span class="ui">Anchor Toward Spine</span>&mdash;controls the positioning of objects when their page is moved across the spine. When selected, objects maintain their distance from the spine. When unselected, objects maintain their absolute position on the page.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><span class="ui">Master Pages</span>&mdash;this window displays the master pages that are currently available in your document. These pages contain background elements that are typically shared by multiple pages. From the <span class="ui">Master Pages</span> window, you can do the following:<ul>
+					<li><img src="../../../shared/ui/add_master_pages.png" class="tool" width="16" height="16" alt="Add Master" /> <span class="ui">Add Master</span>&mdash;opens the <span class="ui">Add Master Page</span> dialog, allowing you to create an additional master page.</li>
+					<li><img src="../../../shared/ui/duplicate_master_pages.png" class="tool" width="16" height="16" alt="Duplicate Selected Master" /> <span class="ui">Duplicate Selected Master</span>&mdash;duplicates the selected master page(s).</li>
+					<li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete Selected Master" /> <span class="ui">Delete Selected Master</span>&mdash;deletes the selected master page(s).</li>
+				</ul>
+			</li>
+			<li><span class="ui">Pages</span>&mdash;this window displays publication pages and spreads within your document. From the <span class="ui">Pages</span> window, you can do the following:<ul>
+					<li><img src="../../../shared/ui/section_manager.png" class="tool" width="16" height="16" alt="Section Manager" /> <span class="ui">Section Manager</span>&mdash;opens the <span class="ui">Section Manager</span> dialog, allowing you to add, delete and manage sections and adjust page numbering.</li>
+					<li><img src="../../../shared/ui/add_pages.png" class="tool" width="16" height="16" alt="Add Pages" /> <span class="ui">Add Pages</span>&mdash;allows you to create additional pages.<li><img src="../../../shared/ui/duplicate_pages.png" class="tool" width="16" height="16" alt="Duplicate Selected Pages" /> <span class="ui">Duplicate Selected Pages</span>&mdash;allows you to duplicate selected pages.<li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete Selected Pages" /> <span class="ui">Delete Selected Pages</span>&mdash;allows you to delete selected pages.</ul>
+			</li>
+		</ul>
+	
+		<aside class="box tip">
+			<p>When the panel&apos;s page icons are set to medium or large, they will wrap at the panel&apos;s width. You could, for example, position the panel on a secondary display and make it wider to present a flatplan-like overview of your document. When the icons are set to small, they are instead presented in a vertical list, regardless of the panel&apos;s width.</p>
+		</aside>
+	
+		<aside class="box note">
+			<p>You can reveal more of the <span class="ui">Master Pages</span> window by dragging the darker <span class="ui">Pages</span> bar downwards.</p>
+		</aside>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Pages/aboutPages.html">About pages</a></li>
+			<li><a href="../Pages/masterPages.html">About master pages</a></li>
+			<li><a href="../Pages/addingSections.html">Adding sections</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

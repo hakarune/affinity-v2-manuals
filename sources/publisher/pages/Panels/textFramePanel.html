@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panels, frame text, column, gutter, text box, decorations, rules" />
+	<meta name="description" content="The Text Frame panel structures the layout and presentation of your text." />
+	<title>Text Frame panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Text Frame panel</h1>
+
+		<p>The <span class="ui">Text Frame</span> panel lets you set up your text frame.</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Text Frame panel</h2>
+
+		<p>The <span class="ui">Text Frame</span> panel provides a set of options for adjusting the frame layout, including frame stroke/fill color, number of columns, gutter settings, vertical alignment and baseline grid control.</p>
+
+		<p>For more information on frame text, see <a href="../Text/frameText.html">Frame text</a>.</p>
+		
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via <span class="ui">Window&gt;Text</span>.</p>
+		</aside>
+
+		<figure>
+			<p><img src="../../images/panel_textframe.png" class="responsive" width="264" alt="Text Frame panel" /></p>
+			<figcaption>The Text Frame panel.</figcaption>
+		</figure>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Options</h3>
+
+		<p>The following options are available in the panel:</p>
+
+		<details open="open">
+			<summary>General</summary>
+			<ul>
+				<li><span class="ui">Fill</span>&mdash;click the color swatch to display a pop-up panel to update the text frame&apos;s fill color.</li>
+				<li><span class="ui">Frame Stroke Fill</span>&mdash;click the color swatch to display a pop-up panel to update the text frame&apos;s stroke color.</li>
+				<li><span class="ui">Frame Stroke</span>&mdash;click to display a pop-up dialog allowing you to apply a stroke width or a different stroke style to the text frame.</li>
+				<li><span class="ui">Insets</span>&mdash;specify the inside margins of your text frame.</li>
+				<li><img src="../../../shared/ui/chainlinkconnected.png" class="tool heading" width="12" height="24" alt="link" /> <img src="../../../shared/ui/chainlink.png" class="tool heading" width="12" height="24" alt="Unlink" /> <span class="ui">Link Insets</span>&mdash;when enabled, the inset values are adjusted in proportion to each other, maintaining the current aspect ratio. When deselected, they can be adjusted independently.</li>
+				<li><span class="ui">Hide overflow</span>&mdash;tick this checkbox to clip overflowing text that does not fit in the frame.</li>
+				<li><span class="ui">Ignore Text Wraps</span>&mdash;tick this checkbox to stop frame text from wrapping around objects with text wrapping set.</li>
+				<li><span class="ui">Ignore Baseline Grid</span>&mdash;tick this checkbox to make the text frame ignore any currently set document grid.</li>
+			</ul>
+		
+		</details>
+
+		<details open="open">
+			<summary>Columns</summary>
+			<ul>
+				<li><span class="ui">Columns</span>&mdash;specify the number of columns in your text frame.</li>
+				<li><span class="ui">Preserve width</span>&mdash;tick this checkbox to ensure that when column or gutter widths are changed, adjacent column sizes are automatically adjusted to match them. Adjusting the rightmost column will still change the frame size. This setting will be on by default.</li>
+				<li><span class="ui">Width</span>&mdash;specify the width of each column.</li>
+				<li><img src="../../../shared/ui/columnWidth.png" class="tool" width="16" height="16" alt="Same column widths" /> <span class="ui">Same column widths</span>&mdash;click to automatically make all columns the same width, calculated from the text frame width minus any inset settings.</li>
+				<li><span class="ui">Gutter</span>&mdash;specify the gutter size between each column.</li>
+				<li><img src="../../../shared/ui/linkGutters.png" class="tool" width="16" height="16" alt="Link gutters" /> <img src="../../../shared/ui/unlinkGutters.png" class="tool" width="16" height="16" alt="Unlink gutters" /> <span class="ui">Link Gutters</span>&mdash;when enabled, the gutter widths are adjusted in proportion to each other. When disabled, they can be adjusted independently.</li>
+				<li><span class="ui">Balance text in columns</span>&mdash;tick this checkbox to automatically balance columns of text regardless of size.</li>
+			</ul>
+			
+		</details>
+		
+		<details>
+			<summary>Column Rules</summary>
+			<ul>
+				<li><span class="ui">Column Rule Stroke Fill</span>&mdash;click the color swatch to display a pop-up panel to update the rule stroke color.</li>
+				<li><span class="ui">Column Rule Stroke</span>&mdash;click to display a pop-up dialog allowing you to apply different stroke styles to the rule.</li>
+				<li><span class="ui">Gap</span>&mdash;specify the amount of vertical space between the Top or Bottom of the text frame and the column rule.</li>
+			</ul>
+			
+		</details>
+		
+		<details>
+			<summary>Vertical Position</summary>
+			<ul>
+				<li><span class="ui">Alignment</span><ul>
+						<li><img src="../../../shared/ui/topaligned.png" class="tool" width="18" height="18" alt="Top Align" /> <span class="ui">Top Align</span>&mdash;sets the frame text alignment to adhere to the top margin.</li>
+						<li><img src="../../../shared/ui/verticalcentrealigned.png" class="tool" width="18" height="18" alt="Center Align" /> <span class="ui">Center Align</span>&mdash;sets the frame text alignment to be equidistant from the top and bottom margins.</li>
+						<li><img src="../../../shared/ui/bottomaligned.png" class="tool" width="18" height="18" alt="Bottom Align" /> <span class="ui">Bottom Align</span>&mdash;sets the frame text alignment to adhere to the bottom margin.</li>
+						<li><img src="../../../shared/ui/verticaljustified.png" class="tool" width="18" height="18" alt="Justify Vertically" /> <span class="ui">Justify</span>&mdash;sets the frame text alignment to both the top and bottom margins.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Max Paragraph Space</span>&mdash;specifies the maximum spacing between justified baselines in the text frame. <span class="ui">Alignment</span> must be set to <span class="ui">Justify</span>.</li>
+				<li><span class="ui">Initial Advance</span>&mdash;Sets the vertical spacing between the top of the text frame and the first text line&apos;s baseline; the distance can be the currently set <span class="ui">Leading</span>, a <span class="ui">Fixed</span> value, the font&apos;s <span class="ui">Point size</span> or other typographic values. Use for consistent spacing on bordered text frames, text frames on colored backgrounds or for fine vertical alignment with other page elements.</li>
+				<li><span class="ui">Minimum</span>&mdash;sets a minimum threshold value for initial advance. The value is global, i.e. not tied to any specific Initial Advance setting.</li>
+			</ul>
+			
+		</details>
+		
+		<details>
+			<summary>Baseline Grid</summary>
+			<ul>
+				<li><span class="ui">Use Baseline Grid</span>&mdash;ticking this checkbox will enable baseline grids.</li>
+				<li><span class="ui">Start Position</span>&mdash;specify the offset of the first grid line from the origin at <span class="ui">Relative To</span>.</li>
+				<li><span class="ui">Relative To</span>&mdash;specify what the baseline grid&apos;s starting position is in relation to.</li>
+				<li><span class="ui">Grid Spacing</span>&mdash;specify how far apart consecutive horizontal grid lines are.</li>
+				<li><span class="ui">Color</span>&mdash;click on the swatch to display a pop-up panel to set the line color. Drag the slider to set the opacity of the line color.</li>
+			</ul>
+
+		</details>
+		
+	</section>
+	
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Text/frameText.html">Frame text</a></li>
+			<li><a href="../Text/decorations.html">Decorations</a></li>
+			<li><a href="paragraphPanel.html">Paragraph panel</a></li>
+			<li><a href="characterPanel.html">Character panel</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

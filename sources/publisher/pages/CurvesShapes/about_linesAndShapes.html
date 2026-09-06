@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="bézier, curve, control handles, line, node, nodes, path, shape, sharp, smart, Bézier" />
+	<meta name="description" content="Open curves and closed shapes can be created and are controlled by nodes and control handles." />
+	<title>About lines, curves and shapes</title>
+</head>
+
+<body>
+	<header>
+
+
+		<h1>About lines, curves and shapes</h1>
+
+		<p>When you want to draw vector shapes and curves you&apos;ll need to use the <a href="../Tools/tools_pen.html">Pen</a> and <a href="draw_geometricShapes.html">shape</a> tools. Editing curves and shapes is done with the <a href="../Tools/tools_node.html">Node</a> tool or the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> as you draw.</p>
+		<p><img src="../../../shared/line_example.png" class="responsive" alt="Line example" /></p>
+
+		<aside class="box note">
+			<p>Curves and shapes have both stroke and fill properties. These can be defined before creation and can be modified at any point afterwards.</p>
+		</aside>
+	</header>
+
+	<section class="about">
+		<h2>Curves and lines</h2>
+
+		<p>A curve is an <span class="term">open</span> path that has a distinct start and end. These end stops are defined by <span class="term">nodes</span>. A curve with just two nodes is referred to as a <span class="term">line</span>.</p>
+		<p>The path between nodes is known as a <span class="term">segment</span> and can be straight (A) or arched (B). Complex curves are created from multiple nodes connected by segments (C). Lines and curves generally have a stroke applied.</p>
+
+		<figure>
+			<p><img src="../../../shared/path_straightOrCurved.png" class="screenshot responsive" alt="Segment types" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p>The type of node controls the connected segments. There are three basic types of node:</p>
+
+		<ul>
+			<li>Sharp (A)&mdash;causes an abrupt change in direction between segments, creating a point.</li>
+			<li>B&eacute;zier (smooth) (B)&mdash;creates a continuous curve between segments.</li>
+			<li>Smart (C)&mdash;creates a continuous curve but uses a line of best fit.</li>
+		</ul>
+
+		<figure>
+			<p><img src="../../../shared/path_nodeTypes.png" class="screenshot responsive" alt="Node types" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p>When drawing curves, any combination of nodes can be used. Each node also has <span class="term">control handles</span>. These appear when the node is selected. The length and slope of the control handles determine the shape of the segment. A node can be edited at any time.</p>
+		
+		<p>There are advantages to being able to add multiple curves&mdash;for example, if you want to make use of odd-even winding for filling with multiple curves.</p>
+		
+		<figure>
+			<p><img src="../../../shared/path_directionHandles.png" class="screenshot responsive" alt="control handles" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<h2>Shapes</h2>
+
+		<p>A shape is a <span class="term">closed</span> path with no discernible start or end. It is made up of multiple nodes and segments.</p>
+
+		<figure>
+			<p><img src="../../../shared/path_closing.png" class="screenshot responsive" alt="Close curve" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p>You can also easily create geometric shapes using the <a href="draw_geometricShapes.html">shape</a> tools. These have special properties that enable you to quickly create otherwise difficult to draw shapes, such as circles, rectangles and polygons.</p>
+
+	</section>
+		
+		<aside class="box prefs">
+			<h3>Settings</h3>
+			<p>Related behaviors can be adjusted from <a href="../Workspace/preferences.html">the app&apos;s settings</a>:</p>
+			<ul>
+				<li><span class="ui">User Interface&gt;Show Lines in points</span></li>
+			</ul>			
+		</aside>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="edit_linesAndShapes.html">Edit curves and shapes</a></li>
+			<li><a href="draw_geometricShapes.html">Draw and edit shapes</a></li>
+		</ul>
+	</section>
+
+
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

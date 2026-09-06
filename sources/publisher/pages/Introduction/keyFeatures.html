@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<link href="../../../resources/css/keyFeatures.css" rel="stylesheet" media="all">
+	<script src="../../../resources/js/keyFeatures.js"></script>
+	<meta name="keywords" content="features, new" />
+	<meta name="description" content="An overview of Affinity Publisher key features." />
+	<title>Features</title>
+</head>
+
+<body onload="showRequestedList()"><!-- Function defaults to ?list=allFeatures if no query string is provided --><header>
+		<h1>Features of Affinity Publisher</h1>
+		<p>Here&apos;s an overview of Affinity Publisher&apos;s features. Choose a category from the menu below, which includes options to view all features, or only those that are new in this version&mdash;marked with a red bullet (<span style="color: red; font-weight: bold; width: 1em;">▪</span>).</p>
+	</header>
+
+	<select name="categories" id="catSelector" onChange="updatePage(this.value)" >
+		<option value="allFeatures">All features</option>
+		<option value="newFeatures">New in V2.6</option>
+		<option value="catPower">Power, performance and compatibility</option>
+		<option value="catDTP">Solid DTP features</option>
+		<option value="catLayers">Powerful layer management</option>
+		<option value="catResources">External resource management</option>
+		<option value="catText">Text and typography</option>
+		<option value="catInterface">User interface</option>
+		<option value="catDesign">Design aids</option>
+		<option value="catVector">Vector essentials</option>
+		<option value="catColour">Professional color support</option>
+		<option value="catInteroperability">Interoperability</option>
+		<option value="catImport">Open, import and place</option>
+		<option value="catPublish">Printing and Publishing</option><!-- <option value="example">Example category</option> --></select>
+
+	<section class="about">
+
+		<h2 id="newFeatures">New in V2.6</h2>
+
+		<ul>
+			<li class="new"><a href="../Pages/multipageSpreads.html">Multiple-page spreads</a><ul>
+					<li class="new">Create foldable spreads, e.g. gatefolds, trifolds and accordion-fold</li>
+					<li class="new">Manage spreads&apos; spine position by creating them as <a href="../Pages/createMasterPages.html">master pages</a></li>
+					<li class="new">Easily extend spreads using a <a href="../Pages/multipageSpreads.html">dialog</a> or <a href="../Pages/arrangePages.html">drag and drop</a></li>
+				</ul>
+			</li>
+			<li class="new"><a href="../Publishing/accessiblePDFs.html">PDF accessibility</a> improvements<ul>
+					<li class="new">Optimize content for screen readers</li>
+					<li class="new"><a href="../Panels/readingOrderPanel.html">Dedicated Reading Order panel</a></li>
+					<li class="new">Help assistive technologies understand document structure by assigning tags to your paragraph styles</li>
+				</ul>
+			</li>
+			<li class="new"><a href="../Publishing/preflight.html">Preflight</a> warning if text flows contain mismatched scaling</li>
+			<li class="new"><a href="../Advanced/dataMerge.html">Generate QR codes from data merge source fields</a></li>
+			<li class="new"><a href="../Pages/arrangePages.html">Move</a> or <a href="../Pages/copyDuplicatePages.html">copy</a> pages using a dialog</li>
+			<li class="new">Apply Alt and Extended Description XMP <a href="../Panels/tagsPanel.html">tags</a> to images</li>
+			<li class="new"><a href="../Panels/clrPanel.html">Color panel</a>&rsquo;s Color Picker now applies to selected object</li> 
+			<li class="new"><a href="../ObjectControl/select.html">Toggle marquee select intersection</a> behavior with <span class="key CMD-TAG"></span> key</li>
+		</ul>
+
+	<h2 id="catPower">Power, performance and compatibility</h2>
+		<ul>
+			<li>Optimized for:<ul>
+					<li class="osx">Grand Central Dispatch (GCD)</li>
+					<li class="osx">OpenGL</li>
+					<li class="osx">Core Graphics</li>
+					<li class="win32">Direct3D</li>
+					<li>64-bit engine</li>
+					<li class="osx">GPU hardware acceleration (Metal) for integrated, discrete and external GPUs</li>
+					<li class="win32">Hardware GPU acceleration (OpenCL) for integrated, discrete and external GPUs</li>
+				</ul>
+			</li>
+			<li>Display support<ul>
+					<li class="osx">Regular, Retina and expanded gamut DCI-P3</li>
+					<li class="win32">Wide color gamut (Display P3)</li>
+					<li>HiDPI</li>
+					<li class="osx">EDR</li>
+					<li class="win32">HDR (Windows; &gt;400 nits recommended)</li>
+				</ul>
+			</li>
+			<li class="osx">Mac with Apple M1/M2/M3 chip or Intel processor</li>
+			<li class="osx">macOS Catalina 10.15 or later</li>
+			<li class="osx">Up-to-date tablet support</li>
+			<li class="osx">Multi-touch support</li>
+			<li class="win32">Surface Studio with Surface Pen and Surface Dial support</li>
+			<li class="osx">Force Touch support (Magic Trackpad 2/MacBook/MacBook Pro)</li>
+			<li class="osx">Touch Bar support (MacBook Pro)</li>
+			<li class="win32">DirectX 10 compatible</li>
+			<li class="win32">Windows® 11, Windows® 10 May 2020 Update (2004, 20H1, build 19041) or later</li>
+		</ul>
+
+	<h2 id="catDTP">Solid DTP features</h2>
+		<ul>
+			<li>Easy Document Setup with preset thumbnails and template support</li>
+			<li>Master pages<ul>
+					<li>Master on master</li>
+					<li>Migrate frame contents when replacing master pages</li>
+				</ul>
+			</li>
+			<li>Sections</li>
+			<li>Merge documents or sections</li>
+			<li>Spread control</li>
+			<li>Page numbering</li>
+			<li>Picture frames</li>
+			<li>Tables</li>
+			<li>Index</li>
+			<li>Table of contents</li>
+			<li>Assets for object storage</li>
+			<li>Pinned (anchored) objects</li>
+			<li>Hyperlinks and anchors</li>
+			<li>PDF bookmarks for TOC entries and anchors</li>
+			<li>Data merge</li>
+		</ul>
+	
+	<h2 id="catLayers">Powerful layer management</h2>
+		<ul>
+			<li>Drag and drop layers</li>
+			<li>Non-destructive adjustment layers</li>
+			<li>Apply adjustments and blend modes at the stack, layer, group, selection or object level</li>	
+			<li>High quality layer effects</li>
+			<li>Clipping within layers</li>
+			<li>Blend modes</li>
+			<li>Layer and object Blend ranges (linear and non-linear)</li>
+			<li>Per-object Blend gamma control</li>
+			<li>Lock child layer positions</li>
+			<li>Colored layer entry tagging for easy identification</li>
+		</ul>
+		
+		<h2 id="catResources">External resource management</h2>
+		<ul>
+			<li>Linked resources</li>
+			<li>Embedded/linked resource policy on new document creation</li>
+			<li>Resource Manager</li>
+			<li>Font Manager</li>
+			<li>Collect linked resources</li>
+			<li>Packaging of resources for project portability</li>
+		</ul>
+
+	<h2 id="catText">Text and typography</h2>
+	<ul>
+		<li>Frame text</li>
+		<li>Character and Paragraph panels</li>
+		<li>Text styles</li>
+		<li>Artistic text</li>
+		<li>Text on a path</li>
+		<li>Shape text</li>
+		<li>Flowing text</li>
+		<li>Linked frames</li>
+		<li>Autoflow text content</li>
+		<li>Spellchecking</li>
+		<li>Spell check as you type</li>
+		<li>Customize dictionary</li>
+		<li>Find and Replace</li>
+		<li>Swap text styles</li>
+		<li>Regular expressions</li>
+		<li>Advanced typography including ligatures</li>
+		<li>OpenType font features</li>
+		<li>Decorations (rules) and initial words</li>
+		<li>Column rules</li>
+	</ul>
+			
+	<h2 id="catInterface">User Interface</h2>
+	<ul>
+		<li>Persona task-orientated workspaces</li>
+		<li>Multiple document views</li>
+		<li>Windowed and Full Screen modes</li>
+		<li>Docked or floating panels</li>
+		<li>Comprehensive keyboard shortcuts and modifiers</li>
+		<li>Customizable keyboard shortcuts</li>
+		<li>Customizable toolbars</li>
+	</ul>
+	
+	<h2 id="catDesign">Design aids</h2>
+	<ul>
+		<li>Intuitive panning</li>
+		<li>Rotate document view</li>
+		<li>Incredible zoom range</li>
+		<li>Saveable zoom viewpoints</li>
+		<li>Pixel-accurate alignment</li>
+		<li>Multi-object alignment and distribution</li>
+		<li>Powerful snapping control</li>
+		<li>Constraints for intelligent object scaling/anchoring</li>
+		<li>Dynamic snapping guides</li>
+		<li>Grids</li>
+		<li>Ruler and column guides</li>
+		<li>Managers for Snapping, Guides, Grids and Baseline Grids</li>
+		<li>Automatic and fixed grids (with color/opacity control)</li>
+		<li>Movable spread origin which recalculates guide positions</li>
+		<li>Fluid document History &lt;8192 steps</li>
+		<li>Save History with Document (multi-session)</li>
+		<li>Keyboard modifiers for on-the-fly tool changes</li>
+	</ul>
+	
+	<h2 id="catVector">Vector essentials</h2>
+	<ul>
+		<li>Precise Pen Tool</li>
+		<li>Move Tool moves, scales, transforms</li>
+		<li>Rotate from movable origin</li>
+		<li>Node Tool for fine tuning vectors</li>
+		<li>Customizable nudge distances</li>
+		<li>Smooth gradients</li>
+		<li>Add opacity/noise to fill and stroke as solid fill/gradient</li>
+		<li>Customizable geometric shapes</li>
+	</ul>
+	
+	<h2 id="catColour">Professional color support</h2>
+	<ul>
+		<li>16-bits per pixel color depth</li>
+		<li>CMYK, Lab, Grayscale and RGB color modes</li>
+		<li>Color panel (RGB, HSL, LAB, CMYK, Grayscale)</li>
+		<li class="osx">Swatches panel (Apple, System, Web Safe colors, Crayons)</li>
+		<li class="win32">Swatches panel</li>
+		<li>Color Picker Tool (color mode aware, pick from anywhere on screen)</li>
+		<li>Global colors</li>
+		<li>Color tints</li>
+		<li>PANTONE® color support</li>
+		<li>ICC color profiling</li>
+		<li>Import Adobe Swatch Exchange (ASE) color palettes (including spot colors)</li>
+	</ul>
+	
+	<h2 id="catInteroperability">Interoperability:</h2>
+	<ul>
+		<li>Affinity Publisher files can be opened in other Affinity products and vice versa</li>
+		<li class="osx">iCloud sync and merge</li>
+		<li>In-app license activation</li>
+		<li>Content sync of Affinity Store purchases</li>
+	</ul>
+
+	<h2 id="catImport">Open, import and place</h2>
+	<ul>
+		<li>Affinity Designer, Affinity Photo, Affinity Publisher file placement</li>
+		<li>Adobe InDesign (IDML) import and place</li>
+		<li>Import keyboard shortcuts from IDML files (from v1.10)</li>
+		<li>High-quality Adobe® Photoshop® PSD import and place</li>
+		<li>Adobe Illustrator (.ai) import and place</li>
+		<li>PDF import</li>
+		<li>PDF passthrough for absolute display/output fidelity</li>
+		<li>Place Microsoft Word DOCX and RTF</li>
+		<li>Place spreadsheet data as tables from Microsoft Excel (XLSX), Apple Numbers, LibreOffice</li>
+		<li>Place images (PNG, JPEG, GIF, TIFF, SVG, EPS, EXR, HDR)</li>
+	</ul>
+	
+	<h2 id="catPublish">Printing and publishing</h2>
+	<ul>
+		<li>Desktop printing</li>
+		<li>Soft Proof Adjustment</li>
+		<li>Live Preflight checking</li>
+		<li>Web-ready PDFs (Acrobat)</li>
+		<li>Pro PDF/X printing (CMYK)</li>
+		<li>Overprint</li>
+		<li>Spot colors</li>
+		<li>Bleed (with preview) and printers marks</li>
+	</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="about_publisher.html">Affinity Publisher</a></li>
+			<li><a href="about_Personas.html">Personas</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

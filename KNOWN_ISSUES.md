@@ -36,4 +36,14 @@
 
 ## Affinity Publisher 2
 
-- Not imported yet. See `docs/ADDING-A-MANUAL.md`.
+- **1 missing screenshot.** `assets/images/panel_readingOrder.png` returns a
+  blocked/failed download from the source site (same CDN behaviour that costs
+  Designer and Photo images). It renders as a broken image on the reading-order
+  page. Drop the file in at that exact path — no Markdown edits needed. See
+  `manuals/publisher/MISSING_IMAGES.md`.
+- **11 non-sidebar pages nested by heuristic**, same mechanism as Photo (far
+  fewer here — Publisher's sidebar is nearly complete). Each is attached to the
+  sidebar page that links it; every link resolves.
+- **Same upstream regex-page image brief** as Photo, preserved as-is.
+- **Cross-page links in the single-file EPUB/PDF/HTML** go inert, as with the
+  other manuals.

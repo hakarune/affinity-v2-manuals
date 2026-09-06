@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="PDF, bookmarks, anchors, table of contents, TOC, navigation" />
+	<meta name="description" content="Use bookmarks to help readers navigate PDFs." />
+	<title>PDF bookmarks</title>
+</head>
+
+<body>
+	<header>
+		<h1>PDF bookmarks</h1>
+		<p>When exporting a PDF, you can choose to include bookmarks that help the reader jump quickly to important parts of it without having to scroll or search. For example, the start of every chapter of a book, major articles in a magazine, or important text or figures in a report.</p>
+	</header>
+
+	<section class="about">
+		<h2>Making PDF bookmarks</h2>
+		<p>There are two methods for creating PDF bookmarks:</p>
+		<ul>
+			<li>Manually wherever the <span class="ui">Anchors</span> panel lets you create an anchor in your document, e.g. within text or attached to an object such as a picture frame, table or shape.</li>
+			<li>Automatically from tables of contents created using the <span class="ui">Table of Contents</span> panel.</li>
+		</ul>
+		<p>The two methods can be used together in the same document.</p>
+
+		<h2>Managing PDF bookmarks</h2>		
+		<p>PDF bookmarks are a special kind of anchor and so they are primarily managed on the Anchors panel.</p>
+		<p>Any anchor can be given this special treatment, by checking <span class="ui">Export as PDF Bookmark</span> when adding a new anchor or clicking the bookmark icon to its right side.</p>
+		<p>When creating PDF bookmarks from a table of contents, one will be created for every item in the table. Use the panel&apos;s bookmark icons to exclude the auto-created PDF bookmarks for any levels you do not want in your PDF. For example, if you want PDF bookmarks only for table of contents items created from Heading 1 and Heading 2 text styles.</p>		
+		
+		<aside class="box tip">
+			<h3>Using PDF bookmarks in a reader</h3>
+			<p>When a PDF is viewed using a compatible reader, its bookmarks are often accessed in a sidebar. In Acrobat Reader, they&apos;re in the Bookmarks pane (<span class="ui">View&gt;Show/Hide&gt;Navigation Panes&gt;Bookmarks</span>).</p>
+			<p>Other PDF readers might call bookmarks by another name. In Apple&apos;s Preview app, for example, select <span class="ui">View&gt;Table of Contents</span>.</p>
+		</aside>
+	</section>
+
+	<section class="howto">
+		<details>
+			<summary>To manually create a PDF bookmark:</summary>
+			<ol>
+				<li>Select the text or object to which you want to attach an anchor.</li>
+				<li>Select <span class="ui">Window&gt;References&gt;Anchors</span>.</li>
+				<li>Select <span class="ui">New Anchor</span>.</li>
+				<li>Ensure <span class="ui">Export as PDF Bookmark</span> is checked and (optionally) rename the anchor.</li>
+				<li>Select <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+		
+		<details>
+			<summary>To create PDF bookmarks from a table of contents:</summary>
+			<ol>
+				<li>Select the text frame that contains your table of contents.</li>
+				<li>Select <span class="ui">Window&gt;References&gt;Table of Contents</span>.</li>
+				<li>Check <span class="ui">Include as PDF bookmarks</span>.</li>
+			</ol>
+
+			<aside class="box tip">
+				<h3>Deleting a table of contents&apos; PDF bookmarks</h3>
+				<p>If you change your mind about including PDF bookmarks from a table of contents, uncheck <span class="ui">Include as PDF bookmarks</span> to instantly remove all associated items from the <span class="ui">Anchors</span> panel.</p>
+			</aside>
+		</details>
+				
+		<details>
+			<summary>To export a PDF that includes bookmarks:</summary>
+			<p>Affinity Publisher&apos;s PDF (digital - small size), PDF (digital - high quality) and PDF (flatten) presets are configured to include bookmarks by default.</p>
+			<ol>
+				<li>Select <span class="ui">File&gt;Export</span>.</li>
+				<li>Select <span class="ui">PDF</span>.</li>
+				<li>In <span class="ui">File Settings</span>, set <span class="ui">Preset</span> as required or manually choose your PDF settings from either section.</li>
+				<li>In <span class="ui">Advanced</span>, if <span class="ui">Include bookmarks</span> is not checked, make it so.</li>
+				<li>Select <span class="ui">Export</span>, and then name and choose where to save the PDF.</li>
+			</ol>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/anchorsPanel.html">Anchors panel</a></li>
+			<li><a href="../Panels/tocPanel.html">Table of Contents panel</a></li>
+			<li><a href="../Publishing/publishPDFFiles.html">Publishing PDF files</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

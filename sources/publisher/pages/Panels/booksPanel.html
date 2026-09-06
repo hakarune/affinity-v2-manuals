@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="books, chapters, collate, preflight, export, print, package, style source chapter, stray pages" />
+	<meta name="description" content="The Books panel organises, exports and prints multiple documents as consistently paginated chapters of a single publication." />
+	<title>Books panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Books panel</h1>
+
+		<p>The <span class="ui">Books</span> panel allows you to manage multiple documents as a cohesive publication.</p>
+		
+	</header>
+
+	<section class="about">
+		<h2>About the Books panel</h2>
+		<p>From the <span class="ui">Books</span> panel, you can:</p>
+		
+		<ul>
+			<li>Create books and add documents to them as chapters.</li>
+			<li>Specify the order of chapters.</li>
+			<li>Review and edit the page numbering (pagination) of all chapters.</li>
+			<li>Synchronize master pages, text styles, document palettes and table formats from a designated style source chapter to other chapters.</li>
+			<li>Open chapter documents for editing.</li>
+			<li>Review file and preflight statuses of all chapters.</li>
+			<li>Package/print/export selected chapters or the whole book. Exporting to a PDF, say, creates a single file.</li>
+		</ul>
+
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via the <span class="ui">Window</span> menu.</p>
+		</aside>
+
+		<figure>
+			<p><img src="../../images/panel_books.png" class="responsive" width="264" alt="Books" /></p>
+			<figcaption>The Books panel.</figcaption>
+		</figure>
+		
+		<h3>About chapter entries</h3>
+		<p>The panel displays the following information, from left to right, for each of a book&apos;s chapters:</p>
+		
+		<ul>
+			<li>Chapter name&mdash;the name of the chapter&apos;s corresponding document.</li>
+			<li>Page range&mdash;the page numbers of the chapter&apos;s first and last pages.</li>
+			<li>Chapter file status&mdash;an icon that indicates whether the chapter&apos;s file is:<ul>
+					<li><img src="../../../shared/ui/ChapterOpen.png" class="tool" width="17" height="17" alt="Chapter open" /> <span class="ui">Open for edit</span>&mdash;the file is currently open for editing.</li>
+					<li><img src="../../../shared/ui/ChapterLocked.png" class="tool" width="17" height="17" alt="Chapter locked" /> <span class="ui">Locked</span>&mdash;the file may be open in another app or marked as read-only, for example.</li>
+					<li><img src="../../../shared/ui/ChapterMissing.png" class="tool" width="17" height="17" alt="Chapter missing" /> <span class="ui">Not found or accessible</span>&mdash;for example, the file may have been moved or deleted, or is stored in a currently unavailable location.</li>
+					<li><img src="../../../shared/ui/ChapterOutOfDate.png" class="tool" width="17" height="17" alt="Chapter out of date" /> <span class="ui">Out of date</span>&mdash;its timestamp has changed since it was last opened via the Books panel, e.g. it was opened directly.</li>
+					<li><img src="../../../shared/ui/ChapterRestricted.png" class="tool" width="17" height="17" alt="Chapter restricted" /> <span class="ui">Restricted</span>&mdash;for example, the file is a sample document that cannot be printed or exported.</li>
+					<li><img src="../../../shared/ui/ChapterOK.png" class="tool" width="17" height="17" alt="Chapter okay" /> <span class="ui">OK</span>&mdash;none of the other statuses currently apply to the file.</li>
+				</ul>
+			</li>
+			<li>Preflight status&mdash;an icon that indicates the chapter has passed preflight checks (green), checks have not yet been performed (gray), or that there are warnings (yellow) or errors (red).</li>
+		</ul>
+		
+		<p><img src="../../../shared/ui/KeyChapter.png" class="tool" width="17" height="17" alt="Add Chapter" /> A key icon to the left of one chapter&apos;s name indicates it is the <span class="ui">Style Source Chapter</span> for the purpose of synchronizing styles and master pages between chapters. The Style Source Chapter is your book&apos;s first chapter by default, but you can make it any chapter you wish via the Panel Preferences menu.</p>
+
+		<h2>Settings</h2>
+		<p>The following items are available on the panel:</p>
+		<ul>
+			<li>Books&mdash;if more than one book is open, select the one you wish to edit from the pop-up menu.</li>
+			<li><img src="../../../shared/ui/add_chapter.png" class="tool" width="16" height="16" alt="Add Chapter" /> <span class="ui">Add Chapter</span>&mdash;opens a dialog in which you can select one or more documents to add to the book.</li>
+			<li><img src="../../../shared/ui/remove_chapter.png" class="tool" width="16" height="16" alt="Remove Chapter" /> <span class="ui">Remove Chapter</span>&mdash;removes the selected chapter(s) from the book.</li>
+			<li><img src="../../../shared/ui/sync_chapters.png" class="tool" width="16" height="16" alt="Synchronize Chapters" /> <span class="ui">Synchronize Chapters</span>&mdash;synchronizes data from the Style Source Chapter to the selected chapters.</li>
+			<li><span class="ui">Update Numbers</span>&mdash;updates <span class="ui">Page Numbers</span>, <span class="ui">List Numbers</span>, <span class="ui">Note Numbers</span> or <span class="ui">All Numbers</span> for continuity across chapters.</li>
+		</ul><br /><p><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> The following options are available from the Panel Preferences menu:</p>
+		<ul>
+			<li><span class="ui">New Book</span>&mdash;creates a new, empty book that is initially unsaved.</li>
+			<li><span class="ui">Open Book</span>&mdash;allows you to browse to an existing .afbook file and open it.</li>
+			<li><span class="ui">Save Book</span>&mdash;saves the selected book, i.e. its chapter list and order, as an .afbook file. (Modified chapters must be saved separately.)</li>
+			<li><span class="ui">Save Book As</span>&mdash;saves the selected book&apos;s state to a new file, which becomes the destination for further saves.</li>
+			<li><span class="ui">Close Book</span>&mdash;asks whether to save changes to the selected book, if there are any, and closes the book.</li>
+			<li><span class="ui">Add Chapter</span>&mdash;opens a dialog in which you can select one or more documents to add to the book. (When a document is added, its file is modified. See <a href="../Advanced/creatingBooks.html">Creating Books</a> for more information.)</li>
+			<li><span class="ui">Open Chapter</span>&mdash;opens the selected chapter(s) for editing.</li>
+			<li><span class="ui">Remove Chapter</span>&mdash;removes the selected chapter(s) from the book.</li>
+			<li><span class="ui">Replace Chapter</span>&mdash;with a chapter selected, allows you to swap its document for a different one.</li>
+			<li><span class="ui">Set Style Source Chapter</span>&mdash;with a chapter selected, sets it as the style source for synchronize operations.</li>
+			<li><span class="ui">Synchronize</span>&mdash;synchronizes data from the Style Source Chapter to the selected chapters.</li>
+			<li><span class="ui">Synchronize Settings</span>&mdash;choose which data will be synchronized from the Style Source Chapter: any or all of <span class="ui">Swatches</span>, <span class="ui">Text Styles</span>, <span class="ui">Table Formats</span>, and <span class="ui">Master Pages</span>.</li>
+			<li><span class="ui">Save Open Chapters</span>&mdash;saves all open chapters that have unsaved changes.</li>
+			<li><span class="ui">Close Open Chapters</span>&mdash;closes all open chapters. If any have unsaved changes, for each one you will be asked whether to save before closing.</li>
+			<li><span class="ui">Page Number Options</span>&mdash;sets the selected chapter&apos;s page numbering to either continue from the previous chapter or start at a specific number</li>
+			<li><span class="ui">Update Numbers</span>&mdash;updates numbering of pages, lists, endnotes (or all three) through your book for continuity across chapters.<ul>
+					<li>Scope&mdash;for the selected chapters, choose to update <span class="ui">Page Numbers</span>, <span class="ui">List Numbers</span>, <span class="ui">Note Numbers</span> or <span class="ui">All Numbers</span>.</li>
+					<li><span class="ui">Update Numbers Before Output</span>&mdash;when checked, page, list and note numbers are automatically updated before exporting or printing. When unchecked, numbers must be manually updated by selecting a Scope option.</li>
+					<li><span class="ui">Update Page Numbers Automatically</span>&mdash;when checked, Affinity will auto-update a book&apos;s pagination as chapters and pages are added to or removed from it, for example. When unchecked, page numbers can be manually updated when needed.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Endnotes</span>&mdash;manages endnote bodies whose position is set to <span class="ui">End of Book</span> in a text frame of your choice.<ul>
+					<li><span class="ui">Insert Endnotes</span>&mdash;inserts relevant endnote bodies from all chapters in order at the text insertion point.</li> 
+					<li><span class="ui">Update Endnotes</span>&mdash;with an insertion point or selection encompassing consolidated endnote bodies, updates the bodies from their respective chapters.</li>
+					<li><span class="ui">Update Endnotes Before Output</span>&mdash;when checked, endnote bodies will be auto-updated before exporting or printing. When unchecked, endnote bodies can be manually updated when needed.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Cross-References</span>&mdash;update cross-references in all chapters of the selected book to display the correct values.<ul>
+					<li><span class="ui">Update Cross-References</span>&mdash;immediately updates cross-references.</li>
+					<li><span class="ui">Update Cross-References Before Output</span>&mdash;when selected, Affinity will update a book&apos;s cross-references when it is printed or exported. When unselected, cross-references are not automatically updated and so may have incorrect values.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Stray Pages</span>&mdash;manage how stray pages are handled in facing-pages books. Choose from the following behaviors:<ul>
+					<li><span class="ui">Merge Where Possible</span>&mdash;when checked, where adjacent chapters end and begin with trailing and leading pages, respectively, those pages become a facing-pages spread in the output. When unchecked, the pages are kept separate; they may be single- or facing-page spreads depending on the <span class="ui">Pad</span> setting.</li>
+					<li><span class="ui">Pad</span>&mdash;when checked (and if <span class="ui">Merge Where Possible</span> does not apply), blank pages may be added to the output, opposite chapters&apos; leading and trailing pages that aren&apos;t at the book&apos;s start or end, to maintain facing-page spreads throughout. When unchecked (and Merge Where Possible does not apply), single-page spreads are allowed in the output.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Preflight</span>&mdash;runs preflight checks on the selected chapters&apos; documents or, if none are selected, all chapter documents, and updates Preflight Status icons accordingly.</li>
+			<li><span class="ui">Export</span>&mdash;displays the <span class="ui">Export</span> dialog to output the current book or the selected chapters, e.g. as a PDF.</li>
+			<li><span class="ui">Print</span>&mdash;displays the <span class="ui">Print</span> dialog to output the current book or the selected chapters as a hard copy.</li>
+			<li class="osx"><span class="ui">Reveal in Finder</span>&mdash;with a chapter selected, opens a Finder window with the corresponding file selected.</li>
+			<li class="win32"><span class="ui">Show in Explorer</span>&mdash;with a chapter selected, opens an Explorer window with the corresponding file selected.</li>
+		</ul>
+	</section>
+		
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Advanced/aboutBooks.html">About books</a></li>
+			<li><a href="../Pages/aboutPages.html">About pages</a></li>
+			<li><a href="../Pages/masterPages.html">About master pages</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

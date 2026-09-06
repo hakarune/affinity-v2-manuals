@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="capitalisation, title case, sentence case, upper case, lower case, toggle case, small caps, all caps, camel case, text transformations" />
+	<meta name="description" content="Affinity Publisher can alter the capitalisation of the initial letter of all words in a selection." />
+	<title>Capitalization</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Capitalization</h1>
+		<p>Affinity Publisher can alter the capitalization of selected words to suit one of several use cases.</p>
+	</header>
+
+	<section class="about">
+		<p>Capitalization transformations are available from the <span class="ui">Text&gt;Capitalization</span> menu.</p>
+
+		<h2>Dynamic transformations</h2>
+		<p>Items in the menu&apos;s first group are applied dynamically; letters are stored in your document with the capitalization used to type them and Affinity Publisher changes how they are displayed on the fly.</p>
+
+		<ul>
+			<li><span class="ui">None</span>&mdash;removes whichever of the following two transformations is already applied to the selection.</li>
+			<li><span class="ui">Small Caps</span>&mdash;each letter is displayed using small-caps glyphs, if the applied OpenType font includes them; if unavailable, upper-case glyphs are scaled down to the appropriate height.</li>
+			<li><span class="ui">All Caps</span>&mdash;all letters are displayed as upper-case glyphs.</li>
+		</ul>
+		
+		<figure class="nft">
+			<p><img src="../../images/capitalisation_01.jpg" class="responsive" alt="Dynamic capitalization transformations" /></p>
+			<figcaption>An example sentence as typed (A) and with (B) Small Caps and (C) All Caps dynamic transformations applied.</figcaption>
+		</figure>
+		
+		<h2>Persistent transformations</h2>		
+		<p>Items in the second group make a lasting change to how the selected words are stored in your document:</p>
+		
+		<ul>
+			<li><span class="ui">Lower Case</span>&mdash;all letters in the selection are converted to lower-case glyphs.</li>
+			<li><span class="ui">Upper Case</span>&mdash;all letters in the selection are converted to upper-case glyphs.</li>
+			<li><span class="ui">Toggle Case</span>&mdash;upper-case letters in the selection are converted to their lower-case equivalent and vice versa.</li>
+			<li><span class="ui">Title Case</span>&mdash;each word&apos;s initial letter is converted to upper case unless the word is a title exception or any of its letters are upper case already. See below for precise details.</li>
+			<li><span class="ui">Sentence Case</span>&mdash;the initial letter of each word, except for the first word and proper nouns, is converted to lower case.</li>
+		</ul>	
+						
+		<figure class="nft">
+			<p><img src="../../images/capitalisation_02.jpg" class="responsive" alt="Persistent capitalization transformations" /></p>
+			<figcaption>An example sentence with (D) Lower Case, (E) Upper Case, (F) Toggle Case, (G) Title Case and (H) Sentence Case transformations applied.</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>If the <span class="ui">Title Case</span> or <span class="ui">Sentence Case</span> transformation changes any of the selected words, the selection is modified to include only the words whose capitalization was affected.</p>
+		</aside>
+		
+		<h2>Title Exceptions</h2>
+		<p>In Affinity Publisher&apos;s settings, select <span class="ui">Title Exceptions</span>. The list here contains short prepositions, conjunctions, articles, and any other words you do not want to be altered when the Title Case transformation is applied.</p>
+		<p>Use the pop-up menu to set different title exceptions for each of Affinity Publisher&apos;s supported languages. The list used when the Title Case transformation is applied depends on text&apos;s language setting, indicated by the <span class="ui">Spelling</span> setting in the <span class="ui">Character</span> panel&apos;s <span class="ui">Language</span> section.</p>
+				
+		<h2>About the Title Case transformation</h2>
+		<p>When the Title Case transformation is applied, words in your text selection are affected as follows (in order):</p>
+		<ul>
+			<li>A word that contains any upper-case letters is considered to be a proper noun, scientific or technical term, or an acronym. None of its letters&apos; cases are changed<sup>1</sup>.</li>
+			<li>A word that is not a title exception for the specified language has its first letter converted to upper case.</li>
+			<li>A word that is a title exception and first in a sentence or paragraph<sup>2</sup> has its first letter converted to upper case.</li>
+			<li>A word that is a title exception and not first in a sentence or paragraph is made entirely lower case.</li>
+		</ul>
+
+		<p><sup>1</sup> Words with upper-case letters past their first are unaffected on the first application of the Title Case transformation. Applying the transformation a second time makes their first letter upper case and all others lower case.</p>
+		<p><sup>2</sup> When your text selection contains multiple sentences, rules concerning first words apply to each word that appears after a line break, paragraph break or appropriate punctuation.</p>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To add a title exception:</summary>
+			<ol>
+				<li class="osx">Select <span class="ui">Affinity Publisher&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>).</li>
+				<li class="win32">Select <span class="ui">Edit&gt;Settings</span>.</li>
+				<li>Select <span class="ui">Title Exceptions</span>.</li>
+				<li>From the pop-up menu, select the language to which the exception will apply.</li>
+				<li>In the box below, type the lower-case word you want to remain unchanged (except when it is the first word).</li>
+				<li>Click <span class="ui">Add</span>.</li>
+			</ol>
+		</details>
+				
+		<details open="open">
+			<summary>To remove a title exception:</summary>
+			<ol>
+				<li class="osx">Select <span class="ui">Affinity Publisher&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>).</li>
+				<li class="win32">Select <span class="ui">Edit&gt;Settings</span>.</li>
+				<li>Select <span class="ui">Title Exceptions</span>.</li>
+				<li>From the pop-up menu, select the language to which the exception applies.</li>
+				<li>In the list of exceptions, select the word you want to remove.</li>
+				<li>Click <span class="ui">Remove</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="text_general.html">Working with text</a></li>
+			<li><a href="../Tools/tools_frameText.html">Frame Text Tool</a></li>
+			<li><a href="../Tools/tools_artText.html">Artistic Text Tool</a></li>
+			<li><a href="../Text/autoCorrect.html">Auto-Correct and Spell as you Type</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

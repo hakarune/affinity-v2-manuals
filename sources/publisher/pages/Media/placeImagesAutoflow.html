@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="autoflow, place, content, images, pictures, photos, raster, documents, passthrough, scaling" />
+	<meta name="description" content="Raster and vector images, as well as documents, can be autoflowed into your document across as many pages as needed." />
+	<title>Autoflowing images and documents</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Autoflowing images and documents</h1>
+		
+		<p>Autoflow allows you to place multiple images or documents with one click or drag. It can be used to quickly place:</p>
+			<ul>
+				<li>multiple images, framed or unframed.</li>
+				<li>multiple pages from one or more multi-page documents.</li>
+			</ul>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/autoflowImages_before.jpg" alt="Page layout before autoflowing images" /><div><img src="../../../shared/autoflowImages_after.jpg" alt="Page layout after autoflowing images" /></div>
+			</div>
+			<figcaption>Pages before and after autoflowing images loaded onto the <span class="ui">Place</span> panel.</figcaption>
+		</figure>
+		
+	</header>
+	
+	<section class="about">
+		<p>You might use autoflow to place images in repeating page layouts&mdash;either a single layout or a sequence of different layouts&mdash;such as for a lookbook or similar image gallery.</p>
+		
+		<p>If there are insufficient pages in your document to accommodate all items, autoflow adds more pages and, if you choose to place in picture frames, it clones the layout of picture frames from existing pages to the new pages the necessary number of times. The pages remain fully and independently editable after autoflow.</p>
+		
+		<aside class="box note">
+			<p>Autoflow is available for text documents but only when placed by clicking or dragging on a page, not by clicking on an existing text frame.</p>
+		</aside>
+		
+		<aside class="box warning">
+			<p>Autoflow is not available on master pages or for documents that contain artboards, i.e. some Affinity Designer documents.</p>
+		</aside>
+		
+		<h2>Using autoflow</h2>
+		<p>Autoflow is initiated by selecting two or more items on the <span class="ui">Place</span> panel and then interacting with the document view. The interaction you choose determines autoflow&apos;s behavior and results:</p>
+		
+		<ul>
+			<li>If you drag or click outside of a picture frame:<ul>
+					<li>One item is placed per page.</li>
+					<li>Items are placed on existing document pages, starting from where you dragged or clicked.</li>
+					<li>If the document&apos;s last page is reached and there are still items to place, additional pages are appended, one per item.</li>
+				</ul>
+			</li>
+			<li>If you click on a picture frame:<ul>
+					<li>Affinity searches for empty picture frames, page by page, and from back to front on each page (bottom to top in the layer stack)<sup>1</sup>.</li>
+					<li>The search stops at the first spread that contains no empty picture frames or, if no such spread is found, at the end of the document.</li>
+					<li>One item is placed per picture frame.</li>
+					<li>If there aren&apos;t enough empty picture frames to place all the items, picture frames found during the search will be cloned onto new pages until all items have been placed.</li>
+					<li>New pages are inserted after the last page/spread on which an empty picture frame was found. In a document with facing pages, if this position is:<ul>
+							<li>in the middle of the document, new pages are added as whole spreads.</li>
+							<li>at the end of the document, new pages are added as individual pages.</li>
+						</ul>
+					</li>
+					<li>Each cloned page has the same master pages applied and picture frames as its corresponding source page but won&apos;t include other objects.</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<p><sup>1</sup> Picture frames on the starting page that are lower in the layer stack than the one clicked are ignored. To populate all empty picture frames on the starting page, ensure you click the one that is bottom-most in the layer stack.</p>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/place_image_tool.png" class="tool heading" width="18" height="18" alt="Place Tool" /> To place multiple pieces of content using autoflow:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>Select the <span class="ui">Place Tool</span>.</li>
+						<li>From the <span class="ui">File</span> menu, select <span class="ui">Place</span>.</li>
+					</ul>
+				</li>
+				<li>
+					<p>On the pop-up dialog, navigate to and select the file(s) you wish to place, then click <span class="ui">Open</span>. (Hold the <span class="SHIFT-TAG"></span> or <span class="CMD-TAG"></span> <span class="KEY-TAG"></span> to select adjacent or non-adjacent files, respectively.)</p>
+					<p>The <span class="ui">Place</span> panel will appear, displaying the items you selected.</p>
+					
+					<aside class="box tip">
+						<p>If the items you wish to autoflow are located in multiple folders, simply repeat steps 1 and 2 to add more items to the <span class="ui">Place</span> panel.</p>
+					</aside>
+				</li>
+				<li>(Optional) If autoflowing pages from documents, on each document&apos;s entry on the panel, do one of the following:<ul>
+						<li>From the pop-up menu, select the individual page/spread you wish to place.</li>
+						<li>Click the filename to reveal entries for all the document&apos;s pages.</li>
+					</ul>
+				</li>
+				<li>To select items for autoflow, do one of the following:<ul>
+						<li>Press <span class="CMD-TAG"></span>+A to select all items.</li>
+						<li>Press <span class="SHIFT-TAG"></span> or <span class="CMD-TAG"></span> to select an adjacent or a non-adjacent subset, of items, respectively.</li>
+					</ul>
+				</li>
+				<li>To autoflow the selected items, do one of the following:<ul>
+						<li>Click to place each item at its default displayed size.</li>
+						<li>Drag on the page to set the position and maximum size of placed items.</li>
+						<li>Click on a picture frame to use as autoflow&apos;s starting point.</li>
+					</ul>The items are placed according to autoflow&apos;s defined behaviors, then removed from the panel<sup>1</sup>.</li>
+				<li>If the panel contains no more items, it will close automatically. Otherwise:<ul>
+						<li>repeat from step 3 to place additional items.</li>
+						<li>press the <span class="key ESC-TAG"></span> <span class="KEY-TAG"></span> to cancel further placement and close the panel.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<x-osx>
+				<aside class="box note">
+					<p>Alternatively, <span class="key ALT-TAG"></span>-dragging multiple files from Finder onto a page in the document view will add them directly to the <span class="ui">Place</span> panel.</p>
+				</aside>
+			</x-osx>
+		
+			<x-win32>
+				<aside class="box note">
+					<p>Alternatively, <span class="key ALT-TAG"></span>-dragging multiple files from Explorer onto a page in the document view will add them directly to the <span class="ui">Place</span> panel.</p>
+				</aside>
+			</x-win32>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="placeImages.html">Placing content</a></li>
+			<li><a href="placeImagesWeb.html">Placing images from the Web</a></li>
+			<li><a href="../Tools/tools_placeimage.html">Place Tool</a></li>
+			<li><a href="embeddingVsLinking.html">Embedding vs linking</a></li>
+			<li><a href="../Media/resourceManager.html">Resource Manager</a></li>
+			<li><a href="linkedServices.html">Linked Services</a></li>
+			<li><a href="../Clr/ClrProfiles.html">Color management</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

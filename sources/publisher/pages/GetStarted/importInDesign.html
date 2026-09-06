@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="import, indesign" />
+	<meta name="description" content="Importing InDesign documents." />
+	<title>Importing InDesign documents</title>
+</head>
+ 
+<body>
+
+	<header>
+
+		<h1>Importing InDesign documents</h1>
+		
+		<p>You can import Adobe InDesign documents (IDML) into Affinity Publisher.</p>
+	
+	</header>
+	
+	<section class="about">
+
+		<h2>About importing InDesign documents</h2>
+			
+		<p>The importing of documents in Affinity Publisher is a one-way process. You cannot overwrite the original file once it has been imported. Imported documents must be saved as an .afpub file.</p>
+
+		<p>Affinity Publisher can import InDesign files that have been saved in IDML (InDesign Markup Language) format, which is available in InDesign CS4 and later. With earlier versions of InDesign, you can export documents to PDF and then import that format directly into Affinity Publisher.</p>
+		<p>The dpi (dots per inch) setting of the resulting Affinity Publisher document is decided as follows:</p>
+		<ul>
+			<li>If the imported IDML file does not contain linked or embedded raster resources with their own dpi settings, the document is set to 300 dpi if it&apos;s a CMYK document or 72 dpi if it&apos;s an RGB document.</li>
+			<li>If the imported IDML file contains linked or embedded raster resources, the document is set to whichever of 72, 96, 144, 192, 300, 400 and 600 dpi is closest to the highest dpi setting of all those resources.</li> 
+		</ul>
+		<p>A document&apos;s dpi setting can be changed at any time in <span class="ui">File&gt;Document Setup</span>.</p>
+		
+		<aside class="box note">
+			<p>You can merge multiple IDML files by going to <span class="ui">Document&gt;Add Pages from File</span>. See <a href="../Advanced/mergeDocument.html">Merge documents</a> for more information.</p>
+		</aside>
+
+	</section>
+		
+	<section class="howto">			
+
+		<details open="open">
+			<summary>To import an Adobe InDesign (IDML) file:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">Open</span>.</li>
+				<li>Select an IDML file and click <span class="ui">Open</span>.</li>
+				<li>If linked resources are not found, Publisher will ask whether you want to locate them. You can click:<ul>
+						<li><span class="ui">Yes</span> to locate missing resources one at a time.</li>
+						<li><span class="ui">Resource Manager</span> to review missing resources and locate only those required at this time.</li>
+						<li><span class="ui">No</span> to open the document without locating anything. Items can be located later by selecting <span class="ui">Window&gt;Resource Manager</span>.</li>
+					</ul>
+				</li>
+				<li>If the document uses fonts that are unavailable, Publisher will warn you and provide a shortcut to <a href="../Text/fontManager.html">Font Manager</a>, where you can make substitutions.</li>
+			</ol>
+		</details>
+		
+		<aside class="box note">
+			<p>Adobe InDesign files can be easily placed via <span class="ui">File&gt;Place</span>. When placing multi-page documents, you can choose which page you wish to display using the context toolbar.</p>
+		</aside>
+
+	</section>
+	
+	<section id="also">
+	<h4>SEE ALSO:</h4>
+	<ul class="plain">
+		<li><a href="openDocument.html">Opening documents</a></li>
+		<li><a href="../Text/fontManager.html">Font Manager</a></li>
+		<li><a href="../Media/embeddingVsLinking.html">Embedding vs linking</a></li>
+		<li><a href="../Media/placeImages.html">Placing content</a></li>
+	</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

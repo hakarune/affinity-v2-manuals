@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panel, history, undo, redo" />
+	<meta name="description" content="The History panel tracks changes, allowing you to return to an earlier point in time easily." />
+	<title>History panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>History panel</h1>
+
+		<p>The <span class="ui">History</span> panel tracks changes and shows each state as a labeled entry in a list. This allows you to return to earlier points in time quickly and easily.</p>
+
+	</header>
+
+	<section class="about">
+	<h2>About the History panel</h2>
+
+		<p>The <span class="ui">History</span> panel shows changes that are applied. The oldest state is the topmost in the list. When edits are made, new states are added to the bottom of the list.</p>
+
+		<aside class="box tip">
+			<p>A document&apos;s <a href="../DesignAids/undo.html">history can be saved</a> along with the document, so earlier edits can be returned to even if the document is closed and reopened.</p>
+		</aside>
+ 
+		<figure>
+			<p><img src="../../images/panel_history.png" class="responsive" width="264" alt="History panel" /></p>
+			<figcaption>The History panel showing the actions that have been carried out on the file.</figcaption>
+		</figure>
+
+		<p>If you click on an earlier state and then make a different change, any states that originally came after it are deleted.</p>
+
+		<aside class="box note">
+			<p>Unless you choose to save the document&apos;s history with the document, the undo states listed in the History panel are cleared when the document is closed.</p>
+		</aside>
+
+	</section>
+
+	<section class="settings">
+		<h3>Options</h3>
+
+		<p>The following options are available in the panel:</p>
+
+		<ul>
+			<li><span class="ui">Position</span>&mdash;points on the slider represent edits made to a document from root (creation or opening) on the left to the latest edit on the right. Drag the slider left to undo a change, right to redo a change.</li>
+			<li>State&mdash;gives a brief description of the edit made to the document. Click a state to jump back/forward to that edit.</li>
+			<li><img src="../../../shared/ui/cyclefuture.png" class="tool" width="18" height="18" alt="Cycle future" /> <span class="ui">Cycle future</span>&mdash;appears where the history was changed, storing all of the original edits associated with that &apos;branch&apos; of the timeline. If you want to revert to an old redo history after making a change, click the <span class="ui">Cycle future</span> icon beside the point in the timeline you wish to revert to in order to go back to your preferred redo history. You can click this again to toggle between the different series of edits you made beyond this point.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../DesignAids/undo.html">Using undo, redo and history</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

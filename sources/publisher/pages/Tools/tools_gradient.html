@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="fill, tool, vector, gradient, solid, bitmap" />
+	<meta name="description" content="The Gradient Tool allows you to adjust the fill and line colours applied to vector and text objects." />
+	<title>Gradient Tool</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1><img src="../../../shared/ui/fill_tool.png" class="tool heading" width="18" height="18" alt="Gradient Tool" /> Gradient Tool</h1>
+	
+		<p>The <span class="ui">Gradient Tool</span> allows you to adjust the fill and line colors applied to vector and text objects.</p>
+	
+	</header>
+
+	<section class="about">
+		<p>Although you can use the Gradient Tool to apply solid colors to an object&apos;s fill or stroke, its true power lies in its ability to apply and modify gradients.</p>
+
+		<aside class="box note">
+			<p>You can also apply a gradient to pixel layers, adjustment layers and layer masks using the Gradient Tool.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>You can also apply bitmap fills to objects, allowing you to add a bitmap image from an external source (like a pattern or texture) which can then be transformed on the object.</p>
+		</aside>
+	</section>
+	
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Context</span>&mdash;allows the adjustment of either the <span class="ui">Fill</span> or <span class="ui">Stroke</span> color of the selected object.</li>
+			<li><span class="ui">Text</span> or <span class="ui">Frame</span>&mdash;assigns the fill to either the frame <span class="ui">Text</span> or the <span class="ui">Frame</span> itself. For text frames only.</li>
+			<li><span class="ui">Type</span>&mdash;converts the object&apos;s color type. For example, from <span class="ui">None</span> to <span class="ui">Linear</span>. From here, you can also apply a <span class="ui">Solid</span> or <span class="ui">Bitmap</span> fill.</li>
+			<li>Select, pick, and modify the object&apos;s solid or gradient color&mdash;click the color swatch to display a pop-up panel. See the <a href="../Panels/clrPanel.html">Color panel</a>, <a href="../Panels/swatchesPanel.html">Swatches panel</a>, and <a href="../Clr/gradientEditor.html">Gradient and bitmap fills</a> topics for more information on the settings available.</li>
+			<li><img src="../../../shared/ui/fill_-_rotate_gradient.png" class="tool heading" width="16" height="16" alt="Rotate Gradient" /> <span class="ui">Rotate gradient</span>&mdash;rotates the applied gradient by 90°.</li>
+			<li><img src="../../../shared/ui/fill_-_reverse_gradient.png" class="tool heading" width="16" height="16" alt="Reverse Gradient" /> <span class="ui">Reverse gradient</span>&mdash;the end stops swap places. (All intermediate stops are also repositioned accordingly.)</li>
+			<li><img src="../../../shared/ui/fill_-_maintain_aspect_ratio.png" class="tool heading" width="16" height="16" alt="Maintain fill aspect ratio" /> <span class="ui">Maintain fill aspect ratio</span>&mdash;if this option is off (default), the end stops can be resized separately which changes aspect ratio. When selected, the end stops are locked to keep the aspect ratio (i.e. changing one will automatically update the other). This setting affects only elliptical and bitmap fills.</li>
+			<li><span class="ui">Extend</span>&mdash;for bitmap fills only, these settings control how to present the bitmap fill&apos;s tile:<ul>
+					<li><span class="ui">Wrap</span>&mdash;repeats the bitmap outwards from a centrally set node; when it is smaller than the shape it is filling, it is tiled over to fill it.</li>
+					<li><span class="ui">Mirror</span>&mdash;repeats the bitmap outwards from a centrally set node; the option aids smooth transition and seamless presentation of the bitmap fill while resizing, however this can be easily moved by dragging to a new position.</li>
+					<li><span class="ui">Repeat</span>&mdash;used to achieve symmetrical and seamless patterns, which can be stacked infinitely.</li>
+					<li><span class="ui">Zero</span>&mdash;places the bitmap centrally without it repeating. This option is helpful for positioning the image within a shape or a frame, i.e. to establish its starting point, before deciding on a repeating Extend method.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Quality</span>&mdash;for bitmap fills only, these settings control the quality of the fill when scaling the object:<ul>
+					<li><span class="ui">Nearest</span>&mdash;the quickest method to use while picture scaling at a cost of some image quality loss, however improved speed. This variant does not employ pixel interpolation, and so results in a sharper yet more jagged image.</li>
+					<li><span class="ui">Bilinear</span>&mdash;similar to <span class="ui">Nearest</span>, however using a sophisticated interpolation technique while filling in empty pixels. Here, rather than copying the nearest pixel, the process uses adjacent pixels and this results in a considerably smoother scaling.</li>
+					<li><span class="ui">Lanczos3</span>&mdash;may be used to seamlessly interpolate the value of samples or as a low-pass filter, which should result in an even smoother transition of pixels. It is also approximately similar to the bicubic method of interpolation.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Scale with object</span>&mdash;for bitmap fills only, when checked, the bitmap fill will scale in proportion to its object being rescaled; when unchecked, you&apos;ll avoid any unwanted shrinking or stretching of your bitmap fill during object rescaling.</li>
+		</ul>	
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="tools_transparency.html">Transparency Tool</a></li>
+			<li><a href="../Clr/selectingClr.html">Selecting colors</a></li>
+			<li><a href="../Clr/gradientEditor.html">Gradient and bitmap fills</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

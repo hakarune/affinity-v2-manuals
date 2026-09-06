@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="place, content, images, pictures, photos, raster, documents, passthrough, scaling, artboard" />
+	<meta name="description" content="Raster and vector images, as well as documents, can be placed on pages or in picture frames." />
+	<title>Placing content</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Placing content</h1>
+
+		<p>Placing content allows you to add raster and vector images, as well as Affinity documents, PDFs, and PSDs, to your document&apos;s pages to enhance your publication.</p>
+				
+		<figure>
+			<div class="single"><img src="../../../shared/placing_content.png" alt="Placed content" /></div>
+			<figcaption></figcaption>
+		</figure>
+		
+		<aside class="box note">
+			<p>You can also place the contents of existing textual documents, such as Microsoft Word and RTF files. See <a href="../Text/importText.html">Importing text</a> for more information.</p>
+		</aside>
+	
+	</header>
+
+	<section class="about">
+	
+		<h2>About placing content</h2>
+				
+		<p>A file of a supported file format can be dragged and dropped onto the page to place it.</p>
+		
+		<p>Alternatively, multiple items can be loaded onto the <span class="ui">Place</span> panel and then placed, one at a time, in their top-to-bottom order from the panel or in any order you choose.</p>
+		
+		<p>The selected item on the panel can be placed at its native dimensions or arbitrary dimensions by clicking or dragging in the document view, respectively.</p>
+		
+		<p>When the <span class="ui">Place</span> panel is shown, the following settings are available on the context toolbar:</p>
+		
+		<ul>
+			<li><span class="ui">Repeat</span>&mdash;Specify the number of times you wish the selected items to be repeated upon placement. Each repeated item is placed once per page, starting at the page on which you click or drag. New pages will be added to your document if necessary. If multiple items are selected, each is repeated before the next in sequence is placed.</li>
+			<li><span class="ui">Replace Existing</span>&mdash;When selected, autoflow is allowed to change the contents of populated picture frames that are unlocked, whereas it will ignore locked picture frames. When unselected, autoflow populates only picture frames that are currently unpopulated.</li>
+		</ul>
+		
+		<aside class="box note">
+			<p>When a multi-page document or multiple items of any kind are loaded onto the <span class="ui">Place</span> panel, they can be <a href="placeImagesAutoflow.html">autoflowed</a> into your Affinity document.</p>
+		</aside>
+		
+		<h3>Tips for placing content</h3>
+		
+		<ul>
+			<li>Placed images are added as image layers rather than pixel layers. This allows their original image data (e.g., the native resolution, color space and color profile) to be kept. On export to PDF, this data is re-embedded into the PDF file.</li>
+			<li>Placed documents offer a <span class="ui">Page Box</span> option on the context toolbar to choose how the page displays (e.g., with/without bleed, objects only).</li>
+			<li>Use the context toolbar&apos;s scaling controls to ensure correct sizing of CAD-derived PDFs or PDF/PSD adverts on placement.</li>
+			<li>The added content can be rasterized at any time via the <span class="ui">Layer</span> menu (or via <span class="CLICK-TAG"></span>-click).</li>
+			<li>A file&apos;s embedded color profile will always be converted to the Affinity document&apos;s current working space.</li>
+			<li>For unprofiled placed images, the color space is assumed to be RGB.</li>
+		</ul>
+		
+		<p>Once placed in your document, you have the option to replace the content, retaining its position, as well as edit placed content.</p>
+		
+		<h3>Supported file formats for placement</h3>
+		<p>Many industry-standard file formats can be placed.</p>
+		
+		<ul>
+			<li>Documents<ul>
+					<li>Affinity Photo 2/Designer 2/Publisher 2</li>
+					<li>Adobe Illustrator (AI)</li>
+					<li>Adobe Freehand (10 and MX)<sup>1</sup></li>
+					<li>Adobe Photoshop (PSD)</li>
+					<li>Adobe InDesign (IDML)</li>
+					<li>Microsoft Excel (XLSX)</li>
+					<li>Microsoft Word (DOCX)<sup>5</sup></li>
+					<li>PDF</li>
+					<li>DWG/DXF</li>
+					<li>RTF<sup>5</sup></li>
+					<li>Plain text<sup>5</sup></li>
+				</ul>
+			</li>
+			<li>Images<ul>
+					<li>BMP</li>
+					<li>EPS</li>
+					<li>GIF</li>
+					<li>HEIF/HEIC/HIF<sup>4</sup></li>
+					<li>JPEG</li>
+					<li>J2K,JP2</li>
+					<li>JPEG-XR/JXR (WDP/HDP)</li>
+					<li>PNG</li>
+					<li>RAW<sup>2</sup></li>
+					<li>SVG</li>
+					<li>TGA<sup>3</sup></li>
+					<li>TIFF</li>
+					<li>WEBP</li>
+					<li>OpenEXR</li>
+					<li>Radiance HDR</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p><sup>1</sup> Multi-page Freehand files open with each page concatenated onto a single page. Add file extension .fh10 or .fh11 to import. Text import is not supported.</p>
+		<p><sup>2</sup> Raw images are processed automatically.</p>
+		<p><sup>3</sup> Supports transparency.</p>
+		<p><sup>4</sup> For iPhone images, the HEIC file may include an upsampled depth map, loaded as an editable second layer. For Canon EOS models (1 DX MkIII, R5 and R6), HIF files (HDR 10-bit PQ-encoded) are supported.</p>
+		<p><sup>5</sup> See <a href="../Text/importText.html">Importing text</a> for information about placing textual documents.</p>
+		
+		<aside class="box note">
+			<p>Upon placing a RAW image, Affinity Publisher 2 offers raw image development available via the <span class="ui">Place Tool</span> and <span class="ui">Move Tool</span>&apos;s context toolbar. Click <span class="ui">Develop Image</span> to be taken to a dedicated develop area, where any edits made will reflect live on the placed image. You can re-develop the image too, as required.</p>
+		</aside>
+		
+		<h3>Tips for specific file formats and content</h3>
+		
+		<table class="thirtythree">
+		
+			<tr>
+				<th>Content type</th>
+				<th>Comments</th>
+			</tr>
+	
+			<tr>
+				<td>Affinity Designer files with multiple artboards</td>
+				<td>You&apos;ll be provided with an <span class="ui">Artboard</span> option on the document&apos;s context toolbar so you can choose which artboard is displayed.</td>
+			</tr>
+			
+			<tr>
+				<td>Affinity documents, PDFs and PSD files</td>
+				<td>The file will be listed in the Layers panel as either an <span class="ui">Embedded document</span> or <span class="ui">Linked document</span> depending on the <span class="ui">Image placement</span> policy set during initial Document Setup.</td>
+			</tr>
+			
+			<tr>
+				<td>PSD files</td>
+				<td>A bitmap representation of the file will be displayed; the file content will not be interpreted. This will generally give better results on output and also negates the requirement to have correct fonts installed. You can still edit the layers of the placed PSD, although if edits are made the file will be interpreted again and its appearance may change (for example, if a font is missing).</td>
+			</tr>
+			
+			<tr>
+				<td>PDFs, SVGs, PSD and EPS files</td>
+				<td>If these are placed as embedded documents, you can edit them within Affinity. If edits are made, these files will be converted to Affinity documents and the original data will not be retained; you will not be able to write the embedded file out to its native file format and make it linked. Other features such as using PDF Passthrough will also then be lost. Please note that the Resource Manager will always display the original file&apos;s source filename and location should you need to refer back to it.</td>
+			</tr>
+			
+			<tr>
+				<td>Affinity documents, PDFs, SVGs, PSD and EPS files</td>
+				<td>If these are placed as linked documents, you will not be able to edit them directly within Affinity. However, any edits made to the files will be picked up by Affinity and will be reported as <span class="ui">Modified</span> in the Resource Manager. You can then use the Resource Manager&apos;s <span class="ui">Update</span> button to update the files to match the external changes that were made.</td>
+			</tr>
+			
+			<tr>
+				<td>Multi-page Affinity documents, InDesign (IDML) documents or PDFs</td>
+				<td>When placing a multi-page document, from its entry on the <span class="ui">Place</span> panel, you can:<ul>
+						<li>use the pop-up menu below the thumbnail to select the single page/spread you wish to place.</li>
+						<li>click the filename to reveal all the document&apos;s pages/spreads, then select all that you wish to place, either one at a time or using autoflow.</li>
+					</ul>Once placed, you can choose which page or spread you want to display by using <span class="ui">Spread</span> on the context toolbar. For PDF, only one page can ever be displayed, although you can simulate a spread by duplicating the placed object and choosing a different page to view.</td>
+			</tr>
+			
+			<tr>
+				<td>Placed PDFs</td>
+				<td>These offer a <span class="ui">PDF Passthrough</span> option on the context toolbar, which defaults to Passthrough for exact reproduction within your own PDFs. If that&apos;s not possible, the Interpret option is selected and the <a href="../Panels/preflightPanel.html">Preflight panel</a> lists the <a href="../Publishing/preflight.html">reason(s)</a>. A bitmap preview of the PDF&rsquo;s contents is displayed while editing your document in Affinity Publisher.</td>
+			</tr>
+			
+			<tr>
+				<td>Password-protected PDFs</td>
+				<td>Placing a password-protected PDF will prompt you to enter the file&apos;s password. The password is then requested whenever you open the parent document. When the parent document is exported, the resulting PDF does not have to be password-protected. If you wish to protect the exported PDF, ensure you set the required password(s) and restrictions on Affinity&apos;s <span class="ui">Export</span> dialog.</td>
+			</tr>
+			
+			<tr>
+				<td>Placed PDF, DWG or DXF files containing layers</td>
+				<td>These offer a <span class="ui">Layers</span> option on the context toolbar, from which you can choose which of the placed file&apos;s layers are visible or hidden in your Affinity document. For example, a layer of a DWG or DXF file might contain notes or more technical information, such as component labeling, that you want to omit for a less technical audience. For PDFs, changing layer visibility will automatically set <span class="ui">PDF Passthrough</span> to Interpret.</td>
+			</tr>
+			
+			<tr>
+				<td>Microsoft Excel Workbook spreadsheets (XLSX)</td>
+				<td>These can be placed directly in Publisher as tables. When placing, click on the page (instead of dragging) to preserve the original appearance of the file.</td>
+			</tr>
+
+		</table>
+		
+	</section>
+
+	<section class="howto">
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/place_image_tool.png" class="tool heading" width="18" height="18" alt="Place Tool" /> To place a single piece of content:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>Select the <span class="ui">Place Tool</span>.</li>
+						<li>From the <span class="ui">File</span> menu, select <span class="ui">Place</span>.</li>
+					</ul>
+				</li>
+				<li>In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+				<li>(Optional) If the file is a multi-page document, the <span class="ui">Place</span> panel appears. Select the page/spread you wish to place from the entry on the panel.</li>
+				<li>Do one of the following:<ul>
+						<li>Click to place the file at its default, displayed size.</li>
+						<li>Drag on the page to set the size and position of the content.</li>
+						<li>Click on a picture frame to place the item in it.</li>
+					</ul>
+				</li>
+			</ol>
+
+			<aside class="box note">
+				<p>Alternatively, you can drag and drop a file onto a page. It will be added as a new layer. The current image placement policy (embedded or linked) will be honored.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/place_image_tool.png" class="tool heading" width="18" height="18" alt="Place Tool" /> To place multiple pieces of content:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>Select the <span class="ui">Place Tool</span>.</li>
+						<li>From the <span class="ui">File</span> menu, select <span class="ui">Place</span>.</li>
+					</ul>
+				</li>
+				<li>On the pop-up dialog:<ol>
+						<li>Navigate to the file(s) you wish to place.</li>
+						<li>Select the file(s). Hold the <span class="SHIFT-TAG"></span> or <span class="CMD-TAG"></span> <span class="KEY-TAG"></span> to select adjacent or non-adjacent files, respectively.</li>
+						<li>Click <span class="ui">Open</span>.</li>
+					</ol>The <span class="ui">Place</span> panel will appear, displaying the items you selected.</li>
+				<li>The topmost item on the <span class="ui">Place</span> panel is automatically selected to be placed next.</li>
+				<li>(Optional) Select a different item.</li>
+				<li>Do one of the following:<ul>
+						<li>Click to place the file at its default, displayed size.</li>
+						<li>Drag on the page to set the size and position of the content.</li>
+						<li>Click on a picture frame to place the selected item in it.</li>
+					</ul>The selected item is removed from the panel<sup>1</sup>.</li>
+				<li>If the panel contains no more items, it will close automatically. Otherwise:<ul>
+						<li>repeat from step 3.</li>
+						<li>press the <span class="key ESC-TAG"></span> <span class="KEY-TAG"></span> to cancel further placement and close the panel.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<x-osx>
+				<aside class="box note">
+					<p>Alternatively, <span class="key ALT-TAG"></span>-dragging multiple files from Finder onto a page in the document view will add them directly to the <span class="ui">Place</span> panel.</p>
+				</aside>
+			</x-osx>
+		
+			<x-win32>
+				<aside class="box note">
+					<p>Alternatively, <span class="key ALT-TAG"></span>-dragging multiple files from Explorer onto a page in the document view will add them directly to the <span class="ui">Place</span> panel.</p>
+				</aside>
+			</x-win32>
+		</details>
+		
+		<details open="open">
+			<summary>To scale a placed image/document by DPI, percentage scale or to original size:</summary>
+			<ol>
+				<li>Select the image or document.</li>
+				<li>From the context toolbar, select the Image/document Info section and choose an <span class="ui">Image DPI</span> or <span class="ui">Scale</span> percentage value from the pop-up menu. Alternatively, click <span class="ui">Original Size</span> to scale to 100% (native dimensions) and reset aspect ratio.<br /><figure class="nft">
+						<div class="single"><img src="../../images/tbr_context_imagescaling.png" width="273" height="125" alt="Image scaling" /></div>
+						<figcaption></figcaption>
+					</figure>
+
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To return squashed content to its original aspect ratio:</summary>
+			<ul>
+				<li>With the content selected, double-click on one of its edge handles to reset its aspect ratio.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To convert placed content into a picture frame:</summary>
+			<ul>
+				<li>Right-click on the content and select <span class="ui">Convert to Picture Frame</span>.</li>
+				<li>Alternatively, with the content selected, go to the <span class="ui">Layer</span> menu and select <span class="ui">Convert to Picture Frame</span>.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To edit an embedded document:</summary>
+			<ul>
+				<li>Do one of the following:<ul>
+						<li>In the document view, double-click the placed document.</li>
+						<li>From the context toolbar, select <span class="ui">Edit Document</span>.</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<aside class="box note">
+				<p>The editability of the embedded document may be affected by how the original document was saved in its native app.</p>
+			</aside>
+			
+			<aside class="box note">
+				<p>Changes are saved within the main document without affecting the original.</p>
+			</aside>
+		</details>
+
+		<details open="open"><summary>To replace content:</summary>
+			<ol>
+				<li>Select placed content.</li>
+				<li>From the context toolbar, select <span class="ui">Replace Image</span> or <span class="ui">Replace Document</span> depending on what you&apos;ve placed.</li>
+				<li>Select a replacement file from the file browser window and click <span class="ui">Open</span>.</li>
+			</ol>
+		</details>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="placeImagesAutoflow.html">Autoflowing images and documents</a></li>
+			<li><a href="placeImagesWeb.html">Placing images from the Web</a></li>
+			<li><a href="../Tools/tools_placeimage.html">Place Tool</a></li>
+			<li><a href="embeddingVsLinking.html">Embedding vs linking</a></li>
+			<li><a href="../Media/resourceManager.html">Resource Manager</a></li>
+			<li><a href="linkedServices.html">Linked Services</a></li>
+			<li><a href="../Clr/ClrProfiles.html">Color management</a></li>
+			<li><a href="../Text/importText.html">Importing text</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

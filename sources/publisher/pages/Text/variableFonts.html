@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="axis, static font, named instance, static instance, " />
+	<meta name="description" content="Make adjustments to specific aspects of a font's design." />
+	<title>Variable fonts</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Variable fonts</h1>
+	
+		<p>When you apply a static font to text, you can often choose from several font styles, such as Regular, Bold and Condensed. Variable fonts,though, allow you to adjust specific aspects of their design, known as <span class="term">axes of variation</span>, or simply <span class="term">axes</span>, along a continuum of values.</p>
+
+	</header>
+
+	<section class="about">				
+		<figure>
+			<div class="single"><img src="../../../shared/variableFonts01.png" class="responsive" alt="Common axes of variable fonts" /></div>
+			<figcaption>Examples of font variations along common axes: (A) weight (B) optical size (C) width.</figcaption>
+		</figure>
+		
+		<p>Each axis can be adjusted individually, which allows for many more possible combinations than are available when using static fonts.</p>
+
+		<aside class="box note">
+			<p>Like static fonts, variable fonts include predefined font styles, which are named combinations of values for a font&apos;s various axes. When formatting text, they are available via the context toolbar&apos;s <span class="ui">Font Style</span> setting. Elsewhere, you may see them referred to as <span class="term">named instances</span>.</p>
+		</aside>
+				
+		<p>Depending on a font designer&apos;s intent, you may be able to make other adjustments to a font&apos;s appearance, such as :</p>
+		
+		<ul>
+			<li>the height of ascenders and descenders, to better fit your chosen line spacing.</li>
+			<li>the style of stem terminals, to choose between straight and swollen.</li>
+			<li>the width of counters, enclosed and partially enclosed spaces within glyphs, to affect legibility at your chosen font size.</li>
+		</ul>
+		
+		<aside class="box tip">
+			<p>A large selection of free variable fonts is available from <a href="https://fonts.google.com/variablefonts" target="_blank">Google Fonts</a>.</p>
+		</aside>
+		
+		<h3>Axis availability</h3>
+		<p>You may see fewer axes in Affinity than are mentioned in a font&apos;s marketing materials. Affinity respects the OpenType specification&apos;s provision for font designers to mark any axis as hidden.</p>
+		
+		<p>To reveal and modify hidden axes, select <span class="ui">Font Variations</span> and then select <span class="ui">Show hidden axes</span>.</p>
+		
+		<aside class="box warning">
+			<p>Hidden axes are often used internally by a font and controlled indirectly by your choices for other axes. Amending them directly may result in reduced typographic fidelity.</p>
+		</aside>
+				
+		<figure>
+			<div class="single"><img src="../../../shared/variableFonts02.png" class="responsive" alt="Width and weight matrix" /></div>
+			<figcaption>A matrix of font variations along the (A) width and (B) weight axes.</figcaption>
+		</figure>
+		 
+		 <aside class="box note">
+		 	<p>When a document that uses variable fonts is exported to PDF, Affinity creates a static instance of the font with fixed settings for each variation used. Affinity names static instances in a way that should help identify the original variable font when such a PDF is imported or placed in a document.</p>
+		 </aside>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/variable_font.png" class="tool" width="18" height="18" alt="Font Variations" /> To adjust a variable font&apos;s settings:</summary>
+			<p>With text selected that is formatted with a variable font:</p>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>On the context toolbar, select <span class="ui">Font Variations</span>.</li>
+						<li>On the <span class="ui">Character</span> panel, select <span class="ui">Font Variations</span>.</li>
+					</ul>
+				</li>
+				<li>Adjust the axes&apos; settings as required.</li>
+			</ol>
+		</details>
+		
+		<aside class="box tip">
+			<p>When adjusting an axis by dragging its slider, holding the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> overrides snapping to the notches to allow for smaller adjustments.</p>
+		</aside>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/characterPanel.html">Character panel</a></li>
+			<li><a href="text_general.html">Working with text</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

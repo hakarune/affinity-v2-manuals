@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="design aids, grids, baseline grid" />
+	<meta name="description" content="A baseline grid can be overlaid over your page to help you align text vertically." />
+	<title>Baseline grids</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Baseline grids</h1>
+
+		<p>Baseline grids are perfect for creating multiple-page layouts that are consistent, professional and appealing. The baseline grid provides you with a series of equally-spaced horizontal guides that make it easy to perfectly cross-align body copy between frames and columns across your whole document.</p>
+		
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/baselinegrid_before.jpg" class="screenshot responsive" alt="Before" /><div><img src="../../../shared/baselinegrid_after.jpg" class="screenshot responsive" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<p>The baseline grid is overlaid over your page to help you align text. A baseline grid can be applied to the entire document or individual text frames within it, and will align baselines across linked or completely separate text frames.</p>
+		
+		<p>The baseline grid&apos;s Grid Spacing option overrides the leading value of frame text. Setting the grid spacing to the same size as your body text leading means that your frame text should snap to, and perfectly align with, the baseline grid. The baseline grid is blue by default but can be any color you choose.</p>
+		
+		<aside class="box note">
+			<p>If you increase the font size of any text to be greater than the current Grid Spacing size, Publisher will set the line height to be twice the baseline height.</p>
+		</aside>
+		
+		<p>You can adjust your Document baseline grid for a baseline grid spanning across a whole page, or from the <span class="ui">Text Frame</span> panel or <span class="ui">Table</span> panel for a baseline grid that has instead been applied only to an individual text frame or table,respectively.</p>
+
+		<p>Frame-specific baseline grids are useful for text frames that use a different font sizes (e.g. for caption text, quotes, etc) to the main document&apos;s body text, where the frame text will adopt its own independent baseline grid rules and not those of the Document baseline grid.</p>
+		
+		<aside class="box note">
+			<p>Baseline grid settings are applicable for Frame Text only. They do not apply to Artistic Text.</p>
+		</aside>
+ 
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted on a baseline grid:</p>
+			<ul>
+				<li>Use Baseline Grid&mdash;ticking this checkbox will enable the baseline grid.</li>
+				<li>Start Position&mdash;specify the offset of the first grid line from the origin at <span class="ui">Relative To</span>.</li>
+				<li>Relative To&mdash;specify what the baseline grid&apos;s starting position is in relation to. The Top of Page option is used for facing page spreads arranged vertically&mdash;you can restart the grid from the top of the second page in the spread.</li>
+				<li>Grid Spacing&mdash;specify how far apart consecutive horizontal grid lines are.</li>
+				<li>Color&mdash;click on the swatch to display a pop-up panel to set the line color. Drag the slider to set the opacity of the line color.</li>
+				<li>Show Baseline Grids&mdash;ticking on this checkbox will show or hide document baseline grids (not available for baseline grids for text frames or tables).</li>
+				<li>Display Threshold&mdash;adjust the zoom level below which document baseline grids will not be displayed (not available for baseline grids for text frames or tables). For example, choosing 100% will make the baseline grid visible at a zoom level of 100% or above.</li>
+			</ul>
+
+	</section>
+	
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/show_baseline_grid_manager.png" class="tool" width="18" height="18" alt="Show Baseline Grid" /> To enable the Baseline Grid:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>On the main toolbar, click <span class="ui">Show Baseline Grid</span>.</li>
+						<li>On the <span class="ui">View</span> menu, select the equivalent option.</li>
+					</ul>
+				</li>
+				<li>From the dialog, check <span class="ui">Use Baseline Grid</span>.</li>
+				<li>Adjust the position and spacing of your baseline grid.</li>
+			</ol>
+
+		<aside class="box note">
+			<p>Text will move as the grid is adjusted using the <span class="ui">Grid Spacing</span> option, allowing you to precisely position and organize it on your page.</p>
+		</aside>
+					
+		</details>
+
+		<details open="open">
+			<summary>To hide (show) the baseline grid:</summary>
+			<ul>
+				<li>From the Baseline Grid - Document dialog, uncheck/check <span class="ui">Show Baseline Grids</span>.</li>
+			</ul>
+			
+			<aside class="box note">
+				<p>If you don&apos;t see the baseline grid immediately, ensure the document&apos;s current zoom level exceeds the grid&apos;s <span class="ui">Display Threshold</span>.</p>
+			</aside>
+			
+		</details>
+
+		<details open="open">
+			<summary>To align text to the baseline grid:</summary>
+			
+			<ol>
+				<li>Go to the <span class="ui">Paragraph</span> panel.</li>
+				<li>Click on the <span class="ui">Spacing</span> tab.</li>
+				<li>Ensure that the <span class="ui">Align to Baseline Grid</span> checkbox is ticked.</li>
+			</ol>
+
+		</details>
+			
+		<details open="open">
+			<summary><img src="../../../shared/ui/snapping.png" class="tool" width="18" height="18" alt="Snapping" /> To snap objects to the baseline grid:</summary>
+			<ul>
+				<li>From the main toolbar, enable <span class="ui">Snapping</span>, then click the Snapping down arrow and ensure <span class="ui">Snap to Spread</span> is checked.</li>
+			</ul>
+
+		</details>
+		
+		<details open="open">
+			<summary>To set up an independent text frame (or table) baseline grid:</summary>
+			<ol>
+				<li>On the <span class="ui">Window</span> menu, select <span class="ui">Text&gt;Text Frame</span> or <span class="ui">Table&gt;Table</span>.</li>
+				<li>On the <span class="ui">Baseline Grid</span> section, check <span class="ui">Use Independent Baseline Grid</span>.</li>
+				<li>Adjust the independent grid settings.</li>
+			</ol>
+			
+		<aside class="box note">
+			<p>If a text frame (table) is rotated relative to its governing grid, baseline grid snapping will be turned off for text in the frame.</p>
+		</aside>
+			
+		</details>
+		
+		<details>
+			<summary>To ignore the underlying document baseline grid on text frames and tables:</summary>
+			<ul>
+				<li>With a table or text frame selected, on the <span class="ui">Table</span> panel or <span class="ui">Text Frame</span> panel, check <span class="ui">Ignore Baseline Grid</span>. Uncheck to allow the document baseline grid to influence the text frame or table again.</li>
+			</ul>
+			
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="grids.html">Grids</a></li>
+			<li><a href="../Workspace/toolbar.html">Toolbar</a></li>
+			<li><a href="../Panels/textFramePanel.html">Text Frame panel</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

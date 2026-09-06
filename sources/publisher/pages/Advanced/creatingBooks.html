@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="books, create, creating, chapters, collate, reorder" />
+	<meta name="description" content="Create books from multiple documents and decide how they are collated." />
+	<title>Creating books</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Creating books</h1>
+	
+		<p>Books are created and their contents managed using the <span class="ui">Books</span> panel, on which you can add, remove, replace and rearrange chapters.</p>
+
+		<aside class="box warning">
+			<p>When you add a document created in an older version of Affinity to a book, you&apos;ll be warned that proceeding will modify the document, making it no longer usable in older versions of Affinity. If you wish to use the document in older versions, make a copy of it and add the copy to your book instead.</p>
+		</aside>
+	
+	</header>
+
+	<section class="about">
+		<h2>Managing a book&apos;s chapters</h2>
+		<p>Each document added to a book may represent a literal chapter of your publication but it doesn&apos;t have to. How your publication is divided into discrete documents is your decision, which may be influenced by your production workflow.</p>
+		
+		<p>Multiple chapters can be simultaneously added or removed. One chapter at a time can be replaced or rearranged.</p>
+		
+		<aside class="box tip">
+			<p class="osx">Multiple selected chapters can be opened at once by double-clicking one of the selection.</p>
+			<p class="win32">Multiple selected chapters can be opened at once by <span class="CLICK-TAG"></span>-clicking one of the selection and then selecting <span class="ui">Open</span>.</p>
+		</aside>
+		
+		<p>Replacing chapters can help in a collaborative workflow, e.g. upon receiving a version that has been copy-edited.</p>
+				
+		<aside class="box warning">
+			<p>Adding a document as a chapter automatically modifies its file&mdash;for example, to fit the pagination of the book. If the document will be added to multiple publications, it is recommended that you add a copy of the document to each one.</p>
+		</aside>
+		
+		<h3>Stray pages</h3>
+		<p>For books that contain facing-page spreads, there are two behaviors that determine how stray pages&mdash;single pages at the end or start of consecutive chapters&mdash;are handled.</p>
+		
+		<p>Where one chapter ends with a left page and the next chapter starts on a right page, Affinity can merge these stray pages into a facing-pages spread.</p>
+		
+		<p>Where only one stray page exists between consecutive chapters, Affinity can &apos;pad&apos; the document, i.e. insert pages, in order to maintain facing-pages spreads.</p>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To create a book:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>Select <span class="ui">File</span>&gt;<span class="ui">New Book</span>.</li>
+				<li>If the <span class="ui">Books</span> panel is visible, either:<ul>
+						<li>Click <span class="ui">Create Book</span> on the panel (available if no books are open).</li>
+						<li>Select <span class="ui">New Book</span> from the Panel Preferences menu.</li>
+					</ul>
+				</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_chapter.png" class="tool" width="16" height="16" alt="Add Chapter" /> To add chapters:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, click <span class="ui">Add Chapter</span>.</li>
+				<li>Browse to and select one or more Affinity Publisher documents (saved with the .afpub file extension).</li>
+				<li>Click <span class="ui">Open</span>.</li>
+			</ol>
+			
+			<aside class="box tip">
+				<p>Alternatively, drag one or more Affinity Publisher documents onto the <span class="ui">Books</span> panel and drop them at the position where you wish to add them as chapters.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/remove_chapter.png" class="tool" width="16" height="16" alt="Remove Chapter" /> To remove chapters:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, select one or more chapters.</li>
+				<li>Click <span class="ui">Remove Chapter</span>.</li>
+				<li>Browse to and select an Affinity Publisher document, then click <span class="ui">Open</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To replace a chapter:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, select a chapter.</li>
+				<li>From the Panel Preferences menu, select <span class="ui">Replace Chapter</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To change chapter order:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, drag a chapter up or down the list.</li>
+				<li>When you see a blue line at the desired position, drop the chapter.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To allow consecutive stray pages to be merged into facing-page spreads:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, open the Panel Preferences menu.</li>
+				<li>From the <span class="ui">Stray Pages</span> submenu, ensure <span class="ui">Merge Where Possible</span> is checked.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To allow padding so that single stray pages become facing-page spreads:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, open the Panel Preferences menu.</li>
+				<li>From the <span class="ui">Stray Pages</span> submenu, ensure <span class="ui">Pad</span> is checked.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="aboutBooks.html">About books</a></li>
+			<li><a href="syncingChapters.html">Synchronizing chapters</a></li>
+			<li><a href="updatingNumbers.html">Updating page, list and note numbers</a></li>
+			<li><a href="outputtingBooks.html">Outputting books</a></li>
+			<li><a href="../Panels/booksPanel.html">Books panel</a></li>
+		</ul>
+	</section>
+	
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

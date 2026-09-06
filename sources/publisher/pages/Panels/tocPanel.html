@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panels, table of contents" />
+	<meta name="description" content="From the Table of Contents panel, you can insert a new table of contents, update and manage existing TOCs, and create styles for your TOCs." />
+	<title>Table of Contents panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Table of Contents panel</h1>
+
+		<p>The <span class="ui">Table of Contents</span> panel allows you to insert, update and manage any table of contents (TOCs) within your document.</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Table of Contents panel</h2>
+		
+		<p>From the <span class="ui">Table of Contents</span> panel, you can insert a new table of contents, update and manage existing TOCs, and create styles for your TOCs.</p>
+		
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via <span class="ui">Window&gt;References</span>.</p>
+		</aside>
+	
+		<figure>
+			<p><img src="../../images/panel_toc.png" class="responsive" width="264" alt="Table of Contents panel" /></p>
+			<figcaption>The Table of Contents panel.</figcaption>
+		</figure>
+	
+	</section>
+ 	
+	<section class="settings">
+	
+		<p>The following icons are available from the top of the panel:</p>
+			<ul>
+				<li><img src="../../../shared/ui/insertToc.png" class="tool" width="16" height="16" alt="Insert TOC" /> <span class="ui">Insert</span>&mdash;inserts a generated TOC in a text frame at the caret position for your document.</li>
+				<li><img src="../../../shared/ui/updateToc.png" class="tool" width="16" height="16" alt="Update TOC" /> <span class="ui">Update</span>&mdash;updates the selected TOC to include TOC entries for text newly assigned with a text style that is marked to be included in the TOC.</li>
+				<li><img src="../../../shared/ui/updateAllTocs.png" class="tool" width="16" height="16" alt="Update all TOCs" /> <span class="ui">Update All Tables of Contents</span>&mdash;updates all TOCs within your document.</li>
+				<li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete TOC" /> <span class="ui">Delete</span>&mdash;deletes the selected TOC in the TOC pop-up menu.</li>
+				<li><img src="../../../shared/ui/renameToc.png" class="tool" width="16" height="16" alt="Rename TOC" /> <span class="ui">Rename</span>&mdash;allows you to enter a new name for the selected TOC.</li>
+			</ul>
+			
+	<h3>Settings (or Preferences)</h3>
+
+		<p>Each table of contents within the document has the following properties:</p>
+			<ul>
+				<li><span class="ui">TOC</span>&mdash;select a TOC from the pop-up menu to configure its settings and jump to its page location.</li>
+				<li><span class="ui">Scope</span>&mdash;the TOC will be generated from all of the document or only the section containing the TOC.</li>
+				<li><span class="ui">Look In</span>&mdash;TOC headings will be generated from all text frames in the section(s) or only the frames that are linked in a text flow.</li>
+				<li><span class="ui">Stop at next TOC</span>&mdash;check to automatically stop TOC generation if another TOC is found.</li>
+				<li><span class="ui">Include entries before TOC</span>&mdash;check to include TOC entries before the intended TOC location, e.g., to include preface or introductory information.</li>
+				<li><span class="ui">Include as PDF Bookmarks</span>&mdash;when selected, allows TOC entries to be included as PDF bookmarks.</li>
+			</ul>
+
+		<p>The entries that are included in a table of contents and their appearances are determined by the <span class="ui">TOC Style</span>. All tables of contents must have a <span class="ui">TOC Style</span>. These styles can be created, renamed and deleted from the <span class="ui">TOC Style</span> menu. Multiple TOCs can share a <span class="ui">TOC Style</span>.</p>
+
+		<p>The <span class="ui">TOC Style</span> has the following properties:</p>
+			<ul>
+				<li><span class="ui">Numbers before headings</span>&mdash;check to place page numbers before the TOC headings.</li>
+				<li><span class="ui">Remove line breaks</span>&mdash;check to replace line breaks with a space in the TOC. For example, headings with line breaks will appear as single-line TOC entries.</li>
+				<li><span class="ui">Include inline pins</span>&mdash;copy inline pinned objects from headings into the TOC.</li>
+				<li><span class="ui">Separator</span>&mdash;specify any glyphs you would like to place between the page number and the text in an entry. Use the arrow for common glyphs.</li>
+				<li><span class="ui">Style Name</span>&mdash;check paragraph styles in the list to base the TOC on the text associated from those styles. For each style you select, page numbers are included by default.</li>
+			</ul>
+
+		<p>The <span class="ui">TOC style</span> also holds a group of text styles, which include:</p>
+			<ul>
+				<li>A base paragraph style for all the entries.</li>
+				<li>A base character style for all the page numbers in the entries.</li>
+				<li>One paragraph style for each source style controlling how those entries will look.</li>
+				<li>One character style for each source style controlling how page numbers for those entries will look.</li>
+				<li>An options menu to the right of each style offering a submenu that allows you to include or exclude page numbers and specify an indent level for the style.</li>
+			</ul>
+
+		<aside class="box note">
+			<p>All of these styles are auto-generated, and can be edited but not deleted or renamed.</p>
+		</aside>
+	
+	</section>	
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Advanced/toc.html">Table of contents</a></li>
+			<li><a href="../Advanced/pdfBookmarks.html">PDF Bookmarks</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+# Glossary
+
+On this page you can find an alphabetical list of terms that you may come across when using this software.
+
+- **[Adjustment](../18-adjustments/01-applying-adjustments.md)**—an effect which can be applied to your design as a new layer for creative or corrective purposes.
+- **[Alignment](../09-object-control/05-aligning-objects.md)**—positioning a selection of objects or paragraph text to the left, right, center, top or bottom.
+- **[Anchor](../13-references/05-hyperlinks.md)**—an inserted text marker that can be jumped to from a clicked hyperlink.
+- **[Asset](../04-get-started/15-using-assets.md)**—a stored design element which can be accessed from any document you have open.
+- **Baseline**—determines the position of the bottom of text characters.
+- **[Baseline grid](../16-design-aids/05-baseline-grids.md)**—a grid which is overlaid over your page to help you align text vertically.
+- **[Bleed](../14-publishing-and-sharing/06-pdf-publishing/02-setting-bleed.md)**—the area of the page that goes beyond the page edge to be trimmed off at commercial printers in the event of paper movement or design inconsistencies.
+- **[Blend mode](../08-layers/08-layer-blending.md)**—a mode applied to your layer which changes how the applied pixels interact with existing pixels on the layer below.
+- **[Blend range](../08-layers/09-layer-blend-ranges.md)**—let you blend layers in a project by controlling opacity across the tonal range of the currently selected layer or the underlying layer(s).
+- **Body text**—the main text on a page, not including headlines.
+- **Bounding box**—a temporary frame around a selected object showing its outer dimensions.
+- **[Color picker](../07-color/07-sampling-colors.md)**—a tool used to select and sample colors.
+- **[Color space](../07-color/03-color-spaces.md)**—the range of colors used to display and print your file.
+- **[Column guide](../16-design-aids/06-ruler-and-column-guides.md)**—a series of non-printing filled or outlined columns that can be used as a design aid for columnar projects.
+- **Clipboard**—a memory space used for short-term storage and transfer of content during cut, copy and paste operations.
+- **[Clipping](../08-layers/11-layer-clipping.md)**—the act of positioning one object inside another.
+- **[CMYK](../07-color/03-color-spaces.md)**—a color model that is used for commercial process printing.
+- **[Document preset](../04-get-started/01-create-new-documents.md)**—a blank file containing a group of recommended document setup options according to how you plan to work.
+- **[Document template](../04-get-started/10-document-templates.md)**—a file containing reusable pre-formatted text styles, graphics, and layouts which you can use to form the basis of another document.
+- **Embedded file**—a placed copy of an original file that is embedded into a document. If the original file is moved or updated, the embedded copy will remain unchanged.
+- **[Global color](../07-color/08-global-colors.md)**—a color that can be created, applied, and updated for different objects across your design from a single place.
+- **[Glyph](../10-text/06-editing/02-special-characters-and-glyphs.md)**—a specific shape of a letter presented in a particular typeface.
+- **Gradient**—a gradual blend from one color to another.
+- **[Grid](../16-design-aids/04-grids.md)**—a pattern of horizontal and vertical lines which is overlaid over your page to help you align objects.
+- **[Guide](../16-design-aids/06-ruler-and-column-guides.md)**—non-printing, non-exporting lines that float over page objects and assist with their positioning.
+- **Gutter**—a blank space that runs between text columns.
+- **[Hyperlink](../13-references/05-hyperlinks.md)**—a link that allows you to jump to specific pages, anchors, files or web addresses (URLs).
+- **[Hyphenation](../10-text/06-editing/03-hyphenation.md)**—parameters determining how a line of text will be hyphenated.
+- **[Index](../13-references/03-index.md)**—a list of keywords (or topics) used in a publication which contain referenced page numbers.
+- **Justification**—parameters determining how spaces between words and characters should be adjusted.
+- **[Kerning](../10-text/09-character-level/02-tracking-and-kerning.md)**—controlling the space between two characters which, due to each character's geometry, might otherwise leave an unappealing gap.
+- **[Leading](../10-text/08-paragraph-level/02-leading-and-inter-paragraph-spacing.md)**—space added between lines of text.
+- **Ligatures**—presents two adjacent characters in a more creative way.
+- **Linked file**—a placed file containing a link between the document and the file on disk to allow it to update if it is changed on disk.
+- **[Margin](../16-design-aids/07-margins.md)**—the buffer area between the main content of the page and the page edges (or spread and spread edges).
+- **[Master page](../05-pages-spreads-and-sections/12-master-pages/01-about-master-pages.md)**—a page that can be used to automatically apply formatting to other pages in your document.
+- **Orphan**—a stray opening line of a paragraph that appears by itself at the end of a page/text column, separated from the rest of the paragraph.
+- **[Overprinting](../07-color/10-overprinting.md)**—printing one ink color on top of another instead of the underlying color being removed (knocked out).
+- **Overset**—text overflows its text frame leaving it hidden.
+- **Palette**—a selection of colors.
+- **Pasteboard**—the off-page area around the document.
+- **Persona**—allows in-app access to other Affinity products' features using Affinity's proprietary Studiolink technology.
+- **Picture frame**—a frame which content (such as images and documents) can be inserted into.
+- **Placeholder text**—a section of text that can temporarily be inserted into a frame to test the formatting and layout before the final copy is ready.
+- **[Preflight check](../14-publishing-and-sharing/05-preflight.md)**—a final check of page layout, fonts, graphics and colors before exporting or printing.
+- **[RGB](../07-color/03-color-spaces.md)**—a color model that is often used for digital work.
+- **[Ruler](../16-design-aids/08-rulers.md)**—guideline used to accurately place objects or guides in the document view.
+- **[Ruler guide](../16-design-aids/06-ruler-and-column-guides.md)**—a non-printing guide that can be aligned to any point on the ruler.
+- **[Spot color](../07-color/09-spot-colors.md)**—a color that can be used when your artwork contains a very limited color set, reducing print costs significantly and allowing you to accurately reproduce colors otherwise impossible with process colors.
+- **[Spread](../05-pages-spreads-and-sections/01-about-pages-and-spreads.md)**—left and right page pairings displayed at the same time (when **Facing pages** is checked).
+- **Swashes**—a more ornate alternative for a glyph, often appearing more exaggerated and calligraphic in nature.
+- **[Table of contents](../13-references/02-table-of-contents.md)**—a list of chapter or section headings, usually found at the start of a document and normally annotated with page numbers.
+- **[Text frame](../10-text/03-frame-text.md)**—a frame containing paragraph text which uses a formalized structure and layout.
+- **[Text style](../10-text/10-text-styles/01-using-text-styles.md)**—a set of text attributes and properties which can be applied to text.
+- **[Tracking](../10-text/09-character-level/02-tracking-and-kerning.md)**—the letter spacing between any two characters in your text. This can be increased or decreased equally.
+- **White space**—design-free areas of your layouts intended to give your publication an uncluttered appearance.
+- **Widow**—a stray line at the end of a paragraph that falls at the start of the next page/text column, separated from the rest of the paragraph.

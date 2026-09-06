@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layer, mask, masking" />
+	<meta name="description" content="Layer masks allow you to selectively hide layer contents to reveal layers below the masked layer." />
+	<title>Layer masking</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Layer masking</h1>
+		
+		<p>A layer mask is used to reveal a portion of a layer while the rest of the layer remains hidden. This means that you can use a mask layer to &apos;delete&apos; areas of a layer that you don&apos;t want.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/layermask.jpg" alt="Layer mask" /></div>
+			<figcaption>Layer mask with radial gradient (0-100% opacity) applied to picture frame</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>The non-destructive power of masking</h2>
+
+		<p>Masks are applied as a separate layer, allowing them to be freely edited and moved. Mask layers affect any object below them within the same parent layer. They can also be <a href="layerClip.html">clipped</a> to individual objects so that only that object is affected.</p>			
+		
+		<p><a href="adjustmentLayers.html">Adjustment layers</a> also have mask layer properties. Areas of an adjustment layer can be revealed or hidden in the same way as with a mask layer.</p>
+
+		<p>Once a mask layer is created, you can apply different levels of grayscale or opacity to the mask layer&mdash;apply White (or 100% Opacity) to reveal; apply Black (or 0% Opacity) to conceal; apply intermediate grayscale levels for partial masking. Try drawing a gradient (with Gradient Tool) across a mask layer and assign different grayscale levels or opacity to end stops to experiment.</p>
+		
+		<p>Mask layers can have <a href="../Layers/layerBlendModes.html">blend modes</a> assigned to them.</p>
+		
+		<aside class="box note">
+			<p><img src="../../../shared/ui/add_fx_layer.png" class="tool" width="18" height="18" alt="layer effects" /> <span class="ui">Layer FX</span> take no effect on mask layers.</p>
+		</aside>
+
+		<aside class="box note">
+			<p>You can take advantage of brush tools in Designer or Photo Persona for brush-based masking.</p>
+		</aside>
+
+	</section>
+	
+	<section class="about">
+		<h3>Filling and clearing masks</h3>
+		<p>In addition to using brushes to either reveal or conceal the effects of an adjustment, filter and/or color effects on a mask, the <span class="ui">Clear Mask</span> and <span class="ui">Fill Mask</span> options enable fast and easy approach to amend the edits.</p>
+	</section>
+	
+	<section class="howto">
+		<details>
+			<summary>To Clear or Fill a mask:</summary>
+			<ol>
+				<li>Select a mask layer.</li>
+				<li>Add an effect or an adjustment, as required.</li>
+				<li>On the <span class="ui">Layers</span> panel, <span class="shortcut mac"><span class="key CTRL-TAG"></span></span>-click (Mac) / <span class="shortcut win"><span class="CLICK-TAG lower"></span>-click</span> (Windows) the mask icon to access the option.</li>
+			</ol>
+		</details>
+	
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_mask_layer.png" class="tool" width="16" height="16" alt="Mask Layer" /> To create an empty mask layer:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select the layer you wish to mask.</li>
+				<li class="osx">Hold <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and, at the bottom of the panel, click <span class="ui">Mask Layer</span>.</li>
+				<li class="win32">Hold <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and, at the bottom of the panel, click the mask icon.</li>
+			</ol>
+
+			<aside class="box note">
+				<p>By default, a created mask layer is applied to the current layer, but it can be moved by dragging outside the current layer, applying the mask to all layers below. Alternatively, the mask can be moved onto an object, applying the mask just to that object.</p>
+			</aside>
+		</details>
+	
+		<details open="open">
+			<summary>To add a vector mask:</summary>
+			<ol>
+				<li>Draw a filled vector object, e.g., a line or shape, which is to be your mask.</li> 
+				<li>Do one of the following:<ul>
+						<li>On the <span class="ui">Layers</span> panel, drag the created object entry directly onto the thumbnail of a &apos;target&apos; object.</li>
+						<li><span class="key CLICK-TAG"></span>-click the object and select <span class="ui">Mask to Below</span>, if the object to be masked is directly below the masking object.</li>
+						<li>On the <span class="ui">Layer</span> menu, select <span class="ui">Mask to Below</span>.</li>
+					</ul>										 
+				</li>
+			</ol>
+			<p>The thumbnail of the target object changes to indicate that a mask and crop have been applied.</p>
+			<p>The masking object is clipped to the target object using a &quot;crop to top object&quot; operation.</p>
+			<p>The masking object can be a group of objects which will remain as independent objects after masking; the group can be expanded/collapsed and its objects will remain editable.</p>
+
+			<aside class="box note">
+				<p>Vector masks can be used layer to layer, layer to object, object to layer, or object to object (as above).</p>
+			</aside>
+		</details>
+
+		<details>
+			<summary>To hide/show a collapsed child mask layer:</summary>
+			<ul>
+				<li><span class="key SHIFT-TAG"></span>-click on the mask thumbnail when collapsed to its parent layer.</li>
+			</ul>
+			<p>The hidden mask will show a red line through its thumbnail.</p>
+		</details>
+
+		<details>
+			<summary>To delete a mask:</summary>
+			<ol>
+				<li>In the <span class="ui">Layers</span> panel, select the mask&apos;s thumbnail.</li>
+				<li>Press the <span class="key BACKSPACE-TAG"></span> <span class="KEY-TAG"></span>.</li>
+			</ol>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="adjustmentLayers.html">Using adjustment layers</a></li>
+			<li><a href="layerClip.html">Layer clipping</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

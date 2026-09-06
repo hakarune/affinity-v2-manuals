@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="tracking, letterspacing, spacing, kerning" />
+	<meta name="description" content="Adjust inter-character spacing using tracking or kerning." />
+	<title>Tracking and kerning</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Tracking and kerning</h1>
+		<p>Publisher allows you to precisely adjust the spacing between characters using tracking or kerning.</p>
+		
+	</header>
+
+	<section class="about">
+
+	<h2>Tracking</h2>
+		
+	<p>The spacing between characters (tracking) in a paragraph of any alignment can have a subtle impact on the reader. Publisher allows you to experiment with the letter spacing in your text.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/tracking_before.jpg" alt="Before" /><div><img src="../../../shared/tracking_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+
+	</section>
+ 
+ 	<h2>Kerning</h2>
+ 	
+	<p>Kerning is normally applied where two large, adjacent characters look over- or under-spaced due to the shape of the characters, and is used to reduce or increase the space between the pair of characters.</p>
+
+	<p>By default, Publisher applies the kerning tables that the font designer has set for the font. This will often require manual kerning (especially in titles) to ensure that all characters appear evenly spaced.</p>
+	
+	<p>Metrics-based kerning is supported which is based on tables in the font file.</p> 
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/kerning_before.jpg" alt="Before" /><div><img src="../../../shared/kerning_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+ 
+	<section class="howto">
+
+		<details open="open">
+			<summary>To adjust tracking:</summary>
+			<ul>
+				<li>With a range of text selected, do one of the following:<ul>
+						<li>From the <span class="ui">Character</span> panel, choose a value from the <img src="../../../shared/ui/char_tracking.png" class="tool" width="12" height="12" alt="Tracking" /> <span class="ui">Tracking</span> setting, using the up and down arrows, the pop-up menu, or by typing in a new value.</li>
+						<li>From the <span class="ui">Text</span> menu&apos;s <span class="ui">Spacing</span> submenu, select one of the spacing options.</li>
+					</ul>
+				</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To adjust kerning:</summary>
+			<ul>
+				<li>With an insertion point made by clicking between two characters in your text, do one of the following:<ul>
+						<li>From the <span class="ui">Character</span> panel, choose a value from the <img src="../../../shared/ui/char_kerning.png" class="tool" width="12" height="12" alt="Kerning" /> <span class="ui">Kerning</span> setting, using the up and down arrows, the pop-up menu, or by typing in a new value. <span class="ui">Auto</span> will automatically kern characters by default. Positive values give expanded kerning, negative values give condensed kerning.</li>
+						<li>From the <span class="ui">Text</span> menu&apos;s <span class="ui">Spacing</span> submenu, select one of the spacing options.</li>
+					</ul>
+				</li>
+			</ul>
+			
+		<aside class="box note">
+			<p>Typically the advantages of kerning are most noticeable in larger text, so the most detailed attention is applied to kerning when creating display text such as headlines or text logos.</p>
+		</aside>
+		
+		</details>
+	</section>
+		
+	<section class="about">
+	
+	<h2>Keyboard shortcuts</h2>
+	
+		<details open="open">
+			<summary>The following keyboard shortcuts also allow you to adjust tracking or kerning:</summary>		
+				
+			<x-osx><ul>
+				<li>To loosen spacing in 10% increments, press <span class="key ALT-TAG"></span><span class="key RIGHT-TAG"></span>.</li>
+				<li>To tighten spacing in 10% decrements, press <span class="key ALT-TAG"></span><span class="key LEFT-TAG"></span>.</li>
+				<li>To loosen spacing in 50% increments, press <span class="key ALT-TAG"></span><span class="key CMD-TAG"></span><span class="key RIGHT-TAG"></span>.</li>
+				<li>To tighten spacing in 50% decrements, press <span class="key ALT-TAG"></span><span class="key CMD-TAG"></span><span class="key LEFT-TAG"></span>.</li>
+			</ul></x-osx>
+					
+			<x-win32><ul>
+				<li>To loosen spacing in 10% increments, <span class="key ALT-TAG"></span>+<span class="key RIGHT-TAG"></span>.</li>
+				<li>To tighten spacing in 10% decrements, <span class="key ALT-TAG"></span>+<span class="key LEFT-TAG"></span>.</li>
+				<li>To loosen spacing in 50% increments, press <span class="key ALT-TAG"></span>+<span class="key SHIFT-TAG"></span>+<span class="key RIGHT-TAG"></span>.</li>
+				<li>To tighten spacing in 50% decrements, press <span class="key ALT-TAG"></span>+<span class="key SHIFT-TAG"></span>+<span class="key LEFT-TAG"></span>.</li>
+			</ul></x-win32>
+
+		</details>
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">	
+			<li><a href="../Text/characters.html">Character formatting</a></li>
+			<li><a href="../Text/paragraphs.html">Paragraph formatting</a></li>
+			<li><a href="../Panels/characterPanel.html">Character panel</a></li>
+			<li><a href="../Panels/paragraphPanel.html">Paragraph panel</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=text">Keyboard shortcuts for working with text</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

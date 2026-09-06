@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="accessible, accessibility, XMP, PDF, tag, tagging, object, export, alt text, reading order" />
+	<meta name="description" content="Features for preparing your document so that exported PDFs are accessible by users of assistive technologies." />
+	<title>Accessible PDFs</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Accessible PDFs</h1>
+	
+		<p>Affinity allows you to make exported PDF files accessible to users of assistive technologies, such as screen readers. The features allow you to ensure text and descriptions of images are presented in a logical order.</p>
+
+	</header>
+
+	<section class="about">
+		<aside class="box tip">
+			<p>When exporting to a PDF file, select <span class="ui">Tagged PDF</span> to include accessibility information&mdash;alt text, reading order, and export tags&mdash;in the file.</p>
+		</aside>
+
+		<h2>Descriptions of non-text content</h2>
+
+		<p>Objects in Affinity documents can be tagged with <span class="term">alt text</span> (meaning alternative) so that assistive technology can describe them to the publication&apos;s reader.</p>
+		
+		<p>You can provide your own alt text or you can use XMP metadata from your placed images. For example, the provider of an image may have embedded a title or description in it.</p>
+				
+		<p>Objects that are not part of your main content can be marked as decorative so that they are not described by screen readers.</p>
+
+		<h2>Reading order</h2>
+
+		<p>You can specify the order in which qualifying content from your document will be presented to the reader when exported to PDF.</p>
+
+		<p>Entries for the following types of objects are automatically included in the reading order:</p>
+
+		<ul>
+			<li>Text objects, meaning frame text, artistic text, shape text, and path text.</li>
+			<li>Other objects for which you&rsquo;ve specified alt text.</li>
+		</ul>
+
+		<p>Initially, reading order is based on objects&apos; positions on the page: from top to bottom, and from left to right when objects have the same vertical position.</p>
+
+		<p>The determined reading order may be undesirable. It can be changed by dragging listed items into the required order.</p>
+
+		<p>Objects can be grouped into articles to help you manage the reading order. Articles can be renamed, but their names are used only to assist you in Affinity; article names are not carried over to exported PDFs.</p>
+
+		<p>Any item can be excluded from the reading order. It&apos;ll still be listed in the reading order, but with a cross next to it to indicate its exclusion, and will included again if you change your mind.</p>
+
+		<h2>Document structure tags</h2>
+
+		<p>The relative importance of each text fragment can be indicated to assistive technologies by assigning export tags to your paragraph styles.</p>
+
+		<p>Each paragraph style can be indicated as corresponding to a heading (up to level six) or a paragraph.</p>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To add alt text to an object:</summary>
+			<ol>
+				<li>Select the object.</li>
+				<li>On the <span class="ui">Tags</span> panel, do one of the following:<ul>
+						<li>To provide your own alt text, select <i>Custom</i>, then type your alt text in the box below.</li>
+						<li>To use metadata from the placed image as alt text, select the field to use: <i>XMP:Title</i>, <i>XMP:Description</i>, <i>XMP:Headline</i>, <i>XMP:Alt Text (Accessibility)</i> or <i>XMP:Extended Description (Accessibility)</i>.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To set an object as decorative:</summary>
+			<ol>
+				<li>Select the object.</li>
+				<li>On the <span class="ui">Tags</span> panel, select <span class="ui">Mark as Decoration</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To amend the reading order:</summary>
+			<p>On the <span class="ui">Reading Order</span> panel:</p>
+			<ol>
+				<li>Drag an entry up or down the list.</li>
+				<li>Drop when a blue highlight appears in the required position. This can be a blue line displayed between items, or a blue highlight on an article&rsquo;s entry.</li>
+				<li>If you dropped on an article and the item is in an incorrect position within it, repeat these steps.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To exclude an item from the reading order:</summary>
+			<p>On the <span class="ui">Reading Order</span> panel:</p>
+			<ul>
+				<li>Click the check mark at the right of the item&apos;s entry. It will change to a cross to indicate exclusion.</li>
+			</ul>
+		</details>
+
+ 		<details open="open">
+			<summary><!-- icon --> To create an article (group) in the reading order:</summary>
+			<p>On the <span class="ui">Reading Order</span> panel:</p>
+			<ol>
+				<li>(Optional) Select the items you wish to group by <span class="key CMD-TAG"></span>-clicking each one.</li>
+				<li>Select <span class="ui">Add Article</span>.</li>
+				<li>(Optional) Give the article a more meaningful name, click it to select it, then click its name, type a new name, and press <span class="key RETURN-TAG"></span>.</li>
+			</ol>
+
+			<p>Items in an article can be reordered by dragging them up or down the list.</p>
+
+			<p>Items can be removed from an article by dragging to a position in the list that&apos;s outside of the article, or by deleting the article to move all its contents to the list&apos;s top level.</p>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Options menu" /> To assign a document structure tag to a paragraph style:</summary>
+			<ol>
+				<li>On the <span class="ui">Text Styles</span> panel, click on the required style&apos;s options menu and select <span class="ui">Edit &quot;&lt;style name&gt;&quot;</span>.</li>
+				<li>On the dialog that appears:<ol>
+						<li>Select <span class="ui">Export Tags</span>.</li>
+						<li>Under <span class="ui">PDF</span>, set <span class="ui">Export Tag</span> to the required value: <i>P</i>, any of <i>H1</i> through to <i>H6</i>, or <i>[No change]</i> to inherit from the parent style, if this style has one.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To include accessibility information when exporting to PDF:</summary>
+			<p>On the <span class="ui">Export</span> dialog:</p>
+			<ol>
+				<li>Select <span class="ui">PDF</span>.</li>
+				<li>Ensure <span class="ui">Tagged PDF</span> is checked.</li>
+				<li>Set other PDF export settings as required.</li>
+				<li>Select <span class="ui">Export</span>.</li>
+				<li>Provide a filename for the PDF, navigate to where you wish to save the file, then select <span class="ui">Save</span>.</li>
+			</ol>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Publishing/publishPDFFiles.html">Publishing PDF files</a></li>
+			<li><a href="../Panels/readingOrderPanel.html">Reading Order panel</a></li>
+			<li><a href="../Panels/tagsPanel.html">Tags panel</a></li>
+			<li><a href="../Panels/textStylesPanel.html">Text Styles panel</a></li>
+			<li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

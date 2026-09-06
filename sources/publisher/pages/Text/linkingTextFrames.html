@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="link, linking, frame, overflow, overset, hide, text flow, unlink, navigate, jumpline, jump, continuation, line, text frames, linked" />
+	<meta name="description" content="Use linked text frames to flow story text from frame to frame." />
+	<title>Linking text frames</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Linking text frames</h1>
+	
+		<p>A powerful feature of Affinity Publisher is the ability to link text across multiple text frames, either on the same page or across different pages.</p>
+ 
+		<figure>
+			<div class="comparison"><img src="../../../shared/linked_frames_before.jpg" class="screenshot responsive" alt="Before" /><div><img src="../../../shared/linked_frames_after.jpg" class="screenshot responsive" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+	
+	<section class="about">
+
+
+		<p>There are two basic ways to set up a linked sequence of frames:</p>
+
+			<ul>
+				<li>You can link a sequence of empty frames, then import the text.</li>
+				<li>You can import the text into a single frame, then create and link additional frames into which the text automatically flows.</li>
+			</ul>
+
+		<p>When a text frame is selected, the frame includes a triangular Text Flow button at the bottom right of the text frame (red or blue). Irrespective of whether the frame text is overflowing, you can click this to draw out another text frame linked to the originating text frame.</p>
+
+		<h2>About jump lines</h2>
+		
+		<p>Jump lines, also known as continuation lines, direct the reader of a publication to where frame text continues&mdash;usually on an earlier or a later publication page.</p>
+		
+		<p>To help readers navigate between linked text frames, you can use the <span class="ui">Next Frame</span> and <span class="ui">Previous Frame</span> page number fields in &apos;Continued On&apos; and &apos;Continued From&apos; jump lines, respectively.</p>
+
+		<p>Jump lines automatically update if linked frames are moved to a different page or new pages are added.</p>
+		
+	</section>
+		
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/frame_unlinked.png" width="16" height="16" alt="Unlinked frame" /> <img src="../../../shared/ui/frame_overflow_linked.png" width="18" height="16" alt="Linked overflowing text" /> To link the selected frame to an existing unlinked frame:</summary>
+
+			<ol>
+				<li>Click the frame&apos;s triangular Text Flow button when you see the cursor change (<img src="../../../shared/textflow_link_cursor.png" width="18" alt="Unlink text frame" />).</li>
+				<li>Click anywhere on the frame to be linked to.</li>
+			</ol>
+			<p>A connecting line links the two text frames.</p>
+			
+		<aside class="box tip">
+			<p>If you click on a frame&apos;s Text Flow button, and then change your mind about linking or unlinking, press the <span class="key ESC-TAG"></span> <span class="KEY-TAG"></span> to cancel.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p>To link multiple existing frames quickly, hold the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>, click the first frame&apos;s Text Flow button and then click anywhere on other frames in the desired sequence. As long as you hold <span class="key CMD-TAG"></span> throughout, you won&apos;t need to click the Text Flow button on each additional frame.</p>
+		</aside>
+		
+		</details>
+
+		<details open="open">
+			<summary>To link the selected frame to a newly drawn frame:</summary>
+
+			<ul>
+				<li>As above, but instead of clicking a &apos;target&apos; frame, drag across the page (to create a frame sized to your requirements). This is ideal for quickly mapping out linked frames across different pages.</li>
+			</ul>
+			
+		</details>
+
+		<details open="open">
+			<summary>To remove a text frame from the frame sequence:</summary>
+
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Move Tool</span>.</li>
+				<li>Select the text frame, then press the <span class="key BACKSPACE-TAG"></span> <span class="KEY-TAG"></span>.</li>
+			</ol>
+			<p>The previous and next frames will maintain frame linkage.</p>
+
+		<aside class="box tip">
+			<p>Body text remains with the &quot;old&quot; frames. For example, if you delete the second frame of a three-frame sequence, the body text remains in the first and third frames, which are now linked into a two-frame story.</p>
+		</aside>
+
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/frame_linked.png" width="16" height="16" alt="Linked frame" /> To unlink a text frame from the frame sequence:</summary>
+
+			<ol>
+				<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Move Tool</span>.</li>
+				<li>Select the text frame to be unlinked, then click the &apos;previous&apos; and/or &apos;next&apos; Text Flow buttons (top left or bottom right, respectively).</li>
+				<li>Click within the frame when the unlink cursor (<img src="../../../shared/textflow_unlink_cursor.png" width="18" alt="Unlink test frame" />) appears.</li>
+			</ol>
+		<aside class="box tip">
+			<p>When unlinking a frame in a populated frame sequence, all text after the unlink point will be placed in the previous frame, and will overflow that frame.</p>
+		</aside>
+		
+		</details>
+		
+		<aside class="box tip">
+			<p>You can navigate through linked text frames by using up/down arrow from text insertion point.</p>
+		</aside>
+	
+		<aside class="box tip">
+			<p>To temporarily hide blue link lines, arrows and overflow indicators, switch off <span class="ui">Show Text Flow</span> on the <span class="ui">View</span> menu.</p>
+		</aside>
+		
+		<details open="open">
+			<summary>To insert a jump line:</summary>
+
+			<ol>
+				<li>Make an insertion point in the text frame where you want the jump line to appear.</li>
+				<li>Type the phrase for the jump line.</li>
+				<li>Position the insertion point where the page number will appear in the jump line.</li>
+				<li>On the <span class="ui">Fields</span> panel, in the <span class="ui">Continuation</span> section, double-click either <span class="ui">Previous Frame</span> or <span class="ui">Next Frame</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="frameText.html">Frame text</a></li>
+			<li><a href="fittingFrameText.html">Fitting text to frames</a></li>
+			<li><a href="flowingText.html">Flowing text</a></li>			
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

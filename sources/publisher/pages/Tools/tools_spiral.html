@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pre-made, golden, ratio, phi, archimedes, logarithmic" />
+	<meta name="description" content="The Spiral Tool enables you to create a multitude of spiral shapes." />
+	<title>Spiral Tool</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1><img src="../../../shared/ui/spiral_tool.png" class="tool heading" width="18" height="18" alt="Spiral Tool" /> Spiral Tool</h1>
+		<p>The <span class="ui">Spiral Tool</span> enables you to create a multitude of different spiral shapes.</p>
+	</header>
+
+	<section class="about">
+		<h2>Spiral styles</h2>
+		<p>The <span class="ui">Spiral Tool</span> has several styles and options on its context toolbar to change the spiral&apos;s design.</p>
+
+		<figure>
+			<p><img src="../../../shared/shapes_spiral_styles.png" class="responsive" alt="Spiral examples" /></p>
+			<figcaption>Spiral styles: (A) Linear, (B) Decaying, (C) Semi-circular<sup>*</sup>, (D) Counter semi-circular, (E) Fibonacci, (F) Plotted<br /> * Shaded semi-circles shown for illustrative purposes</figcaption>
+		</figure>
+
+		<p>A spiral&apos;s appearance can also be dramatically changed by presenting it with straight-line &apos;cusped&apos; edges.</p>
+  
+		<figure>
+			<p><img src="../../../shared/shapes_spiral_cusped.png" class="responsive" alt="Cusped spiral designs" /></p>
+			<figcaption>Spiral examples with cusped edges</figcaption>
+		</figure>
+
+	<h2>About spiral geometry</h2>
+		
+		<p>In Affinity, a spiral is made up of a series of arcs stretching its full length; each arc is used to shape the spiral. As the number of turns of the spiral increases, the more arcs are needed to draw the spiral as intended.</p>
+
+		<figure>
+			<p><img src="../../../shared/spiral_anatomy.png" class="responsive" alt="Spiral anatomy" /></p>
+			<figcaption>Spiral anatomy: (A) Full turn, (B) Arc, (C) Points, (D) Arc angle (set to 90°)</figcaption>
+		</figure>
+		
+	<p>The arc angle can be increased beyond 90° (default) to create increasingly uneven, and even chaotic, spirals the greater the angle. Points will appear along the spiral at each angle interval and will reposition according to the arc angle.</p>
+
+		<figure>
+			<p><img src="../../../shared/spiral_arcangles.png" class="responsive" alt="Spiral arc angles" /></p>
+			<figcaption>Spiral arc angles (Linear spiral style): (A) 20°, (B) 90°, (C) 130°, (D) 270°</figcaption>
+		</figure>
+		
+		<p>Spirals display a series of non-editable points along their path which help to indicate the shape&apos;s geometry and resulting node positions if the spiral is <a href="../ObjectControl/converttocurves.html">converted to curves</a>.</p>
+		
+		<p>All spiral styles create logarithmic spirals with the exception of the Plotted style which creates true spirals that are mathematically calculated.</p>
+
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Fill</span>&mdash;click the color swatch to display a pop-up panel to update fill color.</li>
+			<li><span class="ui">Stroke</span>&mdash;click the color swatch to display a pop-up panel to update stroke color.</li>
+			<li><span class="ui">Stroke properties</span>&mdash;set the stroke style, width, joins, cap ends, order and arrowhead settings via a pop-up panel.</li>
+			<li><img src="../../../shared/ui/cogicon.png" class="tool" width="18" height="18" alt="Presets Icon" /> <span class="ui">Presets</span>&mdash;click to display a pop-up panel from which you may select an existing preset (if any are available) or create a new preset.</li>
+			<li><span class="ui">Style</span>&mdash;select a spiral style for a different look&mdash;this can be done in advance of spiral creation or to swap the spiral to another style at any time. (See examples above.)<ul>
+					<li><span class="ui">Linear</span>&mdash;this basic spiral creates an even gap between each spiral turn when the arc angle is &gt;90°; angles exceeding this will create an increasingly uneven look to the spiral the greater the angle. The spiral is drawn inwards towards the spiral center. Settings are:<ul>
+							<li><span class="ui">Arc angle</span>&mdash;sets the angle to which all arcs on the spiral will conform to.</li>
+							<li><span class="ui">Inner radius</span>&mdash;moves the inner spiral start position out from the object center.</li>
+
+						</ul>							
+					</li>
+					<li><span class="ui">Decaying</span>&mdash;the gap between each spiral turn decreases the nearer the curve gets to the spiral center. This is controlled by a <span class="ui">Decay</span> value. Settings are:<ul>
+							<li><span class="ui">Arc angle</span>&mdash;sets the angle to which all arcs on the spiral will conform to.</li>
+							<li><span class="ui">Decay</span>&mdash;sets the percentage decay rate along the spiral from the outer end of the spiral to the spiral center.</li>
+							<li><img src="../../../shared/ui/spiral_decay_turn.png" class="tool" width="16" height="16" alt="Decay per turn" /> <span class="ui">Decay per turn</span>&mdash;the decay rate set by the <span class="ui">Decay</span> value is calculated across a full turn.</li>
+							<li><img src="../../../shared/ui/spiral_decay_segment.png" class="tool" width="16" height="16" alt="Decay per arc" /> <span class="ui">Decay per arc</span>&mdash;as for <span class="ui">Decay per turn</span> but the calculation is made across an arc rather than a full turn.</li>
+							<li><span class="ui">Minimum radius</span>&mdash;sets the least amount that the spiral can decay to at its center.</li>
+							<li><img src="../../../shared/ui/spiral_cap_inside.png" class="tool" width="16" height="16" alt="Cap inside with circle" /> <span class="ui">Cap inside with circle</span>&mdash;when enabled, a circular cap is used to terminate the inner end of the spiral. When disabled, the inner end of the spiral will remain open.</li>
+						</ul>
+					</li>
+					<li><span class="ui">Semi-circular</span>&mdash;like a Linear spiral but the spiral is composed of semi-circular arcs that double in size as they are drawn outwards from the spiral center; they only have a customizable number of turns.</li>
+					<li><span class="ui">Counter semi-circular</span>&mdash;like a semi-circular spiral but the spiral doubles back on itself, creating a spiral with two &apos;tails&apos;.</li>
+					<li><span class="ui">Fibonacci</span>&mdash;the spiral approximates the golden spiral using quarter turn angles derived from the Fibonacci sequence (0,1,1,2,3,5,8,13); the spiral is drawn out from its center.</li>
+					<li><span class="ui">Plotted</span>&mdash;this mathematically calculated &apos;true&apos; spiral has linear lines, called divisions, between points. Settings are:<ul>
+							<li><span class="ui">Divisions</span>&mdash;sets the number of straight-lined divisions on the spiral per turn.</li>
+							<li><span class="ui">Inner radius</span>&mdash;moves the inner spiral start position out from the object center.</li>
+							<li><span class="ui">Bias</span>&mdash;controls arc distribution along the spiral by setting the interpolation bias of the spiral.</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><img src="../../../shared/ui/spiral_use_cusped.png" class="tool" width="16" height="16" alt="Use cusped segments" /> <span class="ui">Use cusped segments</span>&mdash;when enabled, the spiral will have straight lines between points. When disabled (default) the spiral is a continuous curve that winds outwards from the spiral center.</li>
+			<li><img src="../../../shared/ui/spiral_clockwise.png" class="tool" width="16" height="16" alt="Spiral clockwise" /> <span class="ui">Spiral clockwise</span>&mdash;the spiral winds in a clockwise direction.</li>
+			<li><img src="../../../shared/ui/spiral_anti-clockwise.png" class="tool" width="16" height="16" alt="Spiral anti-clockwise" /> <span class="ui">Spiral anti-clockwise</span>&mdash;the spiral winds in an anti-clockwise direction.</li>
+			<li><span class="ui">Turns</span>&mdash;increases or decreases the number of winding turns between the start and end of the spiral, counted from the spiral center.</li>
+			<li><span class="ui">Angle of partial turns</span>&mdash;applies the angle to the outside of an arc to add the partial turn. Use for fine control of spiral at ends.</li>
+			<li><img src="../../../shared/ui/rotationcntr.png" class="tool" width="16" height="16" alt="Enable Transform Origin" /> <span class="ui">Enable Transform Origin</span>&mdash;displays a movable transform origin about which the shape can be rotated.</li>
+			<li><img src="../../../shared/ui/hide_selection_while_dragging.png" class="tool" width="16" height="16" alt="Hide Selection while Dragging" /> <span class="ui">Hide Selection while Dragging</span>&mdash;when selected, the object&apos;s selection box is temporarily hidden when transforming the object. If this option is off, the selection box remains visible during transformation. The selected behavior persists across all objects unless it is manually switched.</li>
+ 			<li><img src="../../../shared/ui/alignment_mode.png" class="tool" width="16" height="16" alt="Show Alignment Handles" /> <span class="ui">Show Alignment Handles</span>&mdash;when selected, displays alignment handles at the center and edges of the selected object. Hovering over these handles displays a floating guideline across the page. You can drag the handles to position the center or edges of the selected object in line with this guide.</li>
+ 			<li><img src="../../../shared/ui/multiple_transform.png" class="tool" width="16" height="16" alt="Transform Objects Separately" /> <span class="ui">Transform Objects Separately</span>&mdash;when selected, where multiple objects are selected, they can be be resized, rotated and sheared independently of each other instead of transforming the bounding box.</li>
+			<li><img src="../../../shared/ui/converttocurves.png" class="tool" width="16" height="16" alt="Convert to Curves" /> <span class="ui">Convert to Curves</span>&mdash;converts the selected object into a series of connected lines and nodes.</li>
+			<li><span class="ui">Keep selected</span>&mdash;when enabled (default), the new shape will be selected on creation. When disabled, the new object is deselected which prevents it from adopting the next object&rsquo;s stroke/fill properties.</li>
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../CurvesShapes/about_geometricShapes.html">About geometric shapes</a></li>
+			<li><a href="../CurvesShapes/draw_geometricShapes.html">Draw and edit shapes</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

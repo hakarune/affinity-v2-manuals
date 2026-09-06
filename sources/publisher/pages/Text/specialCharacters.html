@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="symbols, maths, quotation, dashes, hyphens, spaces, tabs, breaks, text, typography, special characters, unicode, glyph, invisibles" />
+	<meta name="description" content="Add special characters and glyphs to your text." />
+	<title>Special characters and glyphs</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Special characters and glyphs</h1>
+		<p>Special characters and glyphs can be added to your text from any font installed on your computer.</p>
+		
+		<p>Commonly used items, such as the non-breaking space, non-breaking hyphen and zero-width space, can be inserted via the <span class="ui">Text</span> menu.</p>
+		
+		<p>Additional characters/glyphs can be inserted via the <span class="ui">Glyph Browser</span> panel, which allows you to insert glyphs, Unicode characters or Unicode characters with alternates.</p>
+		
+		<p>Alternatively, you can type a character&apos;s Unicode character code or glyph ID (GID) and then tell Affinity to convert it to the actual character.</p>
+		
+		<aside class="box warning">
+			<p>Glyphs of the same hexadecimal character code or GID may be different between fonts. Applying a new font to text may cause some characters to be displayed as rectangles or not at all, which indicates no glyph is defined for the affected character codes within that font.</p>
+		</aside>
+		
+	</header>
+
+	<section class="about">
+		<p>Commonly used characters available via <span class="ui">Text&gt;Insert</span>, each with its Unicode character code where available:</p>
+
+		<table class="equal">
+			<tr>
+				<th>Category name</th>
+				<th>Character name</th>
+				<th>Displayed character</th>
+				<th>Unicode character code</th>
+			</tr>
+			<tr>
+				<td>Symbols</td>
+				<td>Bullet</td>
+				<td>&bull;</td>
+				<td>U+2022</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Dagger</td>
+				<td>&dagger;</td>
+				<td>U+2020</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Double Dagger</td>
+				<td>&ddagger;</td>
+				<td>U+2021</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Ellipsis</td>
+				<td>&hellip;</td>
+				<td>U+2026</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Inverted Question Mark</td>
+				<td>&iquest;</td>
+				<td>U+00BF</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Inverted Exclamation Mark</td>
+				<td>&iexcl;</td>
+				<td>U+00A1</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Copyright</td>
+				<td>&copy;</td>
+				<td>U+00A9</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Trademark</td>
+				<td>&trade;</td>
+				<td>U+2122</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Registered Trademark</td>
+				<td>&reg;</td>
+				<td>U+00AE</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Paragraph Marker</td>
+				<td>&para;</td>
+				<td>U+00B6</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Section Marker</td>
+				<td>&sect;</td>
+				<td>U+00A7</td>
+			</tr>
+			<tr>
+				<td>Maths</td>
+				<td>Plus Minus</td>
+				<td>&plusmn;</td>
+				<td>U+00B1</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Multiply</td>
+				<td>&times;</td>
+				<td>U+00D7</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Divide</td>
+				<td>&divide;</td>
+				<td>U+00F7</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Approximately Equal</td>
+				<td>&asymp;</td>
+				<td>U+2248</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Not Equal</td>
+				<td>&ne;</td>
+				<td>U+2260</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Less Than or Equal</td>
+				<td>&le;</td>
+				<td>U+2264</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Greater Than or Equal</td>
+				<td>&ge;</td>
+				<td>U+2265</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Degree</td>
+				<td>&deg;</td>
+				<td>U+00B0</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Per Mille</td>
+				<td>&permil;</td>
+				<td>U+2030</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Pi</td>
+				<td>&pi;</td>
+				<td>U+03C0</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Infinity</td>
+				<td>&infin;</td>
+				<td>U+221E</td>
+			</tr>
+			<tr>
+				<td>Quotation Marks</td>
+				<td>Double Left Quote</td>
+				<td>&ldquo;</td>
+				<td>U+201C</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Double Right Quote</td>
+				<td>&rdquo;</td>
+				<td>U+201D</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Single Left Quote</td>
+				<td>&lsquo;</td>
+				<td>U+2018</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Single Right Quote</td>
+				<td>&rsquo;</td>
+				<td>U+2019</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Double Base Quote</td>
+				<td>&ldquor;</td>
+				<td>U+201E</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Single Base Quote</td>
+				<td>&lsquor;</td>
+				<td>U+201A</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Left Guillemet</td>
+				<td>&laquo;</td>
+				<td>U+00AB</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Right Guillemet</td>
+				<td>&raquo;</td>
+				<td>U+00BB</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Single Left Guillemet</td>
+				<td>&lsaquo;</td>
+				<td>U+2039</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Single Right Guillemet</td>
+				<td>&rsaquo;</td>
+				<td>U+203A</td>
+			</tr>
+			<tr>
+				<td>Dashes and Hyphens</td>
+				<td>Em Dash</td>
+				<td>&mdash;</td>
+				<td>U+2014</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>En Dash</td>
+				<td>&ndash;</td>
+				<td>U+2013</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Figure Dash</td>
+				<td>‒</td>
+				<td>U+2012</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Soft Hyphen</td>
+				<td>‑<!-- Real character only displays at a line break; a non-breaking hyphen is used here to ensure it is shown --></td>
+				<td>U+00AD</td>
+			</tr>	
+			<tr>
+				<td></td>
+				<td>Non-Breaking Hyphen</td>
+				<td>‑</td>
+				<td>U+2011</td>
+			</tr>
+			<tr>
+				<td>Spaces and Tabs</td>
+				<td>Em Space</td>
+				<td></td>
+				<td>U+2003</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>En Space</td>
+				<td></td>
+				<td>U+2002</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Non-Breaking Space</td>
+				<td></td>
+				<td>U+00A0</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Narrow Non-Breaking Space</td>
+				<td></td>
+				<td>U+202F</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Zero Width Space</td>
+				<td></td>
+				<td>U+200B</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Hair Space</td>
+				<td></td>
+				<td>U+200A</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Sixth Space</td>
+				<td></td>
+				<td>U+2006</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Thin Space</td>
+				<td></td>
+				<td>U+2009</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Quarter Space</td>
+				<td></td>
+				<td>U+2005</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Third Space</td>
+				<td></td>
+				<td>U+2004</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Punctuation Space</td>
+				<td></td>
+				<td>U+2008</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Figure Space</td>
+				<td></td>
+				<td>U+2007</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Zero-Width Non-Joiner</td>
+				<td></td>
+				<td>U+200C</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Tab</td>
+				<td></td>
+				<td>U+0009</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Right Indent Tab</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Indent to Here</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Breaks</td>
+				<td>Line Break</td>
+				<td></td>
+				<td>U+2028</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Column Break</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Frame Break</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Page Break</td>
+				<td></td>
+				<td>U+000C</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Odd Page Break</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Even Page Break</td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<aside class="box note">
+			<p>For definitions and typical uses of marks available in <span class="ui">Text&gt;Insert</span>, refer to <a href="https://affin.co/unicode" target="_blank">Unicode&apos;s General Punctuation character code chart</a>.</p>
+		</aside>
+
+		<p>Other characters you may encounter while editing text:</p>
+
+		<table class="equal">
+			<tr>
+				<th>Character name</th>
+				<th>Unicode character code</th>
+			</tr>
+			<tr>
+				<td>Zero-Width Joiner</td>
+				<td>U+200D</td>
+			</tr>
+			<tr>
+				<td>Paragraph Break</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>End of Story</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Pin position</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Anchor</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Index mark</td>
+				<td></td>
+			</tr>
+		</table>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To add commonly used special characters/glyphs:</summary>
+			<ol>
+				<li>Create an insertion point in your text.</li>
+				<li>On the <span class="ui">Text</span> menu, select <span class="ui">Insert</span>, then select the required category and special character.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To show special characters (paragraph marks, spaces and breaks) in text:</summary>
+			<ul>
+				<li>On the <span class="ui">Text</span> menu, select <span class="ui">Show Special Characters</span>.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To insert characters using the Glyph Browser panel:</summary>
+			<ol>
+				<li>Create an insertion point in your text.</li>
+				<li>On the <span class="ui">Window</span> menu, select <span class="ui">Text&gt;Glyph Browser</span>.</li>
+				<li>Select a Font, Font style and Subset from the pop-up menu options.</li>
+				<li>Double-click a glyph to add it at the insertion point.</li>
+			</ol>
+			
+			<x-osx>
+				<aside class="box note">
+					<p>Emoji (and other special characters) can be inserted via macOS&apos;s <span class="ui">Character Viewer</span>, which is accessed by selecting <span class="ui">Emoji &amp; Symbols</span> on the <span class="ui">Edit</span> menu.</p>
+				</aside>
+			</x-osx>
+			
+			<x-win32>
+				<aside class="box note">
+					<p>Emoji can be inserted via Windows&apos; <span class="ui">Emoji</span> panel, which is accessed by pressing Win+. (full stop).</p>
+				</aside>
+			</x-win32>
+		</details>
+		
+		<details open="open">
+			<summary>To insert a character using its glyph ID or Unicode character code:</summary>
+			<ol>
+				<li>Create an insertion point in your text.</li>
+				<li>Do one of the following:<ul>
+						<li>For a <em>glyph ID</em>: Type &apos;G+&apos; then enter the required character&apos;s ID (in hex), e.g. &apos;02F5&apos; or &apos;2F5&apos;.</li>
+						<li>For a <em>Unicode character code</em>: Type &apos;U+&apos; then the required character code (in hex), e.g. &apos;0040&apos;, &apos;040&apos; or &apos;40&apos;.</li>
+					</ul>
+				</li>
+				<li>Convert the typed code/ID to the required character by selecting <span class="ui">Text&gt;Toggle Unicode</span>.</li>
+			</ol>
+			
+			<aside class="box tip">
+				<p>You can toggle back to hex code by keeping the insertion point at the end of the character and using the same command&mdash;in case you&apos;ve mistyped the code, for example.</p>
+			</aside>
+			
+			<aside class="box tip">
+				<p>Hover over a character on the Glyph Browser panel to see its glyph ID and Unicode character code. By making a note of either, you can type the character more quickly in future using the above procedure.</p>
+			</aside>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="text_general.html">Working with text</a></li>
+			<li><a href="../Panels/glyphPanel.html">Glyph Browser panel</a></li>
+			<li><a href="textMarks.html">Text marks</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="selecting objects, next, previous, vector, select, select same, select object, select type" />
+	<meta name="description" content="Easily build selections by having Affinity compare objects' types or attributes on your behalf." />
+	<title>Selecting objects by attribute</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Selecting objects by attribute</h1>
+
+		<p>The <span class="ui">Layers</span> panel and the <span class="ui">Select</span> menu provide ways to select objects by their type or a shared attribute, adding or removing matching objects to or from the current selection.</p>
+		
+		<aside class="box note">
+			<p>These selection methods are complementary to <a href="select.html">traditional methods of selecting objects</a>.</p>
+		</aside>
+		
+	</header>
+	
+	<section class="about">
+		<h2>Select Same Tag Color and Select Same Name</h2>
+
+		<p>From the <span class="ui">Layers</span> panel, you can select all layers that share a name or an assigned tag color.</p>
+		
+		<h2>Select Same and Select Object</h2>
+		<p>These powerful selection methods allow you to quickly make bulk changes to your design all at once, e.g. to convert objects that share a non-global color to use a global one.</p>
+		
+		<p>Both commands are available from the <span class="ui">Select</span> menu. Each offers a range of options in its submenu.</p>
+		
+		<p>The <span class="ui">Select Same</span> command selects all objects in your document that match an attribute on your currently selected object.</p>
+		
+		<p>Select Same matches objects with the same Fill Color, Stroke Color, Fill &amp; Stroke Color, Stroke Weight, Transparency, Blend Mode, Shape, Width, Height, Rotation, Name, or Tag Color.</p>
+		
+		<p>Select Same can also match objects whose Width, Height, or Stroke Weight is less than, less than or equal, greater than, or greater than or equal to that of the currently selected object.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/selecting_same_fill.png" alt="Select same fill" /></div>
+			<figcaption>Selecting the same fill color across objects.</figcaption>
+		</figure>
+		
+		<x-osx>
+			<aside class="box tip">
+				<p>With Select Same&apos;s <span class="ui">Width</span>, <span class="ui">Height</span>, or <span class="ui">Stroke Weight</span> submenu open, hold the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> to change the <span class="ui">Less than</span> and <span class="ui">Greater than</span> to <span class="ui">Less (or equal)</span> and <span class="ui">Greater (or equal)</span>, respectively.</p>
+			</aside>
+		</x-osx>
+		
+		<p>The <span class="ui">Select Object</span> command selects all objects of a matching type within your document. For example, you can select all groups, symbols, art text, frame text, path text, picture frames, tables, data merge layouts, objects according to their fill, stroke or opacity, and so on.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/selecting_object_stroked.png" alt="Select object stroked" /></div>
+			<figcaption>Selecting objects with strokes applied.</figcaption>
+		</figure>
+		
+		<aside class="box tip">
+			<p>To specify whether Select Object or Select Same will include or exclude hidden objects in its resultant selections, select or deselect <span class="ui">Select Hidden Objects</span> from the corresponding command&apos;s submenu.</p>
+		</aside>
+		
+		<h2>Edit All Layers and Select Same/Select Object</h2>
+
+		<p><span class="ui">Edit All Layers</span> (on the <span class="ui">Layers</span> panel) determines the scope of Select Same and Select Object.</p>
+		
+		<p>When enabled, the commands select matching objects across all spreads in your document. When disabled, they select matching objects only on the current spread.</p>
+	</section>
+
+	<section class="howto">
+	
+		<details open="open">
+			<summary>To select all layers sharing the same name:</summary>
+			<ul>
+				<li>With a layer selected on the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click it and choose <span class="ui">Select Same Name</span> from the pop-up menu.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To select all layers sharing a tag color:</summary>
+			<ul>
+				<li>With a layer selected on the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click it and choose <span class="ui">Select Same Tag Color</span> from the pop-up menu.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To select all objects sharing a chosen attribute with the currently selected object:</summary>
+			<ul>
+				<li>With an object selected, from the <span class="ui">Select</span> menu, choose <span class="ui">Select Same</span> and select an attribute from the menu.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To select all objects of a certain type:</summary>
+			<ul>
+				<li>From the <span class="ui">Select</span> menu, choose <span class="ui">Select Object</span> and select an object type from the menu.</li>
+			</ul>
+		</details>
+		
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			
+			<p>When using the Select Object command, the following modifier keys can be used to aid object selection:</p>
+			
+			<ul>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> adds matching objects to the current selection.</li>
+				<li class="osx">The <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> removes matching objects from the current selection.</li>
+				<li class="win32">The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> removes matching objects from the current selection.</li>
+				<li>The <span class="key SHIFT-TAG"></span>+<span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> combination selects matching objects only from within the current selection, i.e. non-matching objects are removed from the current selection.</li>
+			</ul><br /><x-osx>
+				<p>When using the Select Same command to match objects by Width, Height or Stroke Weight, the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> modifies the <span class="ui">Less</span> option to <span class="ui">Less (or Equal)</span> and the <span class="ui">Greater</span> option to <span class="ui">Greater (or Equal)</span>.</p>
+			</x-osx>
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_move.html">Move Tool</a></li>
+			<li><a href="select.html">Selecting objects</a></li>
+			<li><a href="group.html">Grouping objects</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../Layers/selectEditLayers.html">Selecting and editing layers</a></li>
+			<li><a href="../Layers/tagLayers.html">Tagging layers</a></li>
+			<li><a href="../Pages/selectingViewingPages.html">Select and view pages</a></li> 
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

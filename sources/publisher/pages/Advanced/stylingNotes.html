@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="footnotes, sidenotes, endnotes, scope, numbering, serialisation, serialise, series, positioning, rule, separator, note marks" />
+	<meta name="description" content="Control the styling and other presentation settings for footnotes and endnotes." />
+	<title>Styling notes</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Styling notes</h1>
+		
+		<p>The <span class="ui">Notes</span> panel allows you to control various attributes of how footnotes, sidenotes and endnotes are presented.</p>
+		
+	</header>
+
+	<section class="about">
+		<h2>Controlling the scope of styling</h2>
+		<p>At the top of the Notes panel, specify how extensively the panel&apos;s settings will affect notes of the selected type:</p>
+		
+		<ul>
+			<li><span class="ui">Document-wide</span>&mdash;settings affect all notes of the selected type in your document.</li>
+			<li><span class="ui">Custom</span>&mdash;settings affect only notes of the selected type and encompassed by your selection or at the insertion point&apos;s position. They are also applied when you insert a note.</li>
+		</ul>
+
+		<h3>Custom styling</h3>
+		<p>The Custom option allows a subset of notes to deviate from a document&apos;s default settings wherever needed. For example, you might use a different number format for a specific story, or apply a different rule color, character style, or paragraph style that does not clash with a specific page&apos;s background.</p>
+		
+		<table class="equal">
+			<tr>
+				<th>Text selection/insertion point</th>
+				<th>Scope (selected note type only)</th>
+			</tr>
+			<tr>
+				<td>A text frame is selected</td>
+				<td>All references currently within the frame and their note bodies. (Notes in unselected linked frames are not affected.)</td>
+			</tr>
+			<tr>
+				<td>All of a story&apos;s text is selected</td>
+				<td>All the story&apos;s references, and the corresponding note bodies. (Notes in other stories are not affected.)</td>
+			</tr>
+			<tr>
+				<td>Some of a story&apos;s text is selected</td>
+				<td>Only references encompassed by the selection, and the corresponding note bodies.</td>
+			</tr>
+			<tr>
+				<td>Insertion point is at a reference in story text</td>
+				<td>Only the individual reference and its corresponding note body.</td>
+			</tr>
+			<tr>
+				<td>Selection or insertion point is within a note body</td>
+				<td>Only that note body and its corresponding reference (prefixed and in the story text).</td>
+			</tr>
+		</table>
+				
+		<h2>Styling references and note bodies</h2>
+		<p>The availability of Notes panel sections depends primarily on the type of note that is selected at the top of the panel. Some sections are available only when you select certain secondary settings on the panel, as described in the following table&rsquo;s <i>Available for</i> column.</p>
+
+		<table class="equal">
+			<tr>
+				<th>Section</th>
+				<th>Available for&hellip;</th>
+				<th>Purpose</th>
+			</tr>
+			<tr>
+				<td>Numbering</td>
+				<td>Footnotes, sidenotes and endnotes</td>
+				<td>Note serialization settings, including characters used for references.</td>
+			</tr>
+			<tr>
+				<td>Format</td>
+				<td>Footnotes, sidenotes and endnotes</td>
+				<td>Advanced reference formatting, and character and paragraph styles for references and note bodies.</td>
+			</tr>
+			<tr>
+				<td>Positioning</td>
+				<td>Footnotes, sidenotes, and endnotes at <span class="ui">End of Story</span></td>
+				<td>Distances of note bodies from story text and each other.</td>
+			</tr>
+			<tr>
+				<td>Rules</td>
+				<td>Footnotes, and endnotes at <span class="ui">End of Story</span></td>
+				<td>Style settings for lines that separate note bodies from story text.</td>
+			</tr>
+			<tr>
+				<td>Title</td>
+				<td>Endnotes in <span class="ui">Separate Frame</span>, <span class="ui">Shared Section Frame</span>, <span class="ui">Shared Document Frame</span> or <span class="ui">End of Book</span></td>
+				<td>Words and paragraph style for the heading that precedes endnote bodies.</td>
+			</tr>
+		</table>
+		
+		<aside class="box note">
+			<h3>About notes and Microsoft Word DOCX files</h3>
+			<p>When a DOCX file that contains footnotes or endnotes is placed, the imported notes are styled using the corresponding document-wide note formatting settings of your Affinity Publisher document.</p>
+		</aside>
+	</section>
+		
+	<section class="howto">
+		<details open="open">
+			<summary>To style references:</summary>
+			<ol>
+				<li>On the <span class="ui">Notes</span> panel, select the type and scope of notes you want to style.</li>
+				<li>In story text, position the insertion point/make a selection that encompasses references of the selected note type.</li>
+				<li>On the panel&apos;s <span class="ui">Format</span> section, next to <span class="ui">In main text</span> and/or <span class="ui">In note body</span>, set <span class="ui">Number text</span>, <span class="ui">Number style</span>, and <span class="ui">Superscript</span> as required.</li>
+			</ol>
+		</details>
+		
+		<aside class="box note">
+			<p>If the number field is accidentally removed from <span class="ui">Number text</span>, it can be reinserted by selecting <span class="ui">Note</span> from the setting&apos;s menu.</p>
+		</aside>
+
+		<details open="open">
+			<summary>To style note bodies:</summary>
+			<ol>
+				<li>On the <span class="ui">Notes</span> panel, select the type and scope of notes to be styled.</li>
+				<li>Position the insertion point within a note body of the selected note type.</li>
+				<li>On the panel&apos;s <span class="ui">Format</span> section, set <span class="ui">Note body style</span> to your required paragraph style.</li>
+			</ol>
+		</details>
+	</section>
+	
+	<section class="about">
+		<h2>Visually separating footnote bodies and story text</h2>
+		<p>The Notes panel&apos;s <span class="ui">Rules</span> section allows you to clearly distinguish footnote bodies from the preceding story text by drawing a separating line between them.</p>
+		
+		<p>Use <span class="ui">Rule before</span> to choose which of two scenarios the section&apos;s other settings will affect:</p>
+		
+		<ul>
+			<li><span class="ui">First Note</span>&mdash;rules drawn above groups of note bodies where the first line is a new note.</li>
+			<li><span class="ui">Continued Note</span>&mdash;rules drawn above groups of note bodies where the first line is a continuation of a note body from an earlier page. (A note&apos;s reference is not repeated where it continues.)</li>
+		</ul>
+		
+		<p>For each scenario, you can specify whether a rule should be drawn at all, and how it should be styled, sized, and positioned.</p>
+		
+		<h2>Endnote bodies</h2>
+		<p>When endnote bodies are positioned in a separate text frame after their story text, section, document or book, each is enclosed in zero-width, non-printing note marks (brackets).</p>
+		
+		<p>The marks are visible by default. To change their visibility, select <span class="ui">Text&gt;Notes&gt;Show Note Marks</span>.</p>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="aboutNotes.html">About notes</a></li>
+			<li><a href="insertingNotes.html">Inserting notes</a></li>
+			<li><a href="hyperlinkingNotes.html">Hyperlinking notes</a></li>
+			<li><a href="../Panels/notesPanel.html">Notes panel</a></li>
+			<li><a href="../Pages/addingSections.html">Adding sections</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

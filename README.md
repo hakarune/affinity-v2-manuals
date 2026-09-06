@@ -12,7 +12,7 @@ build all **generated** from it and attached to each [Release](../../releases).
 | --- | --- |
 | Affinity Designer 2 | imported — 316 pages, 737 images (2 screenshots missing, see `KNOWN_ISSUES.md`) |
 | Affinity Photo 2 | imported — 474 pages (368 from the sidebar + 106 sub-pages), 1055 images (3 screenshots missing, see `KNOWN_ISSUES.md`) |
-| Affinity Publisher 2 | not yet imported |
+| Affinity Publisher 2 | imported — 351 pages (340 from the sidebar + 11 sub-pages), 916 images (1 screenshot missing, see `KNOWN_ISSUES.md`) |
 
 ## Downloads
 
@@ -74,12 +74,14 @@ git push --tags        # release.yml builds everything and creates the Release
 
 Pushes to `main` that touch `manuals/**` rebuild the GitHub Pages sites automatically.
 
-## Adding Publisher
+## Adding another manual
+
+All three current manuals were imported with the same three commands:
 
 ```sh
-python  scripts/mirror_manual.py  publisher
-python  scripts/import_manual.py  publisher   # needs: pip install beautifulsoup4 lxml
-python3 scripts/gen_summary.py    publisher
+python  scripts/mirror_manual.py  <app>
+python  scripts/import_manual.py  <app>   # needs: pip install beautifulsoup4 lxml
+python3 scripts/gen_summary.py    <app>
 ```
 
 See [`docs/ADDING-A-MANUAL.md`](docs/ADDING-A-MANUAL.md) for what the scripts do.

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="hyphen, hyphenation, install, dictionary, dictionaries" />
+	<meta name="description" content="Download and install hyphenation dictionaries." />
+	<title>Managing hyphenation dictionaries</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Managing hyphenation dictionaries</h1>
+		<p>Hyphenation dictionaries are included for most languages supported by Affinity apps, except for Chinese and Japanese. New hyphenation dictionaries can be downloaded and installed manually.</p>
+	</header>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To download a hyphenation dictionary:</summary>
+			<ol>
+				<li>Go to <a href="https://github.com/LibreOffice/dictionaries" target="_blank">LibreOffice&apos;s GitHub page</a>.</li>
+				<li>Select the folder for the required language.</li>
+				<li>Select the file for the required hyphenation dictionary. Its name will be in the format hyph_xx_XX.dic, where xx_XX indicates the language&apos;s locale ID.</li>
+				<li>Depending on the file&apos;s size, you will see either a <span class="ui">Raw</span> or <span class="ui">Download</span> button. Hold <span class="key ALT-TAG"></span> and click the button to download the hyphenation dictionary.</li>
+				<li>If your browser appends an additional file extension, e.g. .txt, to the download&apos;s name, remove that extension so the filename ends with .dic.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To install a hyphenation dictionary:</summary>
+
+			<ol class="osx">
+				<li>In Finder, hold <span class="key ALT-TAG"></span> and select <span class="ui">Go&gt;Library</span>.</li>
+				<li>Open the <span class="ui">Spelling</span> subfolder.</li>
+				<li>Create a subfolder and name it after the hyphenation dictionary&apos;s locale ID, i.e. where the dictionary&apos;s filename is in the format hyph_xx_XX.dic, the subfolder should be named xx_XX.</li>
+				<li>Place the hyphenation dictionary in the subfolder.</li>
+				<li>Quit and reopen Affinity Publisher.</li>
+			</ol>
+			
+			<ol class="win32">
+				<li>In Affinity Publisher, select <span class="ui">Edit &gt; Settings</span>.</li>
+				<li>In the Settings window, select <span class="ui">Tools</span>.</li>
+				<li>To the right of <span class="ui">Additional dictionary folder</span>, select <span class="ui">Open</span>.</li>
+				<li>Create a subfolder and name it after the hyphenation dictionary&apos;s locale ID, i.e. where the dictionary&apos;s filename is in the format hyph_xx_XX.dic, the subfolder should be named xx_XX.</li>
+				<li>Place the hyphenation dictionary in the subfolder.</li>
+				<li>Quit and reopen Affinity Publisher.</li>
+			</ol>
+			
+			<p>The newly installed dictionary is available in the <span class="ui">Hyphenation</span> pop-up menu in the <span class="ui">Character</span> panel&apos;s <span class="ui">Language</span> section.</p>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="hyphenation.html">Hyphenation</a></li>
+			<li><a href="frameText.html">Frame text</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

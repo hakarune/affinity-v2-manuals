@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="images, pictures, photos, raster, picture frame, path" />
+	<meta name="description" content="Picture frames allow you to create a decorative space in your document, into which you can insert pictures and photos." />
+	<title>Picture frames</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Picture frames</h1>
+
+		<p>Picture frames allow you to create a decorative space in your document, into which you can insert content.</p>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/pictureframe_before.jpg" class="responsive" alt="Before" /><div><img src="../../../shared/pictureframe_after.jpg" class="responsive" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>	
+
+	</header>
+
+
+	<section class="about">
+	
+	<h2>About picture frames</h2>
+			
+		<p>Once a picture frame has been added to your page, you can reposition it, size it, add borders, and change the shape and style of the picture frame.</p>
+		<p>You can place an embedded or linked file inside the frame. The file can be an Affinity-compatible image file, a PDF, an InDesign IDML document or an Affinity Photo 2, Affinity Designer 2 or Affinity Publisher 2 document.</p>
+		<p>The frame&apos;s contents can be scaled according to one of three automatic behaviors, or panned, scaled and rotated manually:</p>
+		
+		<ul>
+			<li><img src="../../../shared/ui/scaletomaxfit.png" width="45" height="45" alt="Scale to Max Fit"> <span class="ui">Scale to Max Fit</span>&mdash;The image is automatically scaled to fill the entire frame without distorting it. Some of its contents may be cropped. This behavior is the default when content is placed in a picture frame.</li>
+			<li><img src="../../../shared/ui/scaletominfit.png" width="45" height="45" alt="Scale to Min Fit"> <span class="ui">Scale to Min Fit</span>&mdash;The image is automatically scaled to be completely visible within the frame. There may be empty areas down the left and right or across the top and bottom of the frame.</li>
+			<li><img src="../../../shared/ui/stretchtofit.png" width="45" height="45" alt="Stretch to Fit"> <span class="ui">Stretch to Fit</span>&mdash;The image is automatically scaled to be completely visible and fill the entire picture frame. It may be noticeably distorted, depending on the relative proportions of it and the frame.</li>
+			<li><img src="../../../shared/ui/noscale.png" width="45" height="45" alt="No Scale"> <span class="ui">None</span>&mdash;The frame&apos;s content is not scaled dynamically as the frame is resized. This behavior is selected automatically if you interact with the frame&apos;s overlaid rotation, scaling and position controls, or by double-clicking the frame and transforming the content directly.</li>
+		</ul>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/framecontent_scaling.jpg" alt="Scaling frame content" /></div>
+			<figcaption>(From left to right) Examples of the <span class="ui">Scale to Max Fit</span>, <span class="ui">Scale to Min Fit</span>, <span class="ui">Stretch to Fit</span> and <span class="ui">None</span> behaviors.</figcaption>
+		</figure>
+		
+		<p>When an automatic scaling behavior is selected, its effect is maintained dynamically as you alter the picture frame&apos;s dimensions. When <span class="ui">None</span> is selected, the size, position and rotation of the frame&apos;s content becomes independent of the frame&apos;s dimensions, no further automatic scaling is applied, though changes can be made manually.</p>
+		
+		<aside class="box tip">
+			<p>Pictures frames whose scaling method is set to <span class="ui">None</span> display an extra control handle at their bottom-right corner. Dragging this handle scales the frame and its contents together.</p>
+		</aside>
+		
+		<h2>Picture frame (parent) and content (child) relationship</h2>
+		<p>A picture frame, like any other object, can act as a parent clipping object for any number of child objects. In the case of picture frames, though, only one child object can be flagged as the framed &lsquo;content&rsquo;. This object is indicated in the <span class="ui">Layers</span> panel by a box containing a diagonal cross, overlaid on its layer thumbnail.</p>
+		<p>The object marked as content scales according to the picture frame&apos;s assigned scaling behavior, while others will scale like child objects and can have regular constraints applied to them. This allows you to, for example, set up a frame with adornments or a watermark.</p>
+		<p>To add an object as frame content, drag its layer onto the target frame&apos;s name in the <span class="ui">Layers</span> panel and drop when the frame&apos;s row is highlighted.</p>
+		<p>If a child object flagged as the frame&apos;s content already exists, it is replaced by the new object. This is equivalent to selecting the frame and choosing <span class="ui">Replace Image</span> on the context toolbar.</p>
+		<p>To add an object to a frame as a regular child object, drag its layer just below the target picture frame&apos;s row in the <span class="ui">Layers</span> panel and drop when a highlight line appears beneath the frame&apos;s layer name. You can add as many child objects as you wish in this way.</p>
+	</section>
+		
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/box_picture_frame_tool.png" class="tool heading" width="18" height="18" alt="Picture Frame Rectangle Tool" /> <img src="../../../shared/ui/circle_picture_frame_tool.png" class="tool heading" width="18" height="18" alt="Picture Frame Ellipse Tool" /> To add a picture frame:</summary>
+			<ol>
+				<li>Click the <span class="ui">Picture Frame Rectangle Tool</span> or the <span class="ui">Picture Frame Ellipse Tool</span>.</li>
+				<li>Do one of the following:<ul>
+						<li>For precise <em>Data Entry</em>: <span class="key CMD-TAG"></span>-Click on the page (or press the <span class="key RETURN-TAG"></span> <span class="KEY-TAG"></span>), then enter your frame dimensions into the dialog. Optionally, set an anchor point to position the frame in relation to the new anchor position, rather than the default or previously set anchor point. The last used settings will be remembered.</li>					
+						<li>For sizing <em>&apos;by eye&apos;</em>: Drag on the page to set the size and position of the picture frame, using the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> to constrain the frame&apos;s proportions to a square or circle if needed.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/place_image_tool.png" class="tool heading" width="18" height="18" alt="Place Tool" /> To insert content into a picture frame:</summary>
+			<p>Use the <span class="ui">Move Tool</span> to select the picture frame and then do one of the following:</p>
+			<ul>
+				<li>Click the <span class="ui">Place Tool</span>. Select a compatible file to place inside the picture frame from the dialog.</li>
+				<li>On the context toolbar, click <span class="ui">Replace image</span>.</li>
+				<li>Drag and drop an image from your operating system or the <span class="ui">Stock</span> panel onto the frame to place it.</li>
+				<li>For a pixel selection copied to the clipboard, <span class="key CLICK-TAG"></span>-click on the picture frame and select <span class="ui">Paste as Content</span>.</li>
+			</ul>
+		</details>
+
+		
+		<details open="open">
+			<summary>To resize, position and rotate framed content:</summary>
+			<p>Select the picture frame and do one of the following:</p>
+				<ul>
+					<li><img src="../../../shared/ui/pictureframeproperties.png" class="tool" width="18" height="18" alt="Picture Frame Properties" /> Scale the placed content as required by clicking <span class="ui">Properties</span> on the context toolbar and choosing one of the automatic scaling behaviors or <span class="ui">None</span>.</li>
+					<li>Drag the Scaling slider below the picture frame to zoom in/out. The scaling percentage on the slider is relative to the image&apos;s native dimensions.<br /><figure>
+							<div class="single"><img src="../../../shared/framecontent_zooming.jpg" alt="Zooming frame content" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</li>
+					<li>Reposition the content within the frame by dragging the arrowed pan control, displayed in the center of the frame when you hover over it. Adjust the Scaling slider if the image&apos;s edge has been exposed.<br /><figure>
+							<div class="single"><img src="../../../shared/framecontent_panning.jpg" alt="Panning frame content" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</li>
+					<li>Rotate the framed content by dragging left/right over the rotate icon (a circular arrow), displayed near the top-center of the frame when you hover over it. Adjust the Scaling slider if the image&apos;s edge has been exposed.<br /><figure>
+							<div class="single"><img src="../../../shared/framecontent_rotating.jpg" alt="Rotating frame content" /></div>
+							<figcaption></figcaption>
+						</figure>			
+					</li>
+					</ul>
+
+				<aside class="box tip">
+					<p>Double-clicking the framed content will select it rather than the picture frame. This lets you resize the content using its bounding box&apos;s edge and corner handles; hold the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> to resize around the content&apos;s center. You can then pan around within the frame by dragging.</p>
+				</aside>
+		</details>
+
+		<details open="open">
+			<summary>To resize a picture frame without scaling its content:</summary>
+			<p>Do one of the following before resize:</p>
+			<ul>
+				<li>Select the picture frame and then check <span class="ui">Lock Children</span> on the context toolbar.</li>
+				<li>Select the picture frame, select <span class="ui">Properties</span> on the context toolbar, and then choose <span class="ui">None</span>, ensuring the anchor point is set correctly.</li>
+			</ul>
+			
+		<aside class="box tip">
+			<p>To size a picture frame to common image aspect ratios, you can enter an expression in the <span class="ui">Transform</span> panel. For example, to size a frame to 3:2 aspect ratio, select it and then enter w/3*2 into the panel&apos;s <span class="ui">H</span> (Height) field, ensuring the adjacent Link symbol is disabled.</p>
+		</aside>
+			
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/pictureframesizetocontent.png" class="tool" width="18" height="18" alt="Size Picture Frame to Content" /> To resize the picture frame to fit its contents:</summary>
+			<ul>
+				<li>Select the picture frame and then <span class="ui">Size Picture Frame to Content</span> on the context toolbar.</li>
+			</ul>
+
+		</details>
+		
+		<details open="open">
+			<summary>To convert a shape or drawn path to a picture frame:</summary>
+			<ul>
+				<li>Select the shape and then <span class="ui">Layer&gt;Convert to Picture Frame</span>.</li>
+			</ul>
+			
+		<aside class="box tip">
+			<p>As well as standard shapes, you can also convert abstract shapes created from Boolean geometry operations to picture frames.</p>
+		</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To edit a frame&apos;s content in a secondary tab:</summary>
+			<ul>
+				<li>Use the <span class="ui">Move Tool</span> to select the image within the picture frame and then select <span class="ui">Edit Image</span> on the context toolbar.</li>
+			</ul>
+			
+		<aside class="box note">
+			<p>Applies to linked images only.</p>
+		</aside>
+			
+		</details>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_pictureFrameRectangle.html">Picture Frame Rectangle Tool</a></li>
+			<li><a href="../Tools/tools_pictureFrameEllipse.html">Picture Frame Ellipse Tool</a></li>
+			<li><a href="../Tools/tools_placeimage.html">Place Tool</a></li>
+			<li><a href="embeddingVsLinking.html">Embedding vs linking</a></li>
+			<li><a href="../Clr/ClrProfiles.html">Color management</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

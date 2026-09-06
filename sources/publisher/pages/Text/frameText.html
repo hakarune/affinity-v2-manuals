@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="frame, text, typography, gutter, column, text box, overflow, overflowing text" />
+	<meta name="description" content="Use frame text for paragraphs with a formalised structure and layout." />
+	<title>Frame text</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Frame text</h1>
+		
+		<p>Frame text is perfect for presenting paragraphs with a formalized structure and layout. If you want to present text in columns, frame text is the ideal solution.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/frame_text.png" class="responsive" alt="Frame text" /></div>
+			<figcaption></figcaption>
+		</figure>
+		
+	</header>
+
+	<section class="about">
+
+		<p>Using the <span class="ui">Frame Text Tool</span>, frame text can be created within rectangular (or square) frames or within any curve or closed shape. The text frames you create can be moved or resized using the Frame Text Tool.</p>
+		
+		<p>By clicking in the drawn frame and then typing, you&apos;re able to fill the frame with frame text. If excess text overflows the bottom of the frame, you can resolve this by:<ul>
+				<li>Making the text frame larger</li>
+				<li>Reducing the text&apos;s font size</li>
+				<li>Adding an additional text frame, linked to the overflowing text frame, to contain the overflowing text.</li>
+			</ul>
+	
+		<p>The tool&apos;s context toolbar lets you choose frame text properties and some basic frame setup details (e.g., number of columns). For more advanced frame setup, you can use the <span class="ui">Text Frame</span> panel.</p>
+
+		<aside class="box tip">
+			<p>To make use of temporary placeholder text while working on your design, from the <span class="ui">Text</span> menu, select <span class="ui">Insert Filler Text</span>.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p>You can apply opacity to the whole text frame via the <span class="ui">Layers</span> panel, or just to the frame fill and stroke with the <span class="ui">Transparency Tool</span> or the <span class="ui">Text Frame</span> panel. Each color within the frame has its own opacity.</p>
+		</aside>
+		
+		<p>Icons around the text frame indicate whether the frame is filled, linked, and whether text within the frame is overflowing or hidden.</p>
+		
+		<table class="equal">
+			<tr>
+				<th>Icon</th>
+				<th>Description</th>
+			</tr>
+			<tr>
+				<td><img src="../../../shared/ui/frame_unlinked.png" width="24" height="24" alt="Unlinked frame" /></td>
+				<td>The frame is unlinked.</td>
+			</tr>
+			<tr>
+				<td><img src="../../../shared/ui/frame_linked.png" width="24" height="24" alt="Linked frame" /></td>
+				<td>The frame is linked.</td>
+			</tr>
+			<tr>
+				<td><img src="../../../shared/ui/frame_overflow_linked.png" width="24" height="24" alt="Linked overflowing text" /></td>
+				<td>The frame is linked to a frame that has overflowing text.</td>
+			</tr>
+			<tr>
+				<td><img src="../../../shared/ui/frame_overflow_invisible.png" width="48" height="48" alt="Invisible overflowing text" /></td>
+				<td>There is hidden overflowing text in the frame.</td>
+			</tr>
+			<tr>
+				<td><img src="../../../shared/ui/frame_overflow_visible.png" width="48" height="48" alt="Visible overflowing text" /></td>
+				<td>The overflowing text in the frame is visible.</td>
+			</tr>
+			<tr>
+				<td><img src="../../../shared/ui/frame_overflow_deselected.png" width="24" height="24" alt="Deselected overflowing text" /></td>
+				<td>The text in the deselected text frame is overflowing.</td>
+			</tr>
+		</table>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/frame_text_tool.png" class="tool" width="18" height="18" alt="Frame Text Tool" /> To create frame text:</summary>
+			<p>From the <span class="ui">Tools</span> panel, select the <span class="ui">Frame Text Tool</span>:</p>
+				<ol>
+					<li>Drag on the page. This sets the initial size of the text frame.</li>
+					<li>(Optional) Set up your columns and gutter width from the context toolbar.</li>
+					<li>Do one of the following:<ul>
+							<li>Type your text.</li>
+							<li>Paste (<span class="key CMD-TAG"></span>V) previously copied text.</li>
+							<li>For importing and placing text, from the <span class="ui">File</span> menu, select <span class="ui">Place</span>. In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+						</ul>
+					</li>
+				</ol>
+			<aside class="box note">
+				<p>For text imported from external apps, use Paste without Format (<span class="ui">Edit</span> menu) for &apos;clean&apos; unformatted text.</p>
+			</aside>
+			
+			<aside class="box note">
+				<p>The <img src="../../../shared/ui/textframe_page.png" class="tool" width="18" height="18" alt="Text Frame" /> <span class="ui">Text Frame</span> option on the context toolbar accesses the <a href="../Panels/textFramePanel.html">Text Frame</a> panel.</p>
+			</aside>
+			
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/frame_text_tool.png" class="tool" width="18" height="18" alt="Frame Text Tool" /> To create a text frame from curves/shapes:</summary>
+				<ol>
+					<li>Select a previously drawn curve or shape.</li>
+					<li>From the <span class="ui">Tools</span> panel, select the <span class="ui">Frame Text Tool</span>.</li>
+					<li>
+						<p>Position the cursor close to the curve or within the shape.</p>
+						<p>The cursor will change to indicate that shaped frame text will be created.</p>
+					</li>
+					<li>Click to convert the curve or shape to a shaped text frame.</li>
+					<li>Type your text.</li>
+				</ol>
+		
+			<aside class="box tip">
+				<p>Even though the shape is now converted to a text frame, you can still reshape the frame using the <span class="ui">Node Tool</span> at any time.</p>
+			</aside>
+
+			<aside class="box tip">
+				<p>Alternatively, select a previously drawn line, curve or shape and then, from the <span class="ui">Layer</span> menu, select <span class="ui">Convert to Text Frame</span>.</p>
+			</aside>				
+				
+		</details>
+
+		<details open="open">
+			<summary>To convert frame text to artistic text:</summary>
+			<p>With the frame text selected:</p>
+			<ul>
+				<li>Select <span class="ui">Layer&gt;Convert to Art Text</span>.</li>
+			</ul>
+			
+			<p>The artistic text may flow differently than the original frame text due to inherent differences between the two object types. Formatting applied to text ranges, such as horizontal alignment, is retained after conversion but may not be discernible in your design, e.g. an artistic text object is only as wide as its longest line of text.</p>
+		</details>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the Frame Text Tool, the following modifier keys can be used:</p>
+			<ul>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> constrains frame&apos;s proportions at the time of creation (to a square) or when resizing.</li>
+				<li>The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> resizes the frame from its center.</li>
+				<li class="osx">The <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> allows placed frame text to be rotated about its opposite handle.</li>
+				<li class="win32">Pressing the right mouse button lets you rotate placed frame text about its opposite handle.</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="text_general.html">Working with text</a></li>
+			<li><a href="frameSetup.html">Text frame setup</a></li>
+			<li><a href="../Tools/tools_frameText.html">Frame Text Tool</a></li>
+			<li><a href="../Panels/textFramePanel.html">Text Frame panel</a></li>
+			<li><a href="artText.html">Artistic text</a></li>
+			<li><a href="fittingFrameText.html">Fitting text to frames</a></li>
+			<li><a href="flowingText.html">Flowing text through frames</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="export, export, publish, publish, PDF, PDF, Acrobat, password, protect" />
+	<meta name="description" content="Find out how to output your publication as PDF." />
+	<title>Publishing PDF files</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Publishing PDF files</h1>
+	
+		<p>You can output your publication to PDF, Adobe&apos;s cross-platform WYSIWYG file format which is device and platform independent.</p>
+		
+		<figure>
+			<p><img src="../../../shared/pdfpublish.png" class="responsive" alt="PDF publishing" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+	
+	<section class="about">
+		<p>PDF files are perfect for web distribution and professional printing.</p>
+
+		<ul>
+			<li><span class="ui">For web</span>&mdash;PDF files for web use (and other methods of digital distribution) are optimized for screen use, i.e. with downsampled images but without pre-press page marks, bleed, etc. Downsampling images leads to smaller documents for quicker loading.</li>
+			<li><span class="ui">For professional printing</span>&mdash;PDF files for professional printing are high-quality reproductions of your publication that are passed to a print partner (normally external to your company). You&apos;ll typically require a CMYK document, printer marks, bleed, &gt;300dpi images, and PDF/X-1a, PDF/X-3 or PDF/X-4 compatibility (for CMYK output).<br /> <br /> With PDF/X compatibility, all your publication&apos;s colors will be output in the CMYK color space, and fonts you&apos;ve used will be embedded. A single PDF/X file will contain all the necessary information (fonts, images, graphics, and text) your print partner requires.</li>
+		</ul>
+			
+		<p>Optionally, a PDF can be protected with two passwords. One for opening the document and another that allows the reader to edit, copy from and print the document.</p>
+		
+		<h2>Common publication practices</h2>
+		<p>When publishing, you may be warned about overflowing text in your publication. To resolve, check your text frames for frame text that extends over the frame end.</p>
+		
+		<p>All layers and hyperlinks created in Publisher export to PDF. Additionally, if you create a TOC or index and request hyperlinks on export, the TOC or index will be furnished with hyperlinks as appropriate.</p>
+
+		<aside class="box note">
+			<p>In an exported PDF, hyperlinks to files do not work with some PDF readers. The hyperlinked files are included alongside the PDF, but the links will not work in Apple&apos;s Preview app, for example.</p>
+		</aside>
+
+		<p>The <span class="ui">Soft Proof</span> adjustment is an adjustment layer dedicated to soft proofing CMYK PDF output in advance of export. You can use this to create an accurate preview of your publication prior to exporting it.</p>
+
+		<aside class="box note">
+			<p>For better search engine indexing of the document, you can add document metadata such as Title, Subject and Keywords to your publication via the <span class="ui">Fields</span> panel (via the <span class="ui">Document Information</span> section). Your exported PDF will then adopt these details.</p>
+		</aside>
+	</section>
+	
+	<section class="about">
+		<h2>Password-protected PDFs</h2>
+		<p>When exporting a PDF, you can choose to give it either or both of two types of password: an <span class="term">open password</span> and a <span class="term">permissions password</span>. Exporting with a password encrypts the resulting PDF.</p>
+		
+		<p>PDF password options are available when the <span class="ui">Compatibility</span> option is set to <i>PDF 2.0 (ISO 32000-2)</i>, <i>PDF 1.7 (Acrobat 8)</i> or <i>PDF 1.6 (Acrobat 7)</i>. All PDF presets provided with Affinity <i>except</i> those for PDF/X output use PDF 1.7 or 1.6 compatibility.</p>
+				
+		<h3>About open passwords</h3>
+		<p>The content of a PDF with an open password can be viewed only by providing the open password or, if one has <i>additionally</i> been set, the PDF&apos;s permissions password.</p>
+				
+		<p>When a PDF has only an open password, there are no restrictions on what people can do with its content. The PDF can be printed or placed in an Affinity document, its content can be modified and selectively copied, and pages can be extracted to create new PDFs.</p>
+		
+		<h3>About permissions passwords</h3>
+		<p>Setting a permissions password limits what people can do with the PDF unless they are able to provide the permissions password.</p>
+		
+		<p>Optionally, you can choose to allow specific actions to be performed without providing the permissions password. So, you might choose to allow people to freely open and print your PDF, but not modify or selectively copy its content.</p>
+		
+		<aside class="box note">
+			<p>Exporting a PDF with a permissions password <i>always</i> disallows page extraction, which could be used to extract content as is from your PDF. This is independent of the <span class="ui">Allow copying of content</span> setting, which determines whether smaller amounts of content, such as images and text, are copiable.</p>
+		</aside>
+	</section>	
+
+	<section class="howto">
+		<details open="open">
+			<summary>To publish a PDF file:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">Export</span>.</li>
+				<li>On the dialog, select the <span class="ui">PDF</span> file format.</li>
+				<li>Choose a <span class="ui">Preset</span>. Refer to &apos;PDF export presets comparison&apos; below for details of each preset&apos;s PDF version, color space, resolution and other settings.</li>
+				<li>Set a <span class="ui">Raster DPI</span> value to set the resolution for rasterization of effects.</li>		
+				<li>Check <span class="ui">Preview export when complete</span> so that the exported PDF will be automatically launched in your currently assigned PDF viewer.</li>
+				<li>Select the area of the publication you would like to include in the export from the <span class="ui">Area</span> setting. If your document contains more than one page, you may choose from <span class="ui">All Spreads</span>, <span class="ui">All Pages</span>, <span class="ui">Current Spread</span>, and <span class="ui">Current Page</span>. Additionally, with an object selected, you may choose from <span class="ui">Selection Area</span> or <span class="ui">Selection Only</span>.</li>
+				<li>Enter the page number(s) you would like to include in the export into the <span class="ui">Pages</span> setting. You may only do this if you have selected <span class="ui">All Pages</span> or <span class="ui">All Spreads</span> from the <span class="ui">Area</span> setting.</li>
+				<li><span class="ui">Include bleed</span>&mdash;when selected, any Bleed set in Document Setup will be included in the PDF output. Use in conjunction with PDF/X professional printing output.</li>
+				<li>For fine tuning, click <span class="ui">Advanced</span> then adjust the settings in the dialog. Refer to the <a href="exportSettings.html">Export Settings</a> topic for descriptions of all settings.</li>
+				<li>Click <span class="ui">Export</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To require a password to open a PDF:</summary>
+			<p>On the <span class="ui">Export</span> dialog, with PDF selected:</p>
+			<ol>
+				<li>Select <span class="ui">Require password to open</span>.</li>
+				<li>Click in the <span class="ui">Open password</span> box and type your required password.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To limit printing, copying from and editing of a PDF:</summary>
+			<p>On the <span class="ui">Export</span> dialog, with PDF selected:</p>
+			<ol>
+				<li>Select <span class="ui">Require password for modification and printing</span>.</li>
+				<li>Click in the <span class="ui">Permissions Password</span> box and type your required password.</li>
+				<li>Select <span class="ui">Allow document printing</span>, <span class="ui">Allow content modification</span> and <span class="ui">Enable copying of content</span> as required.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section class="settings">
+		<h2>PDF export presets comparison</h2>
+		<table class="pdfComp fivePresets">
+			<tr>
+				<td class="heading">Digital and desktop printing presets</td>
+				<td>PDF (digital - small size)</td>
+				<td>PDF (digital - high quality)</td>
+				<td>PDF (for print)</td>
+				<td>PDF (for export)</td>
+				<td>PDF (flatten)</td>
+			</tr>
+			<tr>
+				<td>Rasterize</td>
+				<td colspan="4">Unsupported properties</td>
+				<td>Everything</td>
+			</tr>
+			<tr>
+				<td>Downsample images</td>
+				<td colspan="3">Yes</td>
+				<td colspan="2">No</td>
+			</tr>
+			<tr>
+				<td class="suboption">Above (DPI)</td>
+				<td colspan="1">90</td>
+				<td colspan="2">375</td>
+				<td colspan="2">n/a</td>
+			</tr>
+			<tr>
+				<td class="suboption">Resample</td>
+				<td colspan="5">Bilinear</td>
+			</tr>
+			<tr>
+				<td>Resolution (DPI)</td>
+				<td colspan="1">72</td>
+				<td colspan="2">300</td>
+				<td colspan="2">Document</td>
+			</tr>
+			<tr>
+				<td>Allow JPEG compression</td>
+				<td colspan="5">Yes</td>
+			</tr>
+			<tr>
+				<td class="suboption">Quality</td>
+				<td colspan="1">85</td>
+				<td colspan="2">98</td>
+				<td colspan="2">85</td>
+			</tr>
+			<tr>
+				<td>Compatibility</td>
+				<td colspan="4">PDF 1.7 (Acrobat 8)</td>
+				<td>PDF 1.6 (Acrobat 7)</td>
+			</tr>
+			<tr>	
+				<td>Color Space</td>
+				<td colspan="2">RGB</td>
+				<td colspan="3">As document</td>
+			</tr>
+			<tr>
+				<td>Profile</td>
+				<td colspan="2">sRGB IEC61966-2.1</td>
+				<td colspan="3">Use document profile</td>
+			</tr>
+			<tr>
+				<td>Embed profiles</td>
+				<td colspan="2">No</td>
+				<td colspan="3">Yes</td>
+			</tr>
+			<tr>
+				<td>Convert image color spaces</td>
+				<td colspan="2">Yes</td>
+				<td colspan="3">No</td>
+			</tr>
+			<tr>
+				<td>Honor spot colors</td>
+				<td colspan="5">Yes</td>
+			</tr>
+			<tr>
+				<td>Overprint black</td>
+				<td colspan="2">No <sup>1</sup></td>
+				<td colspan="3">Yes</td>
+			</tr>
+			<tr>
+				<td>Include hyperlinks</td>
+				<td colspan="2">Yes</td>
+				<td colspan="1">No</td>
+				<td colspan="2">Yes</td>
+			</tr>
+			<tr>
+				<td>Include bookmarks</td>
+				<td colspan="2">Yes</td>
+				<td colspan="1">No</td>
+				<td colspan="2">Yes</td>
+			</tr>
+			<tr>
+				<td>Include layers</td>
+				<td colspan="5">Yes</td>
+			</tr>
+			<tr>
+				<td class="suboption">Include invisible layers</td>
+				<td colspan="5">No</td>
+			<tr>
+				<td>Include bleed</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td>Include printers marks</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td>Embed fonts</td>
+				<td colspan="4">All fonts</td>
+				<td colspan="1">Uncommon fonts</td>
+			</tr>
+			<tr>
+				<td>Subset fonts</td>
+				<td colspan="5">Yes</td>
+			</tr>
+			<tr>
+				<td>Allow advanced features</td>	
+				<td colspan="2">No</td>
+				<td colspan="1">Yes</td>
+				<td colspan="2">No</td>
+			</tr>
+			<tr>
+				<td>Tagged PDF</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td>Require password to open</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td class="suboption">Open password</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td>Require password for modification and printing</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td class="suboption">Permissions password</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td class="suboption">Allow document printing</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td class="suboption">Allow content modification</td>
+				<td colspan="5">No</td>
+			</tr>
+			<tr>
+				<td class="suboption">Enable copying of content</td>
+				<td colspan="5">No</td>
+			</tr>
+		</table>
+		<p><sup>1</sup> This setting&apos;s value cannot be overridden from this preset.</p>
+	
+		<table class="pdfComp fourPresets">
+			<tr>
+				<td class="heading">Professional printing presets</td>
+				<td>PDF<br> (press ready)</td>
+				<td>PDF/X-<br>1a:2003</td>
+				<td>PDF/X-<br>3:2003</td>
+				<td>PDF/X-4</td>
+			</tr>
+			<tr>
+				<td>Rasterize</td>
+				<td colspan="4">Unsupported properties</td>
+			</tr>
+			<tr>
+				<td>Downsample images</td>
+				<td colspan="4">Yes</td>
+			</tr>
+			<tr>
+				<td>Above (DPI)</td>
+				<td colspan="4">375</td>
+			</tr>
+			<tr>
+				<td>Resample</td>
+				<td colspan="4">Bilinear</td>
+			</tr>
+			<tr>
+				<td>Resolution (DPI)</td>
+				<td colspan="4">300</td>
+			</tr>
+			<tr>
+				<td>Allow JPEG compression</td>
+				<td colspan="4">Yes</td>
+			</tr>
+			<tr>
+				<td>Quality</td>
+				<td colspan="4">98</td>
+			</tr>
+			<tr>
+				<td>Compatibility</td>
+				<td colspan="1">PDF 1.7 (Acrobat 8)</td>
+				<td colspan="1">PDF/X-1a:2003</td>
+				<td colspan="1">PDF/X-3:2003</td>
+				<td colspan="1">PDF/X-4</td>
+			</tr>
+			<tr>	
+				<td>Color Space</td>
+				<td colspan="1">CMYK</td>
+				<td colspan="3">As document</td>
+			</tr>
+			<tr>
+				<td>Profile</td>
+				<td colspan="4">Use document profile</td>
+			</tr>
+			<tr>
+				<td class="suboption">Embed profiles</td>
+				<td colspan="1">Yes</td>
+				<td colspan="3">Yes <sup>1</sup></td>
+			</tr>
+			<tr>
+				<td>Convert image color spaces</td>
+				<td colspan="1">No</td>
+				<td colspan="1">Yes <sup>1</sup></td>
+				<td colspan="2">No</td>
+			</tr>
+			<tr>
+				<td>Honor spot colors</td>
+				<td colspan="4">Yes</td>
+			</tr>
+			<tr>
+				<td>Overprint black</td>
+				<td colspan="4">Yes</td>
+			</tr>
+			<tr>
+				<td>Include hyperlinks</td>
+				<td colspan="1">No</td>
+				<td colspan="3">No <sup>1</sup></td>
+			</tr>
+			<tr>
+				<td>Include bookmarks</td>
+				<td colspan="4">No</td>
+			</tr>
+			<tr>
+				<td>Include layers</td>
+				<td colspan="1">No</td>
+				<td colspan="3">No <sup>1</sup></td>
+			</tr>
+			<tr>
+				<td class="suboption">Include invisible layers</td>
+				<td colspan="1">No</td>
+				<td colspan="3">No <sup>1</sup></td>
+			<tr>
+				<td>Include bleed</td>
+				<td colspan="1">Yes</td>
+				<td colspan="3">No</td>
+			</tr>
+			<tr>
+				<td>Include printers marks</td>
+				<td colspan="4">No</td>
+			</tr>
+			<tr>
+				<td>Embed fonts</td>
+				<td colspan="4">All fonts</td>
+			</tr>
+			<tr>
+				<td class="suboption">Subset fonts</td>
+				<td colspan="4">Yes</td>
+			</tr>
+			<tr>
+				<td>Allow advanced features</td>	
+				<td colspan="4">Yes</td>
+			</tr>
+			<tr>
+				<td>Tagged PDF</td>
+				<td colspan="4">No</td>
+			</tr>
+			<tr>
+				<td>Require password to open</td>
+				<td>No</td>
+				<td colspan="3">n/a <sup>2</sup></td>
+			</tr>
+			<tr>
+				<td class="suboption">Open password</td>
+				<td>No</td>
+				<td colspan="3">n/a</td>
+			</tr>
+			<tr>
+				<td>Require password for modification and printing</td>
+				<td>No</td>
+				<td colspan="3">n/a <sup>2</sup></td>
+			</tr>
+			<tr>
+				<td class="suboption">Permissions password</td>
+				<td>No</td>
+				<td colspan="3">n/a</td>
+			</tr>
+			<tr>
+				<td class="suboption">Allow document printing</td>
+				<td>No</td>
+				<td colspan="3">n/a</td>
+			</tr>
+			<tr>
+				<td class="suboption">Allow content modification</td>
+				<td>No</td>
+				<td colspan="3">n/a</td>
+			</tr>
+			<tr>
+				<td class="suboption">Enable copying of content</td>
+				<td>No</td>
+				<td colspan="3">n/a</td>
+			</tr>
+		</table>
+		<p><sup>1</sup> This setting&apos;s value cannot be overridden from this preset.</p>
+		<p><sup>2</sup> Password protection is not supported for PDF/X.</p>
+
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="exportSettings.html">Export Settings</a></li>
+			<li><a href="bleed.html">Setting bleed</a></li>
+			<li><a href="../Clr/overprint.html">Overprinting</a></li>
+			<li><a href="../Clr/spotClr.html">Spot colors</a></li>
+			<li><a href="../Adjustments/adjustment_softProof.html">Soft Proof adjustment</a></li>
+			<li><a href="../Advanced/aboutBooks.html">About books</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

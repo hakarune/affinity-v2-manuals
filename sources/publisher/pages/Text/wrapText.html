@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="text wrapping" />
+	<meta name="description" content="Control how frame text is arranged around overlapping objects." />
+	<title>Text wrapping</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Text wrapping</h1>
+	
+		<p>Text wrapping lets you control how frame text flows around objects such as placed images, picture frames, shapes and even other text frames.</p>
+
+	</header>
+
+	<section class="about">
+		<figure>
+			<p><img src="../../../shared/textwrap.jpg" class="responsive" alt="Text wrapping" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p>The distance at which text wraps around an object&apos;s outline can be set independently for each side.</p>
+
+		<p>The wrap outline around an object can be edited to precisely define the extent of wrapping.</p>
+		
+		<p>Text wrapping is applicable when objects are partially or fully overlapping frame text.</p>
+		
+		<p>An object with a text wrap applied affects overlapping frame text whether the object is visible or hidden.</p>
+		
+		<figure class="nft">
+			<p><img src="../../images/textwrap.png" class="screenshot" alt="Text Wrap dialog" /></p>
+			<figcaption>The Text Wrap dialog.</figcaption>
+		</figure>
+		
+	<aside class="box tip">
+		<p>If you want to prevent text wrapping around underlying objects on a specific text frame, you can check <span class="ui">Ignore Text Wrap</span> in the <span class="ui">Text Frame</span> panel.</p>
+	</aside>
+		
+	</section>
+
+	<section class="howto">
+	
+		<details open="open">
+		<summary><img src="../../../shared/ui/edit_wrap_settings.png" class="tool heading" width="18" height="18" alt="Show Text Wrap Settings" /> To wrap text:</summary>
+
+			<ol>
+				<li>Select the object you want frame text to be wrapped around.</li>
+				<li>On the Toolbar, select <span class="ui">Show Text Wrap Settings</span>.</li>
+				<li>From the dialog, choose a <span class="ui">Wrap Style</span> from one of:<ul>
+						<li><span class="ui">None</span>&mdash;Text will not wrap around the object.</li>
+						<li><span class="ui">Jump</span>&mdash;Text will appear above and below the object.</li>
+						<li><span class="ui">Square</span>&mdash;Text will wrap around a rectangle which bounds the object.</li>
+						<li><span class="ui">Tight</span>&mdash;Text will wrap tightly outside the object&rsquo;s outline.</li>
+						<li><span class="ui">Inside</span>&mdash;Text will wrap tightly inside the object&rsquo;s outline.</li>
+						<li><span class="ui">Edge</span>&mdash;Text will avoid the edges of the object.</li>
+					</ul>
+				</li>
+				<li>For Square or Tight styles, choose to <span class="ui">Wrap to</span> either both sides or the widest portion of text.</li>
+				<li>Use the <span class="ui">Distance From Text</span> options to selectively set the buffer space between object edge and text.</li>
+			</ol>
+		</details>
+	
+		<details open="open">
+		<summary><img src="../../../shared/ui/edit_wrap_outline.png" class="tool heading" width="18" height="18" alt="Edit Wrap Outline" /> To edit the wrap outline:</summary>
+
+			<ol>
+				<li>Select the object whose outline you want to edit.</li>
+				<li>On the Toolbar, select <span class="ui">Edit Wrap Outline</span>.</li>
+				<li>With the now active <span class="ui">Node Tool</span>, reshape the outline by dragging nodes (and control handle pairs) into your chosen position.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+		<summary><img src="../../../shared/ui/reset_wrap_outline.png" class="tool heading" width="18" height="18" alt="Reset Wrap Outline" /> To reset the wrap outline:</summary>
+
+			<ul>
+				<li>On the Toolbar, select <span class="ui">Reset Wrap Outline</span>.</li>
+			</ul>
+		</details>	
+
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_node.html">Node Tool</a></li>
+			<li><a href="frameText.html">Frame text</a></li>
+			<li><a href="../Panels/textFramePanel.html">Text Frame panel</a></li>
+			<li><a href="../ObjectControl/objectDefaults.html">Object defaults</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

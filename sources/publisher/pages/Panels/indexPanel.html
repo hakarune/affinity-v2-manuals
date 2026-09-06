@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panels, index" />
+	<meta name="description" content="The Index panel lets you insert an index, and then manage indexed topics and index marks." />
+	<title>Index panel</title>
+</head>
+
+<body>
+
+	<header>
+
+	<h1>Index panel</h1>
+
+	<p>The <span class="ui">Index</span> panel allows you to generate and structure an index for your document.</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Index panel</h2>
+		
+		<p>From the <span class="ui">Index</span> panel, you can create an index, topics and insert index marks directly onto your page, as well as generate and insert your index in your document.</p> 
+		
+		<p>Index topics are simply index terms that you can search for in your document. From the search results in the panel, you can index all matching terms or index individual terms selectively.</p>
+		
+		<p>The panel also lets you manage all aspects of index management from a single location.</p>
+		
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via <span class="ui">Window&gt;References</span>.</p>
+		</aside>
+		
+		<figure>
+			<p><img src="../../images/panel_index.png" class="responsive" width="264" alt="Index panel" /></p>
+			<figcaption>The Index panel.</figcaption>
+		</figure>
+
+		<p>The following icons are available at the top of the panel:</p>
+			<ul>
+				<li><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Add Topic" /> <span class="ui">Panel Preferences</span>&mdash;displays just topics or topics and their references.</li>
+				<li><img src="../../../shared/ui/addIndexTopic.png" class="tool" width="16" height="16" alt="Add Topic" /> <span class="ui">Add Topic</span>&mdash;adds a new index topic to the panel which can be searched for via right click. Enter a name and specify a parent topic by either typing and selecting from the autocomplete box or by expanding the pop-up menu. <span class="ui">Sort By</span> allows you to specify an alternative label to sort the topic differently to the displayed name (Topic Name). <span class="ui">See</span> allows you to create a cross reference.</li>
+				<li><img src="../../../shared/ui/insertIndexMarker.png" class="tool" width="16" height="16" alt="Insert Marker" /> <span class="ui">Insert Marker</span>&mdash;inserts an index mark to your page for the currently searched for text. The index mark is placed at the start of the indexed word. When you insert an index mark, the <span class="ui">Topic</span> name will be pre-filled with the word at the insertion point. Existing topics that may be similar to the word at the insertion point will also be suggested. Typing in the <span class="ui">Topic</span> box allows you to search existing topics. You can then select a topic from the suggestion list using either the cursor keys or the mouse. Selecting a sub topic will populate both the topic and the parent. If you are creating a new topic, you may specify either a new or existing <span class="ui">Parent Topic</span>. <span class="ui">Style Override</span> allows you to specify a character style to use for the page number when this index mark appears in the index.</li>			
+				<li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete Index" /> <span class="ui">Delete</span>&mdash;deletes the selected topic/mark from the panel and on the page.</li>
+				<li><img src="../../../shared/ui/insertIndex.png" class="tool" width="16" height="16" alt="Insert Index" /> <span class="ui">Insert Index</span>&mdash;inserts a generated index in a text frame at the caret position.</li>			
+				<li><img src="../../../shared/ui/update.png" class="tool" width="16" height="16" alt="Update Index" /> <span class="ui">Update Index</span>&mdash;updates an existing generated index to include newly added index topics/marks.</li>
+				<li><img src="../../../shared/ui/showIndexMarks.png" class="tool" width="16" height="16" alt="Show Index Marks" /> <span class="ui">Show/Hide Index Marks in the document</span>&mdash;displays or hides index marks inserted into the text on your document pages.</li>	
+			</ul>
+
+		<p>When you insert an index mark, the topic name will be pre-filled with the word at the insertion point. Existing topics that may be similar to the word at the insertion point will also be suggested. Typing in the box allows you to search existing topics. You can select a topic from the suggestion list using either the cursor keys or the mouse. Selecting a sub topic will populate both the topic and the parent. If you are creating a new topic, you may specify either a new or existing parent topic. Style override allows you to specify a character style to use for the page number when this index mark appears in the index.</p>
+
+		<p>When you insert an index into the document, a number of styles will be generated. The section headings, each level of index, the page numbers and the cross reference label each get their own text styles which can be modified with the usual tools.</p>
+
+		<p>Changes that you make using the index panel are updated in the document straight away but editing the text of the document may cause the page numbers in the index to get out of date and this isn&apos;t updated automatically. To update this, hit the update button. If updates are needed before printing and exporting, Publisher will display a warning.</p>
+
+		<p>In the text menu there are options to insert an index mark, insert the index, update the index and show/hide index marks.</p>
+	
+	</section>
+			
+	<section class="settings">
+		<h3>Options</h3>
+		<p>There are a number of options that affect how the generated index looks. Any alterations made to the following options will be reflected immediately in the document:</p>
+
+		<ul>
+			<li><span class="ui">Language</span>&mdash;by default, the index is sorted in accordance with the language of the paragraph where it is inserted, but you can choose to override this by selecting an index language from the pop-up menu.</li>			
+			<li><span class="ui">Include section headings</span>&mdash;when checked, the index topics will be divided up into sections based on their initial letter. The initial letter will be placed at the start of each section.</li>
+			<li><span class="ui">Group page ranges</span>&mdash;when checked, ranges of three or more consecutive page numbers will be grouped (for example, pages 1,2,3,4 will become 1&ndash;4).</li>			
+			<li><span class="ui">Expand cross references</span>&mdash;when checked, cross references within the generated index will list the page number(s) of the reference target and not the text. If the target topic has sub topics it won&apos;t be expanded.</li>
+			<li><span class="ui">Labels and Separators</span>&mdash;allow you to customize various pieces of text that may appear within index entries:<ul>
+					<li><span class="ui">After Topic</span>&mdash;specify text to display between the topic name and any associated page numbers, e.g. the em space in &apos;Rice&emsp;9, 14, 18, 26&apos;.</li>
+					<li><span class="ui">Between Items</span>&mdash;specify text to display between discrete page numbers/ranges, e.g. the commas in &apos;Wheat 93, 97&ndash;102, 104, 195&apos;.</li>
+					<li><span class="ui">Between Ranges</span>&mdash;specify text to display between the first and last page numbers in page ranges, e.g. the en dash in &apos;Barley 132&ndash;135, 248&apos;.</li>
+					<li><span class="ui">Before References</span>&mdash;specify text to display before an index entry&apos;s list of cross references, e.g. the em dash in &apos;Jasmine&mdash;See Rice.&apos;</li>
+					<li><span class="ui">See</span> / <span class="ui">See Also</span>&mdash;specify the text to be used for cross reference labels. <span class="ui">See</span> text is used when a cross reference has no index marks of its own. <span class="ui">See Also</span> text is used when a cross reference has additional index marks of its own.</li>
+					<li><span class="ui">After See (Also)</span>&mdash;specify text to display between a <span class="ui">See</span>/<span class="ui">See Also</span> label and its list of cross-references, e.g. the colon and succeeding space in &apos;Grains See: Corn, Oats, Rice, Wheat&apos;.</li>
+					<li><span class="ui">After References</span>&mdash;specify text to display after an index entry&apos;s list of cross references, e.g. the full stop in &apos;Jasmine&mdash;See Rice.&apos;</li>
+				</ul>
+			</li>
+			<li>Index topic list&mdash;lists added index topic marks. <span class="key CLICK-TAG"></span>-click any created index topic to locate a term in the document (select <span class="ui">Find in document</span>).</li>
+		</ul>
+			
+		<aside class="box tip">
+			<p>Each <span class="ui">Labels and Separators</span> option allows commonly used special characters to be inserted into its text by clicking the arrow at the left of its box and then selecting from a menu. Special characters can also be inserted using your operating system&apos;s feature for typing emoji and symbols, or by copying and pasting.</p>
+		</aside>
+
+		<p>Below the <span class="ui">Index</span> panel options is a preview of the index, listing all of the topics and sub topics in the form of a tree diagram. Under each topic, all of the index marks for that topic are listed, complete with the page number they appear on and a few words of the surrounding text.</p>
+
+		<p>Index marks and topics can be easily altered from within the <span class="ui">Index</span> panel in the following ways:</p>
+			<ul>
+				<li>Drag and drop index marks and topics to rearrange them.</li>
+				<li><span class="key CLICK-TAG"></span>-drag a topic to make a cross reference.</li>
+				<li>Clicking twice on a topic in the index allows you to rename it.</li>
+				<li>Double-clicking on a topic inserts a mark for that topic at the caret.</li>
+				<li>Double-clicking on an index mark brings that mark into view.</li>
+				<li>Right-clicking on a topic brings up a context menu. The context menu contains a set of options allowing you to edit the topic, add a sub topic, add a cross reference or find the topic in the document.</li>
+			</ul>
+			
+		<p><span class="key CLICK-TAG"></span>-clicking on an index topic also allows you to choose from the following options:</p>
+			<ul>
+				<li><span class="ui">Edit Topic</span>&mdash;allows you to:<ul>
+						<li>Rename the topic.</li>
+						<li>Specify the parent topic (if any) that the selected topic falls under.</li>
+						<li>Enter a different string to the one displayed to allow alternative sorting options for the topic.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Add sub topic</span>&mdash;allows you to create a new topic that sits under the selected topic.</li>
+				<li><span class="ui">Add cross reference</span>&mdash;allows you to create a cross reference for the selected topic.</li>			
+				<li><span class="ui">Find in document</span>&mdash;locates the topic and any related sub topics and allows you to jump straight to their location in the document</li>
+			</ul>
+			
+		<p>At the bottom of the panel is a search box allowing you to search for topics by name.</p>
+	
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Advanced/index.html">Index</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>		
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

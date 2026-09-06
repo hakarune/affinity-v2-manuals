@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="object, subject, selection, machine learning, ML, machine learning, refine" />
+	<meta name="description" content="Tool overview and settings." />
+	<title>Object Selection Tool</title>
+</head>
+
+	<body>
+		<header>
+			<h1><img src="../../../shared/ui/object_selection_tool.svg" class="tool heading" width="18" height="18" alt="Object Selection Tool" /> Object Selection Tool (ML)</h1>
+
+			<p>The Object Selection Tool allows you to easily select parts of your composition with a single click.</p>
+		</header>
+		
+		<section class="about">
+			<figure>
+				<div class="single"><img src="../../../shared/object_selection_tool_modifiers.jpg" alt="Pencil drawn example" ></div>
+				<figcaption>The Object Selection Tool in its default operation (A), separating object components with a modifier (B), isolating components further with a modifier combo (C).</figcaption>
+			</figure>
+
+			<p>This feature uses Machine Learning (ML) models for automatic object and subject selection. This is in line with Affinity&rsquo;s ambition to use ML for the benefit of faster workflow. Models are installed as pre-trained models and do not use any of your own data for further training. Because these operations all work &apos;on device&apos; none of your data leaves your device at any time.</p>
+
+			<aside class="box warning">
+				<p>The <span class="ui">Segmentation</span> model must be downloaded prior to using the Object Selection Tool. The model is available in <span class="ui">Settings&gt;Machine Learning Models</span> section.</p>
+			</aside>
+
+			<h2>About the Object Selection Tool</h2>
+
+			<p>The <span class="ui">Object Selection Tool</span> can be accessed it via the Tools panel. It uses a Segmentation Machine Learning model to identify objects on a layer.</p>
+			<p>Initially, while hovering over an area, the tool will indicate the inference processing by changing its icon temporarily. Once ready, the hatched lines will appear over the object to indicate what will be selected when clicked. Every newly selected area is treated as a new object selection.</p>
+
+			<aside class="box note">
+				<p>The selection is post-processed with <span class="ui">Soft Edges</span> enabled on the context toolbar by default. For more complex elements, such as hair or fur, use <span class="ui">Refine</span> to clean up your selections.</p>
+			</aside>
+		</section>
+		
+		<section class="settings">
+			<h3>Settings</h3>
+
+			<figure>
+				<div class="comparison"><img src="../../../shared/multi_object_off.jpg" alt="?? before" ><div><img src="../../../shared/multi_object_on.jpg" alt="?? after" ></div>
+				</div>
+				<figcaption>Before and after Multi-part Objects option toggled on and off.</figcaption>
+			</figure>
+
+			<p>The following settings can be adjusted from the context toolbar:</p>
+
+			<ul>
+				<li><span class="ui">Mode:</span><ul>
+						<li><span class="ui">New</span>&mdash;when enabled (default), each selection will be treated as an individual one. Pre-visualized selections are indicated by a blue hatched pattern.</li>
+						<li><span class="ui">Add</span>&mdash;when enabled, each subsequent selection will be added to the previous one. Pre-visualized selections are indicated by a green hatched pattern.</li>
+						<li><span class="ui">Subtract</span>&mdash;when enabled, each subsequent selection will be removed from the previous one. Pre-visualized selections are indicated by a red hatched pattern.</li>
+						<li><span class="ui">Intersect</span>&mdash;when enabled, the selection will include the overlapping areas (between two or more previously selected areas). Pre-visualized selections are indicated by a blue hatched pattern.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Multi-part Objects</span>&mdash;when enabled (default), the selection will include all parts of an object (if obstructed by another object, say). When disabled, the sampling object of the mask is bounded to the area you hover over.</li>
+				<li><span class="ui">Soft Edges</span>&mdash;when enabled (default), the selection will be refined using a small border value to help matte and soften the selection bounds.</li>
+				<li><span class="ui">Refine</span>&mdash;opens a dialog with options to assist removing elements from your selections.</li>
+			</ul>
+
+			<aside class="box note">
+				<p>Use <span class="ui">Soft Edges</span> (above) for the majority of raster-based workflows. Consider disabling the setting for edge-focus scenarios.</p>
+			</aside>
+
+			<aside class="box note">
+					<h3>Modifier keys</h3>
+					<p>When using the tool, the following modifiers can be used:</p>
+					<ul>
+						<li class="osx">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while clicking to confirm selections separates them into object components, which inevitably may consist of varied textures. For example, it is possible to separate a model&apos;s face from the eyes.</li>
+						<li class="win32">Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> while clicking to confirm selections separates them into object components, which inevitably may consist of varied textures. For example, it is possible to separate a model&apos;s face from the eyes.</li>
+						<li class="osx">Pressing the <span class="key ALT-TAG"></span><span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span>s, further separates object components. For example, it is possible to separate parts of an outfit consisting of varied colors or textures.</li>
+						<li class="win32">Pressing the <span class="key ALT-TAG"></span>+<span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span>s, further separates object components. For example, it is possible to separate parts of an outfit consisting of varied colors or textures.</li>
+						<li>Dragging on an object enables you to establish smaller selection areas, as indicated by the hatched pattern during the operation.</li>
+					</ul>
+				</aside>
+		</section>
+
+		<section id="also">
+			<h4>SEE ALSO:</h4>
+			<ul class="plain">
+				<li><a href="../Layers/selections_selectSubject.html">Select Subject (ML)</a></li>
+				<li><a href="../Extras/machineLearning.html">Affinity and Machine Learning (ML)</a></li>
+				<li><a href="../Selections/selections_create.html">Creating pixel selections</a></li>
+				<li><a href="../Selections/selections_refine.html">Refining pixel selection edges</a></li>
+				<li><a href="tools_selectionBrush.html">Selection Brush Tool</a></li>
+				<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+				<li><a href="../Workspace/preferences.html">Settings</a></li>
+			</ul>
+		</section>
+
+		<script src="../../../resources/js/breakout.js"></script>
+	</body>
+</html>

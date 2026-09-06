@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="PDF, tagged, alt text, accessibility, compliance, remediation" />
+	<meta name="description" content="The Reading Order panel specifies the order in which assistive technologies will present your document's contents to the reader." />
+	<title>Reading Order panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Reading Order panel</h1>
+	
+		<p>The <span class="ui">Reading Order</span> panel allows you to specify the order in which assistive technologies, such as screen readers, will present your document&apos;s contents to the reader.</p>
+
+	</header>
+
+	<section class="about">
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via the <span class="ui">Window</span> menu.</p>
+		</aside>
+
+		<figure class="nft overrideDE overrideFR">
+			<p><img src="../../images/panel_readingOrder.png" class="responsive" width="264" alt="Books" /></p>
+			<figcaption>The Reading Order panel.</figcaption>
+		</figure>
+
+		<p>The panel automatically lists text objects from all pages of your document, and any other objects for which you have set alt text using the <span class="ui">Tags</span> panel.</p>
+
+		<p>Items can be reordered by dragging them up or down the list. They can be grouped into articles to help you more easily manage the reading order.</p>
+
+		<h2>Reading order item names</h2>
+		
+		<p>Items are named according to the following rules:</p>
+
+		<ul>
+			<li>If the corresponding object&apos;s layer has a custom name, that name is also the item name.</li>
+			<li>Otherwise:<ul>
+					<li>For text objects, the start of the text is used as the item name.</li>
+					<li>For non-text objects which have alt text, the alt text is used for both the item name and the layer name.</li>
+					<li>For non-text objects which don&apos;t have alt text, the object&apos;s default layer name is used as the item name<sup>1</sup>.</li>
+					<li>For articles, which can be used to group other items, <i>Article</i> is used as the default name<sup>2</sup>.</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<p><sup>1</sup> This occurs when an object is manually added to the reading order. You&apos;ll need to add alt text for the item to be included in an exported PDF&apos;s reading order.</p>
+
+		<p><sup>2</sup> To rename an article, select it, then click it again.</p>
+	</section>
+
+	<section class="settings">
+		<h2>Settings</h2>
+
+		<p>The following items are available on the panel:</p>
+
+		<ul>
+			<li><span class="ui">Reading Order</span>&mdash;lists all qualifying objects from your document in the order they will be presented by assistive technologies.</li>
+			<li><span class="ui">Go to Article</span>&mdash;selects the object in the document that corresponds to the selected item in the list. The document view focuses on the object, if it is not already in view.</li>
+			<li><span class="ui">Add Article</span>&mdash;creates a new article. If two or more reading order items are selected, they are added to the article.</li>
+			<li><span class="ui">Add selected object(s)</span>&mdash;adds to the list any objects which are selected but not already in the list.</li>
+			<li><span class="ui">Remove Article</span>&mdash;removes the selected article(s) from the list. If items within an article are selected, they are also removed, otherwise, they are moved to the top level of the list.</li>
+		</ul>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Publishing/accessiblePDFs.html">Accessible PDFs</a></li>
+			<li><a href="../Publishing/publishPDFFiles.html">Publishing PDF files</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

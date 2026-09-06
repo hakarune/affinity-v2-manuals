@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="hanging, hung, punctuation, optical, alignment, optical margin alignment" />
+	<meta name="description" content="Align characters at start and end of paragraph text." />
+	<title>Optical alignment</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Optical alignment</h1>
+		<p>Optical alignment uses preset or custom rules for aligning characters at the start and end of paragraph text as well as at tab stops.</p>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/opticalalign_before.jpg" alt="Before" /><div><img src="../../../shared/opticalalign_after.jpg" alt="After" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<p>Optical alignment is typically used to introduce hanging punctuation where punctuation marks are outdented at the start and end of paragraph text.</p>
+		
+		<p>As a result, the feature is best configured for a base paragraph style (e.g., Base), with the option of manual fine tuning via the Character panel as needed. This will <em>automatically</em> apply relevant optical alignment rules when characters such as &ldquo; and &lsquo; are typed at the start and end of paragraph text (at Left Indent or Right Indent) or at tab stops. This is without manual selection of the character itself.</p>
+		<p>Two types of optical alignment are possible: &apos;Manual&apos; where a lookup table of rules is used and &apos;Font&apos; where the font itself provides optical alignment control. The latter is applicable to fonts that have been designed with in-built optical alignment capabilities&mdash;this is emergent technology.</p>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To apply optical alignment:</summary>
+			<ol>
+				<li>From the <span class="ui">Text Styles</span> panel, <span class="key CLICK-TAG"></span>-click on a text style and choose <span class="ui">Edit [style name]</span>.</li>
+				<li>From the <span class="ui">Character&gt;Optical Alignment</span> section, change <span class="ui">Type</span> to &apos;Manual&apos;.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+			</ol>
+			<p>This invokes all the listed alignment rule presets, plus any added custom optical alignment rules.</p>
+
+			<aside class="box note">
+				<p>Accurate optical alignment depends on the font used so it&apos;s worth checking the alignment if you&apos;ve altered your font.</p>
+			</aside>
+
+		</details>	
+	
+		<details open="open">
+			<summary>To add a custom optical alignment rule:</summary>
+			<ol>
+				<li>From the <span class="ui">Text Styles</span> panel, go to the <span class="ui">Character</span> section, then select <span class="ui">Optical Alignment</span> and change <span class="ui">Type</span> to Manual.</li>
+				<li>Click <span class="ui">Add</span>.</li>
+				<li>Edit the rule as follows:<ul>
+						<li><span class="ui">Left</span>&mdash;The percentage of the character to be outdented at paragraph&apos;s Left Indent or tab stop; 100% means the whole character&apos;s width will be outdented.</li>
+						<li><span class="ui">Right</span>&mdash;The percentage of the character to be outdented at paragraph&apos;s Right Indent or tab stop.</li>
+						<li><span class="ui">Characters</span>&mdash;The character to be optically aligned. The character you type in your paragraph that matches this character will be automatically aligned.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+		<aside class="box note">
+			<p>You can create optical alignment rules by using the <span class="ui">Character</span> panel instead. This lets you apply alignment to selected characters at the character level rather than to a text style.</p>
+		</aside>
+		
+	</section>
+
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="text_general.html">Working with text</a></li>
+			<li><a href="../Panels/characterPanel.html">Character panel</a></li>
+			<li><a href="tabs.html">Tabs</a></li>
+			<li><a href="textStyles.html">Text styles</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

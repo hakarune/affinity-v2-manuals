@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="books, chapters, numbers, page numbering, page numbers, list numbering, list numbers, note numbering, note numbers" />
+	<meta name="description" content="Ensure page, note and global list numbers are up to date across a book's chapters." />
+	<title>Updating page, list and note numbers</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Updating page, list and note numbers</h1>
+	
+		<p>The <span class="ui">Books</span> panel allows you to specify whether each chapter&apos;s page numbering continues from the preceding chapter or starts at a specific number.</p>
+		
+		<p>Additionally, the panel allows you to update the numbering of lists and of endnotes positioned at the end of the book, so their numbering continues from one chapter to the next.</p>
+		
+	</header>
+
+	<section class="about">
+		<h2>About numbering</h2>
+		<h3>Page numbering</h3>
+		<p>When a chapter is added to a book, its page numbering continues from the preceding chapter by default.</p>
+		
+		<p>Any chapter&apos;s numbering can be set to start at a number of your choice. For example, after a book&apos;s front matter, which may be numbered using lower-case Roman numerals, the first proper chapter would start at page 1.</p>
+		
+		<h3>List numbering</h3>
+		<p>When a list is configured (on the <span class="ui">Bullets and Numbering</span> section of the <span class="ui">Paragraph</span> panel) to be <span class="ui">Global</span> and with <span class="ui">Restart Numbering</span> set to <span class="ui">Manual Only</span>, the numbering of its items continues from other, earlier lists of their kind in the same document.</p>
+		
+		<p>Updating list numbering from the Books panel makes such lists continue their numbering from other lists of their kind in earlier chapters, too.</p>
+		
+		<h3>End-of-book endnote numbering</h3>
+		<p>When endnotes are configured (on the <span class="ui">Positioning</span> section of the <span class="ui">Notes</span> panel) to appear at the end of their book, their numbering will continue across chapters if you also set <span class="ui">Restart every</span> to <span class="ui">Book</span> in the panel&apos;s <span class="ui">Numbering</span> section. For example, if the first chapter&apos;s endnote bodies are numbered from 1 to 4, the second chapter&apos;s would then continue at 5, and so on.</p>
+		
+		<h2>Automatic and manual updating</h2>
+		<p>Affinity automatically updates the numbering of pages, global lists and end-of-book endnotes when a book is output, i.e exported or printed. Numbering also automatically updates while you edit your book&apos;s contents&mdash;for example, when chapters or pages are added or removed. You can choose to repaginate manually if you prefer.</p>
+		
+		<p>While editing a book, numbering of global lists and end-of-book endnotes occurs only when you manually request it.</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To choose between automatic and manual updating of page numbers while editing a book:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, open the Panel Preferences menu.</li>
+				<li>From the <span class="ui">Update Numbers</span> submenu, check <span class="ui">Update Page Numbers Automatically</span> to update automatically, or uncheck it to only update manually as required.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To choose between automatic and manual updating of all numbers upon output:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, open the Panel Preferences menu.</li>
+				<li>From the <span class="ui">Update Numbers</span> submenu, select <span class="ui">Update Numbers Before Output</span> for automatic updating or deselect it to update manually as required.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To manually update page, list, note or all numbers:</summary>
+			<ol>
+				<li>On the <span class="ui">Books</span> panel, select the chapters whose numbering you want to update.</li>
+				<li>From the Panel Preferences menu&apos;s <span class="ui">Update Numbers</span> submenu, select <span class="ui">Page Numbers</span>, <span class="ui">List Numbers</span>, <span class="ui">Note Numbers</span> or <span class="ui">All Numbers</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="aboutBooks.html">About books</a></li>
+			<li><a href="creatingBooks.html">Creating books</a></li>
+			<li><a href="syncingChapters.html">Synchronizing chapters</a></li>
+			<li><a href="outputtingBooks.html">Outputting books</a></li>
+			<li><a href="../Panels/booksPanel.html">Books panel</a></li>
+			<li><a href="../Advanced/fields.html">Fields</a></li>
+			<li><a href="../Panels/fieldsPanel.html">Fields panel</a></li>
+			<li><a href="../Text/text_bulletsAndNumbering.html">Bullets and numbering</a></li>
+		</ul>
+	</section>	
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

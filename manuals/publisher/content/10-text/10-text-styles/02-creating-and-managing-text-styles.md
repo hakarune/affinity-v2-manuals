@@ -1,0 +1,100 @@
+# Creating and managing text styles
+
+Text styles can be created in the Text Styles panel, ready for applying to text. They can also be managed and modified to improve your design and workflow.
+
+There are several ways to create a new text style:
+
+1. build it from scratch—the new text style will have no initial connection to any other text style.
+2. duplicate it from another style—the new text style will initially be exactly the same as the selected text style but has no connection to that style.
+3. base it on an existing style—the new text style will use the selected text style as its base. A connection between the styles is retained and a hierarchy is established.
+
+A text style can be modified in two ways:
+
+- Editing the text style directly.
+- Updating the text style to match some selected, locally formatted text.
+
+> **Tip:** You can also set up your own keyboard shortcuts to apply individual text styles to text.
+
+**To create a text style from scratch:**
+
+1. Deselect any text.
+2. On the **Text Styles** panel, select:See [Text style types](04-text-style-types.md) for more information.
+  - **Create Paragraph Style**—to create a new paragraph style.
+  - **Create Character Style**—to create a new character style.
+  - **Create Group Style**—to create a new group style.
+3. Adjust the settings in the dialog.
+4. Click **OK**.
+
+The new 'empty' character and paragraph styles named [No Style], are applied to the portion of text.
+
+**To create a text style from an existing style:**
+
+1. (Optional) Format and select a portion of text or click inside a paragraph.
+2. On the **Text Styles** panel, click on a listed style's options menu and select:
+  - **Duplicate**—to start with settings exactly the same as the selected style.
+  - **Create Style Based on**—to automatically set the dialog's **Based on** option to the selected style.
+3. Adjust the settings in the dialog.
+4. Click **OK**.
+
+If you want apply the new style to the currently selected text, enable **Apply style to selection** in the dialog.
+
+**To edit an existing text style:**
+
+1. On the **Text Styles** panel, click on a listed style's options menu and select **Edit**.
+2. Adjust the settings in the dialog.
+3. Click **OK**.
+
+**To update a text style:**
+
+1. Select text that is formatted with the text style.
+2. Adjust local formatting via the context toolbar, **Character** panel or **Paragraph** panel.
+3. On the context toolbar or the **Text Styles** panel, select **Update Paragraph Style** or **Update Character Style** as appropriate.
+
+The text style is updated to match the local formatting.
+
+**To assign a keyboard shortcut to a text style:**
+
+1. On the **Text Styles** panel, click on a listed style's options menu and select **Edit**.
+2. In the dialog, select the **Style** section and then click inside the **Keyboard shortcut** box.
+3. Press your required key combination.
+4. Click **OK**.
+
+> **Note:** ![Already Assigned warning icon](../../../assets/shared/ui/excl.png) If a warning icon appears in the box, the shortcut is already assigned to another action or text style. Hover over the icon to see what that action or text style is.
+>
+> To remove a keyboard shortcut from a text style, click the cross icon inside the **Keyboard shortcut** box.
+
+**To import text styles from documents:**
+
+1. Do one of the following:
+  - From the **Text Styles** panel, go to Panel Preferences and select **Import Styles**.
+  - Select **Text>Text Styles>Import Text Styles**.
+2. From the dialog, navigate to and select a document containing the text styles you would like to import and click **Open**.
+3. On the next dialog that appears, the text styles in the imported document are listed, giving you the option to rename, replace, view, and select the individual text styles within the document you would like to import.
+
+  ![Imported Text styles dialog](../../../assets/images/importedTextStyles.png)
+
+The imported text styles replace existing styles or are added as new styles to the Text Styles panel.
+
+### Options
+
+The following options are available in the **Style** section of the **Edit Text Style** dialog:
+
+- **Style name**—defines the name the text style will use throughout the app.
+- **Based on**—sets the default settings for this style. In a hierarchical sense, the Base on text style is the master style to this subordinate style.
+- **Next style**—for paragraph styles, this determines the text style automatically applied to the following paragraph. This is only activated when you press the `Return`  when typing text.
+- **Next level**—For multi-level paragraph styles (e.g., those that use 1, 1.1 and 1.1.1 auto-numbering prefixes) this determines the style that is for the subordinate level.
+- **Keyboard shortcut**—sets the keyboard shortcut which will apply this text style.
+- **Type**—determines if the text style will be a character, paragraph or group text style.
+- **Show in both panels**—if this option is off (default), the text style can only be applied in its predominant way (determined by the Type set above). When selected, a paragraph style can be applied as a character style and vice versa.
+- **Reset Formatting**—removes all the settings applied in the Character, Typography and Paragraph sections of this dialog. The settings in this Style section remain unchanged.
+- **Style settings**—lists all the attributes applied to the current text style.
+- **Apply style to selection**—applies the current text style to any selected text (if text was selected prior to entering the dialog).
+
+> **Note:** Where **[no change]** is shown, an attribute remains unchanged from the **Based on** style.
+
+#### SEE ALSO:
+
+- [Using text styles](01-using-text-styles.md)
+- [Removing text styles](03-removing-text-styles.md)
+- [Text style types](04-text-style-types.md)
+- [Text Styles panel](../../21-panels/33-text-styles-panel.md)

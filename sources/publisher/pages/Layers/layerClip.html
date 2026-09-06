@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="clipping objects, clipping layers, clipped objects, nested, nesting, child, parent, masking, paths, clipping paths" />
+	<meta name="description" content="Clipping involves masking part of an object by placing it inside another object." />
+	<title>Layer clipping</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Layer clipping</h1>
+
+		<p>Clipping involves positioning one object inside another, creating a parent - child layer relationship. The path of the parent object becomes the new boundaries for the child object. Any areas of the child object which lie outside the parent object&apos;s path are masked (hidden).</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/clipping_before.jpg" alt="Clipping before" /><div><img src="../../../shared/clipping_after.jpg" alt="Clipping after" /></div>
+			</div>
+			<figcaption>An image clipped inside artistic text to give it texture.</figcaption>
+		</figure>
+		
+		<figure class="nft">
+			<div class="single"><img src="../../images/layers_parentchild.png" class="responsive" width="265" height="260" alt="Clipping in Layers panel" /></div>
+			<figcaption>Layers panel showing the parent-child relationship of the above clipped image being created.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About clipping</h2>
+		<p>Any object can act as a parent or child in clipping relationships. Therefore both vector objects and pixel layer content can be either clipped or clipping objects.</p>
+		<p>When scaling a parent object, child (clipped) objects scale to maintain the correct aspect ratio. Scaling a clipped object has no effect on the parent object. A clipped object can be edited independently from its parent, e.g. adjusting color, opacity, and/or blend mode.</p>
+
+		<aside class="box note">
+			<p>Objects can be clipped on creation by drawing directly inside a selected object. This is controlled by <span class="ui">Insert inside the selection</span> object targeting. For more information, see the <a href="../ObjectControl/target.html">Targeting objects</a> topic.</p>
+		</aside>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To clip objects:</summary>
+			<ol>
+				<li>On the page, position the object to be clipped so it overlaps the object which will perform the clipping.</li>
+				<li>On the <span class="ui">Layers</span> panel, drag the object to be clipped on top of the object which is to perform the clipping. A blue highlight appears to target the layer.</li>
+			</ol>
+
+			<p>The clipped object is nested within the clipping object on the Layers panel, i.e. it has become a child of the clipping object.</p>
+		</details>
+
+		<details>
+			<summary><img src="../../../shared/ui/ExpandCollapsebtn.png" class="tool heading" width="24" height="24" alt="Expand/Collapse" /> To select clipped objects:</summary>
+			<ol>
+				<li>In the <span class="ui">Layers</span> panel, expand the clipping object&apos;s contents (if needed) by clicking the layer&apos;s arrow.</li>
+				<li>Click to select the clipped object.</li>
+			</ol>
+
+			<p>The clipped object can now be moved and edited as needed.</p>
+
+			<aside class="box tip">
+				<p>Alternatively, you can select clipped objects directly on the page using <span class="key CMD-TAG"></span>-click.</p>
+			</aside>
+		</details>
+
+		<details>
+			<summary>To remove clipping from an object (unclip):</summary>
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, drag the clipped object to a new position outside its parent&apos;s entry on the layer stack.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary>To resize an object without scaling its child layer content:</summary>
+			<ul>
+				<li>Select the parent object with the <span class="ui">Move Tool</span>, and then check <span class="ui">Lock Children</span> on the context toolbar. Resize the parent object to your chosen size.</li>
+			</ul>
+
+		<aside class="box tip">
+			<p>As you resize the parent, you can press the <span class="key SPACEBAR-TAG"></span> <span class="KEY-TAG"></span> to temporarily override the current Lock Children state while the key remains pressed.</p>
+		</aside>
+		</details>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../ObjectControl/target.html">Targeting objects</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="layerBlendModes.html">Layer blending</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

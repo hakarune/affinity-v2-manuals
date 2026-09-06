@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="toolbar, toolbars, panel, panels, tool, tools" />
+	<meta name="description" content="Interface Visual Reference" />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: {
+					src: "../../../shared/interface/publisher.jpg", 
+					alt: "Publisher Persona",				
+					hotspot1: { left: 4.6, top: 3.6, width: 8.4, height: 3.7 }, /* Persona Toolbar */
+					anno1: { left: 24, top: 30, width: 52 },
+					hotspot2: { left: 13.8, top: 3.6, width: 86, height: 3.7 }, /* Toolbar */
+					anno2: { left: 24, top: 30, width: 52 },
+					hotspot3: { left: 0, top: 8.4, width: 99.8, height: 3 }, /* Context Toolbar */
+					anno3: { left: 25, top: 30, width: 50 },
+					hotspot4: { left: 0, top: 12.1, width: 2.4, height: 65.8 }, /* Tools panel */
+					anno4: { left: 26, top: 30, width: 48 },
+					hotspot5: { left: 83.5, top: 12.1, width: 16.3, height: 84.3 }, /* Right Studio */
+					anno5: { left: 21, top: 30, width: 58 },
+					hotspot6: {left: 2.9, top: 12.2, width: 12.2, height: 84.2 }, /* Pages Panel */
+					anno6: { left: 25, top: 30, width: 50 },
+					hotspot7: { left: 0, top: 97.2, width: 99.8, height: 2 }, /* Status bar */
+					anno7: { left: 25, top: 30, width: 50 },
+					hotspot8: { left: 15.6, top: 12.1, width: 67.5, height: 84.3 }, /* Document View */
+					anno8: { left: 24, top: 30, width: 52 },
+					hotspot9: { left: 0, top: 0, width: 99.8, height: 2.4 }, /* Menu bar */
+					anno9: { left: 22.5, top: 30, width: 55 }
+				},
+				tab2: {
+					src:"../../../shared/interface/designer.jpg", 
+					alt: "Designer Persona",
+					hotspot1: { left: 4.6, top: 3.6, width: 8.4, height: 3.7 }, /* Persona Toolbar */
+					anno1: { left: 24, top: 30, width: 52 },
+					hotspot2: { left: 13.8, top: 3.6, width: 86, height: 3.7 }, /* Toolbar */
+					anno2: { left: 24, top: 30, width: 52 },
+					hotspot3: { left: 0, top: 8.4, width: 99.8, height: 3 }, /* Context Toolbar */
+					anno3: { left: 25, top: 30, width: 50 },
+					hotspot4: { left: 0, top: 12.1, width: 2.4, height: 74 }, /* Tools panel */
+					anno4: { left: 26, top: 30, width: 48 },
+					hotspot5: { left: 83.5, top: 12.1, width: 16.3, height: 84.3 }, /* Right Studio */
+					anno5: { left: 21, top: 30, width: 58 },
+					hotspot6: { left: 0, top: 97.2, width: 99.8, height: 2 }, /* Status bar */
+					anno6: { left: 25, top: 30, width: 50 },
+					hotspot7: { left: 2.8, top: 12.1, width: 80.3, height: 84.5 }, /* Document View */
+					anno7: { left: 24, top: 30, width: 52 },
+					hotspot8: { left: 0, top: 0, width: 99.8, height: 2.4 }, /* Menu bar */
+					anno8: { left: 22.5, top: 30, width: 55 }
+				},
+				tab3: {
+					src:"../../../shared/interface/photo.jpg", 
+					alt: "Photo Persona",
+					hotspot1: { left: 4.6, top: 3.6, width: 8.4, height: 3.7 }, /* Persona Toolbar */
+					anno1: { left: 24, top: 30, width: 52 },
+					hotspot2: { left: 13.8, top: 3.6, width: 86, height: 3.7 }, /* Toolbar */
+					anno2: { left: 24, top: 30, width: 52 },
+					hotspot3: { left: 0, top: 12.1, width: 2.4, height: 82.2 }, /* Tools panel */
+					anno3: { left: 26, top: 30, width: 48 },
+					hotspot4: { left: 83.5, top: 12.1, width: 16.3, height: 84.3 }, /* Right Studio */
+					anno4: { left: 21, top: 30, width: 58 },
+					hotspot5: { left: 0, top: 97.2, width: 99.8, height: 2 }, /* Status bar */
+					anno5: { left: 25, top: 30, width: 50 },
+					hotspot6: { left: 2.8, top: 12.2, width: 80.4, height: 84.3 }, /* Document View */
+					anno6: { left: 26.25, top: 30, width: 47.5 },
+					hotspot7: { left: 0, top: 0, width: 99.8, height: 2.4 }, /* Menu bar */
+					anno7: { left: 22.5, top: 30, width: 55 },
+				}
+			}
+		}
+	</script>
+	<title>Interface Visual Reference</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+		<h1>Interface Visual Reference</h1>
+		<p>Hover over any highlighted area to display a tooltip and identify it.</p>
+	</header>
+	
+	<section class="about">
+		<div class="tabbedImage interactive" id="img1">
+			<div class="tabStrip">
+				<div class="tab selected"><p><img class="tool" src="../../../shared/ui/publisher_persona_on.png" alt="Publisher Persona">Publisher</p></div>
+				<div class="tab"><p><img class="tool" src="../../../shared/ui/designer_persona_on.png" alt="Designer Persona">Designer</p></div>
+				<div class="tab"><p><img class="tool" src="../../../shared/ui/photo_persona_on.png" alt="Photo Persona">Photo</p></div>
+			</div>
+			<div class="view"><img class="responsive" src="../../../shared/interface/publisher.jpg" alt="Publisher Persona"><div class="overlays">
+					<div class="overlay-group selected"><!-- Publisher Persona --><div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Persona Toolbar</h2>
+								<h4>Allows you to switch between Personas: different workspaces for various tasks. The active Persona&apos;s icon appears with saturated colors.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Toolbar</h2>
+								<h4>This contains commonly used functions. Its contents change depending on the active Persona and are customizable.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Context Toolbar</h2>
+								<h4>This presents options for the currently selected tool.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Tools Panel</h2>
+								<h4>Gives access to various tools for editing. The tools change based on the Persona that is selected. The panel&apos;s contents can be customized.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Right Studio</h2>
+								<h4>Various panels providing essential functionality for controlling settings. Panels may differ between Personas. Additional panels can be toggled via the Window menu.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Pages Panel</h2>
+								<h4>Controls pages and master pages in your document.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Status bar</h2>
+								<h4>Highlights available keyboard modifiers for the selected tool. In Publisher, also allows quick navigation between pages.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Document view</h2>
+								<h4>The area that displays your current document.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Menu bar</h2>
+								<h4>The menu bar shows commands appropriate to the selected Persona, organized by task or category.</h4>
+							</div>
+						</div>
+					</div>
+					<div class="overlay-group"><!-- Designer Persona --><div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Persona Toolbar</h2>
+								<h4>Allows you to switch between Personas: different workspaces for various tasks.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Toolbar</h2>
+								<h4>Contains commonly used functions. Options change depending on the active Persona.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Context Toolbar</h2>
+								<h4>Presents options for the currently selected tool.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Tools Panel</h2>
+								<h4>Gives access to various tools for editing.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Right Studio</h2>
+								<h4>Various panels providing essential functionality. Additional panels can be toggled via the Window menu.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Status bar</h2>
+								<h4>Highlights available keyboard modifiers for the selected tool. In Publisher, also allows quick navigation between pages.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Document view</h2>
+								<h4>The area that displays your current document.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Menu bar</h2>
+								<h4>The menu bar shows commands appropriate to the selected Persona, organized by task or category.</h4>
+							</div>
+						</div>
+					</div>
+					<div class="overlay-group"><!-- Photo Persona --><div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Persona Toolbar</h2>
+								<h4>Allows you to switch between Personas: different workspaces for various tasks.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Toolbar</h2>
+								<h4>Contains commonly used functions. Options change depending on the active Persona.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Tools Panel</h2>
+								<h4>Gives access to various tools for editing.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Right Studio</h2>
+								<h4>Various panels providing essential functionality. Additional panels can be toggled via the Window menu.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Status bar</h2>
+								<h4>Highlights available keyboard modifiers for the selected tool. In Publisher, also allows quick navigation between pages.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Document view</h2>
+								<h4>The area that displays your current document.</h4>
+							</div>
+						</div>
+						<div class="overlay-pair">
+							<div class="hotspot"></div>
+							<div class="anno">
+								<h2>Menu bar</h2>
+								<h4>The menu bar shows commands appropriate to the selected Persona, organized by task or category.</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<p>On Windows and earlier versions of macOS, Affinity&apos;s toolbar and title bar are presented as separate elements but otherwise function the same.</p>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="toolbar.html">Toolbar</a></li>
+			<li><a href="personaToolbar.html">Persona toolbar</a></li>
+			<li><a href="contextBar.html">Context toolbar</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

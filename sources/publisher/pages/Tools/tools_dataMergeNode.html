@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="tool, data merge" />
+	<meta name="description" content="Adds a repeating grid layout to merge external data into." />
+	<title>Data Merge Layout Tool</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/data_merge_tool.png" class="tool heading" width="18" height="18" alt="Data Merge Layout Tool" /> Data Merge Layout Tool</h1>
+
+		<p>The <span class="ui">Data Merge Layout Tool</span> lets you draw a grid layout on your page that will repeat as new pages are created during data merge. Data records are merged sequentially into fields in each grid layout&apos;s cells page by page.</p>
+		
+		<p>The tool&apos;s use is optional in data merging and is intended for creating N-up print layouts. Data can also be merged into fields added directly to the publication page without using repeating layouts.</p>
+	</header>
+	
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+			<ul>
+				<li><span class="ui">Preserve Cell Size</span>&mdash;When unchecked, your cell size will change in relation to the grid layout size. When checked, you can specify a fixed <span class="ui">Cell Width</span> and <span class="ui">Cell Height</span> once you&apos;ve drawn your grid layout. Use the latter if you have a particular cell size in mind.</li>
+				<li><span class="ui">Gutter</span>&mdash;specifies a buffer gap around each grid cell.</li>
+				<li><span class="ui">Rows</span>&mdash;sets the number of rows for the grid layout.</li>
+				<li><span class="ui">Columns</span>&mdash;sets the number of columns for the grid layout.</li>
+				<li><span class="ui">Record Offset</span>&mdash;offsets which data record to start from on merging. For example, you could start from the second record instead of the first by using an offset value of 1.</li>
+				<li><span class="ui">Record Advance</span>&mdash;By default the next record is taken (Advance = 1) but you can skip records by setting an advance value of &gt;1. For example, a value of 5 would only take the fifth, tenth, and fifteenth record. Setting value of 0 will repeat the first record in each cell of the first page&apos;s grid layout post merge; the second record being added to the second grid layouts. For example, use this for a whole page of mailing labels of the same record.</li>
+				<li><img src="../../../shared/ui/record_origin_tl.png" class="tool" width="16" height="16" alt="Record Origin Top Left"> <img src="../../../shared/ui/record_origin_tr.png" class="tool" width="16" height="16" alt="Record Origin Top Right"> <img src="../../../shared/ui/record_origin_bl.png" class="tool" width="16" height="16" alt="Record Origin Bottom Left"> <img src="../../../shared/ui/record_origin_br.png" class="tool" width="16" height="16" alt="Record Origin Bottom Right"> <span class="ui">Record Origin</span>&mdash;enable icons to set the start position in the grid that records will merge from. For example, for double-sided sheets, the cells on the back sheet need to be organized right to left (using bottom right cell setting) to match correctly with the fronts.</li>				
+				<li><img src="../../../shared/ui/layout_order_rc.png" class="tool" width="16" height="16" alt="Layout Order Rows then Columns" /> <img src="../../../shared/ui/layout_order_cr.png" class="tool" width="16" height="16" alt="Layout Order Columns then Rows" /> <span class="ui">Layout Order</span>&mdash;enable icons to choose to have records fill either the grid in the order <i>Rows then Columns</i> (Column1 - Row1, Column1 - Row 2, Column2 - Row1, etc.) or <i>Columns then Rows</i> (Column1 - Row1, Column2 - Row 1, Column1 - Row2, etc.).</li>
+				<li><span class="ui">Show Record Order</span>&mdash;Overlays an arrow over the grid layout to indicate how records will flow according to the <span class="ui">Layout Order</span> setting.</li>
+			</ul>
+		<p>Once the Data Area has been created it can be edited:</p>
+			<ul>
+				<li><span class="ui">Cell Width</span>&mdash;Sets all cell&apos;s widths in the grid layout to a specific size, e.g. to a business card&apos;s dimensions, when the tool and grid is selected.</li>
+				<li><span class="ui">Cell Height</span>&mdash;Sets the height for all cells in the selected grid layout.</li>
+			</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Advanced/dataMerge.html">Data merge</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

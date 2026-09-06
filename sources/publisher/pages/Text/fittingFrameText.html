@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="text, frame, fitting text" />
+	<meta name="description" content="Publisher provides several methods for fitting text to frames." />
+	<title>Fitting text to frames</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Fitting text to frames</h1>
+	
+		<p>There are several methods available to fit text to frames: resizing the frame itself, changing the font size or adding additional <a href="linkingTextFrames.html">linked text frames</a>.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<h2>Resizing text frames</h2>
+	
+		<p>When resizing a frame you can control whether:</p>
+			<ul>
+				<li>Text remains at its set size and reflows through the frame.</li>
+				<li>Text scales as the frame is resized.</li>
+				<li>Any extra space at the bottom of the frame is to be removed after resize.</li>
+			</ul>
+
+	<h2>Aligning text in text frames</h2>
+	
+		<p>Horizontal alignment is a paragraph attribute which can be altered via the Text context toolbar. Vertical alignment of text within a frame is a frame attribute. The latter is good for aligning text centrally with adjacent graphics.</p>
+		
+	</section>
+			
+	<section class="howto">
+		<details open="open">
+			<summary>To resize a text frame:</summary>
+			<p>With the text frame selected, do one of the following:</p>
+				<ul>
+					<li>To resize height and width simultaneously, drag the frame&apos;s corner handles.</li>
+					<li>To resize height and width independently, drag the frame&apos;s side handles.<br /><figure>
+							<div class="single"><img src="../../../shared/frametext_reflow.png" class="screenshot" alt="Reflowing text frame" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</li>
+				</ul>
+				<p>The frame text will reflow within the newly sized frame; the font size will remain unchanged.</p>
+		</details>
+		
+		<details open="open">
+			<summary>To scale text:</summary>
+			<ul>
+				<li>
+					<p>With the text frame selected, drag the object&apos;s scale handle (this extends from the bottom-right corner of the frame). Any containing frame text will be resized in proportion to the new text frame dimensions.</p><br /><figure>
+						<div class="single"><img src="../../../shared/frametext_scale.png" class="screenshot" alt="Scaling text frame" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>
+			</ul>
+
+			<aside class="box note">
+				<p>After the text frame is resized, the scale handle will be colored blue to indicate frame text scaling. This is a useful reminder if you&apos;ve inadvertently scaled text instead of reflowed it.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary>To reset scaled frame text back to its original font size:</summary>
+			<ul>
+				<li>Double-click the blue scale handle.</li>
+			</ul>
+			<p>The text frame will still retain its resized dimensions.</p>
+		</details>
+		
+		<details open="open">
+			<summary>To fit frame to frame text:</summary>
+			<ul>
+				<li>Double-click the edge handle at the bottom center of the text frame. If extra space exists between the last line of text and the frame&apos;s bottom edge, the space will be removed.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To vertically align frame text:</summary>
+			<ul>
+				<li>From the <span class="ui">Text</span> menu, select an option from the <span class="ui">Vertical Alignment</span> submenu.</li>
+			</ul>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="frameText.html">Frame text</a></li>
+			<li><a href="linkingTextFrames.html">Linking text frames</a></li>
+			<li><a href="flowingText.html">Flowing text</a></li>			
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

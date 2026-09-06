@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layer comp, layer comps, layer state, layer states, states, query, queries, States panel, visibility, effects, layer effects, criteria, criterion" />
+	<meta name="description" content="Layer states let you toggle the visibility of multiple layers in an instant." />
+	<title>Layer states</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Layer states</h1>
+		
+		<p><span class="term">Layer states</span>, or simply <span class="term">states</span>, allow you to instantly set the visibility and layer effects of multiple layers.</p>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/layer-states-pub-before.png" alt="Before" /><div><img src="../../../shared/layer-states-pub-after.png" alt="After" /></div>
+			</div>
+			<figcaption>Before and after a query applied: German and English language version, respectively.</figcaption>
+		</figure>
+	</header>
+
+	<section class="about">
+
+		<p>There are two types of state:</p>
+			<ul>
+				<li><img src="../../../shared/ui/standard_layer_state.png" class="tool" width="24" height="24" alt="Add new captured state icon" /> A captured <span class="term">state</span> captures the visibility of and layer effects applied to layers at the time the state is added to a document.</li>
+				<li><img src="../../../shared/ui/query.png" class="tool" width="24" height="24" alt="Add new query icon" /> A <span class="term">query</span> specifies criteria&mdash;any combination of a layer&apos;s tag color, type, name and lock status&mdash;that determine the visibility of layers. For example, you may want to hide all layers that have a tag color of red and show all other layers.</li>
+			</ul>
+		
+		<p>States of each type can be given a name.</p>
+		
+		<p>With several states or queries added to the <span class="ui">States</span> panel, you can quickly compare different design choices for your document, such as alternative masks, adjustments, live filters and even entirely different layer content.</p>
+
+		<h2>Understanding state and query entries</h2>
+		
+		<p>Entries on the States panel for each type of state provide different information about how they will affect your document&apos;s layers.</p>
+		
+		<figure>
+			<div class="single"><img src="../../images/state_regular.png" class="responsive" width="247" height="44" alt="A captured state" /></div>
+			<figcaption>A captured state example.</figcaption>
+		</figure>
+
+		<p>Each state entry displays:</p>
+		<ul>
+			<li>A thumbnail representation of the state.</li>
+			<li>The state&apos;s name.</li>
+			<li>The number of layers for which information is captured in the state.</li>
+		</ul>
+			
+		<figure>
+			<div class="single"><img src="../../images/pub-states-query-layers.png" class="responsive" width="720" alt="A query" /></div>
+			<figcaption>States and Layers panels for the query example: before and after images at the top of the page.</figcaption>
+		</figure>
+		
+		<p>Each query entry displays the query&apos;s name, and specifies the criteria that must all be met in order to set your chosen layer visibility. You can specify any combination of the available attributes. Unselected attributes are ignored.</p>
+		
+		<h3>Example scenarios</h3>
+		<p>The application of states and queries can be used in a number of professional scenarios. Apart from language content previews above, more could include:</p>
+			<ul>
+				<li>Switching the visibility of personal notes on and off while preparing a report or an advertising campaign proposal document.</li>
+				<li>Applying various colors and text in response to the promotional time left on an advert.</li>
+				<li>Previewing approved layout and content changes in editorial publications.</li>
+			</ul>
+				
+		<aside class="box note">
+			<p>Find and replace can locate document text that matches a pattern. See <a href="../Extras/regex.html">Regular expressions</a> for more information. Detailed information about the capabilities of regular expressions is available on the Web.</p>
+		</aside>
+		
+		<h2>Controlling the scope of affected layers</h2>
+		<p>When adding or updating a state or applying a state or a query, use the <span class="ui">Scope</span> setting to determine how broadly information is captured from or affects the current visibility of your document&apos;s layers, respectively.</p>
+		
+		<p>The scope can be the whole document, the current selection on the <span class="ui">Layers</span> panel, or an individual spread&mdash;useful when editing certain kinds of document, such as .afpub</p>
+		
+		<p>This allows you to focus your use of states on a specific portion of your work. For example, layers whose tag color is orange but only if they are nested within a selected layer.</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/add-layer-state.png" class="tool" width="24" height="24" alt="Add new captured state icon" /> To add a state:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, set the visibility of your document&apos;s layers as you want them to be captured.</li>
+				<li>On the <span class="ui">States</span> panel, set the <span class="ui">Scope</span> of layers whose visibility and layer effects you wish to capture to either <span class="ui">Document</span>, <span class="ui">Spread</span> or <span class="ui">Selection</span>.</li>
+				<li>(Optional) If the selected scope is either:<ul>
+						<li>Spread&mdash;use the page navigation bar, at the bottom left of the workspace when editing a suitable document type, to navigate to the required spread.</li>
+						<li>Selection&mdash;on the Layers panel, select the layers whose visibility you want to capture.</li>
+					</ul>
+				</li>
+				<li>Click <span class="ui">Add new captured state</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/add-query.png" class="tool" width="24" height="24" alt="Add new query icon" /> To add a query:</summary>
+			<ol>
+				<li>On the <span class="ui">States</span> panel, select <span class="ui">Add new query</span>.</li>
+				<li>On the query&apos;s entry:<ul>
+						<li>Select only the attributes (<span class="ui">Layer tag</span>, <span class="ui">Layer type</span>, <span class="ui">Layer name</span> and <span class="ui">Lock status</span>) that you want to include as criteria.</li>
+						<li>For each selected attribute, specify the values that layers must match.</li>
+						<li>(Optional) Select <span class="ui">And show / hide others</span> if you wish to set the visibility of non-matching layers to the opposite of matching layers when the query is applied.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/apply-layer-state.png" class="tool" width="24" height="24" alt="Apply state" /> To apply a state:</summary>
+			<ul>
+				<li>(Optional) On the <span class="ui">Layers</span> panel, select the layers whose visibility you wish to affect.</li>
+				<li>On the <span class="ui">States</span> panel:<ul>
+						<li>Select the <span class="ui">Scope</span> for layers you wish to affect.</li>
+						<li>Click <span class="ui">Apply</span> on the state you wish to apply.</li>
+					</ul>
+				</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/query-visible-off.png" class="tool" width="24" height="24" alt="Hide state" /> <img src="../../../shared/ui/query-visible-on.png" class="tool" width="24" height="24" alt="Show state" /> To apply a query:</summary>
+			<p>On the <span class="ui">States</span> panel:</p>
+			<ol>
+				<li>Select the <span class="ui">Scope</span> for layers you wish to affect.</li>
+				<li>On the query you wish to apply:<ol>
+						<li>(Optional) Select or deselect <span class="ui">And show / hide others</span> according to whether you wish to affect non-matching layers.</li>
+						<li>On the query you wish to apply, click <span class="ui">Hide</span> or <span class="ui">Show</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/cogicon.png" class="tool" width="24" height="24" alt="State Options" /> To set whether a state&apos;s captured visibility/layer effects will be applied:</summary>
+			<ul>
+				<li>On the <span class="ui">States</span> panel, click the state&apos;s options menu and do the following:<ol>
+						<li>Select <span class="ui">Visibility changes</span> to allow layer visibility captured in the state to be applied, or deselect it to ignore captured layer visibility.</li>
+						<li>Select <span class="ui">Effects changes</span> to allow layer effects captured in the state to be applied, or deselect it to ignore captured layer effects.</li>
+					</ol>
+				</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/update-layer-state.png" class="tool" width="24" height="24" alt="Update state" /> To update a state:</summary>
+			<ol>
+				<li>(Optional) On the <span class="ui">Layers</span> panel, select the layers you wish to include in the updated state. (Layers that were not captured when the state was added will be ignored even if they are selected.)</li>
+				<li>On the <span class="ui">States</span> panel:<ol>
+						<li>Select the <span class="ui">Scope</span> of layers you wish to include in the updated state.</li>
+						<li>Click <span class="ui">Update</span> on the state&apos;s entry.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/statesPanel.html">States panel</a></li>
+			<li><a href="../Layers/aboutLayers.html">About layers</a></li>
+			<li><a href="../Layers/manageLayers.html">Viewing</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../Extras/regex.html">Regular expressions</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="package, packaging, archive, archiving, distribute, distribution, distributing, sharing, share, zip, gather, collect" />
+	<meta name="description" content="Choose the best command for your workflow when preserving changes to a package." />
+	<title>Resaving modified packages</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Resaving modified packages</h1>
+	
+		<p>After making changes to a document stored in <a href="../Publishing/aboutPackaging.html#packageContents">.afpackage file format</a>, you need to choose the appropriate Save command for the next step of your workflow.</p>
+
+	</header>
+
+	<section class="about">
+		<p>Changes cannot be saved directly back to the package&apos;s file by selecting <span class="ui">File&gt;Save</span>. Choose one of the following:</p>
+		
+		<ul>
+			<li><span class="ui">File&gt;Save As</span>&mdash;to save as an .afpub file, which returns the document to the regular open/edit/save workflow. This command is a good choice when you want to save quickly and often as you work, or if you will make changes across multiple editing sessions.</li>
+			<li><span class="ui">File&gt;Save As Package</span>&mdash;to save as an .afpackage file. You can save in an empty folder to create a new package and leave the original unchanged, or to the original package&apos;s folder to update it. This command is a good choice if changes are quick to complete and the document will be sent to a collaborator who may be missing some of its fonts or images.</li>
+		</ul>
+		
+		<h3>Saving over the original package</h3>
+		<p>When you use the <span class="ui">Save As Package</span> command to save a modified package to its original folder, the app will warn that the folder is not empty and prompt for confirmation. Choose one of the following options:</p>
+		
+		<ul>
+			<li><span class="ui">Yes</span>&mdash;to overwrite the existing .afpackage file and related files that have been modified since the package was last saved. Newly used fonts and images will be added to the package. Files will not be deleted from the folder, even if they are no longer used in the document.</li>
+			<li><span class="ui">No</span>&mdash;to choose a different folder.</li>
+			<li><span class="ui">Cancel</span>&mdash;to abandon the packaging process, e.g. if you have decided to save as an .afpub file instead.</li>
+		</ul>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Publishing/aboutPackaging.html">About packaging</a></li>
+			<li><a href="../Publishing/creatingPackages.html">Creating packages</a></li>
+			<li><a href="../Publishing/openingPackages.html">Opening packages</a></li>
+			<li><a href="../Media/resourceManager.html">Resource Manager</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="blend mode, blending, layers" />
+	<meta name="description" content="Discussion of how layers can be blended together using the controls on the Layers panel." />
+	<title>Layer blending</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Layer blending</h1>
+
+		<p>A layer&apos;s blend mode determines how the layer or object&apos;s pixels blend with the pixels on the layer beneath.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/layer_blending.png" alt="Blend Modes" /></div>
+			<figcaption>Common blend modes: (A) Normal, (B) Multiply, (C) Screen, (D) Overlay, (E) Divide (F) Color Burn.</figcaption>
+		</figure>		
+
+	</header>
+
+	<section class="about">
+		<h2>Blend mode types</h2>
+
+		<p>Affinity apps support an impressive selection of different blend modes. They are organized in their respective groups, which initially inform of the effect they add. They are as follows:</p>
+
+		<section class="howto">
+			<details>
+				<summary>Normal</summary>
+				<p>The default and starting mode for layers. It results in fully opaque pixels appearing above the underlying pixels. Use to completely cover the underlying layer&apos;s content.</p>
+				<figure>
+					<div class="single"><img src="../../../shared/normal_triptych_test2.jpg" class="responsive" alt="Normal blend mode" /></div>
+					<figcaption></figcaption>
+				</figure>
+			</details>
+		</section>
+		
+		<section class="howto">
+			<details>
+				<summary>DARKEN GROUP</summary>
+		
+				<section class="howto">
+					<details>
+						<summary>Darken</summary>
+						<p>Compares pixels of the active vs the underlying layer(s) and leaves darker pixels visible. Use to create dramatic, moody atmosphere.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/darken_triptych_test.jpg" class="responsive" alt="Darken blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Multiply</summary>
+						<p>One of the most frequently used blend modes in the group. Each pixel of the active layer is multiplied with the pixels of the layer(s) below. Bright pixels are ignored while darker ones are intensified. This results in a darker overall output when compared to the Darken blend mode. Use to create darker outputs with increased contrast.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/multiply_triptych_test.jpg" class="responsive" alt="Multiply blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Color Burn</summary>
+						<p>Results in more saturated mid-tones and reduced highlights by intensifying contrast and the underlying layer&apos;s colors. Use to exaggerate colors and create highly contrasting scenes.</p>
+						
+						<aside class="box note">
+							<p>Color Burn isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/colour_burn_triptych_test.jpg" class="responsive" alt="Color Burn blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Linear Burn</summary>
+						<p>Results in darker output than with Multiply blend mode, yet less saturated than Color Burn. Lighter pixels of the active layer(s) are unaffected. This mode is ideal for rendering darker tones in the shadows and mid-tones.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/linear_burn_triptych_test.jpg" class="responsive" alt="Linear Burn blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Darken Color</summary>
+						<p>Compares the color values of the active and underlying layer(s) and only retains the darker ones. Use to accentuate the darker tones from both layers.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/darker_clr_triptych_test.jpg" class="responsive" alt="Darken Color blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+			
+			</details>
+		</section>
+		
+		<section class="howto">
+			<details>
+				<summary>LIGHTEN GROUP</summary>
+		
+				<aside class="box note">
+					<p>The Lighten group blend modes are preferred for blending images with a dark background where the intended outcome is to reduce or remove it completely.</p>
+				</aside>
+				
+				<section class="howto">
+					<details>
+						<summary>Lighten</summary>
+						<p>Results in only the brighter values being retained upon comparing the active and underlying layer(s). Use to add complimentary color tint to images.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/lighten_triptych_test.jpg" class="responsive" alt="Lighten blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Screen</summary>
+						<p>Inverts colors of the underlaying layer(s) and multiplies it with those of the active layer: this results in generating smooth results. It is one of the most commonly used blend modes due to its soft rendering.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/screen_triptych_test.jpg" class="responsive" alt="Screen blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Color Dodge</summary>
+						<p>Increases the luminosity of the underlying layer(s) while reducing contrast between both the active and underlying layer(s). It results in a stronger effect than the one produced by Screen with saturated mid-tones and intense highlights. Use to accentuate color and highlights.</p>
+						
+						<aside class="box note">
+							<p>Color Dodge isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/colour_dodge_triptych_test.jpg" class="responsive" alt="Color Dodge blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Add</summary>
+						<p>Results in added color information to both the active and underlying layer(s) and increases overall brightness while not affecting the black tones. Use to reveal brighter tones in images.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/add_triptych_test.jpg" class="responsive" alt="Add blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Lighter Color</summary>
+						<p>Rather than looking at individual color, this mode uses perceived luminosity from all color channels to determine which pixel is lighter. It acts as an inverted luminosity mask. Use for faded looks and smooth rendition of highlights in outputs.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/lighter_colour_triptych_test.jpg" class="responsive" alt="Lighter Color blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				</details>
+			</section>
+		
+		<section class="howto">
+			<details>
+				<summary>CONTRAST GROUP</summary>
+		
+				<section class="howto">
+					<details>
+						<summary>Overlay</summary>
+						<p>Compares the active and underlying layer(s) and shifts to darker mid-tones if the colors are lighter than 50% gray. Results in darkening the darker pixels of the images and lightening the lighter ones. Use to enhance contrast and saturation.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/overlay_triptych_test.jpg" class="responsive" alt="Overlay blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Soft Light</summary>
+						<p>Results in a more diffused effect from comparing luminance and color values between the active and underlying layer(s). Use for subtle blending and faded looks.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/soft_light_triptych_test.jpg" class="responsive" alt="Soft Light blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Hard Light</summary>
+						<p>Results in a dramatic, high-contrast effect. The top layer is used to determine the calculation required for the evaluation of pixels. Its effect can be observed as the opposite of the Overlay blend mode. Use to enhance color contrast and reduce opacity, as required, to achieve best results.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/hard_light_triptych_test.jpg" class="responsive" alt="Hard Light blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Vivid Light</summary>
+						<p>This blend mode applies the effect of the Color Burn or Color Dodge blend mode based on the comparison of RBG channels in the active (top) layer and underlying layer(s). Color Dodge is applied when the top layer image&apos;s&nbsp;values are lighter than mid-gray; Color Burn is applied when the top layer image&apos;s&nbsp;values are darker than mid-gray. Mid-gray serves as a neutral color, so any pixels with a gray value of 50% are not affected.</p>
+						<p>Results in increased contrast and highly saturated colors.<!--(Special8)--> Use to enhance contrast and color intensity, though best results are achieved with reduced opacity.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/vivid_light_triptych_test.jpg" class="responsive" alt="Vivid Light blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Linear Light</summary>
+						<p>Brighter pixels receive lighter treatment while darker ones get darkened. Results in a stronger contrast in the mid-tones. <!--(Special8)--> Use to create a dramatic, enhanced effect.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/linear_light_triptych_test.jpg" class="responsive" alt="Lineal Light blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Pin Light</summary>
+						<p>Results can be compared to a mix of those achieved with the Darken and Lighten blend modes. This blend mode creates distinct boundaries between the dark and light regions. Use to achieve pronounced, yet somewhat faded look.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/pin_light_triptych_test.jpg" class="responsive" alt="Pin Light blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Hard Mix</summary>
+						<p>Results in a highly-contrasting effect between pixels (modified by either 0 or 1). The effects can be attributed to the output often observed in comic books or posters where the increase in contrast accentuates colors. Use to posterize or to maximize color contrast.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/hard_mix_triptych_test.jpg" class="responsive" alt="Hard Mix blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+			</details>
+		</section>
+		
+		<section class="howto">
+			<details>
+				<summary>INVERSION GROUP</summary>
+		
+				<section class="howto">
+					<details>
+						<summary>Difference</summary>
+						<p>Calculates the absolute difference between the active and underlying layer(s). When using this blend mode, similar values cancel each other out. Use to find errors in images.</p>
+						
+						<aside class="box note">
+							<p>Difference isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/difference_triptych_test.jpg" class="responsive" alt="Difference blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Exclusion</summary>
+						<p>Results in similar output to the above (Difference) mode, however with a softer effect. Use for soft blending of images consisting of similar luminance values.</p>
+						
+						<aside class="box note">
+							<p>Exclusion isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/exclusion_triptych_test.jpg" class="responsive" alt="Exclusion blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Subtract</summary>
+						<p>Subtracts the top layer&apos;s pixel values from the underlying layer, which results in lighter areas becoming brighter whereas the darker areas seeing little to no change. Use to remove or fade the active layer&apos;s colors and/or luminosity.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/subtract_triptych_test.jpg" class="responsive" alt="subtract blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Divide</summary>
+						<p>The underlying layers&apos; pixel values are divided by those of the active layer, which usually results in brighter images. The effect of this blend mode is the opposite of the Subtract mode; darker color values create brighter results while brighter color values see little to no change. Use to simulate film negative look.</p>
+						
+						<aside class="box note">
+							<p>Divide isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/divide_triptych_test.jpg" class="responsive" alt="Divide blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>						
+					</details>
+				</section>
+				
+			</details>
+		</section>
+		
+		<section class="howto">
+			<details>
+				<summary>COMPONENT GROUP</summary>
+		
+				<section class="howto">
+					<details>
+						<summary>Hue</summary>
+						<p>Combine the hue of the active layer with that of the underlying layer(s). Use to exaggerate or create intense colors and to produce vivid, often surreal scenes.</p>
+						
+						<aside class="box note">
+							<p>Hue isn&apos;t available in Grayscale mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/hue_triptych_test.jpg" class="responsive" alt="Hue blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Saturation</summary>
+						<p>Similar to the Hue blend mode, however here Saturation is the replaced component. Depending on your images&apos; saturation and colors, use this blend mode, as an alternative to the above, and to intensify and exaggerate colors.</p>
+						
+						<aside class="box note">
+							<p>Saturation isn&apos;t available in Grayscale mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/saturation_triptych_test.jpg" class="responsive" alt="Saturation blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Color</summary>
+						<p>Combines the hue and saturation values of the active layer with the brightness of the underlying layer(s). Additionally, only the brightest colors of the underlying layer(s) are retained. Use to stylize images to produce scenes with intensified hue and saturation levels.</p>
+						
+						<aside class="box note">
+							<p>Color isn&apos;t available in Grayscale mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/colour_triptych_test.jpg" class="responsive" alt="Color blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+		
+				<section class="howto">
+					<details>
+						<summary>Luminosity</summary>
+						<p>Combines the brightness values of the active layer with the brightness of the underlying layer(s). This blend mode&apos;s effect is the opposite of the Color blend mode &mdash; it retains the hue and saturation of the underlying layer(s). Use to add detail and textures where color information of the added image layer is less important.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/luminosity_triptych_test.jpg" class="responsive" alt="Luminosity blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+		
+			</details>
+		</section>
+		
+		<section class="howto">
+			<details>
+				<summary>AFFINITY GROUP</summary>
+		
+				<section class="howto">
+					<details>
+						<summary>Average</summary>
+						<p>Combines the color and luminance values of the active and underlying layer(s) in producing a mean average. The result is similar to the one achieved by setting the active layer&apos;s Opacity to 50%. Use to simulate simple double-exposure images.</p>
+						
+						<aside class="box note">
+							<p>Average isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/average_triptych_test.jpg" class="responsive" alt="Average blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Negation</summary>
+						<p>Similar in effect to the Difference blend mode (Inversion group), which may be used as its alternative. Use to produce more contrasting and intense scenes; particularly powerful when working with selections and masking.</p>
+						
+						<aside class="box note">
+							<p>Negation isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/negation_triptych_test.jpg" class="responsive" alt="Negation blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Reflect</summary>
+						<p>Combines the effects of the Hard Light and Hard Mix blend modes (Contrast group) and produces images with preserved darker tones while enhancing the lighter ones. Use as an alternative to control image contrast; the method is particularly useful when combined with manipulating the source layer&apos;s graph to reduce highlights output via the Blend Ranges option.</p>
+						
+						<aside class="box note">
+							<p>Reflect isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/reflect_triptych_test.jpg" class="responsive" alt="Reflect blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Glow</summary>
+						<p>The opposite of the Reflect blend mode, which produces images with preserved lighter tones (while enhancing the darker ones). As above, use to manipulate contrast and combine it with the Blend Ranges to obtain best outcomes.</p>
+						
+						<aside class="box note">
+							<p>Glow isn&apos;t available in LAB16 mode.</p>
+						</aside>
+						
+						<figure>
+							<div class="single"><img src="../../../shared/glow_triptych_test.jpg" class="responsive" alt="Glow blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Contrast Negate</summary>
+						<p>Inverts pixel values depending on those of the underlying layer&apos;s content versus the active layer. Use to create effects similar to those of a two-tone color grade and posterization.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/contrast_negate_triptych_test.jpg" class="responsive" alt="Contrast Negate blend mode" /></div>
+							<figcaption></figcaption>
+						</figure>
+					</details>
+				</section>
+				
+				<section class="howto">
+					<details>
+						<summary>Erase</summary>
+						<p>Excludes pixels of the underlying layer. Use in combination with layer Opacity to produce faded and transparent outputs or to hide pixels from the layer(s) below the active one.</p>
+						<figure>
+							<div class="single"><img src="../../../shared/erase_triptych_test.jpg" class="responsive" alt="Erase blend mode" /></div>
+							<figcaption>Erase blend mode set to shapes (from left) at 25%, 50% and 75% Opacity over the base image.</figcaption>
+						</figure>
+					</details>
+				</section>
+				
+			</details>
+			
+			<aside class="box note">
+					<p>Any layer or object can have a blend mode assigned, including mask and adjustment layers. The default blend mode is &apos;Normal&apos;&mdash;no special compositing is applied. For a group, the default is &apos;Passthrough&apos;. When set, the group itself has no special blend properties of its own, and passes on the blend mode of its parent layer.</p>
+				</aside>
+		
+				<aside class="box note">
+					<p>Layer blend modes applied to child layers produce isolated blending which will not affect the parent layer or any other layers in the layer stack.</p>
+				</aside>
+		
+				<aside class="box note">
+					<p>The same blend modes can be utilized on layer effects and pixel brushes.</p>
+				</aside>
+			
+		</section>
+		
+		<h2>&apos;Special 8&apos; blend modes and fill opacity</h2>
+		
+		<p><img src="../../../shared/ui/settings_cog_layers.png" class="tool" width="12" height="12" alt="Blend Options" /> When adjusting blend opacity, some blend modes (listed below) work best by adjusting <span class="ui">Fill Opacity</span>, rather than the layer&apos;s <span class="ui">Opacity</span>. The Fill Opacity option is available from the <span class="ui">Layers</span> panel&rsquo;s <span class="ui">Blend Options</span> option. Fill opacity is essential when using Hard Mix blending in particular.</p>
+ 
+ 		<ul>
+			<li>Color Burn</li>
+			<li>Linear Burn</li>
+			<li>Color Dodge</li>
+			<li>Add (Linear Dodge)</li>
+			<li>Vivid Light</li>
+			<li>Linear Light</li>
+			<li>Hard Mix</li>
+			<li>Difference</li>
+		</ul>
+		
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To change the blend mode of a layer (or object):</summary>
+
+			<ol>
+				<li>In the <span class="ui">Layers</span> panel, select a layer (or object).</li>
+				<li>Choose a blend mode from the pop-up menu on the panel.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="layerBlendRanges.html">Layer blend ranges</a></li>
+			<li><a href="../LayerFX/create_layerFX.html">Layer effects</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

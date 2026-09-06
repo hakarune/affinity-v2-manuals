@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pages, add, arrange, reorder, duplicate, delete, remove" />
+	<meta name="description" content="How to add and remove publication pages and master pages." />
+	<title>Add and remove pages</title>
+</head>
+
+<body>
+	<header>
+		<h1>Add and remove pages</h1>
+
+		<p>The number of pages in a document can be specified at document creation. After this, the <span class="ui">Pages</span> panel is used to add and remove pages.</p>
+	</header>
+
+	<section class="about">
+		<p>The panel displays <a href="masterPages.html">master pages</a> in the upper <span class="ui">Master Pages</span> window and publication pages in the lower <span class="ui">Pages</span> window.</p>
+
+		<figure class="nft">
+			<div class="single"><img src="../../images/panel_pages.png" class="responsive panel" width="200" alt="Pages panel" /></div>
+			<figcaption></figcaption>
+		</figure>
+
+		<h2>About master pages</h2>
+
+		<p>Master pages act like templates, in that a master page can be shared by multiple publication pages. A master page can contain objects of its own, such as a header or footer.</p>
+
+		<p>If you edit a master page at a later date, all pages to which it has been applied will update to the new design instantly, although you can override master page content and design at any time.</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_pages.png" class="tool heading" width="16" height="16" alt="Add Pages" /> To add publication pages:</summary>
+			<p>On the <span class="ui">Pages</span> panel:</p>
+			<ol>
+				<li>(Optional) Do one of the following:<ul>
+						<li>If adding pages <em>before/after</em> a specific page, select that page in the <span class="ui">Pages</span> window.</li>
+						<li>If adding pages at the <em>end</em> of the document, deselect all pages by clicking in the neutral region of the <span class="ui">Pages</span> window, i.e. away from the thumbnails and labels.</li>
+					</ul>
+				</li>
+				<li>Select <span class="ui">Add Pages</span>.</li>
+				<li>On the dialog that appears, specify:<ol class="nested">
+						<li>the <span class="ui">Number of Pages</span> you want to add.</li>
+						<li>the page number at which pages should be added, if you didn&apos;t select it earlier, and whether to insert <span class="ui">Before</span> or <span class="ui">After</span> it.</li>
+						<li>which master page, if any, to apply to the new pages.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+
+			<aside class="box tip">
+				<p>Alternatively, drag a master page from the <span class="ui">Master Pages</span> window and drop it before or after an existing spread in the <span class="ui">Pages</span> window to add a new spread with that master&apos;s page count, size and design.</p>
+
+				<figure>
+					<div class="single"><img src="../../../shared/create_spread_from_master_before.png" class="responsive" width="195" alt="Using a master page to create a new spread before an existing one" /> <img src="../../../shared/create_spread_from_master_after.png" class="responsive" width="219" alt="Using a master page to create a new spread after an existing one" /></div>
+				</figure>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_master_pages.png" class="tool heading" width="16" height="16" alt="Add Master" /> To add a master page:</summary>
+			<ol>
+				<li>Select <span class="ui">Add Master</span> on the <span class="ui">Pages</span> panel&apos;s <span class="ui">Master Pages</span> window.</li>
+				<li>On the dialog that appears:<ol class="nested">
+						<li>(Optional) Type a <span class="ui">Name</span> for the master page.</li>
+						<li>If the document has facing pages, choose whether the master will have an <span class="ui">Ambidextrous</span> or a <span class="ui">Facing</span> page layout.</li>
+						<li>Set the master page&apos;s <span class="ui">Dimensions</span> and <span class="ui">Margins</span> as required.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/remove_pages.png" class="tool heading" width="16" height="16" alt="Delete Selected Pages" /> To remove publication pages:</summary>
+			<p>On the <span class="ui">Pages</span> panel&apos;s <span class="ui">Pages</span> window:</p>
+			<ol>
+				<li>Select the unwanted pages.</li>
+				<li>Click <span class="ui">Delete Selected Pages</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/remove_pages.png" class="tool heading" width="16" height="16" alt="Delete Selected Master" /> To remove a master page:</summary>
+			<p>On the <span class="ui">Pages</span> panel&apos;s <span class="ui">Master Pages</span> window:</p>
+			<ol>
+				<li>Select the unwanted master page.</li>
+				<li>Click <span class="ui">Delete Selected Master</span>.</li>
+			</ol>
+
+			<p>The master page is also removed from any other master and publication pages to which it was applied.</p>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="arrangePages.html">Arrange pages</a></li>
+			<li><a href="copyDuplicatePages.html">Copy and duplicate pages</a></li>
+			<li><a href="masterPages.html">About master pages</a></li>
+			<li><a href="../Panels/pagesPanel.html">Pages panel</a></li>
+			<li><a href="ghostPages.html">About ghost pages</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=pageControl">Keyboard shortcuts for page control</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

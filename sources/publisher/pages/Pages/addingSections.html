@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="section, sections, chapter, chapter" />
+	<meta name="description" content="Separate your publications into logical sections." />
+	<title>Adding sections</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Adding sections</h1>
+	
+		<p>Sections are used to split publications into related groups of pages, e.g. Preface, Contents, Introduction, Chapter 1, Chapter 2, etc. The main purpose is to assign different page numbering styles and section names to each section. This lets you delimit your publication logically by content type or subject matter.</p>
+		
+		<p>Sections also allow you to control the value at which each section&apos;s page numbering starts.</p>
+
+		<figure class="nft">
+			<div class="single"><img src="../../images/sections.png" class="responsive" alt="Sections" /></div>
+			<figcaption></figcaption>
+		</figure>
+
+	</header>
+	
+	<section class="about">
+	
+		<p>Every document possesses at least one page. This initial page belongs to the first section.</p>
+	
+		<p>Sections are numbered but can also be named. The name of a page&apos;s section can be automatically displayed on the page by inserting fields&mdash;for example, into a master page&apos;s footer and applying the master page to publication pages.</p>
+		
+		<h2>Section page numbering and the Pages panel</h2>
+		<p>When a section&apos;s starting page number is customized, related thumbnails on the Pages panel are labeled with two groups of numbers, e.g. <i>Page 1 (33)</i> or <i>Pages 16,17 (20, 21)</i>.<p>
+		
+		<p>Numbers outside brackets are <span class="term">document page numbers</span>, i.e. they represent page numbers within your Affinity document. They always start at 1.</p>
+		
+		<p>Numbers inside brackets are <span class="term">publication page numbers</span>. They are calculated from the starting page number of their section, and replace Page Number fields when your document is exported or printed.</p>
+
+		<h2>Sections and hyperlinks</h2>
+		<p>Hyperlinks in PDF publications help the reader to navigate to specific content. A hyperlink can take the reader to a page number, a section&apos;s starting page, or an anchor attached to an object.</p>
+		
+		<p>When linking to the first of a group of related pages, it is best practice to create a section that begins on that page and set the hyperlink&apos;s type to <span class="ui">Section</span>. If you add or delete pages, Affinity Publisher automatically updates hyperlinks of this type to reflect pagination changes and their impact on section starting pages.</p>
+		
+		<p>In contrast, hyperlinks whose type is <span class="ui">Page</span> are static references; each one&apos;s target page number is unaltered by pagination changes and needs to be manually updated.</p>
+		
+		<h3>Exporting and printing sections</h3>
+		<p>Normally, every section is included when your document is exported or printed.</p>
+
+		<p>You can manually exclude any section. For example, you may not want a publication&apos;s cover or a draft section to be shared with a specific recipient.</p>
+
+		<p>Any chapter that will be used as a book chapter and contains endnotes positioned at <span class="ui">End of Book</span> contains those notes&rsquo; bodies in a <i>#Booknotes</i> section at the end of its document. When outputting a book, the content of such sections is consolidated at the end of your book. The <i>#Booknotes</i> sections are excluded from the output to avoid the bodies appearing twice within your book.</p>
+		
+		<p>When outputting a chapter&apos;s document individually, its <i>#Booknotes</i> section can be included in the output by temporarily changing a setting for the section.</p>
+	</section>
+
+
+	<section class="howto">	
+		<aside class="box tip">
+			<p>You&apos;ll need to create a range of pages in advance before you can begin creating sections.</p>
+		</aside>
+	
+		<details open="open">
+			<summary>To create a section at a chosen page:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, <span class="key CLICK-TAG"></span>-click a page thumbnail and select <span class="ui">Start New Section</span>.</li>
+				<li>(Optional) On the <span class="ui">Section Manager</span>, choose to <span class="ui">Restart page numbering</span> for the section, add a <span class="ui">Section name</span> for insertion of section name as a field into title and header/footer text or swap <span class="ui">Number style</span>.</li>
+				<li>Click <span class="ui">Close</span>.</li>
+			</ol>
+		
+			<aside class="box note">
+				<p>You can also access <span class="ui">Section Manager</span> from the <span class="ui">Window</span> menu.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/section_manager.png" class="tool heading" width="16" height="16" alt="Section Manager" /> <img src="../../../shared/ui/add_layer.png" class="tool heading" width="16" height="16" alt="Add Section" /> To create sections using the Section Manager:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, select <span class="ui">Section Manager</span> above the Pages window.</li>
+				<li>Select the section containing the pages you wish to be in a new section.</li>
+				<li>Click <span class="ui">Add Section</span> at the bottom left of the dialog. The new section is automatically selected.</li>
+				<li>Change the <span class="ui">Start on page</span> value to the page number you want the new section to start from.</li>
+			</ol>
+		</details>
+
+		<details open="open">			
+			<summary><img src="../../../shared/ui/section_manager.png" class="tool heading" width="16" height="16" alt="Section Manager" /> To edit a section&apos;s properties:</summary>
+			<p>On the <span class="ui">Pages</span> panel, do one of the following:</p>
+			<ul>
+				<li>Click <span class="ui">Section Manager</span>, select a section in the list, then modify the section&apos;s settings.</li>
+				<li>To edit a page&apos;s section, <span class="key CLICK-TAG"></span>-click a page thumbnail and select <span class="ui">Edit Section</span>, then edit the section&apos;s settings.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/section_manager.png" class="tool heading" width="16" height="16" alt="Section Manager" /> To restart numbering for a section:</summary>
+			<ol>
+				<li>On the <span class="ui">Section Manager</span>, select a section.</li>
+				<li>Enable <span class="ui">Restart page numbering at</span> and enter a page number to start from. By default, sections allow page number continuation using the <span class="ui">Continue page numbering</span> setting.</li>
+			</ol>
+
+			<aside class="box tip">
+				<p>If your document is part of a book you can restart the first section&apos;s page number to the expected page number of your chapter.</p>
+			</aside>
+
+			<aside class="box note">
+				<p>You can add section names to pages automatically by inserting the corresponding <a href="../Advanced/fields.html">field</a> into your document, usually on a master page.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To continue page numbering across multiple merged documents:</summary>
+			<ol>
+				<li>On the <span class="ui">Section Manager</span>, use the <span class="key SHIFT-TAG"></span> or <span class="key CMD-TAG"></span> keys to select multiple sections at once.</li>
+				<li>Choose <span class="ui">Continue page numbering</span> for the selected sections.</li>
+				<li>Click <span class="ui">Close</span>.</li>
+			</ol>
+		</details>
+	
+		<details open="open">
+			<summary>To exclude/include a section from export/print output:</summary>
+			<ol>
+				<li>On the <span class="ui">Section Manager</span>, select the section.</li>
+				<li>Set <span class="ui">Include on Export</span> as required.</li>
+			</ol>
+		</details>
+	</section>
+
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="addDeletePages.html">Add and remove pages</a></li>
+			<li><a href="../Panels/pagesPanel.html">Pages panel</a></li>
+			<li><a href="../Advanced/fields.html">Fields</a></li>
+			<li><a href="../Advanced/mergeDocument.html">Merge documents</a></li>
+			<li><a href="../Advanced/hyperlinks.html">Hyperlinks</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

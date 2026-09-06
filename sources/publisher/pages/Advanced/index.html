@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="index" />
+	<meta name="description" content="Create a index of keywords that references key words in your document." />
+	<title>Index</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Index</h1>
+	
+		<p>Affinity Publisher can create an index of keywords, called topics, from text used in your publication. The index lets you look up these key words and their referenced page numbers.</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About indexes</h2>
+		<p>An index is a valuable reader aid in a longer publication, such as a report or manual. Affinity Publisher lets you create an index with main entries and subentries, based on index marks you insert throughout your publication. Your index is typically placed at the end of your publication and is made up of index entries and associated references.</p>
+	
+		<p>When the index is generated, it will list all topics containing at least one reference in alphabetical order. For each topic, the index lists the page numbers of every page that references that topic. The index may also include cross-references which suggest to the reader to look at a related topic.</p>
+	
+		<aside class="box note">
+			<p>The index also displays additional instances of any indexed words so that these may be included for improved consistency.</p>
+		</aside>
+
+		<h2>About text styles in indexing</h2>
+		<p>When you insert an index, index-specific text styles are created and applied automatically; these styles can be customized via the <span class="ui">Text Styles</span> panel.</p>
+		
+		<p>The <i>Index</i> and <i>Index Entry</i> paragraph styles are &apos;parent&apos; styles which let you apply formatting to the whole index or just index entries, respectively. The Index Section Heading paragraph style affects the large letters and numbers by which entries are organized.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/indexTextStyles01.png" srcset="../../../shared/indexTextStyles01.png 2x" class="responsive" alt="Examples of the Index and Index Entry text styles" /></div>
+			<figcaption>An example index (A) styled entirely by the Index text style.</figcaption>
+		</figure>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/indexTextStyles02.png" srcset="../../../shared/indexTextStyles02.png 2x" class="responsive" alt="Examples of the Index and Index Entry text styles" /></div>
+			<figcaption>Example text ranges affected by the Index Section Heading (B) and Index Entry (C) text styles.</figcaption>
+		</figure>
+		
+		<p>A sequence of paragraph styles is created for however many levels of sub topic exist in the index, e.g. <i>Index Entry 1</i>, <i>Index Entry 2</i>, <i>Index Entry 3</i> and so on. This allows each level of nested index entry to have different formatting than <i>Index Entry</i> and other &apos;higher level&apos; index entries. For example, you might choose to show entries for sub topics at a smaller font size than top-level topics.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/indexTextStyles03.png" srcset="../../../shared/indexTextStyles03.png 2x" class="responsive" alt="Examples of hierarchical Index Entry text styles" /></div>
+		 	<figcaption>Example text ranges affected by numbered Index Entry text styles: Index Entry 1 (D), Index Entry 2 (E) and Index Entry 3 (F) paragraph styles, which modify any formatting already applied by the parent Index Entry text style.</figcaption>
+		</figure>
+		
+		<p>The <i>Index Entry Page Number</i> and <i>Index Entry Number Separator</i> character styles allow specific details in index entries&mdash;meaning text added to entries by the <span class="ui">Labels and Separators</span> options on the <span class="ui">Index</span> panel&mdash;to deviate from the <i>Index Entry</i> parent style. For example, you may wish for page numbers/ranges and punctuation between them to be differently colored than topic names, and from each other.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/indexTextStyles04.png" srcset="../../../shared/indexTextStyles04.png 2x" class="responsive" alt="Examples of the Index Entry Page Number and Index Entry Number Separator text styles" /></div>
+			<figcaption>Example text ranges in an index entry affected by the Index Entry Page Number (G) and Index Entry Number Separator (H) text styles.</figcaption>
+		</figure>
+		
+		<p>Further, the various components of cross-reference text in index entries can be customized using the <i>Index Cross-reference</i>, <i>Index Cross-reference Label</i> and <i>Index Cross-referenced Topic</i> character styles.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/indexTextStyles05.png" srcset="../../../shared/indexTextStyles05.png 2x" class="responsive" alt="Examples of Index Cross-reference text styles" /></div>
+			<figcaption>Example text ranges in an index entry&apos;s cross-references affected by the Index Cross-reference (I), Index Cross-reference Label (J), and Index Cross-referenced Topic (K) text styles.</figcaption>
+		</figure>
+		
+		<aside class="box tip">
+			<p>When inserting an index mark, any character style can be applied to it. The style is applied to the corresponding page number(s)&mdash;or page range, if applied to index marks across consecutive pages&mdash;on the index entry. This can be used to indicate the most important pages about a topic.</p>
+		</aside>
+	</section>
+	
+	<section class="about">
+	
+	<h2>Inserting an index</h2>
+	
+	<p>You can insert an index, insert index marks, update the index and show/hide index marks from the <span class="ui">Text</span> menu&apos;s <span class="ui">Index</span> section.</p>
+	
+	<p>Alternatively, from the <span class="ui">Index</span> panel, you can insert an index, add, edit and delete topics and marks, update the index style, search for index entries, and update index content as you go.</p>
+	
+	</section>
+	
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/insertIndex.png" class="tool" width="16" height="16" alt="Insert index" /> To generate an index:</summary>
+				<ol>
+					<li>From the <span class="ui">Text</span> menu, click <span class="ui">Index</span> and then select <span class="ui">Insert Index</span>.</li>
+					<li>You can then add topics and markers to your index and adjust the formatting from within the <span class="ui">Index</span> panel.</li>
+				</ol>
+				
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/insertIndex.png" class="tool" width="16" height="16" alt="Insert index" /> To generate an index via the <span class="ui">Index</span> panel:</summary>
+				<ol>
+					<li>From the <span class="ui">Window</span> menu, select <span class="ui">References&gt;Index</span>.</li>
+					<li>From the top of the <span class="ui">Index</span> panel, select <span class="ui">Insert Index</span>.</li>
+					<li>You can then add topics and markers to your index and adjust the formatting from within the panel.</li>
+				</ol>
+
+		</details>
+		
+	</section>
+	
+	<section class="about">
+	
+	<h2>Adding index marks and topics</h2>
+	
+	<p>Index marks can be created and inserted into your publication text via the <span class="ui">Text</span> menu, or from the <span class="ui">Index</span> panel. The panel also lets you navigate your index marks and generate your index once you&apos;ve finished adding index marks and topics.</p>
+
+	<h2>Sorting index topics</h2>
+	
+	<p>Normally, Affinity sorts index topics by their literal topic names. So, topic names that begin with <i>A</i> or <i>The</i>, for example, will appear in the index under <i>A</i> or <i>T</i>, respectively.</p>
+	
+	<p>You can override the default sort order for any individual topic by providing alternative <span class="ui">Sort By</span> text. For example, if a topic&apos;s name is <i>The Great Wall of China</i>, you would type <i>Great Wall of China</i> in the topic&apos;s Sort By setting to have the topic appear under <i>G</i> in the index.</p>
+	
+	</section>
+	
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/insertIndexMarker.png" class="tool" width="16" height="16" alt="Insert index mark" /> To insert index marks:</summary>
+			<p>With an index inserted:</p>
+				<ol>
+					<li>From the <span class="ui">Text</span> menu, click <span class="ui">Index</span> and then select <span class="ui">Insert Index Mark</span>.</li>
+					<li>The topic name will be pre-filled with the word or phrase at the insertion point. Existing topics that may be similar to the word at the insertion point will also be suggested. Type in the box to search through existing topics. You can select an existing topic from the suggestion list using either the cursor keys or the mouse.</li>
+					<li>If you are selecting a sub topic, both the <span class="ui">Topic</span> and the <span class="ui">Parent Topic</span> will be selected. If you are creating a new topic, you may specify either a new or existing <span class="ui">Parent Topic</span>.</li>
+					<li>To specify a character style to use for the page number when this index mark appears in the index, select a style from the <span class="ui">Style Override</span> menu.</li>
+				</ol>
+		</details>
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/insertIndexMarker.png" class="tool" width="16" height="16" alt="Insert index mark" /> To insert index marks via the <span class="ui">Index</span> panel:</summary>
+			<p>With an index inserted:</p>
+				<ol>
+					<li>With a word or phrase highlighted in the text, from the top of the <span class="ui">Index</span> panel, select <span class="ui">Insert Marker</span>.</li>
+					<li>The topic name will be pre-filled with the highlighted word or phrase at the insertion point. Existing topics that may be similar to the word at the insertion point will also be suggested. Type in the box to search through existing topics. You can select an existing topic from the suggestion list using either the cursor keys or the mouse.</li>
+					<li>If you are selecting a sub topic, both the <span class="ui">Topic</span> and the <span class="ui">Parent Topic</span> will be selected. If you are creating a new topic, you may specify either a new or existing <span class="ui">Parent Topic</span>.</li>
+					<li>To specify a character style to use for the page number when this index mark appears in the index, select a style from the <span class="ui">Style Override</span> menu.</li>
+				</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To add a topic:</summary>
+			<p>From the <span class="ui">Index</span> panel:</p>
+				<ol>
+					<li>Select <span class="ui">Add Topic</span>.</li>
+					<li>From here, you can add a <span class="ui">Topic Name</span>, assign a <span class="ui">Parent Topic</span>, set the topic&apos;s <span class="ui">Sort By</span> text, and select a cross reference from the <span class="ui">See</span> option.</li>
+				</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To search for content related to index topics within your document:</summary>
+			<p>From the <span class="ui">Index</span> panel:</p>
+				<ol>
+					<li><span class="key CLICK-TAG"></span>-click a topic name and select <span class="ui">Find in Document</span>.</li>
+					<li>All related words will be immediately listed in the panel. From here, you can select specific instances of the word to add to the index by ticking the check box to the right of each instance you would like to add, or select all instances of the word by ticking the <span class="ui">All</span> checkbox.</li>
+					<li>When you are happy with your selections, click <span class="ui">Done</span> to add the selected instance(s) of the word to your topic.</li>
+				</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To rename an index entry:</summary>
+			<p>From the <span class="ui">Index</span> panel:</p>
+				<ul>
+					<li>Click on an index topic, and click again to edit its name.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To edit an index entry:</summary>
+			<p>From the <span class="ui">Index</span> panel:</p>
+				<ol>
+					<li><span class="key CLICK-TAG"></span>-click on an index entry and select <span class="ui">Edit Topic</span>.</li>
+					<li>From here, you can edit the <span class="ui">Topic Name</span>, assign a <span class="ui">Parent Topic</span>, and set the topic&apos;s <span class="ui">Sort By</span> text.</li>
+				</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To add a sub topic:</summary>
+			<p>From the <span class="ui">Index</span> panel:</p>
+				<ol>
+					<li><span class="key CLICK-TAG"></span>-click on an index entry and select <span class="ui">Add sub topic</span>.</li>
+					<li>From here, you can add a <span class="ui">Topic Name</span>, assign a <span class="ui">Parent Topic</span>, set the topic&apos;s <span class="ui">Sort By</span> text, and select a cross reference from the <span class="ui">See</span> option.</li>
+				</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To add an index cross reference:</summary>
+			<p>From the <span class="ui">Index</span> panel, do one of the following:</p>
+				<ul>
+					<li>When creating an index topic, you can add a <span class="ui">See</span> option from the <span class="ui">Add Index Topic</span> pop-up menu which can be used as a cross reference for your index entry.</li>
+					<li>To add a cross reference to an existing index entry, <span class="key CLICK-TAG"></span>-click on an index entry and select <span class="ui">Add cross reference</span>. From here, you can add a <span class="ui">See</span> option from the pop-up menu which can be used as a cross reference for your index entry.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To locate an index entry in the document:</summary>
+			<p>From the <span class="ui">Index</span> panel:</p>
+				<ol>
+					<li><span class="key CLICK-TAG"></span>-click on an index entry and select <span class="ui">Find in document</span>.</li>
+					<li>Instances in which the index entry or any of its sub topics appear in the document will be listed in the panel. From here, you can select an individual instance or opt to view all instances using the checkboxes. Clicking on any of the listed instances will take you directly to that instance in the document.</li>
+				</ol>
+		</details>
+		
+		<details>
+			<summary>To add leader lines between items and page numbers:</summary>
+			<ol>
+				<li>Select a text frame that contains an index.</li>
+				<li>On the <span class="ui">Index</span> panel (<span class="ui">Window&gt;References&gt;Index</span>), delete all existing characters from the <span class="ui">Separator</span> field.</li>
+				<li>Click the downwards-pointing arrow on the field and insert a <span class="ui">Tab</span> character.</li>
+				<li>On the <span class="ui">Text Styles</span> panel, double-click the <span class="ui">Index Entry</span> style.</li>
+				<li>Select <span class="ui">Tab Stops</span> on the left of the <span class="ui">Edit Text Style</span> dialog.</li>
+				<li>To the right, click <span class="ui">Add New Tab Stop</span> and click the new tab stop&apos;s &lsquo;<span class="ui">…</span>&rsquo; button.</li>
+				<li>Next to <span class="ui">Leader</span>, select the <span class="ui">Tab stop leader character</span>, <span class="ui">Tab stop leader underline</span>, or <span class="ui">Tab stop leader strikeout</span> setting.</li>
+				<li>(Optional) If you chose the leader character setting, type the glyph to repeat along the leader line in the <span class="ui">Character</span> field.</li>
+				<li>Click <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/indexPanel.html">Index panel</a></li>
+			<li><a href="../Panels/textStylesPanel.html">Text Styles panel</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

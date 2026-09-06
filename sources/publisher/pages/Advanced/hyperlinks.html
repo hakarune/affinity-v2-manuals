@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="hyperlinks" />
+	<meta name="description" content="Use hyperlinks to create interactive links within your document." />
+	<title>Hyperlinks</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Hyperlinks</h1>
+		
+		<p>Hyperlinks allow you to jump to specific pages, files or web addresses (URLs) with a single click.</p>
+		
+	</header>
+		
+	<section class="about">
+		<h2>About hyperlinks</h2>
+	
+		<p>Hyperlinks make it easy to navigate between areas in your publication or to access external resources&mdash;web pages, or files stored on the reader&apos;s local storage. Email addresses can be also linked to, which will launch the reader&apos;s email app and set up a message to a specified email address.</p>
+		
+		<p>Hyperlinks created in Publisher are included when your document is exported as a PDF. Additionally, if you create a TOC or index and request hyperlinks on export, the TOC or index will be furnished with hyperlinks as appropriate.</p>
+		
+		<aside class="box note">
+			<p>It is important to note that not all varieties of PDF support interactive features. Additionally, not all PDF viewers support the full range of interactive features; for example, hyperlinks to files do not work in Apple&apos;s Preview app.</p>
+		</aside>
+	</section>
+	
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_layer.png" class="tool" width="16" height="16" alt="Add Hyperlink" /> To insert a hyperlink:</summary>
+			<ol>
+				<li>Make an insertion point within the word or select the full range of text you wish to be hyperlinked. Then do one of the following:<ul>
+						<li>From the <span class="ui">Text</span> menu, click <span class="ui">Interactive</span> and then select <span class="ui">Insert Hyperlink</span>.</li>
+						<li>From the <span class="ui">Hyperlinks</span> panel (enabled via <span class="ui">Window&gt;References</span>), select <span class="ui">Add Hyperlink</span>.</li>
+					</ul>
+				</li>
+				<li>In the <span class="ui">Hyperlink Properties</span> dialog, do the following:<ol>
+						<li>Choose a hyperlink <span class="ui">Type</span>.</li>
+						<li>Depending on the link type, specify the destination: select a page number, section, existing anchor or external file, or type or paste the web page or email address to be linked.</li>
+						<li>(Optional) When inserting a hyperlink in a data merge layout and the target is a URL, an anchor, an email address or a file referenced in a field of a data merge source, check <span class="ui">From Data Merge</span> and then select the <span class="ui">Field</span> that contains target information.</li>
+						<li>(Optional) For a file link, tick <span class="ui">Include File on Export</span> to have Publisher create a copy of the file alongside the PDF (when exporting to a PDF version that supports hyperlinks).</li>
+						<li>(Optional) If the link is applied to text, choose a <span class="ui">Character Style</span> for the text.</li>
+						<li>Click <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+
+			<aside class="box note">
+				<p>The options on the Hyperlink Properties dialog change according to the Hyperlink Type chosen.</p>
+			</aside>
+
+			<aside class="box note">
+				<p>Including an https:// or mailto:// prefix when you type a web page or email address hyperlink is optional.</p>
+			</aside>
+
+			<aside class="box warning">
+				<p>When a link&apos;s <span class="ui">Include File on Export</span> option is ticked and you export to PDF, Publisher makes a copy of the relevant file alongside the PDF. The link is amended to be relative, so moving the PDF and the external file together to a new location maintains the link between them. If the aforementioned option is not ticked, the file&apos;s full original location is hardcoded into the PDF and expected to exist on the reader&apos;s device.</p>
+			</aside>
+		</details>
+ 
+		<details open="open">
+			<summary>To edit a hyperlink:</summary>
+			<ol>
+				<li>On the <span class="ui">Hyperlinks</span> panel, double-click the hyperlink you wish to edit.</li>
+				<li>Update the hyperlink&apos;s settings in the <span class="ui">Hyperlink Properties</span> dialog.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To rename a hyperlink:</summary>
+			<ol>
+				<li>On the <span class="ui">Hyperlinks</span> panel, select the hyperlink you wish to rename.</li>
+				<li>After a brief pause, click the hyperlink&apos;s name to begin editing it, make your changes, then press <span class="key RETURN-TAG"></span> <span class="KEY-TAG"></span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/hyperlink_source.png" class="tool" width="16" height="16" alt="Go to Source" /> To go to a hyperlink&apos;s source in the document:</summary>
+			<ol>
+				<li>On the <span class="ui">Hyperlinks</span> panel, select a hyperlink.</li>
+				<li>Click <span class="ui">Go to Source</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/hyperlink_target.png" class="tool" width="16" height="16" alt="Go to Target" /> To go to a hyperlink&apos;s target:</summary>
+			<ol>
+				<li>On the <span class="ui">Hyperlinks</span> panel, select a hyperlink.</li>
+				<li>Click <span class="ui">Go to Target</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Remove Hyperlink" /> To remove a hyperlink:</summary>
+			<ol>
+				<li>On the <span class="ui">Hyperlinks</span> panel, select the unwanted hyperlink.</li>
+				<li>Click <span class="ui">Remove Hyperlink</span>.</li>
+			</ol>
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="anchors.html">Anchors</a></li>
+			<li><a href="../Panels/hyperlinksPanel.html">Hyperlinks panel</a></li>
+			<li><a href="../Advanced/pdfBookmarks.html">PDF Bookmarks</a></li>
+			<li><a href="../Pages/addingSections.html">Adding sections</a></li>
+			<li><a href="dataMerge.html">Data merge</a></li>
+			<li><a href="../Advanced/aboutBooks.html">About books</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

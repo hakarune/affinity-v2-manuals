@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="page, spread, master, setup, scaling, resize, document" />
+	<meta name="description" content="Change the setup (e.g. page sizes and orientations) of your whole document or selected pages and master pages." />
+	<title>Document setup</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Document setup</h1>
+
+		<p>You can modify your document&apos;s setup at any time. This setup will have been chosen previously when creating the document.</p>
+
+	</header>
+
+	<section class="about">
+		<p>You can change the setup of your whole document or the properties of a selection of spreads or master pages. This allows some pages to have different dimensions (with control of object scaling), orientations and margins.</p>
+		
+		<aside class="box note">
+			<p>The Spread Properties dialog contains a subset of the settings available on the Document Setup dialog. It omits settings that are irrelevant to the context of a single spread or master page.</p>
+		</aside>
+
+		<figure class="nft overrideDE overrideFR">
+			<div class="single"><img src="../../images/documentsetup.png" class="responsive" width="520" alt="Document Setup" /></div>
+			<figcaption>Document setup</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>When you resize a master page, you&apos;ll be asked whether to also resize pages to which it is applied or leave them as they are.</p>
+		</aside>
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+		<p>The following settings can be adjusted.</p>
+	
+		<p>When using the <span class="ui">Document Setup</span> dialog, choose a scope to determine which of your document&apos;s pages will be affected:</p>
+			<ul>
+				<li><span class="ui">Whole Document</span>&mdash;applies the setup to all spreads within the document.</li>
+				<li><span class="ui">Selected Masters</span>&mdash;applies the setup to selected master spreads within the document. Select the master spreads you would like to include from the adjacent box.</li>
+				<li><span class="ui">Selected Spreads</span>&mdash;applies the setup to selected spreads (not master pages) within the document. Select the spreads you would like to include from the adjacent box.</li>
+			</ul>
+		
+		<p>The following settings are available on the <span class="ui">Document Setup</span> and <span class="ui">Spread Properties</span> dialogs as indicated.</p>
+		<ul>
+			<li><span class="ui">Document</span> (Document Setup dialog, Whole Document scope):<ul>
+					<li><span class="ui">Document units</span>&mdash;Displays your rulers and object dimensions in pixels, points, picas or using physical measurement units.</li>
+					<li><span class="ui">DPI</span>&mdash;Sets the resolution of your document. For example, for professional print quality, set your resolution to 300 dpi or above.</li>
+					<li><span class="ui">Image placement</span>&mdash;Determines whether placed images will be embedded in or linked to the document by default.</li>	
+				</ul>
+			</li>
+			
+			<li><span class="ui">Model</span> (Document Setup dialog, Whole Document scope):<ul>
+					<li><span class="ui">Facing pages</span>&mdash;Check to arrange the document pages in spreads.</li>			
+					<li><span class="ui">Arrange</span>&mdash;Specify whether the spread&apos;s pages should be arranged horizontally or vertically. For facing-page spreads only.</li>
+					<li><span class="ui">Start on</span>&mdash;Specify where the spread should start. For facing-page spreads only.</li>
+					<li><span class="ui">Reflow Pages</span>&mdash;Specify whether Affinity is permitted to automatically reflow your document&apos;s pages to the document model. (This setting is equivalent to <span class="ui">Move Page Options&gt;Reflow Pages</span> on the <span class="ui">Pages</span> panel&apos;s preferences menu.</li>
+				</ul>
+			</li>
+			
+			<li><span class="ui">Label</span> (Spread Properties dialog, or Document Setup dialog with Selected Masters scope and one master page selected):<ul>
+					<li><span class="ui">Name</span>&mdash;Enter the name you wish to assign to the master page.</li>
+					<li><span class="ui">Tag</span>&mdash;Optionally select a color tag for the selected masters that will be displayed above the thumbnails of pages to which they are applied.</li>
+				</ul>
+
+				<aside class="box tip">
+					<p>A master page can also be renamed by selecting it on the <span class="ui">Pages</span> panel and then clicking its name.</p>
+				</aside>
+			</li>
+			
+			<li><span class="ui">Dimensions</span> (both dialogs, any scope):<ul>
+					<li><span class="ui">Show Dimensions of</span>&mdash;Specify the part of the spread you would like to set the dimensions of. <span class="ui">Spread</span> encompasses both sides of a facing-page spread.</li>
+					<li><span class="ui">Page preset</span>&mdash;offers preset spread sizes to select from, e.g. A4.</li>
+					<li><span class="ui">Dimensions</span>&mdash;change these values to make a custom spread size. (An alternative to selecting a Page preset size above.)</li>
+					<li>Orientation&mdash;Select the landscape or portrait icon. Changing this setting swaps the width and height values.</li>
+					<li><span class="ui">Resize Linked Pages</span>&mdash;(Selected Masters scope only) Specify whether dimensions of pages to which the masters are applied also receive the masters&apos; new dimensions. When <span class="ui">Matching</span> is selected, only pages with dimensions the same as the masters&apos; old dimensions will be changed.</li>
+					<li><span class="ui">Reflow Through Spread</span>&mdash;(Selected Spreads scope only) Specify whether the selected spreads&apos; pages are included when automatically reflowing your document&apos;s pages (if <span class="ui">Page Move Options&gt;Reflow Pages</span> is enabled on the <span class="ui">Pages</span> panel&apos;s preferences menu). If unchecked, the spreads are excluded from reflow, and their thumbnails will be surrounded by square brackets to indicate this.</li>
+				</ul>
+			</li>
+
+			<li><span class="ui">Scaling</span> (both dialogs, any scope):<ul>	
+					<li><span class="ui">Position</span>&mdash;when changing page size, you can anchor the existing page content to the page or spread (they remain the same size) or rescale it in relation to the new page size.</li>
+					<li><span class="ui">Anchor</span>&mdash;sets the anchor point to which existing page content will be anchored to upon page resize.</li>
+					<li><span class="ui">Resample</span>&mdash;when <span class="ui">Rescale</span> is selected, lets you control how objects are resampled.</li>
+				</ul>
+			</li>
+			
+			<li><span class="ui">Color</span> (Document Setup dialog, Whole Document scope):<ul>	
+					<li><span class="ui">Color Format</span>&mdash;Sets the color mode to RGB or Grey (8 or 16 bit or, for RGB only, 32-bit HDR), CMYK (8 bit), or Lab (16 bit).</li>
+					<li><span class="ui">Color Profile</span>&mdash;Sets the color gamut for the previously chosen color format.</li>
+					<li>When applying a different color profile, <span class="ui">Assign</span> adopts the new profile but leaves the values of the colors/pixels as is. <span class="ui">Convert</span> converts each color from the old profile to the new one&mdash;color/pixel values may change as a result.</li>
+					<li><span class="ui">Transparent background</span>&mdash;Check to set your page background to be transparent.</li>
+				</ul>
+			</li>
+			
+			<li><span class="ui">Margins</span> (both dialogs, any scope):<ul>
+					<li><span class="ui">Use master&apos;s margin values</span>&mdash;(Selected Spreads scope and only for page/spread with a master page applied.) When selected, pages/spreads inherit margin values from the masters applied to them. When deselected, your values for the following settings are applied to the pages/spreads.</li>
+					<li><span class="ui">Include margins</span>&mdash;check to switch on page margins.</li>			
+					<li><span class="ui">Left</span>, <span class="ui">Right</span>, <span class="ui">Top</span>, <span class="ui">Bottom</span>&mdash;sets the positions of page margins, showing as non-printing colored lines. Left and Right margins are replaced by <span class="ui">Inner</span> and <span class="ui">Outer</span> for facing-page spreads.</li>
+					<li><span class="ui">Color</span>&mdash;Sets the margin color. Select from the pop-up menu.</li>
+					<li>Click <span class="ui">Retrieve margin from printer</span> to use your default printer&apos;s settings.</li>
+				</ul>
+			</li>
+			
+			<li><span class="ui">Bleed</span> (Document Setup dialog, Whole Document scope):<ul>
+					<li><span class="ui">Left</span>, <span class="ui">Right</span>, <span class="ui">Top</span>, <span class="ui">Bottom</span>&mdash;For professional printing, bleed extends the printable area beyond the page edge to allow artwork to be trimmed. Left and Right bleeds are replaced by <span class="ui">Inner</span> and <span class="ui">Outer</span> for facing-page spreads.</li>
+					<li><span class="ui">Color</span>&mdash;Sets the bleed color. Select from the pop-up menu.</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To modify your document setup:</summary>
+			<ol>
+				<li>On the <span class="ui">File</span> menu, select <span class="ui">Document Setup</span>.</li>
+				<li>On the dialog that appears, set page/spread properties as required.</li>
+				<li>Select <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To modify properties of selected spreads/master pages:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, select the thumbnails of the spreads/master pages you wish to modify.</li>
+				<li>From one of the selected items, <span class="key CLICK-TAG"></span>-click and select <span class="ui">Spread Properties</span>.</li>
+				<li>A dialog will appear. If you selected:<ul>
+						<li>more than one spread/master page, it will be the <span class="ui">Document Setup</span> dialog.</li>
+						<li>a single spread/master page, it will be the <span class="ui">Spread Properties</span> dialog.</li>
+					</ul>
+				</li>
+				<li>Set page/spread properties as required.</li>
+				<li>Select <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+	</section>
+
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../GetStarted/newDocument.html">Create new documents</a></li>
+			<li><a href="../GetStarted/documentUnits.html">Document units</a></li>
+			<li><a href="../Publishing/bleed.html">Setting bleed</a></li>
+			<li><a href="../DesignAids/margins.html">Margins</a></li>
+			<li><a href="addDeletePages.html">Add and remove pages</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=file">Keyboard shortcuts for file/document management</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pin, unpin, pinning, anchor, anchoring, anchored, float, inline, panel" />
+	<meta name="description" content="The panel lets you create float and inline objects in your text frame, and manages the object's pinning behaviour." />
+	<title>Pinning panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Pinning panel</h1>
+	
+		<p>The <span class="ui">Pinning</span> panel lets you pin objects to text frames either as floating objects (anchored to the frame text) or as inline objects (inserted as a character).</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Pinning panel</h2>
+		
+		<p>The <span class="ui">Float With Text</span> and <span class="ui">Inline In Text</span> options on the Toolbar offer basic pinning options where the placed object is pinned to the nearest piece of text. However, the panel settings offer more options to precisely control pinned object positioning, e.g. alignment in relation to different types of page element, offsets and constrainment to within text frames.</p>
+
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via <span class="ui">Window&gt;Text</span>.</p>
+		</aside>
+
+		<figure>
+			<p><img src="../../images/panel_pinning.png" class="responsive" width="553" alt="Pinning panel" /></p>
+			<figcaption>The Pinning panels showing Float and Inline settings.</figcaption>
+		</figure>
+		
+	</section>
+	
+<section class="settings">
+
+		<h3>Settings</h3>
+		
+		<p>The panel settings are different for floating and inline methods of pinning.</p>
+		
+		<p>For floating objects (Float With Text), the following settings are available in the panel:</p>
+
+		<ul>
+			<li><img src="../../../shared/ui/attach_to_story_float.png" class="tool" width="16" height="16" alt="Float" /> <span class="ui">Float with Text</span>&mdash;click to pin the selected object (e.g., image, table or text) to adjacent text in a text frame. The object will then flow with reflowing frame text. Equivalent to the <span class="ui">Float with Text</span> option on the Toolbar.</li>
+			<li><img src="../../../shared/ui/attach_to_story_inline.png" class="tool" width="16" height="16" alt="Inline" /> <span class="ui">Inline in Text</span>&mdash;click to pin the object inline (as a character) into text in your text frame. Equivalent to the <span class="ui">Inline in Text</span> option on the Toolbar.</li>
+			<li><img src="../../../shared/ui/attach_to_story_unpin.png" class="tool" width="16" height="16" alt="Unpin" /> <span class="ui">Unpin</span>&mdash;click to detach any floating or inline object, reverting it to a standalone object.</li>
+			<li><span class="ui">Horizontal align</span>&mdash;the horizontal position (e.g., Outside Left, Inside Right, etc.) in relation to the page element set in the <span class="ui">Of</span> option.</li>
+			<li><span class="ui">Of</span>&mdash;the page element from which horizontal alignment is made, e.g. character (pin location), frame, column, etc.</li>
+			<li><span class="ui">Offset</span>&mdash;offsets the object horizontally from the Horizontal align position in absolute units.</li>
+			<li><span class="ui">Keep within bounds</span>&mdash;ensures the pinned object can only be placed within the text frame.</li>
+			<li><span class="ui">Vertical align</span>&mdash;the vertical position (e.g., Inside Top, Outside Below, etc.) in relation to the page element set in the <span class="ui">Of</span> option.</li>
+			<li><span class="ui">Of</span>&mdash;the page element from which vertical alignment is made, e.g. character (pin location), frame, column, etc.</li>
+			<li><span class="ui">Offset</span>&mdash;offsets the object vertically from the Vertical align position in absolute units.</li>
+			<li><span class="ui">Keep within bounds</span>&mdash;stops the pinned object from being placed outside of the text frame. The object will move but only to the frame edge. When unchecked there is no restriction on object placement.</li>
+			<li><span class="ui">Mirror facing pages</span>&mdash;check if you&apos;re using facing pages and you want the object to automatically mirror its position in relation to text moved onto a new page.</li>
+			<li><span class="ui">Preserve manual position</span>&mdash;when checked, the pinned object and its pin can both be moved independently of each other. When unchecked, the pinned object is locked and will only move in accordance with the settings in the panel.</li>
+			<li><span class="ui">On Overlap</span>&mdash;determines whether a floating object is automatically repositioned if its regular bounds selection box overlaps that of another floating object. Select <i>Do Nothing</i> to maintain the manual position, or <i>Pack Horizontally</i> or <i>Stack Vertically</i> to position alongside or below the other object, respectively.</li>
+			<li><span class="ui">Horizontal Gap</span>&mdash;specifies the horizontal distance a floating object, on which <span class="ui">On Overlap</span> is set to <i>Pack Horizontally</i>, will be automatically positioned alongside another floating object that it overlaps.</li>
+			<li><span class="ui">Vertical Gap</span>&mdash;specifies the vertical distance a floating object, on which <span class="ui">On Overlap</span> is set to <i>Stack Vertically</i>, will be automatically positioned below another floating object that it overlaps.</li>
+		</ul>
+		
+<p>For inline objects (Inline In Text), the following settings are available in the panel:</p>
+
+		<ul>
+			<li><span class="ui">Scale to</span>&mdash;will size the inline object in relation to its point size as well as different font metrics, e.g., ascent, x-height, etc.</li>
+			<li><span class="ui">Scale</span>&mdash;scales the object to a percentage of the Scale to value. This keeps the same relative size if the text size changes. 100% will scale precisely to current point size if <span class="ui">Scale to</span> is set to &apos;Pointsize&apos;.</li>
+			<li><span class="ui">Base position</span>&mdash;the inline object can be positioned vertically in relation to the baseline or descender.</li>
+			<li><span class="ui">Offset</span>&mdash;moves the inline object vertically in single percentage increments.</li>
+			<li><span class="ui">Preserve manual scale</span>&mdash;when checked, the pinned object can be scaled manually using object handles; when unchecked, the pinned object will only scale according to the panel&apos;s <span class="ui">Scale</span> option.</li>
+			<li><span class="ui">Borders</span>&mdash;sets a positive or negative border to the left, right, top or bottom of the inline object.</li>
+		</ul>
+		
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../ObjectControl/pinning.html">Pinning objects</a></li>
+			<li><a href="../Workspace/toolbar.html">Toolbar</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

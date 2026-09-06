@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="print, PDF, imposition, tiled, n-up, business cards, ganged, poster, banner, impose, imposition, booklet, bleed" />
+	<meta name="description" content="Print your document to physical printer." />
+	<title>Print</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1>Print</h1>
+		
+		<p>You can print specific or all pages of your publication, or choose various layouts such as tiled, N-Up (ganged) or booklet.</p>
+
+			<x-osx>
+				<figure class="nft">
+					<p><img src="../../images/printing-macos.png" class="responsive" alt="Print dialog showing layout options" /></p>
+					<figcaption>Print dialog set up showing layout options.</figcaption>
+				</figure>
+			</x-osx>
+			<x-win32>
+				<figure class="nft">
+					<p><img src="../../images/printing-windows.png" class="responsive" alt="Print dialog showing layout options" /></p>
+					<figcaption>Print dialog set up showing layout options.</figcaption>
+				</figure>
+			</x-win32>
+		
+	</header>
+
+	<section class="about">
+		
+		<h2>About printing</h2>
+		
+		<p>The print feature lets you print out your document using different layouts.</p>
+		
+			<ul>
+				<li>Single: your publication pages are printed per sheet.</li>
+				<li>Tiled: your page can be printed to a large format (e.g., posters, banners, etc.).</li>
+				<li>N-Up: &apos;gang&apos; prints your page so multiple copies can be printed per sheet.</li>
+				<li>Booklet: pages are imposed to allow folding and stapling (for newsletters, menus, etc.)</li>
+			</ul>
+								
+		<p>The final print of the page will include all currently visible objects. Layer visibility and exportability is controlled by the <a href="../Panels/layersPanel.html">Layers panel</a>.</p>
+
+		<aside class="box tip">
+			<p>The <span class="ui">Print</span> dialog will honor the project&apos;s current page setup. Therefore, it is important to check your page setup settings before proceeding to print.</p>
+		</aside>
+		
+			<p>When printing, you may be warned about overflowing text in your publication. To resolve, check your text frames for frame text that extends over the frame end.</p>
+			
+		<h2>More about printing booklets</h2>
+		
+		<p>It&apos;s possible to automatically impose your booklet and print directly to your printer or generate a PDF output, which acts as a &apos;stepping stone&apos; before being sent for physical printing.</p>
+
+		<p>Imposition means that your pages are flipped and reordered at print time so that when printed sheets are produced, they can be folded so pages come together in their correct order.</p>
+	
+		<h2>Booklet setup tips</h2> 
+		<p>These simple tips will help you get great results:</p>
+
+			<ul>
+				<li>Setup a facing pages document, i.e. made up of two-page spreads.</li>
+				<li>Ensure your document&apos;s page count is divisible by four. Add blank end page(s) if needed.</li>
+				<li>Setup your book/booklet to the expected size of your document, i.e. if you want an A5 newsletter, set the page size to be A5. It&apos;s popular to impose this page size (as 2 pages/sheet) onto physical A4 sheets commonly loaded into desktop printers.</li>
+			</ul>
+			
+	</section>
+
+
+	<section class="howto">
+		<details open="open">
+			<summary>To print single, multiple or all pages:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">Print</span>.</li>
+				<li class="osx">In the <span class="ui">Print Options</span> pop-up menu, select <span class="ui">Range and Scale</span>, then set your <span class="ui">Range</span> and <span class="ui">Pages</span> options. For the latter, you can use &apos;1,3,5&apos;, &apos;1-5&apos;, &apos;1,3 4-6&apos; or other combinations.</li>
+				<li class="win32">In the dialog, set your <span class="ui">Range</span> and <span class="ui">Pages</span> options. For the latter, you can use &apos;1,3,5&apos;, &apos;1-5&apos;, &apos;1,3 4-6&apos; or other combinations.</li>
+				<li>Click <span class="ui">Print</span>.</li>
+			</ol>
+			
+		<aside class="box warning">
+			<p>If the document preview window in the Print dialog shows with a pink overlay, this means there is a mismatch between your Affinity document dimensions and the printer&apos;s currently set paper size.</p>
+		</aside>
+
+		</details>
+		
+		<details open="open">
+			<summary>To print tiled or N-Up (ganged) output:</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">Print</span>.</li>
+				<li class="osx">In the <span class="ui">Print Options</span> pop-up menu, select <span class="ui">Document Layout</span>.<li class="win32">From the dialog, select <span class="ui">Layout</span> from the lower-left Categories list.</li>
+				<li>From the <span class="ui">Model</span> pop-up menu, select &apos;Tiled&apos; or &apos;N-Up&apos;.</li>
+				<li>In the dialog, adjust settings as appropriate.</li>			
+				<li>Click <span class="ui">Print</span>.</li>
+			</ol>
+		</details>
+	
+		<details open="open">
+			<summary>To print as a booklet</summary>
+			<ol>
+				<li>From the <span class="ui">File</span> menu, select <span class="ui">Print</span>.</li>
+				<li class="osx">From the dialog, set your <span class="ui">Paper Size</span>, e.g. A4.</li>
+				<li class="win32">From the dialog, select <span class="ui">Layout</span> from the lower-left Categories list, then set your <span class="ui">Paper Size</span>, e.g. A4.</li>
+				<li class="osx">In the <span class="ui">Print Options</span> pop-up menu, select <span class="ui">Document Layout</span>.</li>
+				<li class="win32">From the dialog, select <span class="ui">Layout</span> from the lower-left Categories list.</li>
+				<li>From the <span class="ui">Model</span> pop-up menu, select &apos;Booklet&apos;. This instructs the print process to impose the pages.</li>
+				<li class="osx">In the <span class="ui">Print Options</span> pop-up menu, select <span class="ui">Layout</span>.<li class="osx">From the <span class="ui">Two-Sided</span> pop-up menu<sup>*</sup>, choose &apos;Short-Edge Binding&apos;.</li>
+				<li class="win32">In the <span class="ui">Double-sided</span> pop-up menu<sup>*</sup>, select <span class="ui">Flip short side</span>.<li>Click <span class="ui">Print</span>.</li>
+			</ol>
+			
+		<p><sup>*</sup> This step assumes you&apos;re using duplex printing. If this isn&apos;t available to you, you can skip these steps and print odd and even pages on opposite sides of your paper in consecutive print stages. Use &apos;Odd Only&apos; and &apos;Even Only&apos; options in the <span class="ui">Print Options</span> pop-up menu&apos;s &apos;Paper Handling&apos; section.</p>
+		
+		<x-osx>
+			<aside class="box note">
+				<p>To share with other interested parties or take advantage of Adobe Acrobat editing features, you can save the imposed booklet to PDF instead of printing directly. On the <span class="ui">PDF</span> pop-up menu, choose &apos;Save as PDF&apos;.</p>
+			</aside>
+		</x-osx>
+
+		</details>
+
+		<aside class="box tip">
+			<p>For best results, ensure scaling is set to 100% in the <span class="ui">Range and Scale</span> pop-up menu.</p>
+		</aside>
+
+		<aside class="box tip">
+			<p>You can scale up the same method to create a page-imposed A4 booklet on A3 paper, instead of a page-imposed A5 booklet on A4 paper.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../GetStarted/save.html">Save</a></li>
+			<li><a href="export.html">Export</a></li>
+			<li><a href="bleed.html">Setting bleed</a></li>
+			<li class="osx"><a href="share.html">Share</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=file">Keyboard shortcuts for file/document management</a></li>
+			<li><a href="../Advanced/aboutBooks.html">About books</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

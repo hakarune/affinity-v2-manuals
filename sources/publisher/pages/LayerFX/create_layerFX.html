@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layer FX, effects, quick fx, shadow, glow, bevel, emboss, outline, overlay, gaussian, 3d" />
+	<meta name="description" content="Effects can be applied to objects via the Quick FX panel or dialog." />
+	<title>Using layer effects</title>
+</head>
+
+<body>
+	<header>
+		
+		<h1>Using layer effects</h1>
+
+		<p>Layer effects can be applied to either selected objects or the entire layer, to add more creativity to your design.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/layer_fx.png" class="responsive" alt="Layer FX" /></div>
+			<figcaption>(A) Simple Outer Shadow layer effect using Quick FX panel, (B) a blended Outer Shadow using Layer Effects dialog and (C) multiple Outer Shadow effects using Layer Effects dialog.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		
+		<details>
+			<summary>Available layer effects:</summary>
+			<ul>
+				<li><a href="layerFX_bevelEmboss.html">Bevel/Emboss</a></li>
+				<li><a href="layerFX_outline.html">Outline</a>*</li>
+				<li><a href="layerFX_3D.html">3D</a></li>
+				<li><a href="layerFX_innerShadow.html">Inner Shadow</a>*</li>
+				<li><a href="layerFX_innerGlow.html">Inner Glow</a></li>
+				<li><a href="layerFX_clrOverlay.html">Color Overlay</a>*</li>
+				<li><a href="layerFX_gradientOverlay.html">Gradient Overlay</a>*</li>
+				<li><a href="layerFX_outerGlow.html">Outer Glow</a></li>
+				<li><a href="layerFX_outerShadow.html">Outer Shadow</a>*</li>
+				<li><a href="layerFX_gaussianBlur.html">Gaussian Blur</a></li>
+			</ul>
+			
+			<p><sup>*</sup> Can be applied as multiple instances to the same object or layer.</p>
+		</details>
+	
+		<p>Layer effects can be applied in two ways:</p>
+		
+			<ul>
+				<li>Via the <span class="ui">Quick FX</span> panel, using a simplified set of more commonly used settings.</li>
+				<li>Via the <span class="ui">Layers Effects</span> dialog, offering all settings plus the ability to create multiple instances of the same effect (for outline, shadows and overlays); effect instances can also be sorted to achieve different results.</li>
+			</ul>		
+			
+		<p>For multi-instance effects, some examples include:</p>
+
+			<ul>		
+				<li>Multiple outer shadows to simulate multi-directional multi-colored light sources.</li>
+				<li>Multiple gradients with transparency tail-offs and blend modes.</li>
+			</ul>
+
+		<aside class="box tip">
+			<p>By working with duplicate layers, blend modes and masks, it&apos;s possible to obtain a great degree of control over the effects that you generate.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To apply layer effects via the Quick FX panel:</summary>
+
+			<ol>
+				<li>Select the layer(s) that you want to apply the effect to.</li>
+				<li>On the <span class="ui">Quick FX</span> panel, select the checkbox of the effect that you want to apply.</li>
+				<li>Adjust the settings as desired&mdash;options vary for each effect.</li>
+				<li>If required, select any other effects and adjust the settings.</li>
+			</ol>
+			
+		<aside class="box note">
+			<p>When a layer has one or more effects applied, an <img src="../../../shared/ui/fx_on_layer.png" class="tool" width="12" height="12" alt="Layers Effects" /> icon appears to the right of the layer&rsquo;s name in the Layers panel.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p>Many layer effects rely on setting a <span class="ui">Radius</span> value to see the effect initially applied.</p>
+		</aside>
+
+		</details>
+
+		<details open="open">
+			<summary>To apply layer effects via the Layer Effects dialog:</summary>
+
+			<ol>
+				<li>Select the layer(s) that you want to apply the effect to.</li>
+				<li>Do any of the following:<ul>
+						<li><img src="../../../shared/ui/cogicon.png" class="tool" width="16" height="16" alt="Layers Effects" /> On the <span class="ui">Quick FX</span> panel, click <span class="ui">Layer Effects</span>.</li>
+				<li><img src="../../../shared/ui/add_fx_layer.png" class="tool" width="16" height="16" alt="Layer Effects" /> On the <span class="ui">Layers</span> panel, click <span class="ui">Layer Effects</span>.</li>
+						<li>Select <span class="ui">Layer&gt;Layer Effects</span>.</li>
+					</ul>
+				</li>
+								<li>(Optional) <img src="../../../shared/ui/duplicate_effect.png" class="tool" width="16" height="16" alt="Duplicate effect" /> <img src="../../../shared/ui/remove_effect.png" class="tool" width="16" height="16" alt="Remove effect" /> Click <span class="ui">Duplicate effect</span> to create another instance of an outline, shadow or overlay effect; click <span class="ui">Delete effect</span> to remove any multi-instance effect.</li>
+				<li>Adjust the settings as desired&mdash;options vary for each effect.</li>
+				<li>If required, select any other effects and adjust the settings.</li>
+			</ol><!-- ???/duplicate/remove/move up/move down icons need supplying.			 --><aside class="box tip">
+			<p><img src="../../../shared/ui/move_up.png" class="tool" width="16" height="16" alt="Move Up" /> <img src="../../../shared/ui/move_down.png" class="tool" width="16" height="16" alt="Move Down" /> Use Move up or Move down to rearrange instances of a layer effect.</p>
+		</aside>
+		
+		</details>
+
+		<details>
+			<summary>To edit layer effects:</summary>
+
+			<ol>
+				<li>Select the layer that you want to edit.</li>
+				<li>On the <span class="ui">Quick FX</span> panel, click the arrow to expand the options for the effect you want to edit.</li>
+				<li>Adjust the settings as desired&mdash;options vary for each effect.</li>
+				<li>If required, repeat for any other effects.</li>
+			</ol>
+		</details>
+
+		<details>
+			<summary><img src="../../../shared/ui/add_fx_layer.png" class="tool" width="16" height="16" alt="Layers Effects" /> To edit layer effects using the Layer Effects dialog:</summary>
+
+			<ol>
+				<li>Click the effects icon on the layer entry in the <span class="ui">Layers</span> panel.</li>
+				<li>In the dialog, click on the label of the effect that you want to edit.</li>
+				<li>Adjust the settings as desired&mdash;options vary for each effect.</li>
+				<li>If required, repeat for any other effects.</li>
+			</ol>
+		</details>
+
+		<aside class="box tip">
+			<p>If you create a set of layer effects that you want to use again you can save time and effort by saving them as a style to the Styles panel. This way they can be applied to any new object with a single click.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>While Affinity Publisher 2 allows adding effects onto mask layers, the former take no effect. Ensure to add effects to object or text layers instead.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/layerFxPanel.html">Quick FX panel</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../ObjectControl/styles.html">Styles</a></li>
+			<li><a href="../Panels/stylesPanel.html">Styles panel</a></li>
+			<li><a href="../Layers/layerBlendModes.html">Layer blending</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

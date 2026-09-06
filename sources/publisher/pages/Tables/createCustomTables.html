@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="tables, presets, custom" />
+	<meta name="description" content="Custom table formatting can be created and stored via the Table Formats panel." />
+	<title>Creating table formats</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Creating table formats</h1>
+		
+		<p>Using the <span class="ui">Table Formats</span> panel, you can create and store custom table formats for use throughout your document.</p>
+	
+	</header>
+	
+	<section class="about">
+		
+		<p>A table format works as a template, storing the underlying structure and formatting of a table but not its content. It can be applied to additional tables, ensuring design consistency.</p>
+		
+		<figure>
+			<div class="single"><img src="../../../shared/customtable.png" class="screenshot" alt="Custom table formatting" /></div>
+			<figcaption></figcaption>
+		</figure>
+		
+		<p>Customizing table formats allows you to:</p>
+		<ul>
+			<li>Select table cell styles such as rows (odd/even), header rows, and rules for table modification.</li>
+			<li>Add or remove styles to make the format more basic or more advanced.</li>
+			<li>Set each style&apos;s cell properties such as fill, transparency, border, margins, and fonts.</li>
+			<li>Independently format odd and even rows for alternating styles between rows.</li>
+			<li>Automatically update the formatting of multiple tables.</li>
+		</ul>
+		
+		<p>If you&apos;re looking for design freedom, you can create your own table formats from scratch.</p>
+	</section>
+
+	<section class="howto">		
+		<h2>Managing and applying table formats</h2>
+		<p>The <span class="ui">Table Formats</span> panel is used to create table formats, from scratch or based on a table that has been directly formatted on the page.</p>
+		
+		<p>You can import table formats from another Affinity document, and save the current document&apos;s table formats as the default for reuse across multiple new documents.</p>
+		
+		<details open="open">
+			<summary>To access the <span class="ui">Table Formats</span> panel:</summary>
+			<ul>
+				<li>On the <span class="ui">Window</span> menu, select <span class="ui">Table&gt;Table Formats</span>.</li>
+			</ul>
+		</details>
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To create a new table format from scratch:</summary>
+			<ul>
+				<li>On the <span class="ui">Table Formats</span> panel, click the Panel Preferences menu and select <span class="ui">Create New Format</span>.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To create a new table format from a table:</summary>
+			<ol>
+				<li>Select the table.</li>
+				<li>On the <span class="ui">Table Formats</span> panel, click the Panel Preferences menu and select <span class="ui">Add Format from Selection</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To apply a table format:</summary>
+			<p>With a table selected on the page, do one of the following on the <span class="ui">Table Formats</span> panel:</p>
+			<ul>
+				<li>To combine with existing table formatting: click a table format.</li>
+				<li>To replace existing table formatting: click a table format&apos;s options menu and select <span class="ui">Apply &quot;[Table format name]&quot; (Override Local)</span>.</li>
+			</ul>
+		</details>
+		
+		<details>
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To save a set of table formats as the default for new documents:</summary>
+			<ul>
+				<li>On the <span class="ui">Table Formats</span> panel, click the Panel Preferences menu and select <span class="ui">Save Formats as Default</span>.</li>
+			</ul>
+		</details>
+		
+		<details>
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Table format options menu" /> To update a table format with settings from a table:</summary>
+			<ol>
+				<li>Select the table.</li>
+				<li>On the <span class="ui">Table Formats</span> panel, select <span class="ui">Update From Selection</span> on the table format&apos;s options menu.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>If multiple tables with different formatting are selected, the table format is updated using the one selected first.</p>
+			</aside>
+		</details>
+		
+		<details>
+			<summary>To import table formats:</summary>
+			<ol>
+				<li>On the <span class="ui">Table Formats</span> panel, click the Panel Preferences menu and select <span class="ui">Import Formats</span>.</li>
+				<li>Navigate to and select the Affinity file from which to import table formats, then select <span class="ui">Open</span>.</li>
+				<li>A list of formats will appear, giving you the ability to select those you wish to import, rename incoming formats, or resolve any import conflicts.</li>
+				<li>When you are ready to import the selected format(s), select <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+	</section>
+	
+	<section class="howto">
+		<h2>Editing table and cell formats</h2>
+		<p>Table formats can be edited at any time. After editing a table format, the appearance of each table to which it is applied is automatically updated.</p>
+		
+		<p>Each table format contains at least one cell format. You can create and apply additional cell formats, e.g. to color a table&apos;s header row differently than its body rows, or to alternate the background color of odd and even body rows.</p>
+		
+		<details>
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool" width="16" height="16" alt="Panel Preferences" /> To edit a table format:</summary>
+			<ul>
+				<li>On the <span class="ui">Table Formats</span> panel, click on a table format&apos;s options menu and do one of the following:<ul>
+						<li>To edit the custom table format directly, select <span class="ui">Edit &quot;[Table format name]&quot;</span>.</li>
+						<li>To create and edit a copy of the custom table format, select <span class="ui">Edit copy of &quot;[Table format name]&quot;</span>.</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<p>The <span class="ui">Edit Table Format</span> dialog displays the header and row cells (the <span class="ui">Structure</span>) that make up the table format on the left, a list of available formats which can be applied to the table in the center, and formatting properties on the right.</p>
+			
+			<figure class="nft">
+				<div class="single"><img src="../../images/edittable.png" class="screenshot" alt="Edit table format" /></div>
+				<figcaption></figcaption>
+			</figure>	
+		
+			<p>Selecting table cells on the <span class="ui">Structure</span> will highlight the style being edited in the <span class="ui">Cell Formats</span> list.</p>
+		</details>
+		
+		<details>
+			<summary>To resize the table structure:</summary>
+			<ul>
+				<li>On the <span class="ui">Structure</span>, click the small - and + buttons located at the top-left and bottom-right corners respectively to adjust the number of columns and rows.</li>
+			</ul>
+		</details>
+		
+		<details>
+			<summary>To create a new cell format:</summary>
+			<ul>
+				<li>From the <span class="ui">Cell Formats</span> pane, click the + button.</li>
+			</ul>
+		</details>
+		
+		<details>
+			<summary>To delete an existing cell format:</summary>
+			<p>From the <span class="ui">Cell Formats</span> pane:</p>
+			<ol>
+				<li>Select the unwanted cell format.</li>
+				<li>Click the - button.</li>
+			</ol>
+		</details>
+	</section>
+	
+	<section class="howto">
+		<h2>Common table formatting</h2>
+		
+		<p>On the <span class="ui">Edit Table Format</span> dialog, the <span class="ui">Structure</span> contains row and column handles. These handles can be moved around to create header and footer areas, which determine the portions of the table considered to be non-repeating.</p>
+		
+		<p>The cells outside of the header and footer areas will have their cell formatting repeated as the table grows.</p>
+		
+		<aside class="box note">
+			<p>The numbers of columns and rows on the structure is solely for defining the header, body and footer areas of tables. It does not limit the tables to which a table format can be applied.</p>
+		</aside>
+		
+		<details>
+			<summary>To add a table footer:</summary>
+			<ol>
+				<li>On the <span class="ui">Structure</span>, click the footer row handle to move it up one row.<br /><figure>
+						<div class="single"><img src="../../../shared/tablefooter1.png" class="screenshot" alt="Table footer area" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>	
+				<li>Create a new cell format from the <span class="ui">Cell Formats</span> pane. This style is to be created specifically for your footer cells.</li>
+				<li>Fill in the properties for the cell format using the options on the dialog.</li>
+				<li>Select the cell in the footer area.<br /><figure>
+						<div class="single"><img src="../../../shared/tablefooter2.png" class="screenshot" alt="Table footer selection" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>
+				<li>Select the new cell format from the <span class="ui">Cell Formats</span> list. The cell properties of the footer can be edited to display a contrasting footer style.<br /><figure>
+						<div class="single"><img src="../../../shared/tablefooter3.png" class="screenshot" alt="Table footer style" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>
+			</ol>
+		</details>	
+		
+		<details>
+			<summary>To add a row header:</summary>
+			<ol>
+				<li>On the <span class="ui">Structure</span>, click the header row handle to move it down one row. This creates a header area.<br /><figure>
+						<div class="single"><img src="../../../shared/tableheader1.png" class="screenshot" alt="Row header area" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>	
+				<li>Create a new cell format from the <span class="ui">Cell Formats</span> pane. This style is to be created specifically for your header cells.</li>
+				<li>Fill in the properties for the cell format using the options on the dialog.</li>
+				<li>Select the cell in the header area.<br /><figure>
+						<div class="single"><img src="../../../shared/tableheader2.png" class="screenshot" alt="Row header selection" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>
+				<li>Select the new cell format from the <span class="ui">Cell Formats</span> list. The cell properties of the header can be edited to display a different header style.<br /><figure>
+						<div class="single"><img src="../../../shared/tableheader3.png" class="screenshot" alt="Row header style" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>
+			</ol>
+		</details>	
+
+		<details>
+			<summary>To add a repeating pattern:</summary>
+			<ul>
+				<li>On the <span class="ui">Structure</span>, select individual cells within the body area of the table, then apply different cell formats to alternating cells.<br /><figure>
+						<div class="single"><img src="../../../shared/tablepattern.png" class="screenshot" alt="Table pattern" /></div>
+						<figcaption></figcaption>
+					</figure>
+				</li>
+			</ul>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_tableText.html">Table Tool</a></li>
+			<li><a href="../Tables/editTables.html">Editing tables</a></li>
+			<li><a href="../Tables/sortTables.html">Sorting tables</a></li>
+			<li><a href="../Panels/tablePanel.html">Table panel</a></li>
+			<li><a href="../Panels/tableFormatsPanel.html">Table Formats panel</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

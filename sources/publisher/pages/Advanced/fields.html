@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="fields, field code, document properties, running header, custom, text variable" />
+	<meta name="description" content="Use fields for automatically generated document information." />
+	<title>Fields</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Fields</h1>
+		
+		<p>Fields allow various pieces of information or metadata within your document to be automatically inserted into the document text. Fields will automatically update as data&mdash;for example, a date&mdash;changes.</p>
+
+	</header>
+		
+	<section class="about">
+
+		<h2>About fields</h2>
+		
+		<p>Fields can be used to insert relevant section information. For example, adding a <span class="ui">Name</span> or <span class="ui">Page Number</span> field from the <span class="ui">Fields</span> panel&apos;s <span class="ui">Document Sections</span> to a master page&apos;s footer will automatically display the correct section name or page number, respectively, wherever the master page is applied.</p>
+		
+		<h2>Inserting fields</h2>
+		
+		<p>Items that may be inserted as fields can be found on the <span class="ui">Fields</span> panel (accessed by opening the <span class="ui">Window</span> menu, then selecting <span class="ui">References&gt;Fields</span>).</p>
+		
+		<p>Available fields include:</p>
+			<ul>
+				<li><span class="ui">Document Information</span>&mdash;displays the <span class="ui">Author</span>, <span class="ui">Tags</span>, <span class="ui">Comments</span>, <span class="ui">Title</span>, <span class="ui">Subject</span>, and <span class="ui">Revision</span>.</li>
+				<li><span class="ui">Document Statistics</span>&mdash;displays key statistics for the document: <span class="ui">Last edited by</span>, <span class="ui">Created</span>, <span class="ui">Saved</span>, <span class="ui">Printed</span>, <span class="ui">Save Count</span>, <span class="ui">Filename</span>, <span class="ui">Path</span>, and <span class="ui">Total Pages</span>.</li>
+				<li><span class="ui">Document Sections</span>&mdash;displays the following for each section of the document: <span class="ui">Name</span>, <span class="ui">Running Header</span>, <span class="ui">Page Number</span>, <span class="ui">Last Page</span> and <span class="ui">Run Last Page</span>.</li>
+				<li><span class="ui">Continuation</span>&mdash;displays the page number of the <span class="ui">Previous Frame</span> and <span class="ui">Next Frame</span> in a sequence of linked text frames, so you can add jump lines to publications.</li>
+				<li><span class="ui">General Information</span>&mdash;displays the current <span class="ui">Date &amp; Time</span>.</li>
+				<li><span class="ui">Data Merge (<i>data source file name</i>)</span>&mdash;dynamically displays fields from a currently connected external data source.</li>
+				<li><span class="ui">Custom</span>&mdash;allows you to create your own fields, whose values can be any text you wish.</li>
+			</ul>
+
+		<aside class="box note">
+			<p>The <span class="ui">Author</span> field is filled in with your user account short name by default. If you do not want this name visible in documents you upload or share, this field can be edited by clicking its value. Editing the <span class="ui">Author</span> field&apos;s value with no document open will make the name you enter the new default.</p>
+		</aside>
+			
+		<aside class="box note">
+			<p>A number of these fields are also available from the <span class="ui">Text</span> menu&apos;s <span class="ui">Insert</span> options.</p>
+		</aside>
+		
+		<h3>Converting regular text to fields</h3>
+		<p>Text in a document can be converted to a field, directly from a text selection or via the <span class="ui">Find and Replace</span> panel.</p>
+		
+		<p>A text selection can be converted only if it does not:</p>		
+			<ul>
+				<li>include any hard breaks, such as paragraph breaks and section breaks.</li>
+				<li>include filler text.</li>
+				<li>consist of multiple text ranges.</li>
+				<li>produce a blank string of text.</li>
+			</ul>
+		
+		<p>Using the <span class="ui">Find and Replace</span> panel is useful in a document containing multiple instances of the same text&mdash;or similar text, which can be found using regular expressions&mdash;that you wish to convert</p>
+		
+		<h2>Formatting fields</h2>
+		<p>Fields with editable formatting include <span class="ui">Date &amp; Time</span>, <span class="ui">Created</span>, <span class="ui">Saved</span>, <span class="ui">Printed/Exported</span>, and <span class="ui">Running Header</span>.</p>
+		
+		<p>Field formatting can be edited, via the <span class="ui">Fields</span> panel or the document view.</p>
+		
+		<h3>Formatting dates and times</h3>
+		<p>Fields that display the date and time can be customized to display any of a wide variety of details. When editing their formatting, select <span class="ui">Custom</span> and enter the required details in the <span class="ui">Pattern</span> setting.</p>
+		
+		<p>The table below lists items supported by the setting. Patterns can be combined as you wish, including with regular text to form longer phrases.</p>
+		
+		<p>The <span class="ui">Language</span> setting affects the values shown by each pattern. For example, <i>MMMM</i> displays <i>July</i> when an English language is selected, <i>julio</i> for Spanish, and <i>Temmuz</i> for Turkish.</p>
+		
+		<h3>Dates</h3>
+		<table class="five-thirty-twenty-twenty-twentyfive">
+			<tr>
+				<th>Symbol</th>
+				<th>Meaning</th>
+				<th>Pattern</th>
+				<th>Example value</th>
+				<th>Notes</th>
+			</tr>
+			<tr>
+				<td><code>G</code></td>
+				<td>Era designator</td>
+				<td><code>G</code><br /> <code>GGGG</code><br /> <code>GGGGG</code></td>
+				<td>AD<br /> Anno Domini<br /> A</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>y</code></td>
+				<td>Year</td>
+				<td><code>y</code><br /> <code>yy</code></td>
+				<td>2023<br /> 23</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>Q</code></td>
+				<td>Quarter</td>
+				<td><code>Q</code><br /> <code>QQ</code><br /> <code>QQQ</code><br /> <code>QQQQ</code></td>
+				<td>2<br /> 02<br /> Q2<br /> 2nd quarter</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>M</code></td>
+				<td>Month in year</td>
+				<td><code>M</code><br /> <code>MM</code><br /> <code>MMM</code><br /> <code>MMMM</code><br /> <code>MMMMM</code></td>
+				<td>9<br /> 09<br /> Sep<br /> September<br /> S</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>L</code></td>
+				<td>Standalone month in year</td>
+				<td><code>L</code><br /> <code>LL</code><br /> <code>LLL</code><br /> <code>LLLL</code><br /> <code>LLLLL</code></td>
+				<td>9<br /> 09<br /> Sep<br /> September<br /> S</td>
+				<td>Some languages use a different spelling of the month in certain contexts, e.g. when a month is mentioned without a date and year. These spellings can be accessed using these patterns. For example, in Polish <code>MMMM</code> displays <i>lipca</i> for July, whereas <code>LLLL</code> displays <i>lipiec</i>.</td>
+			</tr>
+			<tr>
+				<td><code>w</code></td>
+				<td>Week of year</td>
+				<td><code>w</code></td>
+				<td>27</td>
+				<td>Consecutive instances of the symbol add a leading zero to the resulting value.</td>
+			</tr>
+			<tr>
+				<td><code>W</code></td>
+				<td>Week of month</td>
+				<td><code>W</code></td>
+				<td>2</td>
+				<td>Consecutive instances of the symbol add a leading zero to the resulting value.</td>
+			</tr>
+			<tr>
+				<td><code>d</code></td>
+				<td>Day in month</td>
+				<td><code>d</code><br /> <code>dd</code></td>
+				<td>2<br /> 02</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>D</code></td>
+				<td>Day of year</td>
+				<td><code>D</code><br /> <code>DD</code><br /> <code>DDD</code></td>
+				<td>1<br /> 01<br /> 001<br /></td>
+				<td>Example is 1st of January.</td>
+			</tr>
+			<tr>
+				<td><code>F</code></td>
+				<td>Day of week in month</td>
+				<td><code>F</code></td>
+				<td>2</td>
+				<td>Example is second Wednesday in July.<br /> Consecutive instances of the symbol add a leading zero to the resulting value.</td>
+			</tr>
+			<tr>
+				<td><code>E</code></td>
+				<td>Day of week</td>
+				<td><code>E</code><br /> <code>EEEE</code><br /> <code>EEEEE</code><br /> <code>EEEEEE</code></td>
+				<td>Tue<br /> Tuesday<br /> T<br /> Tu</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>e</code></td>
+				<td>Local day of week<br /></td>
+				<td><code>e</code><br /> <code>eee</code><br /> <code>eeee</code><br /> <code>eeeee</code><br /> <code>eeeeee</code></td>
+				<td>2<br /> Tue<br /> Tuesday<br /> T<br /> Tu</td>
+				<td>When the field&apos;s language is set to US English, Monday is day 2 as the week starts on Sunday, whereas for UK English it is day 1 as the week starts on Monday.</td>
+			</tr>
+		</table>
+
+		<h3>Times</h3>
+		<table class="five-thirty-twenty-twenty-twentyfive">
+			<tr>
+				<td><code>a</code></td>
+				<td>AM or PM</td>
+				<td><code>a</code><br /> <code>aaaaa</code></td>
+				<td>PM&nbsp;<br /> p</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>B</code></td>
+				<td>Flexible time periods</td>
+				<td><code>B</code></td>
+				<td>at night</td>
+				<td>Possible values are <i>in the morning</i>, <i>noon</i>, <i>in the afternoon</i>, <i>in the evening</i> and <i>at night</i>.</td>
+			</tr>
+			<tr>
+				<td><code>h</code></td>
+				<td>Hour in day (1&ndash;12)</td>
+				<td><code>h</code><br /> <code>hh</code></td>
+				<td>7<br /> 07</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>H</code></td>
+				<td>hour (0&ndash;23)</td>
+				<td><code>H</code><br /> <code>HH</code></td>
+				<td>7<br /> 07</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>k</code></td>
+				<td>Hour number in day (1&ndash;24)</td>
+				<td><code>k</code><br /> <code>kk</code></td>
+				<td>4 <br /> 04</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>K</code></td>
+				<td>Hour in am/pm (0&ndash;11)</td>
+				<td><code>K</code><br /> <code>KK</code></td>
+				<td>7<br /> 07</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>m</code></td>
+				<td>Minute in hour (0&ndash;59)</td>
+				<td><code>m</code><br /> <code>mm</code></td>
+				<td>8<br /> 08</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>s</code></td>
+				<td>Second in minute (0&ndash;59)</td>
+				<td><code>s</code><br /> <code>ss</code></td>
+				<td>3<br /> 03</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>z</code></td>
+				<td>Short/Long Timezone</td>
+				<td><code>z</code><br /> <code>zzzz</code></td>
+				<td>BST<br /> British Summer Time</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>O</code></td>
+				<td>Time Zone: short localized GMT<br /> Time Zone: long localized GMT</td>
+				<td><code>O</code><br /> <code>OOOO</code></td>
+				<td>GMT-8<br /> GMT-08:00</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>V</code></td>
+				<td>Time Zone: short time zone ID<br /> Time Zone: long time zone ID<br /> Time Zone: time zone exemplar city<br /> Time Zone: generic location</td>
+				<td><code>V</code><br /> <code>VV</code><br /> <code>VVV</code><br /> <code>VVVV</code></td>
+				<td>gblon<br /> Europe/London<br /> London<br /> United Kingdom Time</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><code>x</code></td>
+				<td>Time Zone: ISO8601 basic hm<br /> Time Zone: ISO8601 basic hm<br /> Time Zone: ISO8601 extended hm</td>
+				<td><code>x</code><br /> <code>xx</code><br /> <code>xxx</code></td>
+				<td>+01, -0930<br /> +0100, -0930<br /> +01:00, -09:30</td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<h3>Other</h3>
+		<table class="five-thirty-twenty-twenty-twentyfive">
+			<tr>
+				<td><code>&apos;</code></td>
+				<td>Escape character to include literal text</td>
+				<td><code>&apos;Today is&apos; EEEE</code></td>
+				<td>Today is Tuesday</td>
+				<td>Surround literal text with apostrophes to display it alongside date and time values in a field.</td>
+			</tr>
+			<tr>
+				<td><code>&apos; &apos;</code></td>
+				<td>Two single quotes produce one</td>
+				<td><code>&apos;Today&apos;&apos;s date is&apos; dd/MM/yyyy</code></td>
+				<td>Today&rsquo;s date is 03/07/2023</td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<aside class="box tip">
+			<p>The value of a <span class="ui">Date &amp; Time</span> field (from the <span class="ui">General Information</span> fields category) is when the field was inserted into document text.</p>
+		</aside>
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To insert a field:</summary>
+			<ol>
+				<li>In a text object, create an insertion point or select text that you want to replace.</li>
+				<li>On the <span class="ui">Fields</span> panel, expand the section that contains the required field.</li>
+				<li>Double-click the required field&apos;s name.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>The <span class="ui">Text</span> menu&apos;s <span class="ui">Insert</span>&gt;<span class="ui">Fields</span>&gt;<span class="ui">Page Number</span> function will also insert a <span class="ui">Page Number</span> field into the document.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To edit formatting of an existing instance of a field:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li><span class="CLICK-TAG"></span>-click the field in document text and select <span class="ui">Edit Field</span>.</li>
+						<li><img src="../../../shared/ui/DefaultFormat.png" class="tool" width="18" height="18" alt="Edit Format" /> In document text, select the field or create an insertion point immediately before or after it. On the corresponding entry on the <span class="ui">Fields</span> panel, select <span class="ui">Edit Format</span> (or <span class="ui">Edit Running Header Defaults</span> for that field).</li>
+					</ul>
+				</li>
+				<li>On the dialog that appears, select your preferred format.</li>
+			</ol>
+			
+			<p>Other instances of the field are unaffected.</p>
+		</details>
+		
+		<details open="open">
+			<summary>To set default formatting for future instances of a field:</summary>
+			<ol>
+				<li>In the document view, ensure that:<ul>
+						<li>an instance of the field is not selected.</li>
+						<li>the insertion point is not immediately before or after an instance of the field.</li>
+					</ul>
+				</li>
+				<li><img src="../../../shared/ui/DefaultFormat.png" class="tool" width="18" height="18" alt="Edit Format Defaults" /> On the required field&apos;s entry on the <span class="ui">Fields</span> panel, select <span class="ui">Edit Format Defaults</span>.</li>
+				<li>On the dialog that appears, select your preferred format.</li>
+			</ol>
+			
+			<p>Instances of the field that you insert afterwards will use your preferred format.</p>
+		</details>
+		
+		<details open="open">
+			<summary>To convert a field to regular text:</summary>
+			<ul>
+				<li>In document text, <span class="CLICK-TAG"></span>-click the field and select <span class="ui">Expand Field</span>.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To convert a text selection to a field:</summary>
+			<ol>
+				<li>Select the text range to be converted.</li>
+				<li><span class="CLICK-TAG"></span>-click the selection and then select <span class="ui">Convert Text to Field</span>.</li>
+				<li>(Optional) Edit the proposed name and value for the field.</li>
+				<li>Select <span class="ui">OK</span>.</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To highlight fields in document text:</summary>
+			<ul>
+				<li>From the <span class="ui">Text</span> menu, select <span class="ui">Highlight Fields</span>.</li>
+			</ul>
+		</details>
+		
+		<details open="open">
+			<summary>To create a custom field:</summary>
+			<ol>
+				<li>On the <span class="ui">Fields</span> panel, expand the <span class="ui">Custom</span> section.</li>
+				<li><img src="../../../shared/ui/createCustomField.png" class="tool" width="18" height="18" alt="Create Custom Field" /> Select <span class="ui">Create Custom Field</span> (the + button).</li>
+				<li>Type a name and a value for the field into the corresponding boxes.</li>
+				<li>Select <span class="ui">Close</span>.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To edit a custom field&apos;s value:</summary>
+			<ol>
+				<li>On the <span class="ui">Fields</span> panel, expand the <span class="ui">Custom</span> section.</li>
+				<li>To the right of the custom field&apos;s name, click the existing value (or the blank space if there is no value).</li>
+				<li>Type the new value.</li>
+				<li>Press the <span class="RETURN-TAG"></span> <span class="KEY-TAG"></span>.</li>
+			</ol>
+			
+			<aside class="box warning">
+				<p>Instances of the field in your document automatically display the new value, and text may reflow accordingly.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To rename or delete a custom field:</summary>
+			<ol>
+				<li>On the <span class="ui">Fields</span> panel, expand the <span class="ui">Custom</span> section.</li>
+				<li><img src="../../../shared/ui/DefaultFormat.png" class="tool" width="18" height="18" alt="Edit Custom Field" /> On the field&apos;s entry, select <span class="ui">Edit Custom Field</span>.</li>
+				<li>Do one of the following:<ul>
+						<li>To rename the custom field, click its current name, edit the text, and then press the <span class="RETURN-TAG"></span> <span class="KEY-TAG"></span>.</li>
+						<li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Delete" /> To delete the custom field, select <span class="ui">Delete</span>.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/fieldsPanel.html">Fields panel</a></li>
+			<li><a href="../Advanced/dataMerge.html">Data merge</a></li>
+			<li><a href="../Text/find_and_replace.html">Find and replace</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

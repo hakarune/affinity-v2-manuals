@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="data merge, database, json, xlsx" />
+	<meta name="description" content="Merge text and image links into your document from an external data source." />
+	<title>Data merge</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Data merge</h1>
+		
+		<p>Data merge inserts text and image links from other programs into your publication pages.</p>
+		
+		<figure>
+			<p><img src="../../../shared/data_merge.png" class="responsive" alt="Data merge" /></p>
+			<figcaption>Awards and Business cards (N-up grid layout) merged from an external data source.</figcaption>
+		</figure>	
+
+
+	</header>
+		
+	<section class="about">
+
+		<h2>About data merge</h2>
+		
+		<p>Data merge means injecting data from a data source into documents such as personalized certificates, letters, envelopes, greeting cards, as well as mailing labels, badges, passes to more complex multi-page business cards, catalogs, photo albums or any deliverable where personalization is needed.</p>
+
+		<p>For example, you can publish ID passes that are personalized with passholder&apos;s names and that person&apos;s profile picture. You can also generate entry passes that contain unique QR codes from a field of a data merge source provided by your client. Passes can then be validated by scanning with suitable hardware or an app.</p>
+		
+		<p>A <span class="ui">Data Merge Manager</span> is used to add the external data source, manage this resource and generate the merged document.</p>
+		
+		<h3>Data source types</h3>
+
+		<p>Data sources include text (plain/CSV/TSV), JSON and XLSX spreadsheet files (e.g. Microsoft Excel, Apple Numbers, LibreOffice). The text files could be an exported address book or contact lists. Your data records could also include image links (resource path names) which can be be associated with a picture frame in Publisher&mdash;on merging, the referenced images (e.g., profile or product photos) merge into picture frames sequentially.</p>
+
+		<h3>Key data merge steps</h3>
+			
+		<p>The key steps for successful data merging are:</p>
+		
+		<ul>
+			<li>Creating a data source</li>
+			<li>Design to a single spread or grid layout</li>
+			<li>Adding the external data source</li>
+			<li>Filtering the data records</li>
+			<li>Inserting fields</li>
+			<li>Merging and publishing</li>
+		</ul>
+	
+	<h3>Creating a data source</h3>
+	
+	<p>The data source exists outside of Affinity Publisher, typically exported from another app or website. Contact lists can be exported from google.com, outlook.com and other services.</p>
+	<p>The source needs to be available in advance of data merging and have a consistent logical structure that is finalized. Of course, it needs to be populated with data records.</p>
+	<p>You can add (or alter) data records to the external data source at any time (even after merging) but don&apos;t worry if some records don&apos;t contain data as these will be treated as blank fields once merged.</p>
+	
+	<ul>
+		<li>For CSV and TSV files, the first line (row) of your data source is used as fields in Publisher; the row must contain explicit names to be fields. For example, a top row of &quot;First name, Last name, email address&quot; would offer the merge fields of <i>First name</i>, <i>Last name</i> and <i>email address</i> in Publisher. The CSV export format is more commonly used, but the TSV format avoids problems when processing data records containing punctuation.</li> 
+		<li>For JSON files, obtained from web/mobile services or database export, only a single top-level array of objects (and values in those objects) are supported; lower level arrays and objects are not supported.</li>
+		<li>For image links, the resource path names can be absolute (like below), or relative to the data source&apos;s or saved document&apos;s file location.<ul>
+				<li>MacOS: /Users/<i>username</i>/Desktop/ProfilePics/magazine_staff_pics_andy.jpg</li>
+				<li>Windows: C:\Users\<i>username</i>\Desktop\ProfilePics\magazine_staff_pics_andy.jpg</li>
+			</ul>
+		</li>
+	</ul>
+	
+	<h3>Design to a single spread or grid layout</h3>
+	
+	<p>Several scenarios are possible:<ul>	
+			<li>For personalized certificates, letters, envelopes and greeting cards: Create a single design on one spread with placed fields, e.g. for names and/or addresses. On merging, new pages will be generated until all the data records have been processed and exhausted.</li>
+			<li>For business cards, mailing labels, badge and passes: Draw a grid layout using the Data Merge Layout Tool to create N-up tiled data records. For example, you could &apos;gang-up&apos; business cards on a 5x2 row/column grid to minimize print costs. Merging is as for the previous scenario&mdash;new grid-based pages are generated with each page&apos;s grid &apos;cells&apos; showing different record.</li>
+			<li>For multi-page catalogs and photo albums: With multiple spreads of different design you can use either of the above scenarios. On merging, Publisher will generate the multiple spreads for as many times as needed until the data records are processed and presented.</li>
+		</ul>
+			
+	<h3>Adding the external data source</h3>
+	
+	<p>When you add an external data source to your document it will be embedded in your file. You&apos;ll then be able to view its fields. Once added, the source will be remembered the next time you open your document. If the original data source file has been modified, you can update the embed copy manually; this will not update automatically.</p>
+	
+	<aside class="box note">
+		<p>Data merge will generate preflight errors and warnings if the external data source has been modified.</p>
+	</aside>
+	
+	<h3>Filtering data records</h3>
+	
+	<p>Instead of merging all records you can filter by a specific range (e.g., 100-200). This lets you control which set of records are output. To filter from a specific record number to the last record in your the data source just enter a final value which far exceeds your final record number (e.g., 100-20000).</p>	
+	
+	<h3>Inserting fields</h3>
+	
+	<p>In order to merge information from your added data source(s) into your document, you need to insert text or image link fields into either a text object (e.g. a text frame) or a picture frame.</p>
+	
+	<p>You can insert fields that contain metadata about the merged data source and records:</p>
+	
+	<ul>
+		<li><span class="ui">Source</span>&mdash;displays the data source&apos;s filename.</li>
+		<li><span class="ui">Merge Index</span>&mdash;displays a record&apos;s numerical order among only your choice of filtered records.</li>
+		<li><span class="ui">Unfiltered Index</span>&mdash;displays a record&apos;s numerical order among all of its data source&apos;s records.</li>
+	</ul>
+	
+	<p>For example, if your data source&apos;s filename includes the file&apos;s creation date, you might include the filename and an index in a generated letter&apos;s footer.</p>
+	
+	<h3>Hyperlinking using a field&apos;s values as targets</h3>
+	
+	<p>When a field in a data source contains a web address (URL), an anchor, an email address, or a path to a file, a hyperlink added to text or an object in a data merge layout can use the field&apos;s value as its target.</p>
+	
+	<figure class="nft">
+		<div class="single"><img src="../../images/dataMergeHyperlink.jpg" class="responsive" alt="Inserting a hyperlink in a data merge layout" /></div>
+		<figcaption>Adding a hyperlink in a data merge layout. In each cell, the hyperlink&apos;s target comes from a field in the corresponding record of the data source.</figcaption>
+	</figure>
+	
+	<p>After a data merge is performed, the resulting document will contain a hyperlink (on the Hyperlinks panel) for each of the data source&apos;s records.</p>
+	
+	<h3>Merging and publishing</h3>
+	
+	<p>Once you&apos;ve inserted all necessary placeholder fields, you are ready to merge the source data and your original publication to <em>a new Publisher document</em>. New pages are automatically created to allow for all data records to be processed and presented in your document.</p>
+	
+	</section>
+	
+	<section class="howto">
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_layer.png" class="tool" width="16" height="16" alt="Add Data Merge Source" /> To add a data source:</summary>
+			<ol>
+				<li>On the <span class="ui">Window</span> menu, choose <span class="ui">Data Merge Manager</span>.</li>
+				<li>Click <span class="ui">Add Data Merge Source</span>, then navigate and choose a data source file. Click <span class="ui">Open</span>.</li>
+				<li>Click <span class="ui">Close</span>.</li>
+			</ol>
+			
+			<p>The Data Merge Manager also lets you manually control delimiters and quote marks in the data source, as well as jump to the source&apos;s file location and update (or delete) a data source.</p>
+		</details>
+
+		<details>
+			<summary>To view the data source file in its folder location:</summary>
+			<ol>
+				<li>In the <span class="ui">Data Merge Manager</span>, select the data source.</li>
+				<li>Click <span class="ui">Show</span>.</li>
+			</ol>
+		</details>
+		
+		<details>
+			<summary>To update a data source:</summary>
+			<ol>
+				<li>In the <span class="ui">Data Merge Manager</span>, select the data source.</li>
+				<li>Click <span class="ui">Update</span>.</li>
+			</ol>
+		</details>
+		
+		<details>
+			<summary><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Remove Layers" /> To delete a data source:</summary>
+			<ol>
+				<li>In the <span class="ui">Data Merge Manager</span>, select the data source.</li>
+				<li>Click <span class="ui">Delete Data Merge Source</span>.</li>
+			</ol>
+			
+		<p>Records on the page will be removed and replaced with placeholder fields.</p>
+		</details>
+
+		<details open="open">
+			<summary>To filter records:</summary>
+
+			<ol>
+				<li>In the Data Merge Manager&apos;s <span class="ui">Filter</span> section, select <span class="ui">Range</span> and then enter a range of records in the input box.</ol>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/data_merge_tool.png" class="tool heading" width="18" height="18" alt="Data Merge Layout Tool" /> To add a data merge layout:</summary>
+
+			<ol>
+				<li>Select the <span class="ui">Data Merge Layout Tool</span>.</li>
+				<li>On the context toolbar, set the number of <span class="ui">Rows</span> and <span class="ui">Columns</span>.</li>
+				<li>Drag out a grid layout. This accommodates a different data record in each grid cell after merging.</li>
+				<li>Set the <span class="ui">Cell Width</span> and <span class="ui">Cell Height</span> to the dimensions of your intended deliverable (e.g., 85mm x 55mm for business cards).</li>
+				<li>With the Data Merge grid layout selected, in the first cell, create your design. Add a text object and insert data fields (either text and image links) to it; add supporting static imagery, text or other objects. The design will be replicated to all other grid cells.</li> 
+				<li>Merge and publish as before.</li> 
+			</ol>
+					
+		</details>
+
+		<details open="open">
+			<summary>To insert text fields:</summary>
+
+			<ol>
+				<li>Draw a text object, and make an insertion point.</li>
+				<li>On the <span class="ui">Fields</span> panel, a Data Merge section will appear for the added data source, displaying the source&apos;s field names. Double-click a chosen field to add the field to the text object.</li>
+			</ol>
+			
+			<p>The Data Merge Manager&apos;s <span class="ui">Preview</span> section lets you display the field&apos;s data itself (check <span class="ui">Preview with record</span>); you can also cycle through the data records using the navigation buttons.</p>
+			
+		</details>
+		
+		<details open="open">
+			<summary>To insert image link fields:</summary>
+
+			<ol>
+				<li>Draw a picture frame and keep it selected.</li>
+				<li>On the <span class="ui">Data Merge</span> section of the <span class="ui">Fields</span> panel, double-click a field that contains an image link. You can preview your records to reveal the image&apos;s path in the panel and the actual on-page images.</li>
+			</ol>
+
+			<aside class="box note">
+				<p><img src="../../../shared/ui/pictureframeplaceholder.png" 
+		width="32" alt="Picture Frame placeholder" /> The placeholder picture frame changes to a picture frame icon. On previewing or merging, the actual image will display.</p>
+			</aside>				
+		</details>	
+
+		<details open="open">
+			<summary>To insert QR codes using a data merge source:</summary>
+
+			<ol>
+				<li>In the data merge layout&apos;s top-left cell, draw an object using the QR Code Tool.</li>
+				<li>On the context toolbar, click the value next to <span class="ui">Data</span>.</li>
+				<li>On the dialog that appears:<ol>
+						<li>Set <span class="ui">Type</span> to <i>Data Merge</i>.</li>
+						<li>Set <span class="ui">Field</span> to the field of your data merge source that contains data from which to generate QR codes.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_hyperlink.png" class="tool" width="16" height="16" alt="Add Hyperlink" /> To hyperlink to targets in a data source&apos;s field:</summary>
+			
+			<ol>
+				<li>In the data merge layout&apos;s top-left cell, select the text or object you wish to be hyperlinked.</li>
+				<li>On the <span class="ui">Hyperlinks</span> panel (<span class="ui">Window&gt;References&gt;Hyperlinks</span>), select <span class="ui">Add Hyperlink</span>.</li>
+				<li>On the <span class="ui">Hyperlink Properties</span> dialog:<ol>
+						<li>Set <span class="ui">Type</span> to <i>URL</i>, <i>Email</i> or <i>File</i> as appropriate for the field&apos;s values.</li>
+						<li>Check <span class="ui">From Data Merge</span>.</li>
+						<li>Set <span class="ui">Field</span> to the field in your data source that contains the relevant targets.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To merge and publish:</summary>
+
+			<ol>
+				<li>In the <span class="ui">Data Merge Manager</span>, select <span class="ui">Generate</span>.</li>
+				<li>On the <span class="ui">File</span> menu, select <span class="ui">Print</span> or <span class="ui">Export</span> (choose PDF).</li>
+			</ol>
+
+		<p>The Data Merge Manager also lets you disable merging (uncheck <span class="ui">Merge Enabled</span>) to allow switching between multiple data sources. You can also control the number of pages generated on merging.</p>
+		</details>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_dataMergeNode.html">Data Merge Layout Tool</a></li>
+			<li><a href="../Panels/fieldsPanel.html">Fields panel</a></li>
+			<li><a href="../Publishing/preflight.html">Preflight</a></li>			
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

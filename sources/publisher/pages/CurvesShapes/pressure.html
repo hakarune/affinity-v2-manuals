@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="stylus, brush, pressure" />
+	<meta name="description" content="Use a pen tablet, Force Touch device or simulated pressure via mouse for pressure-sensitive line drawing" />
+	<title>Pressure sensitivity</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Pressure sensitivity</h1>
+
+		<x-osx>
+		<p>Affinity desktop apps offers complete flexibility when using pen tablets or Force Touch-enabled devices for real pressure-sensitive drawing. If you prefer a mouse or trackpad (not Force Touch), Affinity apps offers simulated pressure sensitivity.</p>
+		</x-osx>
+
+		<x-win32>
+		<p>Affinity desktop apps offer complete flexibility when using pen tablets for real pressure-sensitive drawing. If you prefer a mouse, Affinity apps offers simulated pressure sensitivity.</p>
+		</x-win32>
+		
+	</header>
+
+	<section class="about">
+		<p>When using the Pen Tool you can simply connect your device and you&apos;re ready to go.</p>
+		<p>For mouse users, Affinity apps let your mouse become velocity sensitive by default. The same brush tools can be used but with simulated pressure sensitivity based on the speed (velocity) of your mouse movements.</p>
+		<p>This automatic response is governed by the brush controller which is set to automatic by default&mdash;it senses the type of input device and varies brush size, flow, etc. as you paint according to a particular input: &apos;Pressure&apos;, &apos;Velocity&apos;, &apos;Brush Defaults&apos;, or &apos;None&apos;. If set to &apos;None&apos;, the brush is always a fixed size, flow setting, etc. Otherwise, the brush stroke properties will vary from a minimum to maximum amount (e.g. the full brush width).</p>
+		<p>While you get the response you need from either input, you&apos;ll still be able to fine-tune brush settings for pressure/velocity.</p>
+			<ul>
+				<li>For vector brush settings: jitter options let you control how brush size and flow are affected by your pressure-sensitive device or mouse.</li>
+				<li>Pixel brush settings: as for vector brush options, but additional jitter options are provided that affect brush hardness, shape, color, and the scatter and rotation of nozzles.</li>
+			</ul>
+		<p>If you want to create a custom pressure profile that can be applied to a previously drawn stroke, you can design it and apply it from the Stroke panel. This can be optionally saved as is, or modified before saving.</p>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To create a pressure profile:</summary>
+
+				<ol>
+					<li>On the <span class="ui">Stroke</span> panel, click the <span class="ui">Pressure</span> input box.</li>
+					<li>Manipulate the graph to form the desired pressure profile. (See examples below.)</li> 
+					<li>Begin drawing your strokes.</li>
+				</ol>
+				<figure>
+					<div class="single"><img src="../../../shared/panel_stroke_pressureprofilequad.png" class="screenshot responsive" width="367" alt="Pressure profile" /></div>
+					<figcaption>Uniformly reducing stroke width using locked nodes (A), linear tapering of stroke (B; unlocked by <span class="key ALT-TAG"></span>-drag or second click then drag), tapering of stroke at both ends (C; a combination of A and adding a new node by clicking) and modulating stroke width (D; a combination of A and adding multiple nodes).</figcaption>
+				</figure>
+
+			<table class="thirtythree">
+				<tr>
+					<th>Node type</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td style="width: 10%; text-align: center; vertical-align: top; "><img src="../../../shared/ui/pressure_node_end_deselected.png" class="screenshot" width="16" height="16" alt="Pressure end node deselected" /></td><td>End node (deselected)&mdash;drag to move <em>both</em> end nodes up/down at the same time</td>
+				</tr>
+				<tr>
+					<td style="width: 10%; text-align: center; vertical-align: top;"><img src="../../../shared/ui/pressure_node_end_selected.png" class="screenshot" width="16" height="16" alt="Pressure end node selected" /></td><td>End node (selected)&mdash;drag to move <em>both</em> end nodes up or down at the same time or click to move the end node independently of the other end node</td>
+				</tr>
+				<tr>
+					<td style="width: 10%; text-align: center; vertical-align: top;"><img src="../../../shared/ui/pressure_node_added_deselected.png" class="screenshot" width="16" height="16" alt="Pressure added node deselected" /></td><td>Added node (deselected)&mdash; drag to reposition the node which becomes selected</td>
+				</tr>
+				<tr>
+					<td style="width: 10%; text-align: center; vertical-align: middle;"><img src="../../../shared/ui/pressure_node_added_selected.png" class="screenshot" width="16" height="16" alt="Pressure added node selected" /></td><td>Added node (selected)&mdash;drag to reposition the already selected node</td>
+				</tr>
+			</table>
+
+		</details>
+
+		<details open="open">
+			<summary>To save a pressure profile:</summary>
+				<ul>
+					<li>Under the chart, click <span class="ui">Save Profile</span>. The profile shows under the chart.</li>
+				</ul>
+		</details>
+
+		<details open="open">
+			<summary>To apply a custom pressure profile to a selected stroke:</summary>
+				<ol>
+					<li>From the <span class="ui">Stroke</span> panel, click the <span class="ui">Pressure</span> option.</li>
+					<li>Select a custom profile from below the chart. The chart will update, showing the chosen profile.</li>
+				</ol>
+				<figure class="nft">
+					<div class="single"><img src="../../images/panel_stroke_pressureprofile.png" class="screenshot responsive" width="430" height="581" alt="Custom pressure profile" /></div>
+					<figcaption></figcaption>
+				</figure>
+		</details>
+		
+		<details> 
+			<summary>To reset the pressure profile:</summary>
+				<ul>
+					<li>Select <span class="ui">Reset</span> below the chart.</li>
+				</ul>
+				<p>The profile reverts to its default.</p>
+				
+			<aside class="box note">
+				<p>Click on any node to select it. Any added nodes can be deleted by pressing <span class="key DEL-TAG"></span>.</p>
+			</aside>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../CurvesShapes/draw_linesAndShapes.html">Draw lines and shapes</a></li>
+			<li><a href="../Panels/strokePanel.html">Stroke panel</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

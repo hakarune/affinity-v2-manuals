@@ -30,7 +30,7 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Build every format
-        run: scripts/build.sh
+        run: bash scripts/build.sh
 
       - name: List artefacts
         run: ls -la dist/

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="numbers, numbering, section, naming, names, section name, running header, fields, field, header, footer" />
+	<meta name="description" content="Add page numbering and naming to aid navigation in longer publications." />
+	<title>Page headers and footers</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Page headers and footers</h1>
+	
+		<p>Typically, most pages of a publication will include a page number in their header or footer. They might also include mention of the section or chapter name, for example, to which they belong.</p>
+		
+		<p>These details are typically added as fields (placeholders) to the header or footer on a master page. On pages to which that master page is applied, the fields automatically report the correct value.</p>
+		
+		<figure>
+			<p><img src="../../../shared/pagenumbering.png" class="responsive" alt="Page numbering" /></p>
+			<figcaption>Page numbering and naming on a publication verso page.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>Numbering pages</h2>
+		
+		<p>You can format the page number and set the numbering style using the <span class="ui">Section Manager</span>. This manager also lets you create multiple sections (e.g. Preface, Table of contents, Index, etc.) which can be named and have different starting page numbers and numbering styles.</p>
+		
+		<aside class="box note">
+			<p>You can add a page number field to a single page or both facing pages of a spread&mdash;or any pages you wish in a multi-page spread.</p>
+		</aside>
+		
+		<p>Page numbers are inserted as fields (via the <span class="ui">Fields</span> panel or <span class="ui">Text&gt;Insert&gt;Fields&gt;Page Number</span>), which dynamically update.</p>
+
+		<p>To suppress page numbering on initial sections of a publication (e.g. Contents or Preface), don&apos;t assign a master page that contains page number fields to their pages.</p> 
+		
+		<h2>Naming pages</h2>
+		<p>Names that identify a page&apos;s place in a publication are inserted as fields. At their simplest, you might use a field that displays the section name to which a page belongs. You can specify section names for page ranges in the <span class="ui">Section Manager</span>.</p>
+		
+		<p>Alternatively, you can use a <span class="term">running header</span>, which displays text that appears on the same or an earlier page and which is formatted with a specific paragraph or character style. A running header&apos;s text &apos;runs&apos; for multiple pages&mdash;i.e. does not change&mdash;until another application of the text style is encountered.</p>
+		
+		<p>The following source options are available to specify the source of a running header&apos;s text:</p>
+		<ul>
+			<li><span class="ui">Style</span>&mdash;specify the text style applied to the document text you want the field to display.</li>
+			<li><span class="ui">Use</span>&mdash;when the text style is applied multiple times on a page, specify whether the running header displays the text of the <span class="ui">First on page</span> or the <span class="ui">Last on page</span>.</li>
+		</ul>
+		
+		<aside class="box note">
+			<p>When a running header is set to <span class="ui">Last on page</span>, the field will not display a value on pages that do not contain any text formatted using the field&apos;s designated text style.</p>
+		</aside>
+		
+		<h3>Formatting a running header</h3>
+		<p>The <span class="ui">Running Header</span> field&apos;s formatting options allow you to limit the amount of text displayed by the field. This might be due to the source text being too long to display in full, or for other aesthetic reasons.</p>
+		
+		<p>Running headers can transform their text&apos;s capitalization, or to simply repeat their source&apos;s capitalization.</p>
+		
+		<p>The following formatting options are available for running headers:</p>
+		<ul>
+			<li><span class="ui">Include Paragraph Numbering</span>&mdash;when the text style is applied to numbered lists, turn on to include list item numbers in the running header or turn off to exclude them.</li>
+			<li><span class="ui">Apply Limits</span>&mdash;turn on to make the following options available to limit the running header&apos;s length:<ul>
+					<li><span class="ui">End on</span>&mdash;specify which characters will automatically end the running header, if the text style is also applied immediately after them.</li>
+					<li><span class="ui">Include End Character</span>&mdash;specify whether to include or exclude the terminating end character in the running header.</li>
+					<li><span class="ui">Max Word Count</span>&mdash;specify the maximum number of words to be displayed by the running header.</li>
+					<li><span class="ui">Use Ellipsis</span>&mdash;specify whether an ellipsis should be displayed at the end of a running header whose length has been limited.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Case Change</span>&mdash;specify the text transformation to apply to the displayed text: <span class="ui">None</span>, <span class="ui">Upper</span>, <span class="ui">Lower</span>, <span class="ui">Title</span> or <span class="ui">Sentence</span>.</li>
+		</ul>		
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To add page numbering or naming:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, double-click a master page on the <span class="ui">Master Pages</span> window.</li>
+				<li>On the master page, create a text frame to contain your page number/name field and optionally extra header/footer text.</li>
+				<li>On the <span class="ui">Fields</span> panel, in the <span class="ui">Document Sections</span> group, do one of the following:<ul>
+						<li>To add page numbering, double-click <span class="ui">Page Number</span>.</li>
+						<li>To add page naming based on section names, double-click <span class="ui">Name</span>.</li>
+						<li>To add page naming based on an applied text style, double-click <span class="ui">Running Header</span>.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<p>On the master page, page numbers are represented by the hash symbol (#) and page naming is represented by placeholder text: <i>&lt;Section Name&gt;</i> or <i>&lt;Running Header&gt;</i>. These will be replaced by actual numbers and names on publication pages to which the master page is applied.</p>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/section_manager.png" class="tool heading" width="16" height="16" alt="Section Manager" /> To change a section&apos;s page numbering style:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, select <span class="ui">Section Manager</span>.</li>
+				<li>On the <span class="ui">Number style</span> pop-up menu, choose from various standard numbering schemes such as Arabic numerals (1, 2, 3), upper/lowercase Roman (I, II, III, i, ii, iii), alphabetic letters (A, B, C, a, b, c) and more.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To change a running header&apos;s source and formatting options:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>Before adding the running header to a page, on the <span class="ui">Fields</span> panel&apos;s <span class="ui">Document Sections</span> group, click <span class="ui">Default format</span> next to <span class="ui">Running Header</span>.</li>
+				<li><img src="../../../shared/ui/DefaultFormat.png" class="tool" width="18" height="18" alt="More" /> After adding the running header to a page, <span class="CLICK-TAG"></span>-click the field in document text and select <span class="ui">Edit Field</span>.</li>
+			</ul>
+		</details>
+	</section>
+
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="masterPages.html">About master pages</a></li>
+			<li><a href="../Text/frameText.html">Frame text</a></li>
+			<li><a href="../Advanced/fields.html">Fields</a></li>
+			<li><a href="addingSections.html">Adding sections</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

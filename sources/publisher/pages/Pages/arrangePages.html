@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="organise, order, organise, pagination" />
+	<meta name="description" content="How to reorder a document's publication pages via the Pages panel." />
+	<title>Arrange pages</title>
+</head>
+
+<body>
+
+	<header>
+		<h1>Arrange pages</h1>
+
+		<p>A document&apos;s publication pages can be arranged (moved) on the Pages panel.</p>
+	</header>
+
+	<section class="about">
+		<figure class="nft">
+			<p><img src="../../images/panel_pages.png" class="responsive panel" width="200" alt="Pages panel" /></p>
+			<figcaption></figcaption>
+		</figure>
+
+		<p>Pages can be arranged using drag and drop, which is ideal when the destination is near the pages&apos; current position.</p>
+
+		<p>Moving pages further is more easily done by specifying the destination on a dialog.</p>
+
+		<h2>Arranging pages using drag and drop</h2>
+		
+		<p>When dragging page thumbnails:<ul>
+			<li>A blue insertion point indicates the where the pages will be positioned if dropped.</li>
+			<li>The cursor indicates whether pages will be inserted as new spreads or extend the targeted spread and position.</li>
+		</ul>
+
+		<p>Available positions vary according to whether <span class="ui">Reflow Pages</span> (on the Pages panel&apos;s preferences menu) is enabled or disabled.</p>
+
+		<p>When Reflow Pages is enabled, pages will reflow starting at whichever is earliest&mdash;either the first page in the selection or the position where you drop&mdash;through to the end of your document.</p>
+
+		<p>When Reflow Pages is disabled, pages will not automatically reflow. This may result in &apos;ghost&apos; pages.</p>
+
+	</section>
+	
+	<section class="howto">		
+		<details open="open">
+			<summary>To move pages (using drag and drop):</summary>
+			<p>On the <span class="ui">Pages</span> panel:</p>
+			<ol>
+				<li>Drag one or more publication pages or a master page.</li>
+				<li>Hover where you want to move the pages and drop when the cursor indicates the required action will be performed.</li>
+			</ol>
+					
+			<aside class="box note">
+				<p>When arranging master pages, be careful not to drop one master onto another, which will apply the former to the latter.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary>To move publication pages (via dialog):</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel:<ol class="nested">
+						<li>Select one or more publication pages<sup>1</sup>.</li>
+						<li><span class="key CLICK-TAG"></span>-click one of the selected pages and select <span class="ui">Move/Copy Pages</span>.</li>
+					</ol>
+				</li>
+				<li>On the dialog that appears:<ol class="nested">
+						<li>Specify the destination <span class="ui">Page</span> number, and whether to insert the selection <span class="ui">Before</span> or <span class="ui">After</span> it.</li>
+						<li>Select <span class="ui">Move</span>.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+
+			<p><sup>1</sup> Alternatively, you can specify the pages later, by typing their numbers on the dialog.</p>
+		</details>
+	</section>
+ 
+ 	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="addDeletePages.html">Add and remove pages</a></li>
+			<li><a href="copyDuplicatePages.html">Copy and duplicate pages</a></li>
+			<li><a href="masterPages.html">About master pages</a></li>
+			<li><a href="../Panels/pagesPanel.html">Pages panel</a></li>
+			<li><a href="ghostPages.html">About ghost pages</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=pageControl">Keyboard shortcuts for page control</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

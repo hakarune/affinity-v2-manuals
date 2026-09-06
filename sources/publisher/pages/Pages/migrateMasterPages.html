@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pages, master, migrating, smart" />
+	<meta name="description" content="Migrate master page content when replacing master pages with a new master page." />
+	<title>Migrating edited master page content</title>
+</head>
+
+<body>
+	<header>
+		<h1>Migrating edited master page content</h1>
+
+		<p>If you&apos;ve added content to text or picture frames that are master page objects, this edited content will be migrated by default when replacing your master page(s) with a new master page.</p>
+	</header>
+
+	<section class="about">
+		<p>These master pages are considered &apos;smart&apos; as they allow you to retain valuable copy when replacing master pages&mdash;for example, in the case of an underlying creative master page rework that should not affect content.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/masterpages_migrate.jpg" class="screenshot responsive" alt="Migrate master pages" /></div>
+			<figcaption>Top: Master page with placeholder content<br />Bottom Left: Publication page showing edited master page frame content (turquoise) and static master page content (dark gray)<br />Bottom right: New master page&apos;s objects (blue) have replaced old master page objects (gray); edited master page frame content is migrated and retained (red).</figcaption>
+		</figure>
+
+		<p>Smart master page layouts affect where and how images and text are arranged on a page or spread. Master page objects can be arranged to fit a new layout when master page content is migrated, as shown below.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/smartmaster_before.png" alt="Before migration" /><div><img src="../../../shared/smartmaster_after.png" alt="After migration" /></div>
+			</div>
+			<figcaption>Master page layouts (shown above) can completely change how master page content (shown below) is arranged on migration, allowing you to easily revamp the look of your pages and spreads while retaining all of your valuable content.</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>Empty or unedited master page frames will not be migrated.</p>
+		</aside>
+
+		<h2>How content is migrated</h2>
+		<p>When a new master page replaces an already applied master page, and content has been added to picture frames and text frames inherited from the existing master, Affinity determines the best destination for each piece of content according to the following rules.</p>
+		<ul>
+			<li>To determine the best match between frames, it considers these attributes in order:<ul>
+					<li>A frame from the same master. (This happens if you have nested masters.)</li>
+					<li>A frame whose layer has the same name.</li>
+					<li>The frame that is closest in size and position.</li>
+				</ul>
+			</li>
+			<li>It ignores frames whose layers are locked or have a parent layer that is locked. So, if you have fixed text in a logo or footer, it&apos;s recommended to lock the corresponding layers to prevent them being considered.</li>
+			<li>It also skips pairings where both frames&apos; layers are named but the names don&apos;t match.</li>
+			<li>If there aren&apos;t enough frames on the new master to transfer everything, any frames from the old master that can&apos;t be matched are converted to page content.</li>
+		</ul>
+
+		<h2>Page Move Options for Masters</h2>
+
+		<p>When performing an action that will move pages, you can choose one of several options to determine how applied master pages and content migration are affected.</p>
+
+		<p>For example, you might insert a new single page into a document with facing pages, causing later left pages to become right pages and vice versa.</p>
+
+		<aside class="box warning">
+			<p>Some edits you perform will affect all pages after the pages being moved. You can avoid unwanted consequences, such as losing detached edits, by disabling <span class="ui">Reflow Pages</span>.</p>
+		</aside>
+
+		<p>The relevant options are on the Pages panel&apos;s preferences menu, under <span class="ui">Page Move Options</span>:</p>
+
+		<h3>Split Masters</h3>
+
+		<p>Any publication page that is moved retains the specific page of its master for its previous position within a spread.</p>
+
+		<p>For example, a left page that becomes a right page will continue to have its master&apos;s left page applied to it, and vice versa.</p>
+
+		<p>This option is helpful when you will be performing several actions that may temporarily result in pages changing position within spreads.</p>
+
+		<h3>Move Master Content</h3>
+
+		<p>Any publication page that is moved has the page of its master for its new position within a spread applied to it.</p>
+
+		<p>Affinity will try to preserve content but you may end up with clashes, such as when you have detached the master to make local edits to an object&apos;s attributes.</p>
+
+		<p>Inherited objects which were modified, e.g. a frame that has been populated, along with content not from the master are moved with the page. Inherited objects which weren&apos;t modified are replaced with the &apos;correct&apos; master page content for the spread page they end up on.</p>
+
+		<p>For example, after a page is moved, it may contain a copy of an inherited text frame with content that was edited at the page&apos;s previous position, and a copy of the unmodified text frame from its applied master. In such situations, you&apos;ll need to manually remove the one you don&apos;t want.</p>
+
+		<p>This option matches Affinity&apos;s behavior in old versions.</p>
+
+		<h3>Reapply Masters</h3>
+
+		<p>Any publication page that is moved has the master page that corresponds to its new position within a spread applied to it.</p>
+
+		<p>Local edits to text and framed pictures are always retained but edits to object attributes, such as strokes, may be lost.</p>
+
+		<p>This option works best with masters that contain alternative layouts for the same content on each of their pages.</p>
+
+		<h3>Anchor Toward Spine</h3>
+		<p>This complementary option controls the positioning of objects when a page moves from one side of the spine to the other. The option is located alongside the migration behaviors on the Page Move Options menu.</p>
+
+		<p>When enabled, objects maintain their distance from the spine. When disabled, objects maintain their absolute position on the page.</p>
+
+		<aside class="box tip">
+			<p>If margins are symmetrical about the spine but different for Inner and Outer, Anchor Towards Spine is likely to keep things glued to the margins.</p>
+
+			<p>If objects aligned to an outer page edge unexpectedly move to align to the opposite edge, pin the object to maintain the required alignment.</p><!-- Figure of example of poor result. --></aside>	
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To select a master migration behavior:</summary>
+			<ol>
+				<li>On the Pages panel&apos;s preferences menu, hover over <span class="ui">Page Move Options</span>.<li>On the menu that appears, choose options that best fit your needs, based on the page operation you will perform and your document content:<ul>
+						<li>Select the required master migration behavior: <span class="ui">Split Masters</span>, <span class="ui">Move Master Content</span>, or <span class="ui">Reapply Masters</span>.</li>
+						<li>(Optional but recommended) Disable <span class="ui">Reflow Pages</span> to protect spreads, such as to prevent the loss of any detached edits you&apos;ve made to applied masters.</li>
+						<li>(Optional) If the page operation you perform will cause objects to move to the other side of the spine, enable <span class="ui">Anchor Toward Spine</span> to maintain their distance from the spine, or disable it to maintain their absolute positions.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To migrate frame contents when replacing masters:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, <span class="key CLICK-TAG"></span>-click a publication page and choose <span class="ui">Apply Master</span>.</li>
+				<li>On the dialog that appears:<ol class="nested">
+						<li>Select the master page to apply and the pages to apply it to.</li>
+						<li>Enable <span class="ui">Replace Existing</span>.</li>
+						<li>Set <span class="ui">Content</span> to <span class="ui">Migrate</span>.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+
+			<aside class="box note">
+				<p>Drag and drop of a replacement master page will always migrate edited frame content if present.</p>
+			</aside>
+
+			<aside class="box note">
+				<p>For frames of the same type that will overlap, the position and size of the new master page frames are used, but the edited frame content is retained and will populate these new frames.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary>To prevent migration when replacing masters:</summary>
+				<ol>
+					<li>On the <span class="ui">Pages</span> panel, <span class="key CLICK-TAG"></span>-click a publication page and select <span class="ui">Apply Master</span>.</li>
+					<li>On the dialog that appears:<ol class="nested">
+							<li>Select the master page to apply and the pages to apply it to.</li>
+							<li>Enable <span class="ui">Replace Existing</span>.</li>
+							<li>Set <span class="ui">Content</span> to <span class="ui">Clear</span>.</li>
+							<li>Select <span class="ui">OK</span>.</li>
+						</ol>
+					</li>
+				</ol>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="masterPages.html">About master pages</a></li>
+			<li><a href="applyMasterPages.html">Applying master pages</a></li>
+			<li><a href="detachLinkMasterPages.html">Detaching and linking master pages</a></li>
+			<li><a href="../Panels/pagesPanel.html">Pages panel</a></li>
+			<li><a href="../Layers/manageLayers.html">Locking layers</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

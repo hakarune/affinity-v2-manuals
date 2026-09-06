@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="data merge, barcode" />
+	<meta name="description" content="QR codes can be easily created to allow viewers of your output to visit websites, send text messages, view a geolocation and more." />
+	<title>QR codes</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Draw QR codes</h1>
+	
+		<p>Affinity allows you to draw a square shape in which it will generate a QR code using data you specify via the context toolbar.</p>
+
+	</header>
+
+	<section class="about">	
+		<figure>
+			<div class="single"><img src="../../../shared/qrCode.png" class="responsive" width="220" alt="Example QR code" /></div>
+			<figcaption>An example QR code that links to a website.</figcaption>
+		</figure>
+		
+		<p>When setting a QR code&apos;s data, you can select from several common data types. Available settings depend on the selected type.</p>
+		
+		<ul>
+			<li><span class="ui">Text</span>&mdash;for encoding any text you wish, especially if it doesn&apos;t fall into one of the other types.</li>
+			<li><span class="ui">URL</span>&mdash;for visiting a resource, usually online, such as a web page, a downloadable file, or an FTP site.</li>
+			<li><span class="ui">Phone</span>&mdash;for making an audio call to a suitable telephone number.</li>
+			<li><span class="ui">SMS</span>&mdash;for sending a single-line or multiline text message to a telephone number.</li>
+			<li><span class="ui">Email</span>&mdash;for sending a message to a specified recipient, optionally with a default subject and body.</li>
+			<li><span class="ui">WhatsApp</span>&mdash;for sending a message to a user of Meta&apos;s instant messaging service.</li>
+			<li><span class="ui">FaceTime</span>&mdash;for making a video or audio call to a user of Apple&apos;s communication service.</li>
+			<li><span class="ui">Location</span>&mdash;for looking up a physical location using its longitude, latitude and elevation.</li>
+			<li><span class="ui">Wi-Fi</span>&mdash;for joining a wireless network using provided credentials, e.g. network name, encryption type and password.</li>
+			<li><span class="ui">vCard</span>&mdash;for sharing contact information as an electronic business card.</li>
+			<li><span class="ui">Data Merge</span>&mdash;for generating a QR code using a field of a data merge source you&apos;ve already added to your Affinity document. Use in conjunction with <span class="ui">Data Merge Manager</span> and the <span class="ui">Data Merge Layout Tool</span>.</li>
+		</ul>
+		
+		<p>The Text data type can be used to encode freeform information. For example, it can be used to generate QR codes for:</p>
+		<ul>
+			<li>sharing calendar events as vCal (.vcal) and iCalendar (.ics) data.</li>
+			<li>making calls with other communication services, such as Skype and Zoom.</li>
+			<li>deep-linking to content in a mobile app using the app&apos;s custom URL scheme.</li>
+		</ul>
+		
+		<h2>Data validation</h2>
+		
+		<p>Each data type requires you to provide one or more values.</p>
+		
+		<p>When a value is required and empty or is otherwise invalid, Affinity displays an alert icon <img src="../../../shared/ui/preflightWarning.png" width="16" height="16" alt="Validation error" /> next to it. Hover the pointer over the icon for an explanation of what is considered to be valid.</p>
+		
+		<p>Some values are optional. For example, you do not need to provide a message body for an email.</p>
+		
+		<p>When using the Text data type, you will need to validate the data manually.</p>
+		
+		<h2>QR code legibility</h2>
+		<p>QR codes are constructed from small, square blocks called <span class="term">modules</span>. Affinity automatically determines the appropriate module size based on data length and content. A QR code can consist of anything from 21 by 21 modules up to 177 by 177 modules.</p>
+		
+		<p>QR codes are usually printed in black and white. In Affinity, the color of modules that are usually printed black can be changed using the <span class="ui">Fill</span> setting on the context toolbar.</p>
+		
+		<p>Modules that are usually printed white are transparent. If this results in background elements of your design showing through the QR code, consider creating a rectangle behind the QR code to ensure the code can be scanned. QR codes also require a margin on all sides in which nothing is printed.</p>
+		
+		<p>For further advice on QR code presentation, including the use of color and the code area and margin, see the <a href="https://www.qrcode.com/en/faq.html" target="_blank">FAQ at the technology&apos;s official website.</a></p>
+	</section>
+
+	<details open="open">
+		<summary><img src="../../../shared/ui/qr_shape_tool.png" class="tool" width="18" height="18" alt="QR Code Tool" /> To create a QR code:</summary>
+		<ol>
+			<li>On the shape tools flyout, select the <span class="ui">QR Code Tool</span>.</li>
+			<li>In the document view, drag on the page to set the required size of the QR code.</li>
+			<li>On the context toolbar, select the <span class="ui">Data</span> setting. On the dialog that appears:<ol class="alphabetical">
+					<li>Select the <span class="ui">Type</span> of data for which to generate a QR code.</li>
+					<li>(Optional) Select <span class="ui">Clear</span> to remove any and all prepopulated information.</li> 
+					<li>Set all required information to a valid value.</li>
+					<li>(Optional) Set additional information as needed.</li>
+				</ol>
+			</li>
+			<li>Select <span class="ui">OK</span>.</li>
+		</ol>
+			
+		<p>The QR code automatically regenerates as you change its data.</p>
+		
+		<aside class="box tip">
+			<p>When creating a QR code for a URL, select <span class="ui">Visit Target URL</span> to the right of the URL to verify the target is correct.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>A QR code&apos;s data can be modified at any time by using the QR Code Tool to select the code and then clicking the Data setting on the context toolbar.</p>
+		</aside>
+	</details>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_qrCode.html">QR Code Tool</a></li>
+			<li><a href="../Tools/tools_dataMergeNode.html">Data Merge Layout Tool</a></li>
+			<li><a href="../Advanced/dataMerge.html">Data merge</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

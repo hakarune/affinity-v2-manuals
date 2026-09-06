@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="footnotes, sidenotes, endnotes, reference, note body, serialisation, serialise, series, navigate" />
+	<meta name="description" content="Insert footnotes and endnotes into your Affinity Publisher documents" />
+	<title>Inserting notes</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Inserting notes</h1>
+		<p>Footnotes, sidenotes and endnotes are inserted into documents using the <span class="ui">Notes</span> panel.</p>
+		
+		<p>Upon inserting a note:</p>
+		
+		<ol>
+			<li>A reference is added at the insertion point.</li>
+			<li>Space for a note body is allocated at an appropriate position for the note&apos;s type.</li>
+			<li>The insertion point is moved to the note body&apos;s position so you can enter text.</li>
+		</ol>
+
+	</header>
+
+	<section class="about">
+		<h2>Note order and serialization</h2>
+		<p>Affinity Publisher automatically determines which reference is used to label a note, based on its position relative to other notes of the same type.</p>
+		
+		<p>The correct serialization is maintained when new notes are inserted, or existing notes are moved or deleted.</p>
+		
+		<p>For example, inserting an endnote between endnotes labeled 3 and 4 will result in the references of endnotes 4 and higher to be incremented by 1, and the new endnote&apos;s reference will be 4.</p>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/note_insert.png" class="tool" width="16" height="16" alt="Insert Note" /> To insert a footnote, sidenote or endnote:</summary>
+			<ol>
+				<li>Position the insertion point where you want the note&apos;s reference to be.</li>
+				<li>On the <span class="ui">Notes</span> panel, select the required type: <span class="ui">Footnotes</span>, <span class="ui">Sidenotes</span> or <span class="ui">Endnotes</span>.</li>
+				<li>Click <span class="ui">Insert Note</span>. The document view will refocus on the newly created note body.</li>
+				<li>Type the note body&apos;s text.</li>
+			</ol>
+			
+			<aside class="box tip">
+				<p>Inserting a note when a range of text is selected causes the note&apos;s reference to be positioned after the selection&apos;s last character.</p>
+			</aside>
+		</details>
+	
+		<details open="open">
+			<summary>To delete a footnote, sidenote or endnote:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>Position the insertion point after the note&apos;s reference in story text.</li>
+						<li>Select the note&apos;s reference.</li>
+					</ul>
+				</li>
+				<li>Press the <span class="key BACKSPACE-TAG"></span> <span class="KEY-TAG"></span> to delete the reference and corresponding note body.</li>
+			</ol>
+		</details>
+		
+		<aside class="box tip">
+			<p>Alternatively, for endnotes whose bodies are in a different text frame than their story text, delete the page(s) that contain the endnote bodies to delete them and their corresponding references.</p>
+		</aside>
+
+	</section>
+	
+	<section class="about">
+		<h2>Navigating notes</h2>
+		<p>The Notes panel allows you to instantly refocus the document view from a note&apos;s reference to its corresponding body, or vice versa.</p>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/note_go_body.png" class="tool" width="16" height="16" alt="Go to Body" /> To move from a note&apos;s reference to its body:</summary>
+			<ol>
+				<li>In the story text, position the insertion point next to the reference or make a text selection that includes the reference.</li>
+				<li>On the <span class="ui">Notes</span> panel, click <span class="ui">Go to Body</span>.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>If a text selection encompasses multiple references, clicking <span class="ui">Go to Body</span> will refocus the document view on the first one&apos;s note body.</p>
+			</aside>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/note_go_ref.png" class="tool" width="16" height="16" alt="Go to Reference" /> To move from a note&apos;s body to its reference:</summary>
+			<ol>
+				<li>Position the insertion point or make a text selection within the note body.</li>
+				<li>On the <span class="ui">Notes</span> panel, click <span class="ui">Go to Reference</span>.</li>
+			</ol>
+		</details>
+	</section>
+		
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="aboutNotes.html">About notes</a></li>
+			<li><a href="stylingNotes.html">Styling notes</a></li>
+			<li><a href="hyperlinkingNotes.html">Hyperlinking notes</a></li>
+			<li><a href="../Panels/notesPanel.html">Notes panel</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

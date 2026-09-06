@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="adjustment, lut, look-up table, .cube, .csp, .3dl, .look, grading" />
+	<meta name="description" content="The LUT adjustment allows you to emulate image colours used in a variety of media platforms." />
+	<title>LUT adjustment</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1>LUT adjustment</h1>
+
+		<p>The LUT adjustment allows you to emulate image colors used in a variety of media platforms.</p>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/adjustment_lut_before.jpg" alt="Before" /><div><img src="../../../shared/adjustment_lut_after.jpg" alt="After" /></div>
+			</div>
+		</figure>
+
+	</header>
+
+	<section class="about">
+
+		<p>A LUT (look-up table) remaps pixel color values based on a defined XYZ matrix. This allows you to quickly replicate the appearance of various types of media, such as reproducing the cold, blue tone attributed to science fiction and horror movies.</p>
+
+		<p>The look up table is stored within a file previously exported from Affinity Photo 2 or other apps (e.g., video packages). Alternatively, it can be inferred by comparing images.</p>
+		
+		<p><img src="../../../shared/ui/adjustmentLayerIcon.png" width="16" height="16" alt="Adjustment" /> Apply this adjustment via the <span class="ui">Adjustment</span> button on the <span class="ui">Layers</span> panel or via <span class="ui">Layer</span> &gt; <span class="ui">New Adjustment</span>.</p>
+
+	</section>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted in the dialog:</p>
+		<ul>
+			<li><span class="ui">Load LUT</span>&mdash;sets the LUT file which gets applied to the document. In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+			<li><span class="ui">Infer LUT</span>&mdash; Applies a LUT adjustment without the need of a separate LUT file by comparing a &apos;source&apos; image and its adjusted exported image. With a new &apos;target&apos; image loaded, click <span class="ui">Infer LUT</span>, then in the pop-up dialog, navigate to and select both source and adjusted files in turn, and click <span class="ui">Open</span>.</li>
+		</ul>
+
+		<aside class="box note">
+			<p>The following types of LUT files are available: <span class="ui">*.3dl</span>, <span class="ui">*.csp</span>, <span class="ui">*.cube</span>, and <span class="ui">*.look</span>.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="adjustment_applying.html">Applying adjustments</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

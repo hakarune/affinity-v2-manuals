@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pin, unpin, pinning, anchor, anchoring, anchored, float, inline" />
+	<meta name="description" content="Use pinning to float an object or add it inline with text." />
+	<title>Pinning</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Pinning objects</h1>
+		<p>If you&apos;re working with text frames, it&rsquo;s likely that you might add shapes, images, tables or other text frames in support of your main publication text (either artistic or frame text). These objects can be either <em>floated</em> in relation to a pinned position in your text (or other page element) or be simply placed <em>inline</em> in your text. In either instance, objects can then move with the text as you add further text content or move the text frame itself.</p>
+		
+		<figure>
+			<div class="comparison"><img src="../../../shared/pinning-float-before.jpg" alt="Before" /><div><img src="../../../shared/pinning-float-after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Floating an image that is pinned to text. The image moves as frame text reflows.</figcaption>
+		</figure>
+
+		<figure>
+			<div class="comparison"><img src="../../../shared/pinning-inline-before.jpg" alt="Before" /><div><img src="../../../shared/pinning-inline-after.jpg" alt="After" /></div>
+			</div>
+			<figcaption>Inserting an image inline into heading text.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+	
+		<h2>About pinning</h2>
+		
+		<p>Pinning is possible by using two different options:</p>
+
+			<ul>
+				<li><span class="ui">Float With Text</span>&mdash;the object is positioned horizontally and vertically relative to a pin that is automatically inserted into the nearest text to it. This option is ideal for pictures, tables and pulled quotes that need to flow with the text.</li>
+				<li><span class="ui">Inline In Text</span>&mdash;the object is placed as (and behaves like) a character in the text and is aligned in relation to the text that surrounds it. It flows with the text as before.</li>
+			</ul>
+
+		<p>Floating objects can be pinned to anywhere in your publication text, but the floated object can be positioned in relation to indented text, column, frame, page margin, page edge, or most typically the pin in a text frame.</p>
+		
+		<p>Frame text can <a href="../Text/wrapText.html">wrap</a> around floating pinned objects that overlap the text frame. Conversely, inline anchored objects do not allow text wrapping.</p>
+
+		<p>For text frames, when the frame text reflows with new content, the pin (and therefore pinned object) moves with the text.</p>
+		
+		<p>Basic pinning is possible via the Toolbar but for full control and fine positioning of pinned objects, you can switch on the <span class="ui">Pinning</span> panel.</p>
+		
+		<aside class="box note">
+			<p>Icons in the <span class="ui">Layers</span> panel indicate whether the pinned object is floating <img src="../../../shared/ui/attach_to_story_float.png" class="tool" width="12" height="12" alt="Floating object">or inline <img src="../../../shared/ui/inline_object.png" class="tool" width="12" height="12" alt="Inline object">.</p>
+		</aside>
+		
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To switch on the Pinning panel:</summary>
+			<ul>
+				<li>From the <span class="ui">Window</span> menu, select <span class="ui">Text&gt;Pinning</span>.</li>
+			</ul>
+
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/attach_to_story_float.png" class="tool" width="18" height="18" alt="Float with Text" /> To create a floating object pinned to text:</summary>
+			<ol>
+				<li>Select and position your unpinned object on the page.</li>
+				<li>Do one of the following:<ul>
+						<li>From the Toolbar, enable <span class="ui">Float With Text</span>.</li>
+						<li>From the <span class="ui">Pinning</span> panel, select <span class="ui">Float With Text</span>.</li>
+					</ul>
+				</li>
+			</ol>
+			
+			<p><img src="../../../shared/ui/pin.png" width="24" height="24" alt="Pin" /> By default, the object is pinned to any artistic or frame text nearest to it as indicated by a <em>pin</em>. You can reposition the object by dragging to anywhere on the page and the linkage will be maintained. Equally, you can fine-tune the position of the pin by dragging it to a new location, e.g. to the start of a paragraph where the image is referenced or to a completely new text frame.</p>
+
+		</details>
+		
+		<details open="open">
+			<summary>To adjust the floating object&apos;s position:</summary>
+			<ul>
+				<li>From the <span class="ui">Pinning</span> panel, modify settings to fit your requirements:<ul>
+						<li>Use <span class="ui">Horizontal/Vertical align</span> options to position the object.</li>
+						<li>Set the above alignment in relation to an <span class="ui">Of</span> page element.</li>
+						<li>For absolute positioning, fine-tune the <span class="ui">Offset</span> values.</li>
+					</ul>
+				</li>	
+			</ul>
+
+		</details>		
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/attach_to_story_inline.png" class="tool" width="18" height="18" alt="Inline in Text" /> To insert an object inline in text:</summary>
+			<ol>
+				<li>Select your unpinned object on the page.</li>
+				<li>Do one of the following:<ul>
+						<li>From the Toolbar, enable <span class="ui">Inline In Text</span>.</li>
+						<li>From the <span class="ui">Pinning</span> panel, select <span class="ui">Inline In Text</span>.</li>
+					</ul>
+				</li>
+			</ol>
+			
+		</details>
+
+		<details open="open">
+			<summary>To adjust the inline object&apos;s position:</summary>
+			<ul>
+				<li>From the <span class="ui">Pinning</span> panel, modify settings to fit your requirements:<ul>
+						<li>Use <span class="ui">Scale to</span> and <span class="ui">Scale</span> options to position the object in relation to text metrics.</li>
+						<li>Position the object vertically by placing on the baseline or descender <span class="ui">Base position</span>, optionally setting a &apos;nudging&apos; incremental <span class="ui">Offset</span>.</li>
+					</ul>
+				</li>	
+			</ul>
+
+		</details>
+		
+		<details open="open">
+			<summary>To unpin a floating or inline object:</summary>
+			<p>Do one of the following:</p>
+				<ul>
+					<li>From the Toolbar, disable <span class="ui">Float With Text</span> or <span class="ui">Inline In Text</span>.</li>
+					<li><img src="../../../shared/ui/attach_to_story_unpin.png" class="tool" width="16" height="16" alt="Unpin" /> From the <span class="ui">Pinning</span> panel, select <span class="ui">Unpin</span>.</li>	
+				</ul>
+
+		</details>		
+			
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/pinningPanel.html">Pinning panel</a></li>
+			<li><a href="../Workspace/toolbar.html">Toolbar</a></li>
+			<li><a href="../Text/wrapText.html">Text wrapping</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

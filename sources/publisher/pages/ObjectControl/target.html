@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="target, behind, inside, top" />
+	<meta name="description" content="Targeting allows you to decide the z-order, or nesting, of an object during creation." />
+	<title>Targeting objects</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Targeting objects</h1>
+		
+		<p>Targeting allows you to decide the z-order, or nesting, of an object during creation.</p>
+		
+	</header>
+
+	<section class="about">
+		
+		<h2>Default targeting behavior</h2>
+		<p>By default, drawn or placed objects are positioned:</p>
+		
+		<ul>
+			<li>Directly above the current selection.</li>
+			 <li>At the top of the layer, if there is no selection.</li>
+		</ul>
+		
+		<h2>Alternative targeting behaviors</h2>
+		<p>The default targeting behavior can be overridden so that objects are placed or drawn behind the selection, at the top of the layer (regardless of selection), or nested inside the selection.</p>
+		
+		<p>You can override the default behavior for only the next object that is created, or &apos;lock&apos; an alternative behavior so it&apos;s applied to new objects until you decide otherwise.</p>
+		
+		<aside class="box tip">
+			<p>After creation, you can reposition or nest objects using the <span class="ui">Layers</span> panel or the Order options on the Toolbar.</p>
+		</aside>
+		
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To change targeting behavior:</summary>
+			<ul>
+				<li>(Optional) If you wish to use the &apos;behind&apos; or &apos;at the top&apos; behavior on an ongoing basis, hold the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>.</li>
+				<li>On the Toolbar, select one of the following:<ul>
+						<li><img src="../../../shared/ui/insert_behind_selection.png" class="tool" width="18" height="18" alt="Insert behind the selection" /> <span class="ui">Insert behind the selection</span></li>
+						<li><span class="ui"><img src="../../../shared/ui/insert_top_of_layer.png" class="tool" width="18" height="18" alt="Insert at the top of the layer" /> Insert at the top of the layer</span></li>
+						<li><span class="ui"><img src="../../../shared/ui/insert_inside_selection.png" class="tool" width="18" height="18" alt="Insert inside the selection" /> Insert inside the selection</span></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<aside class="box note">
+				<p>To revert to default targeting, click the Toolbar button of the currently selected behavior.</p>
+			</aside>
+
+			<aside class="box note">
+				<p>Alternatively, you can access the default and alternative targeting behaviors on the <span class="ui">Layer</span> menu&apos;s <span class="ui">Insertion</span> submenu.</p>
+			</aside>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/layerClip.html">Layer clipping</a></li>
+			<li><a href="group.html">Grouping objects</a></li>
+			<li><a href="../Layers/manageLayers.html">Arrange/manage layers</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="order.html">Ordering objects</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

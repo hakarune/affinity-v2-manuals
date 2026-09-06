@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="crossreference, cross reference, cross-reference, format, character style, field, book, chapter" />
+	<meta name="description" content="Format individual fields within a cross-reference using character styles, limiting value length, and specifying characters to include in values." />
+	<title>Formatting cross-references</title>
+</head>
+
+<body>
+
+	<header>
+	
+		<h1>Formatting cross-references</h1>
+		
+		<p>A cross-reference&apos;s text adopts the formatting applied at its position in document text. The formatting can be overridden with your choice of character style, e.g. to add emphasis that distinguishes the cross-reference from other text. Additionally, you can limit the amount of text and which punctuation is displayed by a cross-reference&apos;s subfields.</p>
+		
+	</header>
+	
+	<section class="about">
+		<figure class="nft">
+			<div class="single"><img src="../../images/crossrefsInsert.png" width="474" alt="Formatting options on the Insert Cross-Reference dialog" /></div>
+			<figcaption>Formatting and other options on the Insert Cross-Reference dialog.</figcaption>
+		</figure>
+		
+		<p>The following formatting options are available when inserting or editing cross-references:</p>
+		<ul>
+			<li><span class="ui">Style override</span>&mdash;Select an existing character style to override formatting at the cross-reference&apos;s position in document text, or apply no override style. From this option, you can also create a new character style or edit the currently selected one.</li>
+			<li><span class="ui">For</span>&mdash;Select whether the <span class="ui">Style override</span> is applied to <i>Everything</i> (all of the cross-reference&apos;s text), <i>All Fields</i> within the text, or only <i>Text Fields</i> or <i>Number Fields</i>.</li>
+			<li><span class="ui">Limit subfields</span>&mdash;Check to use the following options to control the length and punctuation of subfield values. Uncheck to display subfield values in full.<ul>
+					<li><span class="ui">Max word count</span>&mdash;Enter the maximum number of words that each subfield will display, if an end character is not encountered sooner.</li>
+					<li><span class="ui">Add ellipsis</span>&mdash;Check to display an ellipsis (&hellip;) at the end of a subfield&apos;s text if it has been truncated because the maximum word count was reached. Uncheck to omit the ellipsis.</li>
+					<li><span class="ui">End characters</span>&mdash;Enter characters that, if any is encountered, will cause the subfield&apos;s text to be truncated, even if the maximum word count has not been reached.</li>
+					<li><span class="ui">Include end character</span>&mdash;Check to include an encountered end character at the end of the text. Uncheck to omit the character.</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<aside class="box note">
+			<p>The <span class="ui">Generate hyperlinks</span> option specifies whether a cross-reference&apos;s field, when the document is exported to an interactive file format such as PDF, can be clicked or tapped to take the reader to the cross-reference&apos;s target. It does not affect the formatting of cross-references.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p>Commonly used special characters can be added to <span class="ui">End characters</span> by clicking the downward-pointing arrow on this option.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p>To display text in full or until an end character is reached, set <span class="ui">Max word count</span> to 0.</p>
+		</aside>
+	</section>
+	
+	<section class="howto">
+		<details open="open">
+			<summary>To limit text displayed by arbitrary-length subfields:</summary>
+
+			<ol>
+				<li>Check <span class="ui">Limit subfields</span>.</li>
+				<li>Set <span class="ui">Max word count</span>, <span class="ui">Add ellipsis</span>, <span class="ui">End characters</span> and <span class="ui">Include end character</span> as required.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p><span class="ui">Limit subfields</span> is available only when a cross-reference&apos;s text contains a subfield whose value is of arbitrary length, i.e. <span class="ui">Section Name</span>, <span class="ui">Chapter Name</span>, <span class="ui">Object Description</span>, <span class="ui">Anchor Name</span>, or <span class="ui">Numbered Paragraph</span>.</p>
+			</aside>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="aboutCrossrefs.html">About cross-references</a></li>
+			<li><a href="settingCrossrefsTarget.html">Setting a cross-reference&apos;s target</a></li>
+			<li><a href="settingCrossrefsText.html">Setting a cross-reference&apos;s text</a></li>
+			<li><a href="updatingCrossrefs.html">Updating cross-references</a></li>
+			<li><a href="../Panels/crossrefsPanel.html">Cross-References panel</a></li>
+			<li><a href="aboutBooks.html">About books</a></li>
+			<li><a href="anchors.html">Anchors</a></li>
+			<li><a href="../Text/textStyles.html">Text styles</a></li>
+			<li><a href="../Publishing/preflight.html">Preflight</a></li>
+		</ul>
+	</section>
+	
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="gatefold, trifold, accordion, fold, z-fold, roll, cross, booklet, multi-page" />
+	<meta name="description" content="Create trifold and gatefold spreads and documents such as accordion-fold brochures." />
+	<title>Multiple-page spreads</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Multiple-page spreads</h1>
+	
+		<p>You can create spreads that contain more than two pages. This allows you to easily design trifold and gatefold spreads and documents such as accordion-fold brochures, for example.</p>
+
+	</header>
+
+	<section class="about">
+		<figure>
+			<div class="single"><img src="../../../shared/multipage_examples.jpg" class="responsive" alt="A photo of various kinds of multi-page document" /></div>
+			<figcaption></figcaption>
+		</figure>
+		
+		<p>Multi-page spreads can be created in two ways:</p>
+
+		<ul>
+			<li>As a master page, which can be used to create new publication pages with the same page count, page dimensions, and spine location as the master.</li>
+			<li>By extending an existing spread with new publication pages, either by:<ul>
+					<li>adding new pages at the required positions within the spread.</li>
+					<li>moving existing pages by disabling <span class="ui">Reflow Pages</span> and then dragging and dropping existing pages into the required positions.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<aside class="box tip">
+			<p>If you need a particular multi-page spread setup as the starting point for multiple documents, create an appropriate document and save it as a <a href="../GetStarted/templates.html">template</a>.</p>
+		</aside>
+
+		<h2>Creating a multi-page master</h2>
+
+		<p>Using master pages to create multi-page spreads is advised for the &apos;cleanest&apos; results.</p>
+
+		<p>For any spread you create from a master, Affinity knows how many pages the spread should contain. &apos;Ghost&apos; pages are displayed if the spread contains fewer pages than expected.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/add_master_dialog_multipage.png" class="responsive" width="512" alt="Adding a four-page master with spine located at its center." /></div>
+			<figcaption>Creating a four-page master with spine located at its center.</figcaption>
+		</figure>
+
+		<p>After creating a master, its spine location can&apos;t be edited.</p>
+
+		<p>If you&apos;re designing for the front and back of a multi-page spread with an off-center spine, create two masters with mirrored spine locations.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/spine_locations_front_back_sides.png" class="responsive" width="411" alt="" /></div>
+			<figcaption></figcaption>
+		</figure>
+
+		<h2>Extending an existing spread</h2>
+
+		<p>For quickness, existing spreads can be extended with new pages. You might prefer this over starting with a multi-page master if your document&apos;s pages will be only one multi-page spread. For example, when you&apos;re designing:</p>
+
+		<ul>
+			<li>A book&apos;s dust jacket.</li>
+			<li>A magazine cover with a front cover flap.</li>
+			<li>A publication containing just one gatefold spread, such as a magazine.</li>
+		</ul>
+
+		<figure>
+			<div class="single"><img src="../../../shared/add_pages_extend.png" class="responsive" width="450" alt="Extending an existing spread of publication pages" /></div>
+			<figcaption></figcaption>
+		</figure>
+
+		<h2>Changing individual pages&apos; dimensions</h2>
+
+		<p>Depending on the type of folding spread or document you&apos;re designing, you may need to edit the dimensions of certain pages.</p>
+
+		<p>In <span class="ui">Spread Properties</span>, you can select individual pages whose dimensions you wish to edit.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/spread_properties_selected_pages_resize.png" class="responsive" width="520" alt="Selectively resizing some of a spread&apos;s pages" /></div>
+			<figcaption></figcaption>
+		</figure>
+
+		<h2>Exporting and professional printing</h2>
+		<p>A press-ready PDF of a multi-page spread that is exported with <span class="ui">Include printers marks</span> and <span class="ui">Include crop marks</span> enabled will also include fold marks.</p>
+
+		<p>Before designing a multi-page spread&apos;s content, it is important to discuss your publication&apos;s requirements with your print provider.</p>
+
+		<p>For example, one panel of a trifold brochure needs to be narrower than the other two, but by how much depends on your chosen paper stock. Your print provider is best placed to provide the necessary advice.</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_master_pages.png" class="tool heading" width="16" height="16" alt="Add Master" /> To add a multi-page master:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, select <span class="ui">Add Master</span>.</li>
+				<li>On the dialog that appears:<ol class="nested">
+						<li>Set the master&apos;s <span class="ui">Page Count</span>.</li>
+						<li>Set the <span class="ui">Spine Location</span> by specifying a <span class="ui">Page</span> number and whether the spine should be located <span class="ui">Before</span> or <span class="ui">After</span> it.</li>
+						<li>Set other options as required.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To add a multi-page spread from a master (using drag and drop):</summary>
+			<p>On the <span class="ui">Pages</span> panel:</p>
+			<ol>
+				<li>Drag a master page from the <span class="ui">Master Pages</span> window.</li>
+				<li>Hover to the left or right of an existing spread in the <span class="ui">Pages</span> window and drop.</li>
+			</ol>
+
+			<p>A new spread with the same number of pages as the master is inserted, and the master is applied to all its pages.</p>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_pages.png" class="tool heading" width="16" height="16" alt="Add Pages" /> To add a new multi-page spread:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, select <span class="ui">Add Pages</span>.</li>
+				<li>On the dialog that appears:<ol class="nested">
+						<li>Set <span class="ui">Spread Wrapping</span> to <span class="ui">New Spread</span>.</li>
+						<li>Set the spread&apos;s <span class="ui">Number of Pages</span>.</li>
+						<li>Set the page number at which to insert the spread and whether to insert before or after it.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/add_pages.png" class="tool heading" width="16" height="16" alt="Add Pages" /> To extend a spread with new pages:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, select <span class="ui">Add Pages</span>.</li>
+				<li>On the dialog that appears:<ol class="nested">
+						<li>Set <span class="ui">Spread wrapping</span> to <span class="ui">Extend Spread</span>.</li>
+						<li>Set the <span class="ui">Number of Pages</span> to insert.</li>
+						<li>Set the <span class="ui">Page</span> at which to insert and whether to insert <span class="ui">Before</span> or <span class="ui">After</span> it.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+		</details>
+		
+		<details open="open">
+			<summary>To extend a spread by moving existing pages:</summary>
+			<p>On the <span class="ui">Pages</span> panel:</p>
+			<ol>
+				<li>On the panel&apos;s preferences menu, disable <span class="ui">Page Move Options&gt;Reflow Pages</span>.</li>
+				<li>Select the page(s) to use to extend an existing spread.</li>
+				<li>Drag and drop the selection to the required position in the destination spread.</li>
+			</ol>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="ghostPages.html">About ghost pages</a></li>
+			<li><a href="masterPages.html">About master pages</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

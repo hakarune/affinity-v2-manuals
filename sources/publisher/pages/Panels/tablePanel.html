@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="panels, table" />
+	<meta name="description" content="The Table panel adjusts the formatting of individual tables within your document." />
+	<title>Table panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Table panel</h1>
+	
+		<p>The <span class="ui">Table</span> panel allows you to adjust the formatting of individual tables within your document. Tables are created using the <span class="ui">Table Tool</span>.</p>
+
+	</header>
+
+	<section class="about">
+
+		<h2>About the Table panel</h2>
+		
+		<p>From the <span class="ui">Table</span> panel, you can set up the formatting of your table. The Frame section refers to the color and stroke of the whole table, while the Stroke and Fill section refers to only the selected cells.</p>
+
+		<aside class="box note">
+			<p>This panel is hidden by default. It can be switched on via <span class="ui">Window&gt;Table</span>.</p>
+		</aside>
+		
+		<figure>
+			<p><img src="../../images/panel_table.png" class="responsive" width="264" alt="Table panel" /></p>
+			<figcaption>The Table panel.</figcaption>
+		</figure>
+		
+	</section>
+	
+	<section class="settings">
+
+		<h3>Options</h3>
+
+		<p>The following panel options are available:</p>
+		
+		<details open="open">
+			<summary>Frame</summary>
+				<ul>
+					<li><span class="ui">Fill</span>&mdash;sets the fill color of the entire table.</li>
+					<li><span class="ui">Stroke Color</span>&mdash;sets the stroke color around the entire table.</li>
+					<li><span class="ui">Stroke Properties</span>&mdash;sets the stroke width and stroke style around the entire table.</li>
+					<li><span class="ui">Insets</span>&mdash;sets white space padding between table frame and table text.</li>
+					<li><img src="../../../shared/ui/chainlinkconnected.png" class="tool heading" width="12" height="24" alt="link" /> <img src="../../../shared/ui/chainlink.png" class="tool heading" width="12" height="24" alt="Unlink" /> <span class="ui">Link Insets</span>&mdash;when enabled, the inset values are adjusted in proportion to each other. When deselected, they can be adjusted independently.</li>
+					<li><span class="ui">Ignore Baseline Grid</span>&mdash;check to make the table ignore any currently set document baseline grid.</li>
+				</ul>
+		</details>
+
+		<details open="open">
+			<summary>Stroke and Fill</summary>
+				<ul>
+					<li><span class="ui">Fill</span>&mdash;sets the selected cell&apos;s fill color.</li>
+					<li><img src="../../../shared/ui/outside.png" class="tool" width="18" height="18" alt="outside"> <img src="../../../shared/ui/inside.png" class="tool" width="18" height="18" alt="inside"> <img src="../../../shared/ui/all.png" class="tool" width="18" height="18" alt="all"> <img src="../../../shared/ui/bottom.png" class="tool" width="18" height="18" alt="bottom"> <img src="../../../shared/ui/top.png" class="tool" width="18" height="18" alt="top"> <img src="../../../shared/ui/outsidehorizontal.png" class="tool" width="18" height="18" alt="outsidehorizontal"> <img src="../../../shared/ui/insidehorizontal.png" class="tool" width="18" height="18" alt="insidehorizontal"> <img src="../../../shared/ui/allhorizontal.png" class="tool" width="18" height="18" alt="allhorizontal"> <img src="../../../shared/ui/left.png" class="tool" width="18" height="18" alt="left"> <img src="../../../shared/ui/right.png" class="tool" width="18" height="18" alt="right"> <img src="../../../shared/ui/outsidevertical.png" class="tool" width="18" height="18" alt="outsidevertical"> <img src="../../../shared/ui/insidevertical.png" class="tool" width="18" height="18" alt="insidevertical"> <img src="../../../shared/ui/allvertical.png" class="tool" width="18" height="18" alt="allvertical"> <span class="ui">Border</span>&mdash;specify which cell border(s) you would like to format within the current selection.</li>
+					<li><span class="ui">Cell Stroke Color</span>&mdash;sets the stroke color for the selected cell(s).</li>
+					<li><span class="ui">Cell Stroke Properties</span>&mdash;sets stroke width and stroke style for the selected cell(s).</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>Cell</summary>
+				<ul>
+					<li><span class="ui">Width</span>&mdash;adjusts the selected cell&apos;s width.</li>
+					<li><span class="ui">Height</span>&mdash;adjusts the selected cell&apos;s height.</li>
+					<li><span class="ui">Insets</span>&mdash;sets white space padding between cell edge and text within each selected table cell.</li>
+					<li><img src="../../../shared/ui/chainlinkconnected.png" class="tool heading" width="12" height="24" alt="link" /> <img src="../../../shared/ui/chainlink.png" class="tool heading" width="12" height="24" alt="Unlink" /> Link&mdash;when enabled, the inset values are adjusted in proportion to each other. When deselected, they can be adjusted independently.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>Vertical Position</summary>
+				<ul>
+					<li><span class="ui">Top Align</span>&mdash;sets the cell text alignment to adhere to the top margin.</li>
+					<li><span class="ui">Center Align</span>&mdash;sets the cell text alignment to be equidistant from the top and bottom margins.</li>
+					<li><span class="ui">Bottom Align</span>&mdash;sets the cell text alignment to adhere to the bottom margin.</li>
+					<li><span class="ui">Justify</span>&mdash;sets the cell text alignment to both the top and bottom margins.</li>
+					<li><span class="ui">Initial Advance</span>&mdash;sets the vertical spacing between the top of the table cell and the first text line&apos;s baseline; the distance can be the currently set <span class="ui">Leading</span>, a <span class="ui">Fixed</span> value, the font&apos;s <span class="ui">Point size</span> or other typographic values. Use for consistent spacing on bordered tables, tables on colored backgrounds or for fine vertical alignment with other page elements.</li>
+					<li><span class="ui">Minimum</span>&mdash;sets a minimum threshold value for initial advance. The value is global, i.e. not tied to any specific Initial Advance setting.</li>
+				</ul>
+		</details>
+		
+		<details open="open">
+			<summary>Rotation</summary>
+				<ul>
+					<li><span class="ui">Rotate 0 degrees</span>&mdash;(default) leaves the selection unrotated. If a selection has previously been rotated, clicking this will revert it to an unrotated state.</li>
+					<li><span class="ui">Rotate 90 degrees</span>&mdash;rotates the selection 90° clockwise.</li>
+					<li><span class="ui">Rotate 180 degrees</span>&mdash;rotates the selection 180° clockwise.</li>
+					<li><span class="ui">Rotate 270 degrees</span>&mdash;rotates the selection 270° clockwise.</li>
+				</ul>
+		</details>
+		
+		<details>
+			<summary>Baseline Grid</summary>
+				<ul>
+					<li><span class="ui">Use Baseline Grid</span>&mdash;ticking this checkbox will enable the baseline grid.</li>
+					<li><span class="ui">Start Position</span>&mdash;specify the offset of the first grid line from the origin at <span class="ui">Relative To</span>.</li>
+					<li><span class="ui">Relative To</span>&mdash;specify what the baseline grid&apos;s starting position is in relation to. The Top of Page option is used for facing page spreads arranged vertically&mdash;you can restart the grid from the top of the second page in the spread.</li>
+					<li><span class="ui">Grid Spacing</span>&mdash;specify how far apart consecutive horizontal grid lines are.</li>
+					<li><span class="ui">Color</span>&mdash;click on the swatch to display a pop-up panel to set the line color. Drag the slider to set the opacity of the line color.</li>
+				</ul>
+		</details>
+		
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tables/createTables.html">Creating tables</a></li>
+			<li><a href="../Tables/editTables.html">Editing tables</a></li>
+			<li><a href="../Panels/tableFormatsPanel.html">Table Formats panel</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customizing the workspace</a></li>
+		</ul>
+	</section>
+
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

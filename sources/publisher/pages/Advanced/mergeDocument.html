@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="document, merge, pages, add pages, sections" />
+	<meta name="description" content="Merge entire documents, sections or selected pages." />
+	<title>Merge documents</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Merge documents</h1>
+	
+		<p>In Affinity Publisher, you can add a section, selected pages, or all pages of another Affinity Publisher document to your current document.</p>
+		
+	</header>
+		
+	<section class="about">		
+	
+		<figure>
+			<div class="single"><img src="../../images/addPagesFromFile.png" class="responsive" alt="Add Pages from File dialog" /></div>
+			<figcaption></figcaption>
+		</figure>
+	
+		<p>You can choose the position at which merged pages are added to your current document. For example, this is useful to add a cover that has been produced as a separate document.</p>
+		
+		<aside class="box note">
+			<p>Merge documents when you want to use one document&apos;s pages and/or text styles in another document. For larger projects where you need to collate and manage the development of several documents and output them as a single publication, use the <a href="aboutBooks.html">Books</a> feature.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>It is also possible to merge imported documents of different file types. For example, Affinity Designer (.afdesign), IDML and PDF files.</p>	
+		</aside>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To merge documents:</summary>
+			<ol>
+				<li>Do one of the following:<ul>
+						<li>From the <span class="ui">Document</span> menu, select <span class="ui">Add Pages from File</span>.</li>
+						<li>Right-click on a page from the <span class="ui">Pages</span> panel and select <span class="ui">Add Pages from File</span>. (Use this method to identify up front the position where you intend merged pages to be inserted.)</li>
+					</ul>
+				</li>
+			
+				<li>Browse to and select the file to merge into the current document, then click <span class="ui">Open</span>.</li>
+			
+				<li>On the <span class="ui">Add Pages from File</span> dialog, choose whether to add <span class="ui">All Pages</span>, selected <span class="ui">Page Numbers</span> or a named <span class="ui">Section</span>. (Sections need to be created in advance in the incoming document.)</li>
+			
+				<li>From <span class="ui">Add Pages</span>, select whether the merged pages/section will be added before or after a specific page/section in the current document, replace an existing section/pages, or be appended after the last page.</li>
+			
+				<li>If the merged pages are to be inserted or replaced, use <span class="ui">Pages or section</span> and the complementary setting below it to identify the required position in the current document.</li>
+			
+				<li>Check <span class="ui">Ignore Initial Section</span> to discard the first section &apos;marker&apos; from the incoming document. All documents have a section marker on their first page. When the pages being merged include the first page and this option is checked, this section marker is not added to your current document. This does not affect the merging of pages from the section.</li>
+
+				<li>Uncheck <span class="ui">Discard Unused Text Styles</span> if you want to carry over unused text styles from the incoming document. By default, unused text styles won&apos;t be merged into your current document.</li>
+
+				<li>Click <span class="ui">OK</span>.</li>
+			</ol>			
+		
+			<h2>Resolving conflicts</h2>
+			<p>An additional <span class="ui">Imported Text Styles</span> dialog may be presented for you to manage any new or matching incoming text styles.</p>
+			
+			<figure>
+				<div class="single"><img src="../../images/importedTextStyles.png" class="responsive" alt="Imported Text Styles dialog" /></div>
+				<figcaption></figcaption>
+			</figure>
+		
+			<p>If master pages and text styles are identical between the two documents, then those of the current document are used (no duplicate master pages or text styles will be added).</p>
+		
+			<p>If master pages differ, the incoming master pages are merged into the current document and will still be assigned to incoming pages as before.</p>
+		
+			<p>If text styles with the same name have different settings, you can either overwrite the current document&apos;s text style or rename the incoming style.</p>
+		
+			<p>If a text style is unique to the incoming document, it will be added to the current document.</p>
+		
+			<aside class="box note">
+				<p>If the incoming document contains new master pages, sections and index entries, these will be carried over into the current document as well.</p>
+			</aside>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Pages/addDeletePages.html">Add and remove pages</a></li>
+			<li><a href="../Text/textStyles_create.html">Creating and managing text styles</a></li>
+			<li><a href="../Pages/addingSections.html">Adding sections</a></li>
+			<li><a href="aboutBooks.html">About books</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

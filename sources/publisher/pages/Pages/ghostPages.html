@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="phantom, reflow" />
+	<meta name="description" content="How to deal with faint, empty page thumbnails that may be left behind after some page operations." />
+	<title>About ghost pages</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>About ghost pages</h1>
+	
+		<p>Some page operations may leave behind a &apos;ghost&apos; page&mdash;a faint outline of a page&mdash;within a publication spread.</p>
+
+	</header>
+
+	<section class="about">
+		<p>Ghost pages indicate that a spread has fewer pages than Affinity expects.</p>
+
+		<p>For example, you create a spread based on a two-page master. Later, you turn off the Pages panel&apos;s <span class="ui">Reflow Pages</span> setting to avoid left and right pages swapping sides.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/ghost_page.png" class="responsive" width="294" alt="Four-page spread with one ghost page." /></div>
+			<figcaption>Ghost pages appear with a fainter outline than actual pages.</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>In a document with facing pages that starts with a right page, you&apos;ll see a ghost page to its left, and another opposite the single page at the document&apos;s end. These are intentionally present in this document setup and do not need to be resolved.</p>
+		</aside>
+
+		<h2>Resolving ghost pages</h2>
+
+		<p>Depending on your document&apos;s content, re-enabling the Reflow Pages setting might be enough to automatically return to a logical flow.</p>
+
+		<p>Alternatively, with Reflow Pages still disabled, you can manually add a new page or drag a page into a ghost page&apos;s position to fill it.</p><!-- figure of Add Pages dialog with Flow Pages selected --><p>A ghost page can also occur when you delete a page from a multi-page spread. In situations like this, apply a suitable master with the required number of pages, and tell Affinity to conform the spread&apos;s page count and size to match it.</p>
+
+		<figure>
+			<div class="single"><img src="../../../shared/apply_master_conform_size_count.png" class="responsive" width="468" alt="Conforming page size and count when applying a master" /></div>
+			<figcaption></figcaption>
+		</figure>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To conform an existing spread to a master:</summary>
+			<ol>
+				<li>On the <span class="ui">Pages</span> panel, <span class="CLICK-TAG"></span>-click the spread&apos;s thumbnail and select <span class="ui">Apply Master</span>.</li>
+				<li>On the dialog that appears:<ol class="nested">
+						<li>Select the required master that has the desired page count.</li>
+						<li>Specify whether to <span class="ui">Clear</span> or <span class="ui">Migrate</span> content from any already applied master.</li>
+						<li>Set <span class="ui">Conform Pages</span> to <span class="ui">Size &amp; Count</span>.</li>
+						<li>Select <span class="ui">OK</span>.</li>
+					</ol>
+				</li>
+			</ol>
+
+			<p>Any ghost pages in the spread are removed. If the spread still contains more pages than the newly applied master, the additional pages are moved to new spreads, which also conform to the master.</p>
+		</details>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="addDeletePages.html">Add and remove pages</a></li>
+			<li><a href="arrangePages.html">Arrange pages</a></li>
+			<li><a href="copyDuplicatePages.html">Copy and duplicate pages</a></li>
+			<li><a href="aboutPages.html">About pages and spreads</a></ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>
