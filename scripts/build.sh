@@ -26,6 +26,23 @@ REPO="${GITHUB_REPOSITORY:-USER/affinity-v2-manuals}"
 
 have() { command -v "$1" >/dev/null 2>&1; }
 
+PLACEHOLDER="$ROOT/config/pandoc/placeholder.png"
+
+# Any image a manual references but doesn't ship (see MISSING_IMAGES.md) would
+# make pandoc --embed-resources abort. Drop a placeholder in the staged copy so
+# every format builds; the committed tree still shows the gap.
+fill_missing_assets() {
+  local dir="$1" tail
+  grep -rhoE 'assets/(shared|images)/[^)"'"'"' ]+\.(png|jpe?g|gif|svg|webp|tiff?)' \
+    "$dir" 2>/dev/null | sort -u | while IFS= read -r tail; do
+    if [ ! -f "$dir/$tail" ]; then
+      mkdir -p "$dir/$(dirname "$tail")"
+      cp "$PLACEHOLDER" "$dir/$tail"
+      echo "   placeholder: $tail"
+    fi
+  done
+}
+
 MDBOOK_OK=1; have mdbook || { MDBOOK_OK=0; echo "note: mdbook not found - skipping HTML site"; }
 PANDOC_OK=1; have pandoc || { PANDOC_OK=0; echo "note: pandoc not found - skipping epub/pdf/single-html"; }
 ZIP_OK=1;    have zip    || { ZIP_OK=0;    echo "note: zip not found - skipping all .zip artefacts"; }
@@ -84,6 +101,7 @@ for app in "${APPS[@]}"; do
     bk="$WORK/mdbook/$app"
     mkdir -p "$bk/src"
     cp -r "$man/." "$bk/src/"
+    fill_missing_assets "$bk/src"
     title="Affinity ${app^} 2 Manual (Community Archive)"
     sed -e "s|@APP@|$app|g" -e "s|@TITLE@|$title|g" -e "s|@REPO@|$REPO|g" \
       config/mdbook/book.toml.tmpl > "$bk/book.toml"
@@ -109,6 +127,7 @@ for app in "${APPS[@]}"; do
     rm -rf "$pd"; mkdir -p "$pd"
     cp -r "$man/." "$pd/"
     rm -f "$pd/SUMMARY.md"
+    fill_missing_assets "$pd"
     pd_abs=$(cd "$pd" && pwd)
     find "$pd" -name '*.md' -print0 \
       | xargs -0 sed -i -E "s#\]\((\.\./)+assets/#](${pd_abs}/assets/#g"
@@ -126,11 +145,13 @@ for app in "${APPS[@]}"; do
 
     echo ">> epub"
     pandoc "${common[@]}" --css config/pandoc/epub.css \
-      "${inputs[@]}" -o "$DIST/affinity-$app-2-manual.epub"
+      "${inputs[@]}" -o "$DIST/affinity-$app-2-manual.epub" \
+      || echo "   epub FAILED (non-fatal)"
 
     echo ">> single-file html"
     pandoc "${common[@]}" --standalone --embed-resources --number-sections \
-      "${inputs[@]}" -o "$DIST/affinity-$app-2-manual.html"
+      "${inputs[@]}" -o "$DIST/affinity-$app-2-manual.html" \
+      || echo "   single-file html FAILED (non-fatal)"
 
     if [ -n "$PDF_ENGINE" ]; then
       echo ">> pdf ($PDF_ENGINE)"
