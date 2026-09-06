@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layers, drop zone" />
+	<meta name="description" content="Drop zones will highlight new layer positions when moving objects and layers." />
+	<title>Layer drop zones</title>
+</head>
+
+<body>
+
+	<header>
+
+
+		<h1>Layer drop zones</h1>
+
+		<p>Layer drop zones indicate suggested positions in your layer stack that a currently moved object or layer can be dropped.</p>
+	</header>
+
+	<section class="about">
+		<h2>About layer drop zones</h2>
+
+		<p>Objects or layers in your Layers panel can be a simple arrangement of only a few objects or layers stacked together in front to back order (from the top to the bottom of stack). Any can be reordered in relation to others by moving them up or down. However, for layer operations such as clipping or masking it's useful to understand the type of drop zones possible and where these appear in the Layers panel.</p>
+		
+		<p>Clipping involves dragging one object or layer inside another so the clipped object (layer) is contained within the outline of the clipping object (layer). This creates a parent - child layer relationship, i.e. a two 'level' arrangement.</p>  		
+
+		<table class="equal">
+			<tr>
+				<th>Action</th>
+				<th>How to</th>
+				<th>Visual</th>
+			</tr>
+			<tr>
+				<td>Change order</td><td>by dragging to a position between two objects (layers).</td><td><img src="../../../shared/dropzone_order.png" class="screenshot" alt="Drop zone for ordering" /></td>
+			</tr>
+			<tr>
+				<td>Clipping (making a child layer)</td><td>by dragging onto another object's (layer's) name.</td><td><img src="../../../shared/dropzone_clip.png" class="screenshot" alt="Drop zone for child layers" /></td>
+			</tr>
+			<tr>
+				<td>Return above parent</td><td>by dragging a clipped object (layer) to above its Parent Bar.<br />You can drag to a Grandparent Bar, Great Grandparent Bar, etc.</td><td><img src="../../../shared/dropzone_parentabove.png" class="screenshot" alt="Drop zone for reparenting above" /></td>
+			</tr>
+			<tr>
+				<td>Return below parent</td><td>by dragging a clipped object (layer) to below its Parent Bar.<br />You can drag to a Grandparent Bar, Great Grandparent Bar, etc.</td><td><img src="../../../shared/dropzone_parentbelow.png" class="screenshot" alt="Drop zone for reparenting below" /></td>
+			</tr>
+			<tr>
+				<td>Mask</td><td>by dragging the masking object (layer) onto the target layer's thumbnail</td><td><img src="../../../shared/dropzone_mask.png" class="screenshot" alt="Drop zone for masking target layer" /></td>
+			</tr>
+		</table>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="aboutLayers.html">About layers</a></li>
+			<li><a href="../ObjectControl/order.html">Ordering</a></li>
+			<li><a href="../Layers/layerClip.html">Layer clipping</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masks</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

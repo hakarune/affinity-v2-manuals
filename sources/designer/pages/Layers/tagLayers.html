@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="tag, tag colour, layers" />
+	<meta name="description" content="Layers can be tagged with a colour to help differentiate specific layer content in the Layers panel." />
+	<title>Tagging layers</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Tagging layers</h1>
+		
+		<p>Layers can be tagged with a colour to help differentiate specific layer content in the Layers panel.</p>
+		
+	<figure>
+		<div class="single">
+			<img src="../../../shared/layers_tagging.png" alt="Layer colour tagging" />
+		</div>
+		<figcaption>Layers showing colour tagging as vertical coloured strips at the end of each entry.</figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+		
+		<p>Tagging provides a useful additional means of organising layer content beyond grouping layers, as it allows you to organise a set of layers without affecting the layer order. All layers that share the same tag colour can be <a href="../Layers/selectEditLayers.html">selected at once</a> from the <span class="ui">Layers</span> panel or <span class="ui">Select</span> menu.</p>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To assign a tag colour to a layer(s):</summary>
+			<ol>
+				<li>(Optional) On the <span class="ui">Layers</span> panel, select multiple layers.</li>
+				<li>Do one of the following:
+					<ul>
+						<li><img src="../../../shared/ui/visibility_on.png" class="tool" width="16" height="16" alt="Toggle Visibility" /> <span class="key CLICK-TAG"></span>-click <span class="ui">Toggle Visibility</span>, and select a colour tag from the pop-up menu. For multiple selected layers, any of the selected layers can be targeted.</li>
+						<li><span class="key CLICK-TAG"></span>-click a layer and select a colour swatch from the pop-up menu.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>			
+
+		<aside class="box note">
+			<p>When you assign a tag colour to a layer group, it is also applied to layers within the group <em>except</em> any that have a colour tag already.</p>
+		</aside>
+		
+		<details>
+			<summary>To remove a tag colour:</summary>
+			
+			<ul>
+				<li>With a layer (or multiple layers) selected, on the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click and choose the first colour swatch (white with a red line through it). Tag colours are removed from the entire selection.</li>
+			</ul>
+		</details>
+		
+		<aside class="box note">
+			<p>When you remove a tag colour from a layer group, it is also removed from any layers of the same colour within the group.</p>
+		</aside>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/selectEditLayers.html">Selecting and editing layers</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../ObjectControl/select.html">Selecting</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

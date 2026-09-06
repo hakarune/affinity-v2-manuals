@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layers, panel" />
+	<meta name="description" content="The Layers panel lets you create a tiered document that can be designed more easily by management of layers." />
+	<title>Layers panel</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Layers panel</h1>
+
+		<p>The <span class="ui">Layers</span> panel lets you create a tiered document that can be designed more easily by management of layers.</p>
+
+	</header>
+
+	<section class="about">
+		<h2>About the Layers panel in Designer/Pixel Persona</h2>
+
+		<p>Layers are composited together to form your complete design which shows up on your page.</p>
+		
+		<p>The panel can be used to build up your design as multiple layers, with each layer devoted to a particular facet (e.g., lines, shapes, text, adjustments, etc.).</p>
+
+		<aside class="box note">
+			<p><a href="../Artboards/artboards_about.html">Artboards</a> are also located on the Layers panel and can be organised in the same way as layers.</p>
+		</aside>
+
+		<p>From the <span class="ui">Layers</span> panel you can:</p>
+
+		<ul>
+			<li>Create or delete layers and groups</li>
+			<li>Select, reorder, show/hide and lock (artboards, layers, groups and objects)</li>
+			<li>Clip layers, groups and objects</li>
+			<li>Apply layer and artboard opacity</li>
+			<li>Apply blend modes and blend ranges</li>
+			<li>Create masks</li>
+			<li>Add layer adjustments and effects</li>
+		</ul>
+		<p>Layer management features let you optimise layer control, e.g.</p>
+		<ul>
+			<li>Reselect pixel brushes previously applied to a layer</li>
+			<li>Collapse/expand specific or all layers and groups</li>
+			<li>Tag layers with a choice of colours</li>
+			<li>Change the UI display colour of all object's path, nodes and handles</li>
+			<li>Exclude object from being a snapping candidate (<span class="key CLICK-TAG"></span>-click object only)</li>
+			<li>Switch off Auto-scroll (panel scrolls to layer content when it is selected on the page)</li>
+			<li>Display layer thumbnails with a solid or checkerboard background</li>
+			<li>Determine the size of layer thumbnails</li>
+		</ul>
+
+		<h2>About the Layers panel in Export Persona</h2>
+		
+		<p>The Layers panel in Export Persona looks similar to that in Designer/Pixel Persona. The key difference is that it is not intended to help edit items on the page but instead to select layers to create exportable slices from.</p>  
+		
+		<figure>
+			<p><img src="../../images/panel_layers.png" class="responsive" width="264" alt="Layers panel" />
+				<img src="../../images/panel_layers_exportpersona.png" class="responsive" width="264" alt="Layers panel (Export Persona)" /></p>
+			<figcaption>The Layers panel in Designer/Pixel Persona (left) and Export Persona (right).</figcaption>
+		</figure>
+
+		<p>The panel displays the following:</p>
+
+		<ul>
+			<li><img src="../../../shared/ui/moremenuicon.png" class="tool" width="24" height="24" alt="Panel Preferences" /> Panel Preferences menu which offers:
+				<ul>
+					<li><span class="ui">Auto-scroll</span>&#8212;when selected (default), the selected object's layer entry immediately comes into view in the <span class="ui">Layers</span> panel.</li>
+					<li><span class="ui">Show Group Thumbnails</span>&#8212;when selected (default), each group layer’s thumbnail displays a preview of all the group’s contents. When deselected, a folder icon is shown instead.</li>
+					<li><span class="ui">Show Object Type</span>&#8212;when selected (default), each layer entry displays an icon to identify its type. When deselected, icons are hidden.</li>
+					<li><span class="ui">Thumbnail Background</span>&#8212;when selected, layer thumbnail backgrounds will display a checkerboard which can be darkened/lightened, or display automatically (default) according to <span class="ui">UI Style</span> (Settings (or Preferences)&gt;User Interface).</li>
+					<li><span class="ui">Small Thumbnails</span>&#8212;when selected (default), displays small thumbnails.</li>
+					<li><span class="ui">Medium Thumbnails</span>&#8212;when selected, displays medium thumbnails.</li>
+					<li><span class="ui">Large Thumbnails</span>&#8212;when selected, displays large thumbnails.</li>
+					<li><span class="ui">Close</span>&#8212;hides the current panel.</li>
+					<li><span class="ui">Close Panel Group</span>&#8212;hides the current panel and other panels in the panel group.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Opacity</span>&#8212;Adjusts opacity of the selected item(s).</li>
+			<li>Blend Mode&#8212;Changes how the applied pixels interact with existing pixels on the layer below. Choose mode type from a pop-up menu.</li>
+			<li><img src="../../../shared/ui/settings_cog_layers.png" class="tool" width="16" height="16" alt="Blend Options" /> <span class="ui">Blend Options</span>&#8212;Click to access a dialog for setting the blend ranges, blend gamma and antialiasing settings for the selected layer.</li>
+			<li><img src="../../../shared/ui/lock_layer.png" class="tool" width="16" height="16" alt="Lock/Unlock" /> <span class="ui">Lock/Unlock</span>&#8212;Click to lock or unlock selected items to prevent accidental selection and transformation.</li>
+			<li>Layer entry&#8212;The layer for the created item, comprised of:
+				<ul>
+					<li class="osx"><img src="../../../shared/ui/ExpandCollapsebtn.png" class="tool" width="16" height="16" alt="Expand/Collapse" /> <span class="ui">Expand/Collapse</span>&#8212;Click to expand/contract the item, revealing nested content. <span class="key CLICK-TAG"></span>-click options let you affect a currently expanded parent layer(s) and group(s) using <span class="ui">Expand Selection</span>/<span class="ui">Collapse Selection</span> or affect all parents in the layer stack using <span class="ui">Collapse All Parents</span> (or <span class="ui">Layer &gt; Collapse All in Layers Panel</span>). Alternatively, it is possible to expand or collapse layers in a stack or group by pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> whilst clicking on the Expand/Collapse chevron.</li>
+					<li class="win32"><img src="../../../shared/ui/ExpandCollapsebtn.png" class="tool" width="16" height="16" alt="Expand/Collapse" /> <span class="ui">Expand/Collapse</span>&#8212;Click to expand/contract the item, revealing nested content. <span class="key CLICK-TAG"></span>-click options let you affect a currently expanded parent layer(s) and group(s) using <span class="ui">Expand Selection</span>/<span class="ui">Collapse Selection</span> or affect all parents in the layer stack using <span class="ui">Collapse All Parents</span> (or <span class="ui">Layer &gt; Collapse All in Layers Panel</span>). Alternatively, it is possible to expand or collapse layers in a stack or group by pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> whilst clicking on the Expand/Collapse chevron.</li>
+					<li>Layer type&#8212;The <a href="../Layers/aboutLayers.html">layer's type</a>, identified by a unique symbol.</li>
+					<li>Layer thumbnail&#8212;Visual representation of the layer contents on a checkerboard transparent background.</li>
+					<li>Layer name/type description&#8212;Text description of the layer type if unnamed; a double-click will let you name the item (removing the layer type description). For text layers, the text used on the page will be shown, while placed documents will show their filenames.</li>
+					<li><img src="../../../shared/ui/brush_on_layer.png" class="tool heading" width="18" height="18" alt="Recent brushes" /> <span class="ui">Recent brushes</span>&#8212;For pixel layers with pixel brush strokes already applied, clicking the icon offers the previously used brushes on that layer for reselection and further painting. For the current session only.</li>
+					<li><img src="../../../shared/ui/visibility_on.png" class="tool" width="16" height="16" alt="Toggle Visibility" /> <span class="ui">Toggle Visibility</span>&#8212;Disable to hide the item; enable to make it visible again. <span class="key CLICK-TAG"></span>-click to hide selected layers (<span class="ui">Hide</span>), hide all other unselected layers (<span class="ui">Hide Others</span>), show other hidden layers (<span class="ui">Show Others</span>) or colour tag the layer for easy layer identification.</li>
+				</ul>
+			</li>
+			<li><img src="../../../shared/ui/edit_all_layers.png" class="tool" width="16" height="16" alt="Edit All Layers" /> <span class="ui">Edit All Layers</span>&#8212;Allows selection and editing of objects across all artboards and layers (rather than the current layer).</li>
+			<li><img src="../../../shared/ui/add_mask_layer.png" class="tool" width="16" height="16" alt="Mask Layer" /> <span class="ui">Mask Layer</span>&#8212;Creates a layer mask to reveal a portion of a layer while the rest of the layer remains hidden.</li>
+			<li><img src="../../../shared/ui/add_adjustment_layer.png" class="tool" width="16" height="16" alt="Adjustments" /> <span class="ui">Adjustments</span>&#8212;Adds a non-destructive adjustment layer to the current layer for tonal and colour correction. Each <a href="../Adjustments/adjustment_applying.html">adjustment type</a> has its own symbol to uniquely identify it from other adjustment types.</li>
+			<li><img src="../../../shared/ui/add_fx_layer.png" class="tool" width="16" height="16" alt="Layer Effects" /> <span class="ui">Layer Effects</span>&#8212;Applies a layer effect to the currently selected layer.</li>
+			<li><img src="../../../shared/ui/mesh_warp_tool.png" class="tool" width="16" height="16" alt="Warp" /> <span class="ui">Warp</span>&#8212;applies a warp to the currently selected objects. A non-destructive warp group is created.</li>
+			<li><img src="../../../shared/ui/add_layer.png" class="tool" width="16" height="16" alt="Add Layers" /> <span class="ui">Add Layer</span>&#8212;Creates an empty new layer above the currently selected layer.</li>
+			<li><img src="../../../shared/ui/add_pixel_layer.png" class="tool" width="16" height="16" alt="Add Pixel Layers" /> <span class="ui">Add Pixel Layer</span>&#8212;Creates an empty new pixel layer above the currently selected layer.</li>
+			<li><img src="../../../shared/ui/trash_can.png" class="tool" width="16" height="16" alt="Remove Layers" /> <span class="ui">Remove Layer</span>&#8212;Deletes the currently selected layer or artboard.</li>
+
+		</ul>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Layers/aboutLayers.html">About layers</a></li>
+			<li><a href="../Layers/createLayers.html">Create layers</a></li>
+			<li><a href="../Layers/selectEditLayers.html">Selecting and editing layers</a></li>
+			<li><a href="../Layers/layerClip.html">Layer clipping</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masking</a></li>
+			<li><a href="../LayerFX/create_layerFX.html">Using layer effects</a></li>
+			<li><a href="../Layers/LayerMasks.html">Layer masking</a></li>
+			<li><a href="../ObjectControl/warp.html">Warping objects</a></li>
+			<li><a href="../Layers/layerBlendRanges.html">Layer blend ranges</a></li>
+			<li><a href="../Workspace/customizingWorkspace.html">Customising the workspace</a></li>
+			<li><a href="../ExportPersona/exportPersona_layersPanel.html">Layers panel (Export Persona)</a></li>
+			<li><a href="../Layers/tagLayers.html">Tagging layers</a></li>			
+			<li><a href="../Layers/layerColours.html">Layer colours</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

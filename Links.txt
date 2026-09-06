@@ -1,0 +1,11 @@
+Source URLs for the official Affinity version 2 help documentation.
+If affinity.help is down, prefix with  https://web.archive.org/web/2id_/
+
+Designer 2   https://affinity.help/designer2/en-US.lproj/index.html
+             https://affinity.help/designer2/shared/           (shared image pool)
+
+Photo 2      https://affinity.help/photo2/en-US.lproj/index.html
+             https://affinity.help/photo2/shared/
+
+Publisher 2  https://affinity.help/publisher2/en-US.lproj/index.html
+             https://affinity.help/publisher2/shared/

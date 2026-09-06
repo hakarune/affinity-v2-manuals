@@ -1,0 +1,78 @@
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "manuals/**"
+      - "config/mdbook/**"
+      - "config/pages/**"
+      - "scripts/gen_summary.py"
+      - "scripts/gen_landing.py"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install mdBook
+        run: |
+          MDBOOK_VERSION=0.4.40
+          mkdir -p "$HOME/.local/bin"
+          curl -sSL "https://github.com/rust-lang/mdBook/releases/download/v${MDBOOK_VERSION}/mdbook-v${MDBOOK_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C "$HOME/.local/bin"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Build a site per manual
+        run: |
+          set -euo pipefail
+          apps=()
+          for d in manuals/*/; do
+            a=$(basename "$d")
+            [ -f "manuals/$a/index.md" ] && apps+=("$a")
+          done
+          if [ "${#apps[@]}" -eq 0 ]; then
+            echo "No manuals with an index.md yet - nothing to publish."
+            mkdir -p _site && echo '<!doctype html><title>Affinity V2 Manuals</title><p>No manuals built yet.' > _site/index.html
+            exit 0
+          fi
+          echo "Building: ${apps[*]}"
+          mkdir -p _site
+          for app in "${apps[@]}"; do
+            python3 scripts/gen_summary.py "$app"
+            bk=".work/$app"
+            mkdir -p "$bk/src"
+            cp -r "manuals/$app/." "$bk/src/"
+            title="Affinity ${app^} 2 Manual (Community Archive)"
+            sed -e "s|@APP@|$app|g" -e "s|@TITLE@|$title|g" -e "s|@REPO@|${GITHUB_REPOSITORY}|g" \
+              config/mdbook/book.toml.tmpl > "$bk/book.toml"
+            (cd "$bk" && mdbook build)
+            cp -r "$bk/book" "_site/$app"
+          done
+          python3 scripts/gen_landing.py _site "${apps[@]}"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

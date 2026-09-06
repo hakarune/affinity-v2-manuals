@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="View Tool, view mode, retina, wireframe, outline, hairline, path, split, mirror, preview, windows" />
+	<meta name="description" content="Different viewing options allow you maximum flexibility when creating your designs." />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				tab1: { src: "../../../shared/viewmode_vector.jpg", alt: "Vector view mode" },
+				tab2: { src: "../../../shared/viewmode_pixel.jpg", alt: "Pixel view mode" },
+				tab3: { src: "../../../shared/viewmode_pixelretina.jpg", alt: "Retina pixel view mode" },
+				tab4: { src: "../../../shared/viewmode_outline.jpg", alt: "Outline view mode (Wireframe)" },
+				tab5: { src: "../../../shared/viewmode_filled.jpg", alt: "Filled view mode (Wireframe)" },
+ 				tab6: { src: "../../../shared/viewmode_hairline.jpg", alt: "Hairline view mode" },
+			}
+		}
+	</script>
+	<title>Viewing</title>
+</head>
+
+<body onload="loadTabbedImages()">
+
+	<header>
+
+		<h1>Viewing</h1>
+
+		<p>There are a variety of viewing options available which lets you preview your designs before output using view modes, make mode comparisons and arrange your document view.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<h2>About view modes</h2>
+
+		<div class="tabbedImage" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Vector</p></div>
+				<div class="tab"><p>Pixel</p></div>
+				<div class="tab"><p>Retina pixel</p></div>
+				<div class="tab"><p>Outline (wireframe)</p></div>
+				<div class="tab"><p>X-ray (wireframe)</p></div>
+				<div class="tab"><p>Hairline</p></div>
+			</div>
+			<div class="view">
+				<img src="../../../shared/viewmode_vector.jpg" class="responsive" alt="">
+			</div>
+		</div>
+
+		<h4>Vector view mode</h4>
+		<p>Drawn objects are displayed as vectors by default. This means that, regardless of the current zoom level, objects (and applied effects) are always presented with smooth, vector edges and transitions.</p>
+
+		<h4>Pixel view mode</h4>
+		<p>During design, vector objects are presented as if they are constructed from individual pixels. This is an accurate representation of how your design will appear once exported and viewed as an image.</p>
+
+		<h4>Retina pixel view mode</h4>
+		<p>As for Pixel mode above, but represents viewing on retina and high DPI displays.</p>
+
+		<h4>Outline (wireframe) view mode</h4>
+		<p>During design, page objects are presented as paths only (with no fills or strokes). All otherwise obscured paths are exposed, and selection behaviour changes so grouped objects can immediately be selected just like ungrouped ones. In complex designs, this can be used to more easily target unlocked and locked objects for selection.</p>
+
+		<h4>X-ray (wireframe) view mode</h4>
+		<p>As for Outline view mode, but page objects still display their fills at reduced opacity. On more complex designs, perhaps when zoomed in, this helps to interpret the view better.</p>
+		
+		<h4>Hairline view mode</h4>
+		<p>For CAD documents, Hairline mode displays designs as CAD apps would display them. All lines are displayed as thin lines so line weights are ignored, regardless of zoom level.</p>		
+
+		<h3>View</h3>
+
+		<h4>Single View</h4>
+		<p>Presents the selected mode in isolation on a single page.</p>
+
+		<h4>Split View</h4>
+		<p>Presents two modes simultaneously on the same page. A sliding divider can be repositioned to view different areas of the design in either mode.</p>
+
+
+		<h2>Clip to Canvas</h2>
+
+		<p>This option, set by default, restricts the document view, so you can only see objects which are placed on the page. If objects extend beyond the page, the area which lies on the page is visible while the area which lies on the pasteboard is hidden. Objects which are entirely on the pasteboard are hidden.</p>
+		<p>When <span class="ui">Clip to Canvas</span> is switched off, the pasteboard is visible, as are all the objects placed on it.</p>
+		<p>Clip to Canvas can be used in conjunction with any of the above view options.</p>
+
+		<aside class="box note">
+			<p>This option is unavailable in documents containing <a href="../Artboards/artboards_about.html">artboards</a>.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/pixel_view_mode.png" class="tool heading" width="18" height="18" alt="Pixel view mode" /> <img src="../../../shared/ui/retina_pixel_view.png" class="tool heading" width="18" height="18" alt="Retina pixel view mode" /> <img src="../../../shared/ui/outline_view_mode.png" class="tool heading" width="18" height="18" alt="Wireframe view mode" /> To display specific modes:</summary>
+			<p>From the toolbar, do one of the following:</p>
+			<ul>
+				<li>Click <span class="ui">Pixel view mode</span> to display vector designs as individual pixels.</li>
+				<li>Click <span class="ui">Retina pixel view mode</span> to display vector designs as individual pixels. Use for Retina displays.</li>
+				<li>Click <span class="ui">Wireframe view mode</span> to display vector designs in either Outline or X-ray view modes depending on which was last selected via <span class="ui">View&gt;View Mode&gt;Wirefame</span>.</li>
+			</ul>
+
+		<aside class="box tip">
+			<p>Ensure all icons are deselected to return to Vector mode.</p>
+		</aside>
+
+		<aside class="box note">
+			<p>You can also switch between view modes via the <span class="ui">View</span> menu (<span class="ui">View Mode</span> submenu). The <span class="ui">Hairline view mode</span> on the submenu displays designs as if viewed in CAD apps (stroke/line weights are ignored).</p>
+
+		</aside>
+
+		</details>
+
+		<details open="open">
+			<summary>To work in Split View:</summary>
+			<ol>
+				<li>From the <span class="ui">View</span> menu's <span class="ui">View Mode</span> submenu, select <span class="ui">Split View</span>.</li>
+				<li>
+					<p>Click one side of the divider.</p>
+					<p>The divider label displays as black for the selected side (otherwise displayed as grey).</p>
+				</li>
+				<li>From the Toolbar or <span class="ui">View</span> menu, select a mode.</li>
+			</ol>
+
+		</details>
+
+	</section>
+
+	<section class="about">
+		<h2>New View</h2>
+
+		<p>There are times when it is useful to view a design at different zoom levels simultaneously. This can be achieved by opening your current document in a New View. The views can then be set to different zoom levels. Changes made to any view are replicated in the other.</p>
+
+		<aside class="box tip">
+			<p>The New View can also be set to different View and Zoom modes.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To open the current document in a new view:</summary>
+			<ul>
+				<li>From the <span class="ui">View</span> menu, select <span class="ui">New View</span>. The document opens in a new tab/window which includes a numerical reference in its title.</li>
+			</ul>
+		</details>
+
+			<details open="open">
+				<summary>To switch between open documents and views:</summary>
+				<p>Do one of the following:</p>
+				<ul>
+					<li>Click a document tab.</li>
+					<li>Click a document window header if the window is floating.</li>
+					<li>From the <span class="ui">View</span> menu, select a document from the <span class="ui">Views</span> submenu.</li>
+				</ul>
+			</details>
+		
+		<aside class="box prefs">
+			<h3>Settings (or Preferences)</h3>
+			<p>Related behaviours can be adjusted from <a href="../Workspace/preferences.html">the app's settings</a>:</p>
+			<ul>
+				<li><span class="ui">Performance&gt;View Quality</span></li>
+			</ul>			
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Workspace/toolbar.html">Toolbar</a></li>
+			<li><a href="../DesignAids/clipToCanvas.html">Clip to Canvas</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=view">Keyboard shortcuts for the document view</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+</html>

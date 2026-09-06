@@ -1,0 +1,15 @@
+# Keep GitHub's language stats meaningful
+sources/**            linguist-vendored
+manuals/**/*.md       linguist-documentation
+*.md                  text eol=lf
+scripts/*.sh          text eol=lf
+scripts/*.py          text eol=lf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.epub binary
+*.zip binary

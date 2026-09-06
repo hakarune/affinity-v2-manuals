@@ -1,0 +1,61 @@
+# Glossary
+
+On this page you can find an alphabetical list of terms that you may come across when using this software.
+
+- **[Adjustment](../19-adjustments/01-applying-adjustments.md)**—an effect which can be applied to your design as a new layer for creative or corrective purposes.
+- **[Alignment](../08-object-control/10-aligning-objects.md)**—positioning objects to the left, right, centre, top or bottom.
+- **[Artboard](../04-artboards/01-about-artboards.md)**—a portion of your work area within your document, of any shape or size, on which you can place design elements.
+- **[Asset](../08-object-control/24-using-assets.md)**—a stored design element which can be accessed from any document you have open.
+- **[Bézier curve](../05-drawing-curves-and-shapes/01-about-lines-curves-and-shapes.md)**—a vector curve that is defined mathematically, appearing smooth even when resized or transformed.
+- **Bitmap**—a raster image made up of a grid of pixels, where each point on the grid corresponds to an individual pixel.
+- **[Bleed](../14-saving-and-sharing/01-setting-bleed.md)**—the area of the page that goes beyond the page edge to be trimmed off at commercial printers in the event of paper movement or design inconsistencies.
+- **[Blend mode](../07-layers/07-layer-blending.md)**—a mode applied to your layer which changes how the applied pixels interact with existing pixels on the layer below.
+- **[Blend range](../07-layers/08-layer-blend-ranges.md)**—let you blend layers in a project by controlling opacity across the tonal range of the currently selected layer or the underlying layer(s).
+- **[Boolean operations](../08-object-control/06-creating-compounds-with-boolean-operations.md)**—methods of joining vector shapes together to create composite shape variations which can be fully edited as curves.
+- **Bounding box**—a temporary frame around a selected object showing its outer dimensions.
+- **Clipboard**—a memory space used for short-term storage and transfer of content during cut, copy and paste operations.
+- **[Clipping](../07-layers/10-layer-clipping.md)**—the act of positioning one object inside another.
+- **[Closed shape](../05-drawing-curves-and-shapes/01-about-lines-curves-and-shapes.md)**—a shape created by closing an open curve drawn with the Pen Tool.
+- **[CMYK](../06-colour/03-about-colour-spaces.md)**—a colour model that is often used for commercial process printing.
+- **[Colour picker](../06-colour/07-sampling-colours.md)**—a tool used to select and sample colours.
+- **[Colour space](../06-colour/03-about-colour-spaces.md)**—the range of colours used to display and print colours in your file.
+- **Contour**—the line that is used to define the shape of an object.
+- **[Control handle](../05-drawing-curves-and-shapes/01-about-lines-curves-and-shapes.md)**—extending from nodes as a pair of opposing handles, these can be dragged in different directions and extended to different lengths to adjust the shape and length of the segments between individual nodes.
+- **Cusp**—a point where two branches of a curve meet and the tangents of each branch are equal.
+- **[Document preset](../03-get-started/02-create-new-documents.md)**—a blank file containing a group of recommended document setup options according to how you plan to work.
+- **[Document template](../03-get-started/14-document-templates.md)**—a file containing reusable pre-formatted text styles, graphics, and layouts which you can use to form the basis of another document.
+- **Embedded file**—a placed copy of an original file that is embedded into a document. If the original file is moved or updated, the embedded copy will remain unchanged.
+- **[Global colour](../06-colour/08-global-colours.md)**—a colour that can be created, applied, and updated for different objects across your design from a single place.
+- **[Glyph](../12-text/10-special-characters-and-glyphs.md)**—a specific shape of a letter presented in a particular typeface.
+- **Gradient**—a gradual blend from one colour to another.
+- **[Grid](../17-design-aids/04-grids.md)**—a pattern of lines which is overlaid over your page to help you align objects.
+- **[Fill mode](../05-drawing-curves-and-shapes/13-fill-modes.md)**—determines how self-intersecting segments of a shape will be filled.
+- **[Guide](../17-design-aids/06-ruler-and-column-guides.md)**—non-printing, non-exporting lines that float over page objects and assist with object positioning.
+- **[Layer effect](../18-layer-effects/01-using-layer-effects.md)**—an effect that can be applied to either selected objects or the entire layer, changing its appearance.
+- **[Layer mask](../07-layers/11-layer-masking.md)**—used to reveal a portion of a layer while the rest of the layer remains hidden.
+- **Linked file**—a placed file containing a link between the document and the file on disk to allow it to update if it is changed on disk.
+- **[Margin](../17-design-aids/07-margins.md)**—the area between the main content of the page and the page edges.
+- **Marquee**—a shape drawn around an object in order to make a selection.
+- **[Node](../05-drawing-curves-and-shapes/01-about-lines-curves-and-shapes.md)**—a connection point between segments of a vector line, curve, or shape that controls the direction, length and curvature of its connected segments.
+- **Outline**—see **Path**.
+- **[Overprinting](../06-colour/10-overprinting.md)**—printing one ink colour on top of another instead of the underlying colour being removed.
+- **Palette**—a selection of stored colour swatches.
+- **Pasteboard**—the area around the document or artboard.
+- **Path**—an outline representing a series of smooth vector lines.
+- **[Process colour](../06-colour/09-spot-colours.md)**—colours that are mixed by varying the percentages of Cyan, Magenta, Yellow and Black ink. See **Spot colour**.
+- **Raster**—a type of graphic made up of a grid of pixels.
+- **[RGB](../06-colour/03-about-colour-spaces.md)**—a colour model that is often used for digital work.
+- **[Ruler](../17-design-aids/08-rulers.md)**—guideline used to accurately place objects or guides in the document view.
+- **[Segment](../05-drawing-curves-and-shapes/01-about-lines-curves-and-shapes.md)**—the path between two nodes.
+- **[Snapping](../17-design-aids/11-snapping.md)**—aligning images, brush strokes, lines, shapes, and selection areas to nearby grid lines, guides, margins, artboards or spreads, or any combination of these.
+- **[Spot colour](../06-colour/09-spot-colours.md)**—a colour that can be used when your artwork contains a very limited colour set, reducing print costs significantly and allowing you to accurately reproduce colours otherwise impossible with process colours.
+- **[Stop](../06-colour/12-gradient-and-bitmap-fills.md)**—a point where a specific colour is introduced in a gradient.
+- **Stroke**—a drawn line that can have different defined attributes such as weight, colour, and style (solid, dotted, or dashed) applied to it.
+- **[Symbol](../08-object-control/25-symbols.md)**—an intelligent object that can be placed repeatedly in your document. Editing one symbol will edit all other placements of that symbol (unless they have been unsynced).
+- **[Text frame](../12-text/04-frame-text.md)**—a frame containing paragraph text which uses a formalised structure and layout.
+- **[Text style](../12-text/text-styles/01-using-text-styles.md)**—a set of text attributes and properties which can be applied to text.
+- **[Transform](../08-object-control/16-transforming-objects.md)**—a general term for resizing, moving, rotating or shearing objects.
+- **Vector**—a type of graphic made up of mathematical paths.
+- **[Vector curve](../05-drawing-curves-and-shapes/01-about-lines-curves-and-shapes.md)**—an open path with a distinct start and end.
+- **[Vector shape](../05-drawing-curves-and-shapes/01-about-lines-curves-and-shapes.md)**—a closed path with no discernible start or end.
+- **White space**—areas of the design that contain no images or text.

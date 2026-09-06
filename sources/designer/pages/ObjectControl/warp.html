@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="vector, warp, distort, group, deform, patch, perspective, quad, mesh, arc, bend" />
+	<meta name="description" content="Warping lets you distort any vector object non-destructively." />
+	<title>Warping objects</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Warping objects</h1>
+		<p>The Vector Warp feature lets you warp one or more objects non-destructively. A choice of warp presets is available, with any preset being editable using a customisable warp mesh.</p>
+		
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/vectorwarp_before.jpg" alt="Vector Warp before" />
+				<div><img src="../../../shared/vectorwarp_after.jpg" alt="Vector warp after" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>		
+	</header>
+
+	<section class="about">
+	
+	<h2>About vector warps</h2>
+
+		<p>You can warp shapes, straight lines, curves and text by applying a warp preset directly to selected objects. All warp presets apply a mesh to the objects which can be manipulated.</p>
+
+		<h3>Mesh, Quad and Perspective presets</h3>
+				
+		<p>With these warp presets, objects are not initially warped but need to be warped manually. The Mesh preset lets you reposition existing or manually added mesh junctions (circular nodes) as well as their control handles. Quad and Perspective presets let you drag by the mesh's corner junctions and control handles.</p>
+		
+		<p>The presets differ because the mesh's junctions and control handles are set up specifically for mesh grid, quad and perspective warp design.</p> 
+
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/meshquad_edit_before.jpg" class="screenshot" alt="Warp types" />
+				<div><img src="../../../shared/meshquad_edit_after.jpg" class="screenshot" alt="Warp types" /></div>
+			</div>
+			<figcaption>Mesh (left) and Quad/Perspective presets (right) showing their pre-warp state (Before) and after applying a warp by editing mesh junctions (After).</figcaption>
+		</figure>
+				
+		<h3>Shaped warp presets</h3>
+		
+		<p>Different shaped warp presets can be applied automatically depending on the design you're looking for. They offer familiar and popular warps and can be a good starting point before fine-tuning the warp.</p>
+		
+		<figure>
+			<div class="single">
+				<img src="../../../shared/warp_types.png" class="screenshot" alt="Warp types" />
+			</div>
+			<figcaption>Shaped warp presets: Arc - Horizontal, Bend - Vertical, Fish Eye, Twist (left to right).</figcaption>
+		</figure>
+	
+		<h3>Warp groups</h3>
+		
+		<p>Any warp preset will create a warp group that controls the warp. Contained objects within the warp group remain unaffected, giving the feature its non-destructive behaviour.</p>
+		<p>Warp groups behave much like ordinary groups you'll find in Affinity apps. Any group can be moved on the page, while any contained object can be dragged in or out of the group at any time.</p>
+
+		<aside class="box tip">
+			<p>You can create warp groups within a warp group to introduce warp-in-warp effects with each warp potentially using different warping styles.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To apply a warp preset:</summary>
+			<ol>
+				<li>Select one or more objects.</li>
+				<li>Do one of the following:
+					<ul>				
+						<li><img src="../../../shared/ui/mesh_warp_tool.png" class="tool" width="16" height="16" alt="Warp" /> On the <span class="ui">Layers</span> panel, select <span class="ui">Warp</span>.</li>
+						<li>Select <span class="ui">Layer&gt;Warp Group</span>.</li>
+					</ul>
+				</li>
+				<li>On the pop-up menu, select a preset.</li>
+				<li>On the context toolbar, adjust settings specific to the type of warp preset chosen. For example, <span class="ui">Value</span> controls how much warping is applied while maintaining the original symmetry of shape-based warp presets.</li>
+			</ol>
+		<p>See Editing mesh warps (below) for details of how to move and add mesh junctions, as well as adjust a junction's control handles.</p>
+		</details>
+
+		<details>
+			<summary>To temporarily hide the warp to show unwarped objects:</summary>
+			<ul>
+				<li>On the context toolbar, select <span class="ui">Mute Mesh</span>.</li>
+			</ul>
+		</details>
+
+		<details>
+			<summary>To convert to curves:</summary>
+			<ul>
+				<li>On the context toolbar, select <span class="ui">Convert to Curves</span>.</li>
+			</ul>
+			<p>The object is turned into a closed shape made up of curves. For text, each text character is converted to a separate curve. The resulting curves are grouped automatically.</p>
+		</details>
+
+	</section> 
+
+	<section class="about">
+		<h2>Editing warps</h2>
+		
+		<p>Once warped, you can edit the warp using the <span class="ui">Node Tool</span> in a similar way to editing a curve, except you are actively warping as you edit, as opposed to reforming a curve or shape. Editing will let you reposition one or more junctions, adjust any selected junction's control handles, add junctions or reposition a mesh patch (the area enclosed by four mesh junctions).</p>
+		
+		<h3>Selecting junctions</h3>
+		
+		<p>You can use various techniques for making multiple selections of junctions. This allows you to warp from multiple points in one operation. Selection methods include:</p>
+		
+		<ul>
+			<li>Marquee selection&#8212;you drag a marquee over a range of junctions to encompass them.</li>
+			<li>Individual selection&#8212;use a modifier key to select multiple junctions one-by-one.</li>
+			<li>Lasso/polygon selection&#8212;use a modifier to drag a lasso around junctions or draw click-by-click polygons for more precise targeting of specific junctions.</li>
+		</ul>
+			
+		<h3>Snapping junctions</h3>
+		
+		<p>When you reposition junctions you can make use of two types of snapping, i.e.</p>
+	
+			<ul>
+				<li>Global snapping&#8212;you can snap junctions to page horizontal/vertical centre and page elements (e.g., margins and placed guides) just like snapping nodes when pen drawing.</li>
+				<li>Junction-to-junction snapping&#8212;use context toolbar <span class="ui">Snap</span> options to align junctions to each other vertically and horizontally.</li>
+			</ul>
+<!--	Awaiting image from creative..		
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/warpsnapping_before.jpg" alt="Warp snapping before" />
+				<div><img src="../../../shared/warpsnapping_after.jpg" alt="Warp snapping after" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+-->		
+		<h3>Editing warp objects</h3>
+		<p>Any contained object in a warp group can be edited independently of the group and other grouped objects. For example, you can fix a typographic error or rename the warped text at any time, or recolour a specific object.</p>
+	
+	</section>
+	
+	<section>
+		<details open="open">
+			<summary>To edit the warp:</summary>
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, click the chosen warp group's layer thumbnail.</li>
+				<li>With the <span class="ui">Node Tool</span> now active, reposition the junctions or connected control handles by dragging.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary>To add new mesh junctions to the warp:</summary>
+			<p>Do any of the following within the warp's outline:</p>
+				<ul>
+					<li>Click on a mesh line.</li>
+					<li>Double-click in any area enclosed by mesh lines.</li> 
+				</ul>
+			<p>The new mesh junction can then be:</p>
+			<ul>
+				<li>repositioned to warp the area directly under the junction.</li>
+				<li>converted to a smooth or cusp (sharp) <span class="ui">Junction</span> on the context toolbar.</li>
+			</ul>	
+		</details>
+
+		<details open="open">
+			<summary>To move a mesh patch:</summary>
+				<ul>
+					<li>Click anywhere within a mesh patch, i.e. the area enclosed by four junctions, to place a circular 'hollow' junction target.</li>
+					<li>Drag the target in any direction to warp the entire patch, by moving its four junctions simultaneously and in relation to each other.</li> 
+				</ul>	
+		</details>
+
+		<details>
+			<summary>To adjust a junction's control handles:</summary>
+				<ul>
+					<li>Select a junction and drag one of its control handles.</li>
+				</ul>
+		</details>
+
+		<details>
+			<summary><img src="../../../shared/ui/snapping.png" class="tool" width="18" height="18" alt="Snapping" /> To snap junctions globally:</summary>
+				<ol>
+					<li>On the <span class="ui">Toolbar</span>, select <span class="ui">Snapping</span>.</li>
+					<li>Drag a junction to page horizontal/vertical centre or page elements (e.g., margins and placed guides).</li>
+				</ol>
+		</details>
+
+		<details>
+			<summary>To align junctions using snapping:</summary>
+				<ol>
+					<li>On the warp group's context toolbar, select a <span class="ui">Snap</span> menu option.
+						<ul>
+							<li><img src="../../../shared/ui/snap_align_selected.png" class="tool" width="16" height="16" alt="Align to nodes of selected curves" /> <span class="ui">Align to nodes of selected curves</span>&#8212;will horizontally or vertically align any node you drag to any other node in the same warp group.</li>
+							<li><img src="../../../shared/ui/snap_selected_dragging.png" class="tool" width="16" height="16" alt="Snap all selected nodes when dragging" /> <span class="ui">Snap all selected nodes when dragging</span>&#8212;will snap multiple selected nodes, when dragging, to a "target" node in the same warp group.</li>
+						</ul>
+					</li>
+				</ol>
+		</details>
+
+		<details>
+			<summary>To edit warp objects:</summary>
+			<p>Do any of the following:</p>
+			<ol>
+				<li>With the <span class="ui">Move Tool</span> active, click on the target object in the warp group until it becomes selected.</li>
+				<li>Edit the object as you would normally do.</li>
+			</ol>
+		</details>
+
+			<aside class="box note">
+				<h3>Modifier keys</h3>
+				<p>When using the Node Tool, the following modifier keys can be used to edit the mesh:</p>
+				<ul>
+					<li>Pressing the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> while dragging a selected junction(s) will constrain vertically, horizontally or diagonally (45&#176;).</li>
+					<li>Select junctions with the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> pressed to create multiple selections; tap individual junctions to remove from the selection.</li>
+					<li>Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and dragging a control handle creates a sharp (cusp) corner on a mesh junction.</li>
+					<li>Pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> and drag over junctions to select multiple junctions within the drawn lasso area. Alternatively, select by drawing polygonal areas click-by-click.</li>
+					<li>The <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> temporarily overrides snapping.</li>
+					<li><span class="key CMD-TAG"></span><span class="key">Y</span> toggles between the active warp and an X-ray 'filled' view mode showing the warp muted (unwarped).</li>
+				</ul>				
+			</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="transform.html">Transforming objects</a></li>
+			<li><a href="group.html">Grouping objects</a></li>
+			<li><a href="../CurvesShapes/select_align_nodes.html">Selecting and aligning nodes</a></li>			
+			<li><a href="../DesignAids/snapping.html">Snapping</a></li>
+			<li><a href="../Filters/filter_perspective.html">Perspective filter</a></li>
+			<li><a href="../Filters/filter_meshWarp.html">Mesh Warp filter</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

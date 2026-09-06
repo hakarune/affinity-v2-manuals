@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="selecting objects, next, previous, vector, select, select same, select object, select type" />
+	<meta name="description" content="Selecting objects allows you to move and modify them." />
+	<title>Selecting objects</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Selecting objects</h1>
+
+		<p>Before you can move or modify vector objects, you must first select them.</p>
+		
+		<figure>
+			<div class="single">
+				<img src="../../../shared/selecting_objects.png" alt="Selecting objects" />
+			</div>
+			<figcaption></figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>The fundamental methods of selecting objects described here are complemented by advanced <span class="ui">Select Same</span> and <span class="ui">Select Object</span> commands that <a href="selectByAttribute.html">build selections based on object attributes</a>, such as object type, fill colour, or stroke width.</p>
+		</aside>
+		
+	</header>
+	
+	<section class="about">
+	
+		<h2>Auto-select</h2>
+	
+		<p>By default, the <span class="ui">Auto-select</span> option is checked on the context toolbar. As expected, it automatically selects the object and its layer when you click to select it on the page. The option can be disabled if preferred.</p>
+		
+	</section>
+	
+	<section class="about">
+		<p>You can select single or multiple objects using a variety of methods. If you already have an object selected, you can quickly select the next or previous object in the z-order (stack).</p>
+		
+		<p>When shapes are created, a base box will be established on creation to accommodate the range of different potential shape sizes when creating variants of that shape. For tighter snapping, you can manually swap to a tight bounding box using the <span class="ui">Cycle Selection Box</span> option on the <span class="ui">Select</span> Menu.</p>
+		
+		<h2>Edit All Layers and Select All</h2>
+		<p>The behaviour of the Select All command depends on the <span class="ui">Edit All Layers</span> setting on the <span class="ui">Layers</span> panel:</p>
+		<ul>
+			<li>When enabled, the command will select all objects across all layers and sub-layers.</li>
+			<li>If this option is off, only objects on the current layer are selected. Objects within sub-layers are not selected.</li>
+		</ul>
+
+		<aside class="box note">
+			<p>Edit All Layers is enabled by default but can be disabled at any time.</p>
+		</aside>
+	</section>
+
+	<section class="howto">
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/edit_all_layers.png" class="tool" width="16" height="16" alt="Edit All Layers" /> To toggle Edit All Layers:</summary>
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, click <span class="ui">Edit All Layers</span>.</li>
+			</ul>
+		</details>
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/move_tool.png" class="tool" width="18" height="18" alt="Move Tool" /> To select an object:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>With the <span class="ui">Move Tool</span> selected, click an object or group on the page to select it.</li>
+				<li>On the <span class="ui">Layers</span> panel, click an object entry.</li>
+			</ul>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/move_tool.png" class="tool" width="18" height="18" alt="Move Tool" /> To select multiple objects:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>With the <span class="ui">Move Tool</span> selected, <span class="key SHIFT-TAG"></span>-click each object on the page in turn to select them.</li>
+				<li>With the <span class="ui">Move Tool</span> selected, drag to draw a marquee around the object(s).*</li>
+			</ul>
+		</details>
+
+		<details>
+			<summary>To select all objects in a layer:</summary>
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, click a layer or sub-layer.</li>
+			</ul>
+		</details>
+		
+		<details>
+			<summary>To select all objects on a page:</summary>
+			<ul>
+				<li>From the <span class="ui">Select</span> menu, select <span class="ui">Select All</span>.</li>
+			</ul>
+		</details>
+		
+		<details>
+			<summary>To select other objects in a selected object's z-order:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>With the object selected, on the <span class="ui">Select</span> menu, choose:
+					<ul>
+						<li><span class="ui">Select Next</span> / <span class="ui">Select Previous</span>&#8212;selects an object adjacent to the selected object in z-order sequence, within the same layer, group or entire layer stack. The option will cycle selection from bottom to top and vice versa.</li>
+						<li><span class="ui">Select Top</span> / <span class="ui">Select Bottom</span>&#8212;as above but selection is made of the top or bottom object in the layer, group or entire layer stack in z-order.</li>
+						<li><span class="ui">Select Parent</span>&#8212;selects the parent clipping object, layer or group in which the selected object is placed.</li>
+					</ul>
+				</li>
+				<li><span class="key CLICK-TAG"></span>-click the object, then choose the same options as above from the pop-up menu.</li>
+			</ul>
+		</details>
+		
+		<details>
+			<summary>To control automatic selection behaviour:</summary>
+				<ul>
+				<li>On the Move Tool's context toolbar, choose one of the following options. These let you optionally select only objects or groups on the page, or just from the Layers panel (on-page selection is prevented).
+						<ul>
+							<li><span class="ui">On (default)</span>&#8212;objects and groups can be selected on the page or Layers panel.</li>
+							<li><span class="ui">Off</span>&#8212;objects and groups can be selected from the Layers panel only.</li>
+							<li><span class="ui">Objects</span>&#8212;only objects can be selected on the page, while grouped items will be selected as if ungrouped; layers, groups and objects can be selected from the Layers panel.</li>
+							<li><span class="ui">Groups</span>&#8212;only groups can be selected on the page; layers, groups and objects can be selected from the Layers panel.</li> 
+						</ul>
+				</li>
+				</ul>
+		</details>
+		
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the <span class="ui">Move Tool</span>, the following modifier keys can be used to aid layer selection:</p>
+			<ul>
+				<li>With the <span class="ui">Auto-select</span> option disabled:
+					<ul>
+						<li><span class="key CMD-TAG"></span>-click an object on the page to to temporarily override the option and enable the selection.</li>
+					</ul>
+				</li>
+				<li>With the <span class="ui">Auto-select</span> option enabled:
+					<ul>
+						<li>On the layers panel, holding the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> and clicking selects multiple objects. The same is achieved by clicking objects on the page whilst holding the key.</li>
+						<li class="osx">Holding the <span class="key CMD-TAG"></span>+<span class="key SHIFT-TAG"></span> keys while clicking on multiple objects on the page in turn, selects them.</li>
+						<li class="win32">Holding the <span class="key CTRL-TAG"></span>+<span class="key SHIFT-TAG"></span> keys while clicking on multiple objects on the page in turn, selects them.</li>
+						<li><span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>-click a layer in the panel temporarily disables the whole composition preview leaving only the one (clicked on) selected&#8212;helpful in confirming selection of layers in complex compositions.</li>
+						<li>The <span class="key">.</span> <span class="KEY-TAG"></span> toggles a shape's bounding box between a default Base box and a Regular bounds box; the former accommodates the range of different potential shape sizes when creating variants of that shape; the latter lets you manually swap to a tighter regular bounding box, for tighter snapping control. Alternatively, use <span class="ui">Cycle Selection Box</span> on the <span class="ui">Select</span> Menu.</li>
+						<li class="osx">As you drag a selection marquee, pressing the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> selects objects which are only partially covered by the selection marquee. This behaviour can be made the default in Settings (Preferences)*.</li>
+					</ul>
+				</li>
+			</ul>
+		</aside>
+
+		<aside class="box tip">
+			<p><img src="../../../shared/ui/lock_layer.png" class="tool" width="16" height="16" alt="Lock/Unlock" /> You can <span class="ui">Lock</span>/<span class="ui">Unlock</span> selected objects from the <span class="ui">Layers</span> panel or <span class="ui">Layer</span> menu.</p>
+		</aside>
+		
+		<aside class="box tip">
+			<p>Locate a layer in the Layers panel, by <span class="key CLICK-TAG"></span>-clicking on an object on the page and selecting <span class="ui">Find in Layers Panel</span>.</p>
+		</aside>
+		
+		<aside class="box prefs">
+			<h3>Settings (or Preferences)</h3>
+			<p>Related behaviours can be adjusted from <a href="../Workspace/preferences.html">the app's settings</a>:</p>
+			<ul>
+				<li><span class="ui">General&gt;Prefer to keep selection after delete</span></li>
+				<li><span class="ui">*Tools&gt;Select object when intersects with selection marquee</span></li>
+				<li><span class="ui">User Interface&gt;Auto-scroll to show selection in Layers panel</span></li>
+			</ul>			
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selectByAttribute.html">Selecting objects by attribute</a></li>
+			<li><a href="../Tools/tools_move.html">Move Tool</a></li>
+			<li><a href="group.html">Grouping objects</a></li>
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../Layers/selectEditLayers.html">Selecting and editing layers</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

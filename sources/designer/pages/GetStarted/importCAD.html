@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="import, dwg, dxf, autocad, cad" />
+	<meta name="description" content="Importing CAD documents." />
+	<title>Importing CAD documents</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Importing CAD documents</h1>
+
+		<p>Affinity imports CAD documents from Autodesk® AutoCAD® apps and other CAD-based apps that output DWG or DXF files.</p>
+		
+	<figure>
+		<div class="single">
+			<img src="../../../shared/cad_import.jpg" alt="Imported CAD DWG/DXF" />
+		</div>
+		<figcaption></figcaption>
+	</figure>
+
+	</header>
+
+	<section class="about">
+
+	<p>The importing of CAD documents is a one-way process. You cannot overwrite the original file once it has been imported, instead saving it as an Affinity document. However, you can edit the CAD content and then export the file as a PDF document.</p>
+	
+	<p>The DWG file format is the proprietary vector-based format for Autodesk® AutoCAD® apps. CAD apps can save to the DXF interchange file format, allowing easier importing of AutoCAD designs into a wider range of third-party apps.</p>
+	
+	<p>Any drawing scale used in the CAD document is automatically applied to the new document (shown in <span class="ui">File&gt;Document Setup</span> and when using the <span class="ui">Measure Tool</span>).</p>
+
+		<aside class="box note">
+			<p>DWG or DXF files can be easily placed into an existing document using <span class="ui">File&gt;Place</span>.</p>
+		</aside>
+		
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To import CAD documents (DWG/DXF):</summary>
+			<ol>
+				<li>Do one of the following:
+					<ul>
+						<li>From the <span class="ui">File</span> menu, click <span class="ui">Open</span>.</li>
+						<li>Double-click anywhere in the empty view. (Only available when no other documents are open.)</li>
+					</ul>
+				</li>
+				<li>Select the file you want and click <span class="ui">Open</span>.</li>
+				<li>On the Import Options dialog, you can choose:
+					<ul>
+						<li><span class="ui">Selection</span>&#8212;chooses the CAD layout(s) or the model to import.
+							<ul>
+								<li><span class="ui">All Pages</span>&#8212;imports one or more Paper Space layouts if present, excluding the Model space. Each layout becomes a separate artboard.</li>
+								<li><span class="ui">Single Page</span>&#8212;imports an individual Paper Space layout if present; you can choose the specific layout from an additional <span class="ui">Selected Page</span> option.</li>
+								<li><span class="ui">Model</span>&#8212;imports just the Model space (with margins and offsets) without Paper Space layouts.</li>
+							</ul>
+						</li>
+						<li><span class="ui">Insertion units</span>&#8212;sets the document units for the document when <span class="ui">Model</span> is chosen.</li>						
+						<li><span class="ui">DPI</span>&#8212;sets the resolution for the document.</li>
+						<li><span class="ui">Background colour</span>&#8212;adds a background colour of your choice to the artboard or page (as a coloured rectangle).</li>
+						<li><span class="ui">Colour override</span>&#8212;this changes the colour of all strokes in the document. Gradient fills use the colour with adjusted luminosities for gradient colours.</li>
+						<li><span class="ui">Remove hidden items</span>&#8212;if checked, hidden or frozen layers are excluded on import.</li>
+						<li><span class="ui">Display entity handles</span>&#8212;when enabled, each imported named entity is given a handle suffix, e.g. HATCH - 0x19C2 instead of HATCH. Use for troubleshooting problems with individual entities.</li>
+						<li><span class="ui">Override line weights</span>&#8212;when <span class="ui">Selection</span> is set to Model, all line weights will be set to 0.1 pt with this option enabled.</li>
+					</ul>
+				</li>
+			</ol>
+
+	<p>Once open, you can display the CAD design as it would be seen in a CAD app by using the <span class="ui">Hairline</span> view mode (<span class="ui">View&gt;View Modes</span>).</p>			
+			
+		<x-osx>
+			<details open="open">
+				<summary>To import a CAD document (via Finder):</summary>
+				<ul>
+					<li>Open Finder and drag the DWG/DXF file to an off page area of your workspace.</li>
+				</ul>
+			</details>
+		</x-osx>
+		
+		<x-win32>
+			<details open="open">
+				<summary>To import a CAD document (via Explorer):</summary>
+				<ul>
+					<li>Open Explorer and drag the DWG/DXF file to an off page area of your workspace.</li>
+				</ul>
+			</details>
+		</x-win32>	
+
+		</details>		
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="view.html">Viewing</a></li>
+			<li><a href="openDocument.html">Open documents and images</a></li>
+			<li><a href="importPDF.html">Importing PDF documents</a></li>
+			<li><a href="importAdobe.html">Importing other Adobe documents</a></li>
+			<li><a href="../Media/placeImages.html">Placing content</a></li>
+			<li><a href="../DesignAids/measuring.html">Measuring</a></li>
+			<li><a href="../Clr/ClrProfiles.html">Colour management</a></li>
+			<li><a href="../Appendix/fileformat.html">Supported file formats</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

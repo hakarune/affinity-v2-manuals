@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="pencil, raster, tool, vector, lines, shapes" />
+	<meta name="description" content="The Pencil Tool allows you to create hand-drawn lines and shapes." />
+	<title>Pencil Tool</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1><img src="../../../shared/ui/pencil_tool.png" class="tool heading" width="18" height="18" alt="Pencil Tool" /> Pencil Tool</h1>
+
+		<p>With the <span class="ui">Pencil Tool</span> you can create a hand-drawn look by drawing freehand, variable width, lines as if you were drawing on paper.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<p>As you draw, nodes are created automatically along the stroke which can optionally be smoothed as you draw by enabling the <span class="ui">Stabiliser</span> feature. A <span class="ui">Sculpt</span> mode also lets you reform or continue your pencil stroke at any time, although you can use the <span class="ui">Node Tool</span> to edit too. When using a combination of sculpting and Use Fill, you can form conjoined pencil strokes that can take a fill with the stroke's concave area.</p>
+
+		<p>Its variable width lines can be controlled either by velocity&#8212;most useful when drawing with a mouse&#8212;or by pressure&#8212;for use when drawing with a pressure sensitive pen tablet.</p>
+
+		<h2>Adjusting the tool's appearance</h2>
+		
+		<p>Line styles are applied using the <span class="ui">Stroke</span> panel. For brush textures, pick a brush from the <span class="ui">Brushes</span> panel.</p>
+
+		<aside class="box tip">
+			<p>Tool shortcut <span class="KEY-TAG"></span>: <span class="key">N</span></p>
+		</aside>
+		
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+		
+		<p>The following settings can be adjusted from the context toolbar:</p>
+			<ul>
+				<li><span class="ui">Stroke</span>&#8212;the colour of your stroke. Click the colour swatch to select from solid colours, a picked colour, colour gradients or from your preset or custom colour swatches.</li>
+				<li><span class="ui">Width</span>&#8212;the line thickness in points. Type directly in the text box or drag the pop-up slider to set the value.</li>
+				<li><img src="../../../shared/ui/SculptMode.png" class="tool" width="16" height="16" alt="Sculpt Mode" /> <span class="ui">Sculpt</span>&#8212;when enabled, any selected pencil stroke can be reshaped or continued; the former by drawing new start and end stops anywhere along the pencil stroke, the latter by drawing from either stroke end node.</li>
+				<li><span class="ui">Controller</span>&#8212;controls whether the tool is sensitive to real pressure (<i>Pressure</i>) or speed of mouse movement (<i>Velocity</i> or <i>Inverse Velocity</i>). Select <i>None</i> to use neither.</li>
+				<li><span class="ui">Stabiliser</span>&#8212;enables stroke stabilisation using one of two modes:
+					<ul>
+						<li><img src="../../../shared/ui/stabiliser_rope.png" class="tool" width="16" height="16" alt="Rope stabilisation mode" /> <span class="ui">Rope mode</span>&#8212;drags the stroke end by a 'rope' to smooth the stroke but lets you introduce sharp corners at increasing rope <i>Length</i> (radius) values by redirecting the slackened rope.</li>
+						<li><img src="../../../shared/ui/stabiliser_window.png" class="tool" width="16" height="16" alt="Window stabilisation mode" /> <span class="ui">Window mode</span>&#8212;smoothes the stroke by averaging sampled input positions within a <i>Window</i> whose size is configurable.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Use Fill</span>&#8212;when checked, the concave area of the stroke is filled with the currently set fill colour (from <span class="ui">Colour</span> panel) as you draw. In Sculpt mode, continuing strokes remains as one object, which allows the fill to be applied along the stroke's length.</li>
+				<li><span class="ui">Auto Close</span>&#8212;when enabled, the start and end nodes of the pencil stroke are connected to form a closed shape. The nodes become smooth nodes so a natural curve is created on closing.</li>
+			</ul>
+		
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../CurvesShapes/draw_linesAndShapes.html">Draw curves and shapes</a></li>
+			<li><a href="../CurvesShapes/edit_linesAndShapes.html">Edit curves and shapes</a></li>
+			<li><a href="tools_node.html">Node Tool</a></li>
+			<li><a href="tools_pen.html">Pen Tool</a></li>
+			<li><a href="../Panels/strokePanel.html">Stroke panel</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

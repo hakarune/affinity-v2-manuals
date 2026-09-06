@@ -1,0 +1,15 @@
+This repository contains two kinds of material with different terms.
+
+TOOLING
+  The scripts, configuration, and workflow files (scripts/, config/, .github/)
+  are licensed under the MIT License. See LICENSE.
+
+ARCHIVED CONTENT
+  Files under manuals/ and sources/ reproduce the official Affinity help
+  documentation for Affinity Photo 2, Affinity Designer 2, and Affinity
+  Publisher 2. That text and the accompanying images are the copyright of
+  Serif (Europe) Ltd. They are included here only for offline reference. This
+  project is not affiliated with, authorised by, or endorsed by Serif.
+
+  If you are a rights holder and want content removed, open an issue in this
+  repository and it will be taken down.

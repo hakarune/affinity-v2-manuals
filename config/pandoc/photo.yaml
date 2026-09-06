@@ -1,0 +1,13 @@
+# Passed to pandoc via --metadata-file when building the Photo EPUB / PDF / HTML.
+title: "Affinity Photo 2 — User Manual"
+subtitle: "Community offline archive"
+author: "Serif (Europe) Ltd"
+rights: >
+  Copyright Serif (Europe) Ltd. Reproduced for offline personal reference.
+  Not affiliated with, authorised by, or endorsed by Serif.
+lang: en-GB
+toc-title: "Contents"
+geometry: "a4paper,margin=2.2cm"
+fontsize: 10pt
+linkcolor: "RoyalBlue"
+urlcolor: "RoyalBlue"

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="arrange, layers" />
+	<meta name="description" content="Use hide, show, and reorder layers to control which objects display and in what order." />
+	<title>Arrange/manage layers</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Arrange/manage layers</h1>
+
+		<p>Arrange and manage layer operations let you show/hide, reorder, duplicate, or lock layers.</p>
+		
+		<figure>
+			<div class="comparison">
+				<img src="../../images/layerorder1.png" alt="Before" />
+				<div><img src="../../images/layerorder2.png" alt="After" /></div>
+			</div>
+			<figcaption>Reordering an object in the Layers panel</figcaption>
+		</figure>
+	</header>
+	
+	<section class="about">
+	<p>Show or hide layers to include/exclude layers (and layer objects) in your document and any output. You can also hide/show a selection of layers in one operation, as well as all other layers apart from any currently selected layers.</p>
+	<p>Any layer can also be reordered in the layer stack to change layer object ordering, or duplicated to improve efficiency. Locking prevents a layer or layer objects from being moved, resized, flipped or rotated (but still remains editable).</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/visibility_on.png" class="tool" width="16" height="16" alt="Toggle Visibility" /> To hide or show a layer:</summary>
+
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, disable or enable <span class="ui">Toggle Visibility</span> on the layer entry.</li>
+			</ul>
+			
+		<aside class="box note">
+			<p>Hidden layers will not print or export.</p>
+		</aside>
+		
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/visibility_on.png" class="tool" width="16" height="16" alt="Toggle Visibility" /> To hide or show selected layers in one operation:</summary>
+
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select multiple layers using <span class="key SHIFT-TAG"></span>-click or <span class="key CMD-TAG"></span>-click.</li>
+				<li>Click on the <span class="ui">Toggle Visibility</span> icon on any of the selected layers.</li>
+			</ol>
+			
+		</details>
+		
+		<details open="open">
+			<summary>To show all hidden layers:</summary>
+
+			<ul>
+				<li>On the <span class="ui">Layer</span> menu, select <span class="ui">Show All</span>.</li>
+			</ul>
+
+			<aside class="box note">
+				<p>If a hidden layer(s) is selected before Show All is applied, only that layer will be displayed, instead of all layers.</p>
+			</aside>
+			
+		</details>
+		
+		<details open="open">
+			<summary>To hide or show all other layers (except selected):</summary>
+
+			<ul>
+				<li>On the <span class="ui">Layers</span> panel, do one of the following:
+					<ul>
+						<li><img src="../../../shared/ui/visibility_on.png" class="tool" width="16" height="16" alt="Toggle Visibility" /> <span class="key CLICK-TAG"></span>-click <span class="ui">Toggle Visibility</span>, and select <span class="ui">Hide Others</span> or <span class="ui">Show Others</span> from the pop-up menu. For multiple selected layers, any of the selected layers can be targeted.</li>
+						<li><span class="key CLICK-TAG"></span>-click a layer and select the same options from the pop-up menu.</li>
+					</ul>
+				</li>
+			</ul>			
+
+		</details>
+
+		<details open="open">
+			<summary>To reorder layers:</summary>
+
+			<p>Do one of the following:</p>
+			<ul>
+				<li>
+					<p>Drag a layer entry up/down the layer stack. When you see a blue line between two layers, drop the layer to place.</p>
+					<p>If you pause during the drag procedure, you'll see a preview on the page for the current operation.</p>
+				</li>
+				<li>When a layer is selected, click the <span class="ui">Move to Back</span>, <span class="ui">Back One</span>, <span class="ui">Forward One</span> or <span class="ui">Move to Front</span> button on the top toolbar. Using these buttons, child layers can only be reordered within their parent layer.</li>
+			</ul>
+
+			<aside class="box note">
+				<p>When you move a layer, the content of the layer moves with it.</p>
+			</aside>
+		</details>
+		
+		<details>
+			<summary>To duplicate a layer:</summary>
+
+			<ol>
+				<li>In the <span class="ui">Layers</span> panel, select a layer.</li>
+				<li>In the <span class="ui">Edit</span> menu, select <span class="ui">Duplicate</span>.</li>
+			</ol>
+			<p>The duplicate layer is added above the selected layer.</p>
+
+		</details>
+
+		<details>
+			<summary><img src="../../../shared/ui/lock_layer.png" class="tool" width="16" height="16" alt="Lock/Unlock" /> To lock a layer (or layer object):</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, select the layer(s) or object(s) to be locked.</li>
+				<li>Do one of the following:
+					<ul>
+						<li>Select <span class="ui">Lock/Unlock</span>.</li>
+						<li>From the <span class="ui">Layer</span> menu, select <span class="ui">Lock</span>.</li>
+					</ul>
+				</li>
+			</ol>
+
+			<p>Select <span class="ui">Lock/Unlock</span> again or use the <span class="ui">Layer</span> menu's <span class="ui">Unlock</span> item, to allow the layer contents or object to be transformed again.</p>
+
+			<aside class="box tip">
+				<p>To quickly lock an individual layer or object, position the cursor to the left of its visibility button on the Layers panel and click the lock icon that appears.</p>
+			</aside>
+
+			<aside class="box note">
+				<p>Layers or objects which are locked show in the Layers panel with a lock symbol, <img src="../../../shared/ui/locked_layer.png" width="12" height="12" alt="Locked layer" />, next to them. Selected locked layers appear with crosses around the bounding box.</p>
+			</aside>
+			
+		</details>
+		
+		<details>
+			<summary>To unlock all layers (or layer objects):</summary>
+
+			<ul>
+				<li>From the <span class="ui">Layer</span> menu, select <span class="ui">Unlock All</span>.</li>
+			</ul>
+			
+			<aside class="box note">
+				<p>If any locked layer(s) is selected before Unlock All is applied, only that layer will be unlocked, instead of all layers.</p>
+			</aside>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selectEditLayers.html">Selecting and editing layers</a></li>
+			<li><a href="createLayers.html">Create layers</a></li>
+			<li><a href="LayerMasks.html">Using layer masks</a></li>
+			<li><a href="adjustmentLayers.html">Using adjustment layers</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

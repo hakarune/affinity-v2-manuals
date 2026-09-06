@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="vector, flood, fill, tool" />
+	<meta name="description" content="Flood design areas with new filled shapes." />
+	<title>Flooding areas</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Flooding areas</h1>
+	
+		<p>The <span class="ui">Vector Flood Fill Tool</span> lets you flood areas with colour and texture as well as areas that can't otherwise be filled because they are not closed objects. New shapes are created as a result.</p>
+
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/vectorfloodfill_before.jpg" alt="Flooding areas with colour before" />
+				<div><img src="../../../shared/vectorfloodfill_after.jpg" alt="Flooding area with colour after" /></div>
+			</div>
+			<figcaption>Before and after flood filling using solid colour. The Before image shows the filling of both individual areas (by clicking) or adjacent areas (by dragging).</figcaption>
+		</figure>
+
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/vectorfloodfill_gradientbitmap_before.jpg" alt="Flooding areas with gradients and bitmaps before" />
+				<div><img src="../../../shared/vectorfloodfill_gradientbitmap_after.jpg" alt="Flooding areas with gradients and bitmaps after" /></div>
+			</div>
+			<figcaption>Before and after flood filling using gradient fills and bitmaps.</figcaption>
+		</figure>
+	</header>
+
+ 	<section class="about">
+ 
+		<h2>About vector flood filling</h2>
+
+		<p>Flood filling lets you 'colour in' areas of your design that can't otherwise be filled with the <span class="ui">Fill Tool</span>. This includes areas created from overlapping closed/geometric shapes as well as open curves.</p>
+	
+		<p>The <span class="ui">Vector Flood Fill Tool</span> detects edges in your drawing and then, if a fully enclosed area is detected, it will flood fill to the area's boundary. The current solid colour (in the Tools, Colour or Swatches panels) or colour gradient (in the Swatches panel) is used for the fill, thus creating a new shape. Assets (vector and bitmap), stock images and folder images (from your operating system) can also be used to flood fill.</p>
+		
+		<p>Some examples include:</p>
+		
+		<ul>
+			<li>Flooding areas formed by crossing pencil lines</li>
+			<li>Creating complex filled vector meshes</li>
+			<li>Quick recolouring of individual shapes</li>
+			<li>Recolouring areas in architectural line drawings non-destructively</li>
+		</ul>
+
+		<p>Flooding is carried out by clicking on areas or dragging across multiple areas. The latter being a quick technique that avoids flooding specific objects one-by-one. You can flood fill any object even if it is not selected (filling the whole object) but you can select objects in advance if you want flooding to take into account intersecting shapes and curves.</p>
+
+		<aside class="box tip">
+			<p>The area to be flooded must be self-contained by a curve's or shape's edges. The concave area formed from open curves cannot be flooded if not intersected by another curve.</p>
+		</aside>
+		
+		<h3>Fill types</h3>
+		
+		<p>The tool can flood with different types of fills, i.e.</p>
+		
+		<ul>
+			<li>solid or gradient fills&#8212;from the <span class="ui">Colour</span> panel (solid fills only) or <span class="ui">Swatches</span> panel.</li>
+			<li>vector designs&#8212;from vector assets stored in the <span class="ui">Assets</span> panel. Note that these are converted to bitmap fills.</li>
+			<li class="osx">bitmaps&#8212;from raster assets (<span class="ui">Assets</span> panel), stock images or images dragged from Finder.</li>
+			<li class="win32">bitmaps&#8212;from raster assets (<span class="ui">Assets</span> panel), stock images or images dragged from File Explorer.</li>
+		</ul>
+
+		<h4>Scaling with gradient and bitmap fills</h4>
+		
+		<p>You can select the layer object of any gradient or bitmap fill for editing with the <span class="ui">Fill Tool</span>&#8212;this could include swapping the gradient type, adjusting how the gradient/bitmap fill scales or how the bitmap pattern extends.</p>
+		
+		<aside class="box note">
+			<p>When applied, the gradient or bitmap fill is scaled to span all areas being flood filled. Separate areas being flooded with the same fill cannot adopt their own indedendent gradient/bitmap scaling.</p>
+		</aside>
+
+		<h4>Flood filling with multiple transparent fills</h4>
+
+		<p>If any of the above fills have reduced opacity or have alpha, they can optionally be 'layered up' to create multi-fill effects when applied in multiples. For example, textures possessing transparency and/or transparency gradients can be placed over a base solid colour. A <span class="ui">Fill mode</span> on the tool's context toolbar lets you stack or replace fills.</p>
+		
+		<figure class="nft overrideDE overrideFR">
+			<div class="single">
+				<img src="../../images/panel_appearance_floodfills.png" class="screenshot" alt="Appearance panel after flood filling" />
+			</div>
+			<figcaption>Appearance panel showing multiple semi-transparent gradient and bitmap fills on a target area.</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>Flooding with a solid fill will always completely replace any existing semi-transparent fill stack.</p>
+		</aside>
+		
+		<h4>Filling to visible boundaries</h4>
+
+		<p>When dragging across areas to flood fill, you can enable <span class="ui">Fill to Visible Boundaries</span> to fill to overlapping shapes' outlines and either detect (and fill to) internal edges or ignore internal edges. For the latter, if shapes have the same fill colour, then the flood fill will extend the fill to encompass those shapes automatically.</p>
+		
+		<figure>
+			<div class="single">
+				<img src="../../../shared/vectorfloodfill_boundaries.png" class="screenshot" alt="" />
+			</div>
+			<figcaption>Flood filling (with green colour) with Fill to Visible Boundaries disabled (A) and enabled (B).</figcaption>
+		</figure>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/vector_flood_fill_tool.png" class="tool" width="18" height="18" alt="Vector Flood Fill Tool" /> To flood an object with colour:</summary>
+			<ol>
+				<li>Select the <span class="ui">Vector Flood Fill Tool</span>.</li>
+				<li>Set your preferred fill in the <span class="ui">Colour</span> or <span class="ui">Swatches</span> panel, or from the <span class="ui">Tools</span> panel.</li>
+				<li>(Optional) On the context toolbar, set a <span class="ui">Fill mode</span> to control if semi-transparent fills are added to, smart refilled (ignoring identical fills) or replaced in a fill stack.</li> 
+				<li>Click on an object. This doesn't require the object to be selected.</li>
+			</ol>		
+
+		<aside class="box tip">
+			<p>You can drag a swatch from the <span class="ui">Swatches</span> panel onto an object too; a hover-over preview will be offered.</p>
+		</aside>
+
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/vector_flood_fill_tool.png" class="tool" width="18" height="18" alt="Vector Flood Fill Tool" /> To flood an object with a bitmap fill:</summary>
+			<ol>
+				<li>Select the <span class="ui">Vector Flood Fill Tool</span>.</li>
+				<li>Do one of the following:				
+					<ul>
+						<li>On the context toolbar, click <span class="ui">Set Bitmap Fill</span> then navigate to and select your image. Click <span class="ui">Open</span>.</li>
+						<li>On the <span class="ui">Assets</span> panel, select your vector or raster asset.</li>
+						<li>On the <span class="ui">Stock</span> panel, search for and select a stock image.</li>
+					</ul>
+				</li>
+				<li>(Optional) On the context toolbar, set a <span class="ui">Fill mode</span> for transparent bitmap fills as described in the previous procedure.</li>
+				<li>Click on an object.</li>
+			</ol>
+
+		<p>Set the context toolbar's <span class="ui">Fit mode</span> to control its scaling in advance of flood filling.</p>								
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/vector_flood_fill_tool.png" class="tool" width="18" height="18" alt="Vector Flood Fill Tool" /> To flood fill areas on multiple objects that possess intersecting curves and shapes:</summary>
+			<ol>
+				<li>Select the <span class="ui">Vector Flood Fill Tool</span>.</li>
+				<li>Drag a marquee selection over the objects whose areas you want to target, or select objects via the <span class="ui">Layers</span> panel.</li>
+				<li>Set your preferred colour or bitmap to flood fill.</li>
+				<li><img src="../../../shared/ui/fill_inside.png" class="tool" width="16" height="16" alt="Inside" /> <img src="../../../shared/ui/fill_inbetween.png" class="tool" width="16" height="16" alt="In-between" /> (Optional) On the context toolbar, choose an <span class="ui">Insertion mode</span> to control whether the new shape is to be clipped within the existing upper shape (<span class="ui">Inside</span>) or added between the shapes (<span class="ui">In-between</span>).</li>
+				<li>(Optional) On the context toolbar, set a <span class="ui">Fill mode</span> as described in the previous procedures.</li>
+				<li><img src="../../../shared/ui/fill_to_boundaries.png" class="tool" width="16" height="16" alt="Fill to boundaries" /> (Optional) On the context toolbar, enable <span class="ui">Fill to Visible Boundaries</span> to extend the fill to the outline of a shape or a curve's path, ignoring the areas formed by the overlap.</li> 
+				<li>Do one of the following:
+					<ul>
+						<li>Click on an object.</li>
+						<li>Drag across multiple enclosed areas.</li>
+					</ul>
+				</li>
+			</ol>		
+		</details>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+
+			<p>The following modifier keys can be used for selection of objects when flooding shapes:</p>
+			
+				<ul>
+					<li>The <span class="key SHIFT-TAG"></span> and <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>s add objects to the current selection when clicked.</li>
+					<li>The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> clears the selected areas when clicked and makes a new layer selection of the clicked object.</li>
+				</ul>			
+		</aside>
+
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_vectorFloodFill.html">Vector Flood Fill Tool</a></li>
+			<li><a href="../Clr/gradientEditor.html">Gradient and bitmap fills</a></li>
+			<li><a href="../CurvesShapes/multiStrokesAndFills.html">Using multiple strokes and fills</a></li>
+			<li><a href="../ObjectControl/converttocurves.html">Converting objects to curves</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

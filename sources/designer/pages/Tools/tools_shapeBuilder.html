@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="shape builder, join, curves" />
+	<meta name="description" content="The tool adds separate shapes together to make more complex shape designs." />
+	<title>Shape Builder Tool</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1><img src="../../../shared/ui/Shape_builder.png" class="tool heading" width="18" height="18" alt="Shape Builder Tool" /> Shape Builder Tool</h1>
+
+		<p>The <span class="ui">Shape Builder Tool</span> adds separate shapes together to make more complex shape designs. Shape areas can also be deleted.</p>
+
+	</header>
+	
+	<section class="about">
+		<p>The tool lets you initially select objects to be included in the shape building operation. By default, you can then select 'candidate' shape areas within that selection and add, delete or create them as a final step. Alternatively, a one-step select-and-add, select-and-delete and select-and-create approach can be taken.</p>
+		
+		<p>Adding and creating both produce a new combined shape but adding replaces the original shape areas, while creating forms a new object and retains the original shapes.</p>		
+		
+		<aside class="box tip">
+			<p>Tool shortcut <span class="KEY-TAG"></span>: <span class="key">S</span></p>
+		</aside>
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+		
+		<p>The following settings can be adjusted from the context toolbar:</p>
+			<ul>
+				<li><span class="ui">Action</span>&#8212;enables one of three shapebuilding modes:
+					<ul>
+						<li><img src="../../../shared/ui/add_to_shape.png" class="tool" width="16" height="16" alt="Add" /> If disabled, you can build up selected areas, then click this option to <em>add</em> them together once final selections are made; when enabled, shape areas are automatically added together in one operation according to the chosen drag method. For either state, the original object are replaced by the new combined shape.</li>
+						<li><img src="../../../shared/ui/remove_from_shape.png" class="tool" width="16" height="16" alt="Delete" /> If disabled, you can build up selected areas and then <em>remove</em> them by clicking this option; when enabled, areas are selected and deleted in one operation as you click.</li>
+						<li><img src="../../../shared/ui/create_new_shape.png" class="tool" width="16" height="16" alt="Create" /> As for the Add operation but a shape copy is <em>created</em>, leaving the original objects intact rather than removing them.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Drag method</span>&#8212;choose between using a freehand line, straight line or selection marquee to select areas or select-and-add areas in one operation.</li>
+				<li><span class="ui">Clean up</span>&#8212;offers menu options to automatically remove unwanted curves and shape areas when shapebuilding:
+					<ul>
+						<li><span class="ui">None</span>&#8212;no removal of internal curves, connected curves or shape areas occurs.</li>
+						<li><span class="ui">Internal curves</span>&#8212;parts of open curves extending into areas will be removed.</li>
+						<li><span class="ui">Connected curves</span>&#8212;open curves extending over selected/unselected area boundaries will be removed.</li>						
+						<li><span class="ui">All unused geometry</span>&#8212;shapes and open curves, both inside and outside of the selected area, will be removed.</li>
+					</ul>
+				</li>
+				<li><span class="ui">Use style from first selected area</span>&#8212;when checked, object styles (including fill/stroke colour, layer effects and stroke properties) are carried over to the new areas from the area you begin dragging from or drawing a marquee selection; dragging from outside the selected objects will only pick up the currently set default stroke/fill. When unchecked, the currently set default stroke/fill will be applied to all areas.</li>
+			</ul>
+				
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../ObjectControl/join_shapeBuilder.html">Adding objects by shape building</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

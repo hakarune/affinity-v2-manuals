@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="Dropbox, iCloud Drive, Linked Services, linked, missing, broken, resources, path" />
+	<meta name="description" content="Easily work across multiple devices on documents that contain linked resources stored in your Dropbox or iCloud Drive." />
+	<title>Linked Services</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Linked Services</h1>
+	
+		<p>Affinity's Linked Services feature allows for a seamless experience when a document uses linked resources stored in your Dropbox or iCloud Drive and you need to continue working on the document on a different device.</p>
+				
+	</header>
+
+	<section class="about">
+		<h2>Why Linked Services is necessary</h2>
+		<p>The path to a linked resource stored in Dropbox or iCloud Drive can be broken down into two parts. For example:</p>
+		
+		<p><span style="color: red">/Users/Serif/Dropbox</span><span style="color: green">/Affinity Projects/Flyer/Resources/image.tiff</span></p>
+
+		<p>The green part is the path to the resource within cloud storage and is the same on all devices.</p>
+
+		<p>The red part is the path to the folder to which cloud storage is synced. It may differ between devices, e.g. if user accounts have different names or Dropbox is configured to sync to a different drive, which can lead to missing resource warnings.</p>
+				
+		<p>Normally, Affinity stores the full path to any linked resource. With Linked Services, the device-specific part is replaced with a reference to the relevant cloud storage provider, and only the cloud-related part of the path is stored. The earlier example would then be stored as:</p>
+		
+		<p>Dropbox:/Affinity Projects/Flyer/Resources/image.tiff</p>
+
+		<p>Affinity knows to replace the prefixed reference with the path to cloud storage on the device that is currently in use.</p>
+		
+		<h2>iCloud Drive</h2>
+		<p>The benefits of Linked Services are automatic for linked resources in iCloud Drive. Your Mac, iPad or PC only needs to be signed into iCloud Drive via System Settings (or System Preferences), Settings or iCloud for Windows, respectively.</p>
+		
+		<h2>Dropbox</h2>
+		<p>You will need to install Dropbox's software and sign into the same account on each of your devices and then grant permission to each Affinity app on each of your devices to link to your Dropbox.</p>
+	</section>
+	
+	<section class="howto">	
+		<details open="open">
+			<summary>To link your Affinity app to your Dropbox account:</summary>
+			<ol>
+				<li class="osx">Select <span class="ui">Affinity Designer&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>).</li>
+				<li class="win32">Select <span class="ui">Edit&gt;Settings</span>.</li>
+				<li>Select <span class="ui">Linked Services</span>.</li>
+				<li>Next to Dropbox, click <span class="ui">Link</span>.</li>
+				<li>The Dropbox website will open. Follow its instructions to link your Dropbox account to Affinity. At the end of the process, you will be returned to your Affinity app.</li>
+			</ol>
+		</details>
+	
+		<details open="open">
+			<summary>To unlink your Affinity app from your Dropbox account:</summary>
+			<ol>
+				<li class="osx">Select <span class="ui">Affinity Designer&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>).</li>
+				<li class="win32">Select <span class="ui">Edit&gt;Settings</span>.</li>
+				<li>Select <span class="ui">Linked Services</span>.</li>
+				<li>Next to Dropbox, click <span class="ui">Unlink</span>.</li>	
+			</ol>
+		</details>
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Media/placeImages.html">Placing content</a></li>
+			<li><a href="../Media/resourceManager.html">Resource Manager</a></li>
+			<li><a href="../Workspace/preferences.html">Settings (or Preferences)</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

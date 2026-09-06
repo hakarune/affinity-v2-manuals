@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="adjustment, hue, lightness, saturation, hsl, luminosity" />
+	<meta name="description" content="Fine-tune, or completely change, colours by modifying the hue, staturation and luminosity." />
+	<title>HSL adjustment</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>HSL adjustment</h1>
+
+		<p>Fine-tune the colours in your image, or even completely change them, by modifying the hue, saturation and luminosity (lightness).</p>
+
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/adjustment_base.jpg" alt="Before" />
+				<div><img src="../../../shared/adjustment_hsl.jpg" alt="After" /></div>
+			</div>
+		</figure>
+
+	</header>
+
+	<section class="settings">
+
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted:</p>
+		<ul>
+			<li><span class="ui">HSV</span>&#8212;when checked, uses the Hue Saturation Value (HSV) model instead of Hue Saturation Lightness (HSL). The Saturation Shift and Luminosity Shift sliders behave differently between the two models.</li>	
+			<li><span class="ui">Colour Wheel</span>&#8212;when using a particular channel, allows you to determine the range of colours affected by that channel (e.g., <span class="ui">Greens</span>) using four nodes located on the wheel.</li>
+			<li><span class="ui">Channel</span>&#8212;represented as coloured circles under the wheel. Click the first (Master; multi-coloured) to alter all colours at once or click any other coloured circles to enable a specific colour set (e.g., Reds).</li>
+			<li><span class="ui">Picker</span>&#8212;allows you to sample a specific colour from your image on which to base your adjustment. The currently active solid colour circle will be updated after picking; the Master circle cannot be colour picked.</li>
+			<li><span class="ui">Hue Shift</span>&#8212;controls the colour tint of pixels in the image. Drag the slider to shift the colours through the spectrum.</li>
+			<li><span class="ui">Saturation Shift</span>&#8212;controls the intensity of the colours in the image. Drag the slider to the left to decrease colour intensity, drag to the right to increase it.</li>
+			<li><span class="ui">Luminosity Shift</span>&#8212;controls the overall brightness of the image. Drag the slider to the left to decrease brightness, drag to the right to increase it.</li>
+		</ul>
+
+		<aside class="box note">
+			<h3>Using the <span class="ui">Channel</span> nodes</h3>
+			<p>If choosing a specific channel, you can adjust that colour's range in different ways:</p>
+			<ul>
+				<li>Drag on an individual node to reposition it around the colour circle.</li>
+				<li>Drag the black line that connects the coloured nodes. The central line between inside nodes moves all four nodes simultaneously and in relation to each other. The black line between either outer node and its adjacent node moves just that pair of nodes independent of the other node pairing.</li>
+			</ul>
+		</aside>
+
+		<aside class="box tip">
+			<p>To create a desaturated (black and white) image, position the <span class="ui">Saturation Shift</span> slider to the far left with the <span class="ui">Master</span> channel selected.</p>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="adjustment_applying.html">Applying adjustments</a></li>
+			<li><a href="adjustment_reclr.html">Recolour adjustment</a></li>
+			<li><a href="adjustment_blackAndWhite.html">Black and White adjustment</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

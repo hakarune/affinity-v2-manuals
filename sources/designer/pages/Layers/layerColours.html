@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="layers, colour, nodes, path" />
+	<meta name="description" content="Use layer colours to change the UI display colour of all object's path, nodes and handles within a chosen layer." />
+	<title>Layer colours</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Layer colours</h1>
+
+		<p>Use layer colours to change the UI display colour of all object's path, nodes and handles within a chosen layer.</p>
+
+	<figure>
+		<div class="single">
+			<img src="../../../shared/layers_colour.png" alt="Layer colours" />
+		</div>
+		<figcaption>Different layer colours showing on the bounding boxes of objects (the panel's layer icon also shows the layer colour).</figcaption>
+	</figure>
+		
+	</header>
+
+	<section class="about">
+		
+		<h2>About layer colours</h2>
+
+		<p>Objects drawn outside of layers will adopt a default blue wireframe path, nodes and handles. For any layer you create, it will be assigned the same default blue colour but you can assign a different colour to the layer at any time. This means that any tool you use while drawing new objects or editing objects in that layer will adopt the current layer colour.</p>
+		
+		<aside class="box tip">
+			<p>This isn't the object's fill or stroke but the path, node or handle colour that shows only on object selection.</p>
+		</aside>
+	
+		<p>For reference, the layer colour is used to colour the layer type icon for the layer entry in the <span class="ui">Layers</span> panel.</p>
+		
+		<p>Use layer colours to either help visually identify which layer you're working on or to help distinguish an object's path, nodes and handles from low colour-contrast surroundings. For the latter, if you're drawing something blue (for example), the default layer colour of blue would mean that your object's path, nodes or handles could be hard to see, so choosing a different layer colour, e.g. orange, would improve UI visibility when you worked with objects on that layer.</p>
+
+		<aside class="box note">
+			<p>Layer tagging differs from using layer colours as tagging involves visually identifying layers by colour in the <span class="ui">Layers</span> panel to show those layers are related in some way.</p>
+		</aside>		 		
+	
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary>To assign a layer colour to a specific layer:</summary>
+			<ol>
+				<li>On the <span class="ui">Layers</span> panel, <span class="key CLICK-TAG"></span>-click a chosen layer and select <span class="ui">Properties</span>.</li>
+				<li>Click the swatch and select a colour from the pop-up menu.</li>
+			</ol>
+			
+	<p>Any object drawn in the layer will display paths, nodes and handles in that layer's layer colour.</p>
+		</details>	
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Panels/layersPanel.html">Layers panel</a></li>
+			<li><a href="../Layers/tagLayers.html">Tagging layers</a></li>		
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

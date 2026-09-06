@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="filter, warp, mesh warp, mesh grid, distort, distortion, distorting, retouch, retouching, transforming" />
+	<meta name="description" content="The Mesh Warp filter allows you to manipulate a flexible mesh grid to warp an image or a vector shape." />
+	<title>Mesh Warp</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1><img src="../../../shared/ui/pixel_persona_on.png" class="tool" width="24" height="24" alt="Pixel Persona" /> Mesh Warp</h1>
+
+		<p>The Mesh Warp filter can be used to distort specific areas of an image without affecting other areas.</p>
+		
+		<p>For example, it can be used for dramatic warping effects on a text, shapes, vector curves or even brush strokes amongst other design elements.</p>
+		
+		<figure>
+			<div class="comparison large">
+				<img src="../../../shared/warp_before.png" alt="Before" />
+				<div><img src="../../../shared/warp_after.png" alt="After" /></div>
+			</div>
+			<figcaption>Warping a vector graphic.</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+		<h2>About Live Mesh Warp</h2>
+		<p>This filter is applied on its own layer as a non-destructive, live filter. It can be accessed from the Pixel Persona, via the <span class="ui">Layer</span> menu, by selecting from the <span class="ui">New Live Filter Layer</span>&gt;<span class="ui">Mesh Warp</span>.</p>
+		
+		
+		<h3>Settings:</h3>
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Destination/Source</span>&#8212;mode option to manipulate just the grid (Source) or both grid and the object simultaneously (Destination).</li>
+			<li><span class="ui">Synchronise</span>&#8212;makes the destination mesh match the source mesh.</li>
+			<li><span class="ui">Reset</span>&#8212;restores the grid to a uniform rectangular shape. Nodes which have been added are distributed evenly across the grid.</li>
+			<li><span class="ui">Hide Mesh</span>/<span class="ui">Show Mesh</span>&#8212;hides and shows the grid and the nodes.</li>
+			<li><span class="ui">Convert</span>&#8212;switches the selected node to <span class="ui">Sharp</span> or <span class="ui">Smooth</span>.</li>
+		</ul>
+		
+		
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../ObjectControl/warp.html">Warping objects</a></li>
+			<li><a href="../ObjectControl/transform.html">Transforming objects</a></li>
+		</ul>
+	</section>
+	
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="place, content, images, pictures, photos, raster, documents, passthrough, pdf passthrough" />
+	<meta name="description" content="Raster and vector images, as well as documents, can be placed on your page." />
+	<title>Placing content</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Placing content</h1>
+
+		<p>Placing content allows you to add images and Affinity (Designer, Photo, etc.), Photoshop, Illustrator, Freehand and PDF documents to your current document.</p>
+		
+		<figure>
+			<div class="single">
+				<img src="../../../shared/placing_content.png" alt="Placed content" />
+			</div>
+			<figcaption></figcaption>
+		</figure>
+		
+		<p>Content placed in this way can be replaced using the options on the context toolbar.</p>
+
+		<aside class="box note">
+			<p>You can also place the contents of existing textual documents, such as RTF and plain text files. See <a href="../Text/importText.html">Importing text</a> for more information.</p>
+		</aside>
+
+	</header>
+
+	<section class="about">
+	
+	<h2>About placing content</h2>
+	
+		<p>Once you've opened your image/document, you can place additional content.</p>
+		
+		<p>Some useful tips when placing content include:</p>
+		
+		<ul>
+			<li>For images, the placed image is added as an image layer rather than a pixel layer. This allows the original image data (e.g., the native resolution, colour space and colour profile) to be kept. On export to PDF, this data is re-embedded into the PDF file.</li>
+			<li>Use the context toolbar's scaling controls to ensure correct sizing of CAD-derived PDFs or PDF/PSD adverts on placement.</li>
+			<li>Placed documents offer a <span class="ui">Page Box</span> option on the context toolbar to choose how the page displays (e.g., with/without bleed, objects only).</li>
+			<li>The added content can be rasterised at any time via the <span class="ui">Layer</span> menu (or via right-click).</li>
+			<li>The file's embedded colour profile will always be converted to the document's current working space.</li>
+			<li>For unprofiled placed images, the colour space is assumed to be RGB.</li>
+			<li>Some brush operations will automatically rasterise image layers to the document resolution.</li>
+		</ul>
+		
+		<p>For further information on placing specific file types, please refer to the following table:</p>
+		
+		<table class="thirtythree">
+			<tr>
+				<th>Content type</th>
+				<th>Comments</th>
+			</tr>
+	
+			<tr>
+				<td>Affinity Designer files with multiple artboards</td>
+				<td>You'll be provided with an <span class="ui">Artboard</span> option on the document's context toolbar so you can choose which artboard is displayed.</td>
+			</tr>
+			
+			<tr>
+				<td>Affinity documents, PDFs, SVGs and PSD files</td>
+				<td>The file will be listed in the Layers panel as either an <span class="ui">Embedded document</span> or <span class="ui">Linked document</span> depending on the <span class="ui">Image Placement Policy</span> set during initial Document Setup.</td>
+			</tr>
+			
+			<tr>
+				<td>PDFs, SVGs, PSD and EPS files</td>
+				<td>If these are placed as embedded documents, you can edit them within Affinity. If edits are made, these files will be converted to Affinity documents and the original data will not be retained; you will not be able to write the embedded file out to its native file format and make it linked. Other features such as using PDF Passthrough will also then be lost. Please note that the Resource Manager will always display the original file's source filename and location should you need to refer back to it.</td>
+			</tr>
+			
+			<tr>
+				<td>Affinity documents, PDFs, SVGs, PSD and EPS files</td>
+				<td>If these are placed as linked documents, you will not be able to edit them directly within Affinity. However, any edits made to the files will be picked up by Affinity and will be reported as <span class="ui">Modified</span> in the Resource Manager. You can then use the Resource Manager's <span class="ui">Update</span> button to update the files to match the external changes that were made.</td>
+			</tr>
+			
+			<tr>
+				<td>Multi-page Affinity documents or PDFs</td>
+				<td>You can choose which page or spread you want to display by using <span class="ui">Spread</span> on the context toolbar. For PDF, only one page can ever be displayed, although you can simulate a spread by duplicating the placed object and choosing a different page to view.</td>
+			</tr>
+			
+			<tr>
+				<td>Placed PDFs</td>
+				<td>These offer a <span class="ui">PDF Passthrough</span> option on the context toolbar, which defaults to Passthrough for exact reproduction within your own PDFs. If that's not possible, the Interpret option is selected. A bitmap preview of the PDF’s contents is displayed while editing your document in Affinity Designer.</td>
+			</tr>
+			
+			<tr>
+				<td>Placed PDF, DWG or DXF files containing layers</td>
+				<td>These offer a <span class="ui">Layers</span> option on the context toolbar, from which you can choose which of the placed file's layers are visible or hidden in your Affinity document. For example, a layer of a DWG or DXF file might contain notes or more technical information, such as component labelling, that you want to omit for a less technical audience. For PDFs, changing layer visibility will automatically set <span class="ui">PDF Passthrough</span> to Interpret.</td>
+			</tr>
+
+		</table>
+		
+		<p>Once added to your page, you have the option to replace the content, retaining its position, as well as edit placed content.</p>
+		
+		<h2>Placing images from the web</h2>
+		<p>Images can be placed by dragging and dropping them from a web browser, either as an embedded or a remote resource.</p>
+		
+		<p>When an image is placed as a remote resource, its source address (URL) is recorded in your document. Affinity detects when a remote resource has been modified and will either notify you or automatically update the resource, according to the auto-update behaviour setting in the app's General settings.</p>
+		
+		<p>A document's remote resources can be embedded at any time, e.g. when you are ready to send it to a professional printing service or want to create an archive of a publication. The document will retain its record of a resource's source address, which enables it to be made remote again if needed.</p>
+		
+		<aside class="box warning">
+			<p>Placing an image as a remote resource may fail for various reasons, e.g. the image is hyperlinked or has a JavaScript attached. If this occurs, try placing the image as an embedded resource instead.</p>
+		</aside>
+		
+		<p>Any image from the Web that is initially placed as an embedded resource does not have its source address recorded and so requires you to perform the same steps again if it needs to be updated.</p>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/place_image_tool.png" class="tool heading" width="18" height="18" alt="Place Tool" /> To place content:</summary>
+			<ol>
+				<li>Do one of the following:
+					<ul>
+						<li>Select the <span class="ui">Place Tool</span>.</li>
+						<li>From the <span class="ui">File</span> menu, select <span class="ui">Place</span>.</li>
+					</ul>
+				</li>
+				<li>In the pop-up dialog, navigate to and select a file, and click <span class="ui">Open</span>.</li>
+				<li>Do one of the following:
+					<ul>
+						<li>Click to place the file at its default, displayed size.</li>
+						<li>Drag on the page to set the size and position of the content.</li>
+					</ul>
+				</li>
+				<li>Alternatively, you can drag and drop the file onto the page to place it. The current image placement policy (embedded or linked) will be honoured.</li>
+			</ol>
+			
+			<aside class="box tip">
+				<p>If used frequently, add the <span class="ui">Place Tool</span> to your toolbar via <span class="ui">View</span>&gt;<span class="ui">Customise Tools</span>.</p>
+			</aside>
+				
+		</details>
+
+		<details open="open">
+			<summary>To scale a placed image/document by DPI, percentage scale or to original size:</summary>
+			<ol>
+				<li>Select the image or document.</li>
+				<li>From the context toolbar, select the Image/document Info section and choose an <span class="ui">Image DPI</span> or <span class="ui">Scale</span> percentage value from the pop-up menu. Alternatively, click <span class="ui">Original Size</span> to scale to 100% (native dimensions) and reset aspect ratio.<br />
+				
+					<figure class="nft">
+						<div class="single">
+							<img src="../../images/tbr_context_imagescaling.png" alt="Image scaling" />
+						</div>
+						<figcaption></figcaption>
+					</figure>
+
+				</li>
+			</ol>
+
+		</details>
+		
+		<details open="open">
+			<summary>To return squashed content to its original aspect ratio:</summary>
+			<ul>
+				<li>With the content selected, double-click on one of its edge handles to reset its aspect ratio.</li>
+			</ul>
+
+		</details>
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/place_image_tool.png" class="tool heading" width="18" height="18" alt="Place Tool" /> To place multiple files:</summary>
+			<ol>
+				<li>Do one of the following:
+					<ul>
+						<li>Select the <span class="ui">Place Tool</span>.</li>
+						<li>From the <span class="ui">File</span> menu, select <span class="ui">Place</span>.</li>
+					</ul>
+				</li>
+				<li>In the pop-up dialog, <span class="key CMD-TAG"></span>-select the files you wish to place, and click <span class="ui">Open</span>.</li>
+				<li>The <span class="ui">Place Images</span> panel will appear, displaying the files you selected for placement. The files can be placed consecutively from here each time you click on the page or picture frames you would like to place them in until the panel no longer holds any files, starting with the topmost file in the panel. Alternatively, you can click on a file within the panel and then click on the page or picture frame to place that specific file.</li>
+			</ol>
+			
+		<x-osx>
+			<aside class="box note">
+				<p>Alternatively, <span class="key ALT-TAG"></span>-dragging multiple files from Finder to your page will add them directly to the <span class="ui">Place Images</span> panel, making it easy to place each file with precision.</p>
+			</aside>
+		</x-osx>
+		
+		<x-win32>
+			<aside class="box note">
+				<p>Alternatively, <span class="key ALT-TAG"></span>-dragging multiple files from Explorer to your page will add them directly to the <span class="ui">Place Images</span> panel, making it easy to place each file with precision.</p>
+			</aside>
+		</x-win32>
+		
+		</details>
+
+		<details open="open">
+			<summary>To edit an embedded document:</summary>
+			<ul>
+				<li>Do one of the following:
+					<ul>
+						<li>Double-click the placed document.</li>
+						<li>From the context toolbar, select <span class="ui">Edit Document</span>.</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<aside class="box note">
+				<p>The editability of the embedded document may be affected by how the original document was saved in its native application.</p>
+			</aside>
+			
+			<aside class="box note">
+				<p>Changes are saved within the main document without affecting the original.</p>
+			</aside>
+
+		</details>
+
+	<x-osx>
+		<details open="open">
+			<summary>To add an image to a layer (via Finder):</summary>
+			<ul>
+				<li>Drag an image from Finder to your <span class="term">page</span>. The image will be added to the project as a new layer.</li>
+			</ul>
+		</details>
+	</x-osx>
+		
+	<x-win32>	
+		<details open="open">
+			<summary>To add an image to a layer (via Explorer):</summary>
+			<ul>
+				<li>Drag an image from Explorer to your <span class="term">page</span>. The image will be added to the project as a new layer.</li>
+			</ul>
+		</details>
+	</x-win32>
+	
+		<details open="open">
+			<summary>To add an image from a web browser to a layer:</summary>
+			<ol>
+				<li>Drag an image from a web page.</li>
+				<li>Do one of the following:
+				<ul>
+					<li>To make the image an embedded resource, regardless of your document's image placement policy, drop the image onto your document.</li>
+					<li>To make the image a remote resource, hold the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> and drop the image onto your document.</li>
+				</ul>
+			</ol>
+		</details>
+	
+		<details open="open"><summary>To replace content:</summary>
+			<ol>
+				<li>Select placed content.</li>
+				<li>From the context toolbar, select <span class="ui">Replace Image</span> or <span class="ui">Replace Document</span> depending on what you've placed.</li>
+				<li>Select a replacement file from the file browser window.</li>
+				<li>(Optional) You can choose whether to embed or link the replacement file by clicking <span class="ui">Options</span> on the file browser window. The placement option you select will override the placement policy for the document in this instance.</li>
+			</ol>
+
+		</details>
+
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_placeimage.html">Place Tool</a></li>
+ 			<li><a href="embeddingVsLinking.html">Embedding vs linking</a></li>
+			<li><a href="../Media/resourceManager.html">Resource Manager</a></li>
+			<li><a href="linkedServices.html">Linked Services</a></li>
+			<li><a href="../Clr/ClrProfiles.html">Colour management</a></li>
+			<li><a href="../Text/importText.html">Importing text</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

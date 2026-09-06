@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="rich black" />
+	<meta name="description" content="Make colours overprint for professional printing." />
+	<title>Overprinting</title>
+
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Overprinting</h1>
+		<p>For professional printing, <a href="globalClr.html">global colours</a> can be made to overprint. By applying an overprint colour to objects selectively you can control overprinting.</p>
+		
+	</header>
+
+	<section class="about">
+	
+		<h2>About overprinting</h2>
+		
+		<p>Overprinting means that you can print one ink colour on top of another instead of, by default, the underlying colour being 'knocked out' (removed). This prevents unwanted fringing being left around objects, e.g. text.</p>
+		
+		<figure>
+			<div class="single">
+				<img src="../../../shared/overprint.png" alt="Knockout vs overprint" />
+			</div>
+			<figcaption>(A) Unwanted knockout behaviour (default) showing white fringing vs. (B) overprinting.</figcaption>
+		</figure>
+		
+		<p>As a professional printing feature, overprint works when publishing PDFs using a CMYK colour space and PDF/X compatibility.</p>
+		<p>You don't need to explicitly make an overprint for black, for black text or black graphics, as this is set by default. On PDF publishing, you can control black overprinting using the <span class="ui">Overprint black</span> option in the Export Options panel (for any PDF export options).</p>
+
+			<aside class="box note">
+				<p><img src="../../../shared/overprintclr_thumbnail.png" class="screenshot" width="22" height="22" alt="Overprint colour thumbnail" /> An overprint colour swatch is indicated by a curved tab in the top-right corner of its colour swatch.</p>
+			</aside>
+			
+			<aside class="box tip">	
+				<p>You can check if an overprint colour has been assigned to an object's stroke or fill by using the <span class="ui">Colour</span> panel.</p>
+			</aside>
+		
+		<aside class="box tip">
+			<p>Overprinting it will cause colours to appear darker due to the opacity of inks used in professional printing. Some PDF viewers can simulate how this would appear, but always consult with your print provider for advice on its use.</p>
+		</aside>
+		
+	</section>
+
+	
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> To create an overprint colour from scratch:</summary>
+			
+			<ol>
+				<li>On the <span class="ui">Swatches</span> panel, select a Document palette from the palette pop-up menu. If no Document palette exists you can create one from the panel's Panel Preferences menu.</li>
+				<li>From <span class="ui">Panel Preferences</span>, select <span class="ui">Add Global Colour</span>.</li>
+				<li>Adjust the settings in the dialog.</li>
+				<li>Select the <span class="ui">Overprint</span> option.</li>
+				<li>Click <span class="ui">Add</span>.</li>
+			</ol>
+			
+		</details>
+
+		<details open="open">
+			<summary>To make an existing global colour overprint:</summary>
+			
+			<ul>
+				<li>On the <span class="ui">Swatches</span> panel, <span class="key CLICK-TAG"></span>-click the global colour swatch's thumbnail, then select <span class="ui">Overprint</span>.</li>
+			</ul>
+			
+		</details>
+		
+	</section>
+		
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="globalClr.html">Global colours</a></li>
+			<li><a href="spotClr.html">Spot colours</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="gradient, alpha, transparency, radial, linear, elliptical, conical, bitmap, fill, stock, assets" />
+	<meta name="description" content="Apply colour gradients and bitmaps to fills and strokes." />
+	<title>Gradient and bitmap fills</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Gradient and bitmap fills</h1>
+
+		<p>The <a href="../Tools/tools_gradient.html">Fill Tool</a> lets you draw a simple colour gradient, solid or bitmap fill across your object. The created fill path can be edited directly on the object to introduce more than two colours along the gradient path, introduce opacity, reposition added colours or control colour transitions. You can also apply a more complex gradient via a Gradient Editor.</p>
+
+		<aside class="box note">
+			<p>If needed, you can precisely define the fill path via the colour swatch on the tool's context toolbar. This should be done with no handles selected.</p>
+		</aside>
+
+		<figure>
+			<p><img src="../../../shared/gradient.png" class="screenshot responsive" alt="Gradient and bitmap fill examples" /></p>
+			<figcaption>(From left to right) Elliptical, Radial, Linear, Conical, and Bitmap fill types applied to a basic shape.</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>You can also apply a gradient to pixel layers, adjustment layers and layer masks using the Fill Tool.</p>
+		</aside>
+	</header>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/fill_tool.png" class="tool" width="18" height="18" alt="Fill Tool" /> To apply a gradient:</summary>
+
+			<ol>
+				<li>Use the <span class="ui">Move Tool</span> to select an object.</li>
+				<li>Select the <span class="ui">Fill Tool</span> from the Tools panel.</li>
+				<li>From the context toolbar, select either 'Stroke' or 'Fill' from the <span class="ui">Context</span> pop-up menu.</li>
+				<li>From the context toolbar, select a fill type from the <span class="ui">Type</span> pop-up menu.</li>
+				<li>
+					<p>Drag the cursor across the object's stroke or fill depending on what you selected previously.</p>
+					<p>Hold down the <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> to constrain the angle of the gradient path to 45&#176;.</p>
+				</li>
+			</ol>
+
+			<aside class="box tip">
+				<p>Select and drag an end stop on the path to change the length and direction of the path. End stops can be recoloured and be given reduced opacity from the <span class="ui">Colour</span> panel. Use the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> to reposition the gradient without affecting its length or direction.</p>
+			</aside>
+
+			<aside class="box tip">
+				<p>Create your own gradient fills by clicking the colour swatch, adjacent to the Type pop-up menu, on the context toolbar.</p>
+			</aside>
+			
+			<aside class="box note">
+				<p>You can pick up colour as you design by holding the <span class="key ALT-TAG"></span>-key and dragging.</p>
+			</aside>
+		</details>
+
+		<details open="open">
+			<summary>To create a bitmap fill:</summary>
+			<ol>
+				<li>Use the <span class="ui">Move Tool</span> to select an object.</li>
+				<li>Select the <span class="ui">Fill Tool</span>.</li>
+				<li>Do one of the following:
+					<ul>
+						<li class="osx">From your Finder window, drag the file of choice and drop it onto either the <span class="ui">Swatches</span> panel, <span class="ui">Colour</span> panel or the Primary/Secondary colour selector.</li>
+						<li class="win32">From your Explorer window, drag the file of choice and drop it onto either the  <span class="ui">Swatches</span> panel, <span class="ui">Colour</span> panel or the Primary/Secondary colour selector.</li>
+						<li>From the <span class="ui">Assets</span> panel, click an asset, e.g. a texture, shape or other.</li>
+						<li>From the <span class="ui">Stock</span> panel, click one of the photos from your search results.</li>
+					</ul>
+				</li>
+				<li>Use the context toolbar settings and the tool's nodes to modify the fill as required.</li>
+			</ol>
+
+		<aside class="box note">
+			<p>Alternatively, with the <span class="ui">Fill Tool</span>, you can select <span class="ui">Bitmap</span> from the <span class="ui">Type</span> pop-up menu on the context toolbar, then navigate to the image you will use to fill.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p class="osx">Instead of using the <span class="ui">Fill Tool</span>, you can also crate a bitmap fill using the <span class="ui">Move Tool</span>. To do so, drag the file of choice from your Finder window and drop it onto the areas suggested above.</p>
+			<p class="win32">Instead of using the <span class="ui">Fill Tool</span>, you can also crate a bitmap fill using the <span class="ui">Move Tool</span>. To do so, drag the file of choice from your Finder window and drop it onto the areas suggested above.</p>
+		</aside>
+		
+		</details>
+
+		<details open="open">
+			<summary>To modify a bitmap fill:</summary>
+			<ol>
+				<li>With the <span class="ui">Fill Tool</span> active, make a selection.</li>
+				<li>On the context toolbar, click <span class="ui">Rotate gradient</span> to change the orientation of the fill at 90&#176; clockwise intervals.</li>
+				<li>Enable <span class="ui">Maintain aspect ratio</span> to ensure the bitmap fill is not stretched or squashed when edited.
+				<li>Set the <span class="ui">Extend</span> and <span class="ui">Quality</span> options as desired. The former option controls how the tile that makes up the bitmap is presented; the latter how the bitmap fill is resampled on object resize.</li>
+				<li>Check <span class="ui">Scale with object</span> to allow for stretching or shrinking of the bitmap fill while resizing. Leave it unchecked to ensure stretching or shrinking isn't taking place thus preserving the texture of the image.</li>
+			</ol>
+		</details>
+
+		<details open="open">
+			<summary>To modify a gradient (directly on an object):</summary>
+			<p>With the <span class="ui">Fill Tool</span> selected, click an object with a gradient fill applied and then do any of the following:</p>
+			<ul>
+				<li>Click on the gradient path to add a stop.</li>
+				<li>Click a stop to select it. Selected stops display larger than other stops.</li>
+				<li>Drag a stop to reposition it along the gradient path. End stops can be repositioned (by dragging) to extend or contract the gradient's length; the angle of the gradient can also be changed by dragging.</li>
+				<li>Drag a midpoint marker to adjust the spread of colours between two colour stops.</li>
+				<li>Apply a colour (or opacity or noise value) to a selected stop from the <span class="ui">Colour</span> panel.</li>
+				<li>Delete a selected stop by pressing <span class="key BACKSPACE-TAG"></span> <span class="KEY-TAG"></span>.</li>
+			</ul>
+
+			<aside class="box note">
+				<p>When you scale or shear an object with a linear or radial gradient applied, the gradient will intelligently reapply itself to fit the modified object's new proportions.</p>
+			</aside>
+		</details>
+
+		<details>
+			<summary>To modify a gradient (via the tool's context toolbar):</summary>
+			<ol>
+				<li>With the <span class="ui">Fill Tool</span> selected, click an object.</li>
+				<li>Deselect any selected stops.</li>
+				<li>From the context toolbar, select the colour swatch.</li>
+				<li>Click the <span class="ui">Gradient</span> option which lets you modify your gradient using the following settings:
+					<ul>
+						<li><span class="ui">Type</span>&#8212;determines the gradient type (linear, elliptical, etc.) via a pop-up menu.</li>
+						<li><span class="ui">Position</span>&#8212;controls the position of the stop along the gradient from left (0%) to right (100%), with 50% representing the central point.</li>
+						<li><span class="ui">Mid Point</span>&#8212;adjusts the spread of colours between the selected colour stop and the stop to its right.</li>
+						<li><span class="ui">Colour</span>&#8212;click the colour swatch to display a pop-up panel where you can modify the selected stop's colour (including noise value).</li>
+						<li><span class="ui">Opacity</span>&#8212;controls how see through the stop is. 100% represents fully opaque, 0% represents fully transparent.</li>
+						<li><span class="ui">Insert</span>&#8212;adds a new stop between a selected stop and the stop to its right. The stop adopts the colour at its new position.</li>
+						<li><span class="ui">Copy</span>&#8212;duplicates the selected stop, positioning it between the selected stop and the stop to its right.</li>
+						<li><span class="ui">Delete</span>&#8212;removes the selected stop from the gradient.</li>
+						<li><span class="ui">Reverse</span>&#8212;the gradient is reversed, i.e. like a mirror image.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+	</section>
+	
+	<section class="about">
+	
+	<h2>Scaling</h2>
+					
+	<h3>Scaling bitmap fills</h3>
+			
+		<p>It is possible to rescale a bitmap fill by either restricting or allowing for the bitmap fill to grow or shrink when transforming, depending on the desired effect. One benefit here is that it is possible to leave the bitmap image and its texture unaffected by shrinking or stretching.</p>
+
+		<figure>
+			<div class="single">
+				<img src="../../../shared/scale_with_object.png" class="screenshot responsive" alt="Scale with Object" />
+			</div>
+				<figcaption>A bitmap fill's texture unaffected by stretching a square object.</figcaption>
+		</figure>	
+					
+		<aside class="box note">
+			<p>With an object selected when creating a bitmap fill, the image will be placed as a tiled or repeating pattern in the object.</p>
+		</aside>
+							
+	<h3>Scaling sheared objects with linear or radial gradient fills</h3>
+
+	<p>When you scale or shear an object with a linear, radial or conical gradient applied, the gradient will reapply itself to fit the modified object's new shape. This is important when transforming two-dimensional objects onto an isometric grid plane as the gradient will also be intelligently transformed. On a transformed object, an additional dashed correction path and stop is shown (right) which indicates gradient transformation and allows you to control the shear and scale on the fill&#8212;the path and stop can be removed to ignore the gradient transform if needed.</p>
+		
+		<figure>
+			<p><img src="../../../shared/gradient2.png" class="screenshot responsive" alt="Transformed object" /></p>
+			<figcaption>Transformed object with a dashed correction path and stop.</figcaption>
+		</figure>
+				
+		<p>When an object with a linear or radial gradient fill is sheared (skewed) or transformed onto an isometric pane, an additional pair of correction points appears.</p>
+
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/fillhandles_before.jpg" alt="Before" />
+				<div><img src="../../../shared/fillhandles_after.jpg" alt="After" /></div>
+			</div>
+		</figure>
+
+		<p>These help produce a fill that more naturally follows the sheared object's shape without distortion when the object is scaled and sheared.</p>
+
+	</section>
+	
+	<section class="howto">
+	
+		<details open="open">
+			<summary>To convert the transformed fill to a conventional gradient fill:</summary>
+			<ul>
+				<li>Double-click the correction end stop to remove the correction path.</li>
+			</ul>
+		</details>
+		
+		<aside class="box note">
+			<p>Double-clicking end stops on an isometric plane resets the correction points instead of deleting them.</p>
+		</aside>	
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="selectingClr.html">Selecting colours</a></li>
+			<li><a href="transparency.html">Transparency</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

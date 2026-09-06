@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="colour, models" />
+	<meta name="description" content="Find out how to choose a colour model" />
+	<title>Colour models</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Colour models</h1>
+
+		<p>A screen uses varying amounts of light to create the colours that you see. In the physical world, inks are used to create the colour on the page. Colour is stored by turning colours into numbers. A colour model is used to describe the numerical system used.</p>
+
+		<p>As not all devices have the same ability to display colour, a colour space is used to define the gamut (available range) of colour. By working within a colour space suitable for the intended output device, you can be confident that your colours will be able to be displayed as intended.</p>
+
+		<p>In Affinity Designer, you can take advantage of an end-to-end CMYK or Lab colour-managed workflow as you create a new document.</p>
+
+	</header>
+
+	<section class="about">
+		<h2>About colour models</h2>
+
+		<p>Different colour models represent colour as numbers in different ways. When working in Affinity Designer, you can choose one of four colour models.</p>
+
+		<h3>RGB model</h3>
+
+		<p>The RGB model is an additive colour model. The primary colours of light, Red, Green and Blue, are combined in various degrees to make other colours in the spectrum.</p>
+
+		<figure>
+			<p><img src="../../../shared/model_rgb.png" class="responsive" alt="model_rgb" /></p>
+			<figcaption>A representation of the RGB colour model. This model is universal within digital cameras and electronic displays.</figcaption>
+		</figure>
+
+		<h3>CMYK model</h3>
+
+		<p>The CMYK model is a subtractive model. Cyan, Magenta and Yellow are combined to make each colour. A fourth ink, Black, is also used for extra control and can be used either on its own for a true black, or combined with the other inks for a rich black.</p>
+
+		<figure>
+			<p><img src="../../../shared/model_cmyk.png" class="responsive" alt="model_cmyk" /></p>
+			<figcaption>A representation of the CMYK colour model. When the three colours combined they make black. Black is also added as a separate colour for extra tonal control.</figcaption>
+		</figure>
+
+		<aside class="box note">
+			<p>The way that the colour model is implemented is defined by the <a href="aboutClrSpaces.html">colour space</a> that is chosen; this is possible by selecting a colour profile.</p>
+		</aside>
+
+		<h3>Lab</h3>
+
+		<p>Lab colour represents the theoretical range of human vision using three channels: Lightness (L), and two colour channels of opposing values of 'red - green' (a) and 'yellow - blue' (b). It can be very useful when used creatively, especially as Lightness can be adjusted without any change to hue or saturation.</p>
+
+		<figure>
+			<p><img src="../../../shared/model_lab.png" alt="model_lab" /></p>
+			<figcaption>A representation of the Lab colour opposition model. Lightness (L) is controlled separately to the two colour channels (a, b).</figcaption>
+		</figure>
+
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary>To select a new document's colour model:</summary>
+				<ul>
+					<li>As you create a <a href="../GetStarted/NewDocument.html">new document</a>, select a colour format and profile from the <span class="ui">Colour</span> tab.</li>
+				</ul>
+
+			<aside class="box note">
+				<p>The <span class="ui">Colour Format</span> of a document is a combination of a colour model and a bit depth setting (8 or 16).</p>
+			</aside>
+
+		</details>
+
+		<details open="open">
+			<summary>To change your document's colour model at any time:</summary>
+				<ol>
+					<li>From the <span class="ui">File</span> menu, select <span class="ui">Document Setup</span> and choose the <span class="ui">Colour</span> tab.</li>
+					<li>From the <span class="ui">Colour Format</span> pop-up menu, select any of the available models as described above.</li>
+					<li>Designer converts each colour from the old format to the new one&#8212;colour/pixel values may change as a result.</li>
+				</ol>
+
+		</details>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="aboutClrSpaces.html">About colour spaces</a></li>
+			<li><a href="ClrProfiles.html">Colour management</a></li>
+			<li><a href="../GetStarted/aboutBitDepth.html">About bit depth</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

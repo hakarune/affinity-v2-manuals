@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="resource manager, images, update, link, linked, embedded, locate, place, placed, DPI" />
+	<meta name="description" content="Manage all your resources from one location." />
+	<title>Resource Manager</title>
+</head>
+<body>
+
+	<header>
+
+		<h1>Resource Manager</h1>
+	
+		<p>The Resource Manager lists all of the image and document resources used in your document.</p>
+
+	<figure class="nft overrideDE overrideFR">
+		<div class="single">
+			<img src="../../images/resourcemanager.png" class="responsive" width="1023" alt="Resource Manager" />
+		</div>
+		<figcaption></figcaption>
+	</figure>
+		
+	</header>
+		
+	<section class="about">
+		
+		<p>From the Resource Manager, you can view the status of all resources, the placement of the resource (linked, embedded or remote), the file size, placed DPI, and file type. If the same resource is used multiple times within the document, they will be grouped together in the list.</p>
+		
+		<p>Right-clicking on any of the column headers allows you check or uncheck columns to display or hide them.</p>
+		
+		<h2>About placement types</h2>
+		<p>The key difference between linked files and embedded files is the location of the stored data and if data is updated after being linked or embedded.</p>
+		
+		<p>Embedded files are stored in the document and can't be subsequently updated if the source file changes, i.e. there is no link to the source file.</p>
+		
+		<p>Linked files are not stored in the document and can therefore be updated (via Resource Manager) in the document from the source file if the source file changes.</p>
+		
+		<p>Images dragged and dropped from a web browser have a placement value of Embedded by default, regardless of a document's image placement policy, or Remote if the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> is held before dropping onto your document.</p>
+		
+	 	<p>A placed image or document can have the following Status:</p>
+
+		<ul>
+			<li><span class="ui">OK</span>&#8212;The file is up to date.</li>
+			<li><span class="ui">Modified</span>&#8212;The linked or remote file has been modified externally. Click <span class="ui">Update</span>/<span class="ui">Refresh</span> to get the latest version.</li>
+			<li><span class="ui">Missing</span>&#8212; Although still placed and displayed, the linked file has been deleted or moved externally to the app.</li>
+		</ul>
+
+		<p>Additionally, you can use the Resource Manager's <span class="ui">Collect</span> feature to gather a document's resources, which may be distributed between multiple folders, into a single folder for ease of management, e.g. archiving a project when it is complete. If you wish to share a project, Affinity's Packaging feature is a better option.</p>
+		
+		<aside class="box tip">
+			<p>Use <span class="ui">Save As</span> if you want to collect resources to a new document which can be shared. You can continue to use the original document with uncollected resources.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>Fonts are not included in the collection process.</p>
+		</aside>
+	</section>
+
+	<section class="howto">
+		<details open="open">
+		<summary>To use the Resource Manager:</summary>
+			<ol>	
+				<li>From the <span class="ui">Window</span> menu, select <span class="ui">Resource Manager</span>.</li>
+				<li>Select the resource(s) you need to manage and choose from the available options.</li>
+			</ol>
+			
+		<aside class="box note">
+			<p>Selecting a resource in the document view automatically highlights its entry on the Resource Manager.</p>
+		</aside>
+
+		</details>
+		
+	</section>
+		
+	<section class="settings">
+		<p>The following options are available from the Resource Manager:</p>
+			<ul>
+				<li><span class="ui">Locate</span>&#8212;jumps to the resource in your document.</li>
+				<li><span class="ui">Update</span>/<span class="ui">Refresh</span>&#8212;allows you to update out-of-date linked/remote resources.</li>
+				<li><span class="ui">Relink</span>&#8212;appears in the place of <span class="ui">Update</span> for missing linked resources, allowing you to relink them. Find and select a missing file using the pop-up dialog to relink it, or, if an entire folder containing multiple linked files has been moved, select the folder to automatically relink all missing files within that folder at once.</li>
+				<li><span class="ui">Replace</span>&#8212;allows you to relocate or replace the selected resource file if missing. Select a replacement file using the pop-up dialog.</li>
+				<li><span class="ui">Make Linked/Embed</span>&#8212;allows you to change a linked or remote resource into an embedded resource or vice versa. When making files linked, specify a save location using the pop-up dialog.</li>
+				<li><span class="ui">Collect</span>&#8212;allows you to collect selected linked document resources in a single specified folder. Specify a folder to collect the linked resources into using the pop-up dialog.</li>
+				<li><span class="ui">Show in <span class="osx">Finder</span><span class="win32">Explorer</span></span>&#8212;reveals the source file for the selected linked resource, if it is not missing.</li>
+				<li><span class="ui">Open Stock URL</span>&#8212;opens the address for the selected remote resource in your system's default web browser.</li>
+			</ul>
+			
+		<aside class="box prefs">
+			<h3>Settings (or Preferences)</h3>
+			<p>Related behaviours can be adjusted from <a href="../Workspace/preferences.html">the app's settings</a>:</p>
+			<ul>
+				<li><span class="ui">General&gt;Automatically update linked resources when modified externally</span></li>
+			</ul>			
+		</aside>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="placeImages.html">Placing content</a></li>
+			<li><a href="../Media/embeddingVsLinking.html">Embedding vs linking</a></li>
+			<li><a href="linkedServices.html">Linked Services</a></li>
+			<li><a href="../ShareSavePrint/aboutPackaging.html">About packaging</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

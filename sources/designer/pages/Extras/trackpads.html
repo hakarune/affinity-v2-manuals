@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="force touch, trackpad, touchpad, multitouch, multi-touch" />
+	<meta name="description" content="Use gestures to enhance your workflow" />
+	<script src="../../../resources/js/tabbedimages.js"></script>
+	<script>
+		var imageSources = {
+			img1: {
+				menuOffset: { left: 30, top: 10 },
+				tab1: { 
+					item1: { src: "../../../shared/gesture_taptoclick.png", alt: "Trackpad gesture for making a selection", caption: { left: 20 } },
+					item2: { src: "../../../shared/gesture_lookup.png", alt: "Trackpad gesture for displaying the context menu when using a Force Touch trackpad" , caption: { left: 20 } },
+					item3: { src: "../../../shared/gesture_secondaryclick.png", alt: "Trackpad gesture for displaying the context menu", caption: { left: 20 } }
+				},
+				tab2: {
+					item1: { src: "../../../shared/gesture_pan.png", alt: "Trackpad gesture for panning the document view", caption: { left: 20 }, },
+					item2: { src: "../../../shared/gesture_pinchzoom.png", alt: "Trackpad gesture for zooming in or out", caption: { left: 20 }, },
+					item3: { src: "../../../shared/gesture_smartzoom.png", alt: "Trackpad gesture for switching between the current zoom level and 100% zoom", caption: { left: 20 }, },
+					item4: { src: "../../../shared/gesture_altzoom.png", alt: "Trackpad gesture for scrolling the document view", caption: { left: 20 }, },
+					item5: { src: "../../../shared/gesture_rotate.png", alt: "Trackpad gesture for rotating the canvas about the current cursor position", caption: { left: 20 }, }
+				}
+			},
+		}
+	</script>
+	<title>Using a trackpad</title>
+</head>
+
+<body onload="loadTabbedImages()">
+<x-osx>
+
+	<header>
+
+		<h1>Using a trackpad</h1>
+	
+		<p>Affinity products are designed to be used in conjunction with multitouch devices (Magic Mouse and trackpads), including those with Force Touch pressure-sensitive capability (Magic Trackpad 2 and built into recent MacBooks).</p>
+
+	</header>
+	
+	<section class="about">
+		<p>The following gestures are available in your Affinity app when using a trackpad:</p>
+		
+		<div class="tabbedImage sidebar" id="img1">
+			<div class="tabStrip">
+				<div class="tab"><p>Point &amp; Click</p></div>
+				<div class="tab"><p>Scroll &amp; Zoom</p></div>
+			</div>
+			<div class="view">
+				<img class="responsive" src="../../../shared/gesture_pan.png" alt="">
+				<div class="overlays">
+					<div class="menu">
+						<div class="menu-item">
+							<div class="label"><p>Tap to click</p></div>
+							<div class="caption"><p>Makes a selection.</p></div>
+						</div>
+						<div class="menu-item">
+							<div class="label"><p>Look up</p></div>
+							<div class="caption"><p>Displays context menu (Force Touch only).</p></div>
+						</div>
+						<div class="menu-item">
+							<div class="label"><p>Two-finger click</p></div>
+							<div class="caption"><p>Displays context menu.</p></div>
+						</div>
+					</div>
+					<div class="menu">
+						<div class="menu-item">
+							<div class="label"><p>Scroll direction</p></div>
+							<div class="caption"><p>Pans around document view.</p></div>
+						</div>
+						<div class="menu-item">
+							<div class="label"><p>Zoom in/out</p></div>
+							<div class="caption"><p>Pinch/spread with two fingers to zoom in/out.</p></div>
+						</div>
+						<div class="menu-item">
+							<div class="label"><p>Smart zoom</p></div>
+							<div class="caption"><p>Switches between current zoom and 100% zoom by double tap.</p></div>
+						</div>
+						<div class="menu-item">
+							<div class="label"><p>Scroll direction (modifier)</p></div>
+							<div class="caption"><p>Zooms in and out. Tracks finger movement.</p></div>
+						</div>
+						<div class="menu-item">
+							<div class="label"><p>Rotate</p></div>
+							<div class="caption"><p>Rotates canvas about current cursor position.</p></div>
+						</div>
+					</div>
+				</div>
+			</div>				
+		</div>
+	</section>
+	
+	<section class="howto">
+	
+		<details open="open">
+			<summary>To enable/disable availability of a multitouch gesture:</summary>
+			<ol>
+				<li>In macOS's System Settings (or System Preferences) app, click <span class="ui">Trackpad</span>.</li>
+				<li>Select <span class="ui">Point &amp; Click</span> or <span class="ui">Scroll &amp; Zoom</span>.</li>
+				<li>Check or uncheck the box next to the relevant gesture.</li>
+			</ol>
+			
+			<p>Disabling a multitouch gesture is system-wide, not just for your Affinity app.</p>
+		</details>
+		
+		<details>
+			<summary>To enable/disable trackpad-based canvas rotation:</summary>
+			<ol>
+				<li>Select <span class="ui">Affinity Designer&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>).</li>
+				<li>Select <span class="ui">Tools</span>.</li>
+				<li>Check or uncheck <span class="ui">Enable canvas rotation with trackpad</span>.</li>
+				<li>In macOS's System Settings (or System Preferences) app:
+					<ol>
+						<li>Click <span class="ui">Trackpad</span>.</li>
+						<li>Select <span class="ui">Scroll &amp; Zoom </span>.</li>
+						<li>Check or uncheck <span class="ui">Rotate</span> so it matches your choice in Affinity Designer.</li>
+					</ol>
+				</li>
+			</ol> 
+			
+			<aside class="box note">
+				<p>The canvas's orientation can be reset by selecting <span class="ui">View&gt;Reset Rotation</span>.</p>
+			</aside>
+		</details>
+		
+		<details>
+			<summary>To enable/disable Force Touch:</summary>
+			<ol>
+				<li>In macOS's System Preferences app, click <span class="ui">Trackpad</span>.</li>
+				<li>Select <span class="ui">Point &amp; Click</span>.</li>
+				<li>Check or uncheck <span class="ui">Force Click and haptic feedback</span>.</li>
+			</ol>
+			
+			<p>Disabling this feature is system-wide, not just for your Affinity app.</p>
+		</details>
+		
+		<details>
+			<summary>To enable/disable the Force Touch context menu:</summary>
+			
+			<p>Force Touch can be used as an alternative to <span class="key CLICK-TAG"></span>-clicking or using macOS's Secondary click trackpad gesture (if enabled).</p>
+			
+			<ol>
+				<li>Select <span class="ui">Affinity Designer&gt;Settings</span> (or <span class="ui">&gt;Preferences</span>).</li>
+				<li>Select <span class="ui">Tools</span>.</li>
+				<li>Check or uncheck <span class="ui">Force Touch context menu</span>.</li>
+			</ol>
+		</details>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../CurvesShapes/pressure.html">Pressure sensitivity</a></li>
+			<li><a href="../Painting/modifyStrokes.html">Modifying vector brush strokes</a></li>
+		</ul>
+	</section>
+
+	<script src="../../../resources/js/breakout.js"></script>
+
+</x-osx>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+# Settings (or Preferences)
+
+Settings (or Preferences) comprise a series of miscellaneous options that are applied across your application. They can be used to set up your own way of working.
+
+**General options**
+
+- Choose whether to restore the last session when launching application.
+- Choose whether documents open in a floating window separate from the app's main window.
+- Choose whether documents open in the current active group, meaning the most recent floating window, or in the app's main window.
+- Choose whether to limit initial zoom to a maximum of 100% when loading files.
+- Choose whether to automatically link newly created or imported content categories to all Affinity 2 apps on your device.
+- Send anonymous usage information collects Analytics data related to your computer OS, hardware and app usage for continual product improvement. This data is used for statistical analysis. Absolutely no personal information, as covered by data protection rules, is contained in the data collected.
+- (On Windows) choose whether to prefer metafile to raster when pasting from external application.
+- Choose to open PSDs with editable text objects.
+- Choose whether to automatically refine HEIC depth maps.
+- Select whether to show or hide file extensions.
+- Choose whether to create SVGs on the clipboard when copying objects for better cross-platform interaction.
+- You can exclude your thumbnail from being stored with your document.
+- Choose whether to overwrite imported PSD files when using the **Save** command, rather than creating an *.afdesign file. We recommend reading the warning provided in the dialog before selecting this option.
+- Choose whether to insert filler text as editable text.
+- Choose whether to keep selection after deleting an object.
+- **Language**—Sets the UI language independently of the operating system. Select from the pop-up menu.
+- You can open your app's fonts folder, from which Affinity Font (.affont) files (previously installed by dragging onto the app) can be removed to uninstall them. (Affinity Fonts installed via the Account feature can be uninstalled using that feature.)
+
+**Colour options**
+
+- You can set up your default RGB, 32bit RGB, CMYK, Greyscale and LAB colour profiles for use in future documents. Select from the pop-up menus.
+- **Rendering Intent**—Choose the rendering intent for your images. Select from the pop-up menu.
+- Choose whether to apply black point compensation when opening an image.
+- Choose whether to convert an opened file's colour space to the working space and also choose whether to warn that this has occurred.
+- Choose whether to receive a warning when a working profile is assigned to an unprofiled image.
+- Select a OpenColorIO Configuration File.
+- Select a OpenColorIO Search Folder.
+- Choose whether OCIO conversions are based on file name and also choose whether to warn that this has occurred.
+- Choose whether to merge EXR alpha channel information to its associated RGB pixel layer's alpha channel.
+- Choose whether to divide EXR colour channels by the alpha channel.
+- Choose whether to leave zero alpha information untouched, or, with **Post divide EXR colours by alpha** enabled as well, for zero alpha information to be altered so post-division with colour channel information can be achieved.
+
+**Performance options**
+
+- **RAM Usage Limit**—allows you to set your preference for optimising application performance for your projects.
+- **Disk Usage Warning At**—choose the limit at which you are warned about disk usage.
+- **Undo Limit**—choose the history length you are able to access.
+- **View Quality**—choose the way in which the image displays during modifications. Select from the pop-up menu.
+- Choose whether to dither gradients, when working on projects, to speed up performance.
+- Choose a clipping option for optimising performance.
+- **File Recovery Interval**—sets the interval for saving temporary data for currently open documents, allowing a document restore to be offered at startup if the app develops a fault.
+- **Display**—Choose whether to use hardware acceleration such as **Metal**, **OpenGL** or **OpenGL (Basic)**, or use **Software** acceleration. If your computer experiences performance problems, use the above option order until performance is acceptable. Metal requires Sierra macOS (10.12.x) and above, with Affinity optimised for High Sierra (10.13.x) and above. If your Mac has an additional discrete graphics card, checking the **Use only integrated GPU** will not allow access to it, therefore reducing power consumption and conserving battery life (useful for unplugged MacBook Pros).
+- **Renderer**—choose your rendering experience. Select from the pop-up menu.
+   - **Default**—renders using the default method - typically the installed graphics card.
+  - ***Graphics display adapter***—the name here varies depending on your graphics card and its driver. If you have multiple graphics cards installed you may see more than one option here.
+  - **WARP**—use Windows Advanced Rasterization Platform just for presenting the document. Try this if you are experiencing performance issues with the default option.
+- **Retina Rendering**—choose your rendering experience. Select from the pop-up menu.
+   - **Automatic (Best)**—renders as non-retina followed by retina for balanced performance and quality.
+  - **Low quality (Fastest)**—renders as non-retina only for highest performance level but compromises on quality.
+  - **High quality (Slowest)**—renders as retina only for high quality but may compromise performance.
+- **Hardware Acceleration**—checking **Enable Metal compute acceleration** boosts some tasks' performance if a compatible GPU is available. See the [Hardware acceleration](../25-extras/01-hardware-acceleration.md) topic.
+- **Hardware Acceleration**—checking **Enable OpenCL compute acceleration** boosts some tasks' performance if a compatible GPU is available. See the [Hardware acceleration](../25-extras/01-hardware-acceleration.md) topic.
+
+**User Interface options**
+
+- **Background Grey Level**—controls the greyscale level of the pasteboard surrounding the document.
+- **Artboard Background Grey Level**—controls the greyscale level of the pasteboard surrounding artboard(s).
+- **Text Contrast**—adjusts the luminance of text in the user interface.
+- **UI Brightness**—adjusts the luminance of window backgrounds in the user interface.
+- **UI Contrast**—instantly sets Text Contrast and UI Brightness for high contrast between text and window backgrounds, or to their default values.
+- **UI Font Size**—optionally increase the font size of UI text.
+- **UI Style**—displays the user interface in a dark or light style or a default style which sets the UI depending on your Mojave setting.
+- **UI Style**—displays the user interface in a dark or light style.
+- **Tooltip Delay**—set the length of time before a tooltip appears when hovering over a UI element.
+- **Decimal Places for Unit Types**—controls the number of decimal places allowable for each document measurement unit and degree readouts.
+- Locks (or keeps unlocked) an imported image as a background layer.
+- Choose whether line width (thickness) displays in points or in the document's measurement units.
+- Choose whether text is expressed in points or in the document's measurement units.
+- Choose whether the brush cursor display a preview of pixels to be placed.
+- The **Show Brush Previews** option (when enabled) displays a circular preview of the current brush's nozzle; disable the option to hide the nozzle preview if the preview obscures existing page content. When **Force pressure** on the brush tool's context toolbar is enabled, previews are automatically disabled.
+- Overlays a cross-hair over the brush cursor for better targeting.
+- Makes icons display in greyscale (monochromatic iconography).
+- Expands layer to reveal selected object entry when object is selected.
+- Choose whether to activate Touch Bar support.
+- Choose whether to enable pointer support.
+
+**Tools options**
+
+- **Tool Handle Size**—makes selected layer content's bounding box handles and curve nodes (and handles) smaller or larger.
+- Choose whether `Click`+click displays context menus (alternative to right-click with a multi-button mouse).
+- Enable or disable the Force Touch context menu; when enabled, the menu is accessed by a strong-press on a Force Touch-compatible trackpad.
+- Choose whether an object is added to a selection when partially covered by the selection marquee or whether it has to be encompassed by the marquee.
+- When enabled, cycling between tools is only possible with `Shift` modifier pressed. Affects text and shape tools, and Pixel Persona's Paint Brush/Pixel, Selection and Dodge/Burn tool cycles.
+- Choose whether the middle mouse button will allow scrolling or zooming.
+- Choose whether dragging with the Zoom Tool zooms around the cursor (scrubby zoom) or creates a 'zoom to' marquee.
+- **Enable Dial support**—Check the option to use Surface Studio's Surface Dial (or equivalent radial device).
+- Choose if the canvas can be rotated using a Trackpad or not.
+- Choose if the canvas can be rotated using a scroll wheel or not.
+- **Touch for gestures only**—When enabled, only your connected tablet pen can use tools on the canvas but you can still use gestures. Useful for preventing accidental tool use when interacting with the canvas. When disabled, you have full touch control plus gestures, with or without a tablet pen.
+- **Move Tool Aspect Constrain**—controls the default constraining behaviour when resizing objects using the Move Tool. Select from the pop-up menu.
+- **Tablet input method**—choose whether your tablet pen should use the best quality high resolution input data (if supported), low resolution input data (the system cursor position—this setting is switched on by default), or enable Windows Ink in your drivers.
+- **Create Text with Blend Gamma**—controls the default blend gamma applied to text on creation.
+- **Nudge Distance**—sets the nudge amount by which an object is moved when using the arrow keys. Select measurement units from the pop-up menu.
+- **Modifier Nudge Distance**—sets the amount by which an object is moved when using the arrow keys along with the `Shift` .
+- **Synchronise tools between documents**—Makes tool settings persistent between different documents.
+- **Additional dictionary folder**—add an additional folder that you can copy dictionary files into. The directory is scanned during start-up and found dictionaries will be added.
+
+**Shortcuts options**
+
+- Use these options to define your own keyboard shortcuts. See the [Customising keyboard shortcuts](../21-workspace/customise/01-keyboard-shortcuts.md) topic.
+
+**Assistant options**
+
+When you perform certain operations—for example, pixel painting (or erasing) on vector layers, or applying adjustments to selections—the Assistant will take action according to your preferences and display an alert message to make you aware.
+
+Use these options to control overall Assistant behaviour:
+
+- **Enable assistant**—when checked, the Assistant will perform your chosen action for any operation it can help with. When unchecked, the Assistant does not perform any actions.
+- **One-step undo/redo of complex assistant actions**—when checked, any action that has been recorded as multiple consecutive history states is treated like one state by the Undo and Redo commands. When unchecked, the commands need to be selected multiple times to undo/redo multi-state Assistant actions.
+- **Alert when assistant takes an action**—when checked, the Assistant will display an alert message whenever it takes action. When unchecked, alert messages are not displayed.
+
+Use these options to specify the required action for various operations and tool behaviours:
+
+- **Painting with no layer selected**—In Pixel Persona, you can choose to create a new pixel layer for your brush strokes using 'Add new pixel layer and paint'; 'Take no action' means that no pixel painting is allowed. If a vector layer is selected, a new pixel layer is created above the vector layer. If a pixel layer is selected, your brush stroke is added to the pixel layer.
+- **Erasing from vector layers**—In Pixel Persona, this option lets you choose to erase on a created pixel mask over your vector object, immediately rasterise the vector layer and erase directly on it, or take no action.
+- **Other brushes on vector layers**—For retouching pixel brushes (e.g., Burn Brush Tool, Smudge Brush Tool, etc.), any applied brush stroke rasterises the vector layer by default. You can change this behaviour by selecting 'Take no action', which doesn't convert the layer or apply the stroke.
+- **Brush tool sharing**—Choose whether a selected brush and context toolbar settings are shared between tools of a similar nature (e.g. Dodge, Burn and Sponge Brush Tools), shared across all tools, or each tool's brush is set independently.
+- **Applying filters to vector layers**—When a filter is added to a vector layer, the Assistant can either rasterise the vector layer and apply the filter to it, or take no action.
+- **Adding adjustment layer to selection**—In Pixel Persona, if you've created a selection, any adjustment applied to the selection can be added as a new adjustment layer or made a child adjustment layer in the current layer.
+- **Adding mask layer to selection**—Analogous to 'Adding adjustment layer to selection' above, but for mask layers.
+
+**Linked Services options**
+
+- Use these options if you use multiple personal devices to edit documents that contain linked resources from cloud storage. See the [Linked Services](../09-placing-external-content/04-linked-services.md) topic.
+
+**macOS:**
+
+**Software Updates**
+
+- Sets the frequency to which the app will check for any software updates. You can switch off update checking by selecting 'Never'.
+
+**macOS:**
+
+**Miscellaneous options**
+
+- Your current Fills, Brushes, Object Styles, Text Styles, User Defaults and Fonts can be reset to factory defaults. Reset fonts updates the font cache to the current state of the system (from memory).
+
+**Windows:**
+
+**Miscellaneous options**
+
+- Your current Fills, Brushes, Object Styles, Text Styles and User Defaults can be reset to factory defaults.
+- Choose whether crash reports are sent to Serif automatically and whether they include your registered name to help technical support identify your feedback. Reports are anonymous by default.
+
+**To configure settings:**
+
+- From the **Affinity Designer** menu, select **Settings** (or **Preferences**).
+- From the **Edit** menu, select **Settings**.
+
+> **Note:** To navigate to particular preference options, use the arrow keys, pop-up menu or search facility at the top of the dialog.
+
+**macOS:**
+
+> **Note:** Apple System Settings (or System Preferences) allow you to control elements of the Affinity User interface such as scrollbar behaviour.
+
+#### SEE ALSO:
+
+- [Object defaults](../08-object-control/26-object-defaults.md)
+- [Colour management](../06-colour/04-colour-management.md)
+- [Customising keyboard shortcuts](../21-workspace/customise/01-keyboard-shortcuts.md)
+- [Using pen tablets](../25-extras/third-party-support/01-using-pen-tablets.md)
+- [App activation and installing content](../03-get-started/01-app-activation-and-installing-content.md)

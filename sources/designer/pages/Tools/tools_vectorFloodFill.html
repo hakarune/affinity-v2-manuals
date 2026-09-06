@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="fill, flood, vector, tool, recolour" />
+	<meta name="description" content="The tool fills areas with new filled shapes." />
+	<title>Vector Flood Fill Tool</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1><img src="../../../shared/ui/vector_flood_fill_tool.png" class="tool heading" width="18" height="18" alt="Vector Flood Fill Tool" /> Vector Flood Fill Tool</h1>
+		
+		<p>The <span class="ui">Vector Flood Fill Tool</span> allows you to fill in areas of your design, creating new shapes with solid, gradient or bitmap fills. The tool is located on the Tools panel.</p>
+
+	</header>
+
+	<section class="about">
+	
+		<p>Once you've loaded a fill, the tool lets you flood areas formed from pre-selected overlapping shapes or curves. You can drag across multiple areas to flood fill or click on individual areas. You can also quickly recolour individual shapes whether selected or not.</p>   
+		
+		<p>For raster work (via <span class="ui">Pixel Persona</span>), an equivalent feature is available by using the <span class="ui">Flood Fill Tool</span>.</p>
+		
+		<p>To find out more about the use of this tool, look at the <a href="../ObjectControl/floodingAreas.html">Flooding areas</a> topic.</p>
+		
+		<aside class="box tip">
+			<p>Tool shortcut <span class="KEY-TAG"></span>: <span class="key">R</span></p>
+		</aside>
+	</section>
+
+	<section class="settings">
+		<h3>Settings</h3>
+
+		<p>The following settings can be adjusted from the context toolbar:</p>
+		<ul>
+			<li><span class="ui">Insertion mode</span>&#8212;controls where created shapes are placed in relation to original shapes.
+				<ul>
+					<li><img src="../../../shared/ui/fill_inside.png" class="tool" width="16" height="16" alt="Inside" /> <span class="ui">Inside</span>&#8212;creates new shapes and places them inside existing shapes where possible.</li>
+					<li><img src="../../../shared/ui/fill_inbetween.png" class="tool" width="16" height="16" alt="In-between" /> <span class="ui">In-between</span>&#8212;creates new shapes from areas formed by overlapping shapes and inserts them between the target shape and the shape above.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Fill mode</span>&#8212;three modes let you control how you flood with <em>semi-transparent</em> fills or bitmaps with alpha. Solid fills will always replace any current semi-transparent fill(s).
+				<ul>
+					<li><img src="../../../shared/ui/Fill_add.png" class="tool" width="16" height="16" alt="Add on top" /> <span class="ui">Add on top</span>&#8212;flood fills are added on top of the current fill, creating a stack that can be managed via the <span class="ui">Appearance</span> panel.</li>
+					<li><img src="../../../shared/ui/Fill_smart_refill.png" class="tool" width="16" height="16" alt="Smart refill" /> <span class="ui">Smart refill</span>&#8212;like Add on Top, but the same fill can only be applied once to the stack; this is useful to avoid flooding with the same fill twice when dragging across areas. For example, the same 'alpha' bitmap texture can't be used multiple times.</li>
+					<li><img src="../../../shared/ui/Fill_replace.png" class="tool" width="16" height="16" alt="Knockout" /> <span class="ui">Knockout</span>&#8212;the flood fill replaces the current fill.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Options</span>&#8212;filling options let you set how areas are filled:
+				<ul>
+					<li><img src="../../../shared/ui/fill_to_boundaries.png" class="tool" width="16" height="16" alt="Fill to boundaries" /> <span class="ui">Fill to Visible Boundaries</span>&#8212;when enabled, the fill extends to the outline of a shape or a curve's path, ignoring edges formed by overlapping. If the fill colour across areas is the same then flooding will extend to the whole area automatically. When disabled (default), the edges created by overlapping can be filled to as well as to the outline of a shape or a curve's path.</li>
+				</ul>
+			</li>
+			<li><span class="ui">Fit mode</span>&#8212;only displays for applied bitmap (e.g., raster textures) or gradient fills. These can be scaled according to one of several behaviours:
+				<ul>
+					<li><span class="ui">Max Fit</span>&mdash;the bitmap/gradient fill is automatically scaled to fill the entire area without distorting it. Some of its contents may be cropped.</li>
+					<li><span class="ui">Min Fit</span>&mdash;the bitmap/gradient fill is automatically scaled to be completely visible within the area.</li>
+					<li><span class="ui">Stretch</span>&mdash;the bitmap/gradient fill is automatically scaled to be completely visible and fill the entire area. It may be noticeably distorted, depending on the relative proportions of it and the area.</li>
+					<li><span class="ui">None</span>&mdash;the bitmap/gradient fill is not scaled to fit the area.</li>
+				</ul>
+			</li>
+			<li><img src="../../../shared/ui/place_image_tool.png" class="tool" width="16" height="16" alt="Set Bitmap Fill" /> <span class="ui">Set Bitmap Fill</span>&#8212;click to load an image as a bitmap fill from Files or Photos; tap to apply the fill to an area.</li>
+		</ul>
+
+	</section>
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../ObjectControl/floodingAreas.html">Flooding areas</a></li>
+			<li><a href="tools_floodFill.html">Flood Fill Tool</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=tools">Keyboard shortcuts for tools</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

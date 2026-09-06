@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="shape builder, join, curves" />
+	<meta name="description" content="Adding and deleting simple shapes to form more complex shapes." />
+	<title>Adding objects by shape building</title>
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Adding objects by shape building</h1>
+		
+		<p>Shape building adds separate shapes together to make more complex shape designs using the <span class="ui">Shape Builder Tool</span>. It can also be used to delete shape areas.</p>
+
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/shape_building_before.jpg" class="responsive" alt="Shape building before" />
+				<div><img src="../../../shared/shape_building_after.jpg" class="responsive" alt="Shape building after" /></div>
+			</div>
+			<figcaption>(A) Adding shapes, (B) deleting unwanted areas, (C) deleting areas on an open filled curve.</figcaption>
+		</figure>		
+		
+	</header>
+
+	<section class="about">
+
+		<h2>About shape building</h2>
+
+		<p>Shape building lets you add geometric and closed shapes into a single, identifiable real-world shape, e.g. a guitar, steam train silhouette, celtic knot, etc. You can also delete unwanted areas that result from overlapped shapes for interesting cutout effects. Open filled and unfilled curves can also have concave or enclosed areas deleted.</p>
+
+		<h2>About the Shape Builder Tool</h2>
+
+		<p>The tool works by making an in-tool selection of 'candidate' shape areas for shape building, then either adding the selected areas together to form a new shape or removing selected areas.</p>
+		
+		<p>Objects need to be previously selected prior to shape building. Typically, drag a marquee over the shapes you want to work with. You can then choose which objects will be shape building candidates by dragging across shape areas in different ways, i.e. using a freehand line, straight line or selection marquee.</p>
+
+		<p>The default tool behaviour is to build up a selection of candidate shape areas, then once you're happy with your selection you can add or delete them in a final operation. This offers maximum flexibility and experimentation while shape building in advance of committing to your changes. Alternatively, you can take an 'as-you-go' approach to shape building where different <span class="ui">Action</span> modes will add, delete or create areas immediately using the different drag methods mentioned previously.</p>  
+		
+	</section>
+
+	<section class="howto">
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/Shape_builder.png" class="tool heading" width="18" height="18" alt="Shape Builder Tool" /> To select objects for shapebuilding:</summary>
+			<ol>
+				<li>Select the <span class="ui">Shape Builder Tool</span>.</li>
+				<li>Drag a marquee over the objects you want to include.</li>					
+			</ol>				
+		<aside class="box note">
+			<p>You're not actually performing shape building at this point&#8212;just including the objects you want to work on.</p>
+		</aside>				
+		</details>				
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/Shape_builder.png" class="tool heading" width="18" height="18" alt="Shape Builder Tool" /> To add, delete or create areas:</summary>
+			<ol>
+				<li>Ensure the <span class="ui">Shape Builder Tool</span> is active and objects are selected.</li>
+				<li>On the context toolbar, choose a <span class="ui">Drag method</span>, then drag across shape areas to include them as candidates for shape building&#8212;you can use a freehand or straight line drawn between adjacent areas, or a marquee drawn over the selected shapes. A hover-over strong outline indicates a targeted area ready for candidate selection. Once selected, linear hatching indicates the shape area is a candidate.</li>
+				<li>(Optional) On the context toolbar, choose a <span class="ui">Clean up</span> method for automatically removing unwanted internal or connected curves, as well as all unused geometry.</li>
+				<li>When you're happy with your chosen shape areas, click one of three <span class="ui">Action</span> options on the context toolbar:
+					<ul>				
+						<li><img src="../../../shared/ui/add_to_shape.png" class="tool" width="16" height="16" alt="Create" /> Creates a new shape from selected areas; the original affected objects are removed. Alternatively, press the <span class="ui">Return</span> <span class="KEY-TAG"></span>.</li>
+						<li><img src="../../../shared/ui/remove_from_shape.png" class="tool" width="16" height="16" alt="Delete" /> Deletes selected shape areas. Alternatively, press the <span class="key BACKSPACE"></span> <span class="KEY-TAG"></span>.</li>
+						<li><img src="../../../shared/ui/create_new_shape.png" class="tool" width="16" height="16" alt="Create non-destructive" /> Creates a new shape from selected areas while retaining the original selected objects.</li>				
+					</ul>
+				</li>
+			</ol>
+
+		<aside class="box tip">
+			<p>Use +, - and * keys on your numeric keypad for the above actions, respectively.</p>
+		</aside>
+
+		<aside class="box tip">
+			<p>To deselect any selected areas, press the <span class="key ESC-TAG"></span> <span class="KEY-TAG"></span>.</p>
+		</aside>
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/Shape_builder.png" class="tool heading" width="18" height="18" alt="Shape Builder Tool" /> To add, delete or create areas as-you-go:</summary>
+			<ol>
+				<li>Ensure the <span class="ui">Shape Builder Tool</span> is active and objects are selected.</li>
+				<li><img src="../../../shared/ui/add_to_shape.png" class="tool" width="16" height="16" alt="Add" /> <img src="../../../shared/ui/remove_from_shape.png" class="tool" width="16" height="16" alt="Delete" /> <img src="../../../shared/ui/create_new_shape.png" class="tool" width="16" height="16" alt="Create" /> On the context toolbar, enable one of the <span class="ui">Action</span> options.</li>
+				<li>Choose a <span class="ui">Drag method</span> to shape build with.</li>
+				<li>Drag from a starting area to other areas and release to add, delete or create immediately.</li>
+			</ol>
+		
+		<p>When adding areas, the object style (fill/stroke colour, layer effects and stroke properties) from the heavily outlined area you drag from (or marquee select from) is carried over by default; dragging from outside the area will pick up the currently set default stroke/fill instead. You can disable this by unchecking <span class="ui">Use style from first selected area</span> on the tool's context toolbar. Instead, the currently set default stroke/fill will be applied to the newly created area.</p>
+		</details>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+				
+			<p>The following modifier keys can be used:</p>
+			
+				<ul>
+					<li>To instantly delete selected areas (instead of adding together) or manually remove unwanted curves while dragging, press the <span class="key ALT-TAG"></span> key as you drag using any <span class="ui">Drag method</span>.</li>
+					<li>The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> clears the selected areas when clicked and makes a new layer selection of the clicked object.</li>
+					<li><span class="key SHIFT-TAG"></span> <span class="key RETURN-TAG"></span> creates a new shape from selected areas.</li>
+				</ul>
+					
+		</aside>
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../ObjectControl/select.html">Selecting objects</a></li>
+			<li><a href="../Tools/tools_shapeBuilder.html">Shape Builder Tool</a></li>
+			<li><a href="../Workspace/shortcuts.html?category=operations">Keyboard shortcuts for operations</a></li>
+
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

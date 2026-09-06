@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="stylus, brush, pressure" />
+	<meta name="description" content="Use the Pencil Tool to apply pencil lines, giving a hand-drawn effect to your design." />
+	<title>Drawing pencil lines</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Drawing pencil lines</h1>
+		
+		<p>Use the <span class="ui">Pencil Tool</span> to apply pencil lines, giving a hand-drawn effect to your design. A range of settings can be enabled to fine-tune the pencil stroke's appearance.</p>
+
+		<figure>
+			<div class="single">
+				<img src="../../../shared/pencil_example.png" alt="Pencil drawn example" />
+			</div>
+			<figcaption></figcaption>
+		</figure>
+	</header>
+
+	<section class="about">
+
+		<h2>Stroke stabilisation</h2>
+
+		<p>Affinity Designer's stroke stabiliser smooths pencil lines as you draw, helping you to produce a more aesthetically pleasing stroke.</p>
+		
+		<p>A <span class="ui">Rope</span> stabiliser or <span class="ui">Window</span> stabiliser mode can be used; the former drags the stroke end by a 'rope' to smooth the stroke, but lets you introduce sharp corners at increasing rope <span class="ui">Length</span> (radius) values by redirecting the slackened rope; the latter will smooth the stroke by averaging sampled input positions within a <span class="ui">Window</span> whose size is configurable.</p>
+
+		<figure>
+			<div class="single">
+				<img src="../../../shared/stabilisation.png" alt="Stabilisation" />
+				</div>
+ 				<figcaption>(A) Pencil line without stabilisation, (B) with Rope mode stabilisation, (C) with Window mode stabilisation and (D) auto-closed pencil line.</figcaption> 
+		</figure>
+		
+		<h2>Pressure sensitivity</h2>			
+
+		<p>The stroke's width can be tapered either by velocity&#8212;most useful when drawing with a mouse&#8212;or by <a href="../CurvesShapes/pressure.html">pressure</a>&#8212;for use when drawing with a pressure-sensitive pen tablet.</p>
+
+	</section>
+
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/pencil_tool.png" class="tool" width="18" height="18" alt="Pencil Tool" /> To draw freehand lines:</summary>
+			<ol>
+				<li>Select the <span class="ui">Pencil Tool</span>.</li>
+				<li>(Optional) On the context toolbar, do one (or more) of the following:
+					<ul>
+						<li>Enable <span class="ui">Sculpt</span> to reform or continue a previous pencil stroke.</li>
+						<li>(Optional) Enable a <span class="ui">Stabiliser</span> option to smooth the stroke using different smoothing modes (Rope or Window).</li>
+						<li>(Optional) Enable a <span class="ui">Controller</span> to have the stroke respond automatically to a pen tablet's <span class="ui">Pressure</span> input or speed of mouse movement (<span class="ui">Velocity</span>), or manually to the <span class="ui">Stroke</span> panel's Pressure profile chart (<span class="ui">None</span>).</li>
+						<li>Check <span class="ui">Use fill</span> to automatically fill the concave area created by the curve with the current fill colour.</li>
+						<li>Check <span class="ui">Auto Close</span> to close the curve, creating a closed shape. A natural curve will be formed between the end nodes on closing.</li>				
+					</ul>
+				</li>
+				<li>Drag on the page in the direction that you want the path to follow.</li>
+			</ol>
+			
+			<aside class="box note">
+				<p>You can pick up colour as you design by using the <span class="key ALT-TAG"></span>-key and dragging.</p>
+			</aside>
+			
+		</details>
+		
+		<details open="open">
+			<summary>To simulate pressure-sensitive pencil strokes:</summary>
+			<ul>
+				<li>On the <span class="ui">Stroke</span> panel, click <span class="ui">Pressure</span>.</li>
+				<li>From the displayed profile chart, do one of the following:
+					<ul>
+						<li>Drag either end node downwards to reduce the stroke width uniformly along the stroke length.</li>
+						<li>Select either end node twice (or press the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>), then drag it downwards to taper the stroke in that direction. The stroke will taper linearly.</li>
+						<li>Drag either end node downwards, then click halfway along the profile line to add a node which can be dragged upwards to taper the stroke according to the curvature of the graph.</li>
+						<li>Drag either end node downwards, then click repeatedly along the profile line to add multiple nodes which can be positioned vertically and horizontally to form a variable width stroke.</li>
+						<li>Repeat for other nodes as needed.</li>
+					</ul>
+				</li>
+			</ul>
+
+		<figure>
+			<div class="single">
+				<img src="../../../shared/panel_stroke_pressureprofilequad.png" alt="Pressure profile" />
+				</div>
+				<figcaption>Example pressure profiles, all superimposed with expected stroke.</figcaption>
+		</figure>
+		</details>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			
+			<p>When using the Pencil Tool, the following modifier keys can be used to speed up the workflow as you draw:</p>
+			<ul>
+				<li>To decrease or increase stroke width by percentage, use the [ or ] <span class="KEY-TAG"></span>s, respectively. For smaller absolute increments instead, use an additional <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> modifier.</li>
+				<li class="osx">Drawing with the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> pressed creates a straight pencil stroke. Click to start your initial stroke with the <span class="KEY-TAG"></span> pressed, then click at the position where your stroke is to end.</li>
+				<li class="win32">Drawing with the right-mouse button pressed creates a straight pencil stroke. Click to start your initial stroke with the <span class="KEY-TAG"></span> pressed, then click at the position where your stroke is to end.</li>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> constrains a straight pencil stroke to 45&#176; intervals, including to horizontal and vertical.</li>
+				<li>The <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> temporarily activates the <a href="edit_linesAndShapes.html">Node</a> Tool.</li>
+				<li>To reposition the stroke on the page, press the <span class="key SPACEBAR-TAG"></span> as you draw.</li>
+			</ul>
+		</aside>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="draw_geometricShapes.html">Draw and edit shapes</a></li>
+			<li><a href="edit_linesAndShapes.html">Edit curves and shapes</a></li>
+			<li><a href="../Tools/tools_pencil.html">Pencil Tool</a></li>
+			<li><a href="../Tools/tools_node.html">Node Tool</a></li>
+			<li><a href="../CurvesShapes/pressure.html">Pressure sensitivity</a></li>
+			<li><a href="../Panels/strokePanel.html">Stroke panel</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

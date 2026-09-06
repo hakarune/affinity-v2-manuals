@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "absolute",
+  "useMarkdownLinks": false,
+  "attachmentFolderPath": "assets",
+  "showUnsupportedFiles": false,
+  "strictLineBreaks": false,
+  "showFrontmatter": true
+}

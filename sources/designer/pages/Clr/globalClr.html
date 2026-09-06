@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="scheme" />
+	<meta name="description" content="Automatically update fill and stroke colours across multiple objects using global colours." />
+	<title>Global colours</title>
+
+</head>
+
+<body>
+
+	<header>
+
+		<h1>Global colours</h1>
+		
+		<p>Global colours can be created and applied to different objects in your design. If you want to change the colour across your design at a later time, you can simply edit the global colour in the Swatches panel and all objects update with the new colour automatically and simultaneously.</p>
+		
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/globalclr_before.jpg" alt="Global colour before" />
+				<div><img src="../../../shared/globalclr_after.jpg" alt="Global colour after" /></div>
+			</div>
+			<figcaption></figcaption>
+		</figure>
+			
+	</header>
+	
+	<section class="about">
+
+		<h2>About global colours</h2>
+
+		<p>The global colour could be applied as a solid fill, stroke, or a colour used in a gradient fill; gradients cannot be saved as global colours as they are made up of more than one colour. Global colours can be made while in RGB, CMYK, HSL, LAB, Greyscale, or Tint colour modes.</p>
+		<p>Global colours are added to the currently selected document palette in the Swatches panel. If a document palette does not exist when your document's first global colour is created, a new document palette is automatically created for you in which the colour will be stored. Once created, you can apply the global colour to your design.</p>
+		<p>The tint of an applied global colour can be adjusted using the <span class="ui">Colour</span> panel.</p>
+
+			
+		<aside class="box note">
+			<p><img src="../../../shared/globalclr_thumbnail.png" class="screenshot" width="22" height="22" alt="Global colour thumbnail" /> A global colour is indicated by a tab in the bottom-left corner of its colour swatch.</p>
+		</aside>
+		
+		<aside class="box tip">	
+			<p>You can check if a global colour has been assigned to an object's stroke or fill by using the <span class="ui">Colour</span> panel.</p>
+		</aside>
+						
+		<x-osx><aside class="box note">	
+			<p>If you're <a href="../Addons/importingAddons.html">importing a document palette</a> containing global colours as a System or Application palette, the global colours will be converted to standard colours.</p>
+		</aside></x-osx>
+		
+		<x-win32><aside class="box note">	
+			<p>If you're <a href="../Addons/importingAddons.html">importing a document palette</a> containing global colours as an Application palette, the global colours will be converted to standard colours.</p>
+		</aside></x-win32>
+
+	</section>
+	
+	<section class="howto">
+	
+		<details open="open">
+			<summary><img src="../../../shared/ui/addtopalettelink.png" class="tool heading" width="16" height="16" alt="Add current colour to palette as a global colour" /> To create a global colour from an existing object:</summary>
+			<p>Do one of the following:</p>
+			<ul>
+				<li>Select the object, choose a Document palette in the <span class="ui">Swatches</span> panel, set the Stroke/Fill colour selector, then click <span class="ui">Add current colour to palette as a global colour</span>.</li>
+				<li><span class="key CLICK-TAG"></span>-click the object and select <span class="ui">Add to Swatches</span>, then <span class="ui">From Fill as Global</span>, <span class="ui">From Line as Global</span> or <span class="ui">From Both as Global</span> depending on the object property you want to save.</li>
+			</ul>
+			
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/moremenuicon.png" class="tool heading" width="16" height="16" alt="Panel Preferences" /> To create a global colour from scratch:</summary>
+			
+			<ol>
+				<li>On the <span class="ui">Swatches</span> panel, select a Document palette from the palette pop-up menu. If no Document palette exists you can create one from the panel's Panel Preferences menu.</li>
+				<li>From <span class="ui">Panel Preferences</span>, select <span class="ui">Add Global Colour</span>.</li>
+				<li>Adjust the settings in the dialog.</li>
+				<li>Click <span class="ui">Add</span>.</li>
+			</ol>
+			
+		</details>
+		
+		<details open="open">
+			<summary>To edit a global colour:</summary>
+			
+			<ol>
+				<li>On the Swatches panel, <span class="key CLICK-TAG"></span>-click the chosen colour swatch and select <span class="ui">Edit Fill</span>.</li>
+				<li>From the dialog, select a colour.</li>
+			</ol>
+			
+			<p>All objects using the global colour will be updated automatically.</p>
+			
+		</details>
+	
+	</section>
+	
+
+	
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="overprint.html">Overprinting</a></li>
+			<li><a href="spotClr.html">Spot colours</a></li>
+		</ul>
+	</section>
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

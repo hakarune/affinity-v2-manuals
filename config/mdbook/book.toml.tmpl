@@ -1,0 +1,31 @@
+# Template - scripts/build.sh fills in @APP@ / @TITLE@ and writes this next to a
+# freshly generated SUMMARY.md, then runs `mdbook build`.
+[book]
+title = "@TITLE@"
+description = "Offline archive of the Affinity @APP@ 2 help documentation. Content (c) Serif (Europe) Ltd."
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "rust"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/@REPO@"
+edit-url-template = "https://github.com/@REPO@/edit/main/manuals/@APP@/{path}"
+no-section-label = false
+copy-fonts = true
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+
+[output.html.fold]
+enable = true
+level = 1

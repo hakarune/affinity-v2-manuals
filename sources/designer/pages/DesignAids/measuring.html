@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="design aids, measuring guides, measuring tool, measure tool, distance, measurement, dimension" />
+	<meta name="description" content="Measuring lets you display the distance between objects, plus the area and perimeter length of objects." />
+	<title>Measuring</title>
+</head>
+ 
+<body>
+
+	<header>
+
+		<h1>Measuring</h1>
+		<p>Measuring lets you display the distance between points, objects and page elements on the page&#8212;using either a dedicated Measure Tool or a hover over feature. An Area Tool additionally measures the area of one or more objects, plus the perimeter of a shape and open curve lengths.</p>
+		
+	</header>
+
+	<section class="about">
+
+		<h2>Measuring with the Measure Tool</h2>
+		
+		<p>The Measure Tool lets you accurately measure the distance between a fixed point and an object's edge, corner, centre or at the intersection of two objects vertically, horizontally or diagonally. Curves and page elements such as page centre, edge and edges (corners) can also be measured to. The reverse is also true&#8212;you can measure from any page element to any point or an object's edge, corner or at object intersection. You can even measure between placed guides.</p>
+		
+		<figure>
+			<p><img src="../../../shared/measuring_measuretool.png" class="responsive" alt="Measuring guides with the Measure Tool" /></p>
+			<figcaption><span class="ui">Measure Tool</span>: (A) Point - Point (horizontally, vertically, diagonally), (B) Point - Curve, (C) Point - Centre, (D) Point - Line, (E) Point - Guide, (F) Point - Page centre, (G) Point - Page centre (tangent; with projection line), (H) Point - Page edge and (I) Point - Page edge at Page centre and (J) Along a diagonal straight line.</figcaption>
+		</figure>
+			
+		<p>The Measure Tool is also plane-aware, so measurement can be made along the axes of isometric or axonometric grids.</p>
+		
+		<h2>Measuring with the Area Tool</h2>
+
+		<p>This tool displays the area, total perimeter length or specific straight-line segment lengths of an object when you hover over it. For area measurements, linear hatching indicates the targeted object along with the object's area as an overlaid readout.</p>
+		
+		<figure>
+			<p><img src="../../../shared/measuring_areatool.png" class="responsive" alt="Measuring single-object areas with the Area Tool" /></p>
+			<figcaption> Single-object area/perimeter measurement with the <span class="ui">Area Tool</span>: (A) Area of a closed object, (B) Perimeter of a object, (C) Straight-line 'cusped' segment length on the object.</figcaption>
+		</figure>		
+		
+		<p>You can also calculate the area of multiple objects by clicking an initial object and using modifier keys to include further objects. A blue highlight indicates objects included in the total selection, while dark-blue linear hatching (not shown), on hover over of an object in that selection, identifies it as the 'active' object and reports just its area measurement.</p>
+		
+		<figure>
+			<div class="single">
+				<img src="../../../shared/measuring_multipleareas.png" class="responsive" alt="Measuring multi-object areas with the Area Tool" />
+			</div>
+			<figcaption> Multi-object area measurement with the <span class="ui">Area Tool</span> by selection with the <span class="key CMD-TAG"></span> and <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span>s pressed.</figcaption>
+		</figure>
+
+		<h2>Measuring between objects</h2>
+
+		<p>Using the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> with the Move Tool and shape tools will display measurements between objects as you move your cursor around the page. These relate to the distance between the selected object(s) and other object (or page elements) and will update dynamically as the cursor moves.</p>
+
+		<figure>
+			<p><img src="../../../shared/measuring.png" class="responsive" alt="Measuring guides between objects" /></p>
+			<figcaption>'Hover over' measurements displaying the size of the gaps between the selected circle and the square.</figcaption>
+		</figure>
+
+		<figure>
+			<p><img src="../../../shared/measuring_nudge.png" class="responsive" alt="Measuring guides with nudge" /></p>
+			<figcaption>'Hover over' measurements displayed when a circle is nudged to the right using the right arrow key.</figcaption>
+		</figure>
+
+		<p>For example, with a shape selected, measurements will show the distance, using labelled arrows, between the shape and:
+		<ul>
+			<li>another shape, when the cursor is positioned over that target shape.</li>
+			<li>the page edges, when the cursor is positioned over a blank portion of the page.</li>
+		</ul>
+		
+		<p>The measurement will then update as the cursor moves over an object to show the size of the horizontal and vertical gaps between this object and the selection.</p>
+		
+		<aside class="box note">
+			<p>Measurements are not persistent, are non-printable and are not saved with your document.</p>
+		</aside>
+
+	</section>
+
+	<section class="howto">
+		
+		<details open="open">
+			<summary><img src="../../../shared/ui/measure_tool.png" class="tool heading" width="18" height="18" alt="Measure Tool" /> To display distance measurements:</summary>
+			<ol>
+				<li>Select the <span class="ui">Measure Tool</span>.</li>
+				<li>Do one of the following:
+					<ul>
+						<li>Click-drag from a start point to an end point.</li>
+						<li>Click for a start point, then click for an end point.</li>
+					</ul>
+				</li>
+			</ol>
+		</details>
+		
+		<p>Use the <span class="key ESC-TAG"></span> <span class="KEY-TAG"></span> to clear any measurement.</p>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/area_tool.png" class="tool heading" width="18" height="18" alt="Area Tool" /> To display area measurements:</summary>
+			<ol>
+				<li>With the <span class="ui">Move Tool</span> active, select the object(s).</li>
+				<li>From the Measure Tool flyout, select the <span class="ui">Area Tool</span>.</li>
+				<li>Hover over the target object shown in blue. For multi-object areas, any one of the selected objects (shown temporarily in blue) will report the total area on hover over, as well as the currently hovered-over object area (in blue linear hatching).</li>
+			</ol>
+			
+		<aside class="box tip">
+			<p>Area measurements will also be reported on the context toolbar while the selection remains in place, including the total area of selected objects.</p>
+		</aside>
+		
+		<aside class="box note">
+			<p>If you click a blue selected area it will be removed from the total area calculation found on the context toolbar. On hover over this excluded area will highlight in red.</p>
+		</aside>	
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/area_tool.png" class="tool heading" width="18" height="18" alt="Area Tool" /> To display perimeter measurements:</summary>
+				<ol>
+					<li>With the <span class="ui">Move Tool</span> active, select the object.</li>
+					<li>From the Measure Tool flyout, select the <span class="ui">Area Tool</span>.</li>
+					<li>Do one of the following:
+						<ul>
+							<li><img src="../../../shared/ui/perimeter_fullEdges.png" class="tool" width="26" height="20" alt="Full edges" /> For an object's full perimeter length: With the context toolbar's <span class="ui">Perimeter Mode</span> set to <span class="ui">Full Edges</span>, hover over the target object's perimeter. The thicker blue highlight will report the object's full perimeter length.</li>
+							<li><img src="../../../shared/ui/perimeter_cuspedSegments.png" class="tool" width="26" height="20" alt="Cusped segments" /> For a specific straight-line segment length(s): With the context toolbar's <span class="ui">Perimeter Mode</span> set to <span class="ui">Cusped Segments</span>, hover over a specific segment to report just that segment's length along with the perimeter length. Optionally, you can click the segment (turning it red) and click additional adjacent or non-adjacent segments to make multi-segment perimeter measurements, reported as <span class="ui">Selected edges</span> on the context toolbar.</li>
+						</ul>
+					</li>
+				</ol>
+
+		<aside class="box tip">
+			<p>Perimeter measurement will also be reported on the context toolbar while the selection remains in place&#8212;Total perimeter length is shown, along with length excluding any holes.</p>
+		</aside>
+						
+		</details>
+		
+		<details open="open">
+			<summary>To display measurements on hover over:</summary>
+			<ul>
+				<li>With the <span class="ui">Move Tool</span> active, select one or more objects and then hold down <span class="key CMD-TAG"></span> while moving the cursor over a target object.</li>
+			</ul>
+			
+			<p>The target object will display measurements from the selected object to the target object (if hovered over) or page element (if no objects are hovered over).</p>
+		</details>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>When using the Measure Tool, the following modifier keys can be used while the measurement is being drawn:</p>
+			<ul>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> constrains the measurement line to 45&#176; intervals. Tangents and equal bisecting angles will also be displayed while the key is pressed. Holding the mouse button down for a slightly longer duration will, on dragging, additionally draw a dashed projection line, whose axis can be toggled by pressing the &#126; <span class="KEY-TAG"></span>.</li>
+				<li>Use either up or down arrow keys to constrain measurements to vertical; left or right arrow keys to constrain to horizontal.</li>
+				<li class="osx">For keyboard's with numeric keypads, numeric keys can change measurement directions as follows:
+					<ul>
+						<li>0 <span class="KEY-TAG"></span>&#8212;reverts back to unconstrained.</li>
+						<li>1 <span class="KEY-TAG"></span>&#8212;constrain to 45&#176;.</li>
+						<li>2 <span class="KEY-TAG"></span>&#8212;constrain to vertical.</li>
+						<li>3 <span class="KEY-TAG"></span>&#8212;constrain to 135&#176;.</li>
+						<li>4 <span class="KEY-TAG"></span>&#8212;constrain to horizontal.</li>
+						<li>5 <span class="KEY-TAG"></span>&#8212;constrain to equal angles.</li>
+					</ul>
+				</li>
+				<li>The <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> temporarily switches off snapping.</li>
+			</ul>
+		</aside>
+
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../DesignAids/snapping.html">Snapping</a></li>
+			<li><a href="../GetStarted/drawingScale.html">Drawing scale</a></li>
+			<li><a href="dynamicGuides.html">Dynamic guides</a></li>
+		</ul>
+	</section>
+
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>

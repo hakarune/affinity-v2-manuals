@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="../../../resources/css/style.css" rel="stylesheet" media="all" />
+	<meta name="keywords" content="knife, cutting, scissors, divide, geometry, boolean, break, curve" />
+	<meta name="description" content="Cut objects up into smaller fragments." />
+	<title>Cutting objects</title>
+</head>
+
+<body>
+
+	<header>
+		
+		<h1>Cutting objects</h1>
+		<p>Objects can be easily cut up in various ways using the Knife Tool or a Divide Boolean operation.</p>
+		
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/cuttingobject_before.jpg" alt="Cutting objects before" />
+				<div><img src="../../../shared/cuttingobject_after.jpg" alt="Cutting objects after" /></div>
+			</div>
+			<figcaption>Knife Tool: (A) Single-stroke cut and delete, (B) Intersecting multi-stroke cut and delete, (C) Single-stroke cut and separate, (D) Multi-stroke cut and recolour of fragments.</figcaption>
+		</figure>
+
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/cuttingcurves_before.png" alt="Cutting curves before" />
+				<div><img src="../../../shared/cuttingcurves_after.png" alt="Cutting curves after" /></div>
+			</div>
+			<figcaption>Knife Tool: (A) Cutting a single curve with two one-click scissor cuts and (B) cutting multiple straight lines simultaneously using a single-stroke cut. Unwanted curve fragment(s) are subsequently deleted in both.</figcaption>
+		</figure>
+		
+		<figure>
+			<div class="comparison">
+				<img src="../../../shared/cuttingdivide_before.jpg" alt="Cutting objects before" />
+				<div><img src="../../../shared/cuttingdivide_after.jpg" alt="Cutting objects after" /></div>
+			</div>
+			<figcaption>Divide Boolean operation: splitting an object with a Bézier curve (drawn with the Pen Tool).</figcaption>
+		</figure>
+
+	</header>
+
+	<section class="about">
+	
+		<h2>About cutting</h2>
+		
+		<p>Two techniques are possible using different features:</p>
+		
+			<ul>
+				<li>Knife Tool&#8212;cuts objects quickly in one operation using a freeform or straight line drawn with the Knife Tool. Key features include:
+					<ul>
+						<li>Stroke stabilisation: smoothing of the knife stroke.</li>
+						<li>Autoclosing of open curves to cut out holes from objects.</li>
+						<li>Scissor cuts: to break open curves at a target node or anywhere on a curve segment or to break open closed shapes too.</li>
+					</ul>
+				</li>
+				<li>Divide&#8212;takes advantage of the power of the Pen Tool to create a 'cutting' Bézier curve (editable with the Node Tool) to cut from in advance of dividing up into object fragments. This approach lets you fine-tune the cutting line before cutting.</li>
+			</ul>
+
+			<p>For either technique, instead of repositioning, reshaping or deleting specific fragments after cutting, you can simply recolour each fragment independently.</p>
+
+			<p>Cutting works irrespective of layers. You can cut across any selection of objects as long as the selection is in place.</p>
+
+		<h2>About partial cutting</h2>
+		<p>Partially cutting into an object will create a split, i.e. a 'closed up' cut with each side of the cut touching. The appearance is of a single stroke but editing either curve (by moving overlapped/overlapping node apart) will open the cut.
+	
+		<h2>Intersecting cuts</h2>
+		
+		<p>When you draw a series of separate strokes that intersect each other, you create a polycurve that cuts out the underlying object.</p>
+		
+	</section>
+
+	<section class="howto">
+		<details open="open">
+			<summary><img src="../../../shared/ui/knife_tool.png" class="tool" width="18" height="18" alt="Knife Tool" /> <img src="../../../shared/ui/move_tool.png" class="tool" width="18" height="18" alt="Move Tool" /> To cut shapes (Knife Tool):</summary>
+			<ol>
+				<li>From the Pencil Tool flyout, select the <span class="ui">Knife Tool</span>.</li>
+				<li><img src="../../../shared/ui/line_mode.png" class="tool" width="16" height="16" alt="Straight Line" /> (Optional) Cut with a straight line by enabling <span class="ui">Straight Line</span> on the context toolbar before you drag. By default, you'll cut using a drawn freehand line.</li>
+				<li>(Optional) For drawn freehand lines, check <span class="ui">Stabiliser</span> on the tool's context toolbar to draw smoothed lines using a Rope Mode or Windows Mode; use the former for redirecting a smoothed path using a draggable rope that can introduce sharp corners; the latter for a consistently smooth curve.</li>
+				<li>Drag the cursor across the shape.</li>
+				<li>With the <span class="ui">Move Tool</span> enabled, do any of the following:
+					<ul>
+						<li>Drag the newly split fragments apart after reselection.</li>
+						<li>Delete an unwanted fragment by pressing the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>, clicking a fragment, then pressing the <span class="key BACKSPACE-TAG"></span> <span class="KEY-TAG"></span>.</li>
+						<li>Select a fragment and recolour with the <span class="ui">Colour</span> panel.</li>
+						</ul>
+			</ol>
+
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/knife_tool.png" class="tool" width="18" height="18" alt="Knife Tool" /> To cut curves (Knife Tool):</summary>
+			<ol>
+				<li>From the Pencil Tool flyout, select the <span class="ui">Knife Tool</span>.</li>
+				<li>Do one of the following:
+					<ul>
+						<li>For a knife cut (creating separate curves): Drag the cursor across the curve.</li>
+						<li>For a scissor cut (creating a polycurve): Hover over a selected curve's target node or anywhere along a curve segment, then click to make the cut. The cursor will change to a scissors cursor.<br />
+						<p>Use <span class="ui">Separate Curves</span> via <span class="ui">Layer &gt;Geometry</span> and the <span class="ui">Move Tool</span> to create separate curves from the polycurve, then reposition the curves independently.</p>
+						</li>
+					</ul>
+				<li>With the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span> pressed, edit the curve(s) (Node Tool behaviour) or press the <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span> additionally to delete an unwanted segment on clicking.</li>
+			</ol>
+			
+		<aside class="box tip">
+			<p>Use the <span class="ui">Layer&gt;Geometry</span> option called <span class="ui">Cut curves with key object</span> to cut into curves and shapes using a previously targeted key object (assigned with <span class="key ALT-TAG"></span><span class="KEY-TAG"></span>-click) in a multi-object selection. For example, you could use a morphed geometric shape to cut into underlying vector content. The stroke and fill of the key object are not considered in the cut.</p>
+		</aside>
+		
+		</details>
+
+		<details open="open">
+			<summary><img src="../../../shared/ui/pen_tool.png" class="tool" width="18" height="18" alt="Pen Tool" /> <img src="../../../shared/ui/move_tool.png" class="tool" width="18" height="18" alt="Move Tool" /> <img src="../../../shared/ui/divide.png" class="tool" width="18" height="18" alt="Divide" /> To cut objects using Bézier curves (Divide Boolean operation):</summary>
+			<ol>
+				<li>With the <span class="ui">Pen Tool</span>, draw a Bézier curve(s) over an object.</li> 
+				<li>With the <span class="ui">Move Tool</span>, select the curve(s) and the underlying object.</li>
+				<li>On the <span class="ui">Toolbar</span>, select <span class="ui">Divide</span>.</li>
+			</ol>
+			
+		<p>The Divide operation will remove the pen strokes by default, although you can retain them by pressing the <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span> during the Divide operation.</p>
+		</details>
+
+		<aside class="box note">
+			<h3>Modifier keys</h3>
+			<p>With the <span class="ui">Knife Tool</span> active, the following modifier keys can be used:</p>
+			<ul>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="key ALT-TAG"></span> <span class="KEY-TAG"></span>s draw a straight knife stroke across your object from a fixed position.</li>
+				<li>The <span class="key SHIFT-TAG"></span> <span class="KEY-TAG"></span> constrains a straight knife stroke to 45&#176; intervals, including to horizontal and vertical.</li>
+				 <li class="osx">The <span class="key CTRL-TAG"></span> <span class="KEY-TAG"></span>, while it remains pressed, converts a freehand knife stroke to a straight line stroke as you draw; release the <span class="KEY-TAG"></span> to continue freehand knife cuts.</li>
+				 <li class="win32">The right-mouse button, while it remains pressed, converts a freehand knife stroke to a straight line stroke as you draw; release the button to continue freehand knife cuts.</li>
+				<li>To delete or edit cut fragments, press the <span class="key CMD-TAG"></span> <span class="KEY-TAG"></span>, then the <span class="key BACKSPACE-TAG"></span> <span class="KEY-TAG"></span>.</li>
+			</ul>
+		</aside>
+		
+	</section>
+
+	<section id="also">
+		<h4>SEE ALSO:</h4>
+		<ul class="plain">
+			<li><a href="../Tools/tools_knife.html">Knife Tool</a></li>
+			<li><a href="../CurvesShapes/draw_linesAndShapes.html">Draw curves and shapes</a></li>
+			<li><a href="../CurvesShapes/edit_linesAndShapes.html">Edit curves and shapes</a></li>
+			<li><a href="join.html">Joining objects</a></li>
+		</ul>
+	</section>
+
+
+<script src="../../../resources/js/breakout.js"></script>
+</body>
+
+</html>
